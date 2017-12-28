@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Drag and Drop File</title>
+	<HTA:APPLICATION ID="oHTA"/>
+</head>
+<body id=bdy>
+	XXXファイル<br>
+	<div style="width:600">
+		<iframe name=ifrName id=ifr style="height:60;width=600"></iframe><br>
+		<input id=inp1 style="width:520;float:left">
+		<input type="file" id=fl align="right" style="width:0;float:right">
+	</div>
+</body>
+<script>
+	getEI=function(id){return document.getElementById(id)}
+
+	// Drag and Drop Setup
+	setupDnD(ifr, getEI('ifr'), getEI('fl'), getEI('inp1'));
+
+	// Drag and Drop Setup function
+	//   objIFR:   IFRAME object for drag and drop area
+	//   elemIFR:  IFRAME element for drag and drop area
+	//   elemFile: INPUT(TYPE=FILE) element for providing another method of input file path
+	//   elemDisp: element for display the file path (the element must have value property)
+	//
+	function setupDnD(objIFR, elemIFR, elemFile, elemDisp){
+		elemDisp.value=''
+		objIFR.location = 'about:blank'
+		elemIFR.onreadystatechange=function(){
+			//alert(this.readyState)
+			if( this.readyState != "complete" ) {
+				return
+			}
+			if( objIFR.location != 'about:blank' && String(objIFR.location).slice(-4) != ".hta" ) {
+				elemDisp.value = decodeURI(String(objIFR.location).replace(/^file:/,'').replace(/^\/+(\w:)/,'$1').replace(/\//g,'\\'))
+				objIFR.location = 'about:blank' // いったんblankにしないと下記doc.open()ができない
+			} else if( objIFR.location == 'about:blank') {
+				var doc=elemIFR.contentWindow.document
+				doc.open()
+				doc.write('ここにファイルをドラッグ＆ドロップしてください')
+				doc.close()
+				// 上記doc.write()するとobjIFR.locationは自身のhtaファイルのパスとなる
+			}
+		}
+		elemFile.onchange = function() {
+			if( this.value == "" ) { return }
+			elemDisp.value = decodeURI(String(this.value))
+		}
+	}
+
+</script>
+</html>
