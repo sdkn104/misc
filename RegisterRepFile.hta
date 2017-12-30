@@ -30,6 +30,7 @@
 		<input type="file" id=fl align="right" style="width:0;float:right">
 	</div>
 	<input type="button" id="reportTouroku" value="報告書ファイル登録"  style="margin:5px 0 0 0">
+	<a id="reportSaki"></a>
 	<br><br>
 	<input type="button" id="exit" value="終了">
 	</div>
@@ -83,10 +84,12 @@
 		document.getElementById("iraiSaki").href = "file:///C/AAA/BBB/CCC.pdf"
 		alert("登録処理")
 	}
+
 	function OnClickReportTouroku() {
 		alert("登録処理")
 	}
 
+	// 「状態」欄の更新
 	function updateStatusCell() {
 		var fso = new ActiveXObject("Scripting.FileSystemObject");
 		for( i = document.getElementById("iraiTable").getElementsByTagName("TR").length - 1; i>=0; i--){
