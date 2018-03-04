@@ -33,3 +33,10 @@ if %COMPUTERNAME%==LENOVO-PC SET F=1
 if %F%==1 (
    date /t
 )
+
+REM --- WAIT FOR PING RESPONSE -------------
+:loop
+timeout /t 5
+ping -n 1 192.168.1.101 | find "ms TTL=" > NUL
+echo %errorlevel%
+if ERRORLEVEL 1 goto loop
