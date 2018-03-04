@@ -37,6 +37,5 @@ if %F%==1 (
 REM --- WAIT FOR PING RESPONSE -------------
 :loop
 timeout /t 5
-ping -n 1 192.168.1.101 | find "ms TTL=" > NUL
-echo %errorlevel%
+ping -n 1 192.168.1.101 | find "ms TTL="
 if ERRORLEVEL 1 goto loop
