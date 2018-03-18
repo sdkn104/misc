@@ -39,3 +39,11 @@ REM --- WAIT FOR PING RESPONSE -------------
 timeout /t 5
 ping -n 1 192.168.1.101 | find "ms TTL="
 if ERRORLEVEL 1 goto loop
+
+REM --- EVENT LOG ---------  http://rtaki.sakura.ne.jp/infra/?p=1980
+wmic ntevent list /?
+wmic ntevent get /?
+REM logon/logoff/etc
+wmic ntevent where "(LogFile='system' and (EventCode=7001 or EventCode=7002))" list brief
+wmic ntevent where "(LogFile='system' and (EventCode=7001 or EventCode=7002 or EventCode=12 or EventCode=13 or EventCode=6005 or EventCode=6006))" list /format:csv > o.csv
+wmic /node:xxx /user:xxxx /password:xxxx ntevent ...
