@@ -1,0 +1,113 @@
+
+------------------------
+bin\diff.exe -urN Build.r0 Build.r1 > patch.r0-1.txt
+
+rename Build.r1 Build.r1.org
+bin\patch.exe -uEp0 < patch.r0-1.txt
+
+------------------------
+r0: original version from:
+    1. tesseract-ocr-3.02.02.tar.gz
+    2. tesseract-ocr-3.02-vs2008.zip
+    3. leptonica-1.68-win32-lib-include-dirs.zip
+   Just extract the three, and move lib and include of leptotica.
+   probablly, open and save in unicode format for ccmain/equationdetect.cpp, for compilation error
+
+r2: develop version
+    add project tabreco on tesseract-ocr/vs2008/tabreco/
+      this directory includes vs2008 files
+    add sadakane created source files in tesseract-ocr/sadaprog/
+      this directory includes 
+         sada.cpp,h 
+         tabrecomain.cpp,h
+    project tabreco includes tabreco main (that is same as tesseract main)
+    project libtesseract includes sadaprog/sada.cpp
+
+r3: develop version
+    add sada_switch=2 mode, that do OCR for each my_cell_xx.tif
+
+r4: add test project dllcall and dlltest
+     these are test routine for creating and refering DLL from VC++ win32 app.
+
+r5: add test version of libtesseract_wrap
+      CLR wrapper for libtesseract(win32)
+
+r6: add leftheader.tif function
+ 
+r7: CLI version main function tabrecoCLR
+
+r8: modify tabreco
+
+r9: CLI main function, add call to VB ModiWrapper (under construction)
+
+r10: created full integration Release version of tabreco, tesseract, and ModiWrapper
+
+r11: small modify
+
+r12: fix memory leak...
+
+r14: bugfix in GeneratePainPoint(), marked as "sadakane"
+
+r15: final version with Tess v3.02, regression tested
+
+r16: first version integreted with Tess v3.03 (alpha, r903)
+      compile and run ok, for tesseract, tabreco
+      compile with LIB_Debug ok, LIB_Release ng.
+
+r17: add improvements
+ add two functionary improvcement
+  1) new seam_pile in chopper
+      change seam_pile from vector to heap
+      in order to improve recognition rate
+      default behavior changed
+      add vars:
+        chop_new_seam_pile (default=true): switch to turn on/off the new seam_pile
+        chop_seam_pile_size : size of seam_pile heap
+  2) change stop criteria of association, to improve recognition rate/speed
+      default behavior is not changed
+      add vars:
+        segsearch_max_futile_classifications_per_width (default:0.0)
+ 
+ add many debug writes 
+
+r18: version up tesseract to r1051 (v3.03 alpha) [r1050=v3.03 rc1(release candidate 1)]
+  @ using vs2010
+  @ omit functional improvements 1) and 2).
+  @ omit ModiUtils
+
+  tested tabreco, tesseract run on a few data
+    
+  procedure
+  1) create build environment of tess r1051 with leptotica 1.70
+  2) replace Build/lib,include,tesseract-ocr with those of 1)
+  3) copy sadalib/ from r17
+  4) copy libtessaract_wrap, tabreco from Build.r17/vs2008 to Build/vs2010
+  5) open "tesseract-ocr\vs2010\tesseract.sln" by vs2010
+  6) プロジェクト追加
+  　　ファイル・追加・既存のプロジェクト　以下を指定
+  　　　　"tesseract-ocr\vs2010\libtesseract_wrap\libtesseract_wrap.vcproj"
+  　　プロパティシート追加：プロパティマネージャ起動。プロジェクト右クリック・既存のプロパティシート追加
+  　　　　"tesseract-ocr\vs2010\include\tesseract_versionnumbers.props"を追加。(自動変換されないため)
+  　　ターゲット名修正(vs2008->vs2010変換ウォーニングがでているため必須)  
+　　　　　  Right-click on libtesseract_wrap and choose Properties.
+  　　　　　Then change Property Pages　構成プロパティ　全般　ターゲット名 to the following values:
+  　　　　　　　ライブラリアン・出力ファイル　の設定にあわせる。
+　　　　　　http://www.leptonica.org/vs2008doc/vs2010-notes.html
+  　　tabrecoも同様
+  7) プロジェクトの依存関係の設定
+  8) libtesseract_wrapのリンクにlibtesseract$(LIBTESS_VERSION)-xxxxx.lib を追加する。
+  9) libtesseract303にsada.c sada.hを追加
+  10) tess ソースコード修正
+　　winmergeで r17とtess r903を比較し、差分それぞれについて r18のコードを修正していく。
+　　　まずビルドし、「protectedメンバ・・・のエラー」それぞれについて、該当するヘッダファイルを修正する。
+　　　その他、winmergeの差分を修正する。
+　  sada.cpp:tabreco_mainを、r1051 tesseractmain.cppに基づいて修正。
+　11) ビルド
+
+r19:
+  - add function of output tcell_table.csv
+  - introdule tabr_debug_level
+  - cleaning and change name of tabreco config vars
+  - code cleaning
+
+
