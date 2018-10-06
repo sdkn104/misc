@@ -19,6 +19,8 @@ Redmine MEMO
 * Auth
   * auto login by API key
      * ex. http://localhost/redmine/issues?key=a0988524fb7e4949d013d6cd8437ba6f0db97b88
+     * ex. http://localhost/redmine/issues?key=d629355c6f9c3b8047a8c4321e0e77e9d13ff002
+
 
 Setup History
 -------------
