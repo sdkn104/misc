@@ -16,6 +16,10 @@ Redmine MEMO
 * View customization
   * [http://d.hatena.ne.jp/suer/20100119/redmine_view_ext]
 
+* Auth
+  * auto login by API key
+     * ex. http://localhost/redmine/issues?key=a0988524fb7e4949d013d6cd8437ba6f0db97b88
+
 Setup History
 -------------
 
