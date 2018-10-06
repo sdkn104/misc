@@ -30,4 +30,5 @@ Setup History
 * change conf file for CORS:  [https://qiita.com/8amjp/items/db1f5f71475d00395863]
 * create redmine.htm in redmine-3.4.6-2\apache2\htdocs\
 * modify css redmine-3.4.6-2\apps\redmine\htdocs\public\stylesheets\application.css
+   * label[for=issue_fixed_version_id] {font-weight:bold;  text-decoration : underline; color:#FF0000}
 * modify view  "redmine-3.4.6-2\apps\redmine\htdocs\app\views\issues\new.html.erb"
