@@ -27,5 +27,7 @@ Setup History
 
 * install bitami redmine
 * service start/stop by bitami console
-* change conf file:  [https://qiita.com/8amjp/items/db1f5f71475d00395863]
-*
+* change conf file for CORS:  [https://qiita.com/8amjp/items/db1f5f71475d00395863]
+* create redmine.htm in redmine-3.4.6-2\apache2\htdocs\
+* modify css redmine-3.4.6-2\apps\redmine\htdocs\public\stylesheets\application.css
+* modify view  "redmine-3.4.6-2\apps\redmine\htdocs\app\views\issues\new.html.erb"
