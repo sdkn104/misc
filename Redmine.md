@@ -12,6 +12,9 @@ Redmine MEMO
  
 * Apache
   * redmine-3.4.6-2\apache2\htdocs\xxx.htm  --> http://localhost/xxx.htm
+  
+* View customization
+  * [http://d.hatena.ne.jp/suer/20100119/redmine_view_ext]
 
 Setup History
 -------------
