@@ -10,11 +10,11 @@
   * instant client, odbc driver必要。 odbc_install.exe -> registryに登録される
   
 * ADOからOLE DBドライバを使用する方法
-  1 Microsoft 提供の OLE DB Provider for Oracle の２種類があります。
+  * Microsoft 提供の OLE DB Provider for Oracle の２種類があります。
     * __この機能は、Windows の将来のバージョンで削除されます。__ 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle の OLE DB プロバイダーを使用します。
     * Oracle に接続するには、Oracle Client が必要です。
 
-  2 OLE DBには、Oracle 提供の Oracle Provider for OLE DB (OraOLEDB) と  
+  * OLE DBには、Oracle 提供の Oracle Provider for OLE DB (OraOLEDB) と  
     * Oracle に接続するには、Oracle Client が必要です。
     * Oracle Instant Client の ODACをインストールすればよい。
       * https://www.oracle.com/technetwork/jp/database/windows/downloads/utilsoft-087491-ja.html
