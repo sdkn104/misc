@@ -13,13 +13,20 @@
     * 使い方　 http://skill-note.net/post-822/
       * 参照可能なライブラリファイルから「Microsoft ActiveX Data Objects X.X Library」を選択
       * "Provider=OraOLEDB.Oracle;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=orcl)));User ID=system;Password=manager"
-    * https://docs.oracle.com/cd/E62988_01/win.122/b72976/toc.htm
+    * OraOLEDB ref: https://docs.oracle.com/cd/E62988_01/win.122/b72976/toc.htm
       * PLSQL blockも呼べそう
+    * coding
+      * ADO ref: https://msdn.microsoft.com/ja-jp/library/cc408215.aspx
+      * cn.BeginTrans, cn.CommitTrans, ..
+      
+      
     * 改修方針
-      * setupload() -> execute時にapiでinsertを呼ぶ。1row/1call でもよいが20rows/1callとかのほうが高速。
-      * addplsql() -> execute時にapiでplsqlを実行。
-      * setselect() -> execute時にapiでselect実行してrsetに取得。
-
+      * setupload(arr, table, opt) -> execute時にapiでinsertを呼ぶ。1row/1call でもよいが20rows/1callとかのほうが高速。
+      * addplsql(plsql) -> execute時にapiでplsqlを実行。
+      * setselect(sql) -> execute時にapiでselect実行してrsetに取得。
+    * 改修方針(http)
+      * http post で csv, table, opt, plsql, sqlを送信。
+      
   * Microsoft 提供の OLE DB Provider for Oracle の２種類があります。
     * この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle の OLE DB プロバイダーを使用します。
     * Oracle に接続するには、Oracle Client が必要です。
