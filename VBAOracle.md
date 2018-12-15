@@ -29,6 +29,10 @@
     * coding
       * ADO ref: https://msdn.microsoft.com/ja-jp/library/cc408215.aspx
       * OraOLEDB ref: https://docs.oracle.com/cd/E62988_01/win.122/b72976/toc.htm
+      * Oracle/ANSI SQL ref: https://docs.oracle.com/cd/E82638_01/sqlrf/index.html
+      * Embedded SQL: https://ja.wikipedia.org/wiki/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BFSQL
+        * Oracle Embedded SQL: https://docs.oracle.com/cd/E57425_01/121/LNPCC/toc.htm
+      
       * transaction: cn.BeginTrans, cn.CommitTrans, ..
     * 改修方針
       * setupload(arr, table, opt) -> execute時にapiでinsertを呼ぶ。1row/1call でもよいが20rows/1callとかのほうが高速。
