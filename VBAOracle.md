@@ -7,8 +7,23 @@
   * __11g (11.2) の 32bit 版が最終。__
 
 * ActiveXData Objects（以下ADO）からODBCドライバを使用する方法
+  * ADO -> Microsoft OLE DB Provider for ODBC -> Oracle ODBC Driver -> Oracle Client (OCI) -> DB
+  * PLSQLは無理？
   * instant client, odbc driver必要。 odbc_install.exe -> registryに登録される
-  
+    * https://www.oracle.com/technetwork/jp/database/database-technologies/instant-client/overview/index.html
+    * 1. install instant client basic
+    * 2. odbc_install.exe JA
+      * Oracle Instant Client directory (present directory) name will be part of the driver name in registry.
+    * 3. PATH, TNS_ADMIN を設定する
+  * 使い方
+    * Oracle ODBC Driver: https://docs.oracle.com/cd/E57425_01/121/ADFNS/adfns_odbc.htm#BABGJEHF
+    * ADO Connection OpenのconnectStringに、DRIVER={Oracle in OraDb11g_home1} のようにフォルダ名指定。__バージョン共存できそう__
+       * https://excelwork.info/excel/databaseoracleodbc/
+       * https://docs.oracle.com/cd/E57425_01/121/ADFNS/adfns_odbc.htm#BABIJAGI
+       * installdir/ODBC_IC_Readme_Win.html
+  * coding
+    * Microsoft OLE DB Provider for ODBC: https://msdn.microsoft.com/ja-jp/library/cc426827.aspx
+       
 * ADOからOLE DBドライバを使用する方法
   * Microsoft 提供の OLE DB Provider for Oracle の２種類があります。
     * __この機能は、Windows の将来のバージョンで削除されます。__ 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle の OLE DB プロバイダーを使用します。
@@ -21,7 +36,7 @@
       * https://www.oracle.com/technetwork/topics/dotnet/install121024-2704210.html
         * ODAC XCopyバージョン。instant clientも同梱
         * instant clientのインストール：解凍してパスを通す。
-        * install.bat oledb  -> レジストリに登録
+        * install.bat oledb  -> レジストリに登録。レジストリ登録名がOraOLEDB.Oracle。__なのでバージョン共存はできなさそう。__
     * 使い方　 http://skill-note.net/post-822/
       * 参照可能なライブラリファイルから「Microsoft ActiveX Data Objects X.X Library」を選択
       * "Provider=OraOLEDB.Oracle;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=orcl)));User ID=system;Password=manager"
