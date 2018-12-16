@@ -14,6 +14,9 @@
     * 1. install instant client basic
     * 2. odbc_install.exe JA
       * Oracle Instant Client directory (present directory) name will be part of the driver name in registry.
+      * ODBCデータソースアドミニストレータ:「コントロールパネル」から［管理ツール］－［データソース(ODBC)］の順に選択します。
+         * -> Driverのタブに、Oracle in OraDb11g_home1が表示される。
+         * -> システムDSNの追加登録で、上記ドライバのDSNを登録できるみたい。driver名で呼び出すならたぶん不要。
     * 3. PATH, TNS_ADMIN を設定する
   * 使い方
     * Oracle ODBC Driver: https://docs.oracle.com/cd/E57425_01/121/ADFNS/adfns_odbc.htm#BABGJEHF
