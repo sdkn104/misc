@@ -29,10 +29,16 @@
     * coding
       * ADO ref: https://msdn.microsoft.com/ja-jp/library/cc408215.aspx
       * OraOLEDB ref: https://docs.oracle.com/cd/E62988_01/win.122/b72976/toc.htm
-      * Oracle/ANSI SQL ref: https://docs.oracle.com/cd/E82638_01/sqlrf/index.html
+      * Oracle SQL ref: https://docs.oracle.com/cd/E82638_01/sqlrf/index.html
+        * 上記リンクにANSI SQL準拠状況の記載あり
+      * PL/SQL: https://docs.oracle.com/cd/E57425_01/121/LNPLS/title.htm
+        * ANSI SQL/PSM: PL/SQLと似たもの。俗に「ストアドプロシージャ」と呼ばれる。
       * Embedded SQL: https://ja.wikipedia.org/wiki/%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BFSQL
+        * これを「埋め込みSQL」(Embedded SQL/ESQL) と呼び、後にANSIにより仕様が標準化された。
         * Oracle Embedded SQL: https://docs.oracle.com/cd/E57425_01/121/LNPCC/toc.htm
-      
+      * CLI: ANSI SQL/CLI = ODBCとほぼ同じ。https://ja.wikipedia.org/wiki/Call_Level_Interface
+      * Dynamic SQL: https://ja.wikipedia.org/wiki/SQL
+      　* ANSI SQLで規定。
       * transaction: cn.BeginTrans, cn.CommitTrans, ..
     * 改修方針
       * setupload(arr, table, opt) -> execute時にapiでinsertを呼ぶ。1row/1call でもよいが20rows/1callとかのほうが高速。
