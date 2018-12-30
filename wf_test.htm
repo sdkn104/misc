@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="Shift_JIS">
+  <title>[Workflow]委員会資料の回覧</title>
+  <style type="text/css">
+     body { font-family: "ＭＳ ゴシック","sans-serif","ipagothic"; }
+     table { border-collapse: collapse;  }
+     td { text-align: center; padding:4px;}
+     th { text-align: center; padding:4px; background-color: #e0e0ff; }
+  </style>
+</head>
+<body>
+
+  <span style="color:red;">
+  下記内容で問題なければ起票ボタンを押してください。<br>
+  修正する場合はブラウザの戻るボタンを押してください。</span><br>
+  <input type="button" value="起票" onclick="">
+  <hr>
+
+  <table style="width:100%">
+  <tr><td style="text-align:left;"><h2>委員会資料の回覧</h2></td>
+    <td style="text-align:right;"><small><a href="" target="_blank">このＷＦを流用して新規ＷＦを起票する</a><br>ID:0032</small></td></tr>
+  </table>
+  
+  委員会の資料を下のフォルダに格納しました。<br>
+  確認いただき、下の「承認する」ボタンを押してください。<br>
+
+  <br>
+  資料格納フォルダ：<br>
+  <a href="file://192.168.1.100/share/sadakane/t/">\\192.168.1.100\share\sadakane\t\</a>
+  <br><br>
+
+
+  起票者：定兼
+　<input type="button" value="起票者にメール" onclick="document.location='mailto:sdkn104@yahoo.co.jp'">
+
+  <br><br>
+  <!--- <strong>承認ルート</strong> --->
+  <table border="1">
+　<tr><th colspan="5">承認ルート</th></tr>
+  <tr><th>No</th><th>承認者</th><th>mail</th><th>承認</th><th>承認日</th></tr>
+  <tr><td>1</td><td>あいMS</td><td>ai@mail.co.jp</td><td>承認済</td><td>2018/8/15 6:11:34</td></tr>
+  <tr><td>2</td><td>あいMS</td><td>ai@mail.co.jp</td><td><input type="button" value="承認する" onclick="shonin(2)"></td><td></td></tr>
+  <tr><td>2</td><td>うえMS</td><td>ai@mail.co.jp</td><td><input type="button" value="承認する" onclick="shonin(3)" disabled></td><td></td></tr>
+  </table>
+  <br>
+
+
+<!---
+<div style="border: solid 1px; padding:10px; margin:10px">
+  <strong>起票者</strong>
+  <table border="1">
+  <tr><td>0</td><td>定兼</td><td>ai@mail.co.jp</td>
+　<td><input type="button" value="起票者にメール" onclick="document.location='mailto:sdkn104@yahoo.co.jp'"></td></tr>
+  </table>
+
+  <br>
+
+  <strong>承認ルート</strong>
+  <table border="1">
+  <tr><th>No</th><th>承認者</th><th>mail</th><th>承認</th><th>承認日</th></tr>
+  <tr><td>1</td><td>あいMS</td><td>ai@mail.co.jp</td><td>承認済</td><td>2018/8/15 6:11:34</td></tr>
+  <tr><td>2</td><td>あいMS</td><td>ai@mail.co.jp</td><td><input type="button" value="承認する" onclick="shonin(2)"></td><td></td></tr>
+  <tr><td>2</td><td>うえMS</td><td>ai@mail.co.jp</td><td><input type="button" value="承認する" onclick="shonin(3)" disabled></td><td></td></tr>
+  </table>
+  <br>
+
+</div>
+--->
+
+  <input type="button" value="閉じる">
+　<br><br>
+
+</body>
+
+<script>
+  //alert("aaa");
+  //document.location="file://C:/Users/sdkn1/Desktop/test2.htm"
+  //document.location="file://C:/Users/sdkn1/Desktop/"
+
+  function shonin(no) {
+    document.location = document.location + "&shonin=" + no
+  }
+
+</script>
+
+</html>
+
