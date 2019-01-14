@@ -7,7 +7,7 @@
   * __11g (11.2) の 32bit 版が最終。__
 
 * ActiveXData Objects（以下ADO）からODBCドライバを使用する方法
-  * ADO -> Microsoft OLE DB Provider for ODBC -> Oracle ODBC Driver -> Oracle Client (OCI) -> DB
+  * ADO -(OLEDB)-> Microsoft OLE DB Provider for ODBC -(ODBC)-> Oracle ODBC Driver -> Oracle Client (OCI) -> DB
   * PLSQLはできそう。
   * インストール：instant client, odbc driver必要。 odbc_install.exe -> registryに登録される
     * https://www.oracle.com/technetwork/jp/database/database-technologies/instant-client/overview/index.html
