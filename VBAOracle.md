@@ -27,7 +27,8 @@
        * installdir/ODBC_IC_Readme_Win.html
   * coding
       * Microsoft OLE DB Provider for ODBC: https://msdn.microsoft.com/ja-jp/library/cc426827.aspx
-      * ADO ref: https://msdn.microsoft.com/ja-jp/library/cc408215.aspx
+      * ADO ref: https://msdn.microsoft.com/ja-jp/library/cc408215.aspx, 
+        ADO API REF, Office developper center: https://docs.microsoft.com/ja-jp/office/client-developer/access/desktop-database-reference/ado-api-reference
         * transaction: cn.BeginTrans, cn.CommitTrans, ..
       * Oracle SQL ref: https://docs.oracle.com/cd/E82638_01/sqlrf/index.html
         * 上記リンクにANSI SQL準拠状況の記載あり
