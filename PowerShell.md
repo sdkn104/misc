@@ -57,6 +57,14 @@ Type
 (get-date).GetType()
 ```
 
+File I/O
+```
+$c = "あいうえお定兼ｻﾀﾞ＠©"
+Set-Content t.txt $c  # write
+$raw = Get-Content t.txt -Raw  # string
+$lines = @(Get-Content t.txt)  # array of line strings
+```
+
 ```cat```
 ```ps```
 
@@ -73,7 +81,7 @@ Type
 
 ```
 $d = Get-ChildItem | sort | Where-Object { $_.Name -like "*D*" } | Select-Object Length,Name,Mode
-Foreach( $i in $d ){ $i }
+foreach( $i in $d ) { $i }
 ```
 ```Select-Object```
 ```Group-Object```
@@ -82,6 +90,17 @@ Foreach( $i in $d ){ $i }
 ```Format-Table```
 ```Format-List```
 ``````
-``````
+
+呼び出し：
+```powershell -ExecutionPolicy ByPass -NoProfile -File .\無題1.ps1```
+
+ダイアログ：
+```
+Add-Type -AssemblyName System.Windows.Forms;
+[System.Windows.Forms.MessageBox]::Show("xxxx");
+```
+
+
+
 ``````
 
