@@ -89,10 +89,11 @@ foreach( $i in $d ) { $i }
 ```Out-Host```
 ```Format-Table```
 ```Format-List```
-``````
 
 呼び出し：
-```powershell -ExecutionPolicy ByPass -NoProfile -File .\無題1.ps1```
+```
+powershell -ExecutionPolicy ByPass -NoProfile -File .\無題1.ps1
+```
 
 ダイアログ：
 ```
@@ -101,6 +102,29 @@ Add-Type -AssemblyName System.Windows.Forms;
 ```
 
 
+Powershellスクリプトを起動するVBScript
+```
+'
+' Powershellスクリプト起動
+'   このファイルのファイル名+'.ps1'　のファイルを起動する
+'
 
-``````
+'引数を取得
+args_string = ""
+For Each arg In WScript.Arguments
+  args_string = args_string & " """ & arg & """"
+Next
+
+'ファイル名を取得（このファイルのファイル名+.ps1）
+file = WScript.ScriptFullName + ".ps1"
+
+'ＰＳ起動コマンドラインを作成
+cmd = "cmd /c powershell -ExecutionPolicy ByPass -NoProfile -File "
+cmdall = cmd & """" & file & """" & args_string ' & " > C:\Users\sdkn1\Desktop\o.txt"
+'Wscript.echo cmdall
+
+'実行
+Set SH = WScript.CreateObject("WScript.Shell")
+SH.Run cmdall, 0, True
+```
 
