@@ -43,8 +43,8 @@ String
 ```
 "a" + "b"
 "abc.txt".Replace("txt","log")
-"abc.txt" -replace '\.txt$','.log'
-if( "abc.txt" -match '\.txt$' ) { "ok" }
+"abc.txt" -replace '(.)\.txt$','$1.log'
+if( "abc.txt" -match '([abc])\.txt$' ) { $Matches[1] }
 if( "abc.txt" -like '*txt' ) { "ok" }
 ipconfig | Select-String "イーサネット"
 -split "a b c d"
@@ -128,3 +128,30 @@ Set SH = WScript.CreateObject("WScript.Shell")
 SH.Run cmdall, 0, True
 ```
 
+IP SCAN
+```
+# IP scanして応答あったもののNetBIOS名取得
+ForEach($i in 1..2) {
+  $ip = "192.168.1.$i"
+  $w = Get-WmiObject Win32_PingStatus -Filter "Address='$ip' and Timeout=100 and ResolveAddressNames='true' and StatusCode=0" | select ProtocolAddress*
+  #$w
+  if( $w -ne $null ) {
+    #$w.GetType()
+    $s = nbtstat -a $ip | Select-String "一意" | ForEach-Object { $l = -split $_; $l[0] } | Get-Unique
+    $ad = $w.ProtocolAddress
+    #リモートのcomputernameを取得
+    $host = Invoke-Command -comp $ip -script {$env:computername} -cred $cred
+
+    "$ad $s $host"
+  }
+}
+
+
+#ブロードキャストでNetBIOS名を取得し、そのIPアドレスを取得
+$names = nbtstat -r | Select-String "<[0-9 ]*>" | foreach { $t = -split $_; $t[0] } | sort | Get-Unique
+$names
+foreach( $n in $names) {
+  nbtstat -a $n > $null
+}
+nbtstat -c | Select-String "一意" | foreach { $t = -split $_; $t[3]+" "+$t[0] } | sort | Get-Unique 
+```
