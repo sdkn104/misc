@@ -146,7 +146,6 @@ ForEach($i in 1..2) {
   }
 }
 
-
 #ブロードキャストでNetBIOS名を取得し、そのIPアドレスを取得
 $names = nbtstat -r | Select-String "<[0-9 ]*>" | foreach { $t = -split $_; $t[0] } | sort | Get-Unique
 $names
@@ -154,4 +153,17 @@ foreach( $n in $names) {
   nbtstat -a $n > $null
 }
 nbtstat -c | Select-String "一意" | foreach { $t = -split $_; $t[3]+" "+$t[0] } | sort | Get-Unique 
+
+#Nmap使用
+$outnmap = nmap 192.168.1.1-100 -sU --script .\nbstat.nse -p137
+#$outnmap = nmap 192.168.1.1-10 -sn
+$ip = ""
+$hosts = foreach( $line in $outnmap) {
+  if( $line -match "(Nmap scan report for |Nmap done:)" -and $ip -ne "" ) {    
+      "$ip,$mac,$nbname"
+  }
+  if( $line -match "Nmap scan report for *([0-9.]+)" ) { $ip = $Matches[1]; $mac = $nbname = $dnsname = "" }
+  if( $line -match "MAC Address: *([0-9A-Fa-f:]+)" ) { $mac = $Matches[1] }
+  if( $line -match "NetBIOS name: *([^ ,]+)" ) { $nbname = $Matches[1]; }
+}
 ```
