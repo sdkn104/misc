@@ -1,27 +1,27 @@
 $interface = "イーサネット"
 
 #----- IPv6無効化
-#Get-NetAdapterBinding
 Disable-NetAdapterBinding -Name $interface -ComponentID ms_tcpip6
 #Enable-NetAdapterBinding -Name $interface -ComponentID ms_tcpip6
+Get-NetAdapterBinding -Name $interface -ComponentID ms_tcpip,ms_tcpip6
 
-#----- IPアドレスの設定
-Get-NetIPInterface -InterfaceAlias $interface | format-table InterfaceAlias,Dhcp
-Get-NetIPAddress -InterfaceAlias $interface
-
+#----- IPアドレスの設定(address,netmask,gateway)
 Remove-NetIPAddress -InterfaceAlias $interface  -Confirm:$false
 #Get-NetRoute
-Remove-NetRoute –DestinationPrefix 0.0.0.0/0 –InterfaceAlias $interface –NextHop 192.168.1.1 -Confirm:$false
+Remove-NetRoute –DestinationPrefix 0.0.0.0/0 –InterfaceAlias $interface –NextHop 192.168.1.1 -Confirm:$false #default gateway削除
 Set-NetIPInterface -InterfaceAlias $interface -Dhcp Enable
 Set-NetIPInterface -InterfaceAlias $interface -Dhcp Disable
 New-NetIPAddress -InterfaceAlias $interface -IPAddress "192.168.1.233"  -PrefixLength 24 -DefaultGateway "192.168.1.1"
+Get-NetIPInterface -InterfaceAlias $interface -AddressFamily IPv4 | format-table InterfaceAlias,AddressFamily,Dhcp
+Get-NetIPAddress -InterfaceAlias $interface -AddressFamily IPv4 | ft InterfaceAlias,IPAddress,PrefixLength
 
 #----- DNS server
-Get-DnsClientServerAddress -InterfaceAlias $interface
 Set-DnsClientServerAddress -InterfaceAlias $interface -ServerAddresses @("192.168.1.1", "8.8.8.8")
 Set-DnsClientServerAddress -InterfaceAlias $interface -ResetServerAddresses #DHCP有効ならDNS serverは自動取得となる、無効ならDNS server無しとなる）
+Get-DnsClientServerAddress -InterfaceAlias $interface
 
 #------ 終了時に設定を検証する
+# ???
 
 #------ インターフェースメトリックを自動に設定する（自動メトリック）
 Set-NetIPInterface -InterfaceAlias $interface -AutomaticMetric Enabled
@@ -34,11 +34,11 @@ Get-NetIPInterface | ft InterfaceAlias,AutomaticMetric
 #wmic /interactive:off nicconfig get index,description,DNSDomain,DNSDomainSuffixSearchOrder
 #$class= [wmiclass]'Win32_NetworkAdapterConfiguration'
 #$class.SetDNSSuffixSearchOrder()
-Get-DnsClientGlobalSetting | format-table SuffixSearchList
+#reg add HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters /V SearchList /D "ad.melco.co.jp,mei.ad.melco.co.jp" /F
 # 以下の設定により、「以下のDNSサフィックス・・」「プライマリ及び・・」が切り替わる
 Set-DnsClientGlobalSetting -SuffixSearchList @("ad.melco.co.jp", "mei.ad.melco.co.jp") 
 Set-DnsClientGlobalSetting -SuffixSearchList @() # ->suffix削除
-#reg add HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters /V SearchList /D "ad.melco.co.jp,mei.ad.melco.co.jp" /F
+Get-DnsClientGlobalSetting | format-table SuffixSearchList
 
 #------ プライマリDNSサフィックスの親サフィックスを追加する
 # ???
@@ -59,11 +59,13 @@ Set-DnsClient -InterfaceAlias $interface -RegisterThisConnectionsAddress $false 
 netsh interface ip set wins $interface static 192.168.1.1
 netsh interface ip add wins $interface 8.8.8.8
 netsh interface ip set wins $interface dhcp
+#$nic.SetWINSServer("192.168.1.1", "8.8.8.8")
+#$nic.SetWINSServer("", "") ##DHCP有効ならWINS serverは自動取得となる、無効ならWINS server無しとなる）
+netsh interface ip show wins
 
-#------ lmhostsの参照を有効にする
+#------ lmhostsの参照を有効にする（アダプタによらず共通）
 $nicClass = Get-WmiObject -list Win32_NetworkAdapterConfiguration
-$nicClass.enablewins($false,$true) # これはすべてのＮＩＣに適用
-#$nic.WINSEnableLMHostsLookup = $true #これはＮＩＣ毎だがうまくせっていできないみたい
+$nicClass.enablewins($false,$true)
 Get-WmiObject -Class win32_NetworkAdapterConfiguration | ft Description,DNSEnabledForWINSResolution,WINSEnableLMHostsLookup
 
 #---------- netBIOS over TCP/IP
