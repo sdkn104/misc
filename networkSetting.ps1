@@ -1,4 +1,4 @@
-﻿$interface = "イーサネット"
+$interface = "イーサネット"
 
 #----- IPv6無効化
 #Get-NetAdapterBinding
@@ -29,7 +29,7 @@ netsh interface ip set wins $interface dhcp
 #--------- DNSサフィックス
 #  - 「プライマリDNSサフィックス」：マシン固有。コンピュータ名の変更⇒詳細　で設定する。
 #  - 「接続専用のDNSサフィックス（この接続のDNSサフィックス）」：アダプタ毎。アダプタのプロパティで設定。
-#  - 「以下のサフィックスを順に追加する」：任意数を順番に指定可能。アダプタ毎。
+#  - 「以下のサフィックスを順に追加する」：任意数を順番に指定可能。アダプタによらず共通。
 #wmic /interactive:off nicconfig get index,description,DNSDomain,DNSDomainSuffixSearchOrder
 #$class= [wmiclass]'Win32_NetworkAdapterConfiguration'
 #$class.SetDNSSuffixSearchOrder()
@@ -37,6 +37,7 @@ Get-DnsClientGlobalSetting | format-table SuffixSearchList
 # 以下の設定により、「以下のDNSサフィックス・・」「プライマリ及び・・」が切り替わる
 Set-DnsClientGlobalSetting -SuffixSearchList @("ad.melco.co.jp", "mei.ad.melco.co.jp") 
 Set-DnsClientGlobalSetting -SuffixSearchList @() # ->suffix削除
+#reg add HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters /V SearchList /D "ad.melco.co.jp,mei.ad.melco.co.jp" /F
 
 #--------- この接続(固有)のDNSサフィックス
 #wmic /interactive:off nicconfig where index=1 call SetDNSDomain "ad.melco.co.jp"
@@ -44,8 +45,9 @@ Get-DnsClient -InterfaceAlias $interface | format-table ConnectionSpecificSuffix
 Set-DnsClient -InterfaceAlias $interface -ResetConnectionSpecificSuffix
 Set-DnsClient -InterfaceAlias $interface -ConnectionSpecificSuffix "ad.melco.co.jp"
 
-
 #---------- netBIOS over TCP/IP
+$a = Get-NetAdapter -Name $interface
+$nic = Get-WmiObject -Class win32_NetworkAdapterConfiguration | Where-Object {$_.Description -eq $a.InterfaceDescription}
 $r = $nic.SetTcpipNetbios(1)
 $r = $nic.SetTcpipNetbios(0)
 #SetTcpopNetbios option:
@@ -56,9 +58,10 @@ $r = $nic.SetTcpipNetbios(0)
 #wmic nicconfig where (IPEnabled=TRUE) call SetTcpipNetbios 1
 
 #---------- DNSへの登録
-Get-DnsClient -InterfaceAlias $interface | format-table *Register*
-#$a = Get-NetAdapter -Name $interface
-#$nic = Get-WmiObject -Class win32_networkadapterconfiguration | Where-Object {$_.Description -eq $a.InterfaceDescription}
+Get-DnsClient -InterfaceAlias $interface | format-table InterfaceAlias,*Register*
 #Select-Object -InputObject $nic Description, FullDNSRegistrationEnabled, DomainDNSRegistrationEnabled | Write-Output
 Set-DnsClient -InterfaceAlias $interface -RegisterThisConnectionsAddress $false -UseSuffixWhenRegistering $false
 
+#----------- ネットワークの場所（プロファイル）
+Set-NetConnectionProfile -InterfaceAlias $interface -NetworkCategory Private
+Get-NetConnectionProfile -InterfaceAlias $interface | Format-Table InterfaceAlias,NetworkCategory
