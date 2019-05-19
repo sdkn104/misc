@@ -34,9 +34,9 @@ Get-NetIPInterface | ft InterfaceAlias,AutomaticMetric
 #wmic /interactive:off nicconfig get index,description,DNSDomain,DNSDomainSuffixSearchOrder
 #$class= [wmiclass]'Win32_NetworkAdapterConfiguration'
 #$class.SetDNSSuffixSearchOrder()
-#reg add HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters /V SearchList /D "ad.melco.co.jp,mei.ad.melco.co.jp" /F
+#reg add HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters /V SearchList /D "aaa.org,bbb.org" /F
 # 以下の設定により、「以下のDNSサフィックス・・」「プライマリ及び・・」が切り替わる
-Set-DnsClientGlobalSetting -SuffixSearchList @("ad.melco.co.jp", "mei.ad.melco.co.jp") 
+Set-DnsClientGlobalSetting -SuffixSearchList @("aaa.org", "bbb.org") 
 Set-DnsClientGlobalSetting -SuffixSearchList @() # ->suffix削除
 Get-DnsClientGlobalSetting | format-table SuffixSearchList
 
@@ -44,16 +44,16 @@ Get-DnsClientGlobalSetting | format-table SuffixSearchList
 # ???
 
 #--------- この接続(固有)のDNSサフィックス
-#wmic /interactive:off nicconfig where index=1 call SetDNSDomain "ad.melco.co.jp"
-Get-DnsClient -InterfaceAlias $interface | format-table InterfaceAlias,ConnectionSpecificSuffix
+#wmic /interactive:off nicconfig where index=1 call SetDNSDomain "xxx.org"
 Set-DnsClient -InterfaceAlias $interface -ResetConnectionSpecificSuffix
-Set-DnsClient -InterfaceAlias $interface -ConnectionSpecificSuffix "ad.melco.co.jp"
+Set-DnsClient -InterfaceAlias $interface -ConnectionSpecificSuffix "xxx.org"
+Get-DnsClient -InterfaceAlias $interface | format-table InterfaceAlias,ConnectionSpecificSuffix
 
 #---------- この接続のアドレスをDNSに登録する
 #---------- この接続のDNSサフィックスをDNS登録に使う
-Get-DnsClient -InterfaceAlias $interface | format-table InterfaceAlias,*Register*
 #Select-Object -InputObject $nic Description, FullDNSRegistrationEnabled, DomainDNSRegistrationEnabled | Write-Output
 Set-DnsClient -InterfaceAlias $interface -RegisterThisConnectionsAddress $false -UseSuffixWhenRegistering $false
+Get-DnsClient -InterfaceAlias $interface | format-table InterfaceAlias,*Register*
 
 #----- WINS server
 netsh interface ip set wins $interface static 192.168.1.1
@@ -61,7 +61,7 @@ netsh interface ip add wins $interface 8.8.8.8
 netsh interface ip set wins $interface dhcp
 #$nic.SetWINSServer("192.168.1.1", "8.8.8.8")
 #$nic.SetWINSServer("", "") ##DHCP有効ならWINS serverは自動取得となる、無効ならWINS server無しとなる）
-netsh interface ip show wins
+netsh interface ip show wins "$interface"
 
 #------ lmhostsの参照を有効にする（アダプタによらず共通）
 $nicClass = Get-WmiObject -list Win32_NetworkAdapterConfiguration
@@ -77,9 +77,10 @@ $r = $nic.SetTcpipNetbios(0)
 # 0 - Use NetBIOS setting from the DHCP server
 # 1 - Enable NetBIOS over TCP/IP
 # 2 - Disable NetBIOS over TCP/IP
-#wmic nicconfig get description,index,TcpipNetbiosOptions
+#wmic nicconfig get description,TcpipNetbiosOptions
 #wmic nicconfig where (IPEnabled=TRUE) call SetTcpipNetbios 1
-
+$nic = Get-WmiObject -Class win32_NetworkAdapterConfiguration | Where-Object {$_.Description -eq $a.InterfaceDescription}
+$nic | format-table Description,TcpipNetbiosOptions
 
 #----------- ネットワークの場所（プロファイル）
 Set-NetConnectionProfile -InterfaceAlias $interface -NetworkCategory Private
