@@ -38,14 +38,18 @@ Get-NetIPInterface | ft InterfaceAlias,AutomaticMetric
 #  - 「プライマリDNSサフィックス」：マシン固有。コンピュータ名の変更⇒詳細　で設定する。
 #  - 「接続専用のDNSサフィックス（この接続のDNSサフィックス）」：アダプタ毎。アダプタのプロパティで設定。
 #  - 「以下のサフィックスを順に追加する」：任意数を順番に指定可能。アダプタによらず共通。
-#wmic /interactive:off nicconfig get index,description,DNSDomain,DNSDomainSuffixSearchOrder
-#$class= [wmiclass]'Win32_NetworkAdapterConfiguration'
-#$class.SetDNSSuffixSearchOrder()
+$suffixes = "a.org", "b.org"
+$class= [wmiclass]'Win32_NetworkAdapterConfiguration'
+$class.SetDNSSuffixSearchOrder($suffixes)
+$class.SetDNSSuffixSearchOrder() # ->suffix削除
 #reg add HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters /V SearchList /D "aaa.org,bbb.org" /F
+reg query HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters /V SearchList
+#wmic /:off nicconfig get description,DNSDomain,DNSDomainSuffixSearchOrder
+#wmic /interactive:off nicconfig call SetDNSSuffixSearchOrder ("a.org", "b.org")
 # 以下の設定により、「以下のDNSサフィックス・・」「プライマリ及び・・」が切り替わる
-Set-DnsClientGlobalSetting -SuffixSearchList @("aaa.org", "bbb.org") 
-Set-DnsClientGlobalSetting -SuffixSearchList @() # ->suffix削除
-Get-DnsClientGlobalSetting | format-table SuffixSearchList
+#Set-DnsClientGlobalSetting -SuffixSearchList @("aaa.org", "bbb.org") 
+#Set-DnsClientGlobalSetting -SuffixSearchList @() # ->suffix削除
+#Get-DnsClientGlobalSetting | format-table SuffixSearchList
 
 #------ プライマリDNSサフィックスの親サフィックスを追加する
 # ???
