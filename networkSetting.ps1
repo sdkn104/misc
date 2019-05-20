@@ -6,6 +6,9 @@ Disable-NetAdapterBinding -Name $interface -ComponentID ms_tcpip6
 Get-NetAdapterBinding -Name $interface -ComponentID ms_tcpip,ms_tcpip6
 
 #----- IPアドレスの設定(address,netmask,gateway)
+#netsh interface ip set address "$interface" static $ip 255.255.255.0 192.168..29.1
+#netsh interface ip set address "$interface" dhcp 
+#netsh interface ip show address "$interface"
 Remove-NetIPAddress -InterfaceAlias $interface  -Confirm:$false
 #Get-NetRoute
 Remove-NetRoute –DestinationPrefix 0.0.0.0/0 –InterfaceAlias $interface –NextHop 192.168.1.1 -Confirm:$false #default gateway削除
@@ -16,6 +19,10 @@ Get-NetIPInterface -InterfaceAlias $interface -AddressFamily IPv4 | format-table
 Get-NetIPAddress -InterfaceAlias $interface -AddressFamily IPv4 | ft InterfaceAlias,IPAddress,PrefixLength
 
 #----- DNS server
+#netsh interface ip set dns "$interface" static 192.168.1.1 register=none
+#netsh interface ip add dns "$interface" 192.168.1.122
+#netsh interface ip set dns "$interface" dhcp register=none
+#netsh interface ip show dns "$interface"
 Set-DnsClientServerAddress -InterfaceAlias $interface -ServerAddresses @("192.168.1.1", "8.8.8.8")
 Set-DnsClientServerAddress -InterfaceAlias $interface -ResetServerAddresses #DHCP有効ならDNS serverは自動取得となる、無効ならDNS server無しとなる）
 Get-DnsClientServerAddress -InterfaceAlias $interface
@@ -56,11 +63,11 @@ Set-DnsClient -InterfaceAlias $interface -RegisterThisConnectionsAddress $false 
 Get-DnsClient -InterfaceAlias $interface | format-table InterfaceAlias,*Register*
 
 #----- WINS server
-netsh interface ip set wins $interface static 192.168.1.1
-netsh interface ip add wins $interface 8.8.8.8
-netsh interface ip set wins $interface dhcp
-#$nic.SetWINSServer("192.168.1.1", "8.8.8.8")
-#$nic.SetWINSServer("", "") ##DHCP有効ならWINS serverは自動取得となる、無効ならWINS server無しとなる）
+#netsh interface ip set wins "$interface" static 192.168.1.1
+#netsh interface ip add wins "$interface" 8.8.8.8
+#netsh interface ip set wins "$interface" dhcp
+$nic.SetWINSServer("192.168.1.1", "8.8.8.8")
+$nic.SetWINSServer("", "") ##DHCP有効ならWINS serverは自動取得となる、無効ならWINS server無しとなる）
 netsh interface ip show wins "$interface"
 
 #------ lmhostsの参照を有効にする（アダプタによらず共通）
