@@ -5,6 +5,7 @@ Disable-NetAdapterBinding -Name $interface -ComponentID ms_tcpip6
 #Enable-NetAdapterBinding -Name $interface -ComponentID ms_tcpip6
 Get-NetAdapterBinding -Name $interface -ComponentID ms_tcpip,ms_tcpip6
 
+
 #----- IPアドレスの設定(address,netmask,gateway)
 #netsh interface ip set address "$interface" static $ip 255.255.255.0 192.168..29.1
 #netsh interface ip set address "$interface" dhcp 
@@ -34,6 +35,7 @@ Get-DnsClientServerAddress -InterfaceAlias $interface
 Set-NetIPInterface -InterfaceAlias $interface -AutomaticMetric Enabled
 Get-NetIPInterface | ft InterfaceAlias,AutomaticMetric
 
+
 #--------- DNSサフィックス
 #  - 「プライマリDNSサフィックス」：マシン固有。コンピュータ名の変更⇒詳細　で設定する。
 #  - 「接続専用のDNSサフィックス（この接続のDNSサフィックス）」：アダプタ毎。アダプタのプロパティで設定。
@@ -60,11 +62,12 @@ Set-DnsClient -InterfaceAlias $interface -ResetConnectionSpecificSuffix
 Set-DnsClient -InterfaceAlias $interface -ConnectionSpecificSuffix "xxx.org"
 Get-DnsClient -InterfaceAlias $interface | format-table InterfaceAlias,ConnectionSpecificSuffix
 
-#---------- この接続のアドレスをDNSに登録する
-#---------- この接続のDNSサフィックスをDNS登録に使う
+#---------- この接続のアドレスをDNSに登録する、この接続のDNSサフィックスをDNS登録に使う
+#  ※早めに設定したほうがよい（ＤＮＳにご登録されないため）
 #Select-Object -InputObject $nic Description, FullDNSRegistrationEnabled, DomainDNSRegistrationEnabled | Write-Output
 Set-DnsClient -InterfaceAlias $interface -RegisterThisConnectionsAddress $false -UseSuffixWhenRegistering $false
 Get-DnsClient -InterfaceAlias $interface | format-table InterfaceAlias,*Register*
+
 
 #----- WINS server
 #netsh interface ip set wins "$interface" static 192.168.1.1
@@ -80,6 +83,7 @@ $nicClass.enablewins($false,$true)
 Get-WmiObject -Class win32_NetworkAdapterConfiguration | ft Description,DNSEnabledForWINSResolution,WINSEnableLMHostsLookup
 
 #---------- netBIOS over TCP/IP
+#ネットワークが接続していないとエラーとなる。ＧＵＩからの設定は可能。
 $a = Get-NetAdapter -Name $interface
 $nic = Get-WmiObject -Class win32_NetworkAdapterConfiguration | Where-Object {$_.Description -eq $a.InterfaceDescription}
 $r = $nic.SetTcpipNetbios(1)
@@ -92,6 +96,7 @@ $r = $nic.SetTcpipNetbios(0)
 #wmic nicconfig where (IPEnabled=TRUE) call SetTcpipNetbios 1
 $nic = Get-WmiObject -Class win32_NetworkAdapterConfiguration | Where-Object {$_.Description -eq $a.InterfaceDescription}
 $nic | format-table Description,TcpipNetbiosOptions
+
 
 #----------- ネットワークの場所（プロファイル）
 Set-NetConnectionProfile -InterfaceAlias $interface -NetworkCategory Private
