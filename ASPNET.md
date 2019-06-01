@@ -18,3 +18,22 @@
 * Web Forms
   * https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
   
+* MVC
+  * https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
+  
+# Oracle Forms
+* (https://en.wikipedia.org/wiki/Oracle_Forms)
+  * Oracle Forms is has an IDE that uses PL/SQL.
+  * It is Java where it runs in a Java EE container.
+    * Applet Container は Java EE containerの一種
+         [1](https://docs.oracle.com/cd/E19159-01/820-4604/ablms/index.html) 
+         [2](https://docs.oracle.com/javaee/5/tutorial/doc/bnabo.html)
+* http://otndnld.oracle.co.jp/products/forms/htdocs/install/Materials/html/o2/o15websystem.html
+  * Webブラウザ上のJava Appletとしてリッチクライアント・アプリケーションを実現していく
+  
+# Applet-Like 
+*Silverlight C#
+  * https://www.atmarkit.co.jp/fdotnet/chushin/introsl_01/introsl_01_02.html
+* smart client
+
+
