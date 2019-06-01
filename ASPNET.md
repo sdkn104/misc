@@ -3,7 +3,6 @@
 * [ASP.NET 入門の書(MVC)] (https://qiita.com/Kei18/items/1a9b936216bd2458ec08)
 * ？[最新の ASPNET Web アプリケーション電子ブック] (https://docs.microsoft.com/ja-jp/dotnet/standard/modern-web-apps-azure-architecture/)
 * 〇ASP.NET Web Forms vs ASP.NET MVC https://techinfoofmicrosofttech.osscons.jp/index.php?ASP.NET%20Web%20Forms%20vs%20ASP.NET%20MVC
-* 〇ASP.NET（Web Forms）を理解する3つの仕組み https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
 
 * https://codezine.jp/article/detail/9604
 
@@ -15,11 +14,17 @@
 * ASP.NET MVC: https://dotnet.microsoft.com/apps/aspnet/mvc
 * ASP.NET Core: https://docs.microsoft.com/ja-jp/aspnet/core/?view=aspnetcore-2.2
 
-* Web Forms
-  * https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
+# ASP.NET Web Forms
+  * tutorial: https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
+  * 〇ASP.NET（Web Forms）を理解する3つの仕組み https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
+  * Entity Framework is an object-relational mapping (ORM) framework 
+    [ref](https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer)
+    * write class for data model, then generate RDB table, or write access code. 
+    * [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/index)
+      * Query expressions are written in a declarative query syntax in the code (no SQL).
   
-* MVC
-  * https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
+# ASP.NET MVC
+* https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
   
 # Oracle Forms
 * (https://en.wikipedia.org/wiki/Oracle_Forms)
