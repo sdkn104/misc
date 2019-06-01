@@ -19,13 +19,29 @@
   * 〇ASP.NET（Web Forms）を理解する3つの仕組み https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
   * Entity Framework is an object-relational mapping (ORM) framework 
     [ref](https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer)
-    * write class for data model, then generate RDB table, or write access code. 
+    * write Model class for data entity (table schema), then generate RDB table, or write access code. 
     * [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/index)
       * Query expressions are written in a declarative query syntax in the code (no SQL).
-  
+  * UI: place parts (control), by writing aspx or by GUI
+    * pageはaspxファイルと対応。部品を配置する
+    * 部品にイベントハンドラを割り付ける。ページにpage-loadイベントあり。
+      　 * ハンドラからLogicのクラスを操作し、LogicクラスがModelクラスを操作する
+  * Model binding [ref](https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/display_data_items_and_details)
+         * ListViewなどにはModel classをバインドできる。表示などの処理が自動化できる。
+  * Life cycle, post back, view state
+       * https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
+       
 # ASP.NET MVC
 * https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
-  
+* routing: urlに対してControllerのメソッドが対応する。（アクションメソッド）
+  * アクションメソッドは、response (html, json, etc)を返す。
+* Model binding?: リクエスト中のデータを、コントローラのアクションメソッドの引数にバインドする
+* View:  
+  * aspx, Razor(cshtml?)などで記述
+  * HTMLヘルパー:
+    WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
+
+
 # Oracle Forms
 * (https://en.wikipedia.org/wiki/Oracle_Forms)
   * Oracle Forms is has an IDE that uses PL/SQL.
