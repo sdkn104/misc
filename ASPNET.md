@@ -49,8 +49,10 @@
   * aspx, Razor(cshtml?)などで記述
   * HTMLヘルパー:
     WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
-* ViewBag,ViewData,　TempData -- viewの状態保持
-  * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。 TempDataDictionaryに格納されたデータの存続期間は、2回目の要求後に終了します。
+* viewの状態保持
+  * Session変数 などで明示的に書く。
+  * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
+  
 
 # Oracle Forms
 * (https://en.wikipedia.org/wiki/Oracle_Forms)
