@@ -42,11 +42,15 @@
        
 # ASP.NET MVC
 * https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
-* routing: urlに対してControllerのメソッドが対応する。（アクションメソッド）
+* https://docs.microsoft.com/ja-jp/aspnet/core/mvc/overview?view=aspnetcore-2.2
+* routing: urlに対してControllerのメソッド（アクションメソッド）を対応づける。
   * アクションメソッドは、response (html, json, etc)を返す。
-* Model binding?: リクエスト中のデータを、コントローラのアクションメソッドの引数にバインドする
-* View:  
-  * aspx, Razor(cshtml?)などで記述
+* Model binding: 
+  * client request data (form values, route data, query string parameters, HTTP headers) into objects that the controller can handle.
+* View
+  * action method名と同じ名前の.aspx, .cshtmlを作成する。
+    * reurun View()とすると同名.cshtmlなどが返る。
+    * 連想配列viewBag, viewDataなどに値を設定すると、.aspx, cshtmlから参照できる
   * HTMLヘルパー:
     WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
 * viewの状態保持
