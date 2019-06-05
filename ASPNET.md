@@ -15,24 +15,24 @@
 * ASP.NET Core: https://docs.microsoft.com/ja-jp/aspnet/core/?view=aspnetcore-2.2
 
 # ASP.NET Web Forms
-  * tutorial: https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
-  * 〇ASP.NET（Web Forms）を理解する3つの仕組み https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
-  * UI
-    * pageはaspxファイルと対応。部品(server control)を配置する(aspxに記述かＧＵＩで置く）
-    * 部品(update, clickなど)やページ(loadなど)のイベントに対してハンドラを割り付ける。
-      　 * ハンドラからLogicのクラスを操作し、LogicクラスがModelクラスを操作する。Logicは作らなくてもよい。
-  * Life cycle, post back, view state
-       * https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
-       * page loadイベントはサーバで処理されてからpage送信される。
-       　その他のイベントが発生すると、内容がサーバに送信され(post back)、サーバでハンドラ実行、更新したページ全体をresponse。
-       　* page loadハンドラは、post back時とそれ以外で分けて処理を記述可。
-         * post backは<FORM>データが自身のページに送信される。(部品は<form action="自身.aspx">に展開)
-       * 入力更新イベントはデフォルトでプール(発生順序無視)され、click系イベント発生時にまとめて送信。ただしプール無効設定AutoPostBackも可。
-       * view stateでpost back時に画面の状態(label, 色など)を保持する：
-       　　* サーバからページ返信時に、現在の値をタグで埋め込んでおく(view state)。post back時にview stateの内容も送信し、サーバで復元する。
-         　* label, colorなどはview stateに保持, formのinput値などはsummit時に最新値が送信されるのでview stateにはいれないが復元される。
+* tutorial: https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
+* 〇ASP.NET（Web Forms）を理解する3つの仕組み https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
+* UI
+  * pageはaspxファイルと対応。部品(server control)を配置する(aspxに記述かＧＵＩで置く）
+  * 部品(update, clickなど)やページ(loadなど)のイベントに対してハンドラを割り付ける
+        * ハンドラからLogicのクラスを操作し、LogicクラスがModelクラスを操作する。Logicは作らなくてもよい。
+* Life cycle, post back, view state
+  * https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
+  * page loadイベントはサーバで処理されてからpage送信される。
+  その他のイベントが発生すると、内容がサーバに送信され(post back)、サーバでハンドラ実行、更新したページ全体をresponse。
+      * page loadハンドラは、post back時とそれ以外で分けて処理を記述可。
+      * post backは<FORM>データが自身のページに送信される。(部品は<form action="自身.aspx">に展開)
+  * 入力更新イベントはデフォルトでプール(発生順序無視)され、click系イベント発生時にまとめて送信。ただしプール無効設定AutoPostBackも可。
+  * view stateでpost back時に画面の状態(label, 色など)を保持する：
+     * サーバからページ返信時に、現在の値をタグで埋め込んでおく(view state)。post back時にview stateの内容も送信し、サーバで復元する。
+     * label, colorなどはview stateに保持, formのinput値などはsummit時に最新値が送信されるのでview stateにはいれないが復元される。
   * Model binding [ref](https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/display_data_items_and_details)
-         * ListViewなどにはModel classをバインドできる。表示などの処理が自動化できる。
+      * ListViewなどにはModel classをバインドできる。表示などの処理が自動化できる。
   * Model
     *Entity Framework is an object-relational mapping (ORM) framework 
       [ref](https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer)
@@ -57,7 +57,7 @@
   * Session変数 などで明示的に書く。
   * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
   
-
+ 
 # Oracle Forms
 * (https://en.wikipedia.org/wiki/Oracle_Forms)
   * Oracle Forms is has an IDE that uses PL/SQL.
