@@ -69,9 +69,36 @@
   * Webブラウザ上のJava Appletとしてリッチクライアント・アプリケーションを実現していく
   
 # Applet-Like 
-*Silverlight C#
+* Silverlight C#
   * https://www.atmarkit.co.jp/fdotnet/chushin/introsl_01/introsl_01_02.html
 * smart client
 
 # Java Applet
-* 
+* ネットワークを通してWebブラウザに読み込まれ実行されるJavaのアプリケーションの一形態。Java 10まではJava Runtime Environmentに搭載されていてJava 11で廃止。
+  * ローカルの資源にアクセスできない（クリップボードやディスクの読み書きができない、印刷機能を扱えないなど）。
+  * アプレットのダウンロード元サーバとしか通信できない。
+* Programming (https://www.javadrive.jp/applet/)
+  * Appletクラスを継承したクラスを作成
+  * イメージとしてはAppletクラスは何かを表示したり他の部品を置く為のパネルのようなものです。
+  * そのクラスに以下のメソッドを定義する。init
+     start
+     stop
+     destroy
+     paint
+     repaint
+     update
+  * 描画：Graphicsクラスで図形を描画
+  * イベント：MouseListener等を作成・登録してコールバックを定義する。イベントはright click等で座標値などが取得可能。
+  * GUI部品(テキストフィールド、ボタンなど）とそのイベントリスナもAWTで書ける。
+  * Parameter: htmlのparamタグの情報をgetParameters()で取得可能。
+  * Server: serverとhttp通信可。HttpURLConnection など。
+* HTMLに埋め込んでロード時に起動する。<applet code="class_name" width="applet_width" height="applet_height"></applet>
+
+* Java Web Start   -- Java 11で廃止
+
+
+# Java Server side
+* Java EE: Java Platform, Enterprise Edition (Java EE) は、Javaで実装されたアプリケーションサーバーの標準規格及びそのAPIを定めたもの
+* Servlet, WebSocketなどを含む
+
+
