@@ -73,4 +73,5 @@
   * https://www.atmarkit.co.jp/fdotnet/chushin/introsl_01/introsl_01_02.html
 * smart client
 
-
+# Java Applet
+* 
