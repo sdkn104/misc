@@ -95,7 +95,9 @@
 * HTMLに埋め込んでロード時に起動する。<applet code="class_name" width="applet_width" height="applet_height"></applet>
 
 * Java Web Start   -- Java 11で廃止
-
+  * Java製アプリケーションをウェブサーバなどから自動ダウンロード、自動インストール、自動アップデートして、サンドボックス上にて実行可能な仕組み
+  * Java Web Start のシステム要件は何ですか ? Java バージョン 1.2.2 以上をサポートするクライアントシステムで Java Web Start を使用できます。Java Web Start はほとんどすべてのブラウザで動作します。
+  * サポートされるブラウザは何ですか ? Java Web Start では、主として Internet Explorer 4 以上と Mozilla をサポートしています。ただし、MIME タイプの関連付けを正しく設定してある場合は、どのブラウザでも JNLP ファイルを起動できます。Java Web Start では、ブラウザの設定を使用し、ブラウザを起動して URL を表示することもあります。この機能は、サポートされていないブラウザでは動作しません。
 
 # Java Server side
 * Java EE: Java Platform, Enterprise Edition (Java EE) は、Javaで実装されたアプリケーションサーバーの標準規格及びそのAPIを定めたもの
