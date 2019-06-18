@@ -128,6 +128,23 @@ Set SH = WScript.CreateObject("WScript.Shell")
 SH.Run cmdall, 0, True
 ```
 
+BAT内に埋め込んだPSスクリプトを実行
+```
+REM <# PowerShellコメントの始まり。REMを取り除くと全体がPSスクリプトとなる。
+@echo off
+setlocal enabledelayedexpansion
+for %%f in (%*) do ( set ARGS=!ARGS! %%f )
+type "%~fp0" | powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -c "'<#'; $input | Select-Object -Skip 1" > %TEMP%\tmp.batps.ps1 %ARGS%
+powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
+del %TEMP%\tmp.batps.ps1
+exit /b
+#>
+#------- 上のコードは編集しないこと --------------------------------------------------------
+#------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） ----------------
+
+Write-Host $args[0]
+```
+
 IP SCAN
 ```
 # IP scanして応答あったもののNetBIOS名取得
@@ -167,3 +184,5 @@ $hosts = foreach( $line in $outnmap) {
   if( $line -match "NetBIOS name: *([^ ,]+)" ) { $nbname = $Matches[1]; }
 }
 ```
+
+
