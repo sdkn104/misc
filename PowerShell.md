@@ -43,8 +43,9 @@ ipconfig | Select-String "イーサネット"
 
 #### Type
 ```
-$text = [String]123
-$number = [int]$a
+$text = [String]123    # cast
+$number = [int]$a      # cast
+[string]$string = 123  # type declaration
 (get-date) -is [DateTime]
 (get-date).GetType()
 ```
@@ -88,17 +89,19 @@ rm (Remove-Item)
 mkdir xxx (New-Item xxx -ItemType Directory)
 ```
 
+#### Help
+```
+Update-Help  # download and install help files, 管理者権限で実行
+Get-Command *-Host*
+Get-ChildItem -?
+Get-Help Get-ChildItem -Online
+alias (Get-Alias)
+```
+
 #### etc
+```$log = Invoke-Expression "dir .."```
 
-```Invoke-Expression "dir .."```
-
-```Get-Command -Verb Get ```
-
-```Get-ChildItem -?```   HELP
-
-```Get-Help Get-ChildItem```   HELP
-
-```alias (Get-Alias)```
+```$true, $false, $null```
 
 ```Select-Object```
 ```Group-Object```
