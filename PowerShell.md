@@ -8,13 +8,13 @@
 - Language Spec. 3.0 (5.0も同じはず)
    https://www.microsoft.com/en-us/download/confirmation.aspx?id=36389
 
-Array
+#### Array
 ```
 $a = 1, 2, 3
 $a = @(1)
 $a.Count
 ```
-Hash:
+#### Hash:
 ```
 $hash = @{ Number = 1; Shape = "Square"; Color = "Blue"}
 $hash = [orderd]@{ Number = 1; Shape = "Square"; Color = "Blue"}
@@ -24,14 +24,14 @@ $hash["Color"]
 $hash[0]
 ```
 
-Location:
+#### Location:
 ```
 pwd
 dir
 Get-Item C:\Users\*
 ```
 
-String
+#### String
 ```
 "a" + "b"
 "abc.txt".Replace("txt","log")
@@ -43,13 +43,13 @@ ipconfig | Select-String "イーサネット"
 "a:b:c" -split ":"
 ```
 
-Type
+#### Type
 ```
 (get-date) -is [DateTime]
 (get-date).GetType()
 ```
 
-File I/O
+#### File I/O
 ```
 $c = "あいうえお定兼ｻﾀﾞ＠©"
 Set-Content t.txt $c  # write
@@ -57,6 +57,7 @@ $raw = Get-Content t.txt -Raw  # string
 $lines = @(Get-Content t.txt)  # array of line strings
 ```
 
+#### etc
 ```cat```
 ```ps```
 
@@ -84,17 +85,20 @@ foreach( $i in $d ) { $i }
 
 呼び出し：
 ```
-powershell -ExecutionPolicy ByPass -NoProfile -File .\無題1.ps1
+powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 ```
 
-ダイアログ：
+#### ダイアログ：
 ```
 Add-Type -AssemblyName System.Windows.Forms;
 [System.Windows.Forms.MessageBox]::Show("xxxx");
 ```
+```
+$WSH = New-Object -ComObject Wscript.Shell
+$WSH.Popup("xxxx")
+```
 
-
-Powershellスクリプトを起動するVBScript
+#### Powershellスクリプトを起動するVBScript
 ```
 '
 ' Powershellスクリプト起動
@@ -120,7 +124,7 @@ Set SH = WScript.CreateObject("WScript.Shell")
 SH.Run cmdall, 0, True
 ```
 
-BAT内に埋め込んだPSスクリプトを実行
+#### BAT内に埋め込んだPSスクリプトを実行
 ```
 @REM <# PowerShellコメントの始まり。@REMを取り除くと全体がPSスクリプトとなる。
 @echo off
@@ -137,7 +141,7 @@ exit /b
 Write-Host $args[0]
 ```
 
-IP SCAN
+#### IP SCAN
 ```
 # IP scanして応答あったもののNetBIOS名取得
 ForEach($i in 1..2) {
