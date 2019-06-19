@@ -41,13 +41,6 @@ ipconfig | Select-String "イーサネット"
 "a:b:c" -split ":"
 ```
 
-#### Location
-```
-pwd
-dir
-Get-Item C:\Users\*
-```
-
 #### Type
 ```
 $text = [String]123
@@ -63,6 +56,11 @@ For($i=0; $i -lt 10; $i++){}
 Foreach($i in 1..10){$i}
 1..10 | foreach{$_}
 ```
+#### Pileline
+```
+$d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode
+$d | foreach { "name: " + $_.Name }
+```
 
 #### File I/O
 ```
@@ -72,9 +70,23 @@ $raw = Get-Content t.txt -Raw  # string
 $lines = @(Get-Content t.txt)  # array of line strings
 ```
 
+#### File System
+```
+pwd (Get-Location)
+cd (Set-Location)
+dir (Get-ChildItem)
+Get-Item C:\Users\*
+cp (Copy-Item)
+mv (Move-Item)
+rm (Remove-Item)
+mkdir xxx (New-Item xxx -ItemType Directory)
+```
+
 #### etc
-```cat```
-```ps```
+```cat (Get-Content)```
+```ps (Get-Process)```
+
+```Invoke-Expression "dir .."```
 
 ```Get-Command -Verb Get ```
 
@@ -82,15 +94,8 @@ $lines = @(Get-Content t.txt)  # array of line strings
 
 ```Get-Help Get-ChildItem```   HELP
 
-```Get-Alias```
+```alias (Get-Alias)```
 
-
-```$files = dir```
-
-```
-$d = Get-ChildItem | sort | Where-Object { $_.Name -like "*D*" } | Select-Object Length,Name,Mode
-foreach( $i in $d ) { $i }
-```
 ```Select-Object```
 ```Group-Object```
 ```Write-Host```
@@ -99,12 +104,12 @@ foreach( $i in $d ) { $i }
 ```Format-Table```
 ```Format-List```
 
-呼び出し：
+#### 呼び出し
 ```
 powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 ```
 
-#### ダイアログ表示：
+#### ダイアログ表示
 ```
 Add-Type -AssemblyName System.Windows.Forms;
 [System.Windows.Forms.MessageBox]::Show("xxxx");
