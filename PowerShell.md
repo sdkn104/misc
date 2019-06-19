@@ -62,6 +62,12 @@ $d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length
 $d | foreach { "name: " + $_.Name }
 ```
 
+#### Function
+```
+function add($a, $b) { $a + $b }
+$v = add 1 2
+```
+
 #### File I/O
 ```
 $c = "あいうえお定兼ｻﾀﾞ＠©"
@@ -83,8 +89,6 @@ mkdir xxx (New-Item xxx -ItemType Directory)
 ```
 
 #### etc
-```cat (Get-Content)```
-```ps (Get-Process)```
 
 ```Invoke-Expression "dir .."```
 
