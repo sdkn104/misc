@@ -1,20 +1,12 @@
-TOP: https://docs.microsoft.com/en-us/powershell/?view=powershell-5.0
-
-SDK TOP: https://docs.microsoft.com/en-us/powershell/developer/windows-powershell
-
-- Cmdlet: https://docs.microsoft.com/en-us/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet
-
-Ref TOP: https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.0
-
-- Learning PS: https://docs.microsoft.com/en-us/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-5.0
-
-- Core Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/?view=powershell-5.0
-
-- about Ref (構文）: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/?view=powershell-5.0
-
-
-Language Spec. 3.0 (5.0も同じはず)
-https://www.microsoft.com/en-us/download/confirmation.aspx?id=36389
+- TOP: https://docs.microsoft.com/en-us/powershell/?view=powershell-5.0
+- SDK TOP: https://docs.microsoft.com/en-us/powershell/developer/windows-powershell
+  - Cmdlet: https://docs.microsoft.com/en-us/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet
+- Ref TOP: https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.0
+  - Learning PS: https://docs.microsoft.com/en-us/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-5.0
+  - Core Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/?view=powershell-5.0
+  - about Ref (構文）: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/?view=powershell-5.0
+- Language Spec. 3.0 (5.0も同じはず)
+   https://www.microsoft.com/en-us/download/confirmation.aspx?id=36389
 
 Array
 ```
