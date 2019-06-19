@@ -8,13 +8,18 @@
 - Language Spec. 3.0 (5.0も同じはず)
    https://www.microsoft.com/en-us/download/confirmation.aspx?id=36389
 
+#### Cheat Sheet
+- https://cdn.comparitech.com/wp-content/uploads/2018/08/Comparitech-Powershell-cheatsheet.pdf
+- https://download.microsoft.com/download/2/1/2/2122F0B9-0EE6-4E6D-BFD6-F9DCD27C07F9/WS12_QuickRef_Download_Files/PowerShell_LangRef_v3.pdf
+- 
+
 #### Array
 ```
 $a = 1, 2, 3
 $a = @(1)
 $a.Count
 ```
-#### Hash:
+#### Hash
 ```
 $hash = @{ Number = 1; Shape = "Square"; Color = "Blue"}
 $hash = [orderd]@{ Number = 1; Shape = "Square"; Color = "Blue"}
@@ -22,13 +27,6 @@ $hash.Keys
 $hash.Color
 $hash["Color"]
 $hash[0]
-```
-
-#### Location:
-```
-pwd
-dir
-Get-Item C:\Users\*
 ```
 
 #### String
@@ -43,10 +41,27 @@ ipconfig | Select-String "イーサネット"
 "a:b:c" -split ":"
 ```
 
+#### Location
+```
+pwd
+dir
+Get-Item C:\Users\*
+```
+
 #### Type
 ```
+$text = [String]123
+$number = [int]$a
 (get-date) -is [DateTime]
 (get-date).GetType()
+```
+#### Control
+```
+If(){} Elseif(){ } Else{ }
+while(){}
+For($i=0; $i -lt 10; $i++){}
+Foreach($i in 1..10){$i}
+1..10 | foreach{$_}
 ```
 
 #### File I/O
@@ -79,6 +94,7 @@ foreach( $i in $d ) { $i }
 ```Select-Object```
 ```Group-Object```
 ```Write-Host```
+```Read-Host```
 ```Out-Host```
 ```Format-Table```
 ```Format-List```
@@ -88,7 +104,7 @@ foreach( $i in $d ) { $i }
 powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 ```
 
-#### ダイアログ：
+#### ダイアログ表示：
 ```
 Add-Type -AssemblyName System.Windows.Forms;
 [System.Windows.Forms.MessageBox]::Show("xxxx");
@@ -130,7 +146,7 @@ SH.Run cmdall, 0, True
 @echo off
 setlocal enabledelayedexpansion
 for %%f in (%*) do ( set ARGS=!ARGS! %%f )
-type "%~fp0" | powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -c "'<#'; $input | Select-Object -Skip 1" > %TEMP%\tmp.batps.ps1
+type "%~fp0" | powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "'<#'; $input | Select-Object -Skip 1" > %TEMP%\tmp.batps.ps1
 powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
 del %TEMP%\tmp.batps.ps1
 exit /b
