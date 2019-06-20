@@ -117,7 +117,14 @@ try {
 } finally {
 }
 ```
-
+#### 入出力
+```
+$age = Read-host "Please enter your age"
+Write-Host "abc"   # consoleへの出力
+Write-Output "abc" # standard output streamへの出力（パイプできる、object streamである）
+Write-Error "abc"  # error output streamへの出力
+# PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
+```
 #### etc
 ```$true, $false, $null```
 
