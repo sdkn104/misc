@@ -99,9 +99,26 @@ Get-Help Get-ChildItem -Online
 alias (Get-Alias)
 ```
 
-#### etc
-```$log = Invoke-Expression "dir .."```
+#### 外部コマンド
+```
+$log = cmd /s /c """C:\program file.exe"" ""arg 1"" ""arg2"" arg3"  # どんな場合でもOK
+$log = cmd /c copy "file name.txt" file.txt                         # 引用符で始まらない場合
+$success = $?
+```
 
+#### 例外処理
+```
+$ErrorActionPreference = "Stop"  # treating non-terminating error as terminaing error, so that "catch" traps it.
+try {
+   dir "asdfaf"  # non-terminating error
+   dasfdasfsa    # terminating error
+} catch {
+   Write-Host($_)
+} finally {
+}
+```
+
+#### etc
 ```$true, $false, $null```
 
 ```Select-Object```
