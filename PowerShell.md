@@ -14,6 +14,11 @@
 - https://download.microsoft.com/download/2/1/2/2122F0B9-0EE6-4E6D-BFD6-F9DCD27C07F9/WS12_QuickRef_Download_Files/PowerShell_LangRef_v3.pdf
 - 
 
+#### Basic litral
+```
+$true, $false    # Boolean constant
+$null            # default value of all the variable
+```
 #### Array
 ```
 $a = 1, 2, 3
@@ -29,9 +34,11 @@ $hash.Color
 $hash["Color"]
 $hash[0]
 ```
-
 #### String
 ```
+"abc"            # string
+'abc $a'         # string
+"`r`n"           # CRLF
 "a" + "b"
 "abc.txt".Replace("txt","log")
 "abc.txt" -replace '(.)\.txt$','$1.log'
@@ -41,7 +48,6 @@ ipconfig | Select-String "イーサネット"
 -split "a b c d"
 "a:b:c" -split ":"
 ```
-
 #### Type
 ```
 $text = [String]123    # cast
@@ -52,24 +58,44 @@ $number = [int]$a      # cast
 ```
 #### Control
 ```
-If(){} Elseif(){ } Else{ }
-while(){}
-For($i=0; $i -lt 10; $i++){}
-Foreach($i in 1..10){$i}
+if() {} elseif() { } else { }
+for($i=0; $i -lt 10; $i++) { continue; break; }
+foreach($i in 1..10){$i}
 1..10 | foreach{$_}
+while() {}
+do {} while()
+do {} until()
+```
+#### 例外処理
+```
+$ErrorActionPreference = "Stop"  # treating non-terminating error as terminaing error, so that "catch" traps it.
+try {
+   dir "asdfaf"  # non-terminating error
+   dasfdasfsa    # terminating error
+} catch {
+   Write-Host($_)
+   exit 1        # default exit code = 0
+} finally {
+}
+```
+#### 入出力 (Host/Terminal, Stream)
+```
+$age = Read-host "Please enter your age"
+Write-Host "abc"   # console terminalへの出力
+Write-Output "abc" # standard output streamへの出力（パイプできる、object streamである）
+Write-Error "abc"  # error output streamへの出力
+# PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
 ```
 #### Pileline
 ```
 $d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode
 $d | foreach { "name: " + $_.Name }
 ```
-
 #### Function
 ```
 function add($a, $b) { $a + $b }
 $v = add 1 2
 ```
-
 #### File I/O
 ```
 $c = "あいうえお定兼ｻﾀﾞ＠©"
@@ -77,7 +103,6 @@ Set-Content t.txt $c  # write
 $raw = Get-Content t.txt -Raw  # string
 $lines = @(Get-Content t.txt)  # array of line strings
 ```
-
 #### File System
 ```
 pwd (Get-Location)
@@ -89,7 +114,14 @@ mv (Move-Item)
 rm (Remove-Item)
 mkdir xxx (New-Item xxx -ItemType Directory)
 ```
-
+#### file/folder traverse
+```
+Split-Path "C:\aaa\bbb\ccc" -Parent
+Split-Path "C:\aaa\bbb\ccc" -Leaf
+Convert-Path ".\abc.txt"     # --> C:\Users\xxx\Desktop\abc.txt
+Convert-Path .\*.txt         # list up matched files
+Get-ChildItem -Recurse -Include *.txt
+```
 #### Help
 ```
 Update-Help  # download and install help files, 管理者権限で実行
@@ -98,36 +130,12 @@ Get-ChildItem -?
 Get-Help Get-ChildItem -Online
 alias (Get-Alias)
 ```
-
 #### 外部コマンド
 ```
-$log = cmd /s /c """C:\program file.exe"" ""arg 1"" ""arg2"" arg3"  # どんな場合でもOK
-$log = cmd /c copy "file name.txt" file.txt                         # 引用符で始まらない場合
+$log = & "C:\program file.exe" "arg 1" "arg2" arg3
 $success = $?
 ```
-
-#### 例外処理
-```
-$ErrorActionPreference = "Stop"  # treating non-terminating error as terminaing error, so that "catch" traps it.
-try {
-   dir "asdfaf"  # non-terminating error
-   dasfdasfsa    # terminating error
-} catch {
-   Write-Host($_)
-} finally {
-}
-```
-#### 入出力
-```
-$age = Read-host "Please enter your age"
-Write-Host "abc"   # consoleへの出力
-Write-Output "abc" # standard output streamへの出力（パイプできる、object streamである）
-Write-Error "abc"  # error output streamへの出力
-# PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
-```
 #### etc
-```$true, $false, $null```
-
 ```Select-Object```
 ```Group-Object```
 ```Write-Host```
