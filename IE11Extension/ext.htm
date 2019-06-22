@@ -1,0 +1,58 @@
+<script language="jscript" defer>
+
+  //もとのwindow
+  var win0 = external.menuArguments;
+
+  //自身のＨＴＭＬをPOST送信する
+  var code = win0.document.documentElement.outerHTML;
+  alert(code);
+  d = window.open("about:blank",null).document;
+  d.open();
+  d.write("<html><head></head><body><h2>sending html to cloud...</h2></body></html>");
+  d.close();
+  var act = d.createElement('form');
+  act.action = 'https://proven-mystery-220011.appspot.com/xxxx';
+  act.method = 'post';
+  act.name = 'myform';
+  act.id = 'myform';
+  var hid = d.createElement('input');
+  hid.type = 'hidden';
+  hid.name = 'body';
+  hid.value = code;
+  act.appendChild(hid);
+  d.body.appendChild(act);
+  d.getElementById('myform').submit();
+  alert("html sent");
+
+  //新規ウィンドウを開く
+  win = window.open("./page.htm");
+  var d = win.document;
+  alert("window opened");
+
+  //もとページにボタンを追加
+  var hid = win0.document.createElement('input');
+  hid.type = 'button';
+  hid.name = 'btn1';
+  hid.value = "ボタン";
+  win0.document.body.appendChild(hid);
+  alert(3);
+
+  var log = function(win){
+    alert("test");
+    var doc = win.document;
+    alert(999);
+  };
+  setTimeout(log, 3000, win);
+
+
+  // HTTPリクエスト
+  var xhr = new XMLHttpRequest();
+  //xhr.open('GET', 'http://www.google.com/', false);  // http://localhost NG,  file://c:/ NG
+  //xhr.open('GET', 'http://localhost:8080/ttt.htm', false); // http://localhost OK, file://c:/ OK
+  //xhr.open('GET', 'file://C:/Users/sdkn1/Desktop/IE11Ext/page.htm', false); // http://localhost OK, file://c:/ OK
+  //xhr.send(null);
+  //alert(xhr.status);
+  //alert(xhr.responseText);
+
+</script>
+
