@@ -1,0 +1,8 @@
+
+stamp.batをWindowsのツールバーに登録するため、
+stamp.batのショートカットを作成。
+プロパティー＞リンク先を修正してショートカットを登録。
+http://pdat.jp/android-kindle/2012/09/bat/
+
+
+
