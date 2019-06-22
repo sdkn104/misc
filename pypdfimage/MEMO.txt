@@ -1,0 +1,42 @@
+
+@ python3
+ https://www.python.org/downloads/
+
+@ Ghostscript
+ https://www.ghostscript.com/download/gsdnld.html
+ PATHを通す（PythonMagickから呼ぶため）：c:\Program Files\gs\gs9.23\bin　
+
+@ PythonMagick (ImageMagick)
+ wget PythonMagick?0.9.13?cp36?cp36m?win_amd64.whl from
+   https://www.lfd.uci.edu/~gohlke/pythonlibs/#pythonmagick
+ pip install PythonMagick?0.9.13?cp36?cp36m?win_amd64.whl
+ * no need to install ImageMagick
+ ref: https://www.imagemagick.org/script/magick++.php
+ 
+
+@ tkinter
+ PhotoImage は GIF と PPM/PGM カラービットマップに対して使えます。
+
+@ tesseract
+ tesseract-ocr-setup-3.02.02.exe
+ https://github.com/tesseract-ocr/tesseract/wiki
+ supported in Tesseract including BMP, PNM, PNG, JFIF, JPEG, and TIFF.
+
+@ pyocr
+  pip3 install pyocr
+  https://github.com/openpaperwork/pyocr
+  PyOCR is tested with Tesseract >= 3.01 only.
+
+@ opencv
+ pip install opencv-python
+ https://qiita.com/cointoss1973/items/92d82f9accb239a276a0#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%89%8B%E9%A0%86
+ https://docs.opencv.org/3.4.0/
+Windows bitmap	bmp、dib
+Netpbm format	pbm、pgm、ppm、pnm
+Sun Raster Image	sr、ras
+Joint Photographic Experts Group (JPEG)	jpeg、jpg、jpe
+JPEG 2000	jp2
+Portable Network Graphics	png
+Tagged Image File Format (TIFF)	tiff、tif
+
+@ pip install zenhan
