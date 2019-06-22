@@ -1,0 +1,28 @@
+
+
+<a href="http://www.google.com"> google </a>
+
+<br>
+
+<form action="http://www.google.com/search">
+	<input type="text" name="q">
+	<input type="submit" value="submit">
+</form>
+
+<script>
+  //location.href = "http://www.google.com"
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://www.google.com/', false);  // http://localhost NG,  file://c:/ NG
+  //xhr.open('GET', 'http://localhost:8080/ttt.htm', false); // http://localhost OK, file://c:/ OK
+  //xhr.open('GET', 'file://C:/Users/sdkn1/Desktop/IE11Ext/page.htm', false); // http://localhost OK, file://c:/ OK
+  xhr.send(null);
+  alert(xhr.status);
+  document.getElementsByName("q")[0].value = xhr.status
+  alert(xhr.responseText);
+
+  var www= window.document; //OK
+  var ww = window.opener; //undefined
+
+</script>
+
+
