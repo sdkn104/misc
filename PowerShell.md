@@ -60,7 +60,7 @@ $number = [int]$a      # cast
 ```
 if() {} elseif() { } else { }
 for($i=0; $i -lt 10; $i++) { continue; break; }
-foreach($i in 1..10){$i}
+foreach($i in 1..10) { $i }
 1..10 | foreach{$_}
 while() {}
 do {} while()
@@ -136,19 +136,16 @@ $log = & "C:\program file.exe" "arg 1" "arg2" arg3
 $success = $?
 ```
 #### etc
-```Select-Object```
-```Group-Object```
-```Write-Host```
-```Read-Host```
-```Out-Host```
-```Format-Table```
-```Format-List```
-
+```
+dir | Select-Object Length,Extension,Name -Last 5 
+dir | Group-Object Extension
+Format-Table
+Format-List
+```
 #### 呼び出し
 ```
 powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 ```
-
 #### ダイアログ表示
 ```
 Add-Type -AssemblyName System.Windows.Forms;
@@ -157,6 +154,22 @@ Add-Type -AssemblyName System.Windows.Forms;
 ```
 $WSH = New-Object -ComObject Wscript.Shell
 $WSH.Popup("xxxx")
+```
+#### BAT内に埋め込んだPSスクリプトを実行
+```
+@REM <# PowerShellコメントの始まり。@REMを取り除くと全体がPSスクリプトとなる。
+@echo off
+setlocal enabledelayedexpansion
+for %%f in (%*) do ( set ARGS=!ARGS! %%f )
+type "%~fp0" | powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "'<#'; $input | Select-Object -Skip 1" > %TEMP%\tmp.batps.ps1
+powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
+del %TEMP%\tmp.batps.ps1
+exit /b
+#>
+#------- 上のコードは編集しないこと --------------------------------------------------------
+#------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） -------------------
+
+Write-Host $args[0]
 ```
 
 #### Powershellスクリプトを起動するVBScript
@@ -184,24 +197,6 @@ cmdall = cmd & """" & file & """" & args_string ' & " > C:\Users\sdkn1\Desktop\o
 Set SH = WScript.CreateObject("WScript.Shell")
 SH.Run cmdall, 0, True
 ```
-
-#### BAT内に埋め込んだPSスクリプトを実行
-```
-@REM <# PowerShellコメントの始まり。@REMを取り除くと全体がPSスクリプトとなる。
-@echo off
-setlocal enabledelayedexpansion
-for %%f in (%*) do ( set ARGS=!ARGS! %%f )
-type "%~fp0" | powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "'<#'; $input | Select-Object -Skip 1" > %TEMP%\tmp.batps.ps1
-powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
-del %TEMP%\tmp.batps.ps1
-exit /b
-#>
-#------- 上のコードは編集しないこと --------------------------------------------------------
-#------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） -------------------
-
-Write-Host $args[0]
-```
-
 #### IP SCAN
 ```
 # IP scanして応答あったもののNetBIOS名取得
