@@ -159,16 +159,17 @@ $WSH.Popup("xxxx")
 ```
 #### BAT内に埋め込んだPSスクリプトを実行
 ```
-@REM <# PowerShellコメントの始まり。@REMを取り除くと全体がPSスクリプトとなる。
+@REM <# 埋め込みPowerShell実行BATスクリプト  ※先頭の@REMを取り除くと全体がPSスクリプトとなる。
 @echo off
 setlocal enabledelayedexpansion
 for %%f in (%*) do ( set ARGS=!ARGS! %%f )
-type "%~fp0" | powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "'<#'; $input | Select-Object -Skip 1" > %TEMP%\tmp.batps.ps1
+echo ^<#          > %TEMP%\tmp.batps.ps1
+more +1 "%~fp0"  >> %TEMP%\tmp.batps.ps1
 powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
 del %TEMP%\tmp.batps.ps1
 exit /b
 #>
-#------- 上のBATスクリプトは下のPowershellコードを実行する。編集しないこと --------------------
+#------- 上のBATスクリプトは下のPowershellコードを実行する（編集しないこと）-------------------
 #------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） -------------------
 
 Write-Host $args[0]
