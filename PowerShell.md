@@ -72,6 +72,7 @@ $ErrorActionPreference = "Stop"  # treating non-terminating error as terminaing 
 try {
    dir "asdfaf"  # non-terminating error
    dasfdasfsa    # terminating error
+   throw "this is an error."  # terminating error
 } catch {
    Write-Host($_)
    exit 1        # default exit code = 0
