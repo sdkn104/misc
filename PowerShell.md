@@ -78,9 +78,14 @@ try {
 } finally {
 }
 ```
+#### Function
+```
+function add($a, $b) { $a + $b }
+$v = add 1 2
+```
 #### 入出力 (Host/Terminal, Stream)
 ```
-$age = Read-host "Please enter your age"
+$age = Read-host "Please enter your age: "
 Write-Host "abc"   # console terminalへの出力
 Write-Output "abc" # standard output streamへの出力（パイプできる、object streamである）
 Write-Error "abc"  # error output streamへの出力
@@ -90,11 +95,6 @@ Write-Error "abc"  # error output streamへの出力
 ```
 $d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode
 $d | foreach { "name: " + $_.Name }
-```
-#### Function
-```
-function add($a, $b) { $a + $b }
-$v = add 1 2
 ```
 #### File I/O
 ```
@@ -108,19 +108,20 @@ $lines = @(Get-Content t.txt)  # array of line strings
 pwd (Get-Location)
 cd (Set-Location)
 dir (Get-ChildItem)
+Get-ChildItem -Recurse -Include *.txt
 Get-Item C:\Users\*
 cp (Copy-Item)
 mv (Move-Item)
 rm (Remove-Item)
 mkdir xxx (New-Item xxx -ItemType Directory)
+if( Test-Path ".\a\b.*" ) { rm ".\a\b.*" }
 ```
-#### file/folder traverse
+#### File Path
 ```
 Split-Path "C:\aaa\bbb\ccc" -Parent
 Split-Path "C:\aaa\bbb\ccc" -Leaf
 Convert-Path ".\abc.txt"     # --> C:\Users\xxx\Desktop\abc.txt
-Convert-Path .\*.txt         # list up matched files
-Get-ChildItem -Recurse -Include *.txt
+Convert-Path .\*.txt         # list up matched files in full path
 ```
 #### Help
 ```
@@ -166,19 +167,17 @@ powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.bat
 del %TEMP%\tmp.batps.ps1
 exit /b
 #>
-#------- 上のコードは編集しないこと --------------------------------------------------------
+#------- 上のBATスクリプトは下のPowershellコードを実行する。編集しないこと --------------------
 #------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） -------------------
 
 Write-Host $args[0]
 ```
-
 #### Powershellスクリプトを起動するVBScript
 ```
 '
 ' Powershellスクリプト起動
 '   このファイルのファイル名+'.ps1'　のファイルを起動する
 '
-
 '引数を取得
 args_string = ""
 For Each arg In WScript.Arguments
