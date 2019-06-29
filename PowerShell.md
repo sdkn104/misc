@@ -156,6 +156,17 @@ Add-Type -AssemblyName System.Windows.Forms;
 $WSH = New-Object -ComObject Wscript.Shell
 $WSH.Popup("xxxx")
 ```
+#### DATE
+```
+Get-Date
+[DateTime]"2013/02/09 13:59:50"
+[DateTime]::ParseExact("20130209","yyyyMMdd",$null)
+(Get-Date).ToString("yyyyMMdd-HH:mm:ss")
+(Get-Date).Day
+(Get-Date).AddMonths(2)
+$span = (Get-Date) - [DateTime]"2019/06/09"
+$span.TotalDays
+```
 #### MS Office
 ```
 $excel = New-Object -ComObject Excel.Application
