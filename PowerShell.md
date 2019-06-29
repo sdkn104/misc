@@ -94,8 +94,9 @@ Write-Error "abc"  # error output streamへの出力
 ```
 #### Pileline
 ```
-$d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode
+$d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode -Last 5
 $d | foreach { "name: " + $_.Name }
+dir | Group-Object Extension
 ```
 #### File I/O
 ```
@@ -137,10 +138,8 @@ alias (Get-Alias)
 $log = & "C:\program file.exe" "arg 1" "arg2" arg3
 $success = $?
 ```
-#### etc
+#### Format
 ```
-dir | Select-Object Length,Extension,Name -Last 5 
-dir | Group-Object Extension
 Format-Table
 Format-List
 ```
