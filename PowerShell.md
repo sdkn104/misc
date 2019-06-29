@@ -157,6 +157,16 @@ Add-Type -AssemblyName System.Windows.Forms;
 $WSH = New-Object -ComObject Wscript.Shell
 $WSH.Popup("xxxx")
 ```
+#### MS Office
+```
+$excel = New-Object -ComObject Excel.Application
+$excel.Visible = $true
+$excel.DisplayAlerts = $true
+$book = $excel.Workbooks.Add()
+$book.ActiveSheet.Name
+$book.Close()
+$excel.Quit()   #???
+```
 #### BAT内に埋め込んだPSスクリプトを実行
 ```
 @REM <# 埋め込みPowerShell実行BATスクリプト  ※先頭の@REMを取り除くと全体がPSスクリプトとなる。
@@ -173,7 +183,7 @@ exit /b
 #------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） -------------------
 
 Write-Host $args[0]
-```
+
 #### Powershellスクリプトを起動するVBScript
 ```
 '
