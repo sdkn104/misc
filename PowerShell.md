@@ -193,13 +193,12 @@ exit /b
 #------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） -------------------
 
 Write-Host $args[0]
-
+```
 #### Powershellスクリプトを起動するVBScript
 ```
-'
 ' Powershellスクリプト起動
 '   このファイルのファイル名+'.ps1'　のファイルを起動する
-'
+`
 '引数を取得
 args_string = ""
 For Each arg In WScript.Arguments
