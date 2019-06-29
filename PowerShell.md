@@ -68,13 +68,17 @@ do {} until()
 ```
 #### 例外処理
 ```
-$ErrorActionPreference = "Stop"  # treating non-terminating error as terminaing error, so that "catch" traps it.
+$ErrorActionPreference = "Stop"  # treating non-terminati error as terminaing error, so that "catch" traps it.
 try {
    dir "asdfaf"  # non-terminating error
    dasfdasfsa    # terminating error
    throw "this is an error."  # terminating error
 } catch {
-   Write-Host($_)
+   Write-Host $_
+   Write-Error $_.Exception
+   Write-Host ($_.Exception.ErrorRecord | Out-String) ???
+   Out-Host -InputObject $_.Exception.ErrorRecord ???
+   throw $_.Exception
    exit 1        # default exit code = 0
 } finally {
 }
