@@ -1,13 +1,12 @@
 #### References
-- TOP: https://docs.microsoft.com/en-us/powershell/?view=powershell-5.0
-- SDK TOP: https://docs.microsoft.com/en-us/powershell/developer/windows-powershell
-  - Cmdlet: https://docs.microsoft.com/en-us/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet
 - Ref TOP: https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.0
   - Learning PS: https://docs.microsoft.com/en-us/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-5.0
   - Core Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/?view=powershell-5.0
   - about Ref (構文）: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/?view=powershell-5.0
 - Language Spec. 3.0 (5.0も同じはず)
    https://www.microsoft.com/en-us/download/confirmation.aspx?id=36389
+- SDK TOP: https://docs.microsoft.com/en-us/powershell/developer/windows-powershell
+  - Cmdlet: https://docs.microsoft.com/en-us/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet
 
 #### Cheat Sheet
 - https://cdn.comparitech.com/wp-content/uploads/2018/08/Comparitech-Powershell-cheatsheet.pdf
@@ -75,11 +74,10 @@ try {
    throw "this is an error."  # terminating error
 } catch {
    Write-Host $_
-   Write-Error $_.Exception
-   Write-Host ($_.Exception.ErrorRecord | Out-String) ???
-   Out-Host -InputObject $_.Exception.ErrorRecord ???
-   throw $_.Exception
-   exit 1        # default exit code = 0
+   Out-Host -InputObject $_                                      # メッセージを表示
+   Out-String -InputObject $_ | Write-Host -ForegroundColor Red　# メッセージを赤色で表示
+   throw $_    　    # terminating errorを発生
+   exit 1            # default exit code = 0
 } finally {
 }
 ```
@@ -88,12 +86,12 @@ try {
 function add($a, $b) { $a + $b }
 $v = add 1 2
 ```
-#### 入出力 (Host/Terminal, Stream)
+#### 入出力 (Host, Stream)
 ```
 $age = Read-host "Please enter your age: "
 Write-Host "abc"   # console terminalへの出力
 Write-Output "abc" # standard output streamへの出力（パイプできる、object streamである）
-Write-Error "abc"  # error output streamへの出力
+Write-Error "abc"  # non-terminating errorを発生し、error output streamへ出力
 # PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
 ```
 #### Pileline
