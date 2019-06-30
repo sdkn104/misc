@@ -86,6 +86,12 @@ try {
 function add($a, $b) { $a + $b }
 $v = add 1 2
 ```
+#### Script Args, Path
+```
+echo $PSCommandPath  # full path of this script
+echo $args[0]        # the first argument 
+echo $args[1]        # the second
+```
 #### 入出力 (Host, Stream)
 ```
 $age = Read-host "Please enter your age: "
