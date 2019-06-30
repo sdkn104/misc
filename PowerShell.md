@@ -222,9 +222,7 @@ MyExit 0
 @for %%f in (%*) do ( set ARGS=!ARGS! %%f )
 @type "%~fp0"  > %TEMP%\tmp.batps.ps1
 @powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
-@set code=%errorlevel%   &   @del %TEMP%\tmp.batps.ps1
-@REM echo 終了するには何かキーを押してください & pause >nul
-@exit /b %code%
+@exit /b %errorlevel%
 ') > $null
 ```
 #### Powershellスクリプトを起動するVBScript
