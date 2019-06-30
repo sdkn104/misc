@@ -67,13 +67,13 @@ do {} until()
 ```
 #### 例外処理
 ```
-$ErrorActionPreference = "Stop"  # treating non-terminati error as terminaing error, so that "catch" traps it.
+$ErrorActionPreference = "Stop"  # non-terminati errorでも実行停止しcatchする。
 try {
    dir "asdfaf"  # non-terminating error
    dasfdasfsa    # terminating error
    throw "this is an error."  # terminating error
 } catch {
-   Write-Host $_
+   Write-Host $_                                                 # 簡略表示
    Out-Host -InputObject $_                                      # メッセージを表示
    Out-String -InputObject $_ | Write-Host -ForegroundColor Red　# メッセージを赤色で表示
    throw $_    　    # terminating errorを発生
@@ -138,7 +138,11 @@ alias (Get-Alias)
 #### 外部コマンド
 ```
 $log = & "C:\program file.exe" "arg 1" "arg2" arg3
-$success = $?
+if( -not #? ) { throw "ERROR in external command." } 
+$success = $?            # 外部コマンドの場合、戻り値非０のときFalse、外部コマンド内でWindowsコマンドエラー発生もFalse。
+$code = $LastExitCode    # 戻り値（外部コマンドの場合のみ）
+# Exception: 戻り値０でもExceptionは発生しない。
+#            外部コマンド内で実行されたWindowsコマンドのエラーについてはNon terminatingまたはTerminating errorが発生する場合あり。
 ```
 #### Format
 ```
