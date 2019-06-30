@@ -196,27 +196,6 @@ $excel.Quit()   #???
 ```
 #### BAT内に埋め込んだPSスクリプトを実行
 ```
-@REM <# 埋め込みPowerShell実行BATスクリプト  ※先頭の@REMを取り除くと全体がPSスクリプトとなる。
-@setlocal enabledelayedexpansion
-@for %%f in (%*) do ( set ARGS=!ARGS! %%f )
-@echo ^<#          > %TEMP%\tmp.batps.ps1
-@more +1 "%~fp0"  >> %TEMP%\tmp.batps.ps1
-@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
-@set code=%errorlevel%   &   @del %TEMP%\tmp.batps.ps1
-@REM echo 終了するには何かキーを押してください & pause >nul
-@exit /b %code%
-#>
-#------- 上のBATスクリプトは下のPowershellコードを実行する（編集しないこと）------------------------------
-#------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） ------------------------------
-
-function MyExit($code) { Read-Host "終了するにはEnterキーを押してください"; exit $code }
-trap { Write-Host "【不測のエラーが発生しました】"; Out-Host -InputObject $_; MyExit 1 }
-
-Write-Host $args[0]
-throw "error.."
-MyExit 0
-```
-```
 @(echo ' ) >nul
 @setlocal enabledelayedexpansion
 @for %%f in (%*) do ( set ARGS=!ARGS! %%f )
@@ -224,6 +203,15 @@ MyExit 0
 @powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
 @exit /b %errorlevel%
 ') > $null
+#------- 上のBATスクリプトは下のPowershellコードを実行する（起動引数は渡される）--------------------
+#------- （上のスクリプトはPowershellスクリプトとしては何もしないプログラム）-----------------------
+
+function MyExit($code) { Read-Host "終了するにはEnterキーを押してください"; exit $code }
+trap { Write-Host "【不測のエラーが発生しました】"; Out-Host -InputObject $_; MyExit 1 }
+
+Write-Host $args[0]
+throw "error.."
+MyExit 0
 ```
 #### Powershellスクリプトを起動するVBScript
 ```
