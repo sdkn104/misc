@@ -160,7 +160,7 @@ $code = $LastExitCode    # 戻り値（外部コマンドの場合のみ）
 Format-Table
 Format-List
 ```
-#### 呼び出し
+#### 起動
 ```
 powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 ```
@@ -215,6 +215,17 @@ trap { Write-Host "【不測のエラーが発生しました】"; Out-Host -Inp
 Write-Host $args[0]
 throw "error.."
 MyExit 0
+```
+```
+@(echo ' ) >nul
+@setlocal enabledelayedexpansion
+@for %%f in (%*) do ( set ARGS=!ARGS! %%f )
+@type "%~fp0"  >> %TEMP%\tmp.batps.ps1
+@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
+@set code=%errorlevel%   &   @del %TEMP%\tmp.batps.ps1
+@REM echo 終了するには何かキーを押してください & pause >nul
+@exit /b %code%
+') > $null
 ```
 #### Powershellスクリプトを起動するVBScript
 ```
