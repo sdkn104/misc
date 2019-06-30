@@ -206,8 +206,8 @@ $excel.Quit()   #???
 @REM echo 終了するには何かキーを押してください & pause >nul
 @exit /b %code%
 #>
-#------- 上のBATスクリプトは下のPowershellコードを実行する（編集しないこと）-------------------
-#------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） -------------------
+#------- 上のBATスクリプトは下のPowershellコードを実行する（編集しないこと）------------------------------
+#------- ここから下のPowerShellスクリプトが実行される（起動引数は渡される） ------------------------------
 
 function MyExit($code) { Read-Host "終了するにはEnterキーを押してください"; exit $code }
 trap { Write-Host "【不測のエラーが発生しました】"; Out-Host -InputObject $_; MyExit 1 }
