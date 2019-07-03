@@ -198,20 +198,30 @@ $excel.Quit()   #???
 ```
 @(echo ' ) >nul
 @setlocal enabledelayedexpansion
-@for %%f in (%*) do ( set ARGS=!ARGS! %%f )
-@type "%~fp0"  > %TEMP%\tmp.batps.ps1
+@for %%f in (%*) do @( @set ARGS=!ARGS! %%f )
+@set /p d=$PSCommandPath="%~fp0";<nul  > %TEMP%\tmp.batps.ps1
+@type "%~fp0"                         >> %TEMP%\tmp.batps.ps1
 @powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
 @exit /b %errorlevel%
 ') > $null
-#------- 上のBATスクリプトは下のPowershellコードを実行する（起動引数は渡される）--------------------
-#------- （上のスクリプトはPowershellスクリプトとしては何もしないプログラム）-----------------------
+#------- 上のスクリプトは下のPowershellコードを実行する（起動引数は渡される）--------------------
+# script pathの`!はだめ。argは!^*:?はだめ。
 
 function MyExit($code) { Read-Host "終了するにはEnterキーを押してください"; exit $code }
 trap { Write-Host "【不測のエラーが発生しました】"; Out-Host -InputObject $_; MyExit 1 }
 
-Write-Host $args[0]
+Write-Host "---"
+Write-Host $args[0]       # -> OK
+Write-Host $PSCommandPath # -> OK
+Write-Host $PSScriptRoot  # -> ×（%TEMP%ファイルの情報が入る）
+Write-Host $MyInvocation  # -> ×（%TEMP%ファイルの情報が入る）
+
+Write-Host $args[1]
+Write-Host $args[2]
+
 throw "error.."
 MyExit 0
+
 ```
 #### Powershellスクリプトを起動するVBScript
 ```
