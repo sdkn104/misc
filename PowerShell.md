@@ -197,32 +197,33 @@ $excel.Quit()   #???
 #### BAT内に埋め込んだPSスクリプトを実行
 ```
 @(echo ' ) >nul
-@setlocal enabledelayedexpansion
-@for %%f in (%*) do @( @set ARGS=!ARGS! %%f )
 @set /p d=$PSCommandPath="%~fp0";<nul  > %TEMP%\tmp.batps.ps1
 @type "%~fp0"                         >> %TEMP%\tmp.batps.ps1
-@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %ARGS%
-@exit /b %errorlevel%
+@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %TEMP%\tmp.batps.ps1 %*
+@set c=%errorlevel% & del %TEMP%\tmp.batps.ps1
+@exit /b %c%
 ') > $null
-#------- 上のスクリプトは下のPowershellコードを実行する（起動引数は渡される）--------------------
-# script pathの`!はだめ。argは!^*:?はだめ。
+#------- 上のスクリプトはここから下のPowershellコードを実行する（起動引数は渡される）---------------
+
+# 制限事項：
+#   自身のスクリプトパス名に`および$を含まないこと。
+#   自身のスクリプトパス名は $PSCommandPath で参照する（$PSScriptRoot, $MyInvocationは使えない）。
 
 function MyExit($code) { Read-Host "終了するにはEnterキーを押してください"; exit $code }
-trap { Write-Host "【不測のエラーが発生しました】"; Out-Host -InputObject $_; MyExit 1 }
+trap { Write-Host "【想定外のエラーが発生したので終了します】"; Out-Host -InputObject $_; MyExit 1 }
 
-Write-Host "---"
-Write-Host $args[0]       # -> OK
-Write-Host $PSCommandPath # -> OK
-Write-Host $PSScriptRoot  # -> ×（%TEMP%ファイルの情報が入る）
-Write-Host $MyInvocation  # -> ×（%TEMP%ファイルの情報が入る）
-
+Write-Host $PSCommandPath
+Write-Host $args[0]
 Write-Host $args[1]
 Write-Host $args[2]
 
-throw "error.."
+throw "error...."
 MyExit 0
-
 ```
+
+
+
+
 #### Powershellスクリプトを起動するVBScript
 ```
 ' Powershellスクリプト起動
