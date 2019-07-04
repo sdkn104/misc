@@ -195,6 +195,7 @@ $book.Close()
 $excel.Quit()   #???
 ```
 #### BAT内に埋め込んだPSスクリプトを実行
+(スクリプトファイル名.batでも.ps1でも実行可)
 ```
 @(echo ' ) >nul
 @set /p d=$PSCommandPath="%~fp0";<nul  > %TEMP%\tmp.batps.ps1
