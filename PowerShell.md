@@ -204,11 +204,11 @@ $excel.Quit()   #???
 @set c=%errorlevel% & del %TEMP%\tmp.batps.ps1
 @exit /b %c%
 ') > $null
-#------- 上のスクリプトはここから下のPowershellコードを実行する（起動引数は渡される）---------------
-
+#--------- 上のスクリプトはここから下のPowershellコードを実行する（起動引数は渡される）-------------
 # 制限事項：
 #   自身のスクリプトパス名に`および$を含まないこと。
 #   自身のスクリプトパス名は $PSCommandPath で参照する（$PSScriptRoot, $MyInvocationは使えない）。
+#---------------------------------------------------------------------------------------------
 
 function MyExit($code) { Read-Host "終了するにはEnterキーを押してください"; exit $code }
 trap { Write-Host "【想定外のエラーが発生したので終了します】"; Out-Host -InputObject $_; MyExit 1 }
@@ -221,10 +221,10 @@ Write-Host $args[2]
 throw "error...."
 MyExit 0
 ```
-
-
-
-
+ 
+ 
+ 
+ 
 #### Powershellスクリプトを起動するVBScript
 ```
 ' Powershellスクリプト起動
