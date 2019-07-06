@@ -67,6 +67,20 @@
          [2](https://docs.oracle.com/javaee/5/tutorial/doc/bnabo.html)
 * http://otndnld.oracle.co.jp/products/forms/htdocs/install/Materials/html/o2/o15websystem.html
   * Webブラウザ上のJava Appletとしてリッチクライアント・アプリケーションを実現していく
+
+* プログラミング
+  * Oracle Developer Form Builder Reference (https://www.oracle.com/technetwork/documentation/dev-arch-093406.html)
+  * Oracle9iDS Forms Developer Reference Guide (https://www.oracle.com/technetwork/developer-tools/forms/documentation/9irefguide-131898.zip)
+  * tutorial (http://www.oracleatoz.com/introduction-of-oracle-form-builder)
+  * tutorial (https://sheikyerbouti.developpez.com/tutoforms10g/tutoforms10g.htm)
+  * tutorial (http://web2.uwindsor.ca/courses/cs/rituch/470/Oracle%20Developer%20-%20A%20Tutorial%20on%20Oracle%20Forms,%20Reports%20and%20Graphics.htm)
+  * tutorial (https://www.oracletutorial.org/forms-and-reports/forms-and-reports.php)
+              http://web2.uwindsor.ca/courses/cs/rituch/470/resources.html
+              http://web2.uwindsor.ca/courses/cs/rituch/470/SQLFORMSMaintutorial.doc
+  
+  * Data Block: displays all the fields from the base table in a canvas without requiring any programming,  a single or multi-record block, a master-detail relationship, which is a join-condition between two data blocks, 
+  * A trigger is a block of PL/SQL code you write to customize your application.  Although you could create a basic application without writing triggers, using only Oracle Forms' default processing to retrieve, add, delete, and change database records, you will usually need to write triggers to customize your application.  A trigger’s PL/SQL code contains orders to perform certain functions that are triggered by the event it is attached to, such as a button or form event.
+  
   
 # Applet-Like 
 * Silverlight C#
