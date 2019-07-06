@@ -71,15 +71,19 @@
 * プログラミング
   * Oracle Developer Form Builder Reference (https://www.oracle.com/technetwork/documentation/dev-arch-093406.html)
   * Oracle9iDS Forms Developer Reference Guide (https://www.oracle.com/technetwork/developer-tools/forms/documentation/9irefguide-131898.zip)
-  * tutorial (http://www.oracleatoz.com/introduction-of-oracle-form-builder)
+  * 〇tutorial (http://www.oracleatoz.com/introduction-of-oracle-form-builder)
   * tutorial (https://sheikyerbouti.developpez.com/tutoforms10g/tutoforms10g.htm)
-  * tutorial (http://web2.uwindsor.ca/courses/cs/rituch/470/Oracle%20Developer%20-%20A%20Tutorial%20on%20Oracle%20Forms,%20Reports%20and%20Graphics.htm)
+  * 〇tutorial (http://web2.uwindsor.ca/courses/cs/rituch/470/Oracle%20Developer%20-%20A%20Tutorial%20on%20Oracle%20Forms,%20Reports%20and%20Graphics.htm)
   * tutorial (https://www.oracletutorial.org/forms-and-reports/forms-and-reports.php)
               http://web2.uwindsor.ca/courses/cs/rituch/470/resources.html
-              http://web2.uwindsor.ca/courses/cs/rituch/470/SQLFORMSMaintutorial.doc
+  * 〇tutorial http://web2.uwindsor.ca/courses/cs/rituch/470/SQLFORMSMaintutorial.doc
   
-  * Data Block: displays all the fields from the base table in a canvas without requiring any programming,  a single or multi-record block, a master-detail relationship, which is a join-condition between two data blocks, 
+  * By default, every form in Oracle Forms has the capability to query existing data in a table, modify existing data and add new data (records) to the table. A form is built up using one or more data blocks that correspond to tables in the database. Fields within the data block correspond to columns in the database table.
+  * Database Block: displays all the fields from the base table in a canvas without requiring any programming, a master-detail relationship, which is a join-condition between two data blocks, 
+  * Non-Database Block: Non-Database Block normally called Control block is not linked with table or view it will create manually and also items put in this block manually. All items of non-database block are non-database items.
+  * Canvas: A Canvas will use for draw the different items on it, now we will draw different items on this area and use this area as a home ground of fields. Every item will draw on this area.
   * A trigger is a block of PL/SQL code you write to customize your application.  Although you could create a basic application without writing triggers, using only Oracle Forms' default processing to retrieve, add, delete, and change database records, you will usually need to write triggers to customize your application.  A trigger’s PL/SQL code contains orders to perform certain functions that are triggered by the event it is attached to, such as a button or form event.
+  * a record group is a query that returns some collection of records. Record groups can be used to populate blocks or LOVs and they can be used in procedures.
   
   
 # Applet-Like 
