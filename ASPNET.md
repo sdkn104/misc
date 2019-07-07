@@ -57,7 +57,18 @@
   * Session変数 などで明示的に書く。
   * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
   
- 
+# Oracle ASP.NET
+* Oracle Database 2日で.NET開発者ガイド https://docs.oracle.com/cd/E16338_01/appdev.112/b56266/using_aspnt.htm
+* https://www.atmarkit.co.jp/ait/articles/0703/14/news120.html
+
+* ODP.NET：.NET環境からOracleデータベースに接続するための高機能なミドルウェア。Oracle Database Client上で動作（クライアント／サーバ・システムの場合はクライアント、Webシステムの場合はWebサーバとなる）
+* ODT：Oracle Developer Tools for Visual Studio. GUI操作でOracleアプリケーション開発を行うためのVisual Studio 2005のアドインツール。開発環境（Visual Studio 2005）上で動作
+* ODE.NET：Oracleデータベース上で.NETストアド・プロシージャを実行するための機能。Oracleデータベース・サーバ上で動作
+* Oracle Providers for ASP.NETは、Microsoft ASP.NETのコントロールおよびサービスと直接統合され、Webサイトの状態管理機能が提供されます。
+
+* ODP.NET: https://docs.oracle.com/cd/E57425_01/121/ODPNT/title.htm
+
+
 # Oracle Forms
 * (https://en.wikipedia.org/wiki/Oracle_Forms)
   * Oracle Forms is has an IDE that uses PL/SQL.
