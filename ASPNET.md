@@ -60,6 +60,7 @@
 # Oracle ASP.NET
 * Oracle Database 2日で.NET開発者ガイド https://docs.oracle.com/cd/E16338_01/appdev.112/b56266/using_aspnt.htm
 * https://www.atmarkit.co.jp/ait/articles/0703/14/news120.html
+* ODTを使ったVisual StudioからのPL/SQL開発 https://www.atmarkit.co.jp/ait/articles/0705/07/news083_4.html
 
 * ODP.NET：.NET環境からOracleデータベースに接続するための高機能なミドルウェア。Oracle Database Client上で動作（クライアント／サーバ・システムの場合はクライアント、Webシステムの場合はWebサーバとなる）
 * ODT：Oracle Developer Tools for Visual Studio. GUI操作でOracleアプリケーション開発を行うためのVisual Studio 2005のアドインツール。開発環境（Visual Studio 2005）上で動作
