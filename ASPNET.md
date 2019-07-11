@@ -58,7 +58,22 @@
   * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
   
 # .NET Entity Framework
-* https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
+* [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
+* https://docs.microsoft.com/en-us/ef/ef6/
+* https://docs.microsoft.com/en-us/ef/ef6/modeling/index
+
+* Entity Framework 6 is a object-relational mapper (O/RM) for .NET
+* Models
+  * object layer (O): application's domain objects or entity
+  * conceptual model (C): the entities and relationships (object-oriented classes and properties)
+                          which are described using the Entity Data Model (EDM)
+  * storage model (S): relational database (tables with foreign key constraints)
+* Mapping
+  * EF's mapping engine leverages the "C-S" mapping to transform operations against entities
+    * Write a code (class and properties) for C, EF generates relational tables and mapping code
+    * From relational tables, EF generates code for C and mapping code.
+  * "O-C" mapping is one-to-one
+
 
 # Oracle ASP.NET
 * Oracle Database 2日で.NET開発者ガイド https://docs.oracle.com/cd/E16338_01/appdev.112/b56266/using_aspnt.htm
