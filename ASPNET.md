@@ -14,11 +14,14 @@
 * ASP.NET MVC: https://dotnet.microsoft.com/apps/aspnet/mvc
 * ASP.NET Core: https://docs.microsoft.com/ja-jp/aspnet/core/?view=aspnetcore-2.2
 
-# ASP.NET Quick Start
-* tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
-* doc: https://docs.microsoft.com/ja-jp/dotnet/core/
-* doc: https://docs.microsoft.com/ja-jp/dotnet/core/tools/index?tabs=netcore2x
+# ASP.NET
+* .NETプラットフォーム：.NET Framework (Windowsのみ), .NET Core (クロスプラットフォーム)
+* ASP.NET: ASP.NET v1-5 (on .NET Framework only, v6からCoreに統合),  ASP.NET Core (on .NET Framework or.NET Core)
+* テンプレート： Web Forms (ASP.NET v1-5 only), MVC
 
+# ASP.NET Core docs
+* doc: https://docs.microsoft.com/ja-jp/dotnet/core/
+* CLI doc: https://docs.microsoft.com/ja-jp/dotnet/core/tools/
 
 # ASP.NET Web Forms
 * tutorial: https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
@@ -48,7 +51,9 @@
        
 # ASP.NET MVC
 * https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
-* https://docs.microsoft.com/ja-jp/aspnet/core/mvc/overview?view=aspnetcore-2.2
+* https://docs.microsoft.com/ja-jp/aspnet/core/
+  * MVC tutorial: https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/first-mvc-app/
+  * tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
 * routing: urlに対してControllerのメソッド（アクションメソッド）を対応づける。
   * アクションメソッドは、response (html, json, etc)を返す。
 * Model binding: 
