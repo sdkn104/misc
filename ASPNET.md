@@ -14,6 +14,12 @@
 * ASP.NET MVC: https://dotnet.microsoft.com/apps/aspnet/mvc
 * ASP.NET Core: https://docs.microsoft.com/ja-jp/aspnet/core/?view=aspnetcore-2.2
 
+# ASP.NET Quick Start
+* tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
+* doc: https://docs.microsoft.com/ja-jp/dotnet/core/
+* doc: https://docs.microsoft.com/ja-jp/dotnet/core/tools/index?tabs=netcore2x
+
+
 # ASP.NET Web Forms
 * tutorial: https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
 * 〇ASP.NET（Web Forms）を理解する3つの仕組み https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
@@ -56,6 +62,9 @@
 * viewの状態保持
   * Session変数 などで明示的に書く。
   * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
+
+# ASP.NET Core
+
   
 # .NET Entity Framework
 * [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
