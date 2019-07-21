@@ -54,19 +54,24 @@
 * https://docs.microsoft.com/ja-jp/aspnet/core/
   * MVC tutorial: https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/first-mvc-app/
   * tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
-* routing: urlに対してControllerのメソッド（アクションメソッド）を対応づける。
-  * アクションメソッドは、response (html, json, etc)を返す。
-* Model binding: 
-  * client request data (form values, route data, query string parameters, HTTP headers) into objects that the controller can handle.
+* Controller
+  * Routing: urlに対してControllerクラスのメソッド（アクションメソッド）を対応づける。
+    * default routing: URL /<name1>/<name2>/5  ---> call method <nama2> of controller class <name1>Controller with arg 5
+    * query stringはアクションメソッドの引数となる
+    * アクションメソッドは、response (html, json, etc)を返す。
+  * Model binding:
+    * client request data (form values, route data, query string parameters, HTTP headers) into objects that the controller can handle.
 * View
   * action method名と同じ名前の.aspx, .cshtmlを作成する。
     * reurun View()とすると同名.cshtmlなどが返る。
     * 連想配列viewBag, viewDataなどに値を設定すると、.aspx, cshtmlから参照できる
   * HTMLヘルパー:
     WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
-* viewの状態保持
-  * Session変数 などで明示的に書く。
-  * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
+  * viewの状態保持
+    * Session変数 などで明示的に書く。
+    * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
+* Model
+ 
 
 # ASP.NET Core
 
