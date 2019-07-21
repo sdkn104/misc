@@ -56,7 +56,7 @@
   * tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
 * Controller
   * Routing: urlに対してControllerクラスのメソッド（アクションメソッド）を対応づける。
-    * default routing: URL /<name1>/<name2>/5  ---> call method <nama2> of controller class <name1>Controller with arg 5
+    * default routing: URL /{name1}/{name2}/5  ---> call method {nama2} of controller class {name1}Controller with arg 5
     * query stringはアクションメソッドの引数となる
     * アクションメソッドは、response (html, json, etc)を返す。
   * Model binding:
