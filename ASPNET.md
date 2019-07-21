@@ -71,17 +71,14 @@
     * Session変数 などで明示的に書く。
     * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
 * Model
- 
-
-# ASP.NET Core
-
-  
+   
 # .NET Entity Framework
+* Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
 * [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
-* https://docs.microsoft.com/en-us/ef/ef6/
-* https://docs.microsoft.com/en-us/ef/ef6/modeling/index
+* https://docs.microsoft.com/en-us/ef/core/
+* https://docs.microsoft.com/en-us/ef/core/modeling/index
 
-* Entity Framework 6 is a object-relational mapper (O/RM) for .NET
+* Entity Framework is a object-relational mapper (O/RM) for .NET
 * Models
   * object layer (O): application's domain objects or entity
   * conceptual model (C): the entities and relationships (object-oriented classes and properties)
