@@ -71,7 +71,8 @@
     * Session変数 などで明示的に書く。
     * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
 * Model
-   
+  * Use Entity Framework
+  
 # .NET Entity Framework
 * Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
 * [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
