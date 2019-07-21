@@ -76,8 +76,8 @@
 # .NET Entity Framework
 * Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
 * [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
-* https://docs.microsoft.com/en-us/ef/core/
-* https://docs.microsoft.com/en-us/ef/core/modeling/index
+* [doc] https://docs.microsoft.com/en-us/ef/core/
+  * https://docs.microsoft.com/en-us/ef/core/modeling/index
 
 * Entity Framework is a object-relational mapper (O/RM) for .NET
 * Models
@@ -90,7 +90,11 @@
     * Write a code (class and properties) for C, EF generates relational tables and mapping code
     * From relational tables, EF generates code for C and mapping code.
   * "O-C" mapping is one-to-one
-
+* Language Integrated Query (LINQ)
+  * query syntax (method, etc.) for entity classes
+     * ex: ```var blogs = context.Blogs.Where(b => b.Url.Contains("dotnet")).ToList();```
+     * ex: ```var blogs = context.Blogs.FromSql("SELECT * FROM dbo.Blogs").ToList();```
+* database providers: plug-in libraries throgh that Entity Framework can access many different databases 
 
 # Oracle ASP.NET
 * Oracle Database 2日で.NET開発者ガイド https://docs.oracle.com/cd/E16338_01/appdev.112/b56266/using_aspnt.htm
