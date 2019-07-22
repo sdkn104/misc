@@ -81,22 +81,28 @@
   * https://docs.microsoft.com/en-us/ef/core/modeling/index
 
 * Entity Framework is a object-relational mapper (O/RM) for .NET
-* Models
-  * object layer (O): application's domain objects or entity
-  * conceptual model (C): the entities and relationships (object-oriented classes and properties)
-                          which are described using the Entity Data Model (EDM)
-  * storage model (S): relational database (tables with foreign key constraints)
+* Model layer
+  * object layer (O): application's domain objects or entity ("O-C" mapping is one-to-one)
+  * conceptual model (C, Model): the entities and relationships (object-oriented classes and properties)
+                          which are described using the Entity Data Model (EDM) 
+  * storage model (S, Database): relational database (tables with foreign key constraints)
 * Mapping
   * EF's mapping engine leverages the "C-S" mapping to transform operations against entities
-    * Write a code (class and properties) for C, EF generates relational tables and mapping code
+    * Write a code (class and properties) for C, EF generates relational tables and mapping code. [migration]
     * From relational tables, EF generates code for C and mapping code.
-  * "O-C" mapping is one-to-one
-* Language Integrated Query (LINQ)
-  * query syntax (method, etc.) for entity classes
-     * ex: ```var blogs = context.Blogs.Where(b => b.Url.Contains("dotnet")).ToList();```
-     * ex: ```var blogs = context.Blogs.FromSql("SELECT * FROM dbo.Blogs").ToList();```
-* database providers: plug-in libraries throgh that Entity Framework can access many different databases 
+  * Migration: Modelの作成・変更に対してDBを変更(create, alter)するツール
+　  * https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/index
 
+* Query (Language Integrated Query, LINQ)
+  * query syntax (method, etc.) for entity classes
+     * ```var blogs = context.Blogs.Where(b => b.Url.Contains("dotnet")).ToList();```
+     * ```var blogs = context.Blogs.FromSql("SELECT * FROM dbo.Blogs").ToList();```
+* Save/Update
+  * ```var blog = new Blog { Url = "http://sample.com" }; db.Blogs.Add(blog); db.SaveChanges();```
+  * ```var blog = context.Blogs.First(); blog.Url = "http://sample.com/blog"; context.SaveChanges();``` 
+
+* database providers: plug-in libraries throgh that Entity Framework can access many different databases 
+ 
 # Oracle ASP.NET
 * Oracle Database 2日で.NET開発者ガイド https://docs.oracle.com/cd/E16338_01/appdev.112/b56266/using_aspnt.htm
 * https://www.atmarkit.co.jp/ait/articles/0703/14/news120.html
