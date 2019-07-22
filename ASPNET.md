@@ -53,7 +53,7 @@
 * https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
 * https://docs.microsoft.com/ja-jp/aspnet/core/
   * MVC tutorial: https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/first-mvc-app/
-  * tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
+  * small tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
 * Controller
   * Routing: urlに対してControllerクラスのメソッド（アクションメソッド）を対応づける。
     * default routing: URL /{name1}/{name2}/5  ---> call method {nama2} of controller class {name1}Controller with arg 5
@@ -100,17 +100,19 @@
 * Oracle Database 2日で.NET開発者ガイド https://docs.oracle.com/cd/E16338_01/appdev.112/b56266/using_aspnt.htm
 * https://www.atmarkit.co.jp/ait/articles/0703/14/news120.html
 
-
 * items
   * ODP.NET(Oracle Data Provider For .NET)：.NET環境からOracleデータベースに接続するための高機能なミドルウェア。Oracle Database Client上で動作（クライアント／サーバ・システムの場合はクライアント、Webシステムの場合はWebサーバとなる）
     * ODP.NET: https://docs.oracle.com/cd/E57425_01/121/ODPNT/title.htm
+    * ODP.NETはADO.NETモデルを使用
+    * OracleネイティブAPIを使用して、Oracleデータへの高速で信頼性の高いアクセスを実現
   * ODT：Oracle Developer Tools for Visual Studio. GUI操作でOracleアプリケーション開発を行うためのVisual Studio 2005のアドインツール。開発環境（Visual Studio 2005）上で動作
     * ODTを使ったVisual StudioからのPL/SQL開発 https://www.atmarkit.co.jp/ait/articles/0705/07/news083_4.html
 
   * ODE.NET：Oracleデータベース上で.NETストアド・プロシージャを実行するための機能。Oracleデータベース・サーバ上で動作
 
-  * Oracle Providers for ASP.NETは、Microsoft ASP.NETのコントロールおよびサービスと直接統合され、Webサイトの状態管理機能が提供されます。
+  * Oracle Providers for ASP.NET: Microsoft ASP.NETのコントロールおよびサービスと直接統合され、Webサイトの状態管理機能が提供されます。
     * https://docs.oracle.com/cd/E57425_01/121/ASPNT/IntroOverview.htm
+    * ASP.NETアプリケーションは、様々なタイプのアプリケーション状態をOracleデータベースに格納できます。
 
 
 # Oracle Forms
