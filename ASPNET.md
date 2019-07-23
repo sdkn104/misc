@@ -64,8 +64,10 @@
 * View
   * action method名と同じ名前の.aspx, .cshtmlを作成する。
     * reurun View()とすると同名.cshtmlなどが返る。
-    * 連想配列viewBag, viewDataなどに値を設定すると、.aspx, cshtmlから参照できる
-  * HTMLヘルパー:
+    * 連想配列viewBag, viewData(dict.)などに値を設定すると、.aspx, cshtmlから参照できる　　
+    * View()の引数にobject instanceを指定すると、.cshtmlなどから@Modelで参照できる(viewmodel)。
+
+* HTMLヘルパー:
     WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
   * viewの状態保持
     * Session変数 などで明示的に書く。
