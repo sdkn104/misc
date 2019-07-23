@@ -74,7 +74,7 @@
   * Use Entity Framework
   * Scaffolding: scaffolding tool generates pages (V, C) for Create, Read, Update, and Delete (CRUD) operations for Model class.
   
-# .NET Entity Framework
+# .NET Entity Framework (OR-mapper)
 * Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
 * [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
 * [doc] https://docs.microsoft.com/en-us/ef/core/
@@ -102,7 +102,9 @@
   * ```var blog = context.Blogs.First(); blog.Url = "http://sample.com/blog"; context.SaveChanges();``` 
 
 * database providers: plug-in libraries throgh that Entity Framework can access many different databases 
- 
+
+* Simple ORM Dapper (https://dapper-tutorial.net/ https://github.com/StackExchange/Dapper)
+
 # Oracle ASP.NET
 * Oracle Database 2日で.NET開発者ガイド https://docs.oracle.com/cd/E16338_01/appdev.112/b56266/using_aspnt.htm
 * https://www.atmarkit.co.jp/ait/articles/0703/14/news120.html
@@ -112,6 +114,7 @@
     * ODP.NET: https://docs.oracle.com/cd/E57425_01/121/ODPNT/title.htm
     * ODP.NETはADO.NETモデルを使用
     * OracleネイティブAPIを使用して、Oracleデータへの高速で信頼性の高いアクセスを実現
+    * 接続型と非接続型
   * ODT：Oracle Developer Tools for Visual Studio. GUI操作でOracleアプリケーション開発を行うためのVisual Studio 2005のアドインツール。開発環境（Visual Studio 2005）上で動作
     * ODTを使ったVisual StudioからのPL/SQL開発 https://www.atmarkit.co.jp/ait/articles/0705/07/news083_4.html
 
