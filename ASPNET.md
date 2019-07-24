@@ -60,7 +60,16 @@
     * query stringはアクションメソッドの引数となる
     * アクションメソッドは、response (html, json, etc)を返す。
   * Model binding:
-    * client request data (form values, route data, query string parameters, HTTP headers) into objects that the controller can handle.
+    * client request data (form values, route data, query string parameters, HTTP headers) 
+      into objects (args of action method, args of Razor Pages handler method, Public properties of a controller or PageModel class)
+    * binding is specified by attributes in class definition, etc.
+ 
+  * Model validation
+    * validation by decorating your model object with data annotation validation attributes. 
+    * The validation attributes are checked on the client side before values are posted to the server, 
+      as well as on the server before the controller action is called.
+    * action method内では、if (ModelState.IsValid)　で結果を取得、また、rendered view内にvalicatin logicが埋め込まれる(jquery validation)。
+     
 * View
   * action method名と同じ名前の.aspx, .cshtmlを作成する。
     * reurun View()とすると同名.cshtmlなどが返る。
@@ -69,7 +78,7 @@
 
 * HTMLヘルパー:
     WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
-  * viewの状態保持
+* viewの状態保持
     * Session変数 などで明示的に書く。
     * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
 * Model
