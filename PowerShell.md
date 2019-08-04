@@ -39,6 +39,7 @@ $hash[0]
 'abc $a'         # string
 "`r`n"           # CRLF
 "a" + "b"
+"abcde".Substring(3,4)
 "abc.txt".Replace("txt","log")
 "abc.txt" -replace '(.)\.txt$','$1.log'
 if( "abc.txt" -match '([abc])\.txt$' ) { $Matches[1] }
