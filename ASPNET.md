@@ -60,8 +60,8 @@
     * query stringはアクションメソッドの引数となる
     * アクションメソッドは、response (html, json, etc)を返す。
   * Model binding:
-    * client request data (form values, route data, query string parameters, HTTP headers) 
-      into objects (args of action method, args of Razor Pages handler method, Public properties of a controller or PageModel class)
+    * bindig client request data (form values, route data, query string parameters, HTTP headers) 
+      to objects (args of action method, args of Razor Pages handler method, Public properties of a controller or PageModel class)
     * binding is specified by attributes in class definition, etc.
  
   * Model validation
@@ -75,7 +75,12 @@
     * reurun View()とすると同名.cshtmlなどが返る。
     * 連想配列viewBag, viewData(dict.)などに値を設定すると、.aspx, cshtmlから参照できる　　
     * View()の引数にobject instanceを指定すると、.cshtmlなどから@Modelで参照できる(viewmodel)。
-
+  * Razor Pages
+    * Razor Pages is enabled in Startup.cs, and  put @page directive in .cshtml
+    * define a PageModel class in .cshtml.cs
+    * page handler (a method of PageModel, OnGet(), etc.) is called for request (routed) * controller action method is not used
+    * page hander returns respnse as action method
+    * 
 * HTMLヘルパー:
     WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
 * viewの状態保持
