@@ -49,7 +49,7 @@
     * [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/index)
       * Query expressions are written in a declarative query syntax in the code (no SQL).
        
-# ASP.NET MVC
+# ASP.NET Core/MVC
 * https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
 * https://docs.microsoft.com/ja-jp/aspnet/core/
   * MVC tutorial: https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/first-mvc-app/
@@ -59,7 +59,7 @@
     * default routing: URL /{name1}/{name2}/5  ---> call method {nama2} of controller class {name1}Controller with arg 5
     * query stringはアクションメソッドの引数となる
     * アクションメソッドは、response (html, json, etc)を返す。
-  * Model binding:
+  * [Model binding](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/models/model-binding)
     * bindig client request data (form values, route data, query string parameters, HTTP headers) 
       to objects (args of action method, args of Razor Pages handler method, Public properties of a controller or PageModel class)
     * binding is specified by attributes in class definition, etc.
@@ -75,17 +75,22 @@
     * reurun View()とすると同名.cshtmlなどが返る。
     * 連想配列viewBag, viewData(dict.)などに値を設定すると、.aspx, cshtmlから参照できる　　
     * View()の引数にobject instanceを指定すると、.cshtmlなどから@Modelで参照できる(viewmodel)。
-  * Razor Pages
+  * [Razor Pages](https://docs.microsoft.com/ja-jp/aspnet/core/razor-pages)
+    * a MVV-Model
     * Razor Pages is enabled in Startup.cs, and  put @page directive in .cshtml
     * define a PageModel class in .cshtml.cs
-    * page handler (a method of PageModel, OnGet(), etc.) is called for request (routed) * controller action method is not used
-    * page hander returns respnse as action method
-    * 
-* HTMLヘルパー:
-    WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
-* viewの状態保持
-    * Session変数 などで明示的に書く。
-    * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
+    * PageModel includes
+      * page handlers (a method. OnGet(), etc.), that is called for request (routed), instead of controller action method
+      * properties (member variables), targets of model binding
+    * page handerで return Page()とする 
+    * cshtmlからPageModelを参照
+      * <input asp-for="Customer.Name"> (CustomerはPageModelのproperty)
+      * @Modelでも参照できる
+　　* HTMLヘルパー:
+    　* WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
+　  * viewの状態保持
+      * Session変数 などで明示的に書く。
+      * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
 * Model
   * Use Entity Framework
   * Scaffolding: scaffolding tool generates pages (V, C) for Create, Read, Update, and Delete (CRUD) operations for Model class.
