@@ -63,7 +63,7 @@
     * bindig client request data (form values, route data, query string parameters, HTTP headers) 
       to objects (args of action method, args of Razor Pages handler method, Public properties of a controller or PageModel class)
     * binding is specified by attributes in class definition, etc.
- 
+   
   * Model validation
     * validation by decorating your model object with data annotation validation attributes. 
     * The validation attributes are checked on the client side before values are posted to the server, 
@@ -79,16 +79,24 @@
     * a MVV-Model
     * Razor Pages is enabled in Startup.cs, and  put @page directive in .cshtml
     * define a PageModel class in .cshtml.cs
-    * PageModel includes
+    * PageModel includes:
       * page handlers (a method. OnGet(), etc.), that is called for request (routed), instead of controller action method
       * properties (member variables), targets of model binding
-    * page handerで return Page()とする 
-    * cshtmlからPageModelを参照
+    * page handerで return Page()とすると、.cshtmlが返る。 
+  * Razor (cshtml)
+    * syntax: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor
+    * 変数を参照
+      * using @, refer C# variables
+      * action method/page handler内から参照できる変数はそのまま参照できる？？？
+      * "Model" refer:
+        * argument of View() returned by action method, or Page() returned by page hander
+        * If argment is omitted, Controller/PageModel？ (https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/)
       * <input asp-for="Customer.Name"> (CustomerはPageModelのproperty)
-      * @Modelでも参照できる
-　　* HTMLヘルパー:
-    　* WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
-　  * viewの状態保持
+      * ViewData - action/handerからread/write, Razorからread
+  * HTML Helper
+    　* WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います*
+  * Tag Helper
+　* viewの状態保持
       * Session変数 などで明示的に書く。
       * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
 * Model
