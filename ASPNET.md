@@ -93,9 +93,13 @@
         * If argment is omitted, Controller/PageModel？ (https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/)
       * <input asp-for="Customer.Name"> (CustomerはPageModelのproperty)
       * ViewData - action/handerからread/write, Razorからread
-  * HTML Helper
-    　* WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います*
-  * Tag Helper
+  * [HTML Helper](https://stephenwalther.com/archive/2009/03/03/chapter-6-understanding-html-helpers)
+    * WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
+    *  in most cases, is just a method that returns a string.
+    * ex. Html.ActionLink("About this Website", "About"), Html.DataGrid()
+    * standard helpers, custom helpers
+  * [Tag Helper](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/tag-helpers/)
+      * 
 　* viewの状態保持
       * Session変数 などで明示的に書く。
       * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
