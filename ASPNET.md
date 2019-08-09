@@ -114,7 +114,7 @@
 * Model
   * Use Entity Framework
   * Scaffolding: scaffolding tool generates pages (V, C) for Create, Read, Update, and Delete (CRUD) operations for Model class.
-
+  * IEnumerable, ToList
 * Unit Test: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/controllers/testing
              https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-with-dotnet-test
 
