@@ -99,14 +99,25 @@
     * ex. Html.ActionLink("About this Website", "About"), Html.DataGrid()
     * standard helpers, custom helpers
   * [Tag Helper](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/tag-helpers/)
+      *
+  * [Layout](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/layout)
+      * Layout is .cshtml that represents common top page structure.
+      * Page .cshtml specifies Layout.cshtml by Layout property.
+      * Layout .cshtml contains @RenderBody(), where Page cshtl is rendered.
+  * [Partial View](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/partial)
       * 
+  * Http Client https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/http-requests
+  
 　* viewの状態保持
       * Session変数 などで明示的に書く。
       * TempDataは、1つのHTTP要求と次のHTTP要求の間でデータを永続化する場合に使用できます。redirectに使うみたい。
 * Model
   * Use Entity Framework
   * Scaffolding: scaffolding tool generates pages (V, C) for Create, Read, Update, and Delete (CRUD) operations for Model class.
-  
+
+* Unit Test: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/controllers/testing
+             https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-with-dotnet-test
+
 # .NET Entity Framework (OR-mapper)
 * Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
 * [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
