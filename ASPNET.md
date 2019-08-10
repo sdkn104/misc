@@ -141,6 +141,11 @@
   * query syntax (method, etc.) for entity classes
      * ```var blogs = context.Blogs.Where(b => b.Url.Contains("dotnet")).ToList();```
      * ```var blogs = context.Blogs.FromSql("SELECT * FROM dbo.Blogs").ToList();```
+  * using SQL
+     * Raw SQL query : DBSet.FromSql(), or DBQuery.FromSql() https://docs.microsoft.com/en-us/ef/core/querying/raw-sql
+       * query, non-query. result type must be type of dbset or dbquery
+       * DBQuery is a class, that must be registered in context: https://stackoverflow.com/questions/35631903/raw-sql-query-without-dbset-entity-framework-core
+     * db.ExecuteSqlCommand() : no return
 * Save/Update
   * ```var blog = new Blog { Url = "http://sample.com" }; db.Blogs.Add(blog); db.SaveChanges();```
   * ```var blog = context.Blogs.First(); blog.Url = "http://sample.com/blog"; context.SaveChanges();``` 
