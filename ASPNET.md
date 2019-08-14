@@ -117,6 +117,9 @@
   * IEnumerable, ToList
 * Unit Test: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/controllers/testing
              https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-with-dotnet-test
+* Authentication
+  * Integrated Windows Authentication https://docs.microsoft.com/ja-jp/aspnet/web-api/overview/security/integrated-windows-authentication
+    * https://support.microsoft.com/en-us/help/323176/how-to-implement-windows-authentication-and-authorization-in-asp-net
 
 # .NET Entity Framework (OR-mapper)
 * Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
