@@ -143,9 +143,15 @@
      * ```var blogs = context.Blogs.FromSql("SELECT * FROM dbo.Blogs").ToList();```
   * using SQL
      * Raw SQL query : DBSet.FromSql(), or DBQuery.FromSql() https://docs.microsoft.com/en-us/ef/core/querying/raw-sql
-       * query, non-query. result type must be type of dbset or dbquery
+       * query or non-query. result type must be type of dbset or dbquery
        * DBQuery is a class, that must be registered in context: https://stackoverflow.com/questions/35631903/raw-sql-query-without-dbset-entity-framework-core
-     * db.ExecuteSqlCommand() : no return
+     * Database.ExecuteSqlCommand() : non-query (no return)
+     * using ADO
+       * Database.GetDbConnection().CreateCommand() ...
+       * type-less utility function : 
+          * https://stackoverflow.com/questions/35631903/raw-sql-query-without-dbset-entity-framework-core
+          * https://www.learnentityframeworkcore.com/raw-sql
+           
 * Save/Update
   * ```var blog = new Blog { Url = "http://sample.com" }; db.Blogs.Add(blog); db.SaveChanges();```
   * ```var blog = context.Blogs.First(); blog.Url = "http://sample.com/blog"; context.SaveChanges();``` 
