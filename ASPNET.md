@@ -117,10 +117,17 @@
   * IEnumerable, ToList
 * Unit Test: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/controllers/testing
              https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-with-dotnet-test
-* Authentication
-  * Integrated Windows Authentication https://docs.microsoft.com/ja-jp/aspnet/web-api/overview/security/integrated-windows-authentication
-    * https://support.microsoft.com/en-us/help/323176/how-to-implement-windows-authentication-and-authorization-in-asp-net
-
+* [Authentication](https://docs.microsoft.com/ja-jp/aspnet/core/security/authentication/identity?view=aspnetcore-2.2&tabs=visual-studio)
+  * Identity : a membership system that adds login functionality to ASP.NET Core apps.
+    * ユーザ情報を登録するModel Classとそれを操作(ユーザ登録、変更など)するユーティリティなど
+    * ログインページなどのコード生成
+  * Windows Authentication: https://docs.microsoft.com/ja-jp/aspnet/core/security/authentication/windowsauth
+    * Integrated Windows Authentication (ASP.NET MVC ?)
+      * https://docs.microsoft.com/ja-jp/aspnet/web-api/overview/security/integrated-windows-authentication
+      * https://support.microsoft.com/en-us/help/323176/how-to-implement-windows-authentication-and-authorization-in-asp-net
+    * AD group (role)などの属性をIdentityに取り込めるみたい。
+* [Authorization](https://docs.microsoft.com/ja-jp/aspnet/core/security/authorization/introduction)
+  * page, controller, folderなどに対して、user, role, all userなどを設定。コードで記述する。
 # .NET Entity Framework (OR-mapper)
 * Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
 * [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
