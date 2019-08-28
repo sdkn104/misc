@@ -147,6 +147,24 @@ Get-ChildItem -?
 Get-Help Get-ChildItem -Online
 alias (Get-Alias)
 ```
+#### Custom Object
+```
+# create object
+$obj1 = New-Object PSCustomObject
+$obj1 | Add-Member -MemberType NoteProperty -Name "Name" -Value "Tom"
+$obj1 | Add-Member -MemberType NoteProperty -Name "Age" -Value 29
+# create by hash
+$props1 = @{ "Name" = "Tom"; "Age" = 29; }
+$obj1 = New-Object PSCustomObject -Property $props1
+$obj1 = [PSCustomObject] $props1
+# object array
+$hashArray1 = (
+    @{ "Name" = "Tom"; "Age" = 29; },
+    @{ "Name" = "Jack"; "Age" = 19; }
+)
+$objArray = $hashArray1 | foreach { [PSCustomObject]$_ }
+```
+
 #### 外部コマンド
 ```
 $log = & "C:\program file.exe" "arg 1" "arg2" arg3
