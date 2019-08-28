@@ -1,20 +1,22 @@
 
+$nmapExe = "nmap"
+$targets = "192.168.1.1-255"
+$tmpXmlFile = ".\tmp.xml"
+$csvFile = ".\out.csv"
 
-$nmapout = & nmap 192.168.1.1-255 -sn
+# scan by nmap
+$o = & $nmapExe $targets -sn -oX $tmpXmlFile
+$xml = [xml](Get-Content $tmpXmlFile)
 
-$ip = ""
-$hosts = foreach( $line in $nmapout) {
-  if( $line -match "(Nmap scan report for |Nmap done:)" -and $ip -ne "" ) {    
-      Write-Host "ERROR: no MAC address reported for $ip"
-  }
-  if( $line -match "Nmap scan report for *([0-9.]+)" ) { $ip = $Matches[1]; $mac = "" }
-  elseif( $line -match "Nmap scan report for .*[(]([0-9.]+)[)]" ) { $ip = $Matches[1]; $mac = "" }
-  elseif( $line -match "Nmap scan report for " ) { Write-Host "ERROR: not IP found for: $line" }
-  if( $line -match "MAC Address: *([0-9A-Fa-f:]+)" ) {
-    $mac = $Matches[1] 
-    @{ "IP" = $ip; "MAC" = $mac; }
-    $ip = $mac = ""
-  }
+# extract results
+$NOW = Get-Date
+$hosts = $xml.nmaprun.host | foreach { 
+    $ip = $_.address | where { $_.addrtype -eq "ipv4" }; 
+    $mac = $_.address | where { $_.addrtype -eq "mac" }; 
+    @{"IP" = $ip.addr; "MAC" = $mac.addr; "LAST" = $NOW; }; 
 }
-$hosts | foreach { [PSCustomObject]$_ } | ft
 
+# output
+$objHosts = $hosts | foreach { [PSCustomObject]$_ }
+$objHosts
+$objHosts | Export-Csv $csvFile
