@@ -37,6 +37,8 @@ $hash[0]
 ```
 "abc"            # string
 'abc $a'         # string
+"abc ${arr[1]}"  # embedded var.
+"abc $($a+1)"    # embedded expr.
 "`r`n"           # CRLF
 "a" + "b"
 "abcde".Substring(3,4)
