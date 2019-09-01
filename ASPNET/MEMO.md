@@ -91,8 +91,17 @@
   * Use Entity Framework
   * Scaffolding: scaffolding tool generates pages (V, C) for Create, Read, Update, and Delete (CRUD) operations for Model class.
   * IEnumerable, ToList
+
+* Server
+  * https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/servers
+  * https://docs.microsoft.com/ja-jp/aspnet/core/host-and-deploy
+  * デフォルトは、Kestrel is the default web server included in ASP.NET Core project templates.
+  * IISは、in-process, out-of-process Modelがある。
+    * Core 2.2からはin-processがIISのデフォルト。in-processでは複数アプリができないが通常はこちらでよさそう。
+    
 * Unit Test: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/controllers/testing
              https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-with-dotnet-test
+
 * [Authentication](https://docs.microsoft.com/ja-jp/aspnet/core/security/authentication/identity?view=aspnetcore-2.2&tabs=visual-studio)
   * Identity : a membership system that adds login functionality to ASP.NET Core apps.
     * ユーザ情報を登録するModel Classとそれを操作(ユーザ登録、変更など)するユーティリティなど
@@ -104,7 +113,9 @@
     * AD group (role)などの属性をIdentityに取り込めるみたい。
 * [Authorization](https://docs.microsoft.com/ja-jp/aspnet/core/security/authorization/introduction)
   * page, controller, folderなどに対して、user, role, all userなどを設定。コードで記述する。
+  
 # .NET Entity Framework (OR-mapper)
+
 * Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
 * [concept] https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview
 * [doc] https://docs.microsoft.com/en-us/ef/core/
