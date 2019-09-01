@@ -19,15 +19,17 @@
 * ASP.NET: ASP.NET v1-5 (on .NET Framework only, v6からCoreに統合),  ASP.NET Core (on .NET Framework or.NET Core)
 * テンプレート： Web Forms (ASP.NET v1-5 only), MVC
 
-# ASP.NET Core docs
-* doc: https://docs.microsoft.com/ja-jp/dotnet/core/
-* CLI doc: https://docs.microsoft.com/ja-jp/dotnet/core/tools/
+# Docs
+* .NET Core docs
+  * doc: https://docs.microsoft.com/ja-jp/dotnet/core/
+  * CLI doc: https://docs.microsoft.com/ja-jp/dotnet/core/tools/
+* ASP.NET Core docs
+  * https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
+  * https://docs.microsoft.com/ja-jp/aspnet/core/
+    * tutorial (ASP.NET Core, Razor pages): https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/razor-pages/
+    * small tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
 
 # ASP.NET Core/MVC
-* https://qiita.com/kazuhisam3/items/f056819172d2b6d36a8c
-* https://docs.microsoft.com/ja-jp/aspnet/core/
-  * MVC tutorial: https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/first-mvc-app/
-  * small tutorial: https://dotnet.microsoft.com/learn/web/aspnet-hello-world-tutorial/intro
 * Controller
   * Routing: urlに対してControllerクラスのメソッド（アクションメソッド）を対応づける。
     * default routing: URL /{name1}/{name2}/5  ---> call method {nama2} of controller class {name1}Controller with arg 5
