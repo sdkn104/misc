@@ -98,7 +98,8 @@
   * デフォルトは、Kestrel is the default web server included in ASP.NET Core project templates.
   * IISは、in-process, out-of-process Modelがある。
     * Core 2.2からはin-processがIISのデフォルト。in-processでは複数アプリができないが通常はこちらでよさそう。
-    
+  * server設定は、Program.csのCreateDefaultBuilder定義内に記述。
+  
 * Unit Test: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/controllers/testing
              https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-with-dotnet-test
 
