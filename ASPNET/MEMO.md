@@ -96,7 +96,7 @@
   * https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/servers
   * https://docs.microsoft.com/ja-jp/aspnet/core/host-and-deploy
   * デフォルトは、Kestrel is the default web server included in ASP.NET Core project templates.
-  * IISは、in-process, out-of-process Modelがある。
+  * IISは、in-process(IIS worker process内), out-of-process Modelがある。
     * Core 2.2からはin-processがIISのデフォルト。in-processでは複数アプリができないが通常はこちらでよさそう。
   * Kestrel単独 (開発用?) https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/servers/kestrel
     * Program.cs: WebHost.CreateDefaultBuilder(args)   [calls UseKestrel() behind the scenes.]
