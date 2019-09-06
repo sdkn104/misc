@@ -77,8 +77,8 @@
   * [Tag Helper](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/tag-helpers/)
       *
   * [Layout](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/layout)
-      * Layout is .cshtml that represents common top page structure.
-      * Page .cshtml specifies Layout.cshtml by Layout property.
+      * Layout is .cshtml that represents common top page structure.　(Pages/Shared/_Layout.cshtml)
+      * Page .cshtml specifies _Layout.cshtml by Layout property.
       * Layout .cshtml contains @RenderBody(), where Page cshtl is rendered.
   * [Partial View](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/partial)
       * 
