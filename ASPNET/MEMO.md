@@ -79,8 +79,12 @@
   * [Layout](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/layout)
       * Layout is .cshtml that represents common top page structure.　(Pages/Shared/_Layout.cshtml)
       * Page .cshtml specifies _Layout.cshtml by Layout property.
-      * Layout .cshtml contains @RenderBody(), where Page cshtl is rendered.
-  * [Partial View](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/partial)
+      * Layout .cshtml contains @RenderBody(), where Page cshtml (div, etc) is rendered.
+      * If Layout .cshtml contains @RenderSection(), section defined in Page cshtml is rendered (if exists) 
+      * Importing Shared Directives:  _ViewImports.cshtml
+      * Running Code Before Each View/Page: _ViewStart.cshtml
+      
+* [Partial View](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/partial)
       * 
   * Http Client https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/http-requests
   
