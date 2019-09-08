@@ -138,15 +138,19 @@
     
 * [Authorization](https://docs.microsoft.com/ja-jp/aspnet/core/security/authorization/introduction)
   * page, controller, folderなどに対して、user, role, all userなどを設定。コードで記述する。
+  * Authorization convention for RazorPage
+    * 
   * Simple Authorization
     * put [Authorize]/[AllowAnonymous] atribute on controller/action/PageModel to allow authenticated/all users to access.
   * Role based Authorization
     * put [Authorize(Roles = "ROLL NAME")] attribute.
     * Role = Administrator, PowerUser, Manager, etc. 
+    * Policyを登録しPolicy内でroleのチェックをすることも可。
   * Claim based
-    * key-valueセットをIdentityに登録しておき、keyとvalueの条件で判断する(特定のキーが存在するか、年齢が20歳以上かなど)。
+    * Claim(key-valueセット)をIdentityに登録しておき、keyとvalueの条件で判断する(特定のキーが存在するか、年齢が20歳以上かなど)。
     * Startup.csにポリシーとして判断方法を設定し、controller/action/(PageMdel?)に[Authorize(Policy = "POLICY NAME")]を付加。
-    
+  * Policy based
+    * Startup.csに登録し、[Authorize(Policy = "POLICY NAME")]で呼び出す。
  
     
     
