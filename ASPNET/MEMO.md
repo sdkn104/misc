@@ -121,10 +121,14 @@
   * Identity : a membership system that adds login functionality to ASP.NET Core apps.
     * ユーザ情報を登録するModel Classとそれを操作(ユーザ登録、変更など)するユーティリティなど
     * ログインページなどのコード生成
-  * Windows Authentication: https://docs.microsoft.com/ja-jp/aspnet/core/security/authentication/windowsauth
-    * Integrated Windows Authentication (ASP.NET MVC ?)
+  * (Integrated) Windows Authentication: 
+      * https://docs.microsoft.com/ja-jp/aspnet/core/security/authentication/windowsauth
+      * https://docs.microsoft.com/en-us/iis/configuration/system.webServer/security/authentication/windowsAuthentication/
       * https://docs.microsoft.com/ja-jp/aspnet/web-api/overview/security/integrated-windows-authentication
       * https://support.microsoft.com/en-us/help/323176/how-to-implement-windows-authentication-and-authorization-in-asp-net
+    * Integrated Windows authentication enables users to log in with their Windows credentials, using Kerberos or NTLM. The client sends credentials in the Authorization header. 
+    * You can use Windows authentication when your IIS 7 server runs on a corporate network that is using Microsoft Active Directory service domain identities or other Windows accounts to identify users. Because of this, you can use Windows authentication whether or not your server is a member of an Active Directory domain.
+    
     * AD group (role)などの属性をIdentityに取り込めるみたい。
     * 
     
