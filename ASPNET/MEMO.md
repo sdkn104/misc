@@ -127,10 +127,14 @@
       * https://docs.microsoft.com/ja-jp/aspnet/web-api/overview/security/integrated-windows-authentication
       * https://support.microsoft.com/en-us/help/323176/how-to-implement-windows-authentication-and-authorization-in-asp-net
     * Integrated Windows authentication enables users to log in with their Windows credentials, using Kerberos or NTLM. The client sends credentials in the Authorization header. 
-    * You can use Windows authentication when your IIS 7 server runs on a corporate network that is using Microsoft Active Directory service domain identities or other Windows accounts to identify users. Because of this, you can use Windows authentication whether or not your server is a member of an Active Directory domain.
-    
+      * client -> IIS -> AD server
+    * Requirements
+      * use IIS running on a network that is using Microsoft Active Directory service domain identities
+         * or other Windows accounts to identify users. (ユーザ認証がADでなくてもよい??)
+      * Kerberos or NTLM support in the client browser. (IE is default supported)
+      * Client computers and Web servers are in the same domain. (MUST??)
+      * Intra-net environment (no proxy between client and server, etc)    
     * AD group (role)などの属性をIdentityに取り込めるみたい。
-    * 
     
 * [Authorization](https://docs.microsoft.com/ja-jp/aspnet/core/security/authorization/introduction)
   * page, controller, folderなどに対して、user, role, all userなどを設定。コードで記述する。
