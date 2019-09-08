@@ -138,7 +138,12 @@
     
 * [Authorization](https://docs.microsoft.com/ja-jp/aspnet/core/security/authorization/introduction)
   * page, controller, folderなどに対して、user, role, all userなどを設定。コードで記述する。
-  
+  * Simple Authorization
+    * put [Authorize]/[AllowAnonymous] atribute on controller/action to allow authenticated/all users to access.
+  * Role based Authorization
+    * put [Authorize(Roles = "ROLL NAME")] attribute.
+    * Role = Administrator, PowerUser, Manager, etc. 
+    
 # .NET Entity Framework (OR-mapper)
 
 * Entity Framework Core (on .NET Core)   Entity Framework 6 (old versin, only on .NET Framewwork)
