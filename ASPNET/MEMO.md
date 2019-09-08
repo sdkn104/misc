@@ -139,10 +139,16 @@
 * [Authorization](https://docs.microsoft.com/ja-jp/aspnet/core/security/authorization/introduction)
   * page, controller, folderなどに対して、user, role, all userなどを設定。コードで記述する。
   * Simple Authorization
-    * put [Authorize]/[AllowAnonymous] atribute on controller/action to allow authenticated/all users to access.
+    * put [Authorize]/[AllowAnonymous] atribute on controller/action/PageModel to allow authenticated/all users to access.
   * Role based Authorization
     * put [Authorize(Roles = "ROLL NAME")] attribute.
     * Role = Administrator, PowerUser, Manager, etc. 
+  * Claim based
+    * key-valueセットをIdentityに登録しておき、keyとvalueの条件で判断する(特定のキーが存在するか、年齢が20歳以上かなど)。
+    * Startup.csにポリシーとして判断方法を設定し、controller/action/(PageMdel?)に[Authorize(Policy = "POLICY NAME")]を付加。
+    
+ 
+    
     
 # .NET Entity Framework (OR-mapper)
 
