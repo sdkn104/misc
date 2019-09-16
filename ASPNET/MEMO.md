@@ -152,7 +152,10 @@
   * Policy based
     * Startup.csに登録し、[Authorize(Policy = "POLICY NAME")]で呼び出す。
  
-    
+# Razor Class Library (RCL)
+* https://docs.microsoft.com/ja-jp/aspnet/core/razor-pages/ui-class
+* list install folders: ```[dotnet] nuget locals all --list```
+* 
     
 # .NET Entity Framework (OR-mapper)
 
