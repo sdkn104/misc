@@ -53,10 +53,14 @@
     * View()の引数にobject instanceを指定すると、.cshtmlなどから@Modelで参照できる(viewmodel)。
   * [Razor Pages](https://docs.microsoft.com/ja-jp/aspnet/core/razor-pages)
     * a MVV-Model
-    * Razor Pages is enabled in Startup.cs, and  put @page directive in .cshtml
-    * define a PageModel class in .cshtml.cs
+    * Razor Pages is enabled in Startup.cs, and  put @page directive in <PageName>.cshtml
+      * Startup.ConfigureServices(services) { services.addMvc(); }
+      * Startup.Configure(app) { app.useMvc()(); }
+    * Pages/<Folder>/<PageName>.cshtml   -->   Url: /<Folder>/<PageName> 
+    * define a PageModel class (<PageName>Model) in <PageName>.cshtml.cs
     * PageModel includes:
       * page handlers (a method. OnGet(), etc.), that is called for request (routed), instead of controller action method
+         * OnGet(), OnPost(), OnGetAsync(), OnPostAsync()
       * properties (member variables), targets of model binding
     * page handerで return Page()とすると、.cshtmlが返る。 
   * Razor (cshtml)
@@ -78,11 +82,11 @@
       *
   * [Layout](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/layout)
       * Layout is .cshtml that represents common top page structure.　(Pages/Shared/_Layout.cshtml)
-      * Page .cshtml specifies _Layout.cshtml by Layout property.
+      * Page .cshtml specifies _Layout.cshtml by Layout property. ( ex. @{ Layout = "_Layout"; } )
       * Layout .cshtml contains @RenderBody(), where Page cshtml (div, etc) is rendered.
       * If Layout .cshtml contains @RenderSection(), section defined in Page cshtml is rendered (if exists) 
-      * Importing Shared Directives:  _ViewImports.cshtml
-      * Running Code Before Each View/Page: _ViewStart.cshtml
+      * _ViewImports.cshtml : Importing Shared Directives (@model, @using, etc)
+      * _ViewStart.cshtml : executed at the top of every View/Page 
       
 * [Partial View](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/partial)
       * 
@@ -152,10 +156,21 @@
   * Policy based
     * Startup.csに登録し、[Authorize(Policy = "POLICY NAME")]で呼び出す。
  
+* Main, Host, Startup, Services, middleware
+  * Host: The host is an object that encapsulates all of the app's resources
+    * Program.Main() { CreateWebHostBuilder(args).Build().Run(); }
+  * Startup
+    * Startup class is called from Host.
+  * Services (DI)
+    * Startup.ConfigureServices(services) { servces.addMVC(); services.addDbContext().. }
+  * middleware (called in request handling pipeline)
+    * Startup.Configuire(app) { app.UseStaticFiles(); .. app.UseAuthentication(); ... }
+ 
 # Razor Class Library (RCL)
 * https://docs.microsoft.com/ja-jp/aspnet/core/razor-pages/ui-class
+* reference: In app.csproj, <ItemGroup><PackageReference Include="xxxx"/>
 * list install folders: ```[dotnet] nuget locals all --list```
-* 
+* nuget, github, ...
     
 # .NET Entity Framework (OR-mapper)
 
