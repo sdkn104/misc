@@ -216,8 +216,8 @@ $book.ActiveSheet.Name
 $book.Close()
 $excel.Quit()   #???
 ```
-#### BAT内に埋め込んだPSスクリプトを実行
-本スクリプトは.BATとしても.ps1としても正しいコード。(スクリプトファイル名は.batでも.ps1でも可)
+#### BATファイル内にPowerShellスクリプトを埋め込む
+本スクリプトは.batフィアルとして保存して実行できる。
 ```
 @(echo ' ) >nul
 @set /p d=$PSCommandPath="%~fp0";<nul  > "%TEMP%\tmp.batps.ps1"
@@ -243,11 +243,14 @@ Write-Host $args[2]
 throw "error...."
 MyExit 0
 ```
-上記３行目を以下で置き換えれば、スクリプトをUTF8(BOM付)で保存しても実行可。ただし先頭行でエラーメッセージがでる。
-```
-@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "$t=${env:TEMP}+'\tmp.batps.ps1'; $a=(gc $t)+(gc '%~fp0' -Raw); sc $t $a -Encoding UTF8"
-```
- 
+* PowerShellからのリターンコード(exit nで指定)はBATの戻り値となる。
+* 本スクリプトはBATファイルとしてもpowerShellスクリプトとしても正しいコード。(ファイル名は.batでも.ps1でも実行可)
+* 上記３行目を以下で置き換えれば、スクリプトをUTF8(BOM付)で保存しても実行可。ただし先頭行のBAT実行時にエラーメッセージがでる。
+`@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "$t=${env:TEMP}+'\tmp.batps.ps1'; $a=(gc $t)+(gc '%~fp0' -Raw); sc $t $a -Encoding UTF8"`
+* cmd.exeは先頭から@exitまでを実行して終了。本スクリプト自身の先頭行を修正したものを.ps1ファイルとして保存してpowershell.exeで実行。
+* powershell.exeは、先頭から') > $nullまでをnullへのechoとして実行する(読み飛ばすのに等しい)。
+* powershellはshiftjis(cp932), utf8(bom付), (とunicode??)のスクリプトを許す。IDE, VS codeはデフォルトutf8(bom)のはず。
+* BATスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー、メッセージを出すが処理は続行。
  ---------------------------------------------
  
  
