@@ -32,6 +32,7 @@ $hash.Keys
 $hash.Color
 $hash["Color"]
 $hash[0]
+foreach ($key in $hash.Keys) { $hash[$key] }
 ```
 #### String
 ```
