@@ -88,8 +88,14 @@
       * _ViewImports.cshtml : Importing Shared Directives (@model, @using, etc)
       * _ViewStart.cshtml : executed at the top of every View/Page 
       
-* [Partial View](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/partial)
-      * 
+  * [Partial View](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/partial)
+    * A partial view is a Razor markup file (.cshtml) that renders HTML output within another markup file's rendered output.
+    * A patilal view is not whole html (<html></html>), unlike html frame.
+    * .cshtmlは通常のフォルダに格納。名前は_で始まるのが普通。
+    * 親のcshtmlから呼び出す。
+      * '<partial name="/Pages/Folder/_PartialName.cshtml" />'
+      * '@await Html.PartialAsync("/Pages/Folder/_PartialName.cshtml")'
+
   * Http Client https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/http-requests
   
 　* viewの状態保持
