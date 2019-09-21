@@ -95,6 +95,11 @@
     * 親のcshtmlから呼び出す。
       * '<partial name="/Pages/Folder/_PartialName.cshtml" />'
       * '@await Html.PartialAsync("/Pages/Folder/_PartialName.cshtml")'
+  * [View Component](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/view-components)
+    * View components are similar to partial views, but they're much more powerful. Can have parameters and business logic.
+    * cshtmlから呼び出し。
+      * `@await Component.InvokeAsync("PriorityList", new { maxPriority = 4, isDone = true })`
+      * `<vc:[view-component-name] parameter1="parameter1 value"  parameter2="parameter2 value"> </vc:[view-component-name]>`
 
   * Http Client https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/http-requests
   
