@@ -107,8 +107,9 @@ $age = Read-host "Please enter your age: "
 Write-Host "abc"   # console terminalへの出力
 Write-Output "abc" # standard output streamへの出力（パイプできる、object streamである）
 Write-Error "abc"  # non-terminating errorを発生し、error output streamへ出力
-# PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
 ```
+* PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
+* Out-Host,File,String.. は、input streamまたは-inputObjectから入力をとり、それぞれに出力する。
 #### Pileline
 ```
 $d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode -Last 5
@@ -127,7 +128,7 @@ $lines = @(Get-Content t.txt)  # array of line strings
 pwd (Get-Location)
 cd (Set-Location)
 dir (Get-ChildItem)
-Get-ChildItem -Recurse -Include *.txt
+Get-ChildItem -Include *.txt -Recurse | foreach { $_.FullName }
 Get-Item C:\Users\*
 cp (Copy-Item)
 mv (Move-Item)
@@ -171,7 +172,7 @@ $objArray = $hashArray1 | foreach { [PSCustomObject]$_ }
 #### 外部コマンド
 ```
 $log = & "C:\program file.exe" "arg 1" "arg2" arg3
-if( -not #? ) { throw "ERROR in external command." } 
+if( -not $? ) { throw "ERROR in external command." } 
 $success = $?            # 外部コマンドの場合、戻り値非０のときFalse、外部コマンド内でWindowsコマンドエラー発生もFalse。
 $code = $LastExitCode    # 戻り値（外部コマンドの場合のみ）
 # Exception: 戻り値０でもExceptionは発生しない。
