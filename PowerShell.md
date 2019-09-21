@@ -217,11 +217,7 @@ $book.Close()
 $excel.Quit()   #???
 ```
 #### BAT内に埋め込んだPSスクリプトを実行
-(スクリプトファイル名.batでも.ps1でも実行可)
-```
-@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "$t=${env:TEMP}+'\tmp.batps.ps1'; $a=(gc $t)+(gc '%~fp0' -Raw); sc $t $a -Encoding UTF8"
-```
-
+本スクリプトは.BATとしても.ps1としても正しいコード。(スクリプトファイル名は.batでも.ps1でも可)
 ```
 @(echo ' ) >nul
 @set /p d=$PSCommandPath="%~fp0";<nul  > "%TEMP%\tmp.batps.ps1"
@@ -246,6 +242,10 @@ Write-Host $args[2]
 
 throw "error...."
 MyExit 0
+```
+上記３行目を以下で置き換えれば、スクリプトをUTF8(BOM付)で保存しても実行可。ただし先頭行でエラーメッセージがでる。
+```
+@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "$t=${env:TEMP}+'\tmp.batps.ps1'; $a=(gc $t)+(gc '%~fp0' -Raw); sc $t $a -Encoding UTF8"
 ```
  
  ---------------------------------------------
