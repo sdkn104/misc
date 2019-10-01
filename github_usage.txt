@@ -62,6 +62,7 @@ $ git diff HEAD ---- working copy and last commit(HEAD)
 $ git clone https://github.com/xxxx/xxx.git localdir
 $ git remote -v --- display remote connection (alias) list
 $ git rm --cached [-r] dir/file   --- remove from index (make them untracked). keeping working copy.
+$ git reset --soft HEAD~1 ---- cancel the last commit, 
 $ git reset HEAD [files]  ---- cancel add(staged), keeping last commit(HEAD) and working copy.
 $ git checkout [files/dir]  ---- cancel modification of working copy before add (overwrite by HEAD)
 $ git ls-files  --- show files
