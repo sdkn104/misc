@@ -59,6 +59,7 @@ $ git branch [-r]   --- show branches. -r for remote
 $ git diff  ---- working and add(staged)
 $ git diff -cached ---- add(staged) and last commit(HEAD)
 $ git diff HEAD ---- working copy and last commit(HEAD)
+$ git diff fb4fe13 a45e154 ---- diff between commit IDs
 $ git clone https://github.com/xxxx/xxx.git localdir
 $ git remote -v --- display remote connection (alias) list
 $ git rm --cached [-r] dir/file   --- remove from index (make them untracked). keeping working copy.
