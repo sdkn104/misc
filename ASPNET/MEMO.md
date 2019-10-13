@@ -236,6 +236,7 @@
     * ODP.NETはADO.NETモデルを使用
     * OracleネイティブAPIを使用して、Oracleデータへの高速で信頼性の高いアクセスを実現
     * 接続型と非接続型
+    * Connection Pooling: https://www.oracle.com/technetwork/jp/articles/chapter5-2-085301-ja.html#p01a
   * ODT：Oracle Developer Tools for Visual Studio. GUI操作でOracleアプリケーション開発を行うためのVisual Studio 2005のアドインツール。開発環境（Visual Studio 2005）上で動作
     * ODTを使ったVisual StudioからのPL/SQL開発 https://www.atmarkit.co.jp/ait/articles/0705/07/news083_4.html
 
