@@ -216,7 +216,10 @@ $excel.DisplayAlerts = $true
 $book = $excel.Workbooks.Add()
 $book.ActiveSheet.Name
 $book.Close()
-$excel.Quit()   #???
+$excel.Quit()
+# to kill process
+[void][System.Runtime.InteropServices.Marshal]::FinalReleaseComObject($book)
+[void][System.Runtime.InteropServices.Marshal]::FinalReleaseComObject($excel)  
 ```
 #### BATファイル内にPowerShellスクリプトを埋め込む
 本スクリプトは.batフィアルとして保存して実行できる。
