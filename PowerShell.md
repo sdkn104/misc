@@ -240,7 +240,7 @@ $excel.Quit()
 function MyExit($code) { Read-Host "終了するにはEnterキーを押してください"; exit $code }
 trap { Write-Host "【想定外のエラーが発生したので終了します】"; Out-Host -InputObject $_; MyExit 1 }
 
-Write-Host $PSCommandPath
+cd (Split-Path $PSCommandPath -Parent)
 Write-Host $args[0]
 Write-Host $args[1]
 Write-Host $args[2]
