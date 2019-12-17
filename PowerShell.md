@@ -256,6 +256,8 @@ MyExit 0
 * powershell.exeは、先頭から') > $nullまでをnullへのechoとして実行する(読み飛ばすのに等しい)。
 * powershellはshiftjis(cp932), utf8(bom付), (とunicode??)のスクリプトを許す。IDE, VS codeはデフォルトutf8(bom)のはず。
 * BATスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー、メッセージを出すが処理は続行。
+
+* 一時ファイルをユニーク名にするには、 `SET F=%TEMP%\tmp.batps.%DATE:/=%%TIME::=%%RANDOM%.ps1`  などとする。
  ---------------------------------------------
  
  
