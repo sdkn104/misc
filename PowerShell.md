@@ -275,7 +275,7 @@ var arg = ""; for(var i=0; i<WScript.Arguments.length; i++) { arg += ' "' + WScr
 var tf = FSO.GetSpecialFolder(2).Path+"\\tmp.jsps" + (new Date).getTime() + Math.floor(Math.random()*100) + ".ps1"
 FSO.CopyFile(WScript.ScriptFullName, tf, true);
 var r = SH.Run("cmd /c powershell -ExecutionPolicy ByPass -NoProfile -File " + tf + arg, 1, true)
-FSO.DeleteFile(tf, true); WScript.Quit(r;
+FSO.DeleteFile(tf, true); WScript.Quit(r);
 /* #>; $PSCommandPath = $env:_PSCommandPath_;
 #--------- 上のスクリプトはここから下のPowershellコードを実行する（起動引数は渡される）-------------
 # 制限事項：
@@ -291,7 +291,7 @@ Write-Host $args[0]
 Write-Host $args[1]
 Write-Host $args[2]
 
-#throw "error...."
+throw "error...."
 MyExit 0
 # --------- PowrShellスクリプトの終わり ----------- */
 ```
