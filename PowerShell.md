@@ -295,9 +295,9 @@ Write-Host $args[2]
 MyExit 0
 # --------- PowrShellスクリプトの終わり ----------- */
 ```
-* PowerShellからのリターンコード(exit nで指定)はJSの戻り値となる。
+* PowerShellからのリターンコード(exit nで指定)はJScriptの戻り値となる。
 * 本スクリプトはJScriptファイルとしてもpowerShellスクリプトとしても正しいコード。(ファイル名は.jsでも.ps1でも実行可)
-* JScriptスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー。
+* JScriptスクリプトは、shiftjis(cp932)のみ許す。utf8は不可。
 * ウィンドウ非表示にしたいときは、Shell.Runの第二引数を0とする。
 * バックグラウンド（Powershell起動後するにJScriptを終了）とするには、Shell.Runの第3引数をfalseとする。
   (このときexitコードは常に０となる)
