@@ -83,6 +83,11 @@ try {
    dasfdasfsa    # terminating error
    throw "this is an error."  # terminating error
 } catch {
+   $emsg = $_ | Out-String  # 長いデフォルトのメッセージ
+   $_.Exception.Message　   # 短いメッセージ
+   $_.InvocationInfo.PositionMessage
+   $_.ScriptStackTrace
+   $_.CategoryInfo.ToString()
    Write-Host $_                                                 # 簡略表示
    Out-Host -InputObject $_                                      # メッセージを表示
    Out-String -InputObject $_ | Write-Host -ForegroundColor Red　# メッセージを赤色で表示
@@ -225,10 +230,11 @@ $excel.Quit()
 本スクリプトは.batフィアルとして保存して実行できる。
 ```
 @(echo ' ) >nul
-@set /p d=$PSCommandPath="%~fp0";<nul  > "%TEMP%\tmp.batps.ps1"
-@type "%~fp0"                         >> "%TEMP%\tmp.batps.ps1"
-@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File "%TEMP%\tmp.batps.ps1" %*
-@set c=%errorlevel% & del "%TEMP%\tmp.batps.ps1"
+@set f="%TEMP%\tmp.batps.%DATE:/=%%TIME::=%%RANDOM%.ps1"
+@set /p d=$PSCommandPath="%~fp0";<nul  > "%f%"
+@type "%~fp0"                         >> "%f%"
+@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File "%f%" %*
+@set c=%errorlevel% & del "%f%" 
 @exit /b %c%
 ') > $null
 #--------- 上のスクリプトはここから下のPowershellコードを実行する（起動引数は渡される）-------------
@@ -245,7 +251,7 @@ Write-Host $args[0]
 Write-Host $args[1]
 Write-Host $args[2]
 
-throw "error...."
+#throw "error...."
 MyExit 0
 ```
 * PowerShellからのリターンコード(exit nで指定)はBATの戻り値となる。
@@ -256,34 +262,50 @@ MyExit 0
 * powershell.exeは、先頭から') > $nullまでをnullへのechoとして実行する(読み飛ばすのに等しい)。
 * powershellはshiftjis(cp932), utf8(bom付), (とunicode??)のスクリプトを許す。IDE, VS codeはデフォルトutf8(bom)のはず。
 * BATスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー、メッセージを出すが処理は続行。
-
-* 一時ファイルをユニーク名にするには、 `SET F=%TEMP%\tmp.batps.%DATE:/=%%TIME::=%%RANDOM%.ps1`  などとする。
  ---------------------------------------------
  
  
-#### Powershellスクリプトを起動するVBScript
+#### JScriptファイル内にPowerShellスクリプトを埋め込む
+本スクリプトは.jsフィアルとして保存して実行できる。
 ```
-' Powershellスクリプト起動
-'   このファイルのファイル名+'.ps1'　のファイルを起動する
-`
-'引数を取得
-args_string = ""
-For Each arg In WScript.Arguments
-  args_string = args_string & " """ & arg & """"
-Next
+"\" >$null <# "
+var SH = new ActiveXObject("WScript.Shell"); var FSO = new ActiveXObject("Scripting.FileSystemObject");
+SH.Environment("Process").Item("_PSCommandPath_") = WScript.ScriptFullName;
+var arg = ""; for(var i=0; i<WScript.Arguments.length; i++) { arg += ' "' + WScript.Arguments(i).replace(/\\$/,"\\\\") + '"' }
+var tf = FSO.GetSpecialFolder(2).Path+"\\tmp.jsps" + (new Date).getTime() + Math.floor(Math.random()*100) + ".ps1"
+FSO.CopyFile(WScript.ScriptFullName, tf, true);
+var r = SH.Run("cmd /c powershell -ExecutionPolicy ByPass -NoProfile -File " + tf + arg, 1, true)
+FSO.DeleteFile(tf, true); WScript.Quit(r;
+/* #>; $PSCommandPath = $env:_PSCommandPath_;
+#--------- 上のスクリプトはここから下のPowershellコードを実行する（起動引数は渡される）-------------
+# 制限事項：
+#   自身のスクリプトパス名は $PSCommandPath で参照する（$PSScriptRoot, $MyInvocationは使えない）。
+#   このスクリプトはShiftJIS(cp932)で保存すること。引数に'"'、引数末尾に'\\' を含まないこと。
+#---------------------------------------------------------------------------------------------------
 
-'ファイル名を取得（このファイルのファイル名+.ps1）
-file = WScript.ScriptFullName + ".ps1"
+function MyExit($code) { Read-Host "終了するにはEnterキーを押してください"; exit $code }
+trap { Write-Host "【想定外のエラーが発生したので終了します】"; Out-Host -InputObject $_; MyExit 1 }
 
-'ＰＳ起動コマンドラインを作成
-cmd = "cmd /c powershell -ExecutionPolicy ByPass -NoProfile -File "
-cmdall = cmd & """" & file & """" & args_string ' & " > C:\Users\sdkn1\Desktop\o.txt"
-'Wscript.echo cmdall
+cd (Split-Path $PSCommandPath -Parent)
+Write-Host $args[0]
+Write-Host $args[1]
+Write-Host $args[2]
 
-'実行
-Set SH = WScript.CreateObject("WScript.Shell")
-SH.Run cmdall, 0, True
+#throw "error...."
+MyExit 0
+# --------- PowrShellスクリプトの終わり ----------- */
 ```
+* PowerShellからのリターンコード(exit nで指定)はJSの戻り値となる。
+* 本スクリプトはJScriptファイルとしてもpowerShellスクリプトとしても正しいコード。(ファイル名は.jsでも.ps1でも実行可)
+* JScriptスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー。
+* ウィンドウ非表示にしたいときは、Shell.Runの第二引数を0とする。
+* バックグラウンド（Powershell起動後するにJScriptを終了）とするには、Shell.Runの第3引数をfalseとする。
+  (このときexitコードは常に０となる)
+* wscript/cscript.exeは先頭からWScript.Quit(r)までを実行して終了（そこから後ろはコメントと解釈）。
+　本スクリプト自身を.ps1ファイルにコピーしてpowershell.exeで実行。
+* powershell.exeは、先頭の<#から#>までをコメントと解釈。スクリプト自身のパス名は環境変数を介して引き渡される。
+* powershellはshiftjis(cp932), utf8(bom付), (とunicode??)のスクリプトを許す。IDE, VS codeはデフォルトutf8(bom)のはず。
+
 #### IP SCAN
 ```
 # IP scanして応答あったもののNetBIOS名取得
