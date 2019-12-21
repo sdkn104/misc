@@ -18,22 +18,6 @@
 $true, $false    # Boolean constant
 $null            # default value of all the variable
 ```
-#### Array
-```
-$a = 1, 2, 3
-$a = @(1)
-$a.Count
-```
-#### Hash
-```
-$hash = @{ Number = 1; Shape = "Square"; Color = "Blue"}
-$hash = [orderd]@{ Number = 1; Shape = "Square"; Color = "Blue"}
-$hash.Keys
-$hash.Color
-$hash["Color"]
-$hash[0]
-foreach ($key in $hash.Keys) { $hash[$key] }
-```
 #### String
 ```
 "abc"            # string
@@ -52,6 +36,51 @@ ipconfig | Select-String "イーサネット"
 -split "a b c d"
 "a:b:c" -split ":"
 ```
+#### Array
+```
+$a = 1, 2, 3
+$a = @(1)
+$a.Count
+```
+#### Hash
+```
+$hash = @{ Number = 1; Shape = "Square"; Color = "Blue"}
+$hash = [orderd]@{ Number = 1; Shape = "Square"; Color = "Blue"}
+$hash.Keys
+$hash.Color
+$hash["Color"]
+$hash[0]
+foreach ($key in $hash.Keys) { $hash[$key] }
+```
+#### Custom Object
+```
+# create object
+$obj1 = New-Object PSCustomObject
+$obj1 | Add-Member -MemberType NoteProperty -Name "Name" -Value "Tom"
+$obj1 | Add-Member -MemberType NoteProperty -Name "Age" -Value 29
+# create by hash
+$props1 = @{ "Name" = "Tom"; "Age" = 29; }
+$obj1 = New-Object PSCustomObject -Property $props1
+$obj1 = [PSCustomObject] $props1
+# object array
+$hashArray1 = (
+    @{ "Name" = "Tom"; "Age" = 29; },
+    @{ "Name" = "Jack"; "Age" = 19; }
+)
+$objArray = $hashArray1 | foreach { [PSCustomObject]$_ }
+```
+#### DATE
+```
+Get-Date
+[DateTime]"2013/02/09 13:59:50"
+[DateTime]::ParseExact("20130209","yyyyMMdd",$null)
+(Get-Date).ToString("yyyyMMdd-HH:mm:ss")
+(Get-Date).Day
+(Get-Date).AddMonths(2)
+$span = (Get-Date) - [DateTime]"2019/06/09"
+$span.TotalDays
+```
+
 #### Type
 ```
 $text = [String]123    # cast
@@ -70,6 +99,17 @@ while() {}
 do {} while()
 do {} until()
 ```
+#### Function
+```
+function add($a, $b) { $a + $b }
+$v = add 1 2
+```
+#### Pileline
+```
+$d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode -Last 5
+$d | foreach { "name: " + $_.Name }
+dir | Group-Object Extension
+```
 #### 例外処理
 ```
 $ErrorActionPreference = "Stop"  # non-terminatig errorでも実行停止しcatchする。
@@ -84,10 +124,11 @@ try {
    throw "this is an error."  # terminating error
 } catch {
    $emsg = $_ | Out-String  # 長いデフォルトのメッセージ
-   $_.Exception.Message　   # 短いメッセージ
-   $_.InvocationInfo.PositionMessage
-   $_.ScriptStackTrace
-   $_.CategoryInfo.ToString()
+   Out-Host "error: $($_|Out-String)"
+   $emsg = $_.Exception.Message　   # 短いメッセージ
+   $emsg = $_.InvocationInfo.PositionMessage  # 発生場所
+   $emsg = $_.ScriptStackTrace #短い発生場所
+   $emsg = $_.CategoryInfo.ToString() #エラーカテゴリ名
    Write-Host $_                                                 # 簡略表示
    Out-Host -InputObject $_                                      # メッセージを表示
    Out-String -InputObject $_ | Write-Host -ForegroundColor Red　# メッセージを赤色で表示
@@ -95,11 +136,6 @@ try {
    exit 1            # default exit code = 0
 } finally {
 }
-```
-#### Function
-```
-function add($a, $b) { $a + $b }
-$v = add 1 2
 ```
 #### Script Args, Path
 ```
@@ -116,12 +152,6 @@ Write-Error "abc"  # non-terminating errorを発生し、error output streamへ�
 ```
 * PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
 * Out-Host,File,String.. は、input streamまたは-inputObjectから入力をとり、それぞれに出力する。
-#### Pileline
-```
-$d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode -Last 5
-$d | foreach { "name: " + $_.Name }
-dir | Group-Object Extension
-```
 #### File I/O
 ```
 $c = "あいうえお定兼ｻﾀﾞ＠©"
@@ -157,24 +187,6 @@ Get-ChildItem -?
 Get-Help Get-ChildItem -Online
 alias (Get-Alias)
 ```
-#### Custom Object
-```
-# create object
-$obj1 = New-Object PSCustomObject
-$obj1 | Add-Member -MemberType NoteProperty -Name "Name" -Value "Tom"
-$obj1 | Add-Member -MemberType NoteProperty -Name "Age" -Value 29
-# create by hash
-$props1 = @{ "Name" = "Tom"; "Age" = 29; }
-$obj1 = New-Object PSCustomObject -Property $props1
-$obj1 = [PSCustomObject] $props1
-# object array
-$hashArray1 = (
-    @{ "Name" = "Tom"; "Age" = 29; },
-    @{ "Name" = "Jack"; "Age" = 19; }
-)
-$objArray = $hashArray1 | foreach { [PSCustomObject]$_ }
-```
-
 #### 外部コマンド
 ```
 $log = & "C:\program file.exe" "arg 1" "arg2" arg3
@@ -191,7 +203,11 @@ Format-List
 ```
 #### 起動
 ```
-powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
+CMD> powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
+```
+```
+PS> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser  #管理者として実行したPowershellで。
+# -> ps1ファイルを右クリックし「Powershellで実行」で実行できる
 ```
 #### ダイアログ表示
 ```
@@ -201,17 +217,6 @@ Add-Type -AssemblyName System.Windows.Forms;
 ```
 $WSH = New-Object -ComObject Wscript.Shell
 $WSH.Popup("xxxx")
-```
-#### DATE
-```
-Get-Date
-[DateTime]"2013/02/09 13:59:50"
-[DateTime]::ParseExact("20130209","yyyyMMdd",$null)
-(Get-Date).ToString("yyyyMMdd-HH:mm:ss")
-(Get-Date).Day
-(Get-Date).AddMonths(2)
-$span = (Get-Date) - [DateTime]"2019/06/09"
-$span.TotalDays
 ```
 #### MS Office
 ```
