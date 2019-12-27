@@ -35,9 +35,9 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
 
 * .NET version
 
-https://qiita.com/nskydiving/items/3af8bab5a0a63ccb9893
-https://devblogs.microsoft.com/visualstudio-jpn/net-framework-201510/
-https://dotnet.microsoft.com/platform/support/policy
+   * https://qiita.com/nskydiving/items/3af8bab5a0a63ccb9893
+   * https://devblogs.microsoft.com/visualstudio-jpn/net-framework-201510/
+   * https://dotnet.microsoft.com/platform/support/policy
 
    * 1-3.5はサポート切れ。3.5SP1はサポート中。
    * 2016 年 1 月 12 日以降は .NET Framework 4.0 ～ 4.5.1 はサポートされなくなり
