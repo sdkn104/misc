@@ -19,6 +19,38 @@
 * ASP.NET: ASP.NET v1-5 (on .NET Framework only, v6からCoreに統合),  ASP.NET Core (on .NET Framework or.NET Core)
 * テンプレート： Web Forms (ASP.NET v1-5 only), MVC
 
+# ASP.NET　overview
+https://docs.microsoft.com/ja-jp/aspnet/overview#websites-and-web-applications
+
+ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NET MVC, and ASP.NET Web Pages
+
+* Web Forms (ASP.NET 3, 4)
+
+* MVC
+ C: Controllers/XXController.cs
+ V: Views/XX/Index.cshtml  (Razor view engine)
+
+ Razor view engine : v3～
+
+
+* .NET version
+
+https://qiita.com/nskydiving/items/3af8bab5a0a63ccb9893
+https://devblogs.microsoft.com/visualstudio-jpn/net-framework-201510/
+https://dotnet.microsoft.com/platform/support/policy
+
+  * 1-3.5はサポート切れ。3.5SP1はサポート中。
+  * 2016 年 1 月 12 日以降は .NET Framework 4.0 ～ 4.5.1 はサポートされなくなり
+  * Win10は4.6以上のみ
+
+* ASP.NET version
+  * https://dotnet.microsoft.com/platform/support/policy/aspnet
+  * ASP.NET is made up components that ship in both the .NET Framework and as external packages that ship outside of the .NET Framework.
+  * External pckg: ASP.NET MVC, ASP.NET Web Pages, ASP.NET Web API and ASP.NET SignalR, etc
+  *  MVC4 was retired in 2019/7
+  * Web Forms: ASP.NET Coreはサポートしない
+
+
 # Docs
 * .NET Core docs
   * doc: https://docs.microsoft.com/ja-jp/dotnet/core/
