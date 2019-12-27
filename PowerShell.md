@@ -155,10 +155,25 @@ Write-Error "abc"  # non-terminating errorを発生し、error output streamへ�
 #### File I/O
 ```
 $c = "あいうえお定兼ｻﾀﾞ＠©"
-Set-Content t.txt $c  # write
+Set-Content t.txt $c -ENcoding UTF8  # write
+echo xxx | Set-Content t.txt
+echo xxx | Out-File t.txt -Encoding UTF8
 $raw = Get-Content t.txt -Raw  # string
 $lines = @(Get-Content t.txt)  # array of line strings
 ```
+ーーーーーーーーーーーーーーーー
+* Get-Content xxx.txt -Encoding xxx
+   日本語PowerShellの場合、Get-ContentはUTF16、SJIS、UTF8(BOMあり）のテキストファイルを読み取れる。
+   それら以外のファイルを読み込むには-Encodingオプションで文字コードを指定する。PS6未満ではUTF8Nは読めない。
+   -Encoding Defaultと指定するとSJISを指定する事になる。
+
+* Set-Content xxx.txt -Encoding xxx :  デフォルトはDefault (=SJIS)
+* Out-File xxx.txt -Encoding xxx : デフォルトはDefault (=UTF16)
+* redirect ">"  : UTF16。文字コード指定不可。
+
+•Set-Contentはデフォルトの文字コードであるSJISで書き出される。
+•Out-Fileは内部文字コードであるUTF16で書き出される。
+
 #### File System
 ```
 pwd (Get-Location)
