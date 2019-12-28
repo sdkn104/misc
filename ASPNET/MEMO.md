@@ -64,8 +64,8 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
 # ASP.NET Core/MVC
 * Controller
   * Routing: urlに対してControllerクラスのメソッド（アクションメソッド）を対応づける。
-    * default routing: URL /{name1}/{name2}/5  ---> call method {nama2} of controller class {name1}Controller with arg 5
-    * query stringはアクションメソッドの引数となる
+    * default routing: URL /{contname}/{actname}/5  ---> call method {actname} of controller class {contname}Controller with arg 5
+    * actionに属性（[HttpGet("/products")]など）を付加してルーティングを指定可。
     * アクションメソッドは、response (html, json, etc)を返す。
   * [Model binding](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/models/model-binding)
     * bindig client request data (form values, route data, query string parameters, HTTP headers) 
@@ -84,7 +84,7 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
     * 連想配列viewBag, viewData(dict.)などに値を設定すると、.aspx, cshtmlから参照できる　　
     * View()の引数にobject instanceを指定すると、.cshtmlなどから@Modelで参照できる(viewmodel)。
   * [Razor Pages](https://docs.microsoft.com/ja-jp/aspnet/core/razor-pages)
-    * a MVV-Model
+    * a MVVM
     * Razor Pages is enabled in Startup.cs, and  put @page directive in <PageName>.cshtml
       * Startup.ConfigureServices(services) { services.addMvc(); }
       * Startup.Configure(app) { app.useMvc()(); }
