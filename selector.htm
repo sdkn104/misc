@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    -->
+
+    <style>
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color:rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+    </style>
+
+
+    <title>Hello, world!</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+
+    <!-- Button trigger modal -->
+    <form>
+        <div class="input-group">
+            <input type="text" class="xxform-control" id="input1" list="codeType" style="width:300px;" />
+            <datalist id="codeType">
+                <option value="AAA-ss"></option>
+                <option value="BBB-s"></option>
+                <option value="CCC-xx"></option>
+            </datalist>
+            <button type="button" class="modal-open" data-target="myModal" id="vbtn">
+                V
+            </button>
+        </div>
+    </form>
+
+    <div id="ua" style="width:300px"></div>
+
+    <!-- Modal -->
+    <div class="modal" id="myModal" data-source="input1" tabindex="-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="picker-search" id="search1">
+                </div>
+                <div class="form-group">
+                    <select class="picker-select modal-dismiss" id="exampleFormControlSelect2" data-target="myModal" size="10">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <a href="file://C:/Users/sdkn1/Desktop/pyHTTPServer/static/program.vbs"> program </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\program.vbs"> vbs UNC </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\test.xls"> excel UNC </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\program.bat"> bat UNC </a><br>
+    <a href="/static/program.vbs"> vbs http </a><br>
+    <a href="/static/test.xls"> excel http </a><br>
+    <a href="/static/program.bat"> bat http </a><br>
+
+    <script>
+        // Add ECMA262-5 method binding if not supported natively
+        //
+        if (!("bind" in Function.prototype)) {
+            Function.prototype.bind = function(owner) {
+                var that = this;
+                if (arguments.length <= 1) {
+                    return function() {
+                        return that.apply(owner, arguments);
+                    };
+                } else {
+                    var args = Array.prototype.slice.call(arguments, 1);
+                    return function() {
+                        return that.apply(
+                            owner,
+                            arguments.length === 0
+                                ? args
+                                : args.concat(Array.prototype.slice.call(arguments))
+                        );
+                    };
+                }
+            };
+        }
+
+        // Add ECMA262-5 string trim if not supported natively
+        //
+        if (!("trim" in String.prototype)) {
+            String.prototype.trim = function() {
+                return this.replace(/^\s+/, "").replace(/\s+$/, "");
+            };
+        }
+
+        // Add ECMA262-5 Array methods if not supported natively
+        //
+        if (!("indexOf" in Array.prototype)) {
+            Array.prototype.indexOf = function(find, i /*opt*/) {
+                if (i === undefined) i = 0;
+                if (i < 0) i += this.length;
+                if (i < 0) i = 0;
+                for (var n = this.length; i < n; i++)
+                    if (i in this && this[i] === find) return i;
+                return -1;
+            };
+        }
+        if (!("lastIndexOf" in Array.prototype)) {
+            Array.prototype.lastIndexOf = function(find, i /*opt*/) {
+                if (i === undefined) i = this.length - 1;
+                if (i < 0) i += this.length;
+                if (i > this.length - 1) i = this.length - 1;
+                for (i++; i-- > 0 /* i++ because from-argument is sadly inclusive */; )
+                    if (i in this && this[i] === find) return i;
+                return -1;
+            };
+        }
+        if (!("forEach" in Array.prototype)) {
+            Array.prototype.forEach = function(action, that /*opt*/) {
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this) action.call(that, this[i], i, this);
+            };
+        }
+        if (!("map" in Array.prototype)) {
+            Array.prototype.map = function(mapper, that /*opt*/) {
+                var other = new Array(this.length);
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this) other[i] = mapper.call(that, this[i], i, this);
+                return other;
+            };
+        }
+        if (!("filter" in Array.prototype)) {
+            Array.prototype.filter = function(filter, that /*opt*/) {
+                var other = [],
+                    v;
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this && filter.call(that, (v = this[i]), i, this))
+                        other.push(v);
+                return other;
+            };
+        }
+        if (!("every" in Array.prototype)) {
+            Array.prototype.every = function(tester, that /*opt*/) {
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this && !tester.call(that, this[i], i, this)) return false;
+                return true;
+            };
+        }
+        if (!("some" in Array.prototype)) {
+            Array.prototype.some = function(tester, that /*opt*/) {
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this && tester.call(that, this[i], i, this)) return true;
+                return false;
+            };
+        }
+    </script>
+
+    <script>
+        document.getElementById("ua").innerHTML = window.navigator.userAgent.toLowerCase();
+    </script>
+    
+    <script>
+        if (!("forEach" in NodeList.prototype)) {
+            NodeList.prototype.forEach = function(action, that /*opt*/) {
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this) action.call(that, this[i], i, this);
+            };
+        }
+
+        document.querySelectorAll(".modal").forEach(function(modal){
+            let src = document.getElementById( modal.getAttribute("data-source") );
+            let sch = modal.querySelector(".picker-search");
+            let sel = modal.querySelector(".picker-select");
+
+            function kakikae() {
+                console.log(modal.optionList.length);
+                // remove options
+                while (sel.firstChild) {
+                    sel.removeChild(sel.firstChild);
+                }
+                // add options
+                let myregex = new RegExp(sch.value);
+                for (var i = 0; i < modal.optionList.length; i++) {
+                    if ( modal.optionList[i].match(myregex) ) {
+                        var option = document.createElement('option');
+                        option.text = modal.optionList[i];
+                        option.value = modal.optionList[i];
+                        sel.appendChild(option);
+                    }
+                }
+            }
+
+            modal.kakikae = kakikae;
+
+            // on modal open
+            /*
+            modal.addEventListener("shown", function(){
+                if( src && sch ) {
+                    sch.value = src.value;
+                    sch.focus();    
+                }
+                kakikae();
+            });
+            */
+
+            src.addEventListener("forcus", function(e) {
+                alert("focus");
+                modal.style.display = "block";
+                sch.value = src.value;
+                modal.kakikae();
+                //var event = new Event('shown');
+                //modal.dispatchEvent(event);
+            });
+
+            sch.addEventListener("keypress", function(e) {
+                if( e.keyCode == 13 ) { // enter key
+                }
+            })
+
+            // double click selector elem
+            sel.ondblclick = function () {
+                src.value = sch.value       
+            };
+
+
+            // search box changed
+            sch.addEventListener("input", function(){
+                kakikae();
+            })
+
+            // store option list
+            modal.optionList = [];
+            let options = sel.options;
+            console.log(options.length);
+            for( i = 0; i < options.length; i++ ) {
+                modal.optionList.push(options.item(i).text);
+            }
+        });
+
+
+        // initial forcus
+        let inp = document.getElementById('input1');
+        inp.focus();    
+
+    </script>
+
+    <script>
+        // modal open
+        document.querySelectorAll(".modal-open").forEach(function(elem){
+            elem.onclick = function() {
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                let src = document.getElementById( modal.getAttribute("data-source") );
+                let sch = modal.querySelector(".picker-search");
+                modal.style.display = "block";
+                sch.value = src.value;
+                modal.kakikae();
+                //var event = new Event('shown');
+                //modal.dispatchEvent(event);
+            }
+        });
+        // modal dismiss by modal-dismiss
+        document.querySelectorAll(".modal-dismiss").forEach(function(elem){
+            elem.addEventListener("click", function(){
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                let src = document.getElementById( modal.getAttribute("data-source") );
+                let sch = modal.querySelector(".picker-search");
+                let sel = modal.querySelector(".picker-select");
+                src.value = sch.value;
+                src.value = sel.value;
+                modal.style.display = "none";
+                //var event = new Event('dismiss');
+                //modal.dispatchEvent(event);
+            });
+        });
+        
+        // modal dismiss by clicking overlay modal
+        document.querySelectorAll(".modal").forEach(function(elem){
+            elem.addEventListener("click", function(e){
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                if( e.target == modal ) {
+                    modal.style.display = "none";
+                    //var event = new Event('dismiss');
+                    //modal.dispatchEvent(event);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        let inp1 = document.getElementById("input1");
+        inp1.addEventListener("input", function(){
+            let lis = document.getElementById("codeType");
+            let opt = document.createElement("option");
+            opt.value = "xxx";
+            lis.appendChild(opt);
+            console.log("Wxx")
+        })
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+--->
+</body>
+</html>
