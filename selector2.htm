@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    -->
+
+    <style>
+       .select {
+            /* 選択肢のリスト向けのポジショニングコンテキストを作成します */
+            position: relative;            
+            /* ウィジェットをテキストフローの一部かつまとまった大きさにします */
+            display : inline-block;
+        }
+        .select.active,
+        .select:focus {
+            outline: none;            
+            /* box-shadow プロパティは必須ではありませんが、これをデフォルト値として使用するのは
+                アクティブ状態を見えるようにするために重要です。自由に書き換えてください。*/
+            box-shadow: 0 0 3px 1px #227755;
+        }
+
+        .select .optList {
+            /* 選択肢のリストが値の下部かつ HTML フローの外側に表示される
+                ようにします。 */
+            position : absolute;
+            top      : 100%;
+            left     : 0;
+        }
+
+        .select .optList.hidden {
+            /* これはアクセシブルな方法でリストを隠すための簡単な方法です。 
+                アクセシビリティについては最後に説明します。 */
+            max-height: 0;
+            visibility: hidden;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color:rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+    </style>
+
+
+    <title>Hello, world!</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+
+    <!-- Button trigger modal -->
+    <form>
+        <div class="select" tabindex="0">
+            <input type="text" class="value" id="input1" autocomplete="off" style="width:300px;" />
+            <select class="optList hidden" id="exampleFormControlSelect2" size="10" style="width:300px;">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+
+            </select>
+            <button type="button" class="modal-open" data-target="myModal" id="vbtn">
+                V
+            </button>
+        </div>
+    </form>
+
+    <div id="ua" style="width:300px"></div>
+
+    <!-- Modal -->
+    <div class="modal" id="myModal" data-source="input1" tabindex="-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label for="search1"> </label>
+                    <input type="text" class="picker-search" id="search1">
+                    <input type="button" class="picker-search-button" id="searchbtn" value="Search">
+                    <input type="button" class="picker-clear-button" id="clearbtn" value="Clear">
+                </div>
+                <div class="form-group">
+                    <select class="picker-select" id="exampleFormControlSelect2" size="10">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-dismiss picker-ok" data-target="myModal" id="okbtn">OK</button>
+                <button type="button" class="modal-dismiss" data-target="myModal" id="cancelbtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="file://C:/Users/sdkn1/Desktop/pyHTTPServer/static/program.vbs"> program </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\program.vbs"> vbs UNC </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\test.xls"> excel UNC </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\program.bat"> bat UNC </a><br>
+    <a href="/static/program.vbs"> vbs http </a><br>
+    <a href="/static/test.xls"> excel http </a><br>
+    <a href="/static/program.bat"> bat http </a><br>
+
+
+    <script>
+        document.getElementById("ua").innerHTML = window.navigator.userAgent.toLowerCase();
+    </script>
+    
+    <script>
+        if (!("forEach" in NodeList.prototype)) {
+            NodeList.prototype.forEach = function (callback) {
+                Array.prototype.forEach.call(this, callback);
+            }
+        }
+
+        document.querySelectorAll(".select").forEach(function(select){
+            let src = select.querySelector(".value");
+            let sel = select.querySelector(".optList");
+
+            function kakikae() {
+                console.log(select.optionList.length);
+                // remove options
+                while (sel.firstChild) {
+                    sel.removeChild(sel.firstChild);
+                }
+                // add options
+                let myregex = new RegExp(src.value);
+                for (var i = 0; i < select.optionList.length; i++) {
+                    if ( select.optionList[i].match(myregex) ) {
+                        var option = document.createElement('option');
+                        option.text = select.optionList[i];
+                        option.value = select.optionList[i];
+                        sel.appendChild(option);
+                    }
+                }
+            }
+
+            // on modal open
+            src.addEventListener("focus", function(e){
+                console.log("focus")
+                kakikae();
+                sel.classList.remove("hidden")
+            });
+            select.addEventListener("blur", function(e){
+                console.log("select blur")
+//                sel.classList.add("hidden")
+            }, true);
+
+            // click selector elem
+            sel.onclick = function () {
+                console.log("click")
+                src.value = sel.value        
+                sel.classList.add("hidden")
+            };
+            sel.addEventListener("focus", function(e){
+                console.log("sel focus")
+            });
+            sel.addEventListener("mousedown", function(e){
+                console.log("sel mousedown")
+            });
+            document.body.onclick = function (e) {
+                console.log("body click")
+                console.log(e.target)
+            };
+
+            // search box changed
+            src.addEventListener("input", function(e){
+                kakikae();
+            })
+
+            // store option list
+            select.optionList = [];
+            let options = sel.options;
+            console.log(options.length);
+            for( i = 0; i < options.length; i++ ) {
+                select.optionList.push(options.item(i).text);
+            }
+        });
+
+        // initial forcus
+        let inp = document.getElementById('input1');
+        //inp.focus();    
+
+    </script>
+
+    <script>
+        // modal open
+        document.querySelectorAll(".modal-open").forEach(function(elem){
+            elem.onclick = function() {
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                modal.style.display = "block";
+                var event = new Event('shown');
+                modal.dispatchEvent(event);
+            }
+        });
+        // modal dismiss by modal-dismiss
+        document.querySelectorAll(".modal-dismiss").forEach(function(elem){
+            elem.addEventListener("click", function(){
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                modal.style.display = "none";
+                //var event = new Event('dismiss');
+                //modal.dispatchEvent(event);
+            });
+        });
+        
+        // modal dismiss by clicking overlay modal
+        document.querySelectorAll(".modal").forEach(function(elem){
+            elem.addEventListener("click", function(e){
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                if( e.target == modal ) {
+                    modal.style.display = "none";
+                    //var event = new Event('dismiss');
+                    //modal.dispatchEvent(event);
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+--->
+</body>
+</html>

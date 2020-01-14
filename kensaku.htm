@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    -->
+
+
+    <title>Hello, world!</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+
+    <!-- Button trigger modal -->
+    <form>
+        <table>
+            <tr>
+                <td>あいうえお</td>
+                <td><input type="text" name="v1" style="width:300px;" required /></td>
+            </tr>
+            <tr>
+                <td>あいう</td>
+                <td><input type="text" name="v2" id="i2" style="width:300px;" /></td>
+             </tr>
+            <tr>
+                <td>あいうえ</td>
+                <td>
+                    <input type="text" name="v3" id="i3" list="codeType" style="width:300px;" />
+                    <datalist id="codeType">
+                        <option value="AAA-ss">AAA-ss value</option>
+                        <option value="BBB-s">BBB-s value</option>
+                        <option value="CCC-xx">CCC-xx value</option>
+                    </datalist>
+                </td>
+            </tr>
+        </table>
+
+        <input type="submit" id="ok" value="OK" />
+        <input type="button" id="valid" value="Valid" />
+    </form>
+
+    <input type="text" name="v3" id="ii3" list="ccodeType" style="width:300px;" />
+    <datalist id="ccodeType">
+        <option value="AAA-ss">AAA-ss value</option>
+        <option value="BBB-s">BBB-s value</option>
+        <option value="CCC-xx">CCC-xx value</option>
+    </datalist>
+
+    <select name="v3" id="s1"style="width:300px;">
+        <option value="AAA-ss">AAA-ss value</option>
+        <option value="BBB-s">BBB-s value</option>
+        <option value="CCC-xx">CCC-xx value</option>
+    </select>
+
+    <div id="ua" style="width:300px"></div>
+
+    <a href="file://C:/Users/sdkn1/Desktop/pyHTTPServer/static/program.vbs"> program </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\program.vbs"> vbs UNC </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\test.xls"> excel UNC </a><br>
+    <a href="\\192.168.1.100\share\sadakane\t\program.bat"> bat UNC </a><br>
+    <a href="/static/program.vbs"> vbs http </a><br>
+    <a href="/static/test.xls"> excel http </a><br>
+    <a href="/static/program.bat"> bat http </a><br>
+
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script>
+       if (!("forEach" in NodeList.prototype)) {
+            NodeList.prototype.forEach = function (callback) {
+                Array.prototype.forEach.call(this, callback);
+            }
+        }
+        
+        var form = document.querySelector("form");
+        form.querySelectorAll("input").forEach(function(elem){
+            if( elem.list ) {
+                //console.log(elem.list);
+                var tagObj = {}
+                var tags = []
+                var opts = elem.list.querySelectorAll("option").forEach(function(e){
+                    //console.log(e.value);
+                    tagObj[e.innerHTML]=e.value;
+                    tags.push(e.value)
+                });
+
+                //elem.list = null;
+                elem.removeAttribute("list")
+
+                //var tags = Object.values(tagObj);
+                console.log(tags)
+                $("#"+elem.id).autocomplete({
+                    //source: tags,
+                    source: function( request, response ) {
+                        var matcher = new RegExp( "" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+                        response( $.grep( tags, function( item ){
+                            return matcher.test( item );
+                        }) );
+                    },
+                    minLength: 0
+                });
+                elem.addEventListener("focus", function(e){
+                    console.log("focus")
+                    $("#"+elem.id).autocomplete("search", "")
+                })
+            }
+        })
+
+        if(location.hash == "fromExcel"){
+            form.action = "about:blank"
+            var ok = document.querySelector("form input[type=submit]");
+            ok.type = "hidden"
+        }        
+
+        var ok = document.querySelector("form input[type=submit]");
+        
+    </script>
+
+    <script>
+        // Add ECMA262-5 method binding if not supported natively
+        //
+        if (!("bind" in Function.prototype)) {
+            Function.prototype.bind = function(owner) {
+                var that = this;
+                if (arguments.length <= 1) {
+                    return function() {
+                        return that.apply(owner, arguments);
+                    };
+                } else {
+                    var args = Array.prototype.slice.call(arguments, 1);
+                    return function() {
+                        return that.apply(
+                            owner,
+                            arguments.length === 0
+                                ? args
+                                : args.concat(Array.prototype.slice.call(arguments))
+                        );
+                    };
+                }
+            };
+        }
+
+        // Add ECMA262-5 string trim if not supported natively
+        //
+        if (!("trim" in String.prototype)) {
+            String.prototype.trim = function() {
+                return this.replace(/^\s+/, "").replace(/\s+$/, "");
+            };
+        }
+
+        // Add ECMA262-5 Array methods if not supported natively
+        //
+        if (!("indexOf" in Array.prototype)) {
+            Array.prototype.indexOf = function(find, i /*opt*/) {
+                if (i === undefined) i = 0;
+                if (i < 0) i += this.length;
+                if (i < 0) i = 0;
+                for (var n = this.length; i < n; i++)
+                    if (i in this && this[i] === find) return i;
+                return -1;
+            };
+        }
+        if (!("lastIndexOf" in Array.prototype)) {
+            Array.prototype.lastIndexOf = function(find, i /*opt*/) {
+                if (i === undefined) i = this.length - 1;
+                if (i < 0) i += this.length;
+                if (i > this.length - 1) i = this.length - 1;
+                for (i++; i-- > 0 /* i++ because from-argument is sadly inclusive */; )
+                    if (i in this && this[i] === find) return i;
+                return -1;
+            };
+        }
+        if (!("forEach" in Array.prototype)) {
+            Array.prototype.forEach = function(action, that /*opt*/) {
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this) action.call(that, this[i], i, this);
+            };
+        }
+        if (!("map" in Array.prototype)) {
+            Array.prototype.map = function(mapper, that /*opt*/) {
+                var other = new Array(this.length);
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this) other[i] = mapper.call(that, this[i], i, this);
+                return other;
+            };
+        }
+        if (!("filter" in Array.prototype)) {
+            Array.prototype.filter = function(filter, that /*opt*/) {
+                var other = [],
+                    v;
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this && filter.call(that, (v = this[i]), i, this))
+                        other.push(v);
+                return other;
+            };
+        }
+        if (!("every" in Array.prototype)) {
+            Array.prototype.every = function(tester, that /*opt*/) {
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this && !tester.call(that, this[i], i, this)) return false;
+                return true;
+            };
+        }
+        if (!("some" in Array.prototype)) {
+            Array.prototype.some = function(tester, that /*opt*/) {
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this && tester.call(that, this[i], i, this)) return true;
+                return false;
+            };
+        }
+    </script>
+
+    <script>
+        document.getElementById("ua").innerHTML = window.navigator.userAgent.toLowerCase();
+    </script>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+--->
+</body>
+</html>
