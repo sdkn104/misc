@@ -247,10 +247,9 @@ $excel.Quit()
 ```
 @(echo ' ) >nul
 @set f="%TEMP%\tmp.batps.%DATE:/=%%TIME::=%%RANDOM%.ps1"
-@set /p d=$PSCommandPath="%~fp0";<nul  > "%f%"
-@type "%~fp0"                         >> "%f%"
-@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File "%f%" %*
-@set c=%errorlevel% & del "%f%" 
+@set /p d=$PSCommandPath="%~fp0";<nul  > %f% & @type "%~fp0" >> %f%
+@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %f% %*
+@set c=%errorlevel% & del %f%
 @exit /b %c%
 ') > $null
 #--------- 上のスクリプトはここから下のPowershellコードを実行する（起動引数は渡される）-------------
@@ -270,8 +269,14 @@ Write-Host $args[2]
 #throw "error...."
 MyExit 0
 ```
+* BATの引数はPowerShellの引数となる。
 * PowerShellからのリターンコード(exit nで指定)はBATの戻り値となる。
 * 本スクリプトはBATファイルとしてもpowerShellスクリプトとしても正しいコード。(ファイル名は.batでも.ps1でも実行可)
+* スクリプト内に非ASCII文字を含む（スクリプトはShiftJIS保存）。(A)-OK
+* スクリプトパスが空白、非ASCII、特殊文字を含む。(A)-OK
+* %TEMP%が空白、非ASCII、特殊文字を含む。(A)のうち、'`はだめ。
+* 引数が空白、非ASCII、特殊文字を含む。(A)-OK
+* 
 * 上記３行目を以下で置き換えれば、スクリプトをUTF8(BOM付)で保存しても実行可。ただし先頭行のBAT実行時にエラーメッセージがでる。
 `@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "$t='%TEMP%\tmp.batps.ps1'; $a=(gc $t)+(gc '%~fp0' -Raw); sc $t $a -Encoding UTF8"`
 * cmd.exeは先頭から@exitまでを実行して終了。本スクリプト自身の先頭行を修正したものを.ps1ファイルとして保存してpowershell.exeで実行。
@@ -279,7 +284,19 @@ MyExit 0
 * powershellはshiftjis(cp932), utf8(bom付), (とunicode??)のスクリプトを許す。IDE, VS codeはデフォルトutf8(bom)のはず。
 * BATスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー、メッセージを出すが処理は続行。
  ---------------------------------------------
- 
+ -File - は標準入力が使えなくなる。
+-Command は、引数の"a b"が扱えない。
+
+#
+
+#https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
+# (A)ascii printable + SPACE + あいう - windows prohibit chars for file/folder name:
+#    a !#$%&'()+,-.0123456789;=@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{}~あいう
+#
+# ascii printable + SPACE + あいう:
+#    a !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~あいう
+
+
  
 #### JScriptファイル内にPowerShellスクリプトを埋め込む
 本スクリプトは.jsフィアルとして保存して実行できる。
