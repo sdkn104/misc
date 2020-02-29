@@ -246,7 +246,7 @@ $excel.Quit()
 本スクリプトは.batフィアルとして保存して実行できる。
 ```
 @(echo ' ) >nul
-@set f="%TEMP%\tmp.batps.%DATE:/=%%TIME::=%%RANDOM%.ps1"
+@for %%i in (%TEMP%) do @set f="%%~fpi\tmp.batps.%DATE:/=%%TIME::=%%RANDOM%.ps1"
 @set /p d=$PSCommandPath="%~fp0";<nul  > %f% & @type "%~fp0" >> %f%
 @powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -File %f% %*
 @set c=%errorlevel% & del %f%
@@ -269,23 +269,26 @@ Write-Host $args[2]
 #throw "error...."
 MyExit 0
 ```
-* BATの引数はPowerShellの引数となる。
-* PowerShellからのリターンコード(exit nで指定)はBATの戻り値となる。
-* 本スクリプトはBATファイルとしてもpowerShellスクリプトとしても正しいコード。(ファイル名は.batでも.ps1でも実行可)
-* スクリプト内に非ASCII文字を含む（スクリプトはShiftJIS保存）。(A)-OK
-* スクリプトパスが空白、非ASCII、特殊文字を含む。(A)-OK
-* %TEMP%が空白、非ASCII、特殊文字を含む。(A)のうち、'`はだめ。
-* 引数が空白、非ASCII、特殊文字を含む。(A)-OK
-* 
+* 仕様
+  * BATの引数はPowerShellの引数となる。
+  * PowerShellからのリターンコード(exit nで指定)はBATの戻り値となる。
+  * 本スクリプトはBATファイルとしてもpowerShellスクリプトとしても正しいコード。(ファイル名は.batでも.ps1でも実行可)
+  * スクリプトファイルはShift_JISとすること。
+  * スクリプトファイルパス名は、空白、全角文字、特殊文字を含んでも可。ただし$, `などPowershellの""引用内での特殊文字は不可。
+  * %TEMP%は、空白、非ASCII、特殊文字を含んでもよいが、Powershellのファイルパスの[ワイルドカード](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_wildcards)として使用される文字({}`$)は不可。
+  * 引数は、空白、非ASCII、特殊文字を含んでよい(ASCII printable, SPACEは可)。
+
 * 上記３行目を以下で置き換えれば、スクリプトをUTF8(BOM付)で保存しても実行可。ただし先頭行のBAT実行時にエラーメッセージがでる。
 `@powershell -ExecutionPolicy Unrestricted -NoProfile -NoLogo -Command "$t='%TEMP%\tmp.batps.ps1'; $a=(gc $t)+(gc '%~fp0' -Raw); sc $t $a -Encoding UTF8"`
-* cmd.exeは先頭から@exitまでを実行して終了。本スクリプト自身の先頭行を修正したものを.ps1ファイルとして保存してpowershell.exeで実行。
-* powershell.exeは、先頭から') > $nullまでをnullへのechoとして実行する(読み飛ばすのに等しい)。
-* powershellはshiftjis(cp932), utf8(bom付), (とunicode??)のスクリプトを許す。IDE, VS codeはデフォルトutf8(bom)のはず。
-* BATスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー、メッセージを出すが処理は続行。
+
+* 情報
+  * cmd.exeは先頭から@exitまでを実行して終了。本スクリプト自身の先頭行を修正したものを.ps1ファイルとして保存してpowershell.exeで実行。
+  * powershell.exeは、先頭から') > $nullまでをnullへのechoとして実行する(読み飛ばすのに等しい)。
+  * powershellはshiftjis(cp932), utf8(bom付), (とunicode??)のスクリプトを許す。IDE, VS codeはデフォルトutf8(bom)のはず。
+  * BATスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー、メッセージを出すが処理は続行。
+  * powershell.exe -File - とすると、スクリプト内で標準入力の機能が使えなくなる。
+  * powershell.exe -Command とすると、引数の"a b"が扱えない。
  ---------------------------------------------
- -File - は標準入力が使えなくなる。
--Command は、引数の"a b"が扱えない。
 
 #
 
