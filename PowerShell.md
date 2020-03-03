@@ -288,18 +288,8 @@ MyExit 0
   * BATスクリプトは、shiftjis(cp932)のみ許す。utf8(bom)では先頭のBOMのところでエラー、メッセージを出すが処理は続行。
   * powershell.exe -File - とすると、スクリプト内で標準入力の機能が使えなくなる。
   * powershell.exe -Command とすると、引数の"a b"が扱えない。
- ---------------------------------------------
-
-#
-
-#https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
-# (A)ascii printable + SPACE + あいう - windows prohibit chars for file/folder name:
-#    a !#$%&'()+,-.0123456789;=@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{}~あいう
-#
-# ascii printable + SPACE + あいう:
-#    a !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~あいう
-
-
+  * ASCII printable chars: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+  * Windows File Naming: https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
  
 #### JScriptファイル内にPowerShellスクリプトを埋め込む
 本スクリプトは.jsフィアルとして保存して実行できる。
