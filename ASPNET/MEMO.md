@@ -88,8 +88,9 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
     * Razor Pages is enabled in Startup.cs, and  put @page directive in <PageName>.cshtml
       * Startup.ConfigureServices(services) { services.addMvc(); }
       * Startup.Configure(app) { app.useMvc()(); }
-    * Pages/<Folder>/<PageName>.cshtml   -->   Url: /<Folder>/<PageName> 
-    * define a PageModel class (<PageName>Model) in <PageName>.cshtml.cs
+    * files : Pages/Folder/PageName.cshtml, Pages/Folder/PageName.cshtml.cs  (no Controllers/, View/)
+    * default routing: Pages/Folder/PageName.cshtml   -->   Url: /Folder/PageName 
+    * define a PageModel class (<PageName>Model) in PageName.cshtml.cs
     * PageModel includes:
       * page handlers (a method. OnGet(), etc.), that is called for request (routed), instead of controller action method
          * OnGet(), OnPost(), OnGetAsync(), OnPostAsync()
