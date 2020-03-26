@@ -63,6 +63,8 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
 
 # ASP.NET Core/MVC
 * Controller
+  * Files
+    * Controllers/ControllerNameController.cs
   * Routing: urlに対してControllerクラスのメソッド（アクションメソッド）を対応づける。
     * default routing: URL /{contname}/{actname}/5  ---> call method {actname} of controller class {contname}Controller with arg 5
     * actionに属性（[HttpGet("/products")]など）を付加してルーティングを指定可。
@@ -79,10 +81,21 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
     * action method内では、if (ModelState.IsValid)　で結果を取得、また、rendered view内にvalicatin logicが埋め込まれる(jquery validation)。
      
 * View
-  * action method名と同じ名前の.aspx, .cshtmlを作成する。
+  * action method名と同じ名前の.aspx?, .cshtmlを作成する。
+    * Views/ControllerName/ActionName.cshtml
     * reurun View()とすると同名.cshtmlなどが返る。
     * 連想配列viewBag, viewData(dict.)などに値を設定すると、.aspx, cshtmlから参照できる　　
     * View()の引数にobject instanceを指定すると、.cshtmlなどから@Modelで参照できる(viewmodel)。
+  * Razor (cshtml)
+    * syntax: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor
+    * 変数を参照
+      * using @, refer C# variables
+      * action method/page handler内から参照できる変数はそのまま参照できる？？？
+      * "Model" refer:
+        * argument of View() returned by action method, or Page() returned by page hander
+        * If argment is omitted, Controller/PageModel？ (https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/)
+      * <input asp-for="Customer.Name"> (CustomerはPageModelのproperty)
+      * ViewData - action/handerからread/write, Razorからread
   * [Razor Pages](https://docs.microsoft.com/ja-jp/aspnet/core/razor-pages)
     * a MVVM
     * Razor Pages is enabled in Startup.cs, and  put @page directive in <PageName>.cshtml
@@ -96,16 +109,6 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
          * OnGet(), OnPost(), OnGetAsync(), OnPostAsync()
       * properties (member variables), targets of model binding
     * page handerで return Page()とすると、.cshtmlが返る。 
-  * Razor (cshtml)
-    * syntax: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor
-    * 変数を参照
-      * using @, refer C# variables
-      * action method/page handler内から参照できる変数はそのまま参照できる？？？
-      * "Model" refer:
-        * argument of View() returned by action method, or Page() returned by page hander
-        * If argment is omitted, Controller/PageModel？ (https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/)
-      * <input asp-for="Customer.Name"> (CustomerはPageModelのproperty)
-      * ViewData - action/handerからread/write, Razorからread
   * [HTML Helper](https://stephenwalther.com/archive/2009/03/03/chapter-6-understanding-html-helpers)
     * WebFormsのサーバーコントロールに相当する機能。イベントなどがあるわけではなく、単純にHTMLを生成するために使います
     *  in most cases, is just a method that returns a string.
