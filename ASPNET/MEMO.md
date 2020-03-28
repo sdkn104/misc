@@ -63,15 +63,17 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
 
 # ASP.NET Core/MVC
 * Controller
-  * Files
-    * Controllers/ControllerNameController.cs
+  * Intro
+    * Define ControllerクラスControllerNameController in Controllers/ControllerNameController.cs
+    * HTTP requestに対し、Controllerクラスのメソッド（アクションメソッド）が起動する。
+    * アクションメソッドは、response (html, json, etc)を返す。
   * Routing: urlに対してControllerクラスのメソッド（アクションメソッド）を対応づける。
     * default routing: URL /{contname}/{actname}/5  ---> call method {actname} of controller class {contname}Controller with arg 5
     * actionに属性（[HttpGet("/products")]など）を付加してルーティングを指定可。
-    * アクションメソッドは、response (html, json, etc)を返す。
   * [Model binding](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/models/model-binding)
-    * bindig client request data (form values, route data, query string parameters, HTTP headers) 
-      to objects (args of action method, args of Razor Pages handler method, Public properties of a controller or PageModel class)
+    * bindig client request data (form values, route data, query string parameters, HTTP headers) to objects:
+      * args of action method, args of Razor Pages handler method, 
+      * Public properties of a controller or PageModel class, if specified by attributes of the property
     * binding is specified by attributes in class definition, etc.
    
   * Model validation
@@ -91,11 +93,16 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
     * 変数を参照
       * using @, refer C# variables
       * action method/page handler内から参照できる変数はそのまま参照できる？？？
-      * "Model" refer:
-        * argument of View() returned by action method, or Page() returned by page hander
-        * If argment is omitted, Controller/PageModel？ (https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/)
-      * <input asp-for="Customer.Name"> (CustomerはPageModelのproperty)
-      * ViewData - action/handerからread/write, Razorからread
+      * [Passing data to views](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/overview#passing-data-to-views)
+        * viewmodel (both Razor and Razor Pages)
+          * @model ModelClassName   in .cshtml,  Model class is defined typically in Models/ModelClassName.cs
+          * action method or page handler return View(instanceOfModelClass)
+          * refer the instance of the model by variable Model in .cshtml
+        * ViewData dictionary : ViewData["key"] = xxx in action/hander, refered by ViewData["key"] in cshtml
+        * ViewData Atribute
+          * put [ViewData] attribute to Properties on controllers or Razor Page models
+          * the property PropName can be refered by Model.PropName in .cshtml
+        * ViewBag : ViewBag.keyname = xxx in action method, refered by ViewBag.keyname in cshtml
   * [Razor Pages](https://docs.microsoft.com/ja-jp/aspnet/core/razor-pages)
     * a MVVM
     * Razor Pages is enabled in Startup.cs, and  put @page directive in <PageName>.cshtml
