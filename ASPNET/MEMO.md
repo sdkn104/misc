@@ -83,10 +83,10 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
     * action method内では、if (ModelState.IsValid)　で結果を取得、また、rendered view内にvalicatin logicが埋め込まれる(jquery validation)。
      
 * View
-  * action method名と同じ名前の.aspx?, .cshtmlを作成する。
+  * action method名と同じ名前の.cshtmlを作成する。
     * Views/ControllerName/ActionName.cshtml
     * reurun View()とすると同名.cshtmlなどが返る。
-    * 連想配列viewBag, viewData(dict.)などに値を設定すると、.aspx, cshtmlから参照できる　　
+    * 連想配列viewBag, viewData(dict.)などに値を設定すると、.cshtmlから参照できる　　
     * View()の引数にobject instanceを指定すると、.cshtmlなどから@Modelで参照できる(viewmodel)。
   * Razor (cshtml)
     * syntax: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor
