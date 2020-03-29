@@ -16,13 +16,15 @@
 
 # ASP.NET
 * .NETプラットフォーム：.NET Framework (Windowsのみ), .NET Core (クロスプラットフォーム)
-* ASP.NET: ASP.NET v1-5 (on .NET Framework only, v6からCoreに統合),  ASP.NET Core (on .NET Framework or.NET Core)
+* ASP.NET: ASP.NET v1-5 (on .NET Framework only, v6からCoreに統合/吸収?),  ASP.NET Core (on .NET Framework? or.NET Core)
 * template/view engine： Web Forms (ASP.NET v1-5 only), MVC, Web Pages
 
 # ASP.NET　overview
 https://docs.microsoft.com/ja-jp/aspnet/overview#websites-and-web-applications
+ASP.NET (not Core) offers three frameworks for creating web applications: Web Forms, ASP.NET MVC, and ASP.NET Web Pages.
+ASP.NET (not Core) offers other frameworks --- Web API, etc.
 
-ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NET MVC, and ASP.NET Web Pages
+called ASP.NET 4.x ??
 
 * Web Forms (ASP.NET 3, 4)
 
@@ -32,22 +34,19 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
 
  Razor view engine : v3～
 
-
 * .NET version
-
    * https://qiita.com/nskydiving/items/3af8bab5a0a63ccb9893
    * https://devblogs.microsoft.com/visualstudio-jpn/net-framework-201510/
    * https://dotnet.microsoft.com/platform/support/policy
-
    * 1-3.5はサポート切れ。3.5SP1はサポート中。
    * 2016 年 1 月 12 日以降は .NET Framework 4.0 ～ 4.5.1 はサポートされなくなり
    * Win10は4.6以上のみ
 
 * ASP.NET version
    * https://dotnet.microsoft.com/platform/support/policy/aspnet
-   * ASP.NET is made up components that ship in both the .NET Framework and as external packages that ship outside of the .NET Framework.
+   * ASP.NET (not Core) is made up components that ship in both the .NET Framework and as external packages that ship outside of the .NET Framework.
    * External pckg: ASP.NET MVC, ASP.NET Web Pages, ASP.NET Web API and ASP.NET SignalR, etc
-   *  MVC4 was retired in 2019/7
+   * MVC4 was retired in 2019/7
    * Web Forms: ASP.NET Coreはサポートしない
 
 
