@@ -85,17 +85,14 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
 * View
   * action method名と同じ名前の.cshtmlを作成する。
     * Views/ControllerName/ActionName.cshtml
-    * reurun View()とすると同名.cshtmlなどが返る。
-    * 連想配列viewBag, viewData(dict.)などに値を設定すると、.cshtmlから参照できる　　
-    * View()の引数にobject instanceを指定すると、.cshtmlなどから@Modelで参照できる(viewmodel)。
+    * reurun View()とすると同名.cshtmlが返る。
   * Razor (cshtml)
     * syntax: https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor
     * 変数を参照
       * using @, refer C# variables
-      * action method/page handler内から参照できる変数はそのまま参照できる？？？
       * [Passing data to views](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/overview#passing-data-to-views)
         * viewmodel (both Razor and Razor Pages)
-          * @model ModelClassName   in .cshtml,  Model class is defined typically in Models/ModelClassName.cs
+          * @model ModelClassName   in .cshtml,  Model class is defined typically in Models(or ViewModels)/ModelClassName.cs
           * action method or page handler return View(instanceOfModelClass)
           * refer the instance of the model by variable Model in .cshtml
         * ViewData dictionary : ViewData["key"] = xxx in action/hander, refered by ViewData["key"] in cshtml
@@ -108,7 +105,7 @@ ASP.NET offers three frameworks for creating web applications: Web Forms, ASP.NE
     * Razor Pages is enabled in Startup.cs, and  put @page directive in <PageName>.cshtml
       * Startup.ConfigureServices(services) { services.addMvc(); }
       * Startup.Configure(app) { app.useMvc()(); }
-    * files : Pages/Folder/PageName.cshtml, Pages/Folder/PageName.cshtml.cs  (no Controllers/, View/)
+    * files : Pages/.../PageName.cshtml, Pages/.../PageName.cshtml.cs  (no Controllers/, View/)
     * default routing: Pages/Folder/PageName.cshtml   -->   Url: /Folder/PageName 
     * define a PageModel class (<PageName>Model) in PageName.cshtml.cs
     * PageModel includes:
