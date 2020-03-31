@@ -91,7 +91,7 @@ called ASP.NET 4.x ??
       * using @, refer C# variables
       * [Passing data to views](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/overview#passing-data-to-views)
         * viewmodel (both Razor and Razor Pages)
-          * @model ModelClassName   in .cshtml,  Model class is defined typically in Models(or ViewModels)/ModelClassName.cs
+          * @model ModelClassName   in .cshtml,  Model class is defined typically in Models(or ViewModels)/ModelClassName.cs, or it can be PageModel.
           * action method or page handler return View(instanceOfModelClass)
           * refer the instance of the model by variable Model in .cshtml
         * ViewData dictionary : ViewData["key"] = xxx in action/hander, refered by ViewData["key"] in cshtml
