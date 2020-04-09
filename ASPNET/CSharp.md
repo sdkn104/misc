@@ -1,5 +1,6 @@
 ## 公式Ref
-* [Language](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [Language Top](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [Language Spec.](https://docs.microsoft.com/ja-jp/dotnet/csharp/language-reference/language-specification/)
 * [.NET API](https://docs.microsoft.com/ja-jp/dotnet/api/)
 
 ## Collections
