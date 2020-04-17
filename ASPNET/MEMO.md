@@ -82,7 +82,8 @@ called ASP.NET 4.x ??
     * action method内では、if (ModelState.IsValid)　で結果を取得、また、rendered view内にvalicatin logicが埋め込まれる(jquery validation)。
      
 * View
-  * action method名と同じ名前の.cshtmlを作成する。
+  * MVC
+    * action method名と同じ名前の.cshtmlを作成する。
     * Views/ControllerName/ActionName.cshtml
     * reurun View()とすると同名.cshtmlが返る。
   * Razor (cshtml)
@@ -92,7 +93,7 @@ called ASP.NET 4.x ??
       * [Passing data to views](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/overview#passing-data-to-views)
         * viewmodel (both Razor and Razor Pages)
           * @model ModelClassName   in .cshtml,  Model class is defined typically in Models(or ViewModels)/ModelClassName.cs, or it can be PageModel.
-          * action method or page handler return View(instanceOfModelClass)
+          * action method return View(instanceOfModelClass), page handler return Page()
           * refer the instance of the model by variable Model in .cshtml
         * ViewData dictionary : ViewData["key"] = xxx in action/hander, refered by ViewData["key"] in cshtml
         * ViewData Atribute
@@ -103,7 +104,7 @@ called ASP.NET 4.x ??
     * a MVVM
     * Razor Pages is enabled in Startup.cs, and  put @page directive in <PageName>.cshtml
       * Startup.ConfigureServices(services) { services.addMvc(); }
-      * Startup.Configure(app) { app.useMvc()(); }
+      * Startup.Configure(app) { app.useMvc(); }
     * files : Pages/.../PageName.cshtml, Pages/.../PageName.cshtml.cs  (no Controllers/, View/)
     * default routing: Pages/Folder/PageName.cshtml   -->   Url: /Folder/PageName 
     * define a PageModel class (<PageName>Model) in PageName.cshtml.cs
