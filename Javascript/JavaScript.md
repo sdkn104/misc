@@ -32,5 +32,27 @@ A {
   * 関数が定義されたときの環境（定義時のスコープ内部にあったあらゆる変数から構成される）を保持する。
   * 環境のコピーではなく環境を保持する。複数の関数があれば、同じものを参照する。
   
-  
-  
+### Date Time
+```
+let today = new Date()
+let birthday = new Date(1995, 11, 17)            // 日付は 0 起点
+let birthday = new Date(1995, 11, 17, 3, 24, 0)
+let tm = today.getTime() // miliseconds from 1970/1/1 0:00
+let today.setTime( today.getTime() + 24*60*60*1000 )
+
+// date: 日付オブジェクト
+// format: 書式フォーマット
+function formatDate (date, format) {
+  format = format.replace(/yyyy/g, date.getFullYear());
+  format = format.replace(/MM/g, ('0' + (date.getMonth() + 1)).slice(-2));
+  format = format.replace(/dd/g, ('0' + date.getDate()).slice(-2));
+  format = format.replace(/HH/g, ('0' + date.getHours()).slice(-2));
+  format = format.replace(/mm/g, ('0' + date.getMinutes()).slice(-2));
+  format = format.replace(/ss/g, ('0' + date.getSeconds()).slice(-2));
+  format = format.replace(/SSS/g, ('00' + date.getMilliseconds()).slice(-3));
+  return format;
+};
+```
+
+
+
