@@ -35,10 +35,11 @@ A {
 ### Date Time
 ```
 let today = new Date()
-let birthday = new Date(1995, 11, 17)            // 日付は 0 起点
-let birthday = new Date(1995, 11, 17, 3, 24, 0)
-let tm = today.getTime() // miliseconds from 1970/1/1 0:00
-let today.setTime( today.getTime() + 24*60*60*1000 )
+let date1 = new Date(1995, 11, 17)            // 日付は 0 起点
+let date1 = new Date(1995, 11, 17, 3, 24, 0)
+let tm = date1.getTime() // miliseconds from 1970/1/1 0:00
+date1.setTime( date1.getTime() + 24*60*60*1000 )
+date1.setDate(date1.getDate() - 1)
 
 // date: 日付オブジェクト
 // format: 書式フォーマット
