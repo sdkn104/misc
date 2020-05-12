@@ -291,6 +291,23 @@ MyExit 0
   * ASCII printable chars: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
   * Windows File Naming: https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
  
+```
+@powershell -c '#'+(Get-Content \"%~f0\" -Raw) ^| Invoke-Expression & exit /b
+#--------- 上のスクリプトはここから下のPowershellコードを実行する -----------------------------------
+# 制限事項：
+#   実行引数は渡らない、exitコードは返らない、$PSCommandPath, $PSScriptRoot, $MyInvocationは使えない。
+#   自身のスクリプトパス名に特殊文字を含まないこと。このスクリプトはShiftJIS(cp932)で保存すること。
+#---------------------------------------------------------------------------------------------------
+
+"Time: $([DateTime]::Now)"
+"Guid: $([guid]::NewGuid())"
+```
+* 制約事項
+  * BATのコマンドライン引数はpowershellに渡らない
+  * $PSCommandPath, $PSScriptRoot, $MyInvocationは使用不可
+  * powershellのexit codeはBATのexit codeに戻らない
+  * BATのスクリプトファイルのパス名に特殊文字を含んではならない。（特殊文字：%など？？？）
+
 #### JScriptファイル内にPowerShellスクリプトを埋め込む
 本スクリプトは.jsフィアルとして保存して実行できる。
 ```
