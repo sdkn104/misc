@@ -229,6 +229,14 @@ Add-Type -AssemblyName System.Windows.Forms;
 $WSH = New-Object -ComObject Wscript.Shell
 $WSH.Popup("xxxx")
 ```
+#### HTTP Request
+```
+$response = Invoke-WebRequest [-Method GET] http://localhost/index.htm [-OutFile out.htm]
+$response.StatusCode
+$response.Header
+$response.Content
+```
+
 #### MS Office
 ```
 $excel = New-Object -ComObject Excel.Application
