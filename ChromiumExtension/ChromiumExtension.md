@@ -1,7 +1,9 @@
 
 * Edge Chromium Extension : (https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/)
+  * install extension in developing phase (side loading)
+    * Edge menu, ... -> extension -> (enabling developper mode) -> load unpacked (展開して読み込み) -> select the folder
 * 解説：https://qiita.com/k7a/items/26d7a22233ecdf48fed8
-* Chrome Extension https://developer.chrome.com/extensions
+* Chrome Extension https://developer.chrome.com/extensions>
   * Extension API ref: https://developer.chrome.com/extensions/api_index
   
 * Native Messaging (https://developer.chrome.com/extensions/nativeMessaging)
@@ -13,4 +15,5 @@
   * 概要
     * Create manufest file that includes name, path of exe, etc.
     * Place manufest file in the mahine and Register path of manufest file in Registry
-    * 
+    * Extension app call API with the name
+    
