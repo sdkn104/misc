@@ -3,7 +3,7 @@
   * install extension in developing phase (side loading)
     * Edge menu, ... -> extension -> (enabling developper mode) -> load unpacked (展開して読み込み) -> select the folder
 * 解説：https://qiita.com/k7a/items/26d7a22233ecdf48fed8
-* Chrome Extension https://developer.chrome.com/extensions>
+* Chrome Extension https://developer.chrome.com/extensions
   * Extension API ref: https://developer.chrome.com/extensions/api_index
   
 * Native Messaging (https://developer.chrome.com/extensions/nativeMessaging)
@@ -17,3 +17,10 @@
     * Place manufest file in the mahine and Register path of manufest file in Registry
     * Extension app call API with the name
     
+* [配布](https://developer.chrome.com/webstore) 
+  * 拡張のインストールは、Chrome Storeを開いてクリックするか、External Installationかどちらか。どちらの場合も、Chrome Storeに登録は必須。
+  * External Installation
+    * レジストリに、拡張のIDとWeb StoreのURLと拡張のバージョンを登録する。
+    * Chrome起動時に自動的にインストールや更新が実行される。
+  * Chrome StoreへのPublish
+    * 
