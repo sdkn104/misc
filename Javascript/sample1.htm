@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    -->
+
+    <style>
+
+
+select {
+	/*-webkit-appearance: none;
+	appearance: none;
+	margin-bottom: 20px;
+	padding: 7px 30px 7px 10px;
+	font-size: 93%;
+	line-height: 1.1em;*/
+}
+input[name=v1] {
+	/*-webkit-appearance: none;
+	appearance: none;
+	margin-bottom: 20px;
+	padding: 7px 30px 7px 10px;
+	font-size: 93%;
+	line-height: 1.1em;*/
+}
+    </style>
+
+
+    <title>Hello, world!</title>
+</head>
+<body>
+    <h3>select input</h3>
+    <!-- Button trigger modal -->
+    <form>
+        <input type="email" name="v1" id="inputa" size="20" style="padding:0em;width:200px" required autofocus /><input type=button value="?">
+        <br>
+        <input type="date" name="v1" id="inputaa" size="20" style="padding:0em;width:200px" required autofocus /><input type=button value="&#9660;"><input type=button value="×">
+        <br>
+        <span style="position:relative; border:none; margin:0; padding:0">
+            <input type="text" name="v1" id="inputb" size="48" style="padding:0 15px 0 0;width:185px; margin:0" autofocus /><span style="position:absolute; right:4px; z-index:99;  cursor:pointer;color:gray;font-weight:bold;">▼</span></span><input type=button value="×" style="font-weight:bold">
+        <br>
+        <span style="position:relative; border:none; margin:0; padding:0">
+            <input type="text" name="v1" id="inputx" size="48" style="padding:0 15px 0 0;width:185px; margin:0" autofocus /><span id="x" style="position:absolute; right:4px; z-index:99;  cursor:pointer;color:gray;font-weight:bold;visibility:hidden">×</span></span><input type=button value="v">
+   
+        <div class="input-group">
+            <br>
+            <input type="text" name="vv2" id="inputx" list="list2" style="width:300px;"  />
+            <datalist id="list2">
+                <option value="AAA-ss2">aaa2</option>
+                <option value="BBB-s2">bbb2</option>
+                <option value="CCC-xx2">ccc2</option>
+            </datalist>
+        </div>
+        <div class="input-group">
+            <br>
+            <input type="text" name="vv2" id="inputxx" list="list2x" style="width:300px;"  />
+            <datalist id="list2x">
+                <option value="AAA-ss2">aaa2</option>
+                <option value="BBB-s2">bbb2</option>
+                <option value="CCC-xx2">ccc2</option>
+            </datalist>
+        </div>
+        <div class="input-group">
+            <input type="text" name="vv2" id="inputxxx" xlist="list2xx" style="width:300px;"  />
+            <datalist id="list2xx">
+                <option value="AAA-ss2">aaa2</option>
+                <option value="BBB-s2">bbb2</option>
+                <option value="CCC-xx2">ccc2</option>
+            </datalist>
+        </div>
+        <select name="vv2">
+            <option value="AAA-ss">a</option>
+            <option value="BBB-s">b</option>
+            <option value="CCC-xx">c</option>
+        </select>
+        <br>
+        <input type="submit" value="OK" />
+        <input type="button" id="valid" value="Valid" />
+    </form>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script src="/static/BuhyoLib.js"></script>
+    <script>
+        document.getElementById("inputxx").bhyAddAutocomplete();
+        document.getElementById("inputxx").bhyAddClearButton();
+        document.getElementById("inputxxx").bhyAddDatePicker();
+        document.getElementById("inputxxx").bhyAddClearButton();
+    </script>
+
+    <h2>Modal</h2>
+
+    <style>
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color:rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+    </style>
+
+    <form>
+        <div class="input-group"></div>
+            <input type="text" name="v2" class="xxform-control" id="input1" list="codeType" style="width:300px;" />
+            <datalist id="codeType">
+                <option value="AAA-ss">aaa</option>
+                <option value="BBB-s">bbb</option>
+                <option value="CCC-xx">ccc</option>
+            </datalist>
+            <button type="button" class="modal-open" data-target="myModal" id="vbtn">
+                V
+            </button>
+        </div>
+    </form>
+    <div class="modal" id="myModal" data-source="input1" tabindex="-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="picker-search" id="search1">
+                </div>
+                <div class="form-group">
+                    <select class="picker-select modal-dismiss" id="exampleFormControlSelect2" data-target="myModal" size="10">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>USER Agent</h2>
+    <div id="ua" style="width:300px"></div>
+    <script>
+        document.getElementById("ua").innerHTML = window.navigator.userAgent.toLowerCase();
+    </script>
+    
+    <h2>リンク</h2>
+    <a href="file://C:/Users/sdkn1/Desktop/pyHTTPServer/static/program.vbs"> program </a><br>
+    <a href="\\192.168.1.100\share2\ToshiyukiHDD\t\program.vbs"> vbs UNC </a><br>
+    <a href="\\192.168.1.100\share2\ToshiyukiHDD\t\test3.xls"> excel UNC </a><br>
+    <a href="\\192.168.1.100\share2\ToshiyukiHDD\t\t2.pdf"> pdf UNC </a><br>
+    <a href="\\192.168.1.100\share2\ToshiyukiHDD\t\program.bat"> bat UNC </a><br>
+    <a href="\\192.168.1.100\share2\ToshiyukiHDD\t\"> folder UNC </a><br>
+    <a href="/static/program.vbs"> vbs http </a><br>
+    <a href="/static/test.xls"> excel http </a><br>
+    <a href="/static/t2.pdf"> pdf http </a><br>
+    <a href="/static/program.bat"> bat http </a><br>
+
+    <h2>Flexible TextArea</h2>
+
+    <textarea id="tarea">abcd</textarea>
+    <script>
+        function adjustTextArea(e){
+            e.target.style.backgroundColor = "#ffffe0"
+            var lines = e.target.value.split(/[\n]/);
+            e.target.rows = lines.length
+            var maxcol = lines.reduce(function(a, c){ return a > c.length ? a : c.length }, 0)
+            e.target.cols = Math.min(Math.max(maxcol, 20), 50)
+        }
+        var tarea = document.getElementById("tarea")
+        tarea.rows = 1
+        tarea.style.resize = "none"
+        tarea.addEventListener("input", adjustTextArea)
+        tarea.addEventListener("focus", adjustTextArea)
+        tarea.addEventListener("blur", function(e){
+            console.log("blur")
+            e.target.rows = 1
+            e.target.cols = 20
+            e.target.style.backgroundColor = ""
+        })
+    </script>
+
+
+
+    <script>
+        // query stringからradioを設定
+        var qs_list = location.search.slice(1).split("&");
+        qs_list.forEach(function(e){
+            if( decodeURIComponent(e).match(/^opt=csv_(csv|auto|html)V$/) ) {
+                frm.querySelector("input[value=csv_htmlV]").checked = true
+                //frm.querySelector("input[value=csv_html]").checked = false
+            }
+        })
+    </script>
+
+    <script>
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function (event) {
+            form.checkValidity();
+            if (!email.validity.valid) {
+                event.preventDefault();
+            }
+        }, false);
+
+        var valid = document.querySelector("#valid");
+        valid.onclick = function(event){
+            form.reportValidity();
+            form.checkValidity();
+        }
+        //form.checkValidity();
+    </script>
+    
+    <script>
+        if (!("forEach" in NodeList.prototype)) {
+            NodeList.prototype.forEach = function(action, that /*opt*/) {
+                for (var i = 0, n = this.length; i < n; i++)
+                    if (i in this) action.call(that, this[i], i, this);
+            };
+        }
+
+        document.querySelectorAll(".modal").forEach(function(modal){
+            let src = document.getElementById( modal.getAttribute("data-source") );
+            let sch = modal.querySelector(".picker-search");
+            let sel = modal.querySelector(".picker-select");
+
+            function kakikae() {
+                console.log(modal.optionList.length);
+                // remove options
+                while (sel.firstChild) {
+                    sel.removeChild(sel.firstChild);
+                }
+                // add options
+                let myregex = new RegExp(sch.value);
+                for (var i = 0; i < modal.optionList.length; i++) {
+                    if ( modal.optionList[i].match(myregex) ) {
+                        var option = document.createElement('option');
+                        option.text = modal.optionList[i];
+                        option.value = modal.optionList[i];
+                        sel.appendChild(option);
+                    }
+                }
+            }
+
+            modal.kakikae = kakikae;
+
+            // on modal open
+            /*
+            modal.addEventListener("shown", function(){
+                if( src && sch ) {
+                    sch.value = src.value;
+                    sch.focus();    
+                }
+                kakikae();
+            });
+            */
+
+            src.addEventListener("forcus", function(e) {
+                alert("focus");
+                modal.style.display = "block";
+                sch.value = src.value;
+                modal.kakikae();
+                //var event = new Event('shown');
+                //modal.dispatchEvent(event);
+            });
+
+            sch.addEventListener("keypress", function(e) {
+                if( e.keyCode == 13 ) { // enter key
+                }
+            })
+
+            // double click selector elem
+            sel.ondblclick = function () {
+                src.value = sch.value       
+            };
+
+
+            // search box changed
+            sch.addEventListener("input", function(){
+                kakikae();
+            })
+
+            // store option list
+            modal.optionList = [];
+            let options = sel.options;
+            console.log(options.length);
+            for( i = 0; i < options.length; i++ ) {
+                modal.optionList.push(options.item(i).text);
+            }
+        });
+
+
+        // initial forcus
+        let inp = document.getElementById('input1');
+        //inp.focus();    
+    </script>
+
+    <script>
+        // modal open
+        document.querySelectorAll(".modal-open").forEach(function(elem){
+            elem.onclick = function() {
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                let src = document.getElementById( modal.getAttribute("data-source") );
+                let sch = modal.querySelector(".picker-search");
+                modal.style.display = "block";
+                sch.value = src.value;
+                modal.kakikae();
+                //var event = new Event('shown');
+                //modal.dispatchEvent(event);
+            }
+        });
+        // modal dismiss by modal-dismiss
+        document.querySelectorAll(".modal-dismiss").forEach(function(elem){
+            elem.addEventListener("click", function(){
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                let src = document.getElementById( modal.getAttribute("data-source") );
+                let sch = modal.querySelector(".picker-search");
+                let sel = modal.querySelector(".picker-select");
+                src.value = sch.value;
+                src.value = sel.value;
+                modal.style.display = "none";
+                //var event = new Event('dismiss');
+                //modal.dispatchEvent(event);
+            });
+        });
+        
+        // modal dismiss by clicking overlay modal
+        document.querySelectorAll(".modal").forEach(function(elem){
+            elem.addEventListener("click", function(e){
+                var target = elem.getAttribute("data-target");
+                let modal = document.getElementById(target);
+                if( e.target == modal ) {
+                    modal.style.display = "none";
+                    //var event = new Event('dismiss');
+                    //modal.dispatchEvent(event);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
