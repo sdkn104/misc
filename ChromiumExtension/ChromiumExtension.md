@@ -23,4 +23,14 @@
     * レジストリに、拡張のIDとWeb StoreのURLと拡張のバージョンを登録する。
     * Chrome起動時に自動的にインストールや更新が実行される。
   * Chrome StoreへのPublish
-    * 
+    [* Chrome Web Store Developp]er(https://developer.chrome.com/webstore/register) に登録 (初回$5)
+    * pack extension files to zip format
+    * in developper dash board, upload zip and publish
+  * [Chrome Web Store Developper登録](https://developer.chrome.com/webstore/register)
+    * "We suggest using a new account just for your app instead of your personal account."
+    * "Group publishers note that only members of the group who've paid the registration fee can publish updates."
+    * "2.3 You represent and warrant that you have full power, capacity, and authority to accept this Agreement. If you are agreeing to be bound by this Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to this Agreement."
+    * アカウントの取り方
+      * 組織の代理として Google サービスを使用する(https://policies.google.com/terms?hl=ja)
+      
+    
