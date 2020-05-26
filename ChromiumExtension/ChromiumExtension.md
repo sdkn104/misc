@@ -5,7 +5,13 @@
 * 解説：https://qiita.com/k7a/items/26d7a22233ecdf48fed8
 * Chrome Extension https://developer.chrome.com/extensions
   * Extension API ref: https://developer.chrome.com/extensions/api_index
-  
+
+* 概要
+  * Browser Action (or Page Action): Chromeのツールバーにボタンを追加。押すと開く画面(popup)をhtmlで定義。
+  * Content Scripts: ページのurlが指定したパタンにマッチしたとき指定したjsを実行する。
+  * Background Script: イベントハンドラ。ブラウザのイベント発生時にjsを実行する。
+  * UI Element: Context menu, keyboard shortcut, omnibox, etc.
+
 * Native Messaging (https://developer.chrome.com/extensions/nativeMessaging)
   * Nativeアプリ(native messaging host)を起動しそれと通信する。stdin/stdoutでjsonで通信する。
   * アプリのバイナリのパスをレジストリに登録する
