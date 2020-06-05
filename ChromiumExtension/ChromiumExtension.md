@@ -28,8 +28,8 @@
   * External Installation
     * レジストリに、拡張のIDとWeb StoreのURLと拡張のバージョンを登録する。
     * Chrome起動時に自動的にインストールや更新が実行される。
-  * Chrome StoreへのPublish
-    [* Chrome Web Store Developp]er(https://developer.chrome.com/webstore/register) に登録 (初回$5)
+  * [Chrome StoreへのPublish](https://developer.chrome.com/webstore/get_started_simple)
+    * [Chrome Web Store Developp]er(https://developer.chrome.com/webstore/register) に登録 (初回$5)
     * pack extension files to zip format
     * in developper dash board, upload zip and publish
   * [Chrome Web Store Developper登録](https://developer.chrome.com/webstore/register)
