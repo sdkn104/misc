@@ -38,5 +38,6 @@
     * "2.3 You represent and warrant that you have full power, capacity, and authority to accept this Agreement. If you are agreeing to be bound by this Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to this Agreement."
     * アカウントの取り方
       * 組織の代理として Google サービスを使用する(https://policies.google.com/terms?hl=ja)
-      
+  
+  * 限定公開: リンクを知っているユーザーのみにアイテムを公開します（注: ウェブ検索エンジンの結果にアイテムが表示されることがあります）
     
