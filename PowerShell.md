@@ -220,7 +220,7 @@ CMD> powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 PS> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser  #管理者として実行したPowershellで。
 # -> ps1ファイルを右クリックし「Powershellで実行」で実行できる
 ```
-#### ダイアログ表示
+#### ダイアログ表示 dialog
 ```
 Add-Type -AssemblyName System.Windows.Forms;
 [System.Windows.Forms.MessageBox]::Show("xxxx");
@@ -229,6 +229,11 @@ Add-Type -AssemblyName System.Windows.Forms;
 $WSH = New-Object -ComObject Wscript.Shell
 $WSH.Popup("xxxx")
 ```
+```
+[System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+$No= [Microsoft.VisualBasic.Interaction]::InputBox("番号を入力してください", "タイトル", "初期値")
+```
+
 #### HTTP Request
 ```
 $response = Invoke-WebRequest [-Method GET] http://localhost/index.htm [-OutFile out.htm]
