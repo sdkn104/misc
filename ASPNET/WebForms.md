@@ -27,3 +27,17 @@ Detail
     * http://xxxx/folder1/folder2/xxx.aspx or xxx   --> folder1/folder2/xxx.aspx file (folder structure in Visual Studio)
     
 * [.aspx syntax](https://docs.microsoft.com/en-us/previous-versions/k33801s3(v=vs.140))
+
+* page to page
+  * get query string and form data
+    * HttpRequest.Param
+    * Request.QueryString("UserName")
+    * Request.Form("LastName")
+    * https://www.ipa.go.jp/security/awareness/vendor/programmingv1/a05_01_main.html
+  * response
+    * Response.Redirect("default2.aspx 
+    * https://www.codeproject.com/Articles/37539/Redirect-and-POST-in-ASP-NET
+    * Server.Transfer
+* runat=server
+
+  
