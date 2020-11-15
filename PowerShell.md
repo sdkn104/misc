@@ -305,12 +305,11 @@ MyExit 0
   * Windows File Naming: https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
  
 ```
-@powershell -c '#'+(Get-Content \"%~f0\" -Raw) ^| Invoke-Expression & exit /b
-#--------- 上のスクリプトはここから下のPowershellコードを実行する -----------------------------------
-# 制限事項：
-#   実行引数は渡らない、exitコードは返らない、$PSCommandPath, $PSScriptRoot, $MyInvocationは使えない。
-#   自身のスクリプトパス名に特殊文字を含まないこと。このスクリプトはShiftJIS(cp932)で保存すること。
-#---------------------------------------------------------------------------------------------------
+@powershell -c '$PSCommandPath=\"%~fp0\" #'+(Get-Content \"%~f0\" -Raw) ^| Invoke-Expression & exit /b
+#--------- 上のスクリプトはここから下のPowershellコードを実行する ------------------------------------
+# 制約：実行引数は渡らない、exitコードは返らない、$PSScriptRoot, $MyInvocationは使えない。
+#       自身のスクリプトパス名に特殊文字を含まないこと。このスクリプトはShiftJIS(cp932)で保存すること。
+#-----------------------------------------------------------------------------------------------------
 
 "Time: $([DateTime]::Now)"
 "Guid: $([guid]::NewGuid())"
