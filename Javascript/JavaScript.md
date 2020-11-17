@@ -54,6 +54,30 @@ function formatDate (date, format) {
   return format;
 };
 ```
+# Promise
+```
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('foo');
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+});
+```
+* Promiseオブジェクトは関数executor(resolve, reject)をコンストラクタ引数で指定して生成される。
+* Promiseコンストラクタが呼ばれると、即座に関数executorを実行した後、オブジェクトが生成され返される。
+* executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。
+  通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
+* 関数executor内でresolve(value)/reject(reason)が呼ばれると、そのexecutorのPromiseオブジェクトはresolve/rejectされる。
+　そして、onFulfilled/onRejectedが登録されていなければ、登録されるまで待ち？？？（次のPromiseに飛ばない？）、
+　登録され(てい)ると、onFulfilled/onRejectedが非同期に実行(キューに登録)され、
+  実行が終わるとその戻り値でonFulfilled/onRejectedを登録したとき生成された
+  Promise(=p1)をresolve/rejectする(p1.resolve/reject(value/reason))。
+* Promiseインスタンスは、then(onFulfilled), catch(onRejected), finally(onXXX)でハンドラを登録できる。
+　then/catch/finallyは、Promiseを生成して返す。
+--
 
 
 
