@@ -66,13 +66,16 @@ promise1.then((value) => {
   console.log(value);
 });
 ```
+* Promiseオブジェクトは、pending (初期状態), fulfilled (成功して完了), rejected(失敗)の３つの状態を持つ。
 * Promiseオブジェクトは関数executor(resolve, reject)をコンストラクタ引数で指定して生成される。
-* Promiseコンストラクタが呼ばれると、即座に関数executorを実行した後、オブジェクトが生成され返される。
-* executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。
+* Promiseコンストラクタが呼ばれると、オブジェクトが生成される過程でexecutorが実行される。
+* executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。reasonは通常errorオブジェクト。
   通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
-* 関数executor内でresolve(value)/reject(reason)が呼ばれると、そのexecutorのPromiseオブジェクトはresolve/reject??される。
-* resolve/rejectされたとき、onFulfilled/onRejectedが登録されていると、onFulfilled/onRejectedが非同期に実行(キューに登録)される。
-  すでにresolve/rejectされたPromiseに対してthen()等でonFulfilled/onRejectedを登録すると、それは非同期に実行(キューに登録)される。
+* 関数executor内でresolve(value)/reject(reason)が呼ばれると、生成されたPromiseオブジェクトはfulfilled/rejectedにresolveされる。
+* fulfilled/rejectedにresolveされされたとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
+　onFulfilled/onRejectedが非同期に実行(キューに登録)される。
+  すでにfulfilled/rejectedにresolveされたPromiseに対してthen()等でonFulfilled/onRejectedを登録すると、
+  それは非同期に実行(キューに登録)される。
 * onFulfilled/onRejectedの実行が終わるとその戻り値でonFulfilled/onRejectedを登録したとき生成された
   Promise(=p1)をresolve/rejectする(p1.resolve/reject(value/reason))。
 * Promiseインスタンスは、then(onFulfilled), catch(onRejected), finally(onXXX)でハンドラを登録できる。
