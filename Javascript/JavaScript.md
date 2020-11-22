@@ -76,12 +76,13 @@ const onRejected = (reason) => {
 * Promiseコンストラクタが呼ばれると、オブジェクトが生成される過程でexecutorが実行される。
 * executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。reasonは通常errorオブジェクト。
   通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
-* **executor -> promise1のresolve：**
-  関数executor内でresolve(value)/reject(reason)が呼ばれると、
+### executor -> promise1のresolve
+* 関数executor内でresolve(value)/reject(reason)が呼ばれると、
   生成されたPromiseオブジェクトpromise1はvalue/reasonでresolveされfulfilled/rejectedとなる。
   ただし、value/reasonが別のPromiseオブジェクトpの場合、Promise pにresolveされるが、pendingのままとなる。
   この場合、返したPromiseオブジェクトpがfulfill/rejectされたとき、生成されたpromise1は同じ値でfulfill/rejectされる。
   resolveされたPromoseをresolveしようとしても無効である。
+* executor内で発生した例外はトラップされない(???)。try catchなどでハンドリングすべき。
 * **fulfill/reject -> ハンドラ起動：**
   fulfilled/rejectedとなったとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
 　onFulfilled(value)/onRejected(reason)が非同期に実行(キューに登録)される。
