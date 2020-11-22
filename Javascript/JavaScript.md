@@ -76,29 +76,33 @@ const onRejected = (reason) => {
 * Promiseコンストラクタが呼ばれると、オブジェクトが生成される過程でexecutorが実行される。
 * executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。reasonは通常errorオブジェクト。
   通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
-### executor -> promise1のresolve
-* 関数executor内でresolve(value)/reject(reason)が呼ばれると、
-  生成されたPromiseオブジェクトpromise1はvalue/reasonでresolveされfulfilled/rejectedとなる。
-  ただし、value/reasonが別のPromiseオブジェクトpの場合、Promise pにresolveされるが、pendingのままとなる。
-  この場合、返したPromiseオブジェクトpがfulfill/rejectされたとき、生成されたpromise1は同じ値でfulfill/rejectされる。
-  resolveされたPromoseをresolveしようとしても無効である。
-* executor内で発生した例外はトラップされない(???)。try catchなどでハンドリングすべき。
-* **fulfill/reject -> ハンドラ起動：**
-  fulfilled/rejectedとなったとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
-　onFulfilled(value)/onRejected(reason)が非同期に実行(キューに登録)される。
-  すでにfulfilled/rejectedであるPromiseに対してthen()等でonFulfilled/onRejectedを登録すると、
-  onFulfilled(value)/onRejected(reason)は非同期に実行(キューに登録)される。
-* **ハンドラ終了 -> promise2のresolve：**
-　onFulfilled/onRejectedの実行が終わると、onFulfilled/onRejectedを登録したとき生成された
-  Promise(=promise2)を、その戻り値でresolveしてfulfilledとする。
-  戻り値が別のPromise pのとき、pにresolveしてpendingのままとなる。pがfulfill/rejectされたときpromise2も同じ値でfulfill/rejectされる。
-  ハンドラ内で例外が発生したとき、そのerror値でpromise2をrejectする。
-* **ハンドラ登録とproise2の生成：**
-　Promiseインスタンスは、then(onFulfilled, onRejected), catch(onRejected), finally(onXXX)でハンドラを登録できる。
-　then/catch/finallyは、Promiseを生成して返す。
-* .catch(onRejected) = .then(undefined, onRejected)
-                     = .then(function(value){return value}, onRejected) ???
-  .then(onFulfilled) = .then(onFulfilled, undefined) ???
+* executor -> promise1のresolve
+  * 関数executor内でresolve(value)/reject(reason)が呼ばれると、
+    生成されたPromiseオブジェクトpromise1はvalue/reasonでresolveされfulfilled/rejectedとなる。
+    ただし、value/reasonが別のPromiseオブジェクトpの場合、Promise pにresolveされるが、状態はpと同じになる。
+    (pがvalue/reasonでfulfilled/rejectedされていれば同じ値でfulfilled/rejectedされた状態となり、
+    　penndingであればpが将来fulfilled/rejectedされたとき同じ値でfulfilled/rejectedされる)
+    resolveされたPromoseをresolveしようとしても無効である。
+  * executor内で発生した例外はトラップされない(???)。try catchなどでハンドリングすべき。
+* fulfill/reject -> ハンドラ起動
+  * fulfilled/rejectedとなったとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
+   onFulfilled(value)/onRejected(reason)が非同期に実行(キューに登録)される。
+    すでにfulfilled/rejectedであるPromiseに対してthen()等でonFulfilled/onRejectedを登録すると、
+    onFulfilled(value)/onRejected(reason)は非同期に実行(キューに登録)される。
+* ハンドラ終了 -> promise2のresolve
+  * ハンドラonFulfilled/onRejectedの実行が終わると、ハンドラを登録したとき生成された
+    Promise(=promise2)を、その戻り値でresolveしてfulfilledとする。
+    ただし、戻り値が別のPromise pのとき、pにresolveするが状態はpと同じになる（上記promse1のresolveと同じ）。
+  * ハンドラ内で例外が発生したとき、そのerror値でpromise2をrejectする。
+* ハンドラ登録とproise2の生成
+  * Promiseインスタンスは、then(onFulfilled, onRejected), catch(onRejected), finally(onXXX)でハンドラを登録できる。
+   then/catch/finallyは、Promiseを生成して返す。
+  * .catch(onRejected) = .then(undefined, onRejected)
+                       = .then(function(value){return value}, onRejected) ???
+    .then(onFulfilled) = .then(onFulfilled, undefined) ???
+  * onFulfilledに関数以外を登録したとき、idendity(function(v){return v})が登録される。
+  * onRejectedに関数以外を登録したとき、thrower(function(v){throw v})が登録される。
+  
 --
 
 
