@@ -71,7 +71,9 @@ promise1.then((value) => {
 * Promiseコンストラクタが呼ばれると、オブジェクトが生成される過程でexecutorが実行される。
 * executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。reasonは通常errorオブジェクト。
   通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
-* 関数executor内でresolve(value)/reject(reason)が呼ばれると、生成されたPromiseオブジェクトはfulfilled/rejectedにresolveされる。
+* 関数executor内でresolve(value)/reject(reason)が呼ばれると、生成されたPromiseオブジェクトはそのvalue/reasonでfulfilled/rejectedにresolveされる。
+  ただし、value, reasonがPromiseオブジェクトの場合、そのpromiseにresolveされるが、fulfilledでもrejectedでもない。
+  resolveされたPromoseをresolveしようとしても無効である。
 * fulfilled/rejectedにresolveされされたとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
 　onFulfilled/onRejectedが非同期に実行(キューに登録)される。
   すでにfulfilled/rejectedにresolveされたPromiseに対してthen()等でonFulfilled/onRejectedを登録すると、
