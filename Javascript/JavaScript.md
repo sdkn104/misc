@@ -56,31 +56,44 @@ function formatDate (date, format) {
 ```
 # Promise
 ```
-const promise1 = new Promise((resolve, reject) => {
+const promise1 = new Promise(executor);
+const executor = (resolve, reject) => {
   setTimeout(() => {
     resolve('foo');
   }, 300);
-});
+};
 
-promise1.then((value) => {
-  console.log(value);
+let promise2 = promise1.then(onFulfilled, onRejected)
+const onFulfilled = (value) => {
+  return value2;
 });
+const onRejected = (reason) => {
+ return reason2;
+};
 ```
 * Promiseオブジェクトは、pending (初期状態), fulfilled (成功して完了), rejected(失敗)の３つの状態を持つ。
 * Promiseオブジェクトは関数executor(resolve, reject)をコンストラクタ引数で指定して生成される。
 * Promiseコンストラクタが呼ばれると、オブジェクトが生成される過程でexecutorが実行される。
 * executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。reasonは通常errorオブジェクト。
   通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
-* 関数executor内でresolve(value)/reject(reason)が呼ばれると、生成されたPromiseオブジェクトはそのvalue/reasonでfulfilled/rejectedにresolveされる。
-  ただし、value, reasonがPromiseオブジェクトの場合、そのpromiseにresolveされるが、fulfilledでもrejectedでもない。
+* [executor -> promise1のresolve]
+  関数executor内でresolve(value)/reject(reason)が呼ばれると、
+  生成されたPromiseオブジェクトpromise1はvalue/reasonでresolveされfulfilled/rejectedとなる。
+  ただし、value/reasonが別のPromiseオブジェクトpの場合、Promise pにresolveされるが、pendingのままとなる。
+  この場合、返したPromiseオブジェクトpがfulfill/rejectされたとき、生成されたpromise1は同じ値でfulfill/rejectされる。
   resolveされたPromoseをresolveしようとしても無効である。
-* fulfilled/rejectedにresolveされされたとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
-　onFulfilled/onRejectedが非同期に実行(キューに登録)される。
-  すでにfulfilled/rejectedにresolveされたPromiseに対してthen()等でonFulfilled/onRejectedを登録すると、
-  それは非同期に実行(キューに登録)される。
-* onFulfilled/onRejectedの実行が終わるとその戻り値でonFulfilled/onRejectedを登録したとき生成された
-  Promise(=p1)をresolve/rejectする(p1.resolve/reject(value/reason))。
-* Promiseインスタンスは、then(onFulfilled), catch(onRejected), finally(onXXX)でハンドラを登録できる。
+* [fulfill/reject -> ハンドラ起動]
+  fulfilled/rejectedとなったとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
+　onFulfilled(value)/onRejected(reason)が非同期に実行(キューに登録)される。
+  すでにfulfilled/rejectedであるPromiseに対してthen()等でonFulfilled/onRejectedを登録すると、
+  onFulfilled(value)/onRejected(reason)は非同期に実行(キューに登録)される。
+* [ハンドラ終了 -> promise2のresolve]
+　onFulfilled/onRejectedの実行が終わると、onFulfilled/onRejectedを登録したとき生成された
+  Promise(=promise2)を、その戻り値でresolveしてfulfilledとする。
+  戻り値が別のPromise pのとき、pにresolveしてpendingのままとなる。pがfulfill/rejectされたときpromise2も同じ値でfulfill/rejectされる。
+  ハンドラ内で例外が発生したとき、そのerror値でpromise2をrejectする。
+* [ハンドラ登録とproise2の生成]
+　Promiseインスタンスは、then(onFulfilled), catch(onRejected), finally(onXXX)でハンドラを登録できる。
 　then/catch/finallyは、Promiseを生成して返す。
 * .catch(onRejected) = .then(undefined, onRejected)
                      = .then(function(value){return value}, onRejected) ???
