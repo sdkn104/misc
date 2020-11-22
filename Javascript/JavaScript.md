@@ -93,7 +93,7 @@ const onRejected = (reason) => {
   戻り値が別のPromise pのとき、pにresolveしてpendingのままとなる。pがfulfill/rejectされたときpromise2も同じ値でfulfill/rejectされる。
   ハンドラ内で例外が発生したとき、そのerror値でpromise2をrejectする。
 * [ハンドラ登録とproise2の生成]
-　Promiseインスタンスは、then(onFulfilled), catch(onRejected), finally(onXXX)でハンドラを登録できる。
+　Promiseインスタンスは、then(onFulfilled, onRejected), catch(onRejected), finally(onXXX)でハンドラを登録できる。
 　then/catch/finallyは、Promiseを生成して返す。
 * .catch(onRejected) = .then(undefined, onRejected)
                      = .then(function(value){return value}, onRejected) ???
