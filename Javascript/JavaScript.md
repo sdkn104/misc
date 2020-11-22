@@ -72,10 +72,12 @@ const onRejected = (reason) => {
 };
 ```
 * Promiseオブジェクトは、pending (初期状態), fulfilled (成功して完了), rejected(失敗)の３つの状態を持つ。
-* Promiseオブジェクトは関数executor(resolve, reject)をコンストラクタ引数で指定して生成される。
-* Promiseコンストラクタが呼ばれると、オブジェクトが生成される過程でexecutorが実行される。
-* executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。reasonは通常errorオブジェクト。
-  通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
+* Promiseのコンストラクタ
+  * Promiseオブジェクトは関数executor(resolve, reject)をコンストラクタ引数で指定して生成される。
+  * Promiseコンストラクタが呼ばれると、オブジェクトが生成される過程でexecutorが実行される。
+  * executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。reasonは通常errorオブジェクト。
+    通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
+  * executorは同期的に実行されるか？(executorが終了してからオブジェクトが返るか？)
 * executor -> promise1のresolve
   * 関数executor内でresolve(value)/reject(reason)が呼ばれると、
     生成されたPromiseオブジェクトpromise1はvalue/reasonでresolveされfulfilled/rejectedとなる。
@@ -102,7 +104,7 @@ const onRejected = (reason) => {
     .then(onFulfilled) = .then(onFulfilled, undefined) ???
   * onFulfilledに関数以外を登録したとき、idendity(function(v){return v})が登録される。
   * onRejectedに関数以外を登録したとき、thrower(function(v){throw v})が登録される。
-  
+* thenのないPromiseは永久にイベントキューに残るのか？　デストラクトするとどうなるか？
 --
 
 
