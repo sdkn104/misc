@@ -78,7 +78,7 @@ const onRejected = (reason) => {
   * Promiseコンストラクタが呼ばれると、オブジェクトが生成される過程でexecutorが実行される。
   * executorは、通常、その処理の中でresolve(value), reject(reason)をコールする。reasonは通常errorオブジェクト。
     通常は、executorは非同期の作業を開始して、作業が終了したときにresolve/rejectが呼ばれるようにする。
-  * executorは同期的に実行されるか？(executorが終了してからオブジェクトが返るか？)
+  * executorは即座に実行される。(executorが終了してからオブジェクトが返る？)
 * executor -> promise1のresolve
   * 関数executor内でresolve(value)/reject(reason)が呼ばれると、
     生成されたPromiseオブジェクトpromise1はvalue/reasonでresolveされfulfilled/rejectedとなる。
@@ -86,7 +86,7 @@ const onRejected = (reason) => {
     (pがvalue/reasonでfulfilled/rejectedされていれば同じ値でfulfilled/rejectedされた状態となり、
     　penndingであればpが将来fulfilled/rejectedされたとき同じ値でfulfilled/rejectedされる)
     resolveされたPromoseをresolveしようとしても無効である。
-  * executor内で発生した例外はトラップされない(???)。try catchなどでハンドリングすべき。
+  * executor内で例外が発生したときは、promise1はその例外errorをreasonとしてrejectされる（らしい）。
 * fulfill/reject -> ハンドラ起動
   * fulfilled/rejectedとなったとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
    onFulfilled(value)/onRejected(reason)が非同期に実行(キューに登録)される。
@@ -106,7 +106,9 @@ const onRejected = (reason) => {
   * onFulfilledに関数以外を登録したとき、idendity(function(v){return v})が登録される。
   * onRejectedに関数以外を登録したとき、thrower(function(v){throw v})が登録される。
 * thenのないPromiseは永久にイベントキューに残るのか？　デストラクトするとどうなるか？
-
+　* onRejectedの登録のないpromiseがrejectされると、グローバルエラーが発生する（実行環境による）。？？
+  * unhandled rejection
+  
 ### パタン
 * ハンドラの連鎖
 ```
