@@ -55,6 +55,7 @@ function formatDate (date, format) {
 };
 ```
 # Promise
+### Basic
 ```
 const promise1 = new Promise(executor);
 const executor = (resolve, reject) => {
@@ -101,10 +102,29 @@ const onRejected = (reason) => {
    then/catch/finallyは、Promiseを生成して返す。
   * .catch(onRejected) = .then(undefined, onRejected)
                        = .then(function(value){return value}, onRejected) ???
-    .then(onFulfilled) = .then(onFulfilled, undefined) ???
+  * .then(onFulfilled) = .then(onFulfiled, undefined) ???
   * onFulfilledに関数以外を登録したとき、idendity(function(v){return v})が登録される。
   * onRejectedに関数以外を登録したとき、thrower(function(v){throw v})が登録される。
 * thenのないPromiseは永久にイベントキューに残るのか？　デストラクトするとどうなるか？
+
+### パタン
+* ハンドラの連鎖
+```
+   // onRejectedをもたないthen複数下位のあと、一つのcatch、そのと一つのfunally
+   paromiseFunc()
+   .then((value) => {
+     return value2;
+   })
+   .then(...)
+   .catch(...)
+   .funally(...);     
+```
+* 非同期関数をPromiseでwrapする
+* Promise関数をハンドラ内で使う
+* ハンドラ内のエラーを外部にthrowする
+
+### async/await
+
 --
 
 
