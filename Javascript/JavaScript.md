@@ -55,6 +55,7 @@ function formatDate (date, format) {
 };
 ```
 # Promise
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 ### Basic
 ```
 const promise1 = new Promise(executor);
@@ -124,8 +125,19 @@ const onRejected = (reason) => {
 * 非同期関数をPromiseでwrapする
 * Promise関数をハンドラ内で使う
 * ハンドラ内のエラーを外部にthrowする
+  * awaitを使えば可能
 
 ### async/await
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+```
+async function() {
+   value = await promise;
+}
+```
+* awaitはasync関数の中でしか使えない
+* awaitはasync関数の実行をそこで一時停止し、promiseがfulfill/rejectされると実行を再開する。
+* promiseがfultillされたら、resolveした値が返される。
+* promiseがrejectされたら、rejectのreason値を throwする。
 
 --
 
