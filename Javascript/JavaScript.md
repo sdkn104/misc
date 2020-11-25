@@ -27,6 +27,14 @@ A {
   * staitc (lexical) scopeの場合、どこで呼び出されても常に定義場所のscopeで判断。
   * dynamic scopeの場合、呼び出された場所のscopeで判断。
 
+### for each
+```
+[1,,3].forEach(function(element, index){...})  // cannot use break, continue; skip empty elements
+for( value of nodeList ) { ... }
+for( [index, value] of nodeList.entries() ) { ... }
+
+```
+
 ### Closure
   * Javascriptの関数はクロージャである。
   * 関数が定義されたときの環境（定義時のスコープ内部にあったあらゆる変数から構成される）を保持する。
