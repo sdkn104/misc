@@ -146,6 +146,9 @@ async function() {
 * awaitはasync関数の実行をそこで一時停止し、promiseがfulfill/rejectされると実行を再開する。
 * promiseがfultillされたら、resolveした値が返される。
 * promiseがrejectされたら、rejectのreason値を throwする。
+* async関数は暗黙のPromiseを返し、非同期的に実行される。
+ * async関数が正常終了したとき、async関数の戻り値でPromiseをresolveする。
+ * async関数で補足されない例外が発生したとき、errorでPromiseをrejectする。
 
 --
 
