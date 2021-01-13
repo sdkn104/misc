@@ -34,6 +34,13 @@ for( value of nodeList ) { ... }
 for( [index, value] of nodeList.entries() ) { ... }
 
 ```
+### Error Object
+```
+try {
+} catch(e) {
+  console.log(e.stack || e.toString()); // e.stackは非標準。e.toString()は通常、e.name: e.message 。
+}
+```
 
 ### Closure
   * Javascriptの関数はクロージャである。
@@ -130,7 +137,26 @@ const onRejected = (reason) => {
    .catch(...)
    .funally(...);     
 ```
+  * ハンドラ内で正常にreturnした場合：次が.catch()ならスルー、.then()なら実行。
+  * ハンドラ内で処理されない例外発生：次が.catch()なら実行、.then()ならスルー。
+  * 上記でハンドラは、.catch()ハンドラ、.then()ハンドラどちらも含む。
+    
 * 非同期関数をPromiseでwrapする
+```
+// Original async function
+function asyncFunction(arg, callback) { ... } // callback = function(value) { ... }
+
+// Promise version of original function
+function promiseFunction(arg) {
+  return new Promise((resolve, reject) => {
+    return asyncFunction(arg, resolve);
+  });
+}
+
+// call promise version
+promiseFunction(argValue)
+.then(callback);
+```
 * Promise関数をハンドラ内で使う
 * ハンドラ内のエラーを外部にthrowする
   * awaitを使えば可能
