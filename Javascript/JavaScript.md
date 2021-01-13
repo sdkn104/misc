@@ -103,6 +103,7 @@ const onRejected = (reason) => {
     　penndingであればpが将来fulfilled/rejectedされたとき同じ値でfulfilled/rejectedされる)
     resolveされたPromoseをresolveしようとしても無効である。
   * executor内で例外が発生したときは、promise1はその例外errorをreasonとしてrejectされる（らしい）。
+  * executorの戻り値は意味を持たない。
 * fulfill/reject -> ハンドラ起動
   * fulfilled/rejectedとなったとき、既にthen()等でハンドラonFulfilled/onRejectedが登録されていると、
    onFulfilled(value)/onRejected(reason)が非同期に実行(キューに登録)される。
@@ -127,6 +128,9 @@ const onRejected = (reason) => {
   
 ### パタン
 * ハンドラの連鎖
+  * ハンドラ内で正常にreturnした場合：次が.catch()ならスルー、.then()なら実行。
+  * ハンドラ内で処理されない例外発生：次が.catch()なら実行、.then()ならスルー。
+  * 上記でハンドラは、.catch()ハンドラ、.then()ハンドラどちらも含む。
 ```
    // onRejectedをもたないthen複数下位のあと、一つのcatch、そのと一つのfunally
    paromiseFunc()
@@ -137,9 +141,6 @@ const onRejected = (reason) => {
    .catch(...)
    .funally(...);     
 ```
-  * ハンドラ内で正常にreturnした場合：次が.catch()ならスルー、.then()なら実行。
-  * ハンドラ内で処理されない例外発生：次が.catch()なら実行、.then()ならスルー。
-  * 上記でハンドラは、.catch()ハンドラ、.then()ハンドラどちらも含む。
     
 * 非同期関数をPromiseでwrapする
 ```
@@ -148,9 +149,7 @@ function asyncFunction(arg, callback) { ... } // callback = function(value) { ..
 
 // Promise version of original function
 function promiseFunction(arg) {
-  return new Promise((resolve, reject) => {
-    return asyncFunction(arg, resolve);
-  });
+  return new Promise((resolve, reject) => asyncFunction(arg, resolve));
 }
 
 // call promise version
@@ -158,6 +157,13 @@ promiseFunction(argValue)
 .then(callback);
 ```
 * Promise関数をハンドラ内で使う
+```
+promiseFunc()
+.then(v => {
+    return promiseFunc2(...); // thenはpromiseFunc2の返すPromise(と同等のPromise)を返す
+})
+.then(...);
+```
 * ハンドラ内のエラーを外部にthrowする
   * awaitを使えば可能
 
