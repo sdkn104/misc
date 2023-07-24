@@ -170,6 +170,15 @@ $lines = @(Get-Content t.txt)  # array of line strings
 * Out-File xxx.txt -Encoding xxx : デフォルトはDefault (=UTF16)
 * redirect ">"  : UTF16。文字コード指定不可。
 
+* utf8nでファイル出力　ただし、ps6.0以降では不要。
+
+```
+  … | Out-String `
+    | % { [Text.Encoding]::UTF8.GetBytes($_) } `
+    | Set-Content -Path ".\BOMlessUTF8.txt" -Encoding Byte
+```
+
+    
 #### File System
 ```
 pwd (Get-Location)
