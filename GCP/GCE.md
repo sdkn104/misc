@@ -3,8 +3,7 @@
 ## install xfce
 https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine?hl=ja
 
-sudo DEBIAN_FRONTEND=noninteractive \
-    apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver
+sudo DEBIAN_FRONTEND=noninteractive apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver
 
 #sudo systemctl disable lightdm.service
 
