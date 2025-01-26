@@ -7,3 +7,10 @@ sudo apt install git
 sudo apt install nodejs npm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
+```
+#start store credential
+git config --global credential.helper store
+
+git push origin main
+cat ~/.git-credentials
+```
