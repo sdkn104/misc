@@ -1,6 +1,5 @@
 http://techacademy.jp/magazine/6235
 http://qiita.com/nnahito/items/565f8755e70c51532459
-
 #### Initial (initial remote first, then clone)
 1) clone (url should be get on clone button in github page)
 $ git clone https://github.com/sdkn104/AppEngine.git
