@@ -6,6 +6,11 @@ vd projname
 npm init -y
 npm install modules...
 ```
+```
+npm install  // install all for ./packatge.json
+  or,
+npm ci // install for package-lock.json
+```
 
 ## webpack
 create webpack.config.js
