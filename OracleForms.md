@@ -1,7 +1,7 @@
 # ASP.NET Web Forms
 * tutorial: https://docs.microsoft.com/ja-jp/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
 * 〇ASP.NET（Web Forms）を理解する3つの仕組み https://www.atmarkit.co.jp/fdotnet/bookpreview/learnaspnet_0202/learnaspnet_0202_01.html
-* UI
+* UI 
   * pageはaspxファイルと対応。部品(server control)を配置する(aspxに記述かＧＵＩで置く）
   * 部品(update, clickなど)やページ(loadなど)のイベントに対してハンドラを割り付ける
         * ハンドラからLogicのクラスを操作し、LogicクラスがModelクラスを操作する。Logicは作らなくてもよい。
