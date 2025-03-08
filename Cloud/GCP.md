@@ -7,6 +7,6 @@ echo -n "your-api-key-value" | gcloud secrets versions add API_KEY_NAME --data-f
 ```
 
 ```
-gcloud secrets versions access latest --secret=SECRET_NAME
+gcloud secrets versions access latest --secret=API_KEY_NAME
 ```
 
