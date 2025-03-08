@@ -1,1 +1,41 @@
 
+alias dl='cloudshell download-files'
+alias dt='cloudshell launch-tutorial -d'
+alias edit='cloudshell edit-files'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias help='cat /home/sdkn104/README-cloudshell.txt'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+alias teachme='cloudshell launch-tutorial'
+
+alias a=‘alias‘
+alias gpl=‘git pull origin main‘
+alias gps=‘git pish origin main‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+alias x=‘‘
+
+
