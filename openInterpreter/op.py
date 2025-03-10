@@ -9,5 +9,5 @@ logging.basicConfig(level=logging.DEBUG, filename="debug.txt", filemode="a")
 
 interpreter.llm.context_window
 interpreter.llm.max_tokens
-interpreter.llm.max_output
+#interpreter.llm.max_output
 interpreter.max_budget
