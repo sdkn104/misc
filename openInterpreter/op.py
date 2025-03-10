@@ -6,8 +6,8 @@ import sys
 logging.basicConfig(level=logging.DEBUG, filename="debug.txt", filemode="a")
 
 
-interpreter.llm.context_window
-interpreter.llm.max_tokens
+interpreter.llm.context_window = 128000
+interpreter.llm.max_tokens = 16384
 #interpreter.llm.max_output
-interpreter.max_output
-#interpreter.max_budget
+interpreter.max_output = 2800
+#interpreter.llm.max_budget
