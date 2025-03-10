@@ -13,10 +13,10 @@ alias ls='ls --color=auto'
 alias teachme='cloudshell launch-tutorial'
 
 alias a=alias
-alias gpl='git pull origin main'
-alias gps='git pish origin main'
+alias gplm='(cd ~/misc; git pull origin master)'
+alias gps='git push origin main'
 alias so='source'
-alias x=''
+alias soo='source ~/misc/Linux/my.bashrc'
 alias x=''
 alias x=''
 alias x=''
