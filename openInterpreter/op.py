@@ -3,7 +3,7 @@ import logging
 import sys
 
 #logging.basicConfig(stream=sys.stdout, encoding='UTF-8', level=logging.DEBUG, force=True)
-logging.basicConfig(level=logging.DEBUG, filename="debug.txt", filemode="a")
+logging.basicConfig(level=logging.DEBUG, filename="debug.txt", filemode="a", force=True)
 
 
 interpreter.llm.context_window = 128000
