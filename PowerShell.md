@@ -199,6 +199,31 @@ Split-Path "C:\aaa\bbb\ccc" -Leaf
 Convert-Path ".\abc.txt"     # --> C:\Users\xxx\Desktop\abc.txt
 Convert-Path .\*.txt         # list up matched files in full path
 ```
+### Profile
+```
+if (!(Test-Path -Path $PROFILE)) {
+  New-Item -ItemType File -Path $PROFILE -Force
+}
+notepad $PROFILE
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+```
+function wc( [string]$Path ) {
+    <#
+        .DESCRIPTION
+        wc is a custom-made function that counting number of lines, words and charactors.
+    #>
+   if( $Path ) {
+     Get-Content $Path | Measure-Object -Line -Word -Character
+   } else {
+     $input | Measure-Object -Line -Word -Character
+   }
+}
+
+Set-Alias grep Select-String
+```
+
+
 #### Help
 ```
 Update-Help  # download and install help files, 管理者権限で実行
