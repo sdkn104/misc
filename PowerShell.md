@@ -110,7 +110,7 @@ $d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length
 $d | foreach { "name: " + $_.Name }
 dir | Group-Object Extension
 ```
-## 例外処理
+## Exception
 ```
 $ErrorActionPreference = "Stop"  # non-terminatig errorでも実行停止しcatchする。
 trap { # 処理されなかったすべてのterminating errorに対して
@@ -143,7 +143,7 @@ echo $PSCommandPath  # full path of this script
 echo $args[0]        # the first argument 
 echo $args[1]        # the second
 ```
-## 入出力 (Host, Stream)
+## I/O (Host, Stream)
 ```
 $age = Read-host "Please enter your age: "
 Write-Host "abc"   # console terminalへの出力
@@ -199,16 +199,16 @@ Split-Path "C:\aaa\bbb\ccc" -Leaf
 Convert-Path ".\abc.txt"     # --> C:\Users\xxx\Desktop\abc.txt
 Convert-Path .\*.txt         # list up matched files in full path
 ```
-## 起動
+## Startup
 ```
 CMD> powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 ```
 ```
-PS> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser  #管理者として実行したPowershellで。
+PS> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser  #管理者として実行したPowershellで。
 # -> ps1ファイルを右クリックし「Powershellで実行」で実行できる
 ```
 
-## Profile
+## Profile (init file)
 ```
 if (!(Test-Path -Path $PROFILE)) {
   New-Item -ItemType File -Path $PROFILE -Force
