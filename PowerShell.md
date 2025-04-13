@@ -263,8 +263,10 @@ $code = $LastExitCode    # 戻り値（外部コマンドの場合のみ）
 ```
 ## Format
 ```
-Format-Table
+Format-Table -AutoSize
 Format-List
+Select-Object Name,Count
+Select-Object *
 ```
 
 ## ダイアログ表示 dialog
