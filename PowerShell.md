@@ -207,6 +207,7 @@ if (!(Test-Path -Path $PROFILE)) {
 notepad $PROFILE
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+# Sample Profile File
 ```
 function wc( [string]$Path ) {
     <#
@@ -221,6 +222,16 @@ function wc( [string]$Path ) {
 }
 
 Set-Alias grep Select-String
+Set-Alias uniq Group-Object
+
+# 出力表示時、要素が多くても省略しない
+$FormatEnumerationLimit = -1
+
+# windowのバッファ幅変更（画面表示、リダイレクトで折り返さない）
+$bufferSize = (Get-Host).UI.RawUI.BufferSize
+$bufferSize.Width = 1999
+#$bufferSize.Height = 1000
+(Get-Host).UI.RawUI.BufferSize = $bufferSize
 ```
 
 
