@@ -192,6 +192,14 @@ rm (Remove-Item)
 mkdir xxx (New-Item xxx -ItemType Directory)
 if( Test-Path ".\a\b.*" ) { rm ".\a\b.*" }
 ```
+#### 起動
+```
+CMD> powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
+```
+```
+PS> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser  #管理者として実行したPowershellで。
+# -> ps1ファイルを右クリックし「Powershellで実行」で実行できる
+```
 #### File Path
 ```
 Split-Path "C:\aaa\bbb\ccc" -Parent
@@ -257,14 +265,7 @@ $code = $LastExitCode    # 戻り値（外部コマンドの場合のみ）
 Format-Table
 Format-List
 ```
-#### 起動
-```
-CMD> powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
-```
-```
-PS> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser  #管理者として実行したPowershellで。
-# -> ps1ファイルを右クリックし「Powershellで実行」で実行できる
-```
+
 #### ダイアログ表示 dialog
 ```
 Add-Type -AssemblyName System.Windows.Forms;
