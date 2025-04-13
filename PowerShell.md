@@ -1,4 +1,4 @@
-#### References
+## References
 - Ref TOP: https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.0
   - Learning PS: https://docs.microsoft.com/en-us/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-5.0
   - Core Ref: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/?view=powershell-5.0
@@ -8,17 +8,17 @@
 - SDK TOP: https://docs.microsoft.com/en-us/powershell/developer/windows-powershell
   - Cmdlet: https://docs.microsoft.com/en-us/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet
 
-#### Cheat Sheet
+## Cheat Sheet
 - https://cdn.comparitech.com/wp-content/uploads/2018/08/Comparitech-Powershell-cheatsheet.pdf
 - https://download.microsoft.com/download/2/1/2/2122F0B9-0EE6-4E6D-BFD6-F9DCD27C07F9/WS12_QuickRef_Download_Files/PowerShell_LangRef_v3.pdf
 - 
 
-#### Basic litral
+## Basic litral
 ```
 $true, $false    # Boolean constant
 $null            # default value of all the variable
 ```
-#### String
+## String
 ```
 "abc"            # string
 'abc $a'         # string
@@ -36,13 +36,13 @@ ipconfig | Select-String "イーサネット"
 -split "a b c d"
 "a:b:c" -split ":"
 ```
-#### Array
+## Array
 ```
 $a = 1, 2, 3
 $a = @(1)
 $a.Count
 ```
-#### Hash
+## Hash
 ```
 $hash = @{ Number = 1; Shape = "Square"; Color = "Blue"}
 $hash = [orderd]@{ Number = 1; Shape = "Square"; Color = "Blue"}
@@ -52,7 +52,7 @@ $hash["Color"]
 $hash[0]
 foreach ($key in $hash.Keys) { $hash[$key] }
 ```
-#### Custom Object
+## Custom Object
 ```
 # create object
 $obj1 = New-Object PSCustomObject
@@ -69,7 +69,7 @@ $hashArray1 = (
 )
 $objArray = $hashArray1 | foreach { [PSCustomObject]$_ }
 ```
-#### DATE
+## DATE
 ```
 Get-Date
 [DateTime]"2013/02/09 13:59:50"
@@ -81,7 +81,7 @@ $span = (Get-Date) - [DateTime]"2019/06/09"
 $span.TotalDays
 ```
 
-#### Type
+## Type
 ```
 $text = [String]123    # cast
 $number = [int]$a      # cast
@@ -89,7 +89,7 @@ $number = [int]$a      # cast
 (get-date) -is [DateTime]
 (get-date).GetType()
 ```
-#### Control
+## Control
 ```
 if() {} elseif() { } else { }
 for($i=0; $i -lt 10; $i++) { continue; break; }
@@ -99,18 +99,18 @@ while() {}
 do {} while()
 do {} until()
 ```
-#### Function
+## Function
 ```
 function add($a, $b) { $a + $b }
 $v = add 1 2
 ```
-#### Pileline
+## Pileline
 ```
 $d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode -Last 5
 $d | foreach { "name: " + $_.Name }
 dir | Group-Object Extension
 ```
-#### 例外処理
+## 例外処理
 ```
 $ErrorActionPreference = "Stop"  # non-terminatig errorでも実行停止しcatchする。
 trap { # 処理されなかったすべてのterminating errorに対して
@@ -137,13 +137,13 @@ try {
 } finally {
 }
 ```
-#### Script Args, Path
+## Script Args, Path
 ```
 echo $PSCommandPath  # full path of this script
 echo $args[0]        # the first argument 
 echo $args[1]        # the second
 ```
-#### 入出力 (Host, Stream)
+## 入出力 (Host, Stream)
 ```
 $age = Read-host "Please enter your age: "
 Write-Host "abc"   # console terminalへの出力
@@ -152,7 +152,7 @@ Write-Error "abc"  # non-terminating errorを発生し、error output streamへ�
 ```
 * PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
 * Out-Host,File,String.. は、input streamまたは-inputObjectから入力をとり、それぞれに出力する。
-#### File I/O
+## File I/O
 ```
 $c = "あいうえお定兼ｻﾀﾞ＠©"
 Set-Content t.txt $c -ENcoding UTF8  # write
@@ -179,7 +179,7 @@ $lines = @(Get-Content t.txt)  # array of line strings
 ```
 
     
-#### File System
+## File System
 ```
 pwd (Get-Location)
 cd (Set-Location)
@@ -192,7 +192,14 @@ rm (Remove-Item)
 mkdir xxx (New-Item xxx -ItemType Directory)
 if( Test-Path ".\a\b.*" ) { rm ".\a\b.*" }
 ```
-#### 起動
+## File Path
+```
+Split-Path "C:\aaa\bbb\ccc" -Parent
+Split-Path "C:\aaa\bbb\ccc" -Leaf
+Convert-Path ".\abc.txt"     # --> C:\Users\xxx\Desktop\abc.txt
+Convert-Path .\*.txt         # list up matched files in full path
+```
+## 起動
 ```
 CMD> powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 ```
@@ -200,14 +207,8 @@ CMD> powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 PS> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser  #管理者として実行したPowershellで。
 # -> ps1ファイルを右クリックし「Powershellで実行」で実行できる
 ```
-#### File Path
-```
-Split-Path "C:\aaa\bbb\ccc" -Parent
-Split-Path "C:\aaa\bbb\ccc" -Leaf
-Convert-Path ".\abc.txt"     # --> C:\Users\xxx\Desktop\abc.txt
-Convert-Path .\*.txt         # list up matched files in full path
-```
-### Profile
+
+## Profile
 ```
 if (!(Test-Path -Path $PROFILE)) {
   New-Item -ItemType File -Path $PROFILE -Force
@@ -215,7 +216,7 @@ if (!(Test-Path -Path $PROFILE)) {
 notepad $PROFILE
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
-# Sample Profile File
+#### Sample Profile File
 ```
 function wc( [string]$Path ) {
     <#
@@ -243,7 +244,7 @@ $bufferSize.Width = 1999
 ```
 
 
-#### Help
+## Help
 ```
 Update-Help  # download and install help files, 管理者権限で実行
 Get-Command *-Host*
@@ -251,7 +252,7 @@ Get-ChildItem -?
 Get-Help Get-ChildItem -Online
 alias (Get-Alias)
 ```
-#### 外部コマンド
+## 外部コマンド
 ```
 $log = & "C:\program file.exe" "arg 1" "arg2" arg3
 if( -not $? ) { throw "ERROR in external command." } 
@@ -260,13 +261,13 @@ $code = $LastExitCode    # 戻り値（外部コマンドの場合のみ）
 # Exception: 戻り値０でもExceptionは発生しない。
 #            外部コマンド内で実行されたWindowsコマンドのエラーについてはNon terminatingまたはTerminating errorが発生する場合あり。
 ```
-#### Format
+## Format
 ```
 Format-Table
 Format-List
 ```
 
-#### ダイアログ表示 dialog
+## ダイアログ表示 dialog
 ```
 Add-Type -AssemblyName System.Windows.Forms;
 [System.Windows.Forms.MessageBox]::Show("xxxx");
@@ -280,7 +281,7 @@ $WSH.Popup("xxxx")
 $No= [Microsoft.VisualBasic.Interaction]::InputBox("番号を入力してください", "タイトル", "初期値")
 ```
 
-#### HTTP Request
+## HTTP Request
 ```
 $response = Invoke-WebRequest [-Method GET] http://localhost/index.htm [-OutFile out.htm]
 $response.StatusCode
@@ -288,7 +289,7 @@ $response.Header
 $response.Content
 ```
 
-#### MS Office
+## MS Office
 ```
 $excel = New-Object -ComObject Excel.Application
 $excel.Visible = $true
@@ -301,7 +302,7 @@ $excel.Quit()
 [void][System.Runtime.InteropServices.Marshal]::FinalReleaseComObject($book)
 [void][System.Runtime.InteropServices.Marshal]::FinalReleaseComObject($excel)  
 ```
-#### BATファイル内にPowerShellスクリプトを埋め込む
+## BATファイル内にPowerShellスクリプトを埋め込む
 本スクリプトは.batフィアルとして保存して実行できる。
 ```
 @(echo ' ) >nul
@@ -366,7 +367,7 @@ MyExit 0
   * powershellのexit codeはBATのexit codeに戻らない
   * BATのスクリプトファイルのパス名に特殊文字を含んではならない。（特殊文字：%など？？？）
 
-#### JScriptファイル内にPowerShellスクリプトを埋め込む
+## JScriptファイル内にPowerShellスクリプトを埋め込む
 本スクリプトは.jsフィアルとして保存して実行できる。
 ```
 "\" >$null <# "
@@ -407,7 +408,7 @@ MyExit 0
 * powershell.exeは、先頭の<#から#>までをコメントと解釈。スクリプト自身のパス名は環境変数を介して引き渡される。
 * powershellはshiftjis(cp932), utf8(bom付), (とunicode??)のスクリプトを許す。IDE, VS codeはデフォルトutf8(bom)のはず。
 
-#### IP SCAN
+## IP SCAN
 ```
 # IP scanして応答あったもののNetBIOS名取得
 ForEach($i in 1..2) {
