@@ -89,6 +89,14 @@ $number = [int]$a      # cast
 (get-date) -is [DateTime]
 (get-date).GetType()
 ```
+## Format, Property
+```
+dir | Select-Object [-Property] Name,Length
+dir | Select-Object [-Property] *
+dir | Format-Table -AutoSize [-Property] Name,Length
+dir | Format-List [-Property] Name,Length
+```
+
 ## Control
 ```
 if() {} elseif() { } else { }
@@ -261,13 +269,7 @@ $code = $LastExitCode    # 戻り値（外部コマンドの場合のみ）
 # Exception: 戻り値０でもExceptionは発生しない。
 #            外部コマンド内で実行されたWindowsコマンドのエラーについてはNon terminatingまたはTerminating errorが発生する場合あり。
 ```
-## Format
-```
-Format-Table -AutoSize
-Format-List
-Select-Object Name,Count
-Select-Object *
-```
+
 
 ## ダイアログ表示 dialog
 ```
