@@ -12,12 +12,29 @@ def run(playwright):
         #executable_path='C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'  # Edgeの実行可能ファイルのパス
     )
     #context = browser.new_context()
-    # context is already the persistent context returned by launch_persistent_context
+    context = browser
     page = context.new_page()
 
     # 指定されたURLを開く
     #page.goto('https://melgitgaipreview-cd01001ze.megcloud.melco.co.jp/')
-    page.goto('https://chatgpt.com/')
+    page.goto('https://copilot.microsoft.com/')
+    #page.goto('https://chatgpt.com/')
+    # 新しいチャットを開始
+    new_chat_button = page.locator('a[title="ChatGPT"]')
+    new_chat_button.click()
+
+    # プロンプトを入力
+    user_prompt = page.locator('textarea#textareaMessage')
+    user_prompt.fill('abcde')
+    user_prompt.press("Control+Enter")
+
+    # 回答を取得
+    page.wait_for_selector('#MessagesInChatdiv div.toast-body')  # 回答が表示されるまで待機
+    replies = page.query_selector_all('#MessagesInChatdiv div.toast-body')
+    if replies:
+        last_reply = replies[-1]
+        print("回答:", last_reply.inner_text())
+
 
     # name属性がxxxxのインプットボックスに「あいうえお」を入力
     newButton = page.locator('//span[text()="新しい会話を開始"]')

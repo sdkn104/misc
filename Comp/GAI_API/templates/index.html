@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT風チャットアプリ</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script>
+        async function sendMessage() {
+            const messageInput = document.getElementById('message');
+            const message = messageInput.value.trim();
+            if (!message) return;
+
+            const response = await fetch('/send_message', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                const chatBox = document.getElementById('chat-box');
+                chatBox.innerHTML += `<div class="message user-message">${message}</div>`;
+                chatBox.innerHTML += `<div class="message bot-message">${data.response}</div>`;
+                chatBox.scrollTop = chatBox.scrollHeight;
+                messageInput.value = '';
+            } else {
+                alert(data.error || 'エラーが発生しました。');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>ChatGPT風チャット</h1>
+        </div>
+        <div id="chat-box" class="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="message" placeholder="メッセージを入力..." onkeypress="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">送信</button>
+        </div>
+    </div>
+</body>
+</html>
