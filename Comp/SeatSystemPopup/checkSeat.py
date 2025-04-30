@@ -1,8 +1,11 @@
 import os
 import csv
-import tkinter as tk
-from tkinter import messagebox
 from win10toast import ToastNotifier
+
+# 1. 実行者のユーザ名を取得する。
+# 2. .\user.csvを読み込み、ユーザ名列が実行ユーザ名と一致する行を取得し、状況列の値を取得する
+# 3. 値が「退社」のときにポップアップを表示する。
+
 
 def get_executing_username():
     """Retrieve the username of the executing user."""
@@ -21,7 +24,7 @@ def get_user_status(file_path, username):
         reader = csv.DictReader(file)
         for row in reader:
             if row.get("ユーザ名") == username:
-                return row.get("状況")
+                return row.get("状況")  # Return the value of the "状況" column
     return None
 
 def show_popup(message):
@@ -39,3 +42,4 @@ if __name__ == "__main__":
     
     if status == "退社":
         show_popup(f"ユーザ {username} は退社しています。")
+        
