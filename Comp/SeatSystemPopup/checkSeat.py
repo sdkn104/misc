@@ -30,7 +30,7 @@ def get_user_status(file_path, username):
 def show_popup(message):
     """Display a Windows toast notification with the given message."""
     toaster = ToastNotifier()
-    toaster.show_toast("Notification", message, duration=10)
+    toaster.show_toast("Notification", message, duration=10, icon_path="python.ico")
 
 # Example usage
 if __name__ == "__main__":
