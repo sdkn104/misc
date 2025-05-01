@@ -1,5 +1,5 @@
 ## DESCRIPTION
-* This program check the status of current PC user in Seat System D/B, and warning toast notification if status is not set.
+* This program check the status of current PC user in Seat System D/B, and warns by toast notification if status is not set.
 * This program assumes to be called by Windows Task Scheduler periodically, while a user is logged on and network is connected.
 
 ## HOW TO UPDATE and DEPLOY
