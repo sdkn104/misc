@@ -2,6 +2,8 @@ import os
 import csv
 from win11toast import toast
 
+# (C) 2025 sadakane, buhyo
+
 # これは座席管理システムのためのPythonスクリプトです。以下の指示文により生成しました（一部手修正）。
 # 1. 実行者のユーザ名を取得する。
 # 2. .\user.csvを読み込み、ユーザ名列が実行ユーザ名と一致する行を取得し、状況列の値を取得する
