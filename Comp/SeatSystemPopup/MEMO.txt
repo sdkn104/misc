@@ -1,3 +1,0 @@
-
-pyinstaller --onefile checkSeat.py
-dist/checkSear.exe

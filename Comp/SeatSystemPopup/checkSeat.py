@@ -1,11 +1,10 @@
 import os
 import csv
-from win10toast import ToastNotifier
+from win11toast import toast
 
 # 1. 実行者のユーザ名を取得する。
 # 2. .\user.csvを読み込み、ユーザ名列が実行ユーザ名と一致する行を取得し、状況列の値を取得する
-# 3. 値が「退社」のときにポップアップを表示する。
-
+# 3. 値が「退社」のときにポップアップを表示する。windowsのトーストメッセージを表示するようにしてください。
 
 def get_executing_username():
     """Retrieve the username of the executing user."""
@@ -29,8 +28,7 @@ def get_user_status(file_path, username):
 
 def show_popup(message):
     """Display a Windows toast notification with the given message."""
-    toaster = ToastNotifier()
-    toaster.show_toast("Notification", message, duration=10, icon_path="python.ico")
+    toast("★座席管理システム", message, duration="long", scenario="reminder", button={'activationType': 'protocol', 'arguments': 'https://google.com', 'content': '座席管理システムを開く'})  # For Windows 11
 
 # Example usage
 if __name__ == "__main__":
@@ -41,5 +39,5 @@ if __name__ == "__main__":
     status = get_user_status(csv_path, username)
     
     if status == "退社":
-        show_popup(f"ユーザ {username} は退社しています。")
+        show_popup(f"状態が「退社」となっています。登録をお願いします。")
         
