@@ -2,9 +2,12 @@ import os
 import csv
 from win11toast import toast
 
+# これは座席管理システムのためのPythonスクリプトです。以下の指示文により生成しました（一部手修正）。
 # 1. 実行者のユーザ名を取得する。
 # 2. .\user.csvを読み込み、ユーザ名列が実行ユーザ名と一致する行を取得し、状況列の値を取得する
-# 3. 値が「退社」のときにポップアップを表示する。windowsのトーストメッセージを表示するようにしてください。
+# 3. 値が「退社」のときにポップアップを表示する。windows11のトーストメッセージを表示するようにしてください。
+#      メッセージ内に「座席管理システムを開く」ボタンを配置し、クリックするとhttps://google.comに遷移するようにしてください。
+#      メッセージのタイトルは「★座席管理システム」、メッセージ本文は「状態が「退社」となっています。登録をお願いします。」としてください。
 
 def get_executing_username():
     """Retrieve the username of the executing user."""
@@ -28,7 +31,12 @@ def get_user_status(file_path, username):
 
 def show_popup(message):
     """Display a Windows toast notification with the given message."""
-    toast("★座席管理システム", message, duration="long", scenario="reminder", button={'activationType': 'protocol', 'arguments': 'https://google.com', 'content': '座席管理システムを開く'})  # For Windows 11
+    toast("★座席管理システム", 
+          message, 
+          duration="long", 
+          scenario="reminder", 
+          button={'activationType': 'protocol', 'arguments': 'https://google.com', 'content': '座席管理システムを開く'}
+    )  # For Windows 11
 
 # Example usage
 if __name__ == "__main__":
