@@ -25,6 +25,9 @@ def query_rag():
         for i, (result, score) in enumerate(results, 1):
             print(f"結果 {i}:")
             print(f"ファイル名: {result.metadata.get('file_path', '不明')}")  # ファイル名を表示
+            print(f"件名: {result.metadata.get('subject', '不明')}")  # 件名を表示
+            print(f"日時: {result.metadata.get('date', '不明')}")  # 日時を表示
+            print(f"差出人: {result.metadata.get('sender', '不明')}")  # 差出人を表示
             print(f"スコア: {score}")  # スコアを表示
             print(result.page_content)
             print("\n-------------------------------------------------------------\n")
