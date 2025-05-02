@@ -2,7 +2,7 @@
 ```
 pip install <packageName>
 pip freeze > requirements.txt
-pip install -r requirements.txt
+pip install [--upgrade] -r requirements.txt
 ```
 
 ## venv
