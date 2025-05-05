@@ -3,6 +3,8 @@
 pip install <packageName>
 pip freeze > requirements.txt
 pip install [--upgrade] -r requirements.txt
+
+pip list -o
 ```
 
 ## venv
