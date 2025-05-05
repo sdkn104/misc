@@ -15,7 +15,7 @@ py -3.12 -m venv myenv
 
 # start venv
 .\myenv\Scripts\activate
-
+python -V
 # 
 pip install <package-name>
 python xxxx.py
