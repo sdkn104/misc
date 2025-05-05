@@ -1,6 +1,6 @@
 
 
-set INTERPRETER_MODEL=gpt-4
+set INTERPRETER_MODEL=gpt-4.1
 # set HTTP_PROXY=http://proxy.mei.melco.co.jp:9515
 # set HTTPS_PROXY=http://proxy.mei.melco.co.jp:9515
 
