@@ -9,6 +9,7 @@ Set-Location -Path $PSScriptRoot
 
 & ./secret.ps1
 
+# RUSTC path
 $env:PATH=$HOME + "\.cargo\bin;" + $env:PATH
 
 Start-Process powershell -ArgumentList '-NoExit', '-Command', '.\myenv\Scripts\Activate.ps1'
