@@ -3,6 +3,8 @@
 pip install <packageName>
 pip freeze > requirements.txt
 pip install [--upgrade] -r requirements.txt
+
+pip list -o
 ```
 
 ## venv
@@ -15,7 +17,7 @@ py -3.12 -m venv myenv
 
 # start venv
 .\myenv\Scripts\activate
-
+python -V
 # 
 pip install <package-name>
 python xxxx.py
