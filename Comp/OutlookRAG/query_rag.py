@@ -1,11 +1,15 @@
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import OpenAIEmbeddings
 from langchain.llms import OpenAI
+from sentence_transformers import SentenceTransformer
+
+# Initialize the SBERT model globally
+sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def query_rag():
     """RAGに問い合わせを行い、結果を表示し、回答を生成する"""
     # ベクトルストアのロード
-    vectorstore = FAISS.load_local("email_vectorstore", OpenAIEmbeddings(), allow_dangerous_deserialization=True)
+    vectorstore = FAISS.load_local("email_vectorstore", sbert_model.encode, allow_dangerous_deserialization=True)
+    # Vectorstoreファイルを読み出す
 
     # LLMの初期化
     llm = OpenAI(temperature=0.7)
