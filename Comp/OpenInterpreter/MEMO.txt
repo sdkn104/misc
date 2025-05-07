@@ -1,0 +1,14 @@
+
+1- install Visual Studio C++ Build tools
+https://qiita.com/mk-tool/items/0a602ce3d5eae428c308
+https://www.rust-lang.org/ja/tools/install
+最新版でよさそう　C++をチェック
+
+- install rust
+
+- py -3.12 -m pip install open-interpreter
+
+interpreter --profiles
+
+
+
