@@ -1,14 +1,19 @@
 from langchain_community.vectorstores import FAISS
-from langchain.llms import OpenAI
-from sentence_transformers import SentenceTransformer
+#from langchain.llms import OpenAI
+from langchain_huggingface import HuggingFaceEmbeddings
+#from langchain_community.llms import OpenAI
+from langchain_openai import OpenAI
 
 # Initialize the SBERT model globally
-sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
+#sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def query_rag():
     """RAGに問い合わせを行い、結果を表示し、回答を生成する"""
+    # SBERT系のモデル（Hugging Face Hub上のSentenceTransformer）を指定
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     # ベクトルストアのロード
-    vectorstore = FAISS.load_local("email_vectorstore", sbert_model.encode, allow_dangerous_deserialization=True)
+    #vectorstore = FAISS.load_local("email_vectorstore", sbert_model.encode, allow_dangerous_deserialization=True)
+    vectorstore = FAISS.load_local("email_vectorstore", embeddings, allow_dangerous_deserialization=True)
     # Vectorstoreファイルを読み出す
 
     # LLMの初期化
