@@ -7,8 +7,8 @@ pip install [--upgrade] -r requirements.txt
 pip list -o
 
 # optimize/init module versions
-pip freeze > requirement.txt
-pip uninstall -y -r requirement.txt
+pip freeze > requirements.txt
+pip uninstall -y -r requirements.txt
 python -m pip install -U pip
 pip install pip-tools
 mv requirements.txt requirements.in
