@@ -9,7 +9,7 @@ pip list -o
 # optimize/init module versions
 pip freeze > requirement.txt
 pip uninstall -r requirement.txt
-pip -m pip install -U pip
+python -m pip install -U pip
 pip install pip-tools
 mv requirement.txt requirement.in
 pip-compile requirements.in  # created requirement.txt
