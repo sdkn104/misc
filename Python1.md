@@ -16,6 +16,9 @@ cat requirements.txt | foreach { $_ -replace '==.*', ''} | set-content "requirem
 pip-compile requirements.in  # created requirements.txt optimizing versions
 pip install -r requirements.txt
 
+pip index versions ライブラリ名
+pipdeptree
+
 ```
 
 ## venv
