@@ -11,11 +11,10 @@ pip freeze > requirement.txt
 pip uninstall -r requirement.txt
 python -m pip install -U pip
 pip install pip-tools
-mv requirement.txt requirement.in
-pip-compile requirements.in  # created requirement.txt
+mv requirements.txt requirements.in
+pip-compile requirements.in  # created requirements.txt
 pip install -r requirements.txt
 
-pip list -o
 ```
 
 ## venv
