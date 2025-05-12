@@ -11,8 +11,9 @@ pip freeze > requirements.txt
 pip uninstall -y -r requirements.txt
 python -m pip install -U pip
 pip install pip-tools
-mv requirements.txt requirements.in
-pip-compile requirements.in  # created requirements.txt
+cat requirements.txt | foreach { $_ -replace '==.*', ''} | set-content "requirements.in"
+#mv requirements.txt requirements.in
+pip-compile requirements.in  # created requirements.txt optimizing versions
 pip install -r requirements.txt
 
 ```
