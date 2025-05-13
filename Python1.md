@@ -5,6 +5,20 @@ pip freeze > requirements.txt
 pip install [--upgrade] -r requirements.txt
 
 pip list -o
+
+# optimize/init module versions
+pip freeze > requirements.txt
+pip uninstall -y -r requirements.txt
+python -m pip install -U pip
+pip install pip-tools
+cat requirements.txt | foreach { $_ -replace '==.*', ''} | set-content "requirements.in"
+#mv requirements.txt requirements.in
+pip-compile requirements.in  # created requirements.txt optimizing versions
+pip install -r requirements.txt
+
+pip index versions ライブラリ名
+pipdeptree
+
 ```
 
 ## venv
