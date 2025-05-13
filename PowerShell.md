@@ -248,7 +248,7 @@ function head( [string]$Path ) {
      $input | Select-Object -First 10
    }
 }
-function diff( [string]$file1 [string]$file2 ) {
+function diff( [string]$file1, [string]$file2 ) {
     <#
         .DESCRIPTION
         diff file1 file2
