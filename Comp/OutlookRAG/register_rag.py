@@ -1,7 +1,7 @@
 import json
 from langchain.schema import Document
 from langchain_community.vectorstores import FAISS
-from sentence_transformers import SentenceTransformer
+#from sentence_transformers import SentenceTransformer
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from datetime import datetime
 #from langchain.embeddings import HuggingFaceEmbeddings
@@ -48,6 +48,7 @@ def register_emails_to_vectorstore(emails, vectorstore_path):
 
     # SBERT系のモデル（Hugging Face Hub上のSentenceTransformer）を指定
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    #embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     # Vectorstoreに登録
     vectorstore = FAISS.from_documents(chunked_documents, embeddings)
     print("vectorstore", datetime.now())

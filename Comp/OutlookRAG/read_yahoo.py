@@ -65,7 +65,7 @@ def save_emails_to_json(emails, filename="emails.json"):
 def main():
     """メイン処理"""
     username = "sdkn104@yahoo.co.jp"  # Yahooメールのメールアドレス
-    password = "Karatani3"  # アプリパスワード
+    password = ""  # アプリパスワード
 
     emails = fetch_yahoo_emails(username, password)
     save_emails_to_json(emails)
