@@ -237,6 +237,24 @@ function wc( [string]$Path ) {
      $input | Measure-Object -Line -Word -Character
    }
 }
+function head( [string]$Path ) {
+    <#
+        .DESCRIPTION
+        head shows the first 10 lines/objects.0
+    #>
+   if( $Path ) {
+     Get-Content $Path -Head 10
+   } else {
+     $input | Select-Object -First 10
+   }
+}
+function diff( [string]$file1, [string]$file2 ) {
+    <#
+        .DESCRIPTION
+        diff file1 file2
+    #>
+    Compare-Object (cat $file1) (cat $file2)
+}
 
 Set-Alias grep Select-String
 Set-Alias uniq Group-Object
