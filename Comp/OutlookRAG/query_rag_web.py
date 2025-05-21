@@ -2,13 +2,16 @@ from flask import Flask, render_template_string, request
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
 
 app = Flask(__name__)
 
 # 初期化（グローバルで一度だけロード）
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-vectorstore = FAISS.load_local("email_vectorstore", embeddings, allow_dangerous_deserialization=True)
+#vectorstore = FAISS.load_local("email_vectorstore", embeddings, allow_dangerous_deserialization=True)
+vectorstore = FAISS.load_local("pdf_vectorstore", embeddings, allow_dangerous_deserialization=True)
 llm = OpenAI(temperature=0.7)
+#llm = ChatOpenAI(model="gpt-4o", temperature=0.7)
 
 HTML = '''
 <!doctype html>
@@ -44,7 +47,7 @@ def index():
     query = ''
     if request.method == 'POST':
         query = request.form['query']
-        results = vectorstore.similarity_search_with_score(query, k=5)
+        results = vectorstore.similarity_search_with_score(query, k=3)
         combined_content = "\n".join([result.page_content for result, _ in results])
         prompt = f"以下の情報を基に、質問に対する回答を作成してください:\n\n{combined_content}\n\n質問: {query}"
         answer = llm(prompt)

@@ -1,0 +1,37 @@
+[ERROR] https://www.meti.go.jp/policy/economy/consumer/credit/2301atobaraigaiyousiryou.pdf: HTTPSConnectionPool(host='www.meti.go.jp', port=443): Read timed out. (read timeout=60)
+[ERROR] https://www.chusho.meti.go.jp/keiei/torihiki/guideline/06_info-services_soft.pdf: HTTPSConnectionPool(host='www.chusho.meti.go.jp', port=443): Read timed out. (read timeout=60)
+
+[ERROR] https://www.enecho.meti.go.jp/category/saving_and_new/saving/enterprise/factory/support-tools/data/2022_01benchmark.pdf: HTTPSConnectionPool(host='www.enecho.meti.go.jp', port=443): Read timed out. (read timeout=60)       
+
+[ERROR] https://www.meti.go.jp/shingikai/sankoshin/seizo_sangyo/textile_industry/pdf/20220518_2.pdf: HTTPSConnectionPool(host='www.meti.go.jp', port=443): Read timed out. (read timeout=60)
+[ERROR] https://www.meti.go.jp/report/whitepaper/mono/2024/pdf/gaiyo.pdf: HTTPSConnectionPool(host='www.meti.go.jp', port=443): Read timed out. (read timeout=60)
+[ERROR] https://www.meti.go.jp/product_safety/consumer/system/iot_guideline.pdf: HTTPSConnectionPool(host='www.meti.go.jp', port=443): Read timed out. (read timeout=60)
+[ERROR] https://www.meti.go.jp/shingikai/mono_info_service/new_cvs/pdf/003_02_04.pdf: HTTPSConnectionPool(host='www.meti.go.jp', port=443): Read timed out. (read timeout=60)
+[ERROR] https://www.chusho.meti.go.jp/shogyo/shogyo/2021/download/r3fy-FC-all.pdf: HTTPSConnectionPool(host='www.chusho.meti.go.jp', port=443): Read timed out. (read timeout=60)
+
+[ERROR] https://www.nichiyaku.or.jp/assets/uploads/pharmacy-info/210928.pdf: 404 Client Error: Not Found for url: https://www.nichiyaku.or.jp/assets/uploads/pharmacy-info/210928.pdf
+
+[ERROR] https://www.chusho.meti.go.jp/shogyo/shogyo/2022/download/220408shoutengai01.pdf: HTTPSConnectionPool(host='www.chusho.meti.go.jp', port=443): Read timed out. (read timeout=60)
+[ERROR] https://www.meti.go.jp/policy/newbusiness/kaisetsushiryou_2024.pdf: HTTPSConnectionPool(host='www.meti.go.jp', port=443): Read timed out. (read timeout=60)
+PS C:\Users\toshiyuki\Desktop\NoSync\misc\Comp\OutlookRAG>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,7 +10,8 @@ app = Flask(__name__)
 
 # 初期化（グローバルで一度だけロード）
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-vectorstore = FAISS.load_local("email_vectorstore", embeddings, allow_dangerous_deserialization=True)
+#vectorstore = FAISS.load_local("email_vectorstore", embeddings, allow_dangerous_deserialization=True)
+vectorstore = FAISS.load_local("pdf_vectorstore", embeddings, allow_dangerous_deserialization=True)
 llm = ChatOpenAI()
 retrieval_qa_chat_prompt = hub.pull("langchain-ai/retrieval-qa-chat")
 print("retrieval_qa_chat_prompt", retrieval_qa_chat_prompt)

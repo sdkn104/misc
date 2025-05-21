@@ -11,6 +11,9 @@ def query_rag():
     """RAGに問い合わせを行い、結果を表示し、回答を生成する"""
     # SBERT系のモデル（Hugging Face Hub上のSentenceTransformer）を指定
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    # model  E5
+    #embeddings = HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-large")
+
     # ベクトルストアのロード
     #vectorstore = FAISS.load_local("email_vectorstore", sbert_model.encode, allow_dangerous_deserialization=True)
     vectorstore = FAISS.load_local("email_vectorstore", embeddings, allow_dangerous_deserialization=True)
