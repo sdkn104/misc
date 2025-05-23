@@ -9,42 +9,21 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import pandas as pd
 
 
-def load_emails_from_json(file_path):
+def load_docs_from_json(file_path, text_key="text"):
     """JSONファイルからメールデータを読み込む"""
     with open(file_path, 'r', encoding='utf-8') as json_file:
-        emails = json.load(json_file)
+        items = json.load(json_file)
     documents = []
-    for email in emails:
+    for item in items:
+        page_content = item.pop(text_key, None)
         documents.append(Document(
-            page_content=email["body"],
-            metadata={
-                "subject": email["subject"],
-                "from": email["from"],
-                "to": email["to"],
-                "cc": email["cc"],
-                "attachments": email.get("attachments", [])
-            }
+            page_content=page_content,
+            metadata=item
         ))
     print("read JSON", datetime.now())
     return documents
 
-def load_rag_dataset():
-    dfq = pd.read_csv("hf://datasets/allganize/RAG-Evaluation-Dataset-JA/rag_evaluation_result.csv")
-    dfd = pd.read_csv("hf://datasets/allganize/RAG-Evaluation-Dataset-JA/documents.csv")
-    documents = []
-    for index, row in dfd.iterrows():
-        documents.append(Document(
-            page_content=row["title"],
-            metadata={
-                "domain": row["domain"],
-                "file_name": row["file_name"],
-                "publisher": row["publisher"]
-            }
-        ))
-    print("read docs", datetime.now())
-    return documents
-
-def register_emails_to_vectorstore(documents, vectorstore_path):
+def register_docs_to_vectorstore(documents, vectorstore_path):
     """メールデータをチャンク分割し、RAGのvectorstoreに登録する"""
 
 
@@ -69,12 +48,20 @@ def main():
     """メイン処理"""
     input_file = "emails.json"  # メールデータが格納されたJSONファイル
     vectorstore_path = "email_vectorstore"  # Vectorstore保存先
+    content_key = "body"  # JSONのテキストキー
 
-    #docs = load_emails_from_json(input_file)
-    docs = load_rag_dataset()
-    register_emails_to_vectorstore(docs, vectorstore_path)
+    input_file = "pdfs.json"  # メールデータが格納されたJSONファイル
+    vectorstore_path = "pdfs_vectorstore"  # Vectorstore保存先
+    content_key = "text"  # JSONのテキストキー
 
-    print(f"メールデータをVectorstoreに登録しました。保存先: {vectorstore_path}")
+    input_file = "rag_dataset.json"  # メールデータが格納されたJSONファイル
+    vectorstore_path = "rag_dataset_vectorstore"  # Vectorstore保存先
+    content_key = "text"  # JSONのテキストキー
+
+    docs = load_docs_from_json(input_file, content_key)
+    register_docs_to_vectorstore(docs, vectorstore_path)
+
+    print(f"データをVectorstoreに登録しました。入力データ: {input_file} 保存先: {vectorstore_path}")
 
 if __name__ == "__main__":
     main()
