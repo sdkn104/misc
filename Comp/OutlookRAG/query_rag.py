@@ -2,10 +2,14 @@ from langchain_community.vectorstores import FAISS
 #from langchain.llms import OpenAI
 from langchain_huggingface import HuggingFaceEmbeddings
 #from langchain_community.llms import OpenAI
-from langchain_openai import OpenAI
+
+#from langchain_openai import OpenAI
+from langchain_openai import AzureChatOpenAI 
 
 # Initialize the SBERT model globally
 #sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
+
+
 
 def query_rag():
     """RAGに問い合わせを行い、結果を表示し、回答を生成する"""
@@ -22,7 +26,13 @@ def query_rag():
     # Vectorstoreファイルを読み出す
 
     # LLMの初期化
-    llm = OpenAI()
+    #llm = OpenAI()
+    llm = AzureChatOpenAI (
+        deployment_name="gpt-4.1",  # Azure OpenAIのデプロイメント名を指定
+        model="gpt-4.1",  # 使用するモデルを指定
+    )
+    print(llm)
+
 
     while True:
         # ユーザからの問い合わせを受け取る
@@ -47,7 +57,8 @@ def query_rag():
         # 検索結果を基に回答を生成
         combined_content = "\n".join([result.page_content for result, _ in results])
         prompt = f"以下の情報を基に、質問に対する回答を作成してください:\n\n{combined_content}\n\n質問: {query}"
-        answer = llm(prompt)
+        #answer = llm(prompt)
+        answer = llm.invoke(prompt)
 
         print("\n=== 回答 ===")
         print(f"質問: {query}")

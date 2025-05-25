@@ -18,8 +18,8 @@
 import os
 from openai import AzureOpenAI
 
-endpoint = os.getenv("ENDPOINT_URL", "https://sdkn1-m4cm14py-swedencentral.openai.azure.com/")  
-deployment = os.getenv("DEPLOYMENT_NAME", "gpt-4")  
+endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://sdkn1-m4cm14py-swedencentral.openai.azure.com/")  
+deployment = os.getenv("DEPLOYMENT_NAME", "gpt-4.1")  # deployしたバージョンを記入
 subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "")  
 
 print(endpoint)
