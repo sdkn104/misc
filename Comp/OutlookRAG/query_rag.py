@@ -29,7 +29,7 @@ def query_rag():
     #llm = OpenAI()
     llm = AzureChatOpenAI (
         deployment_name="gpt-4.1",  # Azure OpenAIのデプロイメント名を指定
-        model="gpt-4.1",  # 使用するモデルを指定
+        model="gpt-4.1",  # https://ai.azure.com/　でデプロイしたモデル
     )
     print(llm)
 
