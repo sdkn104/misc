@@ -2,6 +2,7 @@ import streamlit as st
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import OpenAI
+from langchain_openai import AzureChatOpenAI 
 
 vectorstore_path = "email_vectorstore"  # ベクトルストアのパス
 vectorstore_path = "rag_dataset_vectorstore"  # ベクトルストアのパス
@@ -18,7 +19,13 @@ def load_vectorstore():
 
 @st.cache_resource
 def load_llm():
-    return OpenAI(temperature=0.7)
+    llm = OpenAI(temperature=0.7)
+    llm = AzureChatOpenAI (
+        deployment_name="gpt-4.1",  # Azure OpenAIのデプロイメント名を指定
+        model="gpt-4.1",  # https://ai.azure.com/　でデプロイしたモデル
+    )
+    print(llm)
+    return llm
 
 st.title("RAG メール検索 (Streamlit版)")
 st.write(f"ベクトルストア{vectorstore_path}に対して自然言語で検索・質問できます。")
@@ -39,7 +46,7 @@ if query:
 
     combined_content = "\n".join([result.page_content for result, _ in results])
     prompt = f"以下の情報を基に、質問に対する回答を作成してください:\n\n{combined_content}\n\n質問: {query}"
-    answer = llm(prompt)
+    answer = llm.invoke(prompt)
 
     st.subheader("=== 回答 ===")
     st.write(f"**質問:** {query}")
