@@ -54,4 +54,7 @@ def test_tool():
 
 if __name__ == "__main__":
     print(mcp)  # サーバ情報を表示
-    mcp.run()  # ポート番号は適宜変更してください
+    # Settings are accessible via mcp.settings
+    print("mcp settings:", mcp.settings)
+    #mcp.run()
+    mcp.run(transport="streamable-http", host="127.0.0.1", port=9000)
