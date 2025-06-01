@@ -41,3 +41,7 @@ docker compose up -d
   # to be belong to group docker
   ```
 
+## MCP server
+https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
+
+https://zenn.dev/upgradetech/articles/24a7d76133af4c
