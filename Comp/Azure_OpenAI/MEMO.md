@@ -21,5 +21,9 @@
     * -> Azure AI Foundry ポータルのプレイグラウンドで試使用可能
 
 1. API キーとエンドポイントの取得
+    * Azure AI Foundry ポータルの「デプロイ」から確認できます。
     * リソースの「Keys and Endpoint（キーとエンドポイント）」セクションで、API キーとエンドポイント URL を確認できます。
+    * キーとエンドポイントのroot部分はリソースで同一と思われる
 
+1. APIバージョン
+    * 使用するとき、利用可能なバージョンを指定すればよい。[最新バージョン](https://learn.microsoft.com/ja-jp/azure/ai-services/openai/api-version-lifecycle?tabs=key#updating-api-versions)

@@ -12,5 +12,5 @@ Set-Location -Path $PSScriptRoot
 # RUSTC path
 $env:PATH=$HOME + "\.cargo\bin;" + $env:PATH
 
-Start-Process powershell -ArgumentList '-NoExit', '-Command', '{& .\myenv\Scripts\Activate.ps1;   To save env to file, Dump-Versions}'
+Start-Process powershell -ArgumentList '-NoExit', '-Command', '.\myenv\Scripts\Activate.ps1; echo "Dump-Versions to_save"'
 

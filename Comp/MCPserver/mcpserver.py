@@ -23,7 +23,7 @@ mcp = FastMCP(
 
 @mcp.tool(
     name="update_kaiseki_yoteibi",
-    description="KAISEKI_MSTテーブルのtouroku_noでyoteibiを更新する",
+    description="解析テーブルのtouroku_noでyoteibiを更新する",
     #returns=ToolReturn("result", str, "更新結果")
 )
 def update_kaiseki_yoteibi(
