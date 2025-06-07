@@ -16,10 +16,8 @@ yoteibi列に指定値を登録するものとします。
 ORACLE_DSN = "user/password@localhost:1521/ORCLPDB1"
 
 mcp = FastMCP(
-    name="Oracle Update MCP Server",
-    instructions="""
-        This server provides updating Oracle Database table.
-        """,
+    name="oracle_db",
+    instructions="""このサーバは、Oracleのdatabaseに接続し、テーブルを更新したり、テーブルの値を取得したりするためのツールを提供します。"""
     #port=8000,  # ポート番号は適宜変更してください
 )
 
@@ -30,7 +28,7 @@ mcp = FastMCP(
 )
 def update_kaiseki_yoteibi(
     touroku_no: str = Field(description="登録番号"), 
-    yoteibi: str = Field(description="予定日 (YYYY-MM-DD)"), 
+    yoteibi: str = Field(description="予定日 (YYYYMMDD)"), 
 ):
     try:
         with oracledb.connect(ORACLE_DSN) as conn:
@@ -46,11 +44,12 @@ def update_kaiseki_yoteibi(
 
 # テスト用ツール
 @mcp.tool(
-    name="test_tool",
-    description="テスト用の固定値を返すツール",
+    name="get_users",
+    description="Oracle databaseのユーザのリストを取得する",
 )
-def test_tool():
-    return {"result": "テスト成功"}
+def get_users():
+    return {"result": ["user1", "user2", "user3"]}
+
 
 if __name__ == "__main__":
     print(mcp)  # サーバ情報を表示

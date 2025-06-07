@@ -13,9 +13,9 @@ async def main():
         tools = await client.list_tools()
         print(f"Available tools: {tools}")
 
-        if any(tool.name == "test_tool" for tool in tools):
-            result = await client.call_tool("test_tool", {})
-            print(f"Tool result: {result}")
+        # Access tools from different servers with prefixes
+        response = await client.call_tool("get_users", {})        
+        print(f"response of get_users: {response}")
 
     # Connection is closed automatically here
     print(f"Client connected: {client.is_connected()}")

@@ -1,9 +1,12 @@
 ## dev / setup / install
 ```
+# install modules
 pip install <packageName>
 pip freeze > requirements.txt
 pip install [--upgrade] -r requirements.txt
+python -V > python.ver.txt
 
+# list modules
 pip list -o
 
 # optimize/init module versions
