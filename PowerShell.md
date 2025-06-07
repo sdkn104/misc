@@ -256,6 +256,17 @@ function difff( [string]$file1, [string]$file2 ) {
     Compare-Object (cat $file1) (cat $file2)
 }
 
+function Dump-Versions() {
+    <#
+        .DESCRIPTION
+        Dump-Versions
+         python -V > python.ver.txt
+         pip freeze > requirements.frz.txt
+    #>
+    python -V > python.ver.txt
+    pip freeze > requirements.frz.txt
+}
+
 Set-Alias grep Select-String
 Set-Alias uniq Group-Object
 
