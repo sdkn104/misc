@@ -1,0 +1,23 @@
+---
+displayMode: compact
+config:
+  theme: default
+---
+gantt
+    title 製造工程のガントチャート
+    dateFormat  YYYY-MM-DD
+    tickInterval 1month
+    axisFormat %Y-%m 
+    excludes    weekends
+    section 材料調達
+    材料発注           :a1, 2025-06-10, 20d
+    材料受入           :a2, after a1, 4w
+    section 加工
+    切断               :b1, 2025-08-01, 2w
+    成形               :b2, after b1, 2w
+    溶接               :b3, after b2, 2w
+    section 組立
+    組立               :c1, after b3, 2w
+    section 検査・出荷
+    検査               :d1, after c1, 1w
+    出荷               :d2, after d1, 1w
