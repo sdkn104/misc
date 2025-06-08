@@ -2,6 +2,9 @@
 displayMode: compact
 config:
   theme: default
+  gantt:
+    axisFontSize: 24
+    todayMarker: off
 ---
 gantt
     title 製造工程のガントチャート
@@ -13,7 +16,7 @@ gantt
     材料発注           :a1, 2025-06-10, 20d
     材料受入           :a2, after a1, 4w
     section 加工
-    切断               :b1, 2025-08-01, 2w
+    切断               :b1, 2025-08-15, 2w
     成形               :b2, after b1, 2w
     溶接               :b3, after b2, 2w
     section 組立
