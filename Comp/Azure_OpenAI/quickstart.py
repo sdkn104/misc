@@ -18,8 +18,8 @@
 import os
 from openai import AzureOpenAI
 
-endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://sdkn1-m4cm14py-swedencentral.openai.azure.com/")  
-deployment = os.getenv("DEPLOYMENT_NAME", "gpt-4.1")  # deployしたバージョンを記入
+endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "")  
+deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
 subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "")  
 
 print(endpoint)
@@ -30,7 +30,7 @@ print(subscription_key)
 client = AzureOpenAI(  
     azure_endpoint=endpoint,  
     api_key=subscription_key,  
-    api_version="2024-05-01-preview",  
+    api_version="2024-10-21",  # Use the latest API version
 )  
 response = client.chat.completions.create(
     model=deployment, # model = "deployment_name".
