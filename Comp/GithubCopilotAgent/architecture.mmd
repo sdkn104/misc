@@ -1,0 +1,8 @@
+architecture-beta
+    group integration(cloud)[Integration Flow]
+    service excel(logos:microsoft)[Excel]
+    service powerautomate(server)[Power Automate]
+    service oracledb(database)[Oracle DB]
+
+    excel:R --> L:powerautomate
+    powerautomate:R --> L:oracledb
