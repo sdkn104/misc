@@ -1,6 +1,6 @@
 ## Resources
 - [connector ref](https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerautomate-connectors)
-
+- [actions ref](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference)
 
 ## Forms to DB
 * Forms

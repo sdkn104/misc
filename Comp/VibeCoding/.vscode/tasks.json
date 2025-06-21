@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "mvn",
+            "args": ["clean", "package"],
+            "group": "build",
+            "problemMatcher": ["$javac"]
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "mvn",
+            "args": ["spring-boot:run"],
+            "group": "test",
+            "problemMatcher": ["$javac"]
+        }
+    ]
+}
