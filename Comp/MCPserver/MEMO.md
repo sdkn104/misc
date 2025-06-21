@@ -34,3 +34,6 @@ python PyMCP-FS\main.py -d path/to/directory
 https://github.com/upstash/context7
 * prompt: ex. create RAG with langchain. use tool #context7
 
+## Microsoft Learn Docs MCP Server
+https://github.com/MicrosoftDocs/mcp
+* prompt: ex. describe UserErrorGuestAgentStatusUnavailable, use #msdocsmicrosoft.docs.mcp
