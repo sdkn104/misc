@@ -1,3 +1,6 @@
+## VS Code MCP setting
+https://code.visualstudio.com/docs/copilot/chat/mcp-servers
+
 ## fetch MCP server
 https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
 
@@ -27,6 +30,7 @@ python PyMCP-FS\main.py -d path/to/directory
 3. push Tool button to show tools with descriptions, and turn on/off MCP servers
 4. type #tool_name (= mcp server name) in copilot prompt to call it
 
-## VS Code MCP setting
-https://code.visualstudio.com/docs/copilot/chat/mcp-servers
+## Context7 MCP server (code documents)
+https://github.com/upstash/context7
+* prompt: ex. create RAG with langchain. use tool #context7
 
