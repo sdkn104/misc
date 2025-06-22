@@ -1,0 +1,5 @@
+body { font-family: 'Meiryo', sans-serif; background: #f8f8f8; }
+header { background: #333; color: #fff; padding: 1em; }
+nav a { color: #fff; margin-right: 1em; }
+.product-list { display: flex; flex-wrap: wrap; gap: 2em; }
+.product-item { background: #fff; padding: 1em; border-radius: 8px; box-shadow: 0 2px 8px #ccc; width: 200px; }

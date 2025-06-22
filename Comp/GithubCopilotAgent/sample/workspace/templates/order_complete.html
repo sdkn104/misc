@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>購入完了</h2>
+<p>ご購入ありがとうございました。</p>
+<ul>
+{% for op in order.products %}
+    <li>{{ op.product.name }} - <a href="/download/{{ order.id }}/{{ op.product.id }}">ダウンロード</a></li>
+{% endfor %}
+</ul>
+<a href="/">トップページへ戻る</a>
+{% endblock %}

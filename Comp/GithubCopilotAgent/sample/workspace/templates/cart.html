@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>カート内容</h2>
+{% if cart_items %}
+<table>
+    <tr><th>商品名</th><th>価格</th></tr>
+    {% for item in cart_items %}
+    <tr>
+        <td>{{ item.product.name }}</td>
+        <td>{{ item.product.price }}円</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/checkout">購入手続きへ</a>
+{% else %}
+<p>カートは空です。</p>
+{% endif %}
+{% endblock %}

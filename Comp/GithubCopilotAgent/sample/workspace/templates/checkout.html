@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>購入手続き</h2>
+<form method="post">
+    <ul>
+    {% for item in cart_items %}
+        <li>{{ item.product.name }} - {{ item.product.price }}円</li>
+    {% endfor %}
+    </ul>
+    <p>合計: {{ cart_items|sum(attribute='product.price') }}円</p>
+    <h3>決済情報（ダミー）</h3>
+    <label>クレジットカード番号: <input type="text" name="card" required></label><br>
+    <button type="submit">注文確定</button>
+</form>
+{% endblock %}

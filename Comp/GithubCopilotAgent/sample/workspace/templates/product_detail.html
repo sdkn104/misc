@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ product.name }}</h2>
+<img src="/static/{{ product.image or 'noimage.png' }}" alt="表紙" width="200">
+<p>価格: {{ product.price }}円</p>
+<p>{{ product.description }}</p>
+<a href="/cart/add/{{ product.id }}">カートに追加</a>
+{% endblock %}

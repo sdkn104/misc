@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF販売ECサイト</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/">PDF販売ECサイト</a></h1>
+        <nav>
+            {% if current_user.is_authenticated %}
+                <span>{{ current_user.username }}さん</span>
+                <a href="/cart">カート</a>
+                <a href="/logout">ログアウト</a>
+            {% else %}
+                <a href="/login">ログイン</a>
+                <a href="/register">ユーザー登録</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
