@@ -33,8 +33,7 @@
 1. decodeUriComponent('%EF%BB%BF')  (https://zenn.dev/karamem0/articles/2020_09_30_120000)
 1. create file
 
-## download lists and files
-### Lists
+## download sharepoint lists and files
 1. get all lists and libraries
 1. for each
     1. if document library
