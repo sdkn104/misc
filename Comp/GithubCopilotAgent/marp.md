@@ -16,7 +16,7 @@ size: 16:9
 :root {
   --color-background: #f8f8f4;
   --color-foreground: #3a3b5a;
-  --color-heading: #4f86c6;
+  --color-heading: #000000; /*#4f86c6;*/
   --color-hr: #000000;
   --font-default: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
 }
@@ -24,7 +24,8 @@ size: 16:9
 /* --- スライド全体のスタイル --- */
 section {
   background-color: var(--color-background);
-  background-image: url("background.jpg");
+  background-image: url("\\mei660\\zzlow\\Hin_L\\buhyo\\名電電子部品委員会\\old\\ppt_template_A_16x9_JP_v1.0\\Slide2.jpg");
+  background-image: url("Slide2.jpg");
   background-size: cover;
   
   color: var(--color-foreground);
@@ -65,8 +66,8 @@ h1 {
 /* 通常スライドのタイトル(##) */
 h2 {
   position: absolute;
-  top: 40px;
-  left: 56px;
+  top: 20px;
+  left: 180px;
   right: 56px;
   font-size: 40px;
   padding-top: 0;
@@ -114,7 +115,7 @@ footer {
   right: 156px;
   bottom: 40px;
   height: 8px;
-  background-color: var(--color-heading);
+  /*background-color: var(--color-heading);*/
 }
 
 /* フッターにページ番号を表示 */
@@ -155,7 +156,7 @@ header {
 
 /* --- 先頭ページ --- */
 section.lead {
-  background-image: url("background-top.jpg");
+  background-image: url("Slide1.jpg");
   background-size: cover;
   //border-bottom: 8px solid var(--color-hr);
 }
