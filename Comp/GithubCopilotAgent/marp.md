@@ -107,14 +107,13 @@ li {
 
 /* フッターとして機能する、太い青いラインを実装 */
 footer {
-  font-size: 18px;
   color: transparent;  
   position: absolute;
   left: 56px;
-  right: 156px;
+  right: 56px;
   bottom: 40px;
   height: 8px;
-  background-color: var(--color-heading);
+  /*background-color: var(--color-heading);*/
 }
 
 /* フッターにページ番号を表示 */
@@ -157,7 +156,7 @@ header {
 section.lead {
   background-image: url("background-top.jpg");
   background-size: cover;
-  //border-bottom: 8px solid var(--color-hr);
+  /*border-bottom: 8px solid var(--color-hr);*/
 }
 
 /* タイトルページではフッターラインとロゴ(header)を非表示にする */
@@ -247,13 +246,9 @@ ABC社様のデジタル変革を支援しDXを図る
 
 ## 見出し2
 ### 見出し3
-#### 見出し4
-##### 見出し5
 ### （ここに次のスライドを追加）
 
 
----
----
 ---
 
 # Design Guideline
