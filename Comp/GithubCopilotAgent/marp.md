@@ -16,7 +16,7 @@ size: 16:9
 :root {
   --color-background: #f8f8f4;
   --color-foreground: #3a3b5a;
-  --color-heading: #000000; /*#4f86c6;*/
+  --color-heading: black; /*#4f86c6;*/
   --color-hr: #000000;
   --font-default: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
 }
@@ -24,7 +24,6 @@ size: 16:9
 /* --- スライド全体のスタイル --- */
 section {
   background-color: var(--color-background);
-  background-image: url("\\mei660\\zzlow\\Hin_L\\buhyo\\名電電子部品委員会\\old\\ppt_template_A_16x9_JP_v1.0\\Slide2.jpg");
   background-image: url("Slide2.jpg");
   background-size: cover;
   
@@ -186,7 +185,7 @@ section.lead p {
 </style>
 
 <!-- _class: lead -->
-
+ 
 # ABC社様
 # XXXプロジェクト計画書
 
