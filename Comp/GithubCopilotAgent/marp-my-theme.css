@@ -1,0 +1,179 @@
+/* @theme my-theme */
+
+@import 'default';
+
+
+/* --- 色やフォントの基本設定 --- */
+:root {
+  --color-background: #f8f8f4;
+  --color-foreground: #3a3b5a;
+  --color-heading: darkblue; /*#4f86c6;*/
+  --color-hr: #000000;
+  --ffont-default: '游ゴシック';
+  --font-default: 'メイリオ';
+  --bg-image-first-page: url("background_first.jpg");
+  --bg-image:            url("background.jpg");
+  --bg-image-final-page: url("background_final.jpg");
+  --font-size-section: 22px; /* スライドの基本フォントサイズ */
+  --font-size-h1: 56px;
+  --font-size-h2: 40px;
+  --font-size-h3: calc(var(--font-size-section) * 1.3);
+}
+
+/* --- スライド全体のスタイル --- */
+section {
+  background-color: var(--color-background);
+  background-image: var(--bg-image);
+  background-size: cover;
+  color: var(--color-foreground);
+  font-family: var(--font-default);
+  font-weight: 400;
+  font-size: var(--font-size-section);
+  line-height: 170%;    /* 行間隔 */
+  align-content: start; /* 縦寄せ */
+  padding: 56px;
+}
+
+/* ページ番号 */
+section::after {
+  font-weight: bold;
+  font-size: 28px
+}
+
+/* --- 見出しのスタイル --- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+  padding: 0;
+}
+
+/* タイトルページ(#)のスタイル */
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: 1.4;
+  text-align: left;
+  align-content: center; /* 縦寄せ */
+}
+
+/* 通常スライドのタイトル(##) */
+h2 {
+  position: absolute;
+  top: 20px;
+  left: 180px;
+  right: 56px;
+  font-size: var(--font-size-h2);
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+
+/* h2と後続コンテンツの間のスペースを確保 */
+h2 + * {
+  margin-top: 40px;
+}
+
+/* サブ見出し (例: 目的, 目標) */
+h3 {
+  color: var(--color-foreground);
+  font-size: var(--font-size-h3);
+  margin-bottom: 0.3em;
+}
+
+/* --- リストのスタイル --- */
+ul, ol {
+  padding-left: 1.5em;
+}
+li {
+  margin-bottom: 0em;
+}
+
+/* ヘッダー・フッター */
+header {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* フッターにページ番号を表示 */
+xxfooter::after {
+  content: counter(page) " / " counter(pages);
+  font-size: 24px;
+  color: #080808;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: none;
+  padding: 0 12px;
+}
+
+/* --- 先頭ページ --- */
+section.first {
+  background-image: var(--bg-image-first-page);
+  background-size: cover;
+}
+
+/* --- 最終ページ --- */
+section.final {
+  background-image: var(--bg-image-final-page);
+  background-size: cover;
+}
+
+/* 先頭、最終ページはヘッダ、フッタなし  */
+section.first footer,
+section.first header {
+  display: none;
+}
+
+/* 先頭、最終ページはページ番号なし */
+section.first::after,
+section.final::after {
+  display: none;
+}
+
+section.first h1 {
+  margin-bottom: 24px;
+}
+section.first p {
+  font-size: 24px;
+  color: var(--color-foreground);
+}
+
+/* テーブル */
+table th, table td {
+  background: linen;
+  border: solid 1px gray;
+  padding: 6x;
+}
+table {
+  border-collapse: separate;
+  border: solid 1px gray;
+}
+
+/* ガイドライン用のスタイル */
+.emph {
+  background-color: #fbe9e7;
+  color: #c62828;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.c-red {
+  color: red;
+}
+.c-blue {
+  color: blue;
+}
+.w50pct {
+  width: 50%;
+}
+.w30pct {
+  width: 30%;
+}
+.w70pct {
+  width: 70%;
+}
