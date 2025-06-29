@@ -147,13 +147,51 @@ section.first p {
 /* テーブル */
 table th, table td {
   background: linen;
-  border: solid 1px gray;
+  border: solid 0px gray;
   padding: 6x;
 }
 table {
   border-collapse: separate;
-  border: solid 1px gray;
+  border-spacing: 3px;
+  border: solid 0px gray;
 }
+
+/* flat table */
+.flat-table table {
+  border: none; 
+  th {
+    background-color:silver;
+    font-weight: normal;
+  }
+  td {
+    background-color: #e0e0e0;
+  }
+}
+.flat-table2 table {
+  border: none; 
+  th {
+    background-color: lightsteelblue;
+    font-weight: normal;
+  }
+  td {
+    background-color:#dfe8f8;
+  }
+}
+
+/* --- グリッド　--- */
+.split2 {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.split2 div {
+  background-color: linen;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px; 
+}
+
+
 
 /* ガイドライン用のスタイル */
 .emph {

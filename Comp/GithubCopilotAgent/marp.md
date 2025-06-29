@@ -39,6 +39,7 @@ ABC社様のデジタル変革を支援しDXを図る
 - 組織全体へのナレッジ共有
 
 ---
+<!-- _class: flat-table2 -->
 
 ## プロジェクト体制
 
@@ -76,8 +77,27 @@ ABC社様のデジタル変革を支援しDXを図る
 
 ---
 
+<style scoped>.split2 {grid-template-columns: 3fr 1fr}</style>
+
 # Design Guideline
 ## このテンプレートを美しく保つためのルール
+
+<div class="split2">
+<div>
+
+### aaa
+cxx
+</div>
+<div>
+
+### bbb
+bbb
+ccc
+</div>
+</div>
+aaa
+
+bbb
 
 ---
 
