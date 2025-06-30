@@ -1,7 +1,8 @@
 /* @theme my-theme */
 
+/*
 @import 'default';
-
+*/
 
 /* --- 色やフォントの基本設定 --- */
 :root {
@@ -144,18 +145,24 @@ section.first p {
   color: var(--color-foreground);
 }
 
-/* ----- テーブル ----- */
-/* 青系 */
+/* --------- テーブル --------- */
+/* 基本形 */
 table {
   border-collapse: separate;
   border-spacing: 3px;
   border: none; 
   th {
     background-color: lightsteelblue;
+    color: black;
     font-weight: normal;
+    border: none; 
+    padding: 8px 10px;
   }
   td {
     background-color:#dfe8f8;
+    color: black;
+    border: none; 
+    padding: 8px 10px;
   }
 }
 
@@ -177,12 +184,16 @@ table {
   border-spacing: 3px;
   border: none; 
   th {
-    background-color:black;
+    background-color:#333;
+    color: #FDFDFD;
     font-weight: normal;
-    color: white;
   }
   td {
-    background-color: #e8e8e8;
+    background-color: #c0c0c0;
+  }
+  tr:nth-child(2n+1) td {
+    background-color: #ddd;
+    color: black
   }
 }
 
@@ -199,10 +210,24 @@ table {
   td {
     background: linen;
     border: solid 1px gray;
-    padding: 6x;  
+    padding: 6px;  
   }
 }
 
+
+.table5 table {
+  border-collapse: collapse;
+  th {
+    padding: 10px;
+    background: #778ca3;
+    color: #ffffff;
+  }
+  td {
+    padding: 10px;
+    border: solid 1px #778ca3;
+    background: #e9faf9;
+  }
+}
 
 /* --- グリッド　--- */
 .split2 {
