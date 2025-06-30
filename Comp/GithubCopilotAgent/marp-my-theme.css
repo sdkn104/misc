@@ -58,7 +58,7 @@ h1 {
 /* 通常スライドのタイトル(##) */
 h2 {
   position: absolute;
-  top: 20px;
+  top: 25px;
   left: 180px;
   right: 56px;
   font-size: var(--font-size-h2);
@@ -144,30 +144,11 @@ section.first p {
   color: var(--color-foreground);
 }
 
-/* テーブル */
-table th, table td {
-  background: linen;
-  border: solid 0px gray;
-  padding: 6x;
-}
+/* ----- テーブル ----- */
+/* 青系 */
 table {
   border-collapse: separate;
   border-spacing: 3px;
-  border: solid 0px gray;
-}
-
-/* flat table */
-.flat-table table {
-  border: none; 
-  th {
-    background-color:silver;
-    font-weight: normal;
-  }
-  td {
-    background-color: #e0e0e0;
-  }
-}
-.flat-table2 table {
   border: none; 
   th {
     background-color: lightsteelblue;
@@ -177,6 +158,51 @@ table {
     background-color:#dfe8f8;
   }
 }
+
+.table2 table {
+  border-collapse: separate;
+  border-spacing: 3px;
+  border: none; 
+  th {
+    background-color:silver;
+    font-weight: normal;
+  }
+  td {
+    background-color: #e0e0e0;
+  }
+}
+
+.table3 table {
+  border-collapse: separate;
+  border-spacing: 3px;
+  border: none; 
+  th {
+    background-color:black;
+    font-weight: normal;
+    color: white;
+  }
+  td {
+    background-color: #e8e8e8;
+  }
+}
+
+
+.table4 table {
+  border-collapse: separate;
+  border-spacing: 0px;
+  border: solid 1px gray;
+  th {
+    background: linen;
+    border: solid 1px gray;
+    padding: 6x;  
+  }
+  td {
+    background: linen;
+    border: solid 1px gray;
+    padding: 6x;  
+  }
+}
+
 
 /* --- グリッド　--- */
 .split2 {

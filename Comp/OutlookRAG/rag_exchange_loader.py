@@ -20,7 +20,7 @@ exhangelibはwindows環境でSSO認証とする。つまりWindowsのユーザ�
 def fetch_emails_to_documents_and_register(start_date, end_date, output_file, vectorstore_path):
     """指定期間のメールを取得し、Documentリストに保存し、RAGのvectorstoreに登録する"""
     print(os.getenv('USER_PASSWORD'))
-    credentials = Credentials("outlook_833CF429345F53E4@outlook.com", os.getenv('USER_PASSWORD'))  # 環境変数からパスワードを取得
+    credentials = Credentials("QP48568@ad.melco.co.jp", os.getenv('USER_PASSWORD'))  # 環境変数からパスワードを取得
     # credentials = Credentials(username=os.getenv('USER_NAME'), password=os.getenv('USER_PASSWORD'))  # 環境変数からユーザ名とパスワードを取得
     config = Configuration(
         server='outlook.office365.com',
