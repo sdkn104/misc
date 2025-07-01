@@ -8,7 +8,7 @@ size: 16:9
 theme: my-theme
 ---
 
-<!-- _class: xxfirst -->
+<!-- _class: opening -->
  
 # ABC社様
 # XXXプロジェクト計画書
@@ -70,34 +70,56 @@ ABC社様のデジタル変革を支援しDXを図る
 
 ---
 
+<style scoped>.split {grid-template-columns: 3fr 1em 1fr}</style>
+
 ## 見出し2
 ### 見出し3
 ### （ここに次のスライドを追加）
 
+### グリッド
 
----
-
-<style scoped>.split2 {grid-template-columns: 3fr 1fr}</style>
-
-# Design Guideline
-## このテンプレートを美しく保つためのルール
-
-<div class="split2">
+<div class="split">
 <div>
 
 ### aaa
 cxx
 </div>
+→
 <div>
 
 ### bbb
 bbb
 ccc
 </div>
-</div>
-aaa
+aa
 
-bbb
+bb
+</div>
+
+![icon](home_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg)
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+</style>
+
+<div class="material-symbols-outlined">home</div>
+<span class="material-symbols-outlined">settings</span>
+
+
+
+---
+
+<style scoped>.split {grid-template-columns: 3fr 1fr}</style>
+
+# Design Guideline
+## このテンプレートを美しく保つためのルール
+
 
 ---
 
@@ -144,3 +166,6 @@ bbb
 情報を整理して見せる際に有効ですが、複雑になりすぎないように注意が必要です。
 - **推奨カラム（列）数:** **3〜4列**まで
 - **セル内のテキスト:** 可能な限り簡潔に。長いテキストは箇条書きにするなど、表現を工夫しましょう。
+
+---
+<!-- _class: closing -->
