@@ -47,6 +47,10 @@ section {
 
   align-content: start; /* 縦寄せ */
   padding: 56px;
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 /* ページ番号 */
@@ -92,23 +96,24 @@ h2 {
   font-size: var(--font-size-h2);
 }
 
-/* h2と後続コンテンツの間のスペースを確保 */
-h2 + * {
-  margin-top: 46px;
-}
-
 /* サブ見出し (例: 目的, 目標) */
 h3 {
   font-size: 1.3em;
-  margin-bottom: 0.3em;
+  margin-top: 0.4em;
 }
 
 /* --- リストのスタイル --- */
 ul, ol {
   padding-left: 1.5em;
+  margin: 0.3em 0;
 }
 li {
   margin-bottom: 0em;
+}
+
+/* h2と後続コンテンツの間のスペースを確保 */
+h2 + * {
+  margin-top: 46px;
 }
 
 /* ヘッダー・フッター */
