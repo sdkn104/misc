@@ -30,7 +30,9 @@ https://docs.dify.ai/ja-jp/getting-started/install-self-hosted/docker-compose
 git clone https://github.com/langgenius/dify.git
 cd dify/docker
 cp .env.example .env
+
 # invoke dify
+cd dify/docker
 docker compose up -d
 # -> open with browser http://localhost
 ```    
@@ -40,6 +42,17 @@ docker compose up -d
   sudo usermod -aG docker $(whoami) 
   # to be belong to group docker
   ```
+
+## Setup
+
+### LLM setting
+- Settings —> Model Providers,  to add and configure the LLM
+### Others
+- Settings -> languages -> timezone
+
+### User Account for community version
+- login with mail address and password
+- 
 
 ## MCP server
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
