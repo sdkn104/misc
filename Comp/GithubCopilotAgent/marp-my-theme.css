@@ -4,9 +4,22 @@
 @import 'default';
 */
 
-@import url('xhttps://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100&icon_names=favorite,home,search,settings');  
-
+/*
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=home,search,settings");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,search,settings");
+*/
+
+/* ---- Material Symbols Outlined フォントの設定 ---- */
+/* https://fonts.google.com/icons?hl=ja */
+/* https://developers.google.com/fonts/docs/material_symbols?hl=ja */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+.material-symbols-outlined {
+  font-size: 40px;
+  font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
 
 
 /* --- 色やフォントの基本設定 --- */
@@ -260,12 +273,14 @@ section.table6 table {
     overflow: visible;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    align-items: center;
 }
 .split div {
   background-color: linen;
   margin: 10px;
   padding: 20px;
   border-radius: 20px; 
+  align-items: center;
 }
 
 

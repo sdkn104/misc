@@ -70,7 +70,12 @@ ABC社様のデジタル変革を支援しDXを図る
 
 ---
 
-<style scoped>.split {grid-template-columns: 3fr 1em 1fr}</style>
+<style scoped>.split {grid-template-columns: 3fr 2em 1fr}</style>
+<style scoped>
+.xmaterial-symbols-outlined {
+  font-size: 66px;
+}
+</style>
 
 ## 見出し2
 ### 見出し3
@@ -84,34 +89,21 @@ ABC社様のデジタル変革を支援しDXを図る
 ### aaa
 cxx
 </div>
-→
+<span class="material-symbols-outlined">arrow_forward</span>
 <div>
 
 ### bbb
 bbb
 ccc
 </div>
-aa
 
-bb
-</div>
+<div>aa</div>
+<span class="material-symbols-outlined">double_arrow</span>
+<div>bb</div>
 
-![icon](home_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg)
-
-<style>
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-</style>
-
-<div class="material-symbols-outlined">home</div>
-<span class="material-symbols-outlined">settings</span>
-
-
+<span class="material-symbols-outlined">chevron_right</span>
+<span class="material-symbols-outlined">line_end_arrow_notch</span>
+<span class="material-symbols-outlined">double_arrow</span>
 
 ---
 
