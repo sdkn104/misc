@@ -25,3 +25,14 @@ https://ollama.com/library/gemma3n
     ```
 3. select ollama/gennma in applications
 
+### Open Web UI
+https://qiita.com/Yuzpomz/items/35965a44c958aafbde53
+https://github.com/open-webui/open-webui
+https://openwebui.com/
+
+```
+python -m pip install --upgrade pip
+pip install open-webui
+open-webui serve
+http://localhost:8080
+```
