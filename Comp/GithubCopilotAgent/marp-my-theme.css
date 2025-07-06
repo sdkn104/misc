@@ -212,37 +212,48 @@ table {
   }
 }
 
-
 .table4 table {
   border-collapse: separate;
-  border-spacing: 0px;
-  border: solid 1px gray;
+  border-spacing: 3px;
+  border: none; 
   th {
-    background: linen;
-    border: solid 1px gray;
-    padding: 6x;  
+    background-color:#333;
+    color: #FDFDFD;
+    font-weight: normal;
   }
   td {
-    background: linen;
-    border: solid 1px gray;
-    padding: 6px;  
+    background-color: #c0c0c0;
   }
 }
+
 
 
 .table5 table {
-  border-collapse: collapse;
+  border-collapse: separate;
   th {
-    padding: 10px;
-    background: #778ca3;
-    color: #ffffff;
+    background: #607090; /*#778ca3;*/
+    color: white;
   }
   td {
-    padding: 10px;
-    border: solid 1px #778ca3;
-    background: #e9faf9;
+    background: #bfcfde;
   }
 }
+
+div.table6 table,
+section.table6 table {
+  border-collapse: collapse;
+  th {
+    background: #E0D8CE ;
+    border: solid 1px gray;
+  }
+  td {
+    background: linen;
+    border: solid 1px gray;
+    margin: 0;
+  }
+}
+
+
 
 /* --- グリッド　--- */
 .split {
