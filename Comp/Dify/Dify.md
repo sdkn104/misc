@@ -72,11 +72,33 @@ sudo docker compose up -d
   * https://qiita.com/dkoide/items/ca1f4549dc426eaf3735
   * https://zenn.dev/wsuzume/articles/f9935b47ce0b55
 
-* network setting (host ip -> wsl2 ip -> docker ip)
-https://rcmdnk.com/blog/2021/03/01/computer-windows-network/
-https://qiita.com/yururu_no_yu/items/1fe94eeff12bad910d58
-https://qiita.com/omu_kato/items/f9a6b5a02e25f5f2a487
+### Network setting
+* port mapping (host ip -> wsl2 ip -> docker ip)
+  -  https://rcmdnk.com/blog/2021/03/01/computer-windows-network/
+  -  https://qiita.com/yururu_no_yu/items/1fe94eeff12bad910d58
+  -  https://qiita.com/omu_kato/items/f9a6b5a02e25f5f2a487
+  - https://zenn.dev/yamamoto_11709/articles/1e90bc9f7b7500
+  - https://scrapbox.io/hotchpotch/WSL2_%E7%92%B0%E5%A2%83%E3%81%B8%E3%81%AE_port_forwarding
 
+* port mapping:  host ip -> wsl2 ip
+  * default port mapping: localhost -> WSL2 address
+  1. get WSL2 IP address (exec on WSL2)
+      ```
+      ifconfig eth0 | grep 'inet ' | awk '{print $2}'
+      ```
+  2. set port forwarding (exec on PowerShell)
+      ```
+      netsh.exe interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=80   connectaddress=WSL2_ADDRESS connectport=80
+      netsh.exe interface portproxy show v4tov4
+      #netsh.exe interface portproxy delete v4tov4 listenport=80 listenaddress=0.0.0.0
+      ```
+  3. access from host PC or external PC
+     * `IP_address_of_host_PC:80`
+
+* port mapping: wsl2 -> docker
+  ```
+
+  ```
 
 ## Setting
 
@@ -88,8 +110,6 @@ https://qiita.com/omu_kato/items/f9a6b5a02e25f5f2a487
 ### User Account for community version
 - login with mail address and password
 - 
-
-### IP address
 
 
 ## MCP server
