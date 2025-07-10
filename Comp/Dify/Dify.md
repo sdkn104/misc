@@ -72,6 +72,11 @@ sudo docker compose up -d
   * https://qiita.com/dkoide/items/ca1f4549dc426eaf3735
   * https://zenn.dev/wsuzume/articles/f9935b47ce0b55
 
+* network setting (host ip -> wsl2 ip -> docker ip)
+https://rcmdnk.com/blog/2021/03/01/computer-windows-network/
+https://qiita.com/yururu_no_yu/items/1fe94eeff12bad910d58
+https://qiita.com/omu_kato/items/f9a6b5a02e25f5f2a487
+
 
 ## Setting
 
