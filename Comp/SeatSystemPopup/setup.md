@@ -2,37 +2,39 @@
 
 ## 1. 前提条件
 - Windows 11 PC
-- Python 3.x がインストールされていること
-- ユーザテーブルCSVファイルが `C:\scan\座席管理システム\user.csv` に存在すること
+- Python 3.x インストール済み
 
-## 2. 必要なPythonパッケージのインストール
-コマンドプロンプトまたはPowerShellで以下を実行してください。
+## 2. 仮想環境の作成（推奨）
+1. コマンドプロンプトまたはPowerShellで作業ディレクトリに移動
+2. 仮想環境作成:
+   ```powershell
+   python -m venv myenv
+   .\myenv\Scripts\Activate.ps1
+   ```
 
+## 3. 必要なパッケージのインストール
+```powershell
+pip install pandas win11toast
 ```
-pip install win10toast-click
-```
 
-## 3. プログラムの配置
-- `seatSystemPopup.py` を任意のフォルダ（例: `C:\Users\<ユーザ名>\AppData\Local\Programs\SeatSystemPopup\` など）に配置します。
+## 4. プログラムの配置
+- `seatSystemPopup.py` を任意のディレクトリに配置
 
-## 4. タスクスケジューラの設定
+## 5. タスクスケジューラへの登録例
 1. Windowsの「タスクスケジューラ」を開く
-2. 「タスクの作成」から新規タスクを作成
-3. 「トリガー」タブで「15分ごと」など定期実行を設定
-4. 「操作」タブで「プログラムの開始」→
+2. 「タスクの作成」→「操作」タブで
    - プログラム/スクリプト: `python`
-   - 引数の追加: `"<seatSystemPopup.pyのフルパス>"`
-5. 「条件」「設定」タブは必要に応じて調整
+   - 引数の追加: `seatSystemPopup.py`
+   - 開始（作業）フォルダー: スクリプトのあるディレクトリ
+3. 「トリガー」タブで15分ごとに実行するよう設定
 
-## 5. EXE化（任意）
-PyInstallerでexe化する場合、以下を実行してください。
+## 6. 動作確認
+- タスクを手動実行し、警告トーストが表示されることを確認
 
-```
+## 7. exe化（任意）
+- `pyinstaller`でexe化する場合:
+```powershell
 pip install pyinstaller
 pyinstaller --onefile seatSystemPopup.py
 ```
-- 生成された `dist/seatSystemPopup.exe` をタスクスケジューラで実行するように設定できます。
-
-## 6. 注意事項
-- CSVファイルのパスや座席管理システムのURLは要件定義通りに設定してください。
-- 通知が表示されない場合は、Windowsの通知設定を確認してください。
+- `dist`フォルダ内のexeをタスクスケジューラに登録
