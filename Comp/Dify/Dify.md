@@ -45,7 +45,7 @@ https://docs.docker.com/desktop/setup/install/linux/
       sudo systemctl stop docker
 
       ```
-### install dify
+### install Dify
 https://docs.dify.ai/ja-jp/getting-started/install-self-hosted/docker-compose
 
 ```
@@ -61,8 +61,13 @@ cd dify/docker
 sudo docker compose up -d
 # -> open with browser http://localhost
 ```    
+* port mapping: wsl2 -> docker
+  ```
+  # check port mapping
+  sudo docker compose ps -a
+  ```
 
-* (for error) 
+* (when error) 
   ```
   sudo usermod -aG docker $(whoami) 
   # to be belong to group docker
@@ -73,14 +78,14 @@ sudo docker compose up -d
   * https://zenn.dev/wsuzume/articles/f9935b47ce0b55
 
 ### Network setting
-* port mapping (host ip -> wsl2 ip -> docker ip)
+
+* port mapping:  host ip -> wsl2 ip
+
   -  https://rcmdnk.com/blog/2021/03/01/computer-windows-network/
   -  https://qiita.com/yururu_no_yu/items/1fe94eeff12bad910d58
   -  https://qiita.com/omu_kato/items/f9a6b5a02e25f5f2a487
   - https://zenn.dev/yamamoto_11709/articles/1e90bc9f7b7500
   - https://scrapbox.io/hotchpotch/WSL2_%E7%92%B0%E5%A2%83%E3%81%B8%E3%81%AE_port_forwarding
-
-* port mapping:  host ip -> wsl2 ip
   * default port mapping: localhost -> WSL2 address
   1. get WSL2 IP address (exec on WSL2)
       ```
@@ -95,12 +100,11 @@ sudo docker compose up -d
   3. access from host PC or external PC
      * `IP_address_of_host_PC:80`
 
-* port mapping: wsl2 -> docker
-  ```
+* setting firewall 
+  * open port 80
+  * https://support.borndigital.co.jp/hc/ja/articles/360002711593-Windows10%E3%81%A7%E7%89%B9%E5%AE%9A%E3%81%AE%E3%83%9D%E3%83%BC%E3%83%88%E3%82%92%E9%96%8B%E6%94%BE%E3%81%99%E3%82%8B
 
-  ```
-
-## Setting
+## Dify Setting
 
 ### LLM setting
 - Settings —> Model Providers,  to add and configure the LLM
