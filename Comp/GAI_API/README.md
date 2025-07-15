@@ -1,6 +1,6 @@
 
 ## OpenAI API
-- https://platform.openai.com/docs/api-reference/introduction
+- API spec: https://platform.openai.com/docs/api-reference/introduction
 - openapi.yaml for OpenAI API is available, not official
 - https://spec.openapis.org/oas/v3.1.0
 - text/event-stream: https://developer.mozilla.org/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
@@ -24,15 +24,19 @@ openapi-generator-cli generate -i openapi.yaml -g python-fastapi -o ./generated-
 * python-fastapi work only on linux (uvloop dont support windows)
 * 動かなかった
 
+
 ## OpenAI-comaptible API Server
 
 1. openapi.yamlから使わないendpointを削除
 2. delcomp.pyを使って呼ばれないcomponentを削除
 3. openAPI Generatorで生成したhtmlを生成
 4. web serviceでhtmlをmdに変換
-5. mdを使ってcompatible_server2.pyを生成
+5. mdを使ってcompatible_server.pyを生成
 
 * SSE: https://developer.mozilla.org/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
+
+
+
 
 ## Open WebUI
 - https://github.com/open-webui/open-webui

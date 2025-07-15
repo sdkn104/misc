@@ -44,12 +44,13 @@ response = client.chat.completions.create(
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
         {"role": "assistant", "content": "Yes, customer managed keys are supported by Azure OpenAI."},
-        {"role": "user", "content": "what is tallest mountain in the world? answer in one word."},
+        {"role": "user", "content": "世界一高い山の名前は？単語１つで答えてください。"},
     ],
     stream=stream, 
 )
 
 print(response)
+#print(list(response))
 
 if stream == False:
     #pprint(dict(response.headers))
@@ -61,9 +62,10 @@ if stream == False:
 else:
     for chunk in response:
         pprint(chunk)
-    for chunk in response:
-        #pprint(dict(chunk))
-        if hasattr(chunk, 'choices'):
-            for choice in chunk.choices:
-                if hasattr(choice, 'delta') and hasattr(choice.delta, 'content'):
-                    print(choice.delta.content, end='', flush=True)
+    #for chunk in response:
+    #    #pprint(dict(chunk))
+    #    if hasattr(chunk, 'choices'):
+    #        for choice in chunk.choices:
+    #            if hasattr(choice, 'delta') and hasattr(choice.delta, 'content'):
+    #                print(choice.delta.content, end='', flush=True)
+

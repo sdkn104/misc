@@ -18,7 +18,7 @@ data = {
         {"role": "system", "content": "あなたは親切なアシスタントです。"},
         {"role": "user", "content": "世界一高い山の名前を教えてください。単語１つで答えてください。"},
     ],
-    "stream": True,
+    "stream": False,
 }
 
 response = requests.post(url, headers=headers, json=data)
@@ -29,7 +29,9 @@ response = requests.post(url, headers=headers, json=data)
 
 print(response)
 print("Status Code:", response.status_code)
-#print("Response:", response.json())
 print("----------")
 pprint(dict(response.headers))
 print(response.text)
+if response.headers.get("Content-Type") == "application/json":
+    response_json = response.json()
+    print("Response:", response.json())
