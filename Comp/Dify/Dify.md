@@ -1,4 +1,4 @@
-## INSTALL
+# INSTALL
 https://docs.dify.ai/ja-jp/getting-started/install-self-hosted/docker-compose
 
 ### Install WSL2
@@ -68,6 +68,7 @@ cp .env.example .env
 cd dify/docker
 sudo docker compose up -d
 # -> access with browser http://localhost
+sudo docker compose ps
 ```    
 * (when error) 
   ```
@@ -75,7 +76,7 @@ sudo docker compose up -d
   # to be belong to group docker
   ```
 
-## Setting Network
+### Setting Network
 * port mapping: wsl2 -> docker
   * mapping is specified in ports section of nginx in docker-compose.yaml
   * default:  0.0.0.0:80 -> 0.0.0.0:80, etc.
@@ -111,7 +112,7 @@ sudo docker compose up -d
      * `IP_address_of_host_PC:80`
 
 
-## Dify Setting
+# Dify Setting
 
 ### LLM setting
 - Settings —> Model Providers,  to add and configure the LLM
@@ -126,7 +127,7 @@ sudo docker compose up -d
 - 
 
 
-## MCP server
+# MCP server
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
