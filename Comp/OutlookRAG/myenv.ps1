@@ -1,8 +1,7 @@
 
 
 set INTERPRETER_MODEL=gpt-4
-# set HTTP_PROXY=http://proxy.mei.melco.co.jp:9515
-# set HTTPS_PROXY=http://proxy.mei.melco.co.jp:9515
+
 
 Set-Location -Path $PSScriptRoot
 #Start-Process  ".\myenv\Scripts\Activate.ps1"

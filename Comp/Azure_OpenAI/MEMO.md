@@ -27,3 +27,6 @@
 
 1. APIバージョン
     * 使用するとき、利用可能なバージョンを指定すればよい。[最新バージョン](https://learn.microsoft.com/ja-jp/azure/ai-services/openai/api-version-lifecycle?tabs=key#updating-api-versions)
+
+# OpenAI API
+* API Key: https://platform.openai.com/settings/organization/api-keys

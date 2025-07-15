@@ -1,0 +1,3292 @@
+<!doctype html>
+<html>
+  <head>
+    <title>OpenAI API</title>
+    <style type="text/css">
+      body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 15px;
+	color: #444;
+	margin-right: 24px;
+}
+
+h1	{
+	font-size: 25px;
+}
+h2	{
+	font-size: 20px;
+}
+h3	{
+	font-size: 16px;
+	font-weight: bold;
+}
+hr	{
+	height: 1px;
+	border: 0;
+	color: #ddd;
+	background-color: #ddd;
+}
+
+.app-desc {
+  clear: both;
+  margin-left: 20px;
+}
+.param-name {
+  width: 100%;
+}
+.license-info {
+  margin-left: 20px;
+}
+
+.license-url {
+  margin-left: 20px;
+}
+
+.model {
+  margin: 0 0 0px 20px;
+}
+
+.method {
+  margin-left: 20px;
+}
+
+.method-notes	{
+	margin: 10px 0 20px 0;
+	font-size: 90%;
+	color: #555;
+}
+
+pre {
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.http-method {
+ text-transform: uppercase;
+}
+
+pre.get {
+  background-color: #0f6ab4;
+}
+
+pre.post {
+  background-color: #10a54a;
+}
+
+pre.put {
+  background-color: #c5862b;
+}
+
+pre.delete {
+  background-color: #a41e22;
+}
+
+.huge	{
+	color: #fff;
+}
+
+pre.example {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+code {
+  white-space: pre;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.method-path {
+  font-size: 1.5em;
+  background-color: #0f6ab4;
+}
+
+.up {
+  float:right;
+}
+
+.parameter {
+  width: 500px;
+}
+
+.param {
+  width: 500px;
+  padding: 10px 0 0 20px;
+  font-weight: bold;
+}
+
+.param-desc {
+  width: 700px;
+  padding: 0 0 0 20px;
+  color: #777;
+}
+
+.param-type {
+  font-style: italic;
+}
+
+.param-enum-header {
+width: 700px;
+padding: 0 0 0 60px;
+color: #777;
+font-weight: bold;
+}
+
+.param-enum {
+width: 700px;
+padding: 0 0 0 80px;
+color: #777;
+font-style: italic;
+}
+
+.field-label {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.field-items	{
+	padding: 0 0 15px 0;
+	margin-bottom: 15px;
+}
+
+.return-type {
+  clear: both;
+  padding-bottom: 10px;
+}
+
+.param-header {
+  font-weight: bold;
+}
+
+.method-tags {
+  text-align: right;
+}
+
+.method-tag {
+  background: none repeat scroll 0% 0% #24A600;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin: 2px;
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+}
+
+    </style>
+  </head>
+  <body>
+  <h1>OpenAI API</h1>
+    <div class="app-desc">The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.</div>
+    <div class="app-desc">More information: <a href="https://help.openai.com/">https://help.openai.com/</a></div>
+    <div class="app-desc">Contact Info: <a href="team@openapitools.org">team@openapitools.org</a></div>
+    <div class="app-desc">Version: 2.3.0</div>
+    <div class="app-desc">BasePath:/v1</div>
+    <div class="license-info">MIT</div>
+    <div class="license-url">https://github.com/openai/openai-openapi/blob/master/LICENSE</div>
+  <h2>Access</h2>
+    <ol>
+      <li>HTTP Bearer Token authentication</li>
+    </ol>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Chat">Chat</a></h4>
+  <ul>
+  <li><a href="#createChatCompletion"><code><span class="http-method">post</span> /chat/completions</code></a></li>
+  <li><a href="#deleteChatCompletion"><code><span class="http-method">delete</span> /chat/completions/{completion_id}</code></a></li>
+  <li><a href="#getChatCompletion"><code><span class="http-method">get</span> /chat/completions/{completion_id}</code></a></li>
+  <li><a href="#getChatCompletionMessages"><code><span class="http-method">get</span> /chat/completions/{completion_id}/messages</code></a></li>
+  <li><a href="#listChatCompletions"><code><span class="http-method">get</span> /chat/completions</code></a></li>
+  <li><a href="#updateChatCompletion"><code><span class="http-method">post</span> /chat/completions/{completion_id}</code></a></li>
+  </ul>
+  <h4><a href="#Completions">Completions</a></h4>
+  <ul>
+  <li><a href="#createCompletion"><code><span class="http-method">post</span> /completions</code></a></li>
+  </ul>
+  <h4><a href="#Models">Models</a></h4>
+  <ul>
+  <li><a href="#deleteModel"><code><span class="http-method">delete</span> /models/{model}</code></a></li>
+  <li><a href="#listModels"><code><span class="http-method">get</span> /models</code></a></li>
+  <li><a href="#retrieveModel"><code><span class="http-method">get</span> /models/{model}</code></a></li>
+  </ul>
+
+  <h1><a name="Chat">Chat</a></h1>
+  <div class="method"><a name="createChatCompletion"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /chat/completions</code></pre></div>
+    <div class="method-summary"><p><strong>Starting a new project?</strong> We recommend trying <a href="/docs/api-reference/responses">Responses</a>
+to take advantage of the latest OpenAI platform features. Compare
+<a href="/docs/guides/responses-vs-chat-completions?api-mode=responses">Chat Completions with Responses</a>.</p>
+<hr />
+<p>Creates a model response for the given chat conversation. Learn more in the
+<a href="/docs/guides/text-generation">text generation</a>, <a href="/docs/guides/vision">vision</a>,
+and <a href="/docs/guides/audio">audio</a> guides.</p>
+<p>Parameter support can differ depending on the model used to generate the
+response, particularly for newer reasoning models. Parameters that are only
+supported for reasoning models are noted below. For the current state of
+unsupported parameters in reasoning models,
+<a href="/docs/guides/reasoning">refer to the reasoning guide</a>.</p>
+ (<span class="nickname">createChatCompletion</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">CreateChatCompletionRequest <a href="#CreateChatCompletionRequest">CreateChatCompletionRequest</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#CreateChatCompletionResponse">CreateChatCompletionResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "created" : 3,
+  "usage" : {
+    "completion_tokens" : 2,
+    "prompt_tokens" : 4,
+    "completion_tokens_details" : {
+      "accepted_prediction_tokens" : 1,
+      "audio_tokens" : 1,
+      "reasoning_tokens" : 1,
+      "rejected_prediction_tokens" : 6
+    },
+    "prompt_tokens_details" : {
+      "audio_tokens" : 7,
+      "cached_tokens" : 1
+    },
+    "total_tokens" : 7
+  },
+  "model" : "model",
+  "service_tier" : "auto",
+  "id" : "id",
+  "choices" : [ {
+    "finish_reason" : "stop",
+    "index" : 0,
+    "message" : {
+      "role" : "assistant",
+      "function_call" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "refusal" : "refusal",
+      "annotations" : [ {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      }, {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      } ],
+      "tool_calls" : [ {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      }, {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      } ],
+      "audio" : {
+        "expires_at" : 5,
+        "transcript" : "transcript",
+        "data" : "data",
+        "id" : "id"
+      },
+      "content" : "content"
+    },
+    "logprobs" : {
+      "refusal" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ],
+      "content" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ]
+    }
+  }, {
+    "finish_reason" : "stop",
+    "index" : 0,
+    "message" : {
+      "role" : "assistant",
+      "function_call" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "refusal" : "refusal",
+      "annotations" : [ {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      }, {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      } ],
+      "tool_calls" : [ {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      }, {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      } ],
+      "audio" : {
+        "expires_at" : 5,
+        "transcript" : "transcript",
+        "data" : "data",
+        "id" : "id"
+      },
+      "content" : "content"
+    },
+    "logprobs" : {
+      "refusal" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ],
+      "content" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ]
+    }
+  } ],
+  "system_fingerprint" : "system_fingerprint",
+  "object" : "chat.completion"
+}</code></pre>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: text/event-stream</div>
+    <pre class="example"><code>Custom MIME type example not yet supported: text/event-stream</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+      <li><code>text/event-stream</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    OK
+        <a href="#CreateChatCompletionResponse">CreateChatCompletionResponse</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="deleteChatCompletion"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /chat/completions/{completion_id}</code></pre></div>
+    <div class="method-summary">Delete a stored chat completion. Only Chat Completions that have been
+created with the <code>store</code> parameter set to <code>true</code> can be deleted. (<span class="nickname">deleteChatCompletion</span>)</div>
+    <div class="method-notes"></div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">completion_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The ID of the chat completion to delete. default: null </div>
+    </div>  <!-- field-items -->
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ChatCompletionDeleted">ChatCompletionDeleted</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "deleted" : true,
+  "id" : "id",
+  "object" : "chat.completion.deleted"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The chat completion was deleted successfully.
+        <a href="#ChatCompletionDeleted">ChatCompletionDeleted</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getChatCompletion"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /chat/completions/{completion_id}</code></pre></div>
+    <div class="method-summary">Get a stored chat completion. Only Chat Completions that have been created
+with the <code>store</code> parameter set to <code>true</code> will be returned. (<span class="nickname">getChatCompletion</span>)</div>
+    <div class="method-notes"></div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">completion_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The ID of the chat completion to retrieve. default: null </div>
+    </div>  <!-- field-items -->
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#CreateChatCompletionResponse">CreateChatCompletionResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "created" : 3,
+  "usage" : {
+    "completion_tokens" : 2,
+    "prompt_tokens" : 4,
+    "completion_tokens_details" : {
+      "accepted_prediction_tokens" : 1,
+      "audio_tokens" : 1,
+      "reasoning_tokens" : 1,
+      "rejected_prediction_tokens" : 6
+    },
+    "prompt_tokens_details" : {
+      "audio_tokens" : 7,
+      "cached_tokens" : 1
+    },
+    "total_tokens" : 7
+  },
+  "model" : "model",
+  "service_tier" : "auto",
+  "id" : "id",
+  "choices" : [ {
+    "finish_reason" : "stop",
+    "index" : 0,
+    "message" : {
+      "role" : "assistant",
+      "function_call" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "refusal" : "refusal",
+      "annotations" : [ {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      }, {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      } ],
+      "tool_calls" : [ {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      }, {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      } ],
+      "audio" : {
+        "expires_at" : 5,
+        "transcript" : "transcript",
+        "data" : "data",
+        "id" : "id"
+      },
+      "content" : "content"
+    },
+    "logprobs" : {
+      "refusal" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ],
+      "content" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ]
+    }
+  }, {
+    "finish_reason" : "stop",
+    "index" : 0,
+    "message" : {
+      "role" : "assistant",
+      "function_call" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "refusal" : "refusal",
+      "annotations" : [ {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      }, {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      } ],
+      "tool_calls" : [ {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      }, {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      } ],
+      "audio" : {
+        "expires_at" : 5,
+        "transcript" : "transcript",
+        "data" : "data",
+        "id" : "id"
+      },
+      "content" : "content"
+    },
+    "logprobs" : {
+      "refusal" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ],
+      "content" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ]
+    }
+  } ],
+  "system_fingerprint" : "system_fingerprint",
+  "object" : "chat.completion"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    A chat completion
+        <a href="#CreateChatCompletionResponse">CreateChatCompletionResponse</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getChatCompletionMessages"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /chat/completions/{completion_id}/messages</code></pre></div>
+    <div class="method-summary">Get the messages in a stored chat completion. Only Chat Completions that
+have been created with the <code>store</code> parameter set to <code>true</code> will be
+returned. (<span class="nickname">getChatCompletionMessages</span>)</div>
+    <div class="method-notes"></div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">completion_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The ID of the chat completion to retrieve messages from. default: null </div>
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">after (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Identifier for the last message from the previous pagination request. default: null </div><div class="param">limit (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Number of messages to retrieve. default: 20 </div><div class="param">order (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Sort order for messages by timestamp. Use <code>asc</code> for ascending order or <code>desc</code> for descending order. Defaults to <code>asc</code>. default: asc </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ChatCompletionMessageList">ChatCompletionMessageList</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "first_id" : "first_id",
+  "data" : [ {
+    "role" : "assistant",
+    "function_call" : {
+      "name" : "name",
+      "arguments" : "arguments"
+    },
+    "refusal" : "refusal",
+    "annotations" : [ {
+      "type" : "url_citation",
+      "url_citation" : {
+        "start_index" : 1,
+        "end_index" : 6,
+        "title" : "title",
+        "url" : "url"
+      }
+    }, {
+      "type" : "url_citation",
+      "url_citation" : {
+        "start_index" : 1,
+        "end_index" : 6,
+        "title" : "title",
+        "url" : "url"
+      }
+    } ],
+    "tool_calls" : [ {
+      "function" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "id" : "id",
+      "type" : "function"
+    }, {
+      "function" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "id" : "id",
+      "type" : "function"
+    } ],
+    "audio" : {
+      "expires_at" : 5,
+      "transcript" : "transcript",
+      "data" : "data",
+      "id" : "id"
+    },
+    "id" : "id",
+    "content" : "content"
+  }, {
+    "role" : "assistant",
+    "function_call" : {
+      "name" : "name",
+      "arguments" : "arguments"
+    },
+    "refusal" : "refusal",
+    "annotations" : [ {
+      "type" : "url_citation",
+      "url_citation" : {
+        "start_index" : 1,
+        "end_index" : 6,
+        "title" : "title",
+        "url" : "url"
+      }
+    }, {
+      "type" : "url_citation",
+      "url_citation" : {
+        "start_index" : 1,
+        "end_index" : 6,
+        "title" : "title",
+        "url" : "url"
+      }
+    } ],
+    "tool_calls" : [ {
+      "function" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "id" : "id",
+      "type" : "function"
+    }, {
+      "function" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "id" : "id",
+      "type" : "function"
+    } ],
+    "audio" : {
+      "expires_at" : 5,
+      "transcript" : "transcript",
+      "data" : "data",
+      "id" : "id"
+    },
+    "id" : "id",
+    "content" : "content"
+  } ],
+  "last_id" : "last_id",
+  "has_more" : true,
+  "object" : "list"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    A list of messages
+        <a href="#ChatCompletionMessageList">ChatCompletionMessageList</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="listChatCompletions"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /chat/completions</code></pre></div>
+    <div class="method-summary">List stored Chat Completions. Only Chat Completions that have been stored
+with the <code>store</code> parameter set to <code>true</code> will be returned. (<span class="nickname">listChatCompletions</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">model (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The model used to generate the Chat Completions. default: null </div><div class="param">metadata (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; <p>A list of metadata keys to filter the Chat Completions by. Example:</p>
+<p><code>metadata[key1]=value1&amp;metadata[key2]=value2</code></p>
+ default: null </div><div class="param">after (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Identifier for the last chat completion from the previous pagination request. default: null </div><div class="param">limit (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Number of Chat Completions to retrieve. default: 20 </div><div class="param">order (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Sort order for Chat Completions by timestamp. Use <code>asc</code> for ascending order or <code>desc</code> for descending order. Defaults to <code>asc</code>. default: asc </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ChatCompletionList">ChatCompletionList</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "first_id" : "first_id",
+  "data" : [ {
+    "created" : 3,
+    "usage" : {
+      "completion_tokens" : 2,
+      "prompt_tokens" : 4,
+      "completion_tokens_details" : {
+        "accepted_prediction_tokens" : 1,
+        "audio_tokens" : 1,
+        "reasoning_tokens" : 1,
+        "rejected_prediction_tokens" : 6
+      },
+      "prompt_tokens_details" : {
+        "audio_tokens" : 7,
+        "cached_tokens" : 1
+      },
+      "total_tokens" : 7
+    },
+    "model" : "model",
+    "service_tier" : "auto",
+    "id" : "id",
+    "choices" : [ {
+      "finish_reason" : "stop",
+      "index" : 0,
+      "message" : {
+        "role" : "assistant",
+        "function_call" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "refusal" : "refusal",
+        "annotations" : [ {
+          "type" : "url_citation",
+          "url_citation" : {
+            "start_index" : 1,
+            "end_index" : 6,
+            "title" : "title",
+            "url" : "url"
+          }
+        }, {
+          "type" : "url_citation",
+          "url_citation" : {
+            "start_index" : 1,
+            "end_index" : 6,
+            "title" : "title",
+            "url" : "url"
+          }
+        } ],
+        "tool_calls" : [ {
+          "function" : {
+            "name" : "name",
+            "arguments" : "arguments"
+          },
+          "id" : "id",
+          "type" : "function"
+        }, {
+          "function" : {
+            "name" : "name",
+            "arguments" : "arguments"
+          },
+          "id" : "id",
+          "type" : "function"
+        } ],
+        "audio" : {
+          "expires_at" : 5,
+          "transcript" : "transcript",
+          "data" : "data",
+          "id" : "id"
+        },
+        "content" : "content"
+      },
+      "logprobs" : {
+        "refusal" : [ {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        }, {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        } ],
+        "content" : [ {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        }, {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        } ]
+      }
+    }, {
+      "finish_reason" : "stop",
+      "index" : 0,
+      "message" : {
+        "role" : "assistant",
+        "function_call" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "refusal" : "refusal",
+        "annotations" : [ {
+          "type" : "url_citation",
+          "url_citation" : {
+            "start_index" : 1,
+            "end_index" : 6,
+            "title" : "title",
+            "url" : "url"
+          }
+        }, {
+          "type" : "url_citation",
+          "url_citation" : {
+            "start_index" : 1,
+            "end_index" : 6,
+            "title" : "title",
+            "url" : "url"
+          }
+        } ],
+        "tool_calls" : [ {
+          "function" : {
+            "name" : "name",
+            "arguments" : "arguments"
+          },
+          "id" : "id",
+          "type" : "function"
+        }, {
+          "function" : {
+            "name" : "name",
+            "arguments" : "arguments"
+          },
+          "id" : "id",
+          "type" : "function"
+        } ],
+        "audio" : {
+          "expires_at" : 5,
+          "transcript" : "transcript",
+          "data" : "data",
+          "id" : "id"
+        },
+        "content" : "content"
+      },
+      "logprobs" : {
+        "refusal" : [ {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        }, {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        } ],
+        "content" : [ {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        }, {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        } ]
+      }
+    } ],
+    "system_fingerprint" : "system_fingerprint",
+    "object" : "chat.completion"
+  }, {
+    "created" : 3,
+    "usage" : {
+      "completion_tokens" : 2,
+      "prompt_tokens" : 4,
+      "completion_tokens_details" : {
+        "accepted_prediction_tokens" : 1,
+        "audio_tokens" : 1,
+        "reasoning_tokens" : 1,
+        "rejected_prediction_tokens" : 6
+      },
+      "prompt_tokens_details" : {
+        "audio_tokens" : 7,
+        "cached_tokens" : 1
+      },
+      "total_tokens" : 7
+    },
+    "model" : "model",
+    "service_tier" : "auto",
+    "id" : "id",
+    "choices" : [ {
+      "finish_reason" : "stop",
+      "index" : 0,
+      "message" : {
+        "role" : "assistant",
+        "function_call" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "refusal" : "refusal",
+        "annotations" : [ {
+          "type" : "url_citation",
+          "url_citation" : {
+            "start_index" : 1,
+            "end_index" : 6,
+            "title" : "title",
+            "url" : "url"
+          }
+        }, {
+          "type" : "url_citation",
+          "url_citation" : {
+            "start_index" : 1,
+            "end_index" : 6,
+            "title" : "title",
+            "url" : "url"
+          }
+        } ],
+        "tool_calls" : [ {
+          "function" : {
+            "name" : "name",
+            "arguments" : "arguments"
+          },
+          "id" : "id",
+          "type" : "function"
+        }, {
+          "function" : {
+            "name" : "name",
+            "arguments" : "arguments"
+          },
+          "id" : "id",
+          "type" : "function"
+        } ],
+        "audio" : {
+          "expires_at" : 5,
+          "transcript" : "transcript",
+          "data" : "data",
+          "id" : "id"
+        },
+        "content" : "content"
+      },
+      "logprobs" : {
+        "refusal" : [ {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        }, {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        } ],
+        "content" : [ {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        }, {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        } ]
+      }
+    }, {
+      "finish_reason" : "stop",
+      "index" : 0,
+      "message" : {
+        "role" : "assistant",
+        "function_call" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "refusal" : "refusal",
+        "annotations" : [ {
+          "type" : "url_citation",
+          "url_citation" : {
+            "start_index" : 1,
+            "end_index" : 6,
+            "title" : "title",
+            "url" : "url"
+          }
+        }, {
+          "type" : "url_citation",
+          "url_citation" : {
+            "start_index" : 1,
+            "end_index" : 6,
+            "title" : "title",
+            "url" : "url"
+          }
+        } ],
+        "tool_calls" : [ {
+          "function" : {
+            "name" : "name",
+            "arguments" : "arguments"
+          },
+          "id" : "id",
+          "type" : "function"
+        }, {
+          "function" : {
+            "name" : "name",
+            "arguments" : "arguments"
+          },
+          "id" : "id",
+          "type" : "function"
+        } ],
+        "audio" : {
+          "expires_at" : 5,
+          "transcript" : "transcript",
+          "data" : "data",
+          "id" : "id"
+        },
+        "content" : "content"
+      },
+      "logprobs" : {
+        "refusal" : [ {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        }, {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        } ],
+        "content" : [ {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        }, {
+          "top_logprobs" : [ {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          }, {
+            "logprob" : 7.061401241503109,
+            "bytes" : [ 9, 9 ],
+            "token" : "token"
+          } ],
+          "logprob" : 5.637376656633329,
+          "bytes" : [ 2, 2 ],
+          "token" : "token"
+        } ]
+      }
+    } ],
+    "system_fingerprint" : "system_fingerprint",
+    "object" : "chat.completion"
+  } ],
+  "last_id" : "last_id",
+  "has_more" : true,
+  "object" : "list"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    A list of Chat Completions
+        <a href="#ChatCompletionList">ChatCompletionList</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateChatCompletion"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /chat/completions/{completion_id}</code></pre></div>
+    <div class="method-summary">Modify a stored chat completion. Only Chat Completions that have been
+created with the <code>store</code> parameter set to <code>true</code> can be modified. Currently,
+the only supported modification is to update the <code>metadata</code> field. (<span class="nickname">updateChatCompletion</span>)</div>
+    <div class="method-notes"></div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">completion_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The ID of the chat completion to update. default: null </div>
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updateChatCompletion_request <a href="#updateChatCompletion_request">updateChatCompletion_request</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#CreateChatCompletionResponse">CreateChatCompletionResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "created" : 3,
+  "usage" : {
+    "completion_tokens" : 2,
+    "prompt_tokens" : 4,
+    "completion_tokens_details" : {
+      "accepted_prediction_tokens" : 1,
+      "audio_tokens" : 1,
+      "reasoning_tokens" : 1,
+      "rejected_prediction_tokens" : 6
+    },
+    "prompt_tokens_details" : {
+      "audio_tokens" : 7,
+      "cached_tokens" : 1
+    },
+    "total_tokens" : 7
+  },
+  "model" : "model",
+  "service_tier" : "auto",
+  "id" : "id",
+  "choices" : [ {
+    "finish_reason" : "stop",
+    "index" : 0,
+    "message" : {
+      "role" : "assistant",
+      "function_call" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "refusal" : "refusal",
+      "annotations" : [ {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      }, {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      } ],
+      "tool_calls" : [ {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      }, {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      } ],
+      "audio" : {
+        "expires_at" : 5,
+        "transcript" : "transcript",
+        "data" : "data",
+        "id" : "id"
+      },
+      "content" : "content"
+    },
+    "logprobs" : {
+      "refusal" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ],
+      "content" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ]
+    }
+  }, {
+    "finish_reason" : "stop",
+    "index" : 0,
+    "message" : {
+      "role" : "assistant",
+      "function_call" : {
+        "name" : "name",
+        "arguments" : "arguments"
+      },
+      "refusal" : "refusal",
+      "annotations" : [ {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      }, {
+        "type" : "url_citation",
+        "url_citation" : {
+          "start_index" : 1,
+          "end_index" : 6,
+          "title" : "title",
+          "url" : "url"
+        }
+      } ],
+      "tool_calls" : [ {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      }, {
+        "function" : {
+          "name" : "name",
+          "arguments" : "arguments"
+        },
+        "id" : "id",
+        "type" : "function"
+      } ],
+      "audio" : {
+        "expires_at" : 5,
+        "transcript" : "transcript",
+        "data" : "data",
+        "id" : "id"
+      },
+      "content" : "content"
+    },
+    "logprobs" : {
+      "refusal" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ],
+      "content" : [ {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      }, {
+        "top_logprobs" : [ {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        }, {
+          "logprob" : 7.061401241503109,
+          "bytes" : [ 9, 9 ],
+          "token" : "token"
+        } ],
+        "logprob" : 5.637376656633329,
+        "bytes" : [ 2, 2 ],
+        "token" : "token"
+      } ]
+    }
+  } ],
+  "system_fingerprint" : "system_fingerprint",
+  "object" : "chat.completion"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    A chat completion
+        <a href="#CreateChatCompletionResponse">CreateChatCompletionResponse</a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Completions">Completions</a></h1>
+  <div class="method"><a name="createCompletion"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /completions</code></pre></div>
+    <div class="method-summary">Creates a completion for the provided prompt and parameters. (<span class="nickname">createCompletion</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">CreateCompletionRequest <a href="#CreateCompletionRequest">CreateCompletionRequest</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#CreateCompletionResponse">CreateCompletionResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "created" : 5,
+  "usage" : {
+    "completion_tokens" : 2,
+    "prompt_tokens" : 4,
+    "completion_tokens_details" : {
+      "accepted_prediction_tokens" : 1,
+      "audio_tokens" : 1,
+      "reasoning_tokens" : 1,
+      "rejected_prediction_tokens" : 6
+    },
+    "prompt_tokens_details" : {
+      "audio_tokens" : 7,
+      "cached_tokens" : 1
+    },
+    "total_tokens" : 7
+  },
+  "model" : "model",
+  "id" : "id",
+  "choices" : [ {
+    "finish_reason" : "stop",
+    "index" : 0,
+    "text" : "text",
+    "logprobs" : {
+      "top_logprobs" : [ {
+        "key" : 5.962133916683182
+      }, {
+        "key" : 5.962133916683182
+      } ],
+      "token_logprobs" : [ 1.4658129805029452, 1.4658129805029452 ],
+      "tokens" : [ "tokens", "tokens" ],
+      "text_offset" : [ 6, 6 ]
+    }
+  }, {
+    "finish_reason" : "stop",
+    "index" : 0,
+    "text" : "text",
+    "logprobs" : {
+      "top_logprobs" : [ {
+        "key" : 5.962133916683182
+      }, {
+        "key" : 5.962133916683182
+      } ],
+      "token_logprobs" : [ 1.4658129805029452, 1.4658129805029452 ],
+      "tokens" : [ "tokens", "tokens" ],
+      "text_offset" : [ 6, 6 ]
+    }
+  } ],
+  "system_fingerprint" : "system_fingerprint",
+  "object" : "text_completion"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    OK
+        <a href="#CreateCompletionResponse">CreateCompletionResponse</a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Models">Models</a></h1>
+  <div class="method"><a name="deleteModel"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /models/{model}</code></pre></div>
+    <div class="method-summary">Delete a fine-tuned model. You must have the Owner role in your organization to delete a model. (<span class="nickname">deleteModel</span>)</div>
+    <div class="method-notes"></div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">model (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The model to delete default: null </div>
+    </div>  <!-- field-items -->
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#DeleteModelResponse">DeleteModelResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "deleted" : true,
+  "id" : "id",
+  "object" : "object"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    OK
+        <a href="#DeleteModelResponse">DeleteModelResponse</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="listModels"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /models</code></pre></div>
+    <div class="method-summary">Lists the currently available models, and provides basic information about each one such as the owner and availability. (<span class="nickname">listModels</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ListModelsResponse">ListModelsResponse</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "data" : [ {
+    "created" : 0,
+    "owned_by" : "owned_by",
+    "id" : "id",
+    "object" : "model"
+  }, {
+    "created" : 0,
+    "owned_by" : "owned_by",
+    "id" : "id",
+    "object" : "model"
+  } ],
+  "object" : "list"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    OK
+        <a href="#ListModelsResponse">ListModelsResponse</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="retrieveModel"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /models/{model}</code></pre></div>
+    <div class="method-summary">Retrieves a model instance, providing basic information about the model such as the owner and permissioning. (<span class="nickname">retrieveModel</span>)</div>
+    <div class="method-notes"></div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">model (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The ID of the model to use for this request default: null </div>
+    </div>  <!-- field-items -->
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Model">Model</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "created" : 0,
+  "owned_by" : "owned_by",
+  "id" : "id",
+  "object" : "model"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    OK
+        <a href="#Model">Model</a>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#ChatCompletionDeleted"><code>ChatCompletionDeleted</code> - </a></li>
+    <li><a href="#ChatCompletionFunctionCallOption"><code>ChatCompletionFunctionCallOption</code> - </a></li>
+    <li><a href="#ChatCompletionFunctions"><code>ChatCompletionFunctions</code> - </a></li>
+    <li><a href="#ChatCompletionList"><code>ChatCompletionList</code> - ChatCompletionList</a></li>
+    <li><a href="#ChatCompletionMessageList"><code>ChatCompletionMessageList</code> - ChatCompletionMessageList</a></li>
+    <li><a href="#ChatCompletionMessageList_data_inner"><code>ChatCompletionMessageList_data_inner</code> - </a></li>
+    <li><a href="#ChatCompletionMessageToolCall"><code>ChatCompletionMessageToolCall</code> - </a></li>
+    <li><a href="#ChatCompletionMessageToolCallChunk"><code>ChatCompletionMessageToolCallChunk</code> - </a></li>
+    <li><a href="#ChatCompletionMessageToolCallChunk_function"><code>ChatCompletionMessageToolCallChunk_function</code> - </a></li>
+    <li><a href="#ChatCompletionMessageToolCall_function"><code>ChatCompletionMessageToolCall_function</code> - </a></li>
+    <li><a href="#ChatCompletionNamedToolChoice"><code>ChatCompletionNamedToolChoice</code> - </a></li>
+    <li><a href="#ChatCompletionNamedToolChoice_function"><code>ChatCompletionNamedToolChoice_function</code> - </a></li>
+    <li><a href="#ChatCompletionRequestAssistantMessage"><code>ChatCompletionRequestAssistantMessage</code> - Assistant message</a></li>
+    <li><a href="#ChatCompletionRequestAssistantMessageContentPart"><code>ChatCompletionRequestAssistantMessageContentPart</code> - </a></li>
+    <li><a href="#ChatCompletionRequestAssistantMessage_audio"><code>ChatCompletionRequestAssistantMessage_audio</code> - </a></li>
+    <li><a href="#ChatCompletionRequestAssistantMessage_content"><code>ChatCompletionRequestAssistantMessage_content</code> - </a></li>
+    <li><a href="#ChatCompletionRequestAssistantMessage_function_call"><code>ChatCompletionRequestAssistantMessage_function_call</code> - </a></li>
+    <li><a href="#ChatCompletionRequestDeveloperMessage"><code>ChatCompletionRequestDeveloperMessage</code> - Developer message</a></li>
+    <li><a href="#ChatCompletionRequestDeveloperMessage_content"><code>ChatCompletionRequestDeveloperMessage_content</code> - </a></li>
+    <li><a href="#ChatCompletionRequestFunctionMessage"><code>ChatCompletionRequestFunctionMessage</code> - Function message</a></li>
+    <li><a href="#ChatCompletionRequestMessage"><code>ChatCompletionRequestMessage</code> - </a></li>
+    <li><a href="#ChatCompletionRequestMessageContentPartAudio"><code>ChatCompletionRequestMessageContentPartAudio</code> - Audio content part</a></li>
+    <li><a href="#ChatCompletionRequestMessageContentPartAudio_input_audio"><code>ChatCompletionRequestMessageContentPartAudio_input_audio</code> - </a></li>
+    <li><a href="#ChatCompletionRequestMessageContentPartFile"><code>ChatCompletionRequestMessageContentPartFile</code> - File content part</a></li>
+    <li><a href="#ChatCompletionRequestMessageContentPartFile_file"><code>ChatCompletionRequestMessageContentPartFile_file</code> - </a></li>
+    <li><a href="#ChatCompletionRequestMessageContentPartImage"><code>ChatCompletionRequestMessageContentPartImage</code> - Image content part</a></li>
+    <li><a href="#ChatCompletionRequestMessageContentPartImage_image_url"><code>ChatCompletionRequestMessageContentPartImage_image_url</code> - </a></li>
+    <li><a href="#ChatCompletionRequestMessageContentPartRefusal"><code>ChatCompletionRequestMessageContentPartRefusal</code> - Refusal content part</a></li>
+    <li><a href="#ChatCompletionRequestMessageContentPartText"><code>ChatCompletionRequestMessageContentPartText</code> - Text content part</a></li>
+    <li><a href="#ChatCompletionRequestSystemMessage"><code>ChatCompletionRequestSystemMessage</code> - System message</a></li>
+    <li><a href="#ChatCompletionRequestSystemMessage_content"><code>ChatCompletionRequestSystemMessage_content</code> - </a></li>
+    <li><a href="#ChatCompletionRequestToolMessage"><code>ChatCompletionRequestToolMessage</code> - Tool message</a></li>
+    <li><a href="#ChatCompletionRequestToolMessage_content"><code>ChatCompletionRequestToolMessage_content</code> - </a></li>
+    <li><a href="#ChatCompletionRequestUserMessage"><code>ChatCompletionRequestUserMessage</code> - User message</a></li>
+    <li><a href="#ChatCompletionRequestUserMessageContentPart"><code>ChatCompletionRequestUserMessageContentPart</code> - </a></li>
+    <li><a href="#ChatCompletionRequestUserMessage_content"><code>ChatCompletionRequestUserMessage_content</code> - </a></li>
+    <li><a href="#ChatCompletionResponseMessage"><code>ChatCompletionResponseMessage</code> - </a></li>
+    <li><a href="#ChatCompletionResponseMessage_annotations_inner"><code>ChatCompletionResponseMessage_annotations_inner</code> - </a></li>
+    <li><a href="#ChatCompletionResponseMessage_annotations_inner_url_citation"><code>ChatCompletionResponseMessage_annotations_inner_url_citation</code> - </a></li>
+    <li><a href="#ChatCompletionResponseMessage_audio"><code>ChatCompletionResponseMessage_audio</code> - </a></li>
+    <li><a href="#ChatCompletionResponseMessage_function_call"><code>ChatCompletionResponseMessage_function_call</code> - </a></li>
+    <li><a href="#ChatCompletionStreamOptions"><code>ChatCompletionStreamOptions</code> - </a></li>
+    <li><a href="#ChatCompletionStreamResponseDelta"><code>ChatCompletionStreamResponseDelta</code> - </a></li>
+    <li><a href="#ChatCompletionStreamResponseDelta_function_call"><code>ChatCompletionStreamResponseDelta_function_call</code> - </a></li>
+    <li><a href="#ChatCompletionTokenLogprob"><code>ChatCompletionTokenLogprob</code> - </a></li>
+    <li><a href="#ChatCompletionTokenLogprob_top_logprobs_inner"><code>ChatCompletionTokenLogprob_top_logprobs_inner</code> - </a></li>
+    <li><a href="#ChatCompletionTool"><code>ChatCompletionTool</code> - </a></li>
+    <li><a href="#ChatCompletionToolChoiceOption"><code>ChatCompletionToolChoiceOption</code> - </a></li>
+    <li><a href="#CompletionUsage"><code>CompletionUsage</code> - </a></li>
+    <li><a href="#CompletionUsage_completion_tokens_details"><code>CompletionUsage_completion_tokens_details</code> - </a></li>
+    <li><a href="#CompletionUsage_prompt_tokens_details"><code>CompletionUsage_prompt_tokens_details</code> - </a></li>
+    <li><a href="#CreateChatCompletionRequest"><code>CreateChatCompletionRequest</code> - </a></li>
+    <li><a href="#CreateChatCompletionRequest_allOf_audio"><code>CreateChatCompletionRequest_allOf_audio</code> - </a></li>
+    <li><a href="#CreateChatCompletionRequest_allOf_function_call"><code>CreateChatCompletionRequest_allOf_function_call</code> - </a></li>
+    <li><a href="#CreateChatCompletionRequest_allOf_response_format"><code>CreateChatCompletionRequest_allOf_response_format</code> - </a></li>
+    <li><a href="#CreateChatCompletionResponse"><code>CreateChatCompletionResponse</code> - </a></li>
+    <li><a href="#CreateChatCompletionResponse_choices_inner"><code>CreateChatCompletionResponse_choices_inner</code> - </a></li>
+    <li><a href="#CreateChatCompletionResponse_choices_inner_logprobs"><code>CreateChatCompletionResponse_choices_inner_logprobs</code> - </a></li>
+    <li><a href="#CreateChatCompletionStreamResponse"><code>CreateChatCompletionStreamResponse</code> - </a></li>
+    <li><a href="#CreateChatCompletionStreamResponse_choices_inner"><code>CreateChatCompletionStreamResponse_choices_inner</code> - </a></li>
+    <li><a href="#CreateCompletionRequest"><code>CreateCompletionRequest</code> - </a></li>
+    <li><a href="#CreateCompletionRequest_model"><code>CreateCompletionRequest_model</code> - </a></li>
+    <li><a href="#CreateCompletionRequest_prompt"><code>CreateCompletionRequest_prompt</code> - </a></li>
+    <li><a href="#CreateCompletionResponse"><code>CreateCompletionResponse</code> - </a></li>
+    <li><a href="#CreateCompletionResponse_choices_inner"><code>CreateCompletionResponse_choices_inner</code> - </a></li>
+    <li><a href="#CreateCompletionResponse_choices_inner_logprobs"><code>CreateCompletionResponse_choices_inner_logprobs</code> - </a></li>
+    <li><a href="#CreateModelResponseProperties"><code>CreateModelResponseProperties</code> - </a></li>
+    <li><a href="#DeleteModelResponse"><code>DeleteModelResponse</code> - </a></li>
+    <li><a href="#FunctionObject"><code>FunctionObject</code> - </a></li>
+    <li><a href="#JSON_schema"><code>JSON_schema</code> - JSON schema</a></li>
+    <li><a href="#ListModelsResponse"><code>ListModelsResponse</code> - </a></li>
+    <li><a href="#Model"><code>Model</code> - Model</a></li>
+    <li><a href="#ModelIdsShared"><code>ModelIdsShared</code> - </a></li>
+    <li><a href="#ModelResponseProperties"><code>ModelResponseProperties</code> - </a></li>
+    <li><a href="#PredictionContent"><code>PredictionContent</code> - Static Content</a></li>
+    <li><a href="#PredictionContent_content"><code>PredictionContent_content</code> - </a></li>
+    <li><a href="#ReasoningEffort"><code>ReasoningEffort</code> - </a></li>
+    <li><a href="#ResponseFormatJsonObject"><code>ResponseFormatJsonObject</code> - JSON object</a></li>
+    <li><a href="#ResponseFormatJsonSchema"><code>ResponseFormatJsonSchema</code> - JSON schema</a></li>
+    <li><a href="#ResponseFormatText"><code>ResponseFormatText</code> - Text</a></li>
+    <li><a href="#ServiceTier"><code>ServiceTier</code> - </a></li>
+    <li><a href="#StopConfiguration"><code>StopConfiguration</code> - </a></li>
+    <li><a href="#VoiceIdsShared"><code>VoiceIdsShared</code> - </a></li>
+    <li><a href="#WebSearchContextSize"><code>WebSearchContextSize</code> - </a></li>
+    <li><a href="#WebSearchLocation"><code>WebSearchLocation</code> - Web search location</a></li>
+    <li><a href="#Web_search"><code>Web_search</code> - Web search</a></li>
+    <li><a href="#Web_search_user_location"><code>Web_search_user_location</code> - </a></li>
+    <li><a href="#updateChatCompletion_request"><code>updateChatCompletion_request</code> - </a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="ChatCompletionDeleted"><code>ChatCompletionDeleted</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of object being deleted. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">chat.completion.deleted</div>
+<div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The ID of the chat completion that was deleted. </div>
+<div class="param">deleted </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the chat completion was deleted. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionFunctionCallOption"><code>ChatCompletionFunctionCallOption</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Specifying a particular function via <code>{&quot;name&quot;: &quot;my_function&quot;}</code> forces the model to call that function.</div>
+    <div class="field-items">
+      <div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionFunctions"><code>ChatCompletionFunctions</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A description of what the function does, used by the model to choose when and how to call the function. </div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to be called. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64. </div>
+<div class="param">parameters (optional)</div><div class="param-desc"><span class="param-type"><a href="#AnyType">map[String, oas_any_type_not_mapped]</a></span> <p>The parameters the functions accepts, described as a JSON Schema object. See the <a href="/docs/guides/function-calling">guide</a> for examples, and the <a href="https://json-schema.org/understanding-json-schema/">JSON Schema reference</a> for documentation about the format.</p>
+<p>Omitting <code>parameters</code> defines a function with an empty parameter list.</p>
+ </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionList"><code>ChatCompletionList</code> - ChatCompletionList</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>An object representing a list of Chat Completions.</div>
+    <div class="field-items">
+      <div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of this object. It is always set to &quot;list&quot;. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">list</div>
+<div class="param">data </div><div class="param-desc"><span class="param-type"><a href="#CreateChatCompletionResponse">array[CreateChatCompletionResponse]</a></span> An array of chat completion objects. </div>
+<div class="param">first_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The identifier of the first chat completion in the data array. </div>
+<div class="param">last_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The identifier of the last chat completion in the data array. </div>
+<div class="param">has_more </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Indicates whether there are more Chat Completions available. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionMessageList"><code>ChatCompletionMessageList</code> - ChatCompletionMessageList</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>An object representing a list of chat completion messages.</div>
+    <div class="field-items">
+      <div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of this object. It is always set to &quot;list&quot;. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">list</div>
+<div class="param">data </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionMessageList_data_inner">array[ChatCompletionMessageList_data_inner]</a></span> An array of chat completion message objects. </div>
+<div class="param">first_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The identifier of the first chat message in the data array. </div>
+<div class="param">last_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The identifier of the last chat message in the data array. </div>
+<div class="param">has_more </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Indicates whether there are more chat messages available. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionMessageList_data_inner"><code>ChatCompletionMessageList_data_inner</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The contents of the message. </div>
+<div class="param">refusal </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The refusal message generated by the model. </div>
+<div class="param">tool_calls (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionMessageToolCall">array[ChatCompletionMessageToolCall]</a></span> The tool calls generated by the model, such as function calls. </div>
+<div class="param">annotations (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionResponseMessage_annotations_inner">array[ChatCompletionResponseMessage_annotations_inner]</a></span> Annotations for the message, when applicable, as when using the
+<a href="/docs/guides/tools-web-search?api-mode=chat">web search tool</a>. </div>
+<div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the author of this message. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">assistant</div>
+<div class="param">function_call (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionResponseMessage_function_call">ChatCompletionResponseMessage_function_call</a></span>  </div>
+<div class="param">audio (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionResponseMessage_audio">ChatCompletionResponseMessage_audio</a></span>  </div>
+<div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The identifier of the chat message. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionMessageToolCall"><code>ChatCompletionMessageToolCall</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The ID of the tool call. </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the tool. Currently, only <code>function</code> is supported. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">function</div>
+<div class="param">function </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionMessageToolCall_function">ChatCompletionMessageToolCall_function</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionMessageToolCallChunk"><code>ChatCompletionMessageToolCallChunk</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">index </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The ID of the tool call. </div>
+<div class="param">type (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the tool. Currently, only <code>function</code> is supported. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">function</div>
+<div class="param">function (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionMessageToolCallChunk_function">ChatCompletionMessageToolCallChunk_function</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionMessageToolCallChunk_function"><code>ChatCompletionMessageToolCallChunk_function</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+<div class="param">arguments (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionMessageToolCall_function"><code>ChatCompletionMessageToolCall_function</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The function that the model called.</div>
+    <div class="field-items">
+      <div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+<div class="param">arguments </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionNamedToolChoice"><code>ChatCompletionNamedToolChoice</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Specifies a tool the model should use. Use to force the model to call a specific function.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the tool. Currently, only <code>function</code> is supported. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">function</div>
+<div class="param">function </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionNamedToolChoice_function">ChatCompletionNamedToolChoice_function</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionNamedToolChoice_function"><code>ChatCompletionNamedToolChoice_function</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestAssistantMessage"><code>ChatCompletionRequestAssistantMessage</code> - Assistant message</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Messages sent by the model in response to user messages.</div>
+    <div class="field-items">
+      <div class="param">content (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestAssistantMessage_content">ChatCompletionRequestAssistantMessage_content</a></span>  </div>
+<div class="param">refusal (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The refusal message by the assistant. </div>
+<div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the messages author, in this case <code>assistant</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">assistant</div>
+<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> An optional name for the participant. Provides the model information to differentiate between participants of the same role. </div>
+<div class="param">audio (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestAssistantMessage_audio">ChatCompletionRequestAssistantMessage_audio</a></span>  </div>
+<div class="param">tool_calls (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionMessageToolCall">array[ChatCompletionMessageToolCall]</a></span> The tool calls generated by the model, such as function calls. </div>
+<div class="param">function_call (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestAssistantMessage_function_call">ChatCompletionRequestAssistantMessage_function_call</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestAssistantMessageContentPart"><code>ChatCompletionRequestAssistantMessageContentPart</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the content part. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">text</div><div class="param-enum">refusal</div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The text content. </div>
+<div class="param">refusal </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The refusal message generated by the model. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestAssistantMessage_audio"><code>ChatCompletionRequestAssistantMessage_audio</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Data about a previous audio response from the model.
+<a href="/docs/guides/audio">Learn more</a>.</div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Unique identifier for a previous audio response from the model. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestAssistantMessage_content"><code>ChatCompletionRequestAssistantMessage_content</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The contents of the assistant message. Required unless <code>tool_calls</code> or <code>function_call</code> is specified.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestAssistantMessage_function_call"><code>ChatCompletionRequestAssistantMessage_function_call</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Deprecated and replaced by <code>tool_calls</code>. The name and arguments of a function that should be called, as generated by the model.</div>
+    <div class="field-items">
+      <div class="param">arguments </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function. </div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestDeveloperMessage"><code>ChatCompletionRequestDeveloperMessage</code> - Developer message</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Developer-provided instructions that the model should follow, regardless of
+messages sent by the user. With o1 models and newer, <code>developer</code> messages
+replace the previous <code>system</code> messages.</div>
+    <div class="field-items">
+      <div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestDeveloperMessage_content">ChatCompletionRequestDeveloperMessage_content</a></span>  </div>
+<div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the messages author, in this case <code>developer</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">developer</div>
+<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> An optional name for the participant. Provides the model information to differentiate between participants of the same role. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestDeveloperMessage_content"><code>ChatCompletionRequestDeveloperMessage_content</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The contents of the developer message.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestFunctionMessage"><code>ChatCompletionRequestFunctionMessage</code> - Function message</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the messages author, in this case <code>function</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">function</div>
+<div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The contents of the function message. </div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessage"><code>ChatCompletionRequestMessage</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The contents of the function message. </div>
+<div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the messages author, in this case <code>function</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">function</div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+<div class="param">refusal (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The refusal message by the assistant. </div>
+<div class="param">audio (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestAssistantMessage_audio">ChatCompletionRequestAssistantMessage_audio</a></span>  </div>
+<div class="param">tool_calls (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionMessageToolCall">array[ChatCompletionMessageToolCall]</a></span> The tool calls generated by the model, such as function calls. </div>
+<div class="param">function_call (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestAssistantMessage_function_call">ChatCompletionRequestAssistantMessage_function_call</a></span>  </div>
+<div class="param">tool_call_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Tool call that this message is responding to. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessageContentPartAudio"><code>ChatCompletionRequestMessageContentPartAudio</code> - Audio content part</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Learn about <a href="/docs/guides/audio">audio inputs</a>.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the content part. Always <code>input_audio</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">input_audio</div>
+<div class="param">input_audio </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestMessageContentPartAudio_input_audio">ChatCompletionRequestMessageContentPartAudio_input_audio</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessageContentPartAudio_input_audio"><code>ChatCompletionRequestMessageContentPartAudio_input_audio</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">data </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Base64 encoded audio data. </div>
+<div class="param">format </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The format of the encoded audio data. Currently supports &quot;wav&quot; and &quot;mp3&quot;. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">wav</div><div class="param-enum">mp3</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessageContentPartFile"><code>ChatCompletionRequestMessageContentPartFile</code> - File content part</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Learn about <a href="/docs/guides/text">file inputs</a> for text generation.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the content part. Always <code>file</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">file</div>
+<div class="param">file </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestMessageContentPartFile_file">ChatCompletionRequestMessageContentPartFile_file</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessageContentPartFile_file"><code>ChatCompletionRequestMessageContentPartFile_file</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">filename (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the file, used when passing the file to the model as a
+string. </div>
+<div class="param">file_data (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The base64 encoded file data, used when passing the file to the model
+as a string. </div>
+<div class="param">file_id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The ID of an uploaded file to use as input. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessageContentPartImage"><code>ChatCompletionRequestMessageContentPartImage</code> - Image content part</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Learn about <a href="/docs/guides/vision">image inputs</a>.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the content part. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">image_url</div>
+<div class="param">image_url </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestMessageContentPartImage_image_url">ChatCompletionRequestMessageContentPartImage_image_url</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessageContentPartImage_image_url"><code>ChatCompletionRequestMessageContentPartImage_image_url</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">url </div><div class="param-desc"><span class="param-type"><a href="#URI">URI</a></span> Either a URL of the image or the base64 encoded image data. format: uri</div>
+<div class="param">detail (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Specifies the detail level of the image. Learn more in the <a href="/docs/guides/vision#low-or-high-fidelity-image-understanding">Vision guide</a>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">auto</div><div class="param-enum">low</div><div class="param-enum">high</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessageContentPartRefusal"><code>ChatCompletionRequestMessageContentPartRefusal</code> - Refusal content part</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the content part. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">refusal</div>
+<div class="param">refusal </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The refusal message generated by the model. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestMessageContentPartText"><code>ChatCompletionRequestMessageContentPartText</code> - Text content part</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Learn about <a href="/docs/guides/text-generation">text inputs</a>.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the content part. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">text</div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The text content. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestSystemMessage"><code>ChatCompletionRequestSystemMessage</code> - System message</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Developer-provided instructions that the model should follow, regardless of
+messages sent by the user. With o1 models and newer, use <code>developer</code> messages
+for this purpose instead.</div>
+    <div class="field-items">
+      <div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestSystemMessage_content">ChatCompletionRequestSystemMessage_content</a></span>  </div>
+<div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the messages author, in this case <code>system</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">system</div>
+<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> An optional name for the participant. Provides the model information to differentiate between participants of the same role. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestSystemMessage_content"><code>ChatCompletionRequestSystemMessage_content</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The contents of the system message.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestToolMessage"><code>ChatCompletionRequestToolMessage</code> - Tool message</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the messages author, in this case <code>tool</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">tool</div>
+<div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestToolMessage_content">ChatCompletionRequestToolMessage_content</a></span>  </div>
+<div class="param">tool_call_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Tool call that this message is responding to. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestToolMessage_content"><code>ChatCompletionRequestToolMessage_content</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The contents of the tool message.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestUserMessage"><code>ChatCompletionRequestUserMessage</code> - User message</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Messages sent by an end user, containing prompts or additional context
+information.</div>
+    <div class="field-items">
+      <div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestUserMessage_content">ChatCompletionRequestUserMessage_content</a></span>  </div>
+<div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the messages author, in this case <code>user</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">user</div>
+<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> An optional name for the participant. Provides the model information to differentiate between participants of the same role. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestUserMessageContentPart"><code>ChatCompletionRequestUserMessageContentPart</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the content part. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">text</div><div class="param-enum">image_url</div><div class="param-enum">input_audio</div><div class="param-enum">file</div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The text content. </div>
+<div class="param">image_url </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestMessageContentPartImage_image_url">ChatCompletionRequestMessageContentPartImage_image_url</a></span>  </div>
+<div class="param">input_audio </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestMessageContentPartAudio_input_audio">ChatCompletionRequestMessageContentPartAudio_input_audio</a></span>  </div>
+<div class="param">file </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestMessageContentPartFile_file">ChatCompletionRequestMessageContentPartFile_file</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionRequestUserMessage_content"><code>ChatCompletionRequestUserMessage_content</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The contents of the user message.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionResponseMessage"><code>ChatCompletionResponseMessage</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A chat completion message generated by the model.</div>
+    <div class="field-items">
+      <div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The contents of the message. </div>
+<div class="param">refusal </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The refusal message generated by the model. </div>
+<div class="param">tool_calls (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionMessageToolCall">array[ChatCompletionMessageToolCall]</a></span> The tool calls generated by the model, such as function calls. </div>
+<div class="param">annotations (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionResponseMessage_annotations_inner">array[ChatCompletionResponseMessage_annotations_inner]</a></span> Annotations for the message, when applicable, as when using the
+<a href="/docs/guides/tools-web-search?api-mode=chat">web search tool</a>. </div>
+<div class="param">role </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the author of this message. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">assistant</div>
+<div class="param">function_call (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionResponseMessage_function_call">ChatCompletionResponseMessage_function_call</a></span>  </div>
+<div class="param">audio (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionResponseMessage_audio">ChatCompletionResponseMessage_audio</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionResponseMessage_annotations_inner"><code>ChatCompletionResponseMessage_annotations_inner</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A URL citation when using web search.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the URL citation. Always <code>url_citation</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">url_citation</div>
+<div class="param">url_citation </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionResponseMessage_annotations_inner_url_citation">ChatCompletionResponseMessage_annotations_inner_url_citation</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionResponseMessage_annotations_inner_url_citation"><code>ChatCompletionResponseMessage_annotations_inner_url_citation</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A URL citation when using web search.</div>
+    <div class="field-items">
+      <div class="param">end_index </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The index of the last character of the URL citation in the message. </div>
+<div class="param">start_index </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The index of the first character of the URL citation in the message. </div>
+<div class="param">url </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The URL of the web resource. </div>
+<div class="param">title </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The title of the web resource. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionResponseMessage_audio"><code>ChatCompletionResponseMessage_audio</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>If the audio output modality is requested, this object contains data
+about the audio response from the model. <a href="/docs/guides/audio">Learn more</a>.</div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Unique identifier for this audio response. </div>
+<div class="param">expires_at </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The Unix timestamp (in seconds) for when this audio response will
+no longer be accessible on the server for use in multi-turn
+conversations. </div>
+<div class="param">data </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Base64 encoded audio bytes generated by the model, in the format
+specified in the request. </div>
+<div class="param">transcript </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Transcript of the audio generated by the model. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionResponseMessage_function_call"><code>ChatCompletionResponseMessage_function_call</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Deprecated and replaced by <code>tool_calls</code>. The name and arguments of a function that should be called, as generated by the model.</div>
+    <div class="field-items">
+      <div class="param">arguments </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function. </div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionStreamOptions"><code>ChatCompletionStreamOptions</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Options for streaming response. Only set this when you set <code>stream: true</code>.</div>
+    <div class="field-items">
+      <div class="param">include_usage (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> <p>If set, an additional chunk will be streamed before the <code>data: [DONE]</code>
+message. The <code>usage</code> field on this chunk shows the token usage statistics
+for the entire request, and the <code>choices</code> field will always be an empty
+array.</p>
+<p>All other chunks will also include a <code>usage</code> field, but with a null
+value. <strong>NOTE:</strong> If the stream is interrupted, you may not receive the
+final usage chunk which contains the total token usage for the request.</p>
+ </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionStreamResponseDelta"><code>ChatCompletionStreamResponseDelta</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>A chat completion delta generated by streamed model responses.</div>
+    <div class="field-items">
+      <div class="param">content (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The contents of the chunk message. </div>
+<div class="param">function_call (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionStreamResponseDelta_function_call">ChatCompletionStreamResponseDelta_function_call</a></span>  </div>
+<div class="param">tool_calls (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionMessageToolCallChunk">array[ChatCompletionMessageToolCallChunk]</a></span>  </div>
+<div class="param">role (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The role of the author of this message. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">developer</div><div class="param-enum">system</div><div class="param-enum">user</div><div class="param-enum">assistant</div><div class="param-enum">tool</div>
+<div class="param">refusal (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The refusal message generated by the model. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionStreamResponseDelta_function_call"><code>ChatCompletionStreamResponseDelta_function_call</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Deprecated and replaced by <code>tool_calls</code>. The name and arguments of a function that should be called, as generated by the model.</div>
+    <div class="field-items">
+      <div class="param">arguments (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function. </div>
+<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionTokenLogprob"><code>ChatCompletionTokenLogprob</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">token </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The token. </div>
+<div class="param">logprob </div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> The log probability of this token, if it is within the top 20 most likely tokens. Otherwise, the value <code>-9999.0</code> is used to signify that the token is very unlikely. </div>
+<div class="param">bytes </div><div class="param-desc"><span class="param-type"><a href="#integer">array[Integer]</a></span> A list of integers representing the UTF-8 bytes representation of the token. Useful in instances where characters are represented by multiple tokens and their byte representations must be combined to generate the correct text representation. Can be <code>null</code> if there is no bytes representation for the token. </div>
+<div class="param">top_logprobs </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionTokenLogprob_top_logprobs_inner">array[ChatCompletionTokenLogprob_top_logprobs_inner]</a></span> List of the most likely tokens and their log probability, at this token position. In rare cases, there may be fewer than the number of requested <code>top_logprobs</code> returned. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionTokenLogprob_top_logprobs_inner"><code>ChatCompletionTokenLogprob_top_logprobs_inner</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">token </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The token. </div>
+<div class="param">logprob </div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> The log probability of this token, if it is within the top 20 most likely tokens. Otherwise, the value <code>-9999.0</code> is used to signify that the token is very unlikely. </div>
+<div class="param">bytes </div><div class="param-desc"><span class="param-type"><a href="#integer">array[Integer]</a></span> A list of integers representing the UTF-8 bytes representation of the token. Useful in instances where characters are represented by multiple tokens and their byte representations must be combined to generate the correct text representation. Can be <code>null</code> if there is no bytes representation for the token. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionTool"><code>ChatCompletionTool</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the tool. Currently, only <code>function</code> is supported. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">function</div>
+<div class="param">function </div><div class="param-desc"><span class="param-type"><a href="#FunctionObject">FunctionObject</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ChatCompletionToolChoiceOption"><code>ChatCompletionToolChoiceOption</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'><p>Controls which (if any) tool is called by the model.
+<code>none</code> means the model will not call any tool and instead generates a message.
+<code>auto</code> means the model can pick between generating a message or calling one or more tools.
+<code>required</code> means the model must call one or more tools.
+Specifying a particular tool via <code>{&quot;type&quot;: &quot;function&quot;, &quot;function&quot;: {&quot;name&quot;: &quot;my_function&quot;}}</code> forces the model to call that tool.</p>
+<p><code>none</code> is the default when no tools are present. <code>auto</code> is the default if tools are present.</p>
+</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the tool. Currently, only <code>function</code> is supported. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">function</div>
+<div class="param">function </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionNamedToolChoice_function">ChatCompletionNamedToolChoice_function</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CompletionUsage"><code>CompletionUsage</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Usage statistics for the completion request.</div>
+    <div class="field-items">
+      <div class="param">completion_tokens </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Number of tokens in the generated completion. </div>
+<div class="param">prompt_tokens </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Number of tokens in the prompt. </div>
+<div class="param">total_tokens </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Total number of tokens used in the request (prompt + completion). </div>
+<div class="param">completion_tokens_details (optional)</div><div class="param-desc"><span class="param-type"><a href="#CompletionUsage_completion_tokens_details">CompletionUsage_completion_tokens_details</a></span>  </div>
+<div class="param">prompt_tokens_details (optional)</div><div class="param-desc"><span class="param-type"><a href="#CompletionUsage_prompt_tokens_details">CompletionUsage_prompt_tokens_details</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CompletionUsage_completion_tokens_details"><code>CompletionUsage_completion_tokens_details</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Breakdown of tokens used in a completion.</div>
+    <div class="field-items">
+      <div class="param">accepted_prediction_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> When using Predicted Outputs, the number of tokens in the
+prediction that appeared in the completion. </div>
+<div class="param">audio_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Audio input tokens generated by the model. </div>
+<div class="param">reasoning_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Tokens generated by the model for reasoning. </div>
+<div class="param">rejected_prediction_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> When using Predicted Outputs, the number of tokens in the
+prediction that did not appear in the completion. However, like
+reasoning tokens, these tokens are still counted in the total
+completion tokens for purposes of billing, output, and context window
+limits. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CompletionUsage_prompt_tokens_details"><code>CompletionUsage_prompt_tokens_details</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Breakdown of tokens used in the prompt.</div>
+    <div class="field-items">
+      <div class="param">audio_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Audio input tokens present in the prompt. </div>
+<div class="param">cached_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Cached tokens present in the prompt. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionRequest"><code>CreateChatCompletionRequest</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">metadata (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">map[String, String]</a></span> <p>Set of 16 key-value pairs that can be attached to an object. This can be
+useful for storing additional information about the object in a structured
+format, and querying for objects via API or the dashboard.</p>
+<p>Keys are strings with a maximum length of 64 characters. Values are strings
+with a maximum length of 512 characters.</p>
+ </div>
+<div class="param">temperature (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
+We generally recommend altering this or <code>top_p</code> but not both. </div>
+<div class="param">top_p (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> <p>An alternative to sampling with temperature, called nucleus sampling,
+where the model considers the results of the tokens with top_p probability
+mass. So 0.1 means only the tokens comprising the top 10% probability mass
+are considered.</p>
+<p>We generally recommend altering this or <code>temperature</code> but not both.</p>
+ </div>
+<div class="param">user (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. <a href="/docs/guides/safety-best-practices#end-user-ids">Learn more</a>. </div>
+<div class="param">service_tier (optional)</div><div class="param-desc"><span class="param-type"><a href="#ServiceTier">ServiceTier</a></span>  </div>
+<div class="param">messages </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionRequestMessage">array[ChatCompletionRequestMessage]</a></span> A list of messages comprising the conversation so far. Depending on the
+<a href="/docs/models">model</a> you use, different message types (modalities) are
+supported, like <a href="/docs/guides/text-generation">text</a>,
+<a href="/docs/guides/vision">images</a>, and <a href="/docs/guides/audio">audio</a>. </div>
+<div class="param">model </div><div class="param-desc"><span class="param-type"><a href="#ModelIdsShared">ModelIdsShared</a></span>  </div>
+<div class="param">modalities (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> <p>Output types that you would like the model to generate.
+Most models are capable of generating text, which is the default:</p>
+<p><code>[&quot;text&quot;]</code></p>
+<p>The <code>gpt-4o-audio-preview</code> model can also be used to
+<a href="/docs/guides/audio">generate audio</a>. To request that this model generate
+both text and audio responses, you can use:</p>
+<p><code>[&quot;text&quot;, &quot;audio&quot;]</code></p>
+ </div>
+        <div class="param-enum-header">Enum:</div>
+        
+<div class="param">reasoning_effort (optional)</div><div class="param-desc"><span class="param-type"><a href="#ReasoningEffort">ReasoningEffort</a></span>  </div>
+<div class="param">max_completion_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> An upper bound for the number of tokens that can be generated for a completion, including visible output tokens and <a href="/docs/guides/reasoning">reasoning tokens</a>. </div>
+<div class="param">frequency_penalty (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> Number between -2.0 and 2.0. Positive values penalize new tokens based on
+their existing frequency in the text so far, decreasing the model's
+likelihood to repeat the same line verbatim. </div>
+<div class="param">presence_penalty (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> Number between -2.0 and 2.0. Positive values penalize new tokens based on
+whether they appear in the text so far, increasing the model's likelihood
+to talk about new topics. </div>
+<div class="param">web_search_options (optional)</div><div class="param-desc"><span class="param-type"><a href="#Web_search">Web_search</a></span>  </div>
+<div class="param">top_logprobs (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> An integer between 0 and 20 specifying the number of most likely tokens to
+return at each token position, each with an associated log probability.
+<code>logprobs</code> must be set to <code>true</code> if this parameter is used. </div>
+<div class="param">response_format (optional)</div><div class="param-desc"><span class="param-type"><a href="#CreateChatCompletionRequest_allOf_response_format">CreateChatCompletionRequest_allOf_response_format</a></span>  </div>
+<div class="param">audio (optional)</div><div class="param-desc"><span class="param-type"><a href="#CreateChatCompletionRequest_allOf_audio">CreateChatCompletionRequest_allOf_audio</a></span>  </div>
+<div class="param">store (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether or not to store the output of this chat completion request for
+use in our <a href="/docs/guides/distillation">model distillation</a> or
+<a href="/docs/guides/evals">evals</a> products. </div>
+<div class="param">stream (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> If set to true, the model response data will be streamed to the client
+as it is generated using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format">server-sent events</a>.
+See the <a href="/docs/api-reference/chat/streaming">Streaming section below</a>
+for more information, along with the <a href="/docs/guides/streaming-responses">streaming responses</a>
+guide for more information on how to handle the streaming events. </div>
+<div class="param">stop (optional)</div><div class="param-desc"><span class="param-type"><a href="#StopConfiguration">StopConfiguration</a></span>  </div>
+<div class="param">logit_bias (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">map[String, Integer]</a></span> <p>Modify the likelihood of specified tokens appearing in the completion.</p>
+<p>Accepts a JSON object that maps tokens (specified by their token ID in the
+tokenizer) to an associated bias value from -100 to 100. Mathematically,
+the bias is added to the logits generated by the model prior to sampling.
+The exact effect will vary per model, but values between -1 and 1 should
+decrease or increase likelihood of selection; values like -100 or 100
+should result in a ban or exclusive selection of the relevant token.</p>
+ </div>
+<div class="param">logprobs (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether to return log probabilities of the output tokens or not. If true,
+returns the log probabilities of each output token returned in the
+<code>content</code> of <code>message</code>. </div>
+<div class="param">max_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> <p>The maximum number of <a href="/tokenizer">tokens</a> that can be generated in the
+chat completion. This value can be used to control
+<a href="https://openai.com/api/pricing/">costs</a> for text generated via API.</p>
+<p>This value is now deprecated in favor of <code>max_completion_tokens</code>, and is
+not compatible with <a href="/docs/guides/reasoning">o-series models</a>.</p>
+ </div>
+<div class="param">n (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> How many chat completion choices to generate for each input message. Note that you will be charged based on the number of generated tokens across all of the choices. Keep <code>n</code> as <code>1</code> to minimize costs. </div>
+<div class="param">prediction (optional)</div><div class="param-desc"><span class="param-type"><a href="#PredictionContent">PredictionContent</a></span>  </div>
+<div class="param">seed (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> This feature is in Beta.
+If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same <code>seed</code> and parameters should return the same result.
+Determinism is not guaranteed, and you should refer to the <code>system_fingerprint</code> response parameter to monitor changes in the backend. </div>
+<div class="param">stream_options (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionStreamOptions">ChatCompletionStreamOptions</a></span>  </div>
+<div class="param">tools (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionTool">array[ChatCompletionTool]</a></span> A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported. </div>
+<div class="param">tool_choice (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionToolChoiceOption">ChatCompletionToolChoiceOption</a></span>  </div>
+<div class="param">parallel_tool_calls (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether to enable <a href="/docs/guides/function-calling#configuring-parallel-function-calling">parallel function calling</a> during tool use. </div>
+<div class="param">function_call (optional)</div><div class="param-desc"><span class="param-type"><a href="#CreateChatCompletionRequest_allOf_function_call">CreateChatCompletionRequest_allOf_function_call</a></span>  </div>
+<div class="param">functions (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionFunctions">array[ChatCompletionFunctions]</a></span> <p>Deprecated in favor of <code>tools</code>.</p>
+<p>A list of functions the model may generate JSON inputs for.</p>
+ </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionRequest_allOf_audio"><code>CreateChatCompletionRequest_allOf_audio</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Parameters for audio output. Required when audio output is requested with
+<code>modalities: [&quot;audio&quot;]</code>. <a href="/docs/guides/audio">Learn more</a>.</div>
+    <div class="field-items">
+      <div class="param">voice </div><div class="param-desc"><span class="param-type"><a href="#VoiceIdsShared">VoiceIdsShared</a></span>  </div>
+<div class="param">format </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Specifies the output audio format. Must be one of <code>wav</code>, <code>mp3</code>, <code>flac</code>,
+<code>opus</code>, or <code>pcm16</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">wav</div><div class="param-enum">aac</div><div class="param-enum">mp3</div><div class="param-enum">flac</div><div class="param-enum">opus</div><div class="param-enum">pcm16</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionRequest_allOf_function_call"><code>CreateChatCompletionRequest_allOf_function_call</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'><p>Deprecated in favor of <code>tool_choice</code>.</p>
+<p>Controls which (if any) function is called by the model.</p>
+<p><code>none</code> means the model will not call a function and instead generates a
+message.</p>
+<p><code>auto</code> means the model can pick between generating a message or calling a
+function.</p>
+<p>Specifying a particular function via <code>{&quot;name&quot;: &quot;my_function&quot;}</code> forces the
+model to call that function.</p>
+<p><code>none</code> is the default when no functions are present. <code>auto</code> is the default
+if functions are present.</p>
+</div>
+    <div class="field-items">
+      <div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to call. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionRequest_allOf_response_format"><code>CreateChatCompletionRequest_allOf_response_format</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'><p>An object specifying the format that the model must output.</p>
+<p>Setting to <code>{ &quot;type&quot;: &quot;json_schema&quot;, &quot;json_schema&quot;: {...} }</code> enables
+Structured Outputs which ensures the model will match your supplied JSON
+schema. Learn more in the <a href="/docs/guides/structured-outputs">Structured Outputs
+guide</a>.</p>
+<p>Setting to <code>{ &quot;type&quot;: &quot;json_object&quot; }</code> enables the older JSON mode, which
+ensures the message the model generates is valid JSON. Using <code>json_schema</code>
+is preferred for models that support it.</p>
+</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of response format being defined. Always <code>text</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">text</div><div class="param-enum">json_schema</div><div class="param-enum">json_object</div>
+<div class="param">json_schema </div><div class="param-desc"><span class="param-type"><a href="#JSON_schema">JSON_schema</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionResponse"><code>CreateChatCompletionResponse</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Represents a chat completion response returned by model, based on the provided input.</div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A unique identifier for the chat completion. </div>
+<div class="param">choices </div><div class="param-desc"><span class="param-type"><a href="#CreateChatCompletionResponse_choices_inner">array[CreateChatCompletionResponse_choices_inner]</a></span> A list of chat completion choices. Can be more than one if <code>n</code> is greater than 1. </div>
+<div class="param">created </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The Unix timestamp (in seconds) of when the chat completion was created. </div>
+<div class="param">model </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The model used for the chat completion. </div>
+<div class="param">service_tier (optional)</div><div class="param-desc"><span class="param-type"><a href="#ServiceTier">ServiceTier</a></span>  </div>
+<div class="param">system_fingerprint (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> <p>This fingerprint represents the backend configuration that the model runs with.</p>
+<p>Can be used in conjunction with the <code>seed</code> request parameter to understand when backend changes have been made that might impact determinism.</p>
+ </div>
+<div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The object type, which is always <code>chat.completion</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">chat.completion</div>
+<div class="param">usage (optional)</div><div class="param-desc"><span class="param-type"><a href="#CompletionUsage">CompletionUsage</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionResponse_choices_inner"><code>CreateChatCompletionResponse_choices_inner</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">finish_reason </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The reason the model stopped generating tokens. This will be <code>stop</code> if the model hit a natural stop point or a provided stop sequence,
+<code>length</code> if the maximum number of tokens specified in the request was reached,
+<code>content_filter</code> if content was omitted due to a flag from our content filters,
+<code>tool_calls</code> if the model called a tool, or <code>function_call</code> (deprecated) if the model called a function. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">stop</div><div class="param-enum">length</div><div class="param-enum">tool_calls</div><div class="param-enum">content_filter</div><div class="param-enum">function_call</div>
+<div class="param">index </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The index of the choice in the list of choices. </div>
+<div class="param">message </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionResponseMessage">ChatCompletionResponseMessage</a></span>  </div>
+<div class="param">logprobs </div><div class="param-desc"><span class="param-type"><a href="#CreateChatCompletionResponse_choices_inner_logprobs">CreateChatCompletionResponse_choices_inner_logprobs</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionResponse_choices_inner_logprobs"><code>CreateChatCompletionResponse_choices_inner_logprobs</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Log probability information for the choice.</div>
+    <div class="field-items">
+      <div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionTokenLogprob">array[ChatCompletionTokenLogprob]</a></span> A list of message content tokens with log probability information. </div>
+<div class="param">refusal </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionTokenLogprob">array[ChatCompletionTokenLogprob]</a></span> A list of message refusal tokens with log probability information. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionStreamResponse"><code>CreateChatCompletionStreamResponse</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Represents a streamed chunk of a chat completion response returned
+by the model, based on the provided input.
+<a href="/docs/guides/streaming-responses">Learn more</a>.</div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A unique identifier for the chat completion. Each chunk has the same ID. </div>
+<div class="param">choices </div><div class="param-desc"><span class="param-type"><a href="#CreateChatCompletionStreamResponse_choices_inner">array[CreateChatCompletionStreamResponse_choices_inner]</a></span> A list of chat completion choices. Can contain more than one elements if <code>n</code> is greater than 1. Can also be empty for the
+last chunk if you set <code>stream_options: {&quot;include_usage&quot;: true}</code>. </div>
+<div class="param">created </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The Unix timestamp (in seconds) of when the chat completion was created. Each chunk has the same timestamp. </div>
+<div class="param">model </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The model to generate the completion. </div>
+<div class="param">service_tier (optional)</div><div class="param-desc"><span class="param-type"><a href="#ServiceTier">ServiceTier</a></span>  </div>
+<div class="param">system_fingerprint (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> This fingerprint represents the backend configuration that the model runs with.
+Can be used in conjunction with the <code>seed</code> request parameter to understand when backend changes have been made that might impact determinism. </div>
+<div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The object type, which is always <code>chat.completion.chunk</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">chat.completion.chunk</div>
+<div class="param">usage (optional)</div><div class="param-desc"><span class="param-type"><a href="#CompletionUsage">CompletionUsage</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateChatCompletionStreamResponse_choices_inner"><code>CreateChatCompletionStreamResponse_choices_inner</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">delta </div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionStreamResponseDelta">ChatCompletionStreamResponseDelta</a></span>  </div>
+<div class="param">logprobs (optional)</div><div class="param-desc"><span class="param-type"><a href="#CreateChatCompletionResponse_choices_inner_logprobs">CreateChatCompletionResponse_choices_inner_logprobs</a></span>  </div>
+<div class="param">finish_reason </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The reason the model stopped generating tokens. This will be <code>stop</code> if the model hit a natural stop point or a provided stop sequence,
+<code>length</code> if the maximum number of tokens specified in the request was reached,
+<code>content_filter</code> if content was omitted due to a flag from our content filters,
+<code>tool_calls</code> if the model called a tool, or <code>function_call</code> (deprecated) if the model called a function. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">stop</div><div class="param-enum">length</div><div class="param-enum">tool_calls</div><div class="param-enum">content_filter</div><div class="param-enum">function_call</div>
+<div class="param">index </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The index of the choice in the list of choices. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateCompletionRequest"><code>CreateCompletionRequest</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">model </div><div class="param-desc"><span class="param-type"><a href="#CreateCompletionRequest_model">CreateCompletionRequest_model</a></span>  </div>
+<div class="param">prompt </div><div class="param-desc"><span class="param-type"><a href="#CreateCompletionRequest_prompt">CreateCompletionRequest_prompt</a></span>  </div>
+<div class="param">best_of (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> <p>Generates <code>best_of</code> completions server-side and returns the &quot;best&quot; (the one with the highest log probability per token). Results cannot be streamed.</p>
+<p>When used with <code>n</code>, <code>best_of</code> controls the number of candidate completions and <code>n</code> specifies how many to return – <code>best_of</code> must be greater than <code>n</code>.</p>
+<p><strong>Note:</strong> Because this parameter generates many completions, it can quickly consume your token quota. Use carefully and ensure that you have reasonable settings for <code>max_tokens</code> and <code>stop</code>.</p>
+ </div>
+<div class="param">echo (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Echo back the prompt in addition to the completion </div>
+<div class="param">frequency_penalty (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> <p>Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.</p>
+<p><a href="/docs/guides/text-generation">See more information about frequency and presence penalties.</a></p>
+ </div>
+<div class="param">logit_bias (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">map[String, Integer]</a></span> <p>Modify the likelihood of specified tokens appearing in the completion.</p>
+<p>Accepts a JSON object that maps tokens (specified by their token ID in the GPT tokenizer) to an associated bias value from -100 to 100. You can use this <a href="/tokenizer?view=bpe">tokenizer tool</a> to convert text to token IDs. Mathematically, the bias is added to the logits generated by the model prior to sampling. The exact effect will vary per model, but values between -1 and 1 should decrease or increase likelihood of selection; values like -100 or 100 should result in a ban or exclusive selection of the relevant token.</p>
+<p>As an example, you can pass <code>{&quot;50256&quot;: -100}</code> to prevent the &lt;|endoftext|&gt; token from being generated.</p>
+ </div>
+<div class="param">logprobs (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> <p>Include the log probabilities on the <code>logprobs</code> most likely output tokens, as well the chosen tokens. For example, if <code>logprobs</code> is 5, the API will return a list of the 5 most likely tokens. The API will always return the <code>logprob</code> of the sampled token, so there may be up to <code>logprobs+1</code> elements in the response.</p>
+<p>The maximum value for <code>logprobs</code> is 5.</p>
+ </div>
+<div class="param">max_tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> <p>The maximum number of <a href="/tokenizer">tokens</a> that can be generated in the completion.</p>
+<p>The token count of your prompt plus <code>max_tokens</code> cannot exceed the model's context length. <a href="https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken">Example Python code</a> for counting tokens.</p>
+ </div>
+<div class="param">n (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> <p>How many completions to generate for each prompt.</p>
+<p><strong>Note:</strong> Because this parameter generates many completions, it can quickly consume your token quota. Use carefully and ensure that you have reasonable settings for <code>max_tokens</code> and <code>stop</code>.</p>
+ </div>
+<div class="param">presence_penalty (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> <p>Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.</p>
+<p><a href="/docs/guides/text-generation">See more information about frequency and presence penalties.</a></p>
+ </div>
+<div class="param">seed (optional)</div><div class="param-desc"><span class="param-type"><a href="#long">Long</a></span> <p>If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same <code>seed</code> and parameters should return the same result.</p>
+<p>Determinism is not guaranteed, and you should refer to the <code>system_fingerprint</code> response parameter to monitor changes in the backend.</p>
+ format: int64</div>
+<div class="param">stop (optional)</div><div class="param-desc"><span class="param-type"><a href="#StopConfiguration">StopConfiguration</a></span>  </div>
+<div class="param">stream (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether to stream back partial progress. If set, tokens will be sent as data-only <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format">server-sent events</a> as they become available, with the stream terminated by a <code>data: [DONE]</code> message. <a href="https://cookbook.openai.com/examples/how_to_stream_completions">Example Python code</a>. </div>
+<div class="param">stream_options (optional)</div><div class="param-desc"><span class="param-type"><a href="#ChatCompletionStreamOptions">ChatCompletionStreamOptions</a></span>  </div>
+<div class="param">suffix (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> <p>The suffix that comes after a completion of inserted text.</p>
+<p>This parameter is only supported for <code>gpt-3.5-turbo-instruct</code>.</p>
+ </div>
+<div class="param">temperature (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> <p>What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.</p>
+<p>We generally recommend altering this or <code>top_p</code> but not both.</p>
+ </div>
+<div class="param">top_p (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> <p>An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.</p>
+<p>We generally recommend altering this or <code>temperature</code> but not both.</p>
+ </div>
+<div class="param">user (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. <a href="/docs/guides/safety-best-practices#end-user-ids">Learn more</a>. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateCompletionRequest_model"><code>CreateCompletionRequest_model</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>ID of the model to use. You can use the <a href="/docs/api-reference/models/list">List models</a> API to see all of your available models, or see our <a href="/docs/models">Model overview</a> for descriptions of them.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateCompletionRequest_prompt"><code>CreateCompletionRequest_prompt</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'><p>The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays.</p>
+<p>Note that &lt;|endoftext|&gt; is the document separator that the model sees during training, so if a prompt is not specified the model will generate as if from the beginning of a new document.</p>
+</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateCompletionResponse"><code>CreateCompletionResponse</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Represents a completion response from the API. Note: both the streamed and non-streamed response objects share the same shape (unlike the chat endpoint).</div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A unique identifier for the completion. </div>
+<div class="param">choices </div><div class="param-desc"><span class="param-type"><a href="#CreateCompletionResponse_choices_inner">array[CreateCompletionResponse_choices_inner]</a></span> The list of completion choices the model generated for the input prompt. </div>
+<div class="param">created </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The Unix timestamp (in seconds) of when the completion was created. </div>
+<div class="param">model </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The model used for completion. </div>
+<div class="param">system_fingerprint (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> <p>This fingerprint represents the backend configuration that the model runs with.</p>
+<p>Can be used in conjunction with the <code>seed</code> request parameter to understand when backend changes have been made that might impact determinism.</p>
+ </div>
+<div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The object type, which is always &quot;text_completion&quot; </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">text_completion</div>
+<div class="param">usage (optional)</div><div class="param-desc"><span class="param-type"><a href="#CompletionUsage">CompletionUsage</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateCompletionResponse_choices_inner"><code>CreateCompletionResponse_choices_inner</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">finish_reason </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The reason the model stopped generating tokens. This will be <code>stop</code> if the model hit a natural stop point or a provided stop sequence,
+<code>length</code> if the maximum number of tokens specified in the request was reached,
+or <code>content_filter</code> if content was omitted due to a flag from our content filters. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">stop</div><div class="param-enum">length</div><div class="param-enum">content_filter</div>
+<div class="param">index </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">logprobs </div><div class="param-desc"><span class="param-type"><a href="#CreateCompletionResponse_choices_inner_logprobs">CreateCompletionResponse_choices_inner_logprobs</a></span>  </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateCompletionResponse_choices_inner_logprobs"><code>CreateCompletionResponse_choices_inner_logprobs</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">text_offset (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">array[Integer]</a></span>  </div>
+<div class="param">token_logprobs (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">array[BigDecimal]</a></span>  </div>
+<div class="param">tokens (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span>  </div>
+<div class="param">top_logprobs (optional)</div><div class="param-desc"><span class="param-type"><a href="#map">array[map[String, BigDecimal]]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateModelResponseProperties"><code>CreateModelResponseProperties</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">metadata (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">map[String, String]</a></span> <p>Set of 16 key-value pairs that can be attached to an object. This can be
+useful for storing additional information about the object in a structured
+format, and querying for objects via API or the dashboard.</p>
+<p>Keys are strings with a maximum length of 64 characters. Values are strings
+with a maximum length of 512 characters.</p>
+ </div>
+<div class="param">temperature (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
+We generally recommend altering this or <code>top_p</code> but not both. </div>
+<div class="param">top_p (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> <p>An alternative to sampling with temperature, called nucleus sampling,
+where the model considers the results of the tokens with top_p probability
+mass. So 0.1 means only the tokens comprising the top 10% probability mass
+are considered.</p>
+<p>We generally recommend altering this or <code>temperature</code> but not both.</p>
+ </div>
+<div class="param">user (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. <a href="/docs/guides/safety-best-practices#end-user-ids">Learn more</a>. </div>
+<div class="param">service_tier (optional)</div><div class="param-desc"><span class="param-type"><a href="#ServiceTier">ServiceTier</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="DeleteModelResponse"><code>DeleteModelResponse</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">deleted </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span>  </div>
+<div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="FunctionObject"><code>FunctionObject</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A description of what the function does, used by the model to choose when and how to call the function. </div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the function to be called. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64. </div>
+<div class="param">parameters (optional)</div><div class="param-desc"><span class="param-type"><a href="#AnyType">map[String, oas_any_type_not_mapped]</a></span> <p>The parameters the functions accepts, described as a JSON Schema object. See the <a href="/docs/guides/function-calling">guide</a> for examples, and the <a href="https://json-schema.org/understanding-json-schema/">JSON Schema reference</a> for documentation about the format.</p>
+<p>Omitting <code>parameters</code> defines a function with an empty parameter list.</p>
+ </div>
+<div class="param">strict (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether to enable strict schema adherence when generating the function call. If set to true, the model will follow the exact schema defined in the <code>parameters</code> field. Only a subset of JSON Schema is supported when <code>strict</code> is <code>true</code>. Learn more about Structured Outputs in the <a href="docs/guides/function-calling">function calling guide</a>. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="JSON_schema"><code>JSON_schema</code> - JSON schema</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Structured Outputs configuration options, including a JSON Schema.</div>
+    <div class="field-items">
+      <div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A description of what the response format is for, used by the model to
+determine how to respond in the format. </div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the response format. Must be a-z, A-Z, 0-9, or contain
+underscores and dashes, with a maximum length of 64. </div>
+<div class="param">schema (optional)</div><div class="param-desc"><span class="param-type"><a href="#AnyType">map[String, oas_any_type_not_mapped]</a></span> The schema for the response format, described as a JSON Schema object.
+Learn how to build JSON schemas <a href="https://json-schema.org/">here</a>. </div>
+<div class="param">strict (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether to enable strict schema adherence when generating the output.
+If set to true, the model will always follow the exact schema defined
+in the <code>schema</code> field. Only a subset of JSON Schema is supported when
+<code>strict</code> is <code>true</code>. To learn more, read the <a href="/docs/guides/structured-outputs">Structured Outputs
+guide</a>. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ListModelsResponse"><code>ListModelsResponse</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">list</div>
+<div class="param">data </div><div class="param-desc"><span class="param-type"><a href="#Model">array[Model]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Model"><code>Model</code> - Model</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Describes an OpenAI model offering that can be used with the API.</div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The model identifier, which can be referenced in the API endpoints. </div>
+<div class="param">created </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The Unix timestamp (in seconds) when the model was created. </div>
+<div class="param">object </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The object type, which is always &quot;model&quot;. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">model</div>
+<div class="param">owned_by </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The organization that owns the model. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ModelIdsShared"><code>ModelIdsShared</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ModelResponseProperties"><code>ModelResponseProperties</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">metadata (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">map[String, String]</a></span> <p>Set of 16 key-value pairs that can be attached to an object. This can be
+useful for storing additional information about the object in a structured
+format, and querying for objects via API or the dashboard.</p>
+<p>Keys are strings with a maximum length of 64 characters. Values are strings
+with a maximum length of 512 characters.</p>
+ </div>
+<div class="param">temperature (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
+We generally recommend altering this or <code>top_p</code> but not both. </div>
+<div class="param">top_p (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span> <p>An alternative to sampling with temperature, called nucleus sampling,
+where the model considers the results of the tokens with top_p probability
+mass. So 0.1 means only the tokens comprising the top 10% probability mass
+are considered.</p>
+<p>We generally recommend altering this or <code>temperature</code> but not both.</p>
+ </div>
+<div class="param">user (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. <a href="/docs/guides/safety-best-practices#end-user-ids">Learn more</a>. </div>
+<div class="param">service_tier (optional)</div><div class="param-desc"><span class="param-type"><a href="#ServiceTier">ServiceTier</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PredictionContent"><code>PredictionContent</code> - Static Content</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Static predicted output content, such as the content of a text file that is
+being regenerated.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of the predicted content you want to provide. This type is
+currently always <code>content</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">content</div>
+<div class="param">content </div><div class="param-desc"><span class="param-type"><a href="#PredictionContent_content">PredictionContent_content</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PredictionContent_content"><code>PredictionContent_content</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>The content that should be matched when generating a model response.
+If generated tokens would match this content, the entire model response
+can be returned much more quickly.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ReasoningEffort"><code>ReasoningEffort</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'><p><strong>o-series models only</strong></p>
+<p>Constrains effort on reasoning for
+<a href="https://platform.openai.com/docs/guides/reasoning">reasoning models</a>.
+Currently supported values are <code>low</code>, <code>medium</code>, and <code>high</code>. Reducing
+reasoning effort can result in faster responses and fewer tokens used
+on reasoning in a response.</p>
+</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ResponseFormatJsonObject"><code>ResponseFormatJsonObject</code> - JSON object</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>JSON object response format. An older method of generating JSON responses.
+Using <code>json_schema</code> is recommended for models that support it. Note that the
+model will not generate JSON without a system or user message instructing it
+to do so.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of response format being defined. Always <code>json_object</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">json_object</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ResponseFormatJsonSchema"><code>ResponseFormatJsonSchema</code> - JSON schema</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>JSON Schema response format. Used to generate structured JSON responses.
+Learn more about <a href="/docs/guides/structured-outputs">Structured Outputs</a>.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of response format being defined. Always <code>json_schema</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">json_schema</div>
+<div class="param">json_schema </div><div class="param-desc"><span class="param-type"><a href="#JSON_schema">JSON_schema</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ResponseFormatText"><code>ResponseFormatText</code> - Text</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Default response format. Used to generate text responses.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of response format being defined. Always <code>text</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">text</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceTier"><code>ServiceTier</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'><p>Specifies the latency tier to use for processing the request. This parameter is relevant for customers subscribed to the scale tier service:</p>
+<ul>
+<li>If set to 'auto', and the Project is Scale tier enabled, the system
+will utilize scale tier credits until they are exhausted.</li>
+<li>If set to 'auto', and the Project is not Scale tier enabled, the request will be processed using the default service tier with a lower uptime SLA and no latency guarentee.</li>
+<li>If set to 'default', the request will be processed using the default service tier with a lower uptime SLA and no latency guarentee.</li>
+<li>If set to 'flex', the request will be processed with the Flex Processing service tier. <a href="/docs/guides/flex-processing">Learn more</a>.</li>
+<li>When not set, the default behavior is 'auto'.</li>
+</ul>
+<p>When this parameter is set, the response body will include the <code>service_tier</code> utilized.</p>
+</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="StopConfiguration"><code>StopConfiguration</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'><p>Not supported with latest reasoning models <code>o3</code> and <code>o4-mini</code>.</p>
+<p>Up to 4 sequences where the API will stop generating further tokens. The
+returned text will not contain the stop sequence.</p>
+</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="VoiceIdsShared"><code>VoiceIdsShared</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="WebSearchContextSize"><code>WebSearchContextSize</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>High level guidance for the amount of context window space to use for the
+search. One of <code>low</code>, <code>medium</code>, or <code>high</code>. <code>medium</code> is the default.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="WebSearchLocation"><code>WebSearchLocation</code> - Web search location</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Approximate location parameters for the search.</div>
+    <div class="field-items">
+      <div class="param">country (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The two-letter
+<a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO country code</a> of the user,
+e.g. <code>US</code>. </div>
+<div class="param">region (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Free text input for the region of the user, e.g. <code>California</code>. </div>
+<div class="param">city (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Free text input for the city of the user, e.g. <code>San Francisco</code>. </div>
+<div class="param">timezone (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The <a href="https://timeapi.io/documentation/iana-timezones">IANA timezone</a>
+of the user, e.g. <code>America/Los_Angeles</code>. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Web_search"><code>Web_search</code> - Web search</a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>This tool searches the web for relevant results to use in a response.
+Learn more about the <a href="/docs/guides/tools-web-search?api-mode=chat">web search tool</a>.</div>
+    <div class="field-items">
+      <div class="param">user_location (optional)</div><div class="param-desc"><span class="param-type"><a href="#Web_search_user_location">Web_search_user_location</a></span>  </div>
+<div class="param">search_context_size (optional)</div><div class="param-desc"><span class="param-type"><a href="#WebSearchContextSize">WebSearchContextSize</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Web_search_user_location"><code>Web_search_user_location</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Approximate location parameters for the search.</div>
+    <div class="field-items">
+      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The type of location approximation. Always <code>approximate</code>. </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">approximate</div>
+<div class="param">approximate </div><div class="param-desc"><span class="param-type"><a href="#WebSearchLocation">WebSearchLocation</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updateChatCompletion_request"><code>updateChatCompletion_request</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">metadata </div><div class="param-desc"><span class="param-type"><a href="#string">map[String, String]</a></span> <p>Set of 16 key-value pairs that can be attached to an object. This can be
+useful for storing additional information about the object in a structured
+format, and querying for objects via API or the dashboard.</p>
+<p>Keys are strings with a maximum length of 64 characters. Values are strings
+with a maximum length of 512 characters.</p>
+ </div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>
