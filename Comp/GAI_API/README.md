@@ -35,8 +35,11 @@ openapi-generator-cli generate -i openapi.yaml -g python-fastapi -o ./generated-
 
 * SSE: https://developer.mozilla.org/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
 
-
-
+### flask production server
+- https://flask.palletsprojects.com/en/stable/deploying/
+-  waitress
+    - https://docs.pylonsproject.org/projects/waitress/en/latest/arguments.html
+    - https://jp-seemore.com/iot/python/29417/
 
 ## Open WebUI
 - https://github.com/open-webui/open-webui

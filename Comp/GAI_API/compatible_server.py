@@ -2,27 +2,54 @@
 from flask import Flask, request, jsonify, make_response, Response, stream_with_context
 import json
 import time
-import os
 import datetime
+import os
+from waitress import serve
+import logging
+from logging.handlers import RotatingFileHandler
 from openai import AzureOpenAI
 
 app = Flask(__name__)
 
 # OpenAI compatible API server
 
+# Azure OpenAI API settings
 AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
 AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT", "")
 AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY", "")
 OPENAI_API_VERSION = os.getenv("OPENAI_API_VERSION", "")
 COMPATIBLE_MODEL_NAME = os.getenv("COMPATIBLE_MODEL_NAME", "gpt-4.1")
-print(AZURE_OPENAI_API_KEY)
-
 client = AzureOpenAI(  
     azure_endpoint=AZURE_OPENAI_ENDPOINT,  
     api_key=AZURE_OPENAI_API_KEY,  
     api_version=OPENAI_API_VERSION,  # Use the latest API version
 )  
 
+# デフォルトログの設定(flask, weitressからのログの設定)
+logging.basicConfig(
+    filename='flask_system.log',
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
+# カスタムロガー設定
+custom_logger = logging.getLogger("custom")
+#handler = logging.FileHandler("flask_custom.log", mode='a', encoding='utf-8')
+handler = RotatingFileHandler(
+    filename='flask_custom.log',
+    mode='a',
+    maxBytes=5 * 1024 * 1024,  # 最大5MB
+    backupCount=3,             # 最大3つのバックアップファイル
+    encoding='utf-8',
+    delay=False
+)
+formatter = logging.Formatter(fmt='%(asctime)s [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+handler.setFormatter(formatter)
+custom_logger.addHandler(handler)
+custom_logger.setLevel(logging.INFO)
+
+# Timestamp function
 def get_time_stamp():
     now = datetime.datetime.now()
     timestamp = now.strftime('%Y%m%d%H%M%S') + f'{int(now.microsecond / 1000):03d}'
@@ -34,11 +61,11 @@ def get_time_stamp():
 def log_request_info():
     print("----- request ---------------------------------------------------------------")
     print(request)
-    print(request.url)
     print(request.headers)
-    print(request.data)
-    #if request.content_type == 'application/json':
-    #    print(request.get_json())
+    if request.content_type == 'application/json':
+        print(request.get_json())
+    else:
+        print(request.data)
 
 @app.after_request
 def log_response_info(response):
@@ -46,6 +73,22 @@ def log_response_info(response):
     print(response)
     print(response.headers)
     print(response.get_data(as_text=True))
+    
+    # access log
+    referer = request.referrer or "-"
+    user_agent = request.headers.get('User-Agent') or "-"
+    log_entry = '{} "{} {} {}" {} {} "{}" "{}"'.format(
+        request.remote_addr,
+        request.method,
+        request.path,
+        request.environ.get('SERVER_PROTOCOL'),
+        response.status_code,
+        response.content_length or '-',
+        referer,
+        user_agent
+    )
+    custom_logger.info(log_entry)
+
     return response
 
 #@app.errorhandler(404)
@@ -204,151 +247,22 @@ def retrieve_model(model):
     })
 
 # any other endpoint
-@app.route('/xxx/<path:anything>', methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'])
-def catch_all(anything):
-    log_request_info()
-    return jsonify({"error": "No endpoint matched", "path": anything}), 404
+#@app.route('/<path:anything>', methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'])
+#def catch_all(anything):
+#    #log_request_info()
+#    return jsonify({"error": "No endpoint matched", "path": anything}), 404
 
 
-# ---- after here, N/A ------------------------------------------------------------------------
-
-@app.route('/v1/chat/completions/<completion_id>', methods=['DELETE'])
-def delete_chat_completion(completion_id):
-    # index.md: ChatCompletionDeleted
-    return jsonify({
-        "object": "chat.completion.deleted",
-        "id": completion_id,
-        "deleted": True
-    })
-
-@app.route('/v1/chat/completions/<completion_id>', methods=['GET'])
-def get_chat_completion(completion_id):
-    # index.md: CreateChatCompletionResponse
-    return jsonify({
-        "id": completion_id,
-        "object": "chat.completion",
-        "created": 1738960610,
-        "model": "gpt-4.1",
-        "choices": [
-            {
-                "index": 0,
-                "message": {
-                    "role": "assistant",
-                    "content": "Hello! This is a stub response.",
-                    "refusal": None,
-                    "tool_calls": None,
-                    "annotations": []
-                },
-                "finish_reason": "stop",
-                "logprobs": None
-            }
-        ],
-        "usage": {
-            "prompt_tokens": 10,
-            "completion_tokens": 5,
-            "total_tokens": 15
-        },
-        "service_tier": "default"
-    })
-
-@app.route('/v1/chat/completions/<completion_id>/messages', methods=['GET'])
-def get_chat_completion_messages(completion_id):
-    # index.md: ChatCompletionMessageList
-    return jsonify({
-        "object": "list",
-        "data": [
-            {
-                "id": f"{completion_id}-0",
-                "role": "user",
-                "content": "write a haiku about ai",
-                "name": None,
-                "content_parts": None
-            }
-        ],
-        "first_id": f"{completion_id}-0",
-        "last_id": f"{completion_id}-0",
-        "has_more": False
-    })
-
-@app.route('/v1/chat/completions', methods=['GET'])
-def list_chat_completions():
-    # index.md: ChatCompletionList
-    return jsonify({
-        "object": "list",
-        "data": [
-            {
-                "id": "chatcmpl-stub-id",
-                "object": "chat.completion",
-                "created": 1738960610,
-                "model": "gpt-4.1",
-                "choices": [],
-                "usage": {
-                    "prompt_tokens": 10,
-                    "completion_tokens": 5,
-                    "total_tokens": 15
-                },
-                "service_tier": "default"
-            }
-        ],
-        "first_id": "chatcmpl-stub-id",
-        "last_id": "chatcmpl-stub-id",
-        "has_more": False
-    })
-
-@app.route('/v1/chat/completions/<completion_id>', methods=['POST'])
-def update_chat_completion(completion_id):
-    # index.md: CreateChatCompletionResponse
-    return jsonify({
-        "id": completion_id,
-        "object": "chat.completion",
-        "created": 1738960610,
-        "model": "gpt-4.1",
-        "choices": [
-            {
-                "index": 0,
-                "message": {
-                    "role": "assistant",
-                    "content": "Metadata updated (stub)",
-                    "refusal": None,
-                    "tool_calls": None,
-                    "annotations": []
-                },
-                "finish_reason": "stop",
-                "logprobs": None
-            }
-        ],
-        "usage": {
-            "prompt_tokens": 10,
-            "completion_tokens": 5,
-            "total_tokens": 15
-        },
-        "service_tier": "default"
-    })
-
-# Completions endpoint
-@app.route('/v1/completions', methods=['POST'])
-def create_completion():
-    # index.md: CreateCompletionResponse
-    return jsonify({
-        "id": "cmpl-stub-id",
-        "object": "text_completion",
-        "created": 1738960610,
-        "model": "gpt-3.5-turbo-instruct",
-        "choices": [
-            {
-                "text": "This is a stub completion.",
-                "index": 0,
-                "logprobs": None,
-                "finish_reason": "length"
-            }
-        ],
-        "usage": {
-            "prompt_tokens": 5,
-            "completion_tokens": 7,
-            "total_tokens": 12
-        }
-    })
-
-
+# Run the server
+developmentMode = False
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    if developmentMode == True:
+        app.run(host="0.0.0.0", port=5000, debug=True)
+    else:
+        print('Starting Waitress server...')
+        serve(app, host='0.0.0.0', port=5000,
+            connection_limit=100,  # default is 100
+            threads=4,  # default is 4
+            channel_timeout=120, # default is 120 seconds
+        )
+
