@@ -97,6 +97,8 @@ sudo docker compose ps
   1. get WSL2 IP address (exec on WSL2)
       ```
       ifconfig eth0 | grep 'inet ' | awk '{print $2}'
+         or
+      ip addr show eth0 | grep 'inet ' | awk '{print $2}'
       ```
   2. set port forwarding (exec on PowerShell)
       ```
