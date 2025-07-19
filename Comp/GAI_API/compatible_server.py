@@ -8,6 +8,7 @@ from waitress import serve
 import logging
 from logging.handlers import RotatingFileHandler
 from openai import AzureOpenAI
+import pprint
 
 #
 # OpenAI compatible API server
@@ -41,9 +42,9 @@ custom_logger = logging.getLogger("custom")
 handler = RotatingFileHandler(
     filename='flask_custom.log',
     mode='a',
-    maxBytes=5 * 1024 * 1024,  # 最大5MB
+    maxBytes=8 * 1024 * 1024,  # 最大5MB
     backupCount=3,             # 最大3つのバックアップファイル
-    encoding='utf-8',
+    encoding='cp932',  # Windowsのデフォルトエンコーディング
     delay=False
 )
 formatter = logging.Formatter(fmt='%(asctime)s [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
@@ -65,9 +66,10 @@ def log_request_info():
     custom_logger.debug(request)
     custom_logger.debug(request.headers)
     if request.content_type == 'application/json':
-        custom_logger.debug(json.dumps(request.get_json())[:1000])  # Log first 1000 characters of JSON request data
+        s = pprint.pformat(request.get_json())
+        custom_logger.debug(s[:10000])  # Log first 10000 characters of JSON request data
     else:
-        custom_logger.debug(request.data[:1000])  # Log first 1000 bytes of request data
+        custom_logger.debug(request.get_data(as_text=True)[:10000])  # Log first 10000 bytes of request data
 
 @app.after_request
 def log_response_info(response):
@@ -75,10 +77,11 @@ def log_response_info(response):
     custom_logger.debug(response)
     custom_logger.debug(response.headers)
     if response.content_type == 'application/json':
-        custom_logger.debug(json.dumps(response.get_json())[:1000])  # Log first 1000 characters of JSON request data
+        s = pprint.pformat(response.get_json())
+        custom_logger.debug(s[:10000])  # Log first 10000 characters of JSON request data
     else:
-        custom_logger.debug(response.data[:1000])  # Log first 1000 bytes of request data
-    
+        custom_logger.debug(response.get_data(as_text=True)[:10000])  # Log first 1000 bytes of request data
+    0
     # access log
     referer = request.referrer or "-"
     user_agent = request.headers.get('User-Agent') or "-"
@@ -194,24 +197,43 @@ def create_chat_completion():
         def generate2():
             lis = list(response)
             l = len(lis)
+            mes = []
             for i in range(l):
                 chunk = lis[i]
                 if hasattr(chunk, 'choices') and len(chunk.choices) > 0:
                     stream_obj["choices"][0]["index"] = i
+                    ss = chunk.choices[0].delta.content if hasattr(chunk.choices[0], 'delta') and hasattr(chunk.choices[0].delta, 'content') else ""
+                    ss = str(ss) # if ss else ""
                     stream_obj["choices"][0]["delta"]["content"] = chunk.choices[0].delta.content if hasattr(chunk.choices[0], 'delta') and hasattr(chunk.choices[0].delta, 'content') else ""
-                    if i == l - 1:
-                        stream_obj["choices"][0]["finish_reason"] = "stop"
-                        stream_obj["choices"][0]["delta"] = {}
+                    #if i == l - 1:
+                    #    stream_obj["choices"][0]["finish_reason"] = "stop"
+                    #    stream_obj["choices"][0]["delta"] = {}
+                    #print(mes)
+                    #print(ss)
+                    mes.append(ss)
+                    #print(mes)
+                    #print(11)
                     yield "data: " + json.dumps(stream_obj) + "\n\n"
+            
+            stream_obj["choices"][0]["index"] = i+1
+            stream_obj["choices"][0]["finish_reason"] = "stop"
+            stream_obj["choices"][0]["delta"] = {}
+            yield "data: " + json.dumps(stream_obj) + "\n\n"
+            print(mes)
+            #print(mes.join(''))
+
             yield "data: [DONE]\n\n"
 
+        # Create a streaming response
         res = Response(stream_with_context(generate2()), mimetype='text/event-stream')   
+        print(res)
         res.headers["Content-Type"] = "text/event-stream; charset=utf-8"
         res.headers['Cache-Control'] = 'no-cache'
         #del res.headers['Connection']
         res.headers['Connection'] = 'keep-alive'
         #res.headers['Transfer-Encoding'] = 'chunked'
         #res.headers.pop('Content-Length', None)
+        print(res)
         return res
     else:
         res = jsonify(resp_obj)
@@ -262,7 +284,7 @@ def retrieve_model(model):
 
 
 # Run the server
-developmentMode = False
+developmentMode = True
 if __name__ == '__main__':
     if developmentMode == True:
         app.run(host="0.0.0.0", port=5000, debug=True)

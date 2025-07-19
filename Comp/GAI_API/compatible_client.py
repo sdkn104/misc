@@ -18,7 +18,7 @@ data = {
         {"role": "system", "content": "あなたは親切なアシスタントです。"},
         {"role": "user", "content": "世界一高い山の名前を教えてください。単語１つで答えてください。"},
     ],
-    "stream": False,
+    "stream": True,
 }
 
 response = requests.post(url, headers=headers, json=data)
