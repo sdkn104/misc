@@ -1,7 +1,7 @@
 import requests
 from pprint import pprint
 import os
-from sseclient import SSEClient
+#from sseclient import SSEClient
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1")

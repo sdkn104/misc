@@ -4,7 +4,7 @@ import json
 import time
 import datetime
 import os
-from waitress import serve
+import waitress
 import logging
 from logging.handlers import RotatingFileHandler
 from openai import AzureOpenAI
@@ -15,6 +15,7 @@ import pprint
 #
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_random_secret_key'
 
 # Azure OpenAI API settings
 AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
@@ -51,6 +52,9 @@ formatter = logging.Formatter(fmt='%(asctime)s [%(levelname)s] %(message)s', dat
 handler.setFormatter(formatter)
 custom_logger.addHandler(handler)
 custom_logger.setLevel(logging.DEBUG) # DEBUGレベル以上のログを記録
+
+# Waitress logging
+waitress.logging.basicConfig(level=logging.DEBUG) # Waitressのログ出力条件をDEBUG以上に設定
 
 # Timestamp function
 def get_time_stamp():
@@ -118,126 +122,137 @@ def options_handler():
 @app.route('/v1/chat/completions', methods=['POST'])
 def create_chat_completion():
     timestamp = get_time_stamp()
-
     payload = request.get_json()
-    stream = payload.get("stream", False)
     model = payload.get("model", "")
-    print(f"Received payload: {payload}")
 
-    # Azure OpenAI Request
-    response = client.chat.completions.create(
-        model=AZURE_OPENAI_DEPLOYMENT_NAME, # model = "deployment_name".
-        messages=payload.get("messages", []),
-        max_completion_tokens=payload.get("max_completion_tokens", None),
-        temperature=payload.get("temperature", None),
-        stream=stream, 
-    )
-    print(response)
+    # response template for non-streaming response
+    resp_obj = {
+        "id": f"chatcmpl-stub-{timestamp}",
+        "object": "chat.completion",
+        "created": int(time.time()),
+        "model": model,
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "",
+                    "refusal": None,
+                    "tool_calls": None,
+                    "annotations": []
+                },
+                "finish_reason": "stop",
+                "logprobs": None
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 10,
+            "completion_tokens": 5,
+            "total_tokens": 15
+        },
+        "service_tier": "default"
+    }
+    # response template for streaming response
+    stream_obj = {
+        "id": f"chatcmpl-stub-{timestamp}",
+        "object":"chat.completion.chunk",
+        "created":int(time.time()),
+        "model":model, 
+        "system_fingerprint": "fp_abcdefg1234", 
+        "choices":[
+            {
+                "index":0,
+                "delta":{
+                    "role":"assistant",
+                    "content":"",
+                    "refusal":None,
+                },
+                "logprobs": None,
+                "finish_reason":None
+            }
+        ]
+    }
 
-    # index.md: CreateChatCompletionResponse
-    if stream == False:
-        print(response.choices[0].message.content)
-        resp_obj = {
-            "id": f"chatcmpl-stub-{timestamp}",
-            "object": "chat.completion",
-            "created": int(time.time()),
-            "model": model,
-            "choices": [
-                {
-                    "index": 0,
-                    "message": {
-                        "role": "assistant",
-                        "content": response.choices[0].message.content,
-                        "refusal": None,
-                        "tool_calls": None,
-                        "annotations": []
-                    },
-                    "finish_reason": "stop",
-                    "logprobs": None
-                }
-            ],
-            "usage": {
-                "prompt_tokens": 10,
-                "completion_tokens": 5,
-                "total_tokens": 15
-            },
-            "service_tier": "default"
-        }
-    else:
-        stream_obj = {
-            "id": f"chatcmpl-stub-{timestamp}",
-            "object":"chat.completion.chunk",
-            "created":int(time.time()),
-            "model":model, 
-            "system_fingerprint": "fp_abcdefg1234", 
-            "choices":[
-                {
-                    "index":0,
-                    "delta":{
-                        "role":"assistant",
-                        "content":"chank x",
-                        "refusal":None,
-                    },
-                    "logprobs": None,
-                    "finish_reason":None
-                }
-            ]
-        }
-    if stream:
-        def generate():
-            for i in range(5):
-                stream_obj["choices"][0]["delta"]["content"] = f"chunk {i+1} "
-                if i == 4:
-                    stream_obj["choices"][0]["finish_reason"] = "stop"
-                    stream_obj["choices"][0]["delta"] = {}
-                yield "data: " + json.dumps(stream_obj) + "\n\n"
-                time.sleep(2)
-            yield "data: [DONE]\n\n"
-
-        def generate2():
-            lis = list(response)
-            l = len(lis)
-            mes = []
-            for i in range(l):
-                chunk = lis[i]
-                if hasattr(chunk, 'choices') and len(chunk.choices) > 0:
-                    stream_obj["choices"][0]["index"] = i
-                    ss = chunk.choices[0].delta.content if hasattr(chunk.choices[0], 'delta') and hasattr(chunk.choices[0].delta, 'content') else ""
-                    ss = str(ss) # if ss else ""
-                    stream_obj["choices"][0]["delta"]["content"] = chunk.choices[0].delta.content if hasattr(chunk.choices[0], 'delta') and hasattr(chunk.choices[0].delta, 'content') else ""
-                    #if i == l - 1:
-                    #    stream_obj["choices"][0]["finish_reason"] = "stop"
-                    #    stream_obj["choices"][0]["delta"] = {}
-                    #print(mes)
-                    #print(ss)
-                    mes.append(ss)
-                    #print(mes)
-                    #print(11)
+    # completion handler of constant response (test purpose)
+    def completionsHandlerConstant(payload, resp_obj, stream_obj):
+        stream = payload.get("stream", False)
+        if stream == False:
+            resp_obj["choices"][0]["message"]["content"] = "こたえは、エベレスト山です。"
+            res = jsonify(resp_obj)
+            return res  
+        else:
+            def generate():
+                for i in range(5):
+                    stream_obj["choices"][0]["delta"]["content"] = f"チャンク{i+1} "
                     yield "data: " + json.dumps(stream_obj) + "\n\n"
-            
-            stream_obj["choices"][0]["index"] = i+1
-            stream_obj["choices"][0]["finish_reason"] = "stop"
-            stream_obj["choices"][0]["delta"] = {}
-            yield "data: " + json.dumps(stream_obj) + "\n\n"
-            print(mes)
-            #print(mes.join(''))
+                    time.sleep(2)
+                stream_obj["choices"][0]["finish_reason"] = "stop"
+                stream_obj["choices"][0]["delta"] = {}
+                yield "data: " + json.dumps(stream_obj) + "\n\n"
+                yield "data: [DONE]\n\n"
 
-            yield "data: [DONE]\n\n"
+            # Create a streaming response
+            res = Response(stream_with_context(generate()), mimetype='text/event-stream')   
+            res.headers["Content-Type"] = "text/event-stream; charset=utf-8"
+            res.headers['Cache-Control'] = 'no-cache'
+            #res.headers['Connection'] = 'keep-alive'
+            return res
+        
+    # completion handler using Azure OpenAI
+    def completionsHandlerAzure(payload, resp_obj, stream_obj):
+        stream = payload.get("stream", False)
 
-        # Create a streaming response
-        res = Response(stream_with_context(generate2()), mimetype='text/event-stream')   
-        print(res)
-        res.headers["Content-Type"] = "text/event-stream; charset=utf-8"
-        res.headers['Cache-Control'] = 'no-cache'
-        #del res.headers['Connection']
-        res.headers['Connection'] = 'keep-alive'
-        #res.headers['Transfer-Encoding'] = 'chunked'
-        #res.headers.pop('Content-Length', None)
-        print(res)
-        return res
-    else:
-        res = jsonify(resp_obj)
-        return res
+        # Azure OpenAI Completions
+        response = client.chat.completions.create(
+            model=AZURE_OPENAI_DEPLOYMENT_NAME, # model = "deployment_name".
+            messages=payload.get("messages", []),
+            max_completion_tokens=payload.get("max_completion_tokens", None),
+            temperature=payload.get("temperature", None),
+            stream=stream, 
+        )
+        print(response)
+
+        if stream == False:
+            print(response.choices[0].message.content)
+            resp_obj["choices"][0]["message"]["content"] = response.choices[0].message.content
+            res = jsonify(resp_obj)
+            return res
+        else:
+            def generate():
+                responseList = list(response)
+                responseLength = len(responseList)
+                mes = []
+                for i in range(responseLength):
+                    chunk = responseList[i]
+                    if hasattr(chunk, 'choices') and len(chunk.choices) > 0:
+                        stream_obj["choices"][0]["index"] = i
+                        ss = chunk.choices[0].delta.content if hasattr(chunk.choices[0], 'delta') and hasattr(chunk.choices[0].delta, 'content') else ""
+                        ss = ss if ss else ""
+                        stream_obj["choices"][0]["delta"]["content"] = ss
+                        mes.append(ss)
+                        yield "data: " + json.dumps(stream_obj) + "\n\n"                
+                print(mes)
+                #print(mes.join(''))
+                # stop chunk
+                stream_obj["choices"][0]["index"] = i+1
+                stream_obj["choices"][0]["finish_reason"] = "stop"
+                stream_obj["choices"][0]["delta"] = {}
+                yield "data: " + json.dumps(stream_obj) + "\n\n"
+                yield "data: [DONE]\n\n"
+
+            # Create a streaming response
+            res = Response(stream_with_context(generate()), mimetype='text/event-stream')   
+            res.headers["Content-Type"] = "text/event-stream; charset=utf-8"
+            res.headers['Cache-Control'] = 'no-cache'
+            #res.headers['Connection'] = 'keep-alive'
+            #res.headers['Transfer-Encoding'] = 'chunked'
+            return res
+
+
+    #resp = completionsHandlerConstant(payload, resp_obj, stream_obj)
+    resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
+    #resp = completionsHandlerGAI(payload, resp_obj, stream_obj)
+    return resp
 
 
 
@@ -284,13 +299,13 @@ def retrieve_model(model):
 
 
 # Run the server
-developmentMode = True
+developmentMode = False
 if __name__ == '__main__':
     if developmentMode == True:
         app.run(host="0.0.0.0", port=5000, debug=True)
     else:
         print('Starting Waitress server...')
-        serve(app, host='0.0.0.0', port=5000,
+        waitress.serve(app, host='0.0.0.0', port=5000,
             connection_limit=100,  # default is 100
             threads=4,  # default is 4
             channel_timeout=120, # default is 120 seconds
