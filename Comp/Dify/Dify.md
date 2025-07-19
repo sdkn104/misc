@@ -94,11 +94,12 @@ sudo docker compose ps
   * default port mapping: localhost -> WSL2 address
   * if you want use Dify from external client, do followings
   * WLS2 IP address is changed per startup
+
   1. get WSL2 IP address (exec on WSL2)
       ```
       ifconfig eth0 | grep 'inet ' | awk '{print $2}'
-         or
-      ip addr show eth0 | grep 'inet ' | awk '{print $2}'
+        or
+      ip addr show eth0 | sed -e 's/\// /g' | grep 'inet ' | awk '{print $2}'
       ```
   2. set port forwarding (exec on PowerShell)
       ```
@@ -106,12 +107,37 @@ sudo docker compose ps
       netsh.exe interface portproxy show v4tov4
       #netsh.exe interface portproxy delete v4tov4 listenport=80 listenaddress=0.0.0.0
       ```
+
   3. setting firewall 
       * open port 80
       * https://support.borndigital.co.jp/hc/ja/articles/360002711593-Windows10%E3%81%A7%E7%89%B9%E5%AE%9A%E3%81%AE%E3%83%9D%E3%83%BC%E3%83%88%E3%82%92%E9%96%8B%E6%94%BE%E3%81%99%E3%82%8B
 
-  3. access from host PC or external PC
-     * `IP_address_of_host_PC:80`
+  * instead of 1 and 2:
+
+    ~/bin/wsl_port_forwarding.sh:
+    ```
+    #!/bin/bash
+
+    IP=$(ip addr show eth0 | sed -e 's/\// /g' | grep 'inet ' | awk '{print $2}')
+    LISTENPORTS=(80)
+
+    echo IP=$IP
+    echo LISTENPORTS=$LISTENPORTS
+
+    for port in "${LISTENPORTS[@]}"
+    do
+      netsh.exe interface portproxy delete v4tov4 listenport=$port
+      netsh.exe interface portproxy add    v4tov4 listenport=$port connectaddress=$IP
+      netsh.exe interface portproxy show   v4tov4
+    done
+    ```
+    ```
+    PS> wsl -e  /home/xxxxx/bin/wsl_port_forwarding.sh
+    ```
+  * to delete all port forwarding: `netsh.exe interface portproxy reset`
+
+  4. access from host PC or external PC
+      * `IP_address_of_host_PC:80`
 
 
 # Dify Setting

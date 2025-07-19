@@ -41,6 +41,12 @@ openapi-generator-cli generate -i openapi.yaml -g python-fastapi -o ./generated-
     - https://docs.pylonsproject.org/projects/waitress/en/latest/arguments.html
     - https://jp-seemore.com/iot/python/29417/
 
+### run in background
+```
+pythonw compatible_server.py
+```
+
+
 ## Open WebUI
 - https://github.com/open-webui/open-webui
 

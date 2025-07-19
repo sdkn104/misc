@@ -9,9 +9,11 @@ import logging
 from logging.handlers import RotatingFileHandler
 from openai import AzureOpenAI
 
-app = Flask(__name__)
-
+#
 # OpenAI compatible API server
+#
+
+app = Flask(__name__)
 
 # Azure OpenAI API settings
 AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
@@ -47,7 +49,7 @@ handler = RotatingFileHandler(
 formatter = logging.Formatter(fmt='%(asctime)s [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 handler.setFormatter(formatter)
 custom_logger.addHandler(handler)
-custom_logger.setLevel(logging.INFO)
+custom_logger.setLevel(logging.DEBUG) # DEBUGレベル以上のログを記録
 
 # Timestamp function
 def get_time_stamp():
@@ -56,23 +58,26 @@ def get_time_stamp():
     return timestamp
 
 
-# Log for request and response
+# Log before request and before response
 @app.before_request
 def log_request_info():
-    print("----- request ---------------------------------------------------------------")
-    print(request)
-    print(request.headers)
+    custom_logger.debug("----- request ---------------------------------------------------------------")
+    custom_logger.debug(request)
+    custom_logger.debug(request.headers)
     if request.content_type == 'application/json':
-        print(request.get_json())
+        custom_logger.debug(json.dumps(request.get_json())[:1000])  # Log first 1000 characters of JSON request data
     else:
-        print(request.data)
+        custom_logger.debug(request.data[:1000])  # Log first 1000 bytes of request data
 
 @app.after_request
 def log_response_info(response):
-    print("----- response ---------------------------------------------------------------")
-    print(response)
-    print(response.headers)
-    print(response.get_data(as_text=True))
+    custom_logger.debug("----- response ---------------------------------------------------------------")
+    custom_logger.debug(response)
+    custom_logger.debug(response.headers)
+    if response.content_type == 'application/json':
+        custom_logger.debug(json.dumps(response.get_json())[:1000])  # Log first 1000 characters of JSON request data
+    else:
+        custom_logger.debug(response.data[:1000])  # Log first 1000 bytes of request data
     
     # access log
     referer = request.referrer or "-"
@@ -114,7 +119,9 @@ def create_chat_completion():
     payload = request.get_json()
     stream = payload.get("stream", False)
     model = payload.get("model", "")
+    print(f"Received payload: {payload}")
 
+    # Azure OpenAI Request
     response = client.chat.completions.create(
         model=AZURE_OPENAI_DEPLOYMENT_NAME, # model = "deployment_name".
         messages=payload.get("messages", []),
@@ -122,6 +129,7 @@ def create_chat_completion():
         temperature=payload.get("temperature", None),
         stream=stream, 
     )
+    print(response)
 
     # index.md: CreateChatCompletionResponse
     if stream == False:

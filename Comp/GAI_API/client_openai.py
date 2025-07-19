@@ -5,7 +5,7 @@ from openai import OpenAI
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1")
-OPENAI_API_BASE = "http://localhost:5000/v1"  # Use local server for testing
+#OPENAI_API_BASE = "http://localhost:5000/v1"  # Use local server for testing
 
 client = OpenAI(base_url=OPENAI_API_BASE, api_key=OPENAI_API_KEY)
 
