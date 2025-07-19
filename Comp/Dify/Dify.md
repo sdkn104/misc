@@ -38,7 +38,7 @@ https://docs.docker.com/engine/install/ -> select "Ubuntu"
 1. install docker compose
     - follow "Install using the repository" in
       https://docs.docker.com/compose/install/linux/#install-using-the-repository
-      ```
+      ```bash
       sudo apt-get update
       sudo apt-get install docker-compose-plugin
       docker compose version
@@ -54,7 +54,7 @@ https://docs.docker.com/engine/install/ -> select "Ubuntu"
 ### install Dify
 https://docs.dify.ai/ja-jp/getting-started/install-self-hosted/docker-compose
 
-```
+```bash
 # install
 git config --global http.proxy http://proxy.xxx.com
 git config --global https.proxy http://proxy.xxx.com
@@ -64,26 +64,31 @@ cp .env.example .env
 ```    
 
 ### run Dify
-```    
+```bash    
 cd dify/docker
 sudo docker compose up -d
 # -> access with browser http://localhost
 sudo docker compose ps
 ```    
 * (when error) 
-  ```
+  ```bash
   sudo usermod -aG docker $(whoami) 
   # to be belong to group docker
+  ```
+* check if Dify running
+  ```bash
+  sudo docker compose ps
   ```
 
 ### Setting Network
 * port mapping: wsl2 -> docker
   * mapping is specified in ports section of nginx in docker-compose.yaml
-  * default:  0.0.0.0:80 -> 0.0.0.0:80, etc.
-  ```
-  # check port mapping of nginx
-  sudo docker compose ps -a
-  ```
+  * default:  0.0.0.0:80 -> dockerIP:80, 0.0.0.0:443 -> dockerIP:443
+      * Mapping port 80 of all the addresses of WSL2 to port 80 of the IP addresses of docker container 
+  * check port mapping of nginx
+    ```bash
+    sudo docker compose ps -a
+    ```
 
 * port mapping:  host ip -> wsl2 ip
   -  https://rcmdnk.com/blog/2021/03/01/computer-windows-network/
@@ -96,13 +101,13 @@ sudo docker compose ps
   * WLS2 IP address is changed per startup
 
   1. get WSL2 IP address (exec on WSL2)
-      ```
+      ```bash
       ifconfig eth0 | grep 'inet ' | awk '{print $2}'
-        or
+        #or
       ip addr show eth0 | sed -e 's/\// /g' | grep 'inet ' | awk '{print $2}'
       ```
   2. set port forwarding (exec on PowerShell)
-      ```
+      ```bash
       netsh.exe interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=80   connectaddress=WSL2_ADDRESS connectport=80
       netsh.exe interface portproxy show v4tov4
       #netsh.exe interface portproxy delete v4tov4 listenport=80 listenaddress=0.0.0.0
@@ -115,7 +120,7 @@ sudo docker compose ps
   * instead of 1 and 2:
 
     ~/bin/wsl_port_forwarding.sh:
-    ```
+    ```bash
     #!/bin/bash
 
     IP=$(ip addr show eth0 | sed -e 's/\// /g' | grep 'inet ' | awk '{print $2}')
@@ -131,7 +136,7 @@ sudo docker compose ps
       netsh.exe interface portproxy show   v4tov4
     done
     ```
-    ```
+    ```powershell
     PS> wsl -e  /home/xxxxx/bin/wsl_port_forwarding.sh
     ```
   * to delete all port forwarding: `netsh.exe interface portproxy reset`
@@ -157,5 +162,4 @@ sudo docker compose ps
 
 # MCP server
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
-
 https://zenn.dev/upgradetech/articles/24a7d76133af4c

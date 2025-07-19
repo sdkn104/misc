@@ -195,7 +195,6 @@ def create_chat_completion():
             res = Response(stream_with_context(generate()), mimetype='text/event-stream')   
             res.headers["Content-Type"] = "text/event-stream; charset=utf-8"
             res.headers['Cache-Control'] = 'no-cache'
-            #res.headers['Connection'] = 'keep-alive'
             return res
         
     # completion handler using Azure OpenAI
@@ -244,8 +243,6 @@ def create_chat_completion():
             res = Response(stream_with_context(generate()), mimetype='text/event-stream')   
             res.headers["Content-Type"] = "text/event-stream; charset=utf-8"
             res.headers['Cache-Control'] = 'no-cache'
-            #res.headers['Connection'] = 'keep-alive'
-            #res.headers['Transfer-Encoding'] = 'chunked'
             return res
 
 
