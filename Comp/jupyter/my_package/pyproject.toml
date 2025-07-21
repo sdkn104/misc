@@ -1,0 +1,7 @@
+# my_package/pyproject.toml
+[project]
+name = "my_package"
+version = "0.0.1"
+
+[project.entry-points."jupyter_ai.model_providers"]
+my-provider = "my_provider:MyProvider"
