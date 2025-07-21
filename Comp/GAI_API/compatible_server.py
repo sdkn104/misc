@@ -213,7 +213,7 @@ def create_chat_completion():
             temperature=payload.get("temperature", None),
             stream=stream, 
         )
-        print(response)
+        #print(response)
 
         if stream == False:
             print(response.choices[0].message.content)
@@ -234,7 +234,7 @@ def create_chat_completion():
                         stream_obj["choices"][0]["delta"]["content"] = ss
                         mes.append(ss)
                         yield "data: " + json.dumps(stream_obj) + "\n\n"                
-                print(mes)
+                #print(mes)
                 #print(mes.join(''))
                 # stop chunk
                 stream_obj["choices"][0]["index"] = i+1
