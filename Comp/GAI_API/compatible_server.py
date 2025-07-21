@@ -4,6 +4,7 @@ import json
 import time
 import datetime
 import os
+import re
 import waitress
 import logging
 from logging.handlers import RotatingFileHandler
@@ -86,10 +87,12 @@ def log_response_info(response):
     else:
         custom_logger.debug(response.get_data(as_text=True)[:10000])  # Log first 1000 bytes of request data
     0
-    # access log
+    # One liner access log
     referer = request.referrer or "-"
     user_agent = request.headers.get('User-Agent') or "-"
-    log_entry = '{} "{} {} {}" {} {} "{}" "{}"'.format(
+    auth = request.headers.get('Authorization')
+    match = re.search(r"___([^_]*)___", auth)  # embedded string in API KEY string
+    log_entry = '{} "{} {} {}" {} {} "{}" "{}" {}'.format(
         request.remote_addr,
         request.method,
         request.path,
@@ -97,7 +100,8 @@ def log_response_info(response):
         response.status_code,
         response.content_length or '-',
         referer,
-        user_agent
+        user_agent,
+        match.group(1) if match else "-"
     )
     custom_logger.info(log_entry)
 

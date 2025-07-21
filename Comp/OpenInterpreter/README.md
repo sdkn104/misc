@@ -24,6 +24,8 @@ https://www.rust-lang.org/ja/tools/install
   - setting language model section in profile YAML file
   - For custom openAI-compatible model,
     - https://docs.openinterpreter.com/language-models/local-models/custom-endpoint
-    ```
-    
+    ```yaml
+    llm:
+        # The URL where an OpenAI-compatible server is running to handle LLM API requests
+        api_base: "http://desktop-dlmkcpa:5000/v1"  
     ```
