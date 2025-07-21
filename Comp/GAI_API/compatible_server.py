@@ -70,7 +70,7 @@ def log_request_info():
     custom_logger.debug(request)
     custom_logger.debug(request.headers)
     if request.content_type == 'application/json':
-        s = pprint.pformat(request.get_json())
+        s = pprint.pformat(request.get_json(), compact=True)
         custom_logger.debug(s[:10000])  # Log first 10000 characters of JSON request data
     else:
         custom_logger.debug(request.get_data(as_text=True)[:10000])  # Log first 10000 bytes of request data
@@ -81,7 +81,7 @@ def log_response_info(response):
     custom_logger.debug(response)
     custom_logger.debug(response.headers)
     if response.content_type == 'application/json':
-        s = pprint.pformat(response.get_json())
+        s = pprint.pformat(response.get_json(), compact=True)
         custom_logger.debug(s[:10000])  # Log first 10000 characters of JSON request data
     else:
         custom_logger.debug(response.get_data(as_text=True)[:10000])  # Log first 1000 bytes of request data
@@ -244,7 +244,6 @@ def create_chat_completion():
             res.headers["Content-Type"] = "text/event-stream; charset=utf-8"
             res.headers['Cache-Control'] = 'no-cache'
             return res
-
 
     #resp = completionsHandlerConstant(payload, resp_obj, stream_obj)
     resp = completionsHandlerAzure(payload, resp_obj, stream_obj)

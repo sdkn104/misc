@@ -1,16 +1,16 @@
 
-## OpenAI API
+# OpenAI API
 - API spec: https://platform.openai.com/docs/api-reference/introduction
 - openapi.yaml for OpenAI API is available, not official
 - https://spec.openapis.org/oas/v3.1.0
 - text/event-stream: https://developer.mozilla.org/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
 - research protocol by checking HTTP using Fiddler Classic
 
-## OpenAPI Generator
+# OpenAPI Generator (failed)
 ### Install
 * https://github.com/OpenAPITools/openapi-generator-cli
 * https://openapi-generator.tech/docs/installation
-```
+```bash
 curl https://raw.githubusercontent.com/openai/openai-openapi/refs/heads/manual_spec/openapi.yaml -OutFile openapi.yaml
 # https://github.com/openai/openai-openapi/tree/manual_spec
 #npm install @openapitools/openapi-generator-cli -g
@@ -25,7 +25,7 @@ openapi-generator-cli generate -i openapi.yaml -g python-fastapi -o ./generated-
 * 動かなかった
 
 
-## OpenAI-comaptible API Server
+# OpenAI-comaptible API Server
 
 1. openapi.yamlから使わないendpointを削除
 2. delcomp.pyを使って呼ばれないcomponentを削除
@@ -46,8 +46,21 @@ openapi-generator-cli generate -i openapi.yaml -g python-fastapi -o ./generated-
 pythonw compatible_server.py
 ```
 
+### Network setting
+* Use 0.0.0.0 instead of localhost, since from docker, cannnot access to localhost(127.0.0.1) of host
+  * docker (Dify) access to IP-address-of-host or hostname
+    * `http://IPaddress_of_host_or_hostname:5000/`
+* Firewall Setting (Windows Defender Firewall)
+    ```powershell
+    # set firewall
+    netsh advfirewall firewall add rule name="★FlaskApp TCP 5000" dir=in action=allow protocol=TCP localport=5000 profile=private,domain
+    # show firewall
+    netsh advfirewall firewall show rule name="★FlaskApp TCP 5000"
+    # delete firewall
+    netsh advfirewall firewall delete rule name="★FlaskApp TCP 5000"
+    ```
 
-## Open WebUI
+# Open WebUI
 - https://github.com/open-webui/open-webui
 
 

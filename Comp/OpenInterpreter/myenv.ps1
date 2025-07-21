@@ -1,8 +1,4 @@
 
-
-set INTERPRETER_MODEL=gpt-4.1
-
-
 Set-Location -Path $PSScriptRoot
 #Start-Process  ".\myenv\Scripts\Activate.ps1"
 

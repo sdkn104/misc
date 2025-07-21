@@ -14,12 +14,12 @@
 - 
 
 ## Basic litral
-```
+```Powershell
 $true, $false    # Boolean constant
 $null            # default value of all the variable
 ```
 ## String
-```
+```Powershell
 "abc"            # string
 'abc $a'         # string
 "abc ${a}"       # embedded var.
@@ -37,13 +37,13 @@ ipconfig | Select-String "イーサネット"
 "a:b:c" -split ":"
 ```
 ## Array
-```
+```Powershell
 $a = 1, 2, 3
 $a = @(1)
 $a.Count
 ```
 ## Hash
-```
+```Powershell
 $hash = @{ Number = 1; Shape = "Square"; Color = "Blue"}
 $hash = [orderd]@{ Number = 1; Shape = "Square"; Color = "Blue"}
 $hash.Keys
@@ -53,7 +53,7 @@ $hash[0]
 foreach ($key in $hash.Keys) { $hash[$key] }
 ```
 ## Custom Object
-```
+```Powershell
 # create object
 $obj1 = New-Object PSCustomObject
 $obj1 | Add-Member -MemberType NoteProperty -Name "Name" -Value "Tom"
@@ -70,7 +70,7 @@ $hashArray1 = (
 $objArray = $hashArray1 | foreach { [PSCustomObject]$_ }
 ```
 ## DATE
-```
+```Powershell
 Get-Date
 [DateTime]"2013/02/09 13:59:50"
 [DateTime]::ParseExact("20130209","yyyyMMdd",$null)
@@ -82,7 +82,7 @@ $span.TotalDays
 ```
 
 ## Type
-```
+```Powershell
 $text = [String]123    # cast
 $number = [int]$a      # cast
 [string]$string = 123  # type declaration
@@ -90,7 +90,7 @@ $number = [int]$a      # cast
 (get-date).GetType()
 ```
 ## Format, Property
-```
+```Powershell
 dir | Select-Object [-Property] Name,Length
 dir | Select-Object [-Property] *
 dir | Format-Table -AutoSize [-Property] Name,Length
@@ -98,7 +98,7 @@ dir | Format-List [-Property] Name,Length
 ```
 
 ## Control
-```
+```Powershell
 if() {} elseif() { } else { }
 for($i=0; $i -lt 10; $i++) { continue; break; }
 foreach($i in 1..10) { $i }
@@ -108,18 +108,18 @@ do {} while()
 do {} until()
 ```
 ## Function
-```
+```Powershell
 function add($a, $b) { $a + $b }
 $v = add 1 2
 ```
 ## Pileline
-```
+```Powershell
 $d = Get-ChildItem | sort | where { $_.Name -like "*D*" } | Select-Object Length,Name,Mode -Last 5
 $d | foreach { "name: " + $_.Name }
 dir | Group-Object Extension
 ```
 ## Exception
-```
+```Powershell
 $ErrorActionPreference = "Stop"  # non-terminatig errorでも実行停止しcatchする。
 trap { # 処理されなかったすべてのterminating errorに対して
   Write-Host "想定外のエラーが発生しました。終了します。"
@@ -146,13 +146,13 @@ try {
 }
 ```
 ## Script Args, Path
-```
+```Powershell
 echo $PSCommandPath  # full path of this script
 echo $args[0]        # the first argument 
 echo $args[1]        # the second
 ```
 ## I/O (Host, Stream)
-```
+```Powershell
 $age = Read-host "Please enter your age: "
 Write-Host "abc"   # console terminalへの出力
 Write-Output "abc" # standard output streamへの出力（パイプできる、object streamである）
@@ -161,7 +161,8 @@ Write-Error "abc"  # non-terminating errorを発生し、error output streamへ�
 * PowerShellでオブジェクトは原則　Format-* により表示の書式を設定、Out-* により最終出力、の手順を踏み何らかの表示や出力がなされます。
 * Out-Host,File,String.. は、input streamまたは-inputObjectから入力をとり、それぞれに出力する。
 ## File I/O
-```
+
+```Powershell
 $c = "あいうえお定兼ｻﾀﾞ＠©"
 Set-Content t.txt $c -ENcoding UTF8  # write
 echo xxx | Set-Content t.txt
@@ -180,7 +181,7 @@ $lines = @(Get-Content t.txt)  # array of line strings
 
 * utf8nでファイル出力　ただし、ps6.0以降では不要。
 
-```
+```Powershell
   … | Out-String `
     | % { [Text.Encoding]::UTF8.GetBytes($_) } `
     | Set-Content -Path ".\BOMlessUTF8.txt" -Encoding Byte
@@ -188,7 +189,7 @@ $lines = @(Get-Content t.txt)  # array of line strings
 
     
 ## File System
-```
+```Powershell
 pwd (Get-Location)
 cd (Set-Location)
 dir (Get-ChildItem)
@@ -201,14 +202,14 @@ mkdir xxx (New-Item xxx -ItemType Directory)
 if( Test-Path ".\a\b.*" ) { rm ".\a\b.*" }
 ```
 ## File Path
-```
+```Powershell
 Split-Path "C:\aaa\bbb\ccc" -Parent
 Split-Path "C:\aaa\bbb\ccc" -Leaf
 Convert-Path ".\abc.txt"     # --> C:\Users\xxx\Desktop\abc.txt
 Convert-Path .\*.txt         # list up matched files in full path
 ```
 ## Startup
-```
+```Powershell
 CMD> powershell -ExecutionPolicy ByPass -NoProfile -NoLogo -File .\無題1.ps1
 ```
 ```
@@ -217,7 +218,8 @@ PS> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser  #管�
 ```
 
 ## Profile (init file)
-```
+#### Create profile File (first time)
+```Powershell
 if (!(Test-Path -Path $PROFILE)) {
   New-Item -ItemType File -Path $PROFILE -Force
 }
@@ -225,12 +227,17 @@ notepad $PROFILE
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 #### Sample Profile File
-```
+```powershell
 function wc( [string]$Path ) {
-    <#
-        .DESCRIPTION
-        wc is a custom-made function that counting number of lines, words and charactors.
-    #>
+  <#
+  .SYNOPSIS
+  wc <File Path>
+  cat <File Path> | wc
+  .DESCRIPTION
+  Print number of lines, words and charactors.
+  Equivalent to:
+    cat <FilePath> | Measure-Object -Line -Word -Character
+  #>
    if( $Path ) {
      Get-Content $Path | Measure-Object -Line -Word -Character
    } else {
@@ -238,34 +245,61 @@ function wc( [string]$Path ) {
    }
 }
 function head( [string]$Path ) {
-    <#
-        .DESCRIPTION
-        head shows the first 10 lines/objects.0
-    #>
+  <#
+	.SYNOPSIS
+	head <File Path>
+	cat <File Path> | head
+  .DESCRIPTION
+  Print the first 10 lines/objects.
+  Equivalent to:
+    cat <File Path> -Head 10
+    cat <File Path> | Select-Object -First 10
+  #>
    if( $Path ) {
      Get-Content $Path -Head 10
    } else {
      $input | Select-Object -First 10
    }
 }
+function tail( [string]$Path ) {
+  <#
+	.SYNOPSIS
+	tail <File Path>
+	cat <File Path> | tail
+  .DESCRIPTION
+  Print the last 10 lines/objects.
+  Equivalent to:
+    cat <File Path> -Tail 10 [-Wait]
+    cat <File Path> | Select-Object -Last 10 [-Wait]
+  #>
+  if( $Path ) {
+    Get-Content $Path -Head 10
+  } else {
+    $input | Select-Object -First 10
+  }
+}
 function difff( [string]$file1, [string]$file2 ) {
-    <#
-        .DESCRIPTION
-        diff file1 file2
-    #>
-    Compare-Object (cat $file1) (cat $file2)
+  <#
+	.SYNOPSIS
+	difff file1 file2
+  .DESCRIPTION
+  Compare two files.
+  Equivalent to:
+    diff (cat file1) (cat file2)
+  #>
+  Compare-Object (cat $file1) (cat $file2)
 }
 
-function Dump-Versions() {
-    <#
-        .DESCRIPTION
-        Dump-Versions
-         python -V > python.ver.txt
-         pip freeze > requirements.frz.txt
-    #>
-    python -V > python.ver.txt
-    pip freeze > requirements.frz.txt
-}
+function printenv() {
+  <#
+  .SYNOPSIS
+  Print environment variables.  
+  .DESCRIPTION
+  Equivalent to:
+    ls env:
+  #>
+  Get-ChildItem env:
+}  
 
 Set-Alias grep Select-String
 Set-Alias uniq Group-Object
@@ -276,13 +310,13 @@ $FormatEnumerationLimit = -1
 # windowのバッファ幅変更（画面表示、リダイレクトで折り返さない）
 $bufferSize = (Get-Host).UI.RawUI.BufferSize
 $bufferSize.Width = 1999
-#$bufferSize.Height = 1000
-(Get-Host).UI.RawUI.BufferSize = $bufferSize
+##$bufferSize.Height = 1000
+#(Get-Host).UI.RawUI.BufferSize = $bufferSize
 ```
 
 
 ## Help
-```
+```Powershell
 Update-Help  # download and install help files, 管理者権限で実行
 Get-Command *-Host*
 Get-ChildItem -?
@@ -290,7 +324,7 @@ Get-Help Get-ChildItem -Online
 alias (Get-Alias)
 ```
 ## 外部コマンド
-```
+```Powershell
 $log = & "C:\program file.exe" "arg 1" "arg2" arg3
 if( -not $? ) { throw "ERROR in external command." } 
 $success = $?            # 外部コマンドの場合、戻り値非０のときFalse、外部コマンド内でWindowsコマンドエラー発生もFalse。
@@ -301,21 +335,21 @@ $code = $LastExitCode    # 戻り値（外部コマンドの場合のみ）
 
 
 ## ダイアログ表示 dialog
-```
+```Powershell
 Add-Type -AssemblyName System.Windows.Forms;
 [System.Windows.Forms.MessageBox]::Show("xxxx");
 ```
-```
+```Powershell
 $WSH = New-Object -ComObject Wscript.Shell
 $WSH.Popup("xxxx")
 ```
-```
+```Powershell
 [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
 $No= [Microsoft.VisualBasic.Interaction]::InputBox("番号を入力してください", "タイトル", "初期値")
 ```
 
 ## HTTP Request
-```
+```Powershell
 $response = Invoke-WebRequest [-Method GET] http://localhost/index.htm [-OutFile out.htm]
 $response.StatusCode
 $response.Header
@@ -323,7 +357,7 @@ $response.Content
 ```
 
 ## MS Office
-```
+```Powershell
 $excel = New-Object -ComObject Excel.Application
 $excel.Visible = $true
 $excel.DisplayAlerts = $true
@@ -337,7 +371,7 @@ $excel.Quit()
 ```
 ## BATファイル内にPowerShellスクリプトを埋め込む
 本スクリプトは.batフィアルとして保存して実行できる。
-```
+```bat
 @(echo ' ) >nul
 @for %%i in (%TEMP%) do @set f="%%~fpi\tmp.batps.%DATE:/=%%TIME::=%%RANDOM%.ps1"
 @set /p d=$PSCommandPath="%~fp0";<nul  > %f% & @type "%~fp0" >> %f%
@@ -384,7 +418,7 @@ MyExit 0
   * ASCII printable chars: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
   * Windows File Naming: https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
  
-```
+```bat
 @powershell -c '$PSCommandPath=\"%~fp0\" #'+(Get-Content \"%~f0\" -Raw) ^| Invoke-Expression & exit /b
 #--------- 上のスクリプトはここから下のPowershellコードを実行する ------------------------------------
 # 制約：実行引数は渡らない、exitコードは返らない、$PSScriptRoot, $MyInvocationは使えない。
@@ -401,7 +435,7 @@ MyExit 0
   * BATのスクリプトファイルのパス名に特殊文字を含んではならない。（特殊文字：%など？？？）
 
 ## IP SCAN
-```
+```Powershell
 # IP scanして応答あったもののNetBIOS名取得
 ForEach($i in 1..2) {
   $ip = "192.168.1.$i"

@@ -1,0 +1,265 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: テストワークフローPDF要約
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/azure_openai:0.0.16@e9ebc92e972ae473fc1c26ce215b88ba8780e44dab883685a61bf15e2c11a00d
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: document-extractor
+      id: 1748614211708-source-1748440172360-target
+      selected: false
+      source: '1748614211708'
+      sourceHandle: source
+      target: '1748440172360'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: llm
+      id: 1748440172360-source-1748440199733-target
+      source: '1748440172360'
+      sourceHandle: source
+      target: '1748440199733'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: http-request
+      id: 1748439838308-source-1748614211708-target
+      source: '1748439838308'
+      sourceHandle: source
+      target: '1748614211708'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1748440199733-source-1748441231594-target
+      source: '1748440199733'
+      sourceHandle: source
+      target: '1748441231594'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: https://www.pref.kyoto.jp/kenkoshishin/documents/001_012.pdf
+        selected: false
+        title: 開始
+        type: start
+        variables:
+        - allowed_file_extensions:
+          - .pdf
+          allowed_file_types:
+          - custom
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          label: pdf_file
+          max_length: 200
+          options: []
+          required: true
+          type: text-input
+          variable: pdf_file
+      height: 134
+      id: '1748439838308'
+      position:
+        x: 398.0792530826222
+        y: 282
+      positionAbsolute:
+        x: 398.0792530826222
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        is_array_file: true
+        selected: false
+        title: テキスト抽出
+        type: document-extractor
+        variable_selector:
+        - '1748614211708'
+        - files
+      height: 92
+      id: '1748440172360'
+      position:
+        x: 984
+        y: 282
+      positionAbsolute:
+        x: 984
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4.1
+          provider: langgenius/azure_openai/azure_openai
+        prompt_template:
+        - id: 920417d2-fd5d-487a-801b-27ddc7ca0345
+          role: system
+          text: '以下の文章を80文字以内で要約してください。
+
+            {{{#1748440172360.text#}}}}'
+        selected: true
+        structured_output_enabled: false
+        title: LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1748440199733'
+      position:
+        x: 1269.9207469173778
+        y: 282
+      positionAbsolute:
+        x: 1269.9207469173778
+        y: 282
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1748440199733'
+          - text
+          variable: text
+        selected: false
+        title: 終了
+        type: end
+      height: 90
+      id: '1748441231594'
+      position:
+        x: 1543.283084990819
+        y: 282
+      positionAbsolute:
+        x: 1543.283084990819
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: ''
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 2
+        type: http-request
+        url: '{{#1748439838308.pdf_file#}}'
+        variables: []
+      height: 126
+      id: '1748614211708'
+      position:
+        x: 684
+        y: 282
+      positionAbsolute:
+        x: 684
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -1090.7759955799258
+      y: 135.8667546500822
+      zoom: 0.9117224628437853
