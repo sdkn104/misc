@@ -27,6 +27,7 @@ openapi-generator-cli generate -i openapi.yaml -g python-fastapi -o ./generated-
 
 # OpenAI-comaptible API Server
 
+### How created
 1. openapi.yamlから使わないendpointを削除
 2. delcomp.pyを使って呼ばれないcomponentを削除
 3. openAPI Generatorで生成したhtmlを生成
@@ -35,19 +36,23 @@ openapi-generator-cli generate -i openapi.yaml -g python-fastapi -o ./generated-
 
 * SSE: https://developer.mozilla.org/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
 
-### flask production server
+### Flask production server
 - https://flask.palletsprojects.com/en/stable/deploying/
 -  waitress
     - https://docs.pylonsproject.org/projects/waitress/en/latest/arguments.html
     - https://jp-seemore.com/iot/python/29417/
+    ```python
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=5000)
+    ```
 
-### run in background
+### Run in background
 ```
 pythonw compatible_server.py
 ```
 
 ### Network setting
-* Use 0.0.0.0 instead of localhost, since from docker, cannnot access to localhost(127.0.0.1) of host
+* Listen 0.0.0.0 instead of localhost, since cannnot access to localhost(127.0.0.1) of host from docker
   * docker (Dify) access to IP-address-of-host or hostname
     * `http://IPaddress_of_host_or_hostname:5000/`
 * Firewall Setting (Windows Defender Firewall)

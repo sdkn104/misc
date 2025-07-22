@@ -15,6 +15,10 @@ import pprint
 # OpenAI compatible API server
 #
 
+LISTEN_HOST = "0.0.0.0"
+LISTEN_PORT = 5000
+
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_random_secret_key'
 
@@ -32,7 +36,7 @@ client = AzureOpenAI(
 
 # デフォルトログの設定(flask, weitressからのログの設定)
 logging.basicConfig(
-    filename='flask_system.log',
+    filename='log/flask_system.log',
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
@@ -40,11 +44,10 @@ logging.basicConfig(
 
 # カスタムロガー設定
 custom_logger = logging.getLogger("custom")
-#handler = logging.FileHandler("flask_custom.log", mode='a', encoding='utf-8')
 handler = RotatingFileHandler(
-    filename='flask_custom.log',
+    filename='log/flask_custom.log',
     mode='a',
-    maxBytes=8 * 1024 * 1024,  # 最大5MB
+    maxBytes=8 * 1024 * 1024,  # 最大8MB
     backupCount=3,             # 最大3つのバックアップファイル
     encoding='cp932',  # Windowsのデフォルトエンコーディング
     delay=False
@@ -53,9 +56,11 @@ formatter = logging.Formatter(fmt='%(asctime)s [%(levelname)s] %(message)s', dat
 handler.setFormatter(formatter)
 custom_logger.addHandler(handler)
 custom_logger.setLevel(logging.DEBUG) # DEBUGレベル以上のログを記録
+custom_logger.propagate = False  # 親ロガー(デフォルトロガー)への伝播を防ぐ
 
-# Waitress logging
+# Waitressロガー
 waitress.logging.basicConfig(level=logging.DEBUG) # Waitressのログ出力条件をDEBUG以上に設定
+waitress.logging.propagate = True  # Waitressのログを親ロガー(デフォルトロガー)に伝播する
 
 # Timestamp function
 def get_time_stamp():
@@ -291,6 +296,7 @@ def retrieve_model(model):
         "owned_by": "organization-owner"
     })
 
+
 # any other endpoint
 #@app.route('/<path:anything>', methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'])
 #def catch_all(anything):
@@ -302,10 +308,10 @@ def retrieve_model(model):
 developmentMode = False
 if __name__ == '__main__':
     if developmentMode == True:
-        app.run(host="0.0.0.0", port=5000, debug=True)
+        app.run(host=LISTEN_HOST, port=LISTEN_PORT, debug=True)
     else:
         print('Starting Waitress server...')
-        waitress.serve(app, host='0.0.0.0', port=5000,
+        waitress.serve(app, host=LISTEN_HOST, port=LISTEN_PORT,
             connection_limit=100,  # default is 100
             threads=4,  # default is 4
             channel_timeout=120, # default is 120 seconds
