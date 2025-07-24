@@ -216,6 +216,36 @@ https://docs.dify.ai/en/development/models-integration/ollama#integrate-local-mo
     * default: `http://localhost:11434`
     * setting OLLAMA_HOST: `http://$OLLAMA_HOST:11434`
 
+# WSL2 Disk
+
+### 
+https://learn.microsoft.com/ja-jp/windows/wsl/disk-space
+https://qiita.com/siruku6/items/c91a40d460095013540d
+
+* Check the amount of disk space available in the VHD for a Linux distribution
+  ```
+  wsl.exe --system -d ubuntu df -h /mnt/wslg/distro
+  ```
+* get VHD file path name and its size
+  ```
+  # get VHD file path
+  $vhd = Get-ChildItem -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss | foreach { $_.GetValue("BasePath") + "\" + $_.GetValue("VhdFileName")}
+  # check size of used disk
+  ls $vhd
+  ```
+    * basically VHD file size = used disk size in Ubuntu.
+    * but even if reduce used disk in ubuntsu, the file size not reduced.
+* To shrink disk in such case
+  ```
+  wsl --shutdown
+  diskpart
+    select vdisk file="file/path/to/$vhd"
+    attach vdisk readonly
+    compact vdisk
+    detach vdisk
+    exit
+  ```
+
 # MCP server
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
