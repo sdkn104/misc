@@ -1,0 +1,12 @@
+{
+  "name": "cline",
+  "version": "1.0.0",
+  "description": "- https://cline.bot/\r - https://github.com/cline/cline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

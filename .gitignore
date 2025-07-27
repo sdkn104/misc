@@ -1,6 +1,7 @@
 secret.txt
 secret.ps1
-myenv
-Comp/OutlookRAG/requirements.txt.old
-Comp/OutlookRAG/requirements.in
 secret_*.*
+myenv
+node_modules/
+pycache/
+Comp/OutlookRAG/requirements.in
