@@ -6,14 +6,15 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 
 1. install
     ```powershell
-    #if error occur in installation:
-    #dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-    #dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-    #shutdown /r /t 0
 
     # install wsl
     wsl --install Ubuntu
     #wsl --list --online
+
+    #if error occur in above installation process:
+    #dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+    #dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+    #shutdown /r /t 0
 
     # check wsl version (1 or 2)
     wsl -l -v
@@ -50,6 +51,14 @@ https://docs.docker.com/engine/install/ -> select "Ubuntu"
 * proxy setting for Docker
   * https://qiita.com/dkoide/items/ca1f4549dc426eaf3735
   * https://zenn.dev/wsuzume/articles/f9935b47ce0b55
+  ```
+  HTTP_PROXY=http://proxy.xxx.com:xxx
+  HTTPS_PROXY=$HTTP_PROXY
+  NO_PROXY=127.0.0.1,localhost
+  http_proxy=$HTTP_PROXY
+  https_proxy=$HTTP_PROXYs
+  no_proxy=$NO_PROXY
+  ```
 
 ### install Dify
 https://docs.dify.ai/ja-jp/getting-started/install-self-hosted/docker-compose

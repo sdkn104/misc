@@ -11,6 +11,6 @@
 1. modify source file: checkSeat.py
 1. do the followings:
     ```
-    pyinstaller --onefile checkSeat.py  
+    pyinstaller --onefile checkSeat.py  --noconsole
     # -> created ./dist/checkSeat.exe
     ```
