@@ -6,6 +6,7 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 
 1. install
     ```powershell
+    # (Run as administrator)
 
     # install wsl
     wsl --install Ubuntu
@@ -16,13 +17,29 @@ https://learn.microsoft.com/en-us/windows/wsl/install
     #dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
     #shutdown /r /t 0
 
-    # check wsl version (1 or 2)
+    # check wsl version (must be 2)
     wsl -l -v
     #wsl --set-version Ubuntu 2
     ```
 2. setting
     - create admin user/password for Ubuntu
-
+    - proxy setting for WSL2
+      * https://qiita.com/dkoide/items/ca1f4549dc426eaf3735
+      * https://zenn.dev/wsuzume/articles/f9935b47ce0b55
+      ```bash
+      # .bashrc
+      HTTP_PROXY=http://proxy.xxx.com:xxx
+      HTTPS_PROXY=$HTTP_PROXY
+      NO_PROXY=127.0.0.1,localhost
+      http_proxy=$HTTP_PROXY
+      https_proxy=$HTTP_PROXYs
+      no_proxy=$NO_PROXY
+      ```
+  3. check network on WSL2
+      ```
+      curl http://www.google.com
+      sudo curl http://www.google.com
+      ```
 
 ### Install Docker Engine on WSL2
 https://docs.docker.com/engine/install/ -> select "Ubuntu"
@@ -32,10 +49,21 @@ https://docs.docker.com/engine/install/ -> select "Ubuntu"
 
 1. install docker engine 
     - follow "Install using the apt repository" in https://docs.docker.com/engine/install/ubuntu/
+    - if failed 'sudo docker run hello-world',
+      ```bash
+      sudo vi /etc/systemd/system/docker.service.d/override.conf  # add the followings
+            [Service]
+            Environment="HTTP_PROXY=http://proxy.example.com:xx"
+            Environment="HTTPS_PROXY=http://proxy.example.com:xx"
+      sudo systemctl daemon-reload
+      sudo systemctl restart docker
+      sudo docker info  # to check proxy setting for docker pulling
+      ```
+    - if failed others,
       - add to curl proxy option: --proxy http://proxy.xxx.com
       - add to apt-get proxy option: -o Acquire::http::Proxy="http://proxy.xxx.com"
-      - add to docker run proxy optin: -e HTTPS_PROXY=http::Proxy="http://proxy.xxx.com
-      
+      - add to docker run proxy optin: -e HTTPS_PROXY=http::Proxy=http://proxy.xxx.com
+
 1. install docker compose
     - follow "Install using the repository" in
       https://docs.docker.com/compose/install/linux/#install-using-the-repository
@@ -51,22 +79,15 @@ https://docs.docker.com/engine/install/ -> select "Ubuntu"
 * proxy setting for Docker
   * https://qiita.com/dkoide/items/ca1f4549dc426eaf3735
   * https://zenn.dev/wsuzume/articles/f9935b47ce0b55
-  ```
-  HTTP_PROXY=http://proxy.xxx.com:xxx
-  HTTPS_PROXY=$HTTP_PROXY
-  NO_PROXY=127.0.0.1,localhost
-  http_proxy=$HTTP_PROXY
-  https_proxy=$HTTP_PROXYs
-  no_proxy=$NO_PROXY
-  ```
+
 
 ### install Dify
 https://docs.dify.ai/ja-jp/getting-started/install-self-hosted/docker-compose
 
 ```bash
 # install
-git config --global http.proxy http://proxy.xxx.com
-git config --global https.proxy http://proxy.xxx.com
+#git config --global http.proxy http://proxy.xxx.com
+#git config --global https.proxy http://proxy.xxx.com
 git clone https://github.com/langgenius/dify.git
 cd dify/docker
 cp .env.example .env
@@ -88,6 +109,35 @@ sudo docker compose ps
   ```bash
   sudo docker compose ps
   ```
+* setting proxy (to avoid error when install model provider)
+  - /root/.docker/config.json: not good, probablly
+    ```
+    {
+      "proxies": {
+        "default": {
+          "httpProxy": "http://192.168.0.10:8080",
+          "httpsProxy": "http://192.168.0.10:8080",
+          "noProxy": "localhost,127.0.0.1"
+        }
+      }
+    }
+    ```
+    - .env PROXY
+    - docker-compose.yaml
+    https://qiita.com/k-hideo/items/d1cc1f3efff9d068dee7
+    ```
+    plugin_daemon:
+    image: langgenius/dify-plugin-daemon:0.2.0-local
+    restart: always
+    environment:
+      # Use the shared environment variables.
+      <<: *shared-api-worker-env
+      HTTP_PROXY: http://proxy.mei.melco.co.jp:9515
+      HTTPS_PROXY: http://proxy.mei.melco.co.jp:9515
+      NO_PROXY: localhost,127.0.0.1,weaviate,qdrand,db,redis,web,worker,plugin_daemon,plugin
+    ```
+    - sudo docker logs -f docker-plugin_daemon-1
+    - download plugin file from Dify marketplace, and install it by Dify GUI: https://github.com/langgenius/dify/issues/14776
 
 ### Setting Network
 * network configuration:
