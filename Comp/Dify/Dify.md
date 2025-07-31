@@ -27,13 +27,13 @@ https://learn.microsoft.com/en-us/windows/wsl/install
       * https://qiita.com/dkoide/items/ca1f4549dc426eaf3735
       * https://zenn.dev/wsuzume/articles/f9935b47ce0b55
       ```bash
-      # .bashrc
+      # /etc/environment (env. vars. for all users and processes)
       HTTP_PROXY=http://proxy.xxx.com:xxx
-      HTTPS_PROXY=$HTTP_PROXY
+      http_proxy=http://proxy.xxx.com:xxx
+      HTTPS_PROXY=http://proxy.xxx.com:xxx
+      https_proxy=http://proxy.xxx.com:xxx
       NO_PROXY=127.0.0.1,localhost
-      http_proxy=$HTTP_PROXY
-      https_proxy=$HTTP_PROXYs
-      no_proxy=$NO_PROXY
+      no_proxy=127.0.0.1,localhost
       ```
   3. check network on WSL2
       ```
@@ -47,9 +47,9 @@ https://docs.docker.com/engine/install/ -> select "Ubuntu"
 * Since commercial use of Docker Desktop in larger enterprises requires a paid subscription.
 * so, we use Docker Engine instead.
 
-1. install docker engine 
+1. Install docker engine 
     - follow "Install using the apt repository" in https://docs.docker.com/engine/install/ubuntu/
-    - if failed 'sudo docker run hello-world',
+    - if failed at `sudo docker run hello-world`, i.e., `docker pull` failed,
       ```bash
       sudo vi /etc/systemd/system/docker.service.d/override.conf  # add the followings
             [Service]
@@ -59,7 +59,7 @@ https://docs.docker.com/engine/install/ -> select "Ubuntu"
       sudo systemctl restart docker
       sudo docker info  # to check proxy setting for docker pulling
       ```
-    - if failed others,
+    - if failed at others,
       - add to curl proxy option: --proxy http://proxy.xxx.com
       - add to apt-get proxy option: -o Acquire::http::Proxy="http://proxy.xxx.com"
       - add to docker run proxy optin: -e HTTPS_PROXY=http::Proxy=http://proxy.xxx.com
@@ -98,46 +98,11 @@ cp .env.example .env
 cd dify/docker
 sudo docker compose up -d
 # -> access with browser http://localhost
-sudo docker compose ps
 ```    
-* (when error) 
-  ```bash
-  sudo usermod -aG docker $(whoami) 
-  # to be belong to group docker
-  ```
-* check if Dify running
-  ```bash
-  sudo docker compose ps
-  ```
-* setting proxy (to avoid error when install model provider)
-  - /root/.docker/config.json: not good, probablly
-    ```
-    {
-      "proxies": {
-        "default": {
-          "httpProxy": "http://192.168.0.10:8080",
-          "httpsProxy": "http://192.168.0.10:8080",
-          "noProxy": "localhost,127.0.0.1"
-        }
-      }
-    }
-    ```
-    - .env PROXY
-    - docker-compose.yaml
-    https://qiita.com/k-hideo/items/d1cc1f3efff9d068dee7
-    ```
-    plugin_daemon:
-    image: langgenius/dify-plugin-daemon:0.2.0-local
-    restart: always
-    environment:
-      # Use the shared environment variables.
-      <<: *shared-api-worker-env
-      HTTP_PROXY: http://proxy.mei.melco.co.jp:9515
-      HTTPS_PROXY: http://proxy.mei.melco.co.jp:9515
-      NO_PROXY: localhost,127.0.0.1,weaviate,qdrand,db,redis,web,worker,plugin_daemon,plugin
-    ```
-    - sudo docker logs -f docker-plugin_daemon-1
-    - download plugin file from Dify marketplace, and install it by Dify GUI: https://github.com/langgenius/dify/issues/14776
+```bash
+#check if Dify running
+sudo docker compose ps
+```
 
 ### Setting Network
 * network configuration:
@@ -227,16 +192,43 @@ sudo docker compose ps
 # Dify Setting
 
 ### LLM setting
-- Settings —> Model Providers,  to add and configure the LLM
-- when endpoint is local, 
-  - endpoint server listen 0.0.0.0
-  - specify endpoint as IP addr of host: http://IP_of_host:port/   
+- Settings —> Model Providers
+  1. install model provder,
+  2. setting endpoint, API key, etc.
+
+  * If failed to install model providers,
+    - Download plugin pkg file from Dify Marketplace, and install it by Dify GUI: https://github.com/langgenius/dify/issues/14776
+    - if the above failed,
+      * (it may be better to delete this setting after installing model proiders)
+      * vi docker-compose.yaml
+        - https://qiita.com/k-hideo/items/d1cc1f3efff9d068dee7
+        - add PROXY setting to `plugin_daemon` section
+          ```
+          ...
+          plugin_daemon:
+          image: langgenius/dify-plugin-daemon:0.2.0-local
+          restart: always
+          environment:
+            # Use the shared environment variables.
+            <<: *shared-api-worker-env
+            HTTP_PROXY: http://proxy.xxx.com:xxx
+            HTTPS_PROXY: http://proxy.xxx.com:xxx
+            NO_PROXY: localhost,127.0.0.1,weaviate,qdrand,db,redis,web,worker,plugin_daemon,plugin
+            ...
+          ```
+      - To see log from model provider installation process,
+        - `sudo docker logs -f docker-plugin_daemon-1`
+        - maybe, failed when installing python modules dependent on the provider plugin.
+
+- When endpoint is local, 
+  - LLM endpoint server should listen 0.0.0.0
+  - Specify endpoint as IP address of host: http://IP_of_host:port/   
+
 ### Others
 - Settings -> languages -> timezone
 
 ### User Account for community version
 - login with mail address and password
-- 
 
 # Text Embedding Model (for RAG)
 
