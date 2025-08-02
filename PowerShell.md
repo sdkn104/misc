@@ -163,7 +163,7 @@ Write-Error "abc"  # non-terminating errorを発生し、error output streamへ�
 ## File I/O
 
 ```Powershell
-$c = "あいうえお定兼ｻﾀﾞ＠©"
+$c = "あいうえおABC＠©"
 Set-Content t.txt $c -ENcoding UTF8  # write
 echo xxx | Set-Content t.txt
 echo xxx | Out-File t.txt -Encoding UTF8
