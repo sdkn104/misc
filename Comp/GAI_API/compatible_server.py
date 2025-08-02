@@ -1,4 +1,3 @@
-
 from flask import Flask, request, jsonify, make_response, Response, stream_with_context
 import json
 import time
@@ -11,14 +10,31 @@ from logging.handlers import RotatingFileHandler
 from openai import AzureOpenAI
 import pprint
 
-#
+###########################################################################
 # OpenAI compatible API server
-#
+###########################################################################
 
+# Server settings
 LISTEN_HOST = "0.0.0.0"
 LISTEN_PORT = 5000
+developmentMode = True
 
+# Log settings
+HTTP_LOG_TRIM_LENGTH = 1000000  # 1,000,000 characters
+LOG_FOLDER = 'log/'
 
+# Model names
+MODEL_GAI = "GAI"
+MODEL_TEST = "TEST"
+MODEL_AZURE = "AZURE"
+
+# API Key
+def checkAPIKey(req):
+    auth = req.headers.get('Authorization')
+    match = re.search(r"_x_([^_]*)_x_", auth)  # embedded string in API KEY string
+    return match.group(1) if match else "-"
+
+# flask
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_random_secret_key'
 
@@ -27,7 +43,6 @@ AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
 AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT", "")
 AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY", "")
 OPENAI_API_VERSION = os.getenv("OPENAI_API_VERSION", "")
-COMPATIBLE_MODEL_NAME = os.getenv("COMPATIBLE_MODEL_NAME", "gpt-4.1")
 client = AzureOpenAI(  
     azure_endpoint=AZURE_OPENAI_ENDPOINT,  
     api_key=AZURE_OPENAI_API_KEY,  
@@ -36,7 +51,7 @@ client = AzureOpenAI(
 
 # デフォルトログの設定(flask, weitressからのログの設定)
 logging.basicConfig(
-    filename='log/flask_system.log',
+    filename=LOG_FOLDER+'flask_system.log',
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
@@ -45,7 +60,7 @@ logging.basicConfig(
 # カスタムロガー設定
 custom_logger = logging.getLogger("custom")
 handler = RotatingFileHandler(
-    filename='log/flask_custom.log',
+    filename=LOG_FOLDER+'flask_custom.log',
     mode='a',
     maxBytes=8 * 1024 * 1024,  # 最大8MB
     backupCount=3,             # 最大3つのバックアップファイル
@@ -74,29 +89,58 @@ def get_time_stamp():
 def log_request_info():
     custom_logger.debug("----- request ---------------------------------------------------------------")
     custom_logger.debug(request)
+    custom_logger.debug("-- Header:")
     custom_logger.debug(request.headers)
+    custom_logger.debug("-- Body:")
     if request.content_type == 'application/json':
         s = pprint.pformat(request.get_json(), compact=True)
         custom_logger.debug(s[:10000])  # Log first 10000 characters of JSON request data
+        # --- req.jsonに出力 ---
+        with open(LOG_FOLDER+'req.json', 'w', encoding='utf-8') as f:
+            json.dump(request.get_json(), f, ensure_ascii=False, indent=2)
     else:
-        custom_logger.debug(request.get_data(as_text=True)[:10000])  # Log first 10000 bytes of request data
+        custom_logger.debug(request.get_data(as_text=True)[:HTTP_LOG_TRIM_LENGTH])  # Log first 10000 bytes of request data
+    # Check for Authorization header
+    if checkAPIKey(request) == "-":
+        return Response('{"error": {"code":401, "message": "Unauthorized error. API key is incorrect incorrect. Contact to IPpro."}}', status=401, mimetype='application/json')
 
 @app.after_request
 def log_response_info(response):
     custom_logger.debug("----- response ---------------------------------------------------------------")
     custom_logger.debug(response)
+    custom_logger.debug("-- Header: ")
     custom_logger.debug(response.headers)
+    custom_logger.debug("-- Body:")
     if response.content_type == 'application/json':
         s = pprint.pformat(response.get_json(), compact=True)
         custom_logger.debug(s[:10000])  # Log first 10000 characters of JSON request data
+        # --- res.jsonに出力 ---
+        with open(LOG_FOLDER+'res.json', 'w', encoding='utf-8') as f:
+            json.dump(response.get_json(), f, ensure_ascii=False, indent=2)
     else:
-        custom_logger.debug(response.get_data(as_text=True)[:10000])  # Log first 1000 bytes of request data
-    0
+        response_text = response.get_data(as_text=True)
+        custom_logger.debug(response_text[:HTTP_LOG_TRIM_LENGTH])  # Log first 1000 bytes of request data
+        # streaming response
+        if "\ndata:" in response_text:
+            # --- res.jsonに出力 ---
+            response_split = ("\n\n" + response_text).split("\n\ndata:")
+            response_split = [s for s in response_split if s.strip(" \t\r\n") != ""]  # Remove empty string
+            response_split = [s for s in response_split if s.strip(" \t\r\n") != "[DONE]"]  # Remove empty string
+            #print("\n\nresponse_split2:", response_split)
+            response_json = "{ \"value\": [" + ", ".join(response_split) + "]}"
+            #print("response_json:", response_json)
+            response_obj = json.loads(response_json)
+            #custom_logger.debug("response_json:", response_json)
+            with open(LOG_FOLDER+'res.json', 'w', encoding='utf-8') as f:
+                json.dump(response_obj, f, ensure_ascii=False, indent=2)
+            # message
+            contents = [ c["choices"][0].get("delta", {}).get("content", "") for c in response_obj["value"] ]
+            custom_logger.debug("Response message: " + "".join(contents))  # Join all contents
+
     # One liner access log
     referer = request.referrer or "-"
     user_agent = request.headers.get('User-Agent') or "-"
-    auth = request.headers.get('Authorization')
-    match = re.search(r"___([^_]*)___", auth)  # embedded string in API KEY string
+    auth = checkAPIKey(request)
     log_entry = '{} "{} {} {}" {} {} "{}" "{}" {}'.format(
         request.remote_addr,
         request.method,
@@ -106,7 +150,7 @@ def log_response_info(response):
         response.content_length or '-',
         referer,
         user_agent,
-        match.group(1) if match else "-"
+        auth
     )
     custom_logger.info(log_entry)
 
@@ -117,7 +161,7 @@ def log_response_info(response):
 #    return jsonify({"error": "Not found (compatible server error)"}), 404
 
 
-# OPTIONS request handler
+# OPTIONS request handler  for CORS preflight
 @app.route('/v1/chat/completions', methods=['OPTIONS'])
 def options_handler():
     # response to OPTIONS requests
@@ -237,10 +281,9 @@ def create_chat_completion():
                         ss = chunk.choices[0].delta.content if hasattr(chunk.choices[0], 'delta') and hasattr(chunk.choices[0].delta, 'content') else ""
                         ss = ss if ss else ""
                         stream_obj["choices"][0]["delta"]["content"] = ss
-                        mes.append(ss)
+                        #mes.append(ss)
                         yield "data: " + json.dumps(stream_obj) + "\n\n"                
                 #print(mes)
-                #print(mes.join(''))
                 # stop chunk
                 stream_obj["choices"][0]["index"] = i+1
                 stream_obj["choices"][0]["finish_reason"] = "stop"
@@ -254,23 +297,19 @@ def create_chat_completion():
             res.headers['Cache-Control'] = 'no-cache'
             return res
 
-    #resp = completionsHandlerConstant(payload, resp_obj, stream_obj)
-    resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
-    #resp = completionsHandlerGAI(payload, resp_obj, stream_obj)
+    if model == MODEL_GAI:
+        0#resp = completionsHandlerGAI(payload, resp_obj, stream_obj)
+    elif model == MODEL_TEST:
+        resp = completionsHandlerConstant(payload, resp_obj, stream_obj)
+    elif model == MODEL_AZURE:
+        resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
+    else:
+        resp = Response('{"error": {"code":401, "message": "Unauthorized error. Spedified MODEL name is not supported. Contact to IPpro."}}', status=401, mimetype='application/json')
+
     return resp
 
 
-
 # Models endpoints
-@app.route('/v1/models/<model>', methods=['DELETE'])
-def delete_model(model):
-    # index.md: DeleteModelResponse
-    return jsonify({
-        "id": model,
-        "object": "model",
-        "deleted": True
-    })
-
 @app.route('/v1/models', methods=['GET'])
 def list_models():
     # index.md: ListModelsResponse
@@ -278,7 +317,19 @@ def list_models():
         "object": "list",
         "data": [
             {
-                "id": COMPATIBLE_MODEL_NAME,
+                "id": MODEL_GAI,
+                "object": "model",
+                "created": 1686935002,
+                "owned_by": "organization-owner"
+            },
+            {
+                "id": MODEL_TEST,
+                "object": "model",
+                "created": 1686935002,
+                "owned_by": "organization-owner"
+            },
+            {
+                "id": MODEL_AZURE,
                 "object": "model",
                 "created": 1686935002,
                 "owned_by": "organization-owner"
@@ -305,9 +356,9 @@ def retrieve_model(model):
 
 
 # Run the server
-developmentMode = False
 if __name__ == '__main__':
     if developmentMode == True:
+        print('Starting Development server (debug mode)...')
         app.run(host=LISTEN_HOST, port=LISTEN_PORT, debug=True)
     else:
         print('Starting Waitress server...')

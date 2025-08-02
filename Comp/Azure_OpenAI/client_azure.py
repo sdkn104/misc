@@ -30,7 +30,7 @@ print(endpoint)
 print(deployment)
 print(subscription_key)
 
-stream = True
+stream = False
 
 # キーベースの認証を使用して Azure OpenAI クライアントを初期化する
 client = AzureOpenAI(  
