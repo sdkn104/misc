@@ -19,4 +19,4 @@ class MyProvider(BaseProvider, FakeListLLM):
             ["This is a response from model 'b'"]
         )
         super().__init__(**kwargs)
-        
+

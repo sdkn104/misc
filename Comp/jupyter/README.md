@@ -21,17 +21,28 @@
 
 ### Setting LLM
 - https://jupyter-ai.readthedocs.io/en/latest/users/index.html#model-providers
-- To use Model, install its Python packages and set its API key in your environment or in the chat interface.
-    * Set environment variable:  $env:OPENAI_KEY = "openAI API key"
-    * Set by GUI:
+- To use Model, install its Python packages and 
+    1. set its API key in your environment or 
+        * Set environment variable:  $env:OPENAI_KEY = "openAI API key"
+    2. set it in the chat interface setting GUI
         1. open chat interface by clicking Chat icon in left bar,
         2. open setting panel
         3. set model, key, other parameters
         4. save
+- To use in magic command (%%ai), not need to settting by 2.
+- To use in chat interface, must set by 2.
+
+- Successed history
+    - successed to set Azure OpenAI LLM
+    - successed to set OpenAI::gpt-4 LLM
+    - successed to set OpenAI compatible custom API using OpenAI::gpt-4 I/F
+    - failed to set OpenAI compatible custom API using Azure OpenAI I/F
 
 ### Custom LLM
 - https://jupyter-ai.readthedocs.io/en/latest/developers/entry_points_api/model_providers_group.html#how-to-define-a-custom-model-provider
-
+    1. create python package code for custom LLM
+    2. install the package
+    3. restart jupyter
 
 ### Usage
 - help of %%ai

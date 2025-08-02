@@ -29,9 +29,9 @@ MODEL_TEST = "TEST"
 MODEL_AZURE = "AZURE"
 
 # API Key
-def checkAPIKey(req):
-    auth = req.headers.get('Authorization')
-    match = re.search(r"_x_([^_]*)_x_", auth)  # embedded string in API KEY string
+def checkAPIKey():
+    auth = request.headers.get('Authorization') or ""
+    match = re.search(r"_x_(.*)_x_", auth)  # embedded string in API KEY string
     return match.group(1) if match else "-"
 
 # flask
@@ -64,7 +64,7 @@ handler = RotatingFileHandler(
     mode='a',
     maxBytes=8 * 1024 * 1024,  # 最大8MB
     backupCount=3,             # 最大3つのバックアップファイル
-    encoding='cp932',  # Windowsのデフォルトエンコーディング
+    encoding='utf-8', #cp932',  # Windowsのデフォルトエンコーディング
     delay=False
 )
 formatter = logging.Formatter(fmt='%(asctime)s [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
@@ -101,8 +101,8 @@ def log_request_info():
     else:
         custom_logger.debug(request.get_data(as_text=True)[:HTTP_LOG_TRIM_LENGTH])  # Log first 10000 bytes of request data
     # Check for Authorization header
-    if checkAPIKey(request) == "-":
-        return Response('{"error": {"code":401, "message": "Unauthorized error. API key is incorrect incorrect. Contact to IPpro."}}', status=401, mimetype='application/json')
+    if checkAPIKey() == "-":
+        return Response('{"error": {"code":401, "message": "Unauthorized error. API key is incorrect. Contact to IPpro."}}', status=401, mimetype='application/json')
 
 @app.after_request
 def log_response_info(response):
@@ -140,7 +140,7 @@ def log_response_info(response):
     # One liner access log
     referer = request.referrer or "-"
     user_agent = request.headers.get('User-Agent') or "-"
-    auth = checkAPIKey(request)
+    auth = checkAPIKey()
     log_entry = '{} "{} {} {}" {} {} "{}" "{}" {}'.format(
         request.remote_addr,
         request.method,
@@ -304,7 +304,9 @@ def create_chat_completion():
     elif model == MODEL_AZURE:
         resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
     else:
-        resp = Response('{"error": {"code":401, "message": "Unauthorized error. Spedified MODEL name is not supported. Contact to IPpro."}}', status=401, mimetype='application/json')
+        custom_logger.warning(f"Unknown MODEL name {model} is specified. AZURE API will be used.")
+        0#resp = completionsHandlerGAI(payload, resp_obj, stream_obj)
+        resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
 
     return resp
 
