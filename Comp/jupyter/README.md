@@ -29,8 +29,8 @@
         2. open setting panel
         3. set model, key, other parameters
         4. save
-- To use in magic command (%%ai), not need to settting by 2.
-- To use in chat interface, must set by 2.
+- To use in magic command (%%ai), must set by 1 but not 2.
+- To use in chat interface, must set by 2 but not 1
 
 - Successed history
     - successed to set Azure OpenAI LLM
@@ -43,6 +43,7 @@
     1. create python package code for custom LLM
     2. install the package
     3. restart jupyter
+- custom LLM setting effects on both magic command and chat interface.
 
 ### Usage
 - help of %%ai
@@ -52,6 +53,10 @@
 - chat
     ```
     [1]: %%ai gpt4
+         世界一高い山は
+    ```
+    ```
+    [1]: %%ai my_provider:model_a
          世界一高い山は
     ```
 - generate code

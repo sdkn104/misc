@@ -1,0 +1,42 @@
+{
+  "files_in_context": [
+    {
+      "path": "要件定義.md",
+      "record_state": "active",
+      "record_source": "cline_edited",
+      "cline_read_date": 1754200829262,
+      "cline_edit_date": 1754200829262,
+      "user_edit_date": null
+    },
+    {
+      "path": "requirements.txt",
+      "record_state": "active",
+      "record_source": "cline_edited",
+      "cline_read_date": 1754201563039,
+      "cline_edit_date": 1754201563039,
+      "user_edit_date": null
+    },
+    {
+      "path": "app.py",
+      "record_state": "active",
+      "record_source": "cline_edited",
+      "cline_read_date": 1754201694965,
+      "cline_edit_date": 1754201694965,
+      "user_edit_date": null
+    }
+  ],
+  "model_usage": [
+    {
+      "ts": 1754199270649,
+      "model_id": "AZURE",
+      "model_provider_id": "openai",
+      "mode": "plan"
+    },
+    {
+      "ts": 1754200706465,
+      "model_id": "AZURE",
+      "model_provider_id": "openai",
+      "mode": "act"
+    }
+  ]
+}
