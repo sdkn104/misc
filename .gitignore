@@ -5,3 +5,4 @@ myenv
 node_modules/
 pycache/
 Comp/OutlookRAG/requirements.in
+__pycache__

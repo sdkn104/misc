@@ -9,6 +9,9 @@ import logging
 from logging.handlers import RotatingFileHandler
 from openai import AzureOpenAI
 import pprint
+import sys
+sys.path.append(os.path.dirname(__file__))
+import completionsHandlerGAI  # Import the completions handler for Azure OpenAI
 
 ###########################################################################
 # OpenAI compatible API server
@@ -304,9 +307,9 @@ def create_chat_completion():
     elif model == MODEL_AZURE:
         resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
     else:
-        custom_logger.warning(f"Unknown MODEL name {model} is specified. AZURE API will be used.")
-        0#resp = completionsHandlerGAI(payload, resp_obj, stream_obj)
-        resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
+        custom_logger.warning(f"Unknown MODEL name {model} is specified. GAI API will be used.")
+        resp = completionsHandlerGAI(payload, resp_obj, stream_obj)
+        #resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
 
     return resp
 
