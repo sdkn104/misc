@@ -33,6 +33,10 @@ $ git remote add origin https://github.com/sdkn104/Arduino.git
 ```
 git config --global credential.helper store
 ```
+```
+git config --global user.name "your name"
+git config --global user.email "your mail address"
+```
 6）send files in local repository to remote (GitHub) repository
 ```
 $ git push origin master
