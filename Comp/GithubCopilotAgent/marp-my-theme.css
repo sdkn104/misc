@@ -4,25 +4,30 @@
 @import 'default';
 */
 
+
+/* ---- Material Symbols Outlined フォントの設定 ---- */
+
+  /* https://fonts.google.com/icons?hl=ja */
+  /* https://developers.google.com/fonts/docs/material_symbols?hl=ja */
+
 /*
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=home,search,settings");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,search,settings");
 */
-
-/* ---- Material Symbols Outlined フォントの設定 ---- */
-/* https://fonts.google.com/icons?hl=ja */
-/* https://developers.google.com/fonts/docs/material_symbols?hl=ja */
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 .material-symbols-outlined {
-  font-size: 40px;
+  /* font-size: 40px; */
   font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+/* 別名 */
+.sym {
+  font-family: 'Material Symbols Outlined';
 }
 
 
-
-/* --- 色やフォントの基本設定 --- */
+/* --- 色やフォントの属性定義 --- */
 :root {
   /* 色の設定 */
   --__color-background: #f8f8f4;
@@ -43,9 +48,10 @@
   --font-size-section: 22px; /* スライドの基本フォントサイズ */
   --font-size-h1: 56px;
   --font-size-h2: 40px;
+  --font-size-h3: 1.3em;
 }
 
-/* --- ページ（基本スタイル） --- */
+/* --- ページの基本スタイル --- */
 section {
   background-color: var(--color-background);
   background-image: var(--bg-image);
@@ -66,19 +72,19 @@ section {
   }
 }
 
-/* ページ番号 */
+/* ページ番号のスタイル */
 section::after {
   font-weight: bold;
   font-size: 28px
 }
 
-/* --- 先頭ページ --- */
+/* --- 先頭ページのスタイル --- */
 section.opening {
   background-image: var(--bg-image-opening);
   background-size: cover;
 }
 
-/* --- 最終ページ --- */
+/* --- 最終ページのスタイル --- */
 section.closing {
   background-image: var(--bg-image-closing);
   background-size: cover;
@@ -93,14 +99,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/* タイトルページ(#)のスタイル */
+/* スライドタイトルのスタイル(#) */
 h1 {
   font-size: var(--font-size-h1);
   line-height: 0;
   margin-top: 180px;
 }
 
-/* 通常スライドのタイトル(##) */
+/* ページタイトルのスタイル(##) */
 h2 {
   position: absolute;
   top: 32px;
@@ -109,9 +115,10 @@ h2 {
   font-size: var(--font-size-h2);
 }
 
-/* サブ見出し (例: 目的, 目標) */
+/* サブ見出しのスタイル (###) */
 h3 {
   font-size: 1.3em;
+  font-size: var(--font-size-h3);
   margin-top: 0.4em;
 }
 
@@ -174,7 +181,8 @@ section.opening p {
 }
 
 /* --------- テーブル --------- */
-/* 基本形 */
+
+/* デフォルトスタイル：青 */
 table {
   border-collapse: separate;
   border-spacing: 3px;
@@ -194,6 +202,7 @@ table {
   }
 }
 
+/* テーブルのスタイル：グレー */
 .table2 table {
   border-collapse: separate;
   border-spacing: 3px;
@@ -207,6 +216,7 @@ table {
   }
 }
 
+/* テーブルのスタイル：黒・縞 */
 .table3 table {
   border-collapse: separate;
   border-spacing: 3px;
@@ -225,6 +235,7 @@ table {
   }
 }
 
+/* テーブルのスタイル：黒 */
 .table4 table {
   border-collapse: separate;
   border-spacing: 3px;
@@ -239,8 +250,7 @@ table {
   }
 }
 
-
-
+/* テーブルのスタイル：濃青 */
 .table5 table {
   border-collapse: separate;
   th {
@@ -252,11 +262,12 @@ table {
   }
 }
 
+/* テーブルのスタイル：ベージュ */
 div.table6 table,
 section.table6 table {
   border-collapse: collapse;
   th {
-    background: #E0D8CE ;
+    background: #C4AB8D ;
     border: solid 1px gray;
   }
   td {
@@ -266,13 +277,29 @@ section.table6 table {
   }
 }
 
-
+/* テーブルのスタイル：ベージュ・セパレート */
+div.table7 table,
+section.table7 table {
+  border-collapse: separate;
+  border-spacing: 14px;
+  th {
+    background: #C4AB8D ;
+    border-radius: 8px;
+    border: solid 1px gray;
+  }
+  td {
+    background: linen;
+    border-radius: 8px;
+    border: solid 1px gray;
+    margin: 0;
+  }
+}
 
 /* --- グリッド　--- */
 .split {
     overflow: visible;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 .split div {
@@ -283,6 +310,13 @@ section.table6 table {
   align-items: center;
 }
 
+/* --- マルチカラム　--- */
+.mcols {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
 
 
 /* ガイドライン用のスタイル */

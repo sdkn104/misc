@@ -2,7 +2,7 @@
 marp: true
 # ↓↓↓ これらの行はテンプレートが機能するために必要です ↓↓↓
 header: ' '
-footer: '-'
+footer: ' '
 paginate: true
 size: 16:9
 theme: my-theme
@@ -10,8 +10,11 @@ theme: my-theme
 
 <!-- _class: opening -->
  
-# ABC社様
-# XXXプロジェクト計画書
+# Marp サンプル
+
+<br><br>
+
+### theme: my-theme
 
 ---
 
@@ -28,20 +31,8 @@ theme: my-theme
 
 ---
 
-## プロジェクト概要
-
-### 目的
-ABC社様のデジタル変革を支援しDXを図る
-
-### 目標
-- 業務効率の向上（従来比XX%向上目標）
-- 持続可能な開発体制の構築
-- 組織全体へのナレッジ共有
-
----
-<!-- _class: table2 -->
-
-## プロジェクト体制
+<!-- _class: table5 -->
+## テーブル
 
 ### 体制図
 | 役割 | 担当者 | 責任範囲 |
@@ -54,42 +45,59 @@ ABC社様のデジタル変革を支援しDXを図る
 - **定例会議:** 毎週月曜日 10:00-10:30
 - **連絡ツール:** Slack, Google Meet
 
----
 
-## スケジュール・マイルストーン
-
-### 全体期間
-**[開始日] 〜 [終了日]**
-
-### 主要マイルストーン
-- **Week 2:** 要件定義完了
-- **Week 5:** プロトタイプ版リリース
-- **Week 8:** 全機能実装完了
-- **Week 9:** 関係者テスト・検収
-- **Week 10:** 正式リリース
 
 ---
+<!-- _class: xxx -->
+<!-- このスライド(section)に設定するclassを記述 -->
 
-<style scoped>.split {grid-template-columns: 3fr 2em 1fr}</style>
-<style scoped>
-.xmaterial-symbols-outlined {
-  font-size: 66px;
-}
+## Marp
+
+### ページのスタイル
+<style scoped> /* このページだけに適用するスタイル */
+  section {
+    --font-size-section: 22px;
+    --font-size-h2: 70px;
+  }
 </style>
 
-## 見出し2
-### 見出し3
-### （ここに次のスライドを追加）
+### 記号文字
 
+<style scoped>.sym { font-size: 24px; }</style>
+<span class="sym">line_end_arrow_notch</span>
+<span class="sym">arrow_forward double_arrow chevron_right</span>
+
+### 2カラム
+<div class="mcols"><div>
+
+aa
+- bb
+- cc
+
+</div><div>
+
+bb
+
+</div></div>
+
+---
+## Marp 
 ### グリッド
 
-<div class="split">
+<style scoped>.split {grid-template-columns: 3fr 2em 1fr}</style>
+
+<div class="split" style="grid-template-columns: 3fr 2em 1fr">
+
+<div>aa</div>
+<span class="sym">double_arrow</span>
+<div>bb</div>
+
 <div>
 
-### aaa
-cxx
+  ### aaa
+  cxx
 </div>
-<span class="material-symbols-outlined">arrow_forward</span>
+<span class="sym">arrow_forward</span>
 <div>
 
 ### bbb
@@ -97,17 +105,9 @@ bbb
 ccc
 </div>
 
-<div>aa</div>
-<span class="material-symbols-outlined">double_arrow</span>
-<div>bb</div>
-
-<span class="material-symbols-outlined">chevron_right</span>
-<span class="material-symbols-outlined">line_end_arrow_notch</span>
-<span class="material-symbols-outlined">double_arrow</span>
+</div>
 
 ---
-
-<style scoped>.split {grid-template-columns: 3fr 1fr}</style>
 
 # Design Guideline
 ## このテンプレートを美しく保つためのルール
@@ -160,4 +160,5 @@ ccc
 - **セル内のテキスト:** 可能な限り簡潔に。長いテキストは箇条書きにするなど、表現を工夫しましょう。
 
 ---
+
 <!-- _class: closing -->
