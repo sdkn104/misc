@@ -296,26 +296,27 @@ section.table7 table {
 }
 
 /* --- グリッド　--- */
-.split {
+.grid {
     overflow: visible;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
-.split div {
+.grid div {
   background-color: linen;
   margin: 10px;
   padding: 20px;
   border-radius: 20px; 
-  align-items: center;
+  border: 1px solid gray;
 }
 
-/* --- マルチカラム　--- */
-.mcols {
+/* --- 2カラム　--- */
+.twocols {
     overflow: visible;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    /*grid-template-areas: "slideheading slideheading" "leftpanel rightpanel";*/
+    align-items: start;
 }
 
 

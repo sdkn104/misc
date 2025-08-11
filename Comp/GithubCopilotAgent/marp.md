@@ -18,20 +18,21 @@ theme: my-theme
 
 ---
 
-## 目次
+## About Marp
 
-1.  プロジェクト概要
-2.  プロジェクト体制
-3.  スケジュール・マイルストーン
-4.  開発アプローチ
-5.  使用ツール・技術スタック
-6.  成果物
-7.  リスク管理
-8.  次のステップ
+### 公式
+- Marpit: 基盤ライブラリ：　https://marpit.marp.app/
+- Marp: アプリケーション群：　https://marp.app/
+
+### テンプレート・サンプル
+- https://qiita.com/tomo_makes/items/aafae4021986553ae1d8
+- 
 
 ---
 
-<!-- _class: table5 -->
+<!-- ◇このスライド(section)に設定するclassを記述 -->
+<!-- _class: table5 -->　
+
 ## テーブル
 
 ### 体制図
@@ -43,17 +44,15 @@ theme: my-theme
 
 ### コミュニケーション
 - **定例会議:** 毎週月曜日 10:00-10:30
-- **連絡ツール:** Slack, Google Meet
-
-
+  - **連絡ツール:** Slack, Google Meet
+    - その他
 
 ---
-<!-- _class: xxx -->
-<!-- このスライド(section)に設定するclassを記述 -->
-
-## Marp
+## Marp (1/2)
 
 ### ページのスタイル
+
+-  `<style scoped></style>`
 <style scoped> /* このページだけに適用するスタイル */
   section {
     --font-size-section: 22px;
@@ -67,26 +66,11 @@ theme: my-theme
 <span class="sym">line_end_arrow_notch</span>
 <span class="sym">arrow_forward double_arrow chevron_right</span>
 
-### 2カラム
-<div class="mcols"><div>
-
-aa
-- bb
-- cc
-
-</div><div>
-
-bb
-
-</div></div>
-
----
-## Marp 
 ### グリッド
 
-<style scoped>.split {grid-template-columns: 3fr 2em 1fr}</style>
+<style scoped>.grid {grid-template-columns: 3fr 2em 1fr}</style>
 
-<div class="split" style="grid-template-columns: 3fr 2em 1fr">
+<div class="grid">
 
 <div>aa</div>
 <span class="sym">double_arrow</span>
@@ -106,6 +90,30 @@ ccc
 </div>
 
 </div>
+
+---
+## Marp (2/2)
+
+<!-- _class: xsplit -->
+
+### 2カラム
+
+<div class="twocols"><div>
+
+aa
+- bb
+- cc
+
+</div><div>
+
+xx
+yy
+
+| 種別 | 内容 | 日付 |
+|---|---|---|
+| 危険 | データ破壊 | 2025/5/6 |
+
+</div></div>
 
 ---
 
