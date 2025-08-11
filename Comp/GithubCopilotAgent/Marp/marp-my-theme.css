@@ -319,6 +319,11 @@ section.table7 table {
     align-items: start;
 }
 
+/* ----- コードブロック ----- */
+code {
+  background-color: #999999; /* 背景色 */
+}
+
 
 /* ガイドライン用のスタイル */
 .emph {

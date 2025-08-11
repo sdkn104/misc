@@ -8,12 +8,14 @@ size: 16:9
 theme: my-theme
 ---
 
+<style>
+
+</style>
+
 <!-- _class: opening -->
  
 # Marp サンプル
-
 <br><br>
-
 ### theme: my-theme
 
 ---
@@ -26,14 +28,15 @@ theme: my-theme
 
 ### テンプレート・サンプル
 - https://qiita.com/tomo_makes/items/aafae4021986553ae1d8
-- 
+- https://qiita.com/zono_0/items/e6ab64f381440578ea1c
 
+  
 ---
 
 <!-- ◇このスライド(section)に設定するclassを記述 -->
 <!-- _class: table5 -->　
 
-## テーブル
+## テーブル・見出し・箇条書き
 
 ### 体制図
 | 役割 | 担当者 | 責任範囲 |
@@ -42,17 +45,21 @@ theme: my-theme
 | テックリード | [リード名] | 技術選定、設計、コードレビュー |
 | 開発担当 | [開発者名] | 機能実装、テスト |
 
-### コミュニケーション
+<br>
+
+### 見出し3
+#### 見出し4
 - **定例会議:** 毎週月曜日 10:00-10:30
   - **連絡ツール:** Slack, Google Meet
     - その他
 
 ---
+
 ## Marp (1/2)
 
-### ページのスタイル
-
--  `<style scoped></style>`
+### スタイル
+- 全ページ共通：　`<style></style>`
+- ページ独自：　`<style scoped></style>`
 <style scoped> /* このページだけに適用するスタイル */
   section {
     --font-size-section: 22px;
@@ -94,8 +101,6 @@ ccc
 ---
 ## Marp (2/2)
 
-<!-- _class: xsplit -->
-
 ### 2カラム
 
 <div class="twocols"><div>
@@ -114,6 +119,48 @@ yy
 | 危険 | データ破壊 | 2025/5/6 |
 
 </div></div>
+
+---
+## Drawio
+
+<div class="twocols"><div>
+
+- Draw.io
+  - https://www.drawio.com/
+- VScode extension "Draw.io Integration"
+  - [marketplace](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+  - [guthub](https://github.com/hediet/vscode-drawio)
+  - by default, offline version of drawio is used
+
+- To use
+  - Edit
+  - Save as .svg
+  - `![w:200px](drawio.svg)`
+
+</div><div>
+
+drawio.svg
+
+![w:160px](drawio.svg)
+
+</div>
+
+---
+## Kroki
+
+<div class="twocols"><div>
+
+- Kroki
+  - https://kroki.io/
+- VScode Kroki extension
+  - [marketplace](https://marketplace.visualstudio.com/items?itemName=pomdtr.markdown-kroki)
+  - [guthub](https://github.com/pomdtr/vscode-markdown-kroki)
+  - by default, offline version of drawio is used
+
+- To use
+  - This extension cannot save diagam...
+
+</div><div>
 
 ---
 
