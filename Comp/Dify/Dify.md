@@ -41,6 +41,8 @@ https://learn.microsoft.com/en-us/windows/wsl/install
       sudo curl http://www.google.com
       ```
 
+
+
 ### Install Docker Engine on WSL2
 https://docs.docker.com/engine/install/ -> select "Ubuntu"
 
@@ -105,14 +107,73 @@ sudo docker compose ps
 ```
 
 ### Setting Network
+
+```mermaid
+flowchart LR
+
+%%要素・グループ
+EXTNET{{external subnet}}
+subgraph PC_OS[PC Windows]
+  PCNIC[PC NIC]
+  vEther["virtual NIC<br>vEthernet(WSL)"]
+  PCapp([PC WebApp])
+  RT[(route table)]
+end
+VSW{{"Virtual SW (Hub)<br>subnet"}}
+subgraph WSL[WSL2]
+  eth0["eth0 NIC"]
+  docker0["docker bridge NIC<br>docker0"]
+  br_xxx1["docker bridge NIC<br>br_xxx1"]
+  br_xxx2["docker bridge NIC<br>br_xxx2"]
+  RT2[(route table)]
+end
+bridge{{"subnet<br>bridge"}}
+docker_default{{"subnet<br>docker_default"}}
+docker_ssrf_proxy_network{{"subnet<br>docker_ssrf_proxy_network"}}
+subgraph Docker
+  nginx[docker-nginx-1]
+  api[docker-api-1]
+  sandbox[docker-sandbox-1]
+end
+
+%%関係
+vEther == default === VSW
+EXTNET === PCNIC
+docker_default === nginx
+docker_default === api
+docker_ssrf_proxy_network === api
+docker_ssrf_proxy_network === sandbox
+VSW === eth0
+docker0 === bridge
+br_xxx1 == default === docker_default
+br_xxx2 == default === docker_ssrf_proxy_network
+PCNIC -. NAT:80 .-> eth0
+vEther -. NAT:80 .-> eth0
+PCapp -. Listen .-> PCNIC
+PCapp -. Listen .-> vEther
+eth0 -. NAT:80,443 .-> nginx
+```
+
+- listen 0.0.0.0 == listen all NICs in the host
+- check all NICs in the host
+  - `PS> ipconfig` 
+  - `WSL> ip addr`
+- check routing table of the host
+  - `PS> route print`
+  - `WSL> route`
+- check networks in Docker
+  - `sudo docker network ls`
+  - `sudo docker inspect docker-nginx-1`
+
 * network configuration:
-  * IP address of Host
-  * IP address of WSL2 (virtual environment)
-  * IP address of Docker Container (semi-virtual environment)
+  * Host (real environment)
+  * WSL2 (virtual environment)
+  * Docker Container (semi-virtual environment)
+
 * port mapping: WSL2 -> docker container "nginx"
   * mapping is specified in ports section of nginx in docker-compose.yaml
   * default:  0.0.0.0:80->80, 0.0.0.0:443->443
-      * Mapping port 80 of WSL2 to port 80 of docker container "nginx" 
+      * Mapping port 80 of WSL2 NICs to port 80 of docker container "nginx" 
   * check port mapping of nginx
     ```bash
     sudo docker compose ps -a
