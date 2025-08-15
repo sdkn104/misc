@@ -1,0 +1,36 @@
+---
+displayMode: compact
+config:
+  theme: default
+  gantt:
+    axisFontSize: 24
+---
+
+
+gantt
+    title プロジェクト全体工程表（2025/8～2026/3）
+    dateFormat  YYYY-MM-DD
+    axisFormat  %m/%d
+    excludes   weekends
+
+    section 発注1
+    発注           :active, a1, 2025-08-01, 2025-08-16
+
+    section 要件定義
+    要求確認       :a2, 2025-07-01, 2025-08-16
+    要件定義書作成 :a3, after a2, 20d
+
+    section 発注2
+    発注           :b1, 2025-08-25, 15d
+
+    section 標準化検討
+    標準化テーブル仕様作成 :c1, after a3, 10d
+
+    section DB調査・データフロー作成
+    DB調査・データフロー作成 :d1, after c1, 20d
+
+    section 開発
+    開発           :e1, after d1, 60d
+
+    section 適用
+    適用           :f1, after e1, 8w

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー登録</title>
+</head>
+<body>
+    <h2>新規ユーザー登録</h2>
+    <form method="post">
+        <label>ユーザー名: <input type="text" name="username" required></label><br>
+        <label>メールアドレス: <input type="email" name="email" required></label><br>
+        <label>パスワード: <input type="password" name="password" required></label><br>
+        <button type="submit">登録</button>
+    </form>
+    <a href="{{ url_for('auth.login') }}">ログイン画面へ</a>
+</body>
+</html>

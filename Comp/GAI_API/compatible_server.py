@@ -301,15 +301,15 @@ def create_chat_completion():
             return res
 
     if model == MODEL_GAI:
-        0#resp = completionsHandlerGAI(payload, resp_obj, stream_obj)
+        resp = completionsHandlerGAI.completionsHandlerGAI(payload, resp_obj, stream_obj)
     elif model == MODEL_TEST:
         resp = completionsHandlerConstant(payload, resp_obj, stream_obj)
     elif model == MODEL_AZURE:
         resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
     else:
         custom_logger.warning(f"Unknown MODEL name {model} is specified. GAI API will be used.")
-        resp = completionsHandlerGAI(payload, resp_obj, stream_obj)
-        #resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
+        #resp = completionsHandlerGAI.completionsHandlerGAI(payload, resp_obj, stream_obj)
+        resp = completionsHandlerAzure(payload, resp_obj, stream_obj)
 
     return resp
 

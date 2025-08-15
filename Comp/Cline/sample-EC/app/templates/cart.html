@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カート内容</title>
+</head>
+<body>
+    <h2>カート内容</h2>
+    {% if items %}
+    <table border="1">
+        <tr>
+            <th>商品名</th>
+            <th>価格</th>
+            <th>数量</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.product.price }}円</td>
+            <td>
+                <form method="post" action="{{ url_for('cart.update_cart_item', item_id=item.id) }}" style="display:inline;">
+                    <input type="number" name="quantity" value="{{ item.quantity }}" min="1" style="width:50px;">
+                    <button type="submit">変更</button>
+                </form>
+                <form method="post" action="{{ url_for('cart.delete_cart_item', item_id=item.id) }}" style="display:inline;">
+                    <button type="submit">削除</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>合計金額: {{ total }}円</p>
+    <!-- 購入手続きボタンは後で追加 -->
+    {% else %}
+    <p>カートは空です。</p>
+    {% endif %}
+    <a href="{{ url_for('product.product_list') }}">商品一覧へ戻る</a>
+</body>
+</html>

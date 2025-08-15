@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>商品一覧</title>
+</head>
+<body>
+    <h2>販売中のPDF一覧</h2>
+    <ul>
+        {% for product in products %}
+        <li>
+            <img src="{{ product.cover_image }}" alt="表紙画像" width="100">
+            <strong>{{ product.name }}</strong><br>
+            価格: {{ product.price }}円<br>
+            <a href="{{ url_for('product.product_detail', product_id=product.id) }}">詳細を見る</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

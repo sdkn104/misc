@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF販売ECサイト トップページ</title>
+</head>
+<body>
+    <h1>PDF販売ECサイト</h1>
+    <nav>
+        <a href="{{ url_for('product.product_list') }}">商品一覧</a>
+        {% if current_user.is_authenticated %}
+            <a href="{{ url_for('cart.view_cart') }}">カート</a>
+            <a href="{{ url_for('auth.logout') }}">ログアウト</a>
+        {% else %}
+            <a href="{{ url_for('auth.login') }}">ログイン</a>
+            <a href="{{ url_for('auth.register') }}">新規登録</a>
+        {% endif %}
+    </nav>
+    <hr>
+    <h2>おすすめ商品</h2>
+    <ul>
+        {% for product in products %}
+        <li>
+            <img src="{{ product.cover_image }}" alt="表紙画像" width="100">
+            <strong>{{ product.name }}</strong> - {{ product.price }}円
+            <a href="{{ url_for('product.product_detail', product_id=product.id) }}">詳細</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

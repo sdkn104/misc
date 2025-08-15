@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>購入履歴</title>
+</head>
+<body>
+    <h2>購入履歴</h2>
+    {% if orders %}
+    <ul>
+        {% for order in orders %}
+        <li>
+            <strong>注文日:</strong> {{ order.created_at }}<br>
+            <strong>合計金額:</strong> {{ order.total_price }}円<br>
+            <strong>商品一覧:</strong>
+            <ul>
+                {% for item in order.orderitem_set %}
+                <li>
+                    商品ID: {{ item.product_id }} / 数量: {{ item.quantity }}
+                    <!-- ダウンロードリンクは後で追加 -->
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>購入履歴はありません。</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">トップページへ</a>
+</body>
+</html>

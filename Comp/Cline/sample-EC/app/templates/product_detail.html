@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>商品詳細</title>
+</head>
+<body>
+    <h2>{{ product.name }}</h2>
+    <img src="{{ product.cover_image }}" alt="表紙画像" width="200"><br>
+    <strong>価格: {{ product.price }}円</strong><br>
+    <p>{{ product.description }}</p>
+    <!-- カート追加・購入ボタンは後で追加 -->
+    <a href="{{ url_for('product.product_list') }}">商品一覧へ戻る</a>
+</body>
+</html>

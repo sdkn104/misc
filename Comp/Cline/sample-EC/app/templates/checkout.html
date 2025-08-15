@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>購入手続き</title>
+</head>
+<body>
+    <h2>購入手続き</h2>
+    <form method="post">
+        <table border="1">
+            <tr>
+                <th>商品名</th>
+                <th>価格</th>
+                <th>数量</th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.product.price }}円</td>
+                <td>{{ item.quantity }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <p>合計金額: {{ total }}円</p>
+        <!-- 決済情報入力欄（仮） -->
+        <label>クレジットカード番号: <input type="text" name="card_number" required></label><br>
+        <label>有効期限: <input type="text" name="expiry" required></label><br>
+        <label>セキュリティコード: <input type="text" name="cvc" required></label><br>
+        <button type="submit">注文確定</button>
+    </form>
+    <a href="{{ url_for('cart.view_cart') }}">カートへ戻る</a>
+</body>
+</html>
