@@ -55,16 +55,18 @@ theme: my-theme
 
 ---
 
-## Marp (1/2)
+## スタイル・記号 (1/2)
 
 ### スタイル
 - 全ページ共通：　`<style></style>`
 - ページ独自：　`<style scoped></style>`
-<style scoped> /* このページだけに適用するスタイル */
+<style scoped>
   section {
-    --font-size-section: 22px;
-    --font-size-h2: 70px;
+    --font-size-h2: 40px;
   }
+</style>
+<style> 
+  :root {--font-size-section: 22px;} 
 </style>
 
 ### 記号文字
@@ -99,7 +101,7 @@ ccc
 </div>
 
 ---
-## Marp (2/2)
+## スタイル・記号 (2/2)
 
 ### 2カラム
 
@@ -121,7 +123,7 @@ yy
 </div></div>
 
 ---
-## Drawio
+## Draw.io
 
 <div class="twocols"><div>
 
@@ -146,6 +148,35 @@ drawio.svg
 </div>
 
 ---
+## Mermaid
+
+<div class="twocols"><div>
+
+- Mermaid
+  - https://mermaid.js.org/
+  - https://www.mermaidchart.com/
+- VScode extensions
+  - [Mermaid Chart](https://github.com/Mermaid-Chart/vscode-mermaid-chart)
+    - connecting to cloud marmaidchart.com
+  - [Mermaid Editor](https://marketplace.visualstudio.com/items?itemName=tomoyukim.vscode-mermaid-editor)
+    - 100% local solution
+    - work on .mmd file, export to svg
+    - To use: Edit, Save as .svg, and `![w:400px](network.svg)`
+  - "Markdown preveiw Mermaid Suport"
+    - offline
+    - work on code block in .md file, cannot save
+  - Mermaid Markdown Syntax Highlighting
+
+</div><div>
+
+mermaid.svg
+
+![w:600px](mermaid.svg)
+
+</div>
+
+---
+
 ## Kroki
 
 <div class="twocols"><div>
@@ -155,7 +186,7 @@ drawio.svg
 - VScode Kroki extension
   - [marketplace](https://marketplace.visualstudio.com/items?itemName=pomdtr.markdown-kroki)
   - [guthub](https://github.com/pomdtr/vscode-markdown-kroki)
-  - by default, offline version of drawio is used
+  - connecting to cloud server by default, but can install server in local
 
 - To use
   - This extension cannot save diagam...

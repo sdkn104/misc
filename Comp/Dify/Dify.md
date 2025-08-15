@@ -1,7 +1,7 @@
 # INSTALL
 https://docs.dify.ai/ja-jp/getting-started/install-self-hosted/docker-compose
 
-### Install WSL2
+## Install WSL2
 https://learn.microsoft.com/en-us/windows/wsl/install
 
 1. install
@@ -43,14 +43,14 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 
 
 
-### Install Docker Engine on WSL2
+## Install Docker Engine on WSL2
 https://docs.docker.com/engine/install/ -> select "Ubuntu"
 
-* Since commercial use of Docker Desktop in larger enterprises requires a paid subscription.
-* so, we use Docker Engine instead.
+* Since commercial use of Docker Desktop in larger enterprises 
+  requires a paid subscription, we use Docker Engine instead.
 
 1. Install docker engine 
-    - follow "Install using the apt repository" in https://docs.docker.com/engine/install/ubuntu/
+    - Do the things in "Install using the apt repository" in https://docs.docker.com/engine/install/ubuntu/
     - if failed at `sudo docker run hello-world`, i.e., `docker pull` failed,
       ```bash
       sudo vi /etc/systemd/system/docker.service.d/override.conf  # add the followings
@@ -83,7 +83,7 @@ https://docs.docker.com/engine/install/ -> select "Ubuntu"
   * https://zenn.dev/wsuzume/articles/f9935b47ce0b55
 
 
-### install Dify
+## install Dify
 https://docs.dify.ai/ja-jp/getting-started/install-self-hosted/docker-compose
 
 ```bash
@@ -95,7 +95,7 @@ cd dify/docker
 cp .env.example .env
 ```    
 
-### run Dify
+## run Dify
 ```bash    
 cd dify/docker
 sudo docker compose up -d
@@ -105,46 +105,46 @@ sudo docker compose up -d
 #check if Dify running
 sudo docker compose ps
 ```
+## Setting Network
 
-### Setting Network
+### Overview
 
 ```mermaid
 flowchart LR
 
 %%要素・グループ
-EXTNET{{external subnet}}
+EXTNET([external subnet])
 subgraph PC_OS[PC Windows]
-  PCNIC[PC NIC]
-  vEther["virtual NIC<br>vEthernet(WSL)"]
-  PCapp([PC WebApp])
-  RT[(route table)]
+  PCNIC["PC NIC<br>19.168.1.6"]
+  vEther["virtual NIC<br>vEthernet(WSL)<br>172.31.160.1/20"]
+  PCapp[[PC WebApp]]
+  RT[("route table<br>default=PC NIC")]
 end
-VSW{{"Virtual SW (Hub)<br>subnet"}}
+VSW(["Virtual SW (Hub)<br>subnet"])
 subgraph WSL[WSL2]
-  eth0["eth0 NIC"]
-  docker0["docker bridge NIC<br>docker0"]
-  br_xxx1["docker bridge NIC<br>br_xxx1"]
-  br_xxx2["docker bridge NIC<br>br_xxx2"]
-  RT2[(route table)]
+  eth0["eth0 NIC<br>172.31.169.237"]
+  docker0["docker NIC<br>docker0<br>172.17.0.1"]
+  br_xxx1["docker NIC<br>172.18.0.1"]
+  br_xxx2["docker NIC<br>172.19.0.1"]
+  RT2[("route table<br>default=eth0")]
 end
-bridge{{"subnet<br>bridge"}}
-docker_default{{"subnet<br>docker_default"}}
-docker_ssrf_proxy_network{{"subnet<br>docker_ssrf_proxy_network"}}
+bridge(["bridge subnet<br>bridge"])
+docker_default(["bridge subnet<br>docker_default"])
+docker_ssrf_proxy_network(["bridge subnet<br>docker_ssrf_proxy_network"])
 subgraph Docker
-  nginx[docker-nginx-1]
+  nginx["docker-nginx-1<br>172.18.0.7"]
   api[docker-api-1]
-  sandbox[docker-sandbox-1]
+  sandbox["docker-sandbox-1<br>172.19.0.3"]
 end
 
 %%関係
-vEther == default === VSW
 EXTNET === PCNIC
+vEther == default === VSW === eth0
 docker_default === nginx
 docker_default === api
-docker_ssrf_proxy_network === api
+docker_ssrf_proxy_network == ?? === api
 docker_ssrf_proxy_network === sandbox
-VSW === eth0
-docker0 === bridge
+docker0 == default === bridge
 br_xxx1 == default === docker_default
 br_xxx2 == default === docker_ssrf_proxy_network
 PCNIC -. NAT:80 .-> eth0
@@ -160,17 +160,12 @@ eth0 -. NAT:80,443 .-> nginx
   - `WSL> ip addr`
 - check routing table of the host
   - `PS> route print`
-  - `WSL> route`
-- check networks in Docker
+  - `WSL> ip route`
+- check network (IP address and subnet) of Docker container
   - `sudo docker network ls`
   - `sudo docker inspect docker-nginx-1`
 
-* network configuration:
-  * Host (real environment)
-  * WSL2 (virtual environment)
-  * Docker Container (semi-virtual environment)
-
-* port mapping: WSL2 -> docker container "nginx"
+### Port mapping (NAT): WSL2 to docker container "nginx"
   * mapping is specified in ports section of nginx in docker-compose.yaml
   * default:  0.0.0.0:80->80, 0.0.0.0:443->443
       * Mapping port 80 of WSL2 NICs to port 80 of docker container "nginx" 
@@ -182,31 +177,38 @@ eth0 -. NAT:80,443 .-> nginx
     ```bash
     sudo lsof -i -nP
     ```
+  * test access from docker container
+    ```bash
+    # start Web server in WSL2
+    python3 -m http.server 999 &
+    # start docker curl with removing container after command finish
+    sudo docker run --rm curlimages/curl http://IPaddr_of_eth0:999
+    ```
 
-* port mapping:  Host -> WSL2
+### Port mapping (NAT):  Host PC to WSL2
   -  https://rcmdnk.com/blog/2021/03/01/computer-windows-network/
   -  https://qiita.com/yururu_no_yu/items/1fe94eeff12bad910d58
   -  https://qiita.com/omu_kato/items/f9a6b5a02e25f5f2a487
   - https://zenn.dev/yamamoto_11709/articles/1e90bc9f7b7500
   - https://scrapbox.io/hotchpotch/WSL2_%E7%92%B0%E5%A2%83%E3%81%B8%E3%81%AE_port_forwarding
   * Default fowarding: Any TCP port you listen on inside WSL2 is automatically forwarded to the Windows host’s localhost on the same port.
-  * if you want use Dify from external client, do followings
-  * WLS2 IP address is changed per startup
+  * If you want use Dify from external client, do followings.
+  * Note that WLS2 eth0 address is changed per startup.
 
-  1. get WSL2 IP address (exec on WSL2)
-      ```bash
-      ifconfig eth0 | grep 'inet ' | awk '{print $2}'
-        #or
-      ip addr show eth0 | sed -e 's/\// /g' | awk '/inet /{print $2}'
+  1. Set port forwarding
+      ```powershell
+      # check IP address of WSL2 eth0
+      wsl -e ip addr show eth0
+      # get IP addr of eth0
+      $ip = wsl -e ip addr show eth0 | where { $_ -match "inet "} |  foreach { ($_ -split "[\s/]+")[2] }
+      # delete old port forwarding
+      netsh interface portproxy delete v4tov4 listenport=80 listenaddress=0.0.0.0
+      # set port forwarding
+      netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=80   connectaddress=$ip connectport=80
+      # show port forwarding
+      netsh interface portproxy show v4tov4
       ```
-  2. set port forwarding (exec on PowerShell)
-      ```bash
-      netsh.exe interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=80   connectaddress=WSL2_ADDRESS connectport=80
-      netsh.exe interface portproxy show v4tov4
-      #netsh.exe interface portproxy delete v4tov4 listenport=80 listenaddress=0.0.0.0
-      ```
-
-  3. setting firewall 
+  2. Setting firewall 
       * open port 80 by Windows Defender Wirewall
       * https://support.borndigital.co.jp/hc/ja/articles/360002711593-Windows10%E3%81%A7%E7%89%B9%E5%AE%9A%E3%81%AE%E3%83%9D%E3%83%BC%E3%83%88%E3%82%92%E9%96%8B%E6%94%BE%E3%81%99%E3%82%8B
       ```powershell
@@ -218,34 +220,12 @@ eth0 -. NAT:80,443 .-> nginx
       netsh advfirewall firewall delete rule name="★Dify TCP 80"
       ```
 
-  * instead of 1 and 2:
+      * To delete all port forwarding: `netsh.exe interface portproxy reset`
 
-    ~/bin/wsl_port_forwarding.sh:
-    ```bash
-    #!/bin/bash
-
-    IP=$(ip addr show eth0 | sed -e 's/\// /g' | awk '/inet /{print $2}')
-    LISTENPORTS=(80) 
-
-    echo IP=$IP
-    echo LISTENPORTS=$LISTENPORTS
-
-    for port in "${LISTENPORTS[@]}"
-    do
-      netsh.exe interface portproxy delete v4tov4 listenport=$port
-      netsh.exe interface portproxy add    v4tov4 listenport=$port connectaddress=$IP
-      netsh.exe interface portproxy show   v4tov4
-    done
-    ```
-    ```powershell
-    PS> wsl -e  /home/username/bin/wsl_port_forwarding.sh
-    ```
-  * to delete all port forwarding: `netsh.exe interface portproxy reset`
-
-  4. access from host PC or external PC:
+  3. Test access Dify from host PC or external PC:
       * `http://IP_address_of_host_or_hostname:80`
 
-  * to check listen ports in Host
+  * To check listen ports in Host
       ```
       netstat -ano | grep LISTEN
       ```

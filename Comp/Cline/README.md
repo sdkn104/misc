@@ -17,3 +17,8 @@
 1. Click "Use Your Own API Key" to avoid connecting Cline cloud
 1. Set LLM ("OpenAI Compatible", etc)
 
+## Usage
+
+### Context Window max size
+* cannot control by user
+* code: cline/src/core/context/context-management/context-window-utils.ts

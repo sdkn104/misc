@@ -75,7 +75,13 @@ section {
 /* ページ番号のスタイル */
 section::after {
   font-weight: bold;
-  font-size: 28px
+  font-size: 24px;
+  margin: 0px;
+  padding: 15px;
+}
+
+section {
+  border: 1px solid var(--color-hr);
 }
 
 /* --- 先頭ページのスタイル --- */
