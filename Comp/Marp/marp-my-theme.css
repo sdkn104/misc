@@ -88,6 +88,12 @@ section {
 section.opening {
   background-image: var(--bg-image-opening);
   background-size: cover;
+  h3 {
+    margin-top: 90px;
+  }
+  h4 {
+    margin-top: 50px;
+  }
 }
 
 /* --- 最終ページのスタイル --- */
@@ -306,7 +312,7 @@ section.table7 table {
     overflow: visible;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: stretch;
 }
 .grid div {
   background-color: linen;
