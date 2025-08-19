@@ -36,6 +36,7 @@ git config --global credential.helper store
 ```
 git config --global user.name "your name"
 git config --global user.email "your mail address"
+git config list
 ```
 6）send files in local repository to remote (GitHub) repository
 ```
