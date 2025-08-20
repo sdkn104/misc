@@ -29,6 +29,9 @@
         2. open setting panel
         3. set model, key, other parameters
         4. save
+        * Alternatively, setting in config file:
+            * C:\Users\QP48568\AppData\Roaming\jupyter\jupyter_ai\config.json
+
 - To use in magic command (%%ai), must set by 1 but not 2.
 - To use in chat interface, must set by 2 but not 1
 
