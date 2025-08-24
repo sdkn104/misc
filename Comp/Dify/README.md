@@ -341,3 +341,20 @@ https://qiita.com/siruku6/items/c91a40d460095013540d
 # MCP server
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
+## Setting
+1. Difyプラグインマーケットプレイスで「MCP SSE」プラグインを検索・インストール
+1. プラグインページの「認証する」ボタンをクリックし、取得したZapier MCPサーバーURLを
+1. 設定Difyエージェントアプリを作成し、MCP SSE サービスを有効にする
+- Instruction (System Prompt)の例
+  ```
+  Userの指示に従い適切なツールを使用してください。
+  今日の日付を取得する際には、CurrentTimeを使ってください。
+  昨日や明日や明後日などの日付を取得する際にはCurrentTimeから計算を行い取得してください。
+  曜日について指示があった際にはWeekday Calculatorを用いて計算してください。
+  予定について尋ねられた際にはzapier_mcpから得られるGoogle Calendar情報を用いて予定を取得してください。
+  日付を指定されている場合その日以外の予定は送信しないでください。
+  予定についてはカレンダーに書いている情報以外は書かないでください。
+  送信は行わなくてよいです。
+  出力は質問内容への解答だけでいいです。
+  ```
+  
