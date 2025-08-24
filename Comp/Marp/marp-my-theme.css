@@ -27,7 +27,7 @@
 }
 
 
-/* --- 色やフォントの属性定義 --- */
+/* ------------ 色やフォントの属性定義 ------------ */
 :root {
   /* 色の設定 */
   --__color-background: #f8f8f4;
@@ -51,7 +51,7 @@
   --font-size-h3: 1.3em;
 }
 
-/* --- ページの基本スタイル --- */
+/* --------------- ページの基本スタイル --------------- */
 section {
   background-color: var(--color-background);
   background-image: var(--bg-image);
@@ -192,7 +192,7 @@ section.opening p {
   color: var(--color-foreground);
 }
 
-/* --------- テーブル --------- */
+/* --------------- テーブル --------------- */
 
 /* デフォルトスタイル：青 */
 table {
@@ -307,7 +307,7 @@ section.table7 table {
   }
 }
 
-/* --- グリッド　--- */
+/* --------------- グリッド　--------------- */
 .grid {
     overflow: visible;
     display: grid;
@@ -322,7 +322,7 @@ section.table7 table {
   border: 1px solid gray;
 }
 
-/* --- 2カラム　--- */
+/* --------------- 2カラム　--------------- */
 .twocols {
     overflow: visible;
     display: grid;
@@ -331,13 +331,32 @@ section.table7 table {
     align-items: start;
 }
 
-/* ----- コードブロック ----- */
+/* --------------- コードブロック --------------- */
+pre {
+  background-color: #f6f8fa;
+  background-color: #e2e8ef;
+  padding: 5px 15px;
+  border: 1px solid #d1d5da;
+  border: 1px solid #c6cad0;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 2px 0;
+}
+
 code {
-  background-color: #999999; /* 背景色 */
+  font-family: Consolas, Menlo, Monaco, monospace;
+  color: #24292e;
+  background-color: #e2e8ef;
+}
+
+pre code {
+  display: block;
+  white-space: pre;
+  line-height: 120%;
 }
 
 
-/* ガイドライン用のスタイル */
+/* --------------- ガイドライン用のスタイル --------------- */
 .emph {
   background-color: #fbe9e7;
   color: #c62828;
