@@ -343,8 +343,8 @@ https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
 ## Setting
 1. Difyプラグインマーケットプレイスで「MCP SSE」プラグインを検索・インストール
-1. プラグインページの「認証する」ボタンをクリックし、取得したZapier MCPサーバーURLを
-1. 設定Difyエージェントアプリを作成し、MCP SSE サービスを有効にする
+1. プラグインページの「認証する」ボタンをクリックし、取得したZapier MCPサーバーURLを設定
+1. Difyエージェントアプリを作成し、MCP SSE サービスを有効にする
 - Instruction (System Prompt)の例
   ```
   Userの指示に従い適切なツールを使用してください。
