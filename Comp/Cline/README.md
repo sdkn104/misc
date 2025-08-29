@@ -5,11 +5,11 @@
 - https://github.com/cline/cline
 
 ## Example
-- https://note.com/sharelab/n/n65e8544a9412
-- https://note.com/habatakurikei/n/nf833c058d99d
-- https://qiita.com/makishy/items/4dd3662a52851a2c5ddc
-- 
-
+- FPsim: https://note.com/sharelab/n/n65e8544a9412
+- HDR: https://note.com/habatakurikei/n/nf833c058d99d
+- 花粉症: https://qiita.com/makishy/items/4dd3662a52851a2c5ddc
+- BeerLog: https://dackdive.hateblo.jp/entry/2025/02/17/184850
+- HumbergerOrder: https://www.moonmile.net/blog/archives/10889
 
 ## Install and Setup
 1. Install VS Code Extension "Cline" 
