@@ -271,6 +271,15 @@ eth0 -. NAT:80,443 .-> nginx
 ### User Account for community version
 - login with mail address and password
 
+# Using Dify
+
+### Invoke Workflow by Web API
+- [ワークフローアプリ API](http://meia9dbc/app/8f3847a8-155c-4615-90d9-8e5b45fef4cd/develop)
+- API Key:  Setting in Left Pain in app in Studio
+- API format: API Access in Left Pain in app in Studio
+
+
+
 # Text Embedding Model (for RAG)
 
 ### ruri-large model
