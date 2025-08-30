@@ -16,6 +16,10 @@
 1. Select Cline Icon on left sidebar
 1. Click "Use Your Own API Key" to avoid connecting Cline cloud
 1. Set LLM ("OpenAI Compatible", etc)
+    - Cline icon in left sidebar, Setting icon on top bar
+    - To set Acure OpenAI, select OpenAI Compaible
+    - To set cline service, select Cline
+    
 
 ## Usage
 
