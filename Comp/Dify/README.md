@@ -374,9 +374,9 @@ https://zenn.dev/upgradetech/articles/24a7d76133af4c
         - MCP Agent Strategyプラグインをインストールしておく
       1. MCP Server URLを設定する
     - エージェントノードでは現時点で HTTP 型の MCP プラグインは利用できません。
-      -  HTTP 呼び出しノードを作成し、エージェントアプリをWebAPIで呼び出す
-      ★まだ未実施
-      
+      -  代替：HTTP 呼び出しノードを作成し、エージェントアプリをWebAPIで呼び出す
+
+
 - Instruction (System Prompt)の例
   ```
   使用可能なMCPツールのリストを表示してください。
