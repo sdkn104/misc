@@ -352,8 +352,35 @@ https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
 ## Setting
 1. Difyプラグインマーケットプレイスで「MCP SSE」プラグインを検索・インストール
-1. プラグインページの「認証する」ボタンをクリックし、取得したZapier MCPサーバーURLを設定
-1. Difyエージェントアプリを作成し、MCP SSE サービスを有効にする
+1. 「MCP SSE」プラグインを開き「認証する」ボタンをクリックし、登録したいMCPサーバーのconfig(URLなど)を設定
+    - 設定内容：https://marketplace.dify.ai/plugins/junjiem/mcp_sse?theme=dark
+    - config例
+    ```
+    {
+      "microsoft_docs_mcp": {
+        "transport": "streamable_http",
+        "url": "https://learn.microsoft.com/api/mcp"
+      }
+    }
+    ```
+1. DifyのアプリにMCPツールを設定する
+    - エージェントアプリの場合
+      1. Difyエージェントアプリを開き、[ツール]の[追加]を押し、以下を設定する
+        - MCP Tools -> Fetch MCP tools
+        - MCP Tools -> Call MCP tool
+    - ワークフローアプリの場合
+      1. [エージェント]ノードを追加して開く
+      1. エージェンティック戦略　に、MCP FunctionCalling を設定
+        - MCP Agent Strategyプラグインをインストールしておく
+      1. MCP Server URLを設定する
+    - エージェントノードでは現時点で HTTP 型の MCP プラグインは利用できません。
+      -  HTTP 呼び出しノードを作成し、エージェントアプリをWebAPIで呼び出す
+      ★まだ未実施
+      
+- Instruction (System Prompt)の例
+  ```
+  使用可能なMCPツールのリストを表示してください。
+  ```
 - Instruction (System Prompt)の例
   ```
   Userの指示に従い適切なツールを使用してください。
