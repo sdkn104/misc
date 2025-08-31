@@ -1,6 +1,7 @@
 
 # OpenAI API
 - API spec: https://platform.openai.com/docs/api-reference/introduction
+  - chat completion: https://platform.openai.com/docs/api-reference/chat/create
 - openapi.yaml for OpenAI API is available, not official
 - https://spec.openapis.org/oas/v3.1.0
 - text/event-stream: https://developer.mozilla.org/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
