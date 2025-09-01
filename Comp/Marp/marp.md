@@ -15,7 +15,8 @@ theme: my-theme
 <!-- _class: opening -->
  
 # Marp サンプル
-<br><br>
+<br>
+
 ### theme: my-theme
 
 ---
