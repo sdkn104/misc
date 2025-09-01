@@ -41,9 +41,9 @@
   --__font-default: '游ゴシック';
   --font-default: 'メイリオ';
   /* 背景画像の設定 */
-  --bg-image-opening: url("background_opening.jpg");
-  --bg-image:         url("background.jpg");
-  --bg-image-closing: url("background_closing.jpg");
+  --bg-image-opening: url("background_opening.svg");
+  --bg-image:         url("background.svg");
+  --bg-image-closing: url("background_closing.svg");
   /* フォントサイズの設定 */
   --font-size-section: 22px; /* スライドの基本フォントサイズ */
   --font-size-h1: 56px;
@@ -80,6 +80,18 @@ section::after {
   padding: 15px;
 }
 
+
+section::before {
+  content: "開示範囲：三菱電機・国内関係会社(区分S,A)";
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  font-size: 10px;
+  color: red;
+  z-index: 1;
+}
+
+
 section {
   border: 1px solid var(--color-hr);
 }
@@ -87,7 +99,9 @@ section {
 /* --- 先頭ページのスタイル --- */
 section.opening {
   background-image: var(--bg-image-opening);
-  background-size: cover;
+  background-size: 96%;
+  background-position: center;
+  background-repeat: no-repeat;
   h3 {
     margin-top: 90px;
   }
@@ -100,6 +114,9 @@ section.opening {
 section.closing {
   background-image: var(--bg-image-closing);
   background-size: cover;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
