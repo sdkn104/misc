@@ -351,9 +351,21 @@ https://qiita.com/siruku6/items/c91a40d460095013540d
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
 ## Setting
-1. Difyプラグインマーケットプレイスで「MCP SSE」プラグインを検索・インストール
-1. 「MCP SSE」プラグインを開き「認証する」ボタンをクリックし、登録したいMCPサーバーのconfig(URLなど)を設定
-    - 設定内容：https://marketplace.dify.ai/plugins/junjiem/mcp_sse?theme=dark
+1.  Tools → MCP -> Add MCP Server (HTTP), setting MCP URL and name
+  - MCPがツールとして設定される
+1. DifyのアプリにMCPツールを設定する
+    - エージェントアプリの場合
+      1. Difyエージェントアプリを開き、[ツール]の[追加]を押し、以下を設定する
+        - 上記で設定したツール名を選ぶ
+    - ワークフローアプリの場合１
+      1. 上記MCPツールをノードとして追加
+        - Add Node -> Tool -> MCP -> MCPツール名
+    - ワークフローアプリの場合２
+      1. [エージェント]ノードを追加して開く
+      1. エージェンティック戦略　に、[FunctionCalling] を設定
+        - マーケットプレースから[Dify Agent Strategies]プラグインをインストールしておく
+      1. TOOL LISTに、上記MCPツールを追加する
+
     - config例
     ```
     {
@@ -363,19 +375,6 @@ https://zenn.dev/upgradetech/articles/24a7d76133af4c
       }
     }
     ```
-1. DifyのアプリにMCPツールを設定する
-    - エージェントアプリの場合
-      1. Difyエージェントアプリを開き、[ツール]の[追加]を押し、以下を設定する
-        - MCP Tools -> Fetch MCP tools
-        - MCP Tools -> Call MCP tool
-    - ワークフローアプリの場合
-      1. [エージェント]ノードを追加して開く
-      1. エージェンティック戦略　に、MCP FunctionCalling を設定
-        - MCP Agent Strategyプラグインをインストールしておく
-      1. MCP Server URLを設定する
-    - エージェントノードでは現時点で HTTP 型の MCP プラグインは利用できません。
-      -  代替：HTTP 呼び出しノードを作成し、エージェントアプリをWebAPIで呼び出す
-
 
 - Instruction (System Prompt)の例
   ```
