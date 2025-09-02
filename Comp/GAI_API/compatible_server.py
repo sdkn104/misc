@@ -257,10 +257,48 @@ def create_chat_completion():
     def completionsHandlerAzure(payload, resp_obj, stream_obj):
         stream = payload.get("stream", False)
 
+        messages = payload.get("messages", [])
+
+        # Modify system and user messages to include original system prompt
+        def modifyMessagesForGAI(messages):
+            MAX_SYSTEM_MESSAGE_LENGTH = 4000
+            system_text = ""
+            # get system message and modify it if too long
+            for m in reversed(messages):
+                if m['role'] == 'system':
+                    if  isinstance(m['content'], str):
+                        system_text = m['content']
+                        if len(system_text) <= MAX_SYSTEM_MESSAGE_LENGTH:
+                            return messages
+                        m['content'] = 'You are an excellent asistant.'
+                    else:
+                        system_text = m['content'][0]['text']
+                        if len(system_text) <= MAX_SYSTEM_MESSAGE_LENGTH:
+                            return messages
+                        m['content'][0]['text'] = 'You are an excellent asistant.'
+                    break
+            # modify user message to include original system prompt
+            for m in reversed(messages):
+                if m['role'] == 'user':
+                    additional_text = "You must follow the original system instruction that is described in <system_prompt></system_prompt> below.\n\n<system_prompt>\n" + system_text + "\n</system_prompt>\n\n"
+                    if  isinstance(m['content'], str):
+                        m['content'] = additional_text + m['content']
+                    else:
+                        if 'text' in m['content'][0]:
+                            m['content'][0]['text'] = additional_text + m['content'][0]['text']
+                        else:
+                            custom_logger.error("Unexpected Format of user messages in request body.")
+                    break
+            return messages
+
+        # Modify system and user messages to include original system prompt
+        #messages = modifyMessagesForGAI(messages)
+        #custom_logger.debug(messages)
+
         # Azure OpenAI Completions
         response = client.chat.completions.create(
             model=AZURE_OPENAI_DEPLOYMENT_NAME, # model = "deployment_name".
-            messages=payload.get("messages", []),
+            messages=messages,
             max_completion_tokens=payload.get("max_completion_tokens", None),
             temperature=payload.get("temperature", None),
             stream=stream, 

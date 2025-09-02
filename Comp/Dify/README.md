@@ -271,6 +271,15 @@ eth0 -. NAT:80,443 .-> nginx
 ### User Account for community version
 - login with mail address and password
 
+# Using Dify
+
+### Invoke Workflow by Web API
+- [ワークフローアプリ API](http://meia9dbc/app/8f3847a8-155c-4615-90d9-8e5b45fef4cd/develop)
+- API Key:  Setting in Left Pain in app in Studio
+- API format: API Access in Left Pain in app in Studio
+
+
+
 # Text Embedding Model (for RAG)
 
 ### ruri-large model
@@ -342,9 +351,35 @@ https://qiita.com/siruku6/items/c91a40d460095013540d
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
 ## Setting
-1. Difyプラグインマーケットプレイスで「MCP SSE」プラグインを検索・インストール
-1. プラグインページの「認証する」ボタンをクリックし、取得したZapier MCPサーバーURLを
-1. 設定Difyエージェントアプリを作成し、MCP SSE サービスを有効にする
+1.  Tools → MCP -> Add MCP Server (HTTP), setting MCP URL and name
+  - MCPがツールとして設定される
+1. DifyのアプリにMCPツールを設定する
+    - エージェントアプリの場合
+      1. Difyエージェントアプリを開き、[ツール]の[追加]を押し、以下を設定する
+        - 上記で設定したツール名を選ぶ
+    - ワークフローアプリの場合１
+      1. 上記MCPツールをノードとして追加
+        - Add Node -> Tool -> MCP -> MCPツール名
+    - ワークフローアプリの場合２
+      1. [エージェント]ノードを追加して開く
+      1. エージェンティック戦略　に、[FunctionCalling] を設定
+        - マーケットプレースから[Dify Agent Strategies]プラグインをインストールしておく
+      1. TOOL LISTに、上記MCPツールを追加する
+
+    - config例
+    ```
+    {
+      "microsoft_docs_mcp": {
+        "transport": "streamable_http",
+        "url": "https://learn.microsoft.com/api/mcp"
+      }
+    }
+    ```
+
+- Instruction (System Prompt)の例
+  ```
+  使用可能なMCPツールのリストを表示してください。
+  ```
 - Instruction (System Prompt)の例
   ```
   Userの指示に従い適切なツールを使用してください。
