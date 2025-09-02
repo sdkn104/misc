@@ -26,6 +26,9 @@ theme: my-theme
 - Marpit: 基盤ライブラリ：　https://marpit.marp.app/
 - Marp: アプリケーション群：　https://marp.app/
 
+### VS Code Extension
+- Marp for VS Code
+
 ### テンプレート・サンプル
 - https://qiita.com/tomo_makes/items/aafae4021986553ae1d8
 - https://qiita.com/zono_0/items/e6ab64f381440578ea1c
