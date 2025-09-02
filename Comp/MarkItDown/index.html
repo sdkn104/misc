@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>MarkItDown Office→Markdown 変換Webアプリ</title>
+  <style>
+    body { font-family: sans-serif; background: #f7f7f7; }
+    .container { max-width: 500px; margin: 60px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+    .dropzone {
+      border: 2px dashed #0078d4;
+      border-radius: 8px;
+      padding: 40px 20px;
+      text-align: center;
+      color: #0078d4;
+      background: #f0f8ff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .dropzone.dragover { background: #e6f2fb; }
+    #status { margin-top: 16px; color: #555; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Officeファイル → Markdown 変換</h2>
+    <div id="dropzone" class="dropzone">
+      ここにWord, Excel, PowerPoint等のファイルをドラッグ＆ドロップ<br>
+      またはクリックして選択
+    </div>
+    <input type="file" id="fileInput" style="display:none;" />
+    <div id="status"></div>
+  </div>
+  <script>
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('fileInput');
+    const status = document.getElementById('status');
+
+    dropzone.addEventListener('click', () => fileInput.click());
+
+    dropzone.addEventListener('dragover', e => {
+      e.preventDefault();
+      dropzone.classList.add('dragover');
+    });
+    dropzone.addEventListener('dragleave', e => {
+      e.preventDefault();
+      dropzone.classList.remove('dragover');
+    });
+    dropzone.addEventListener('drop', e => {
+      e.preventDefault();
+      dropzone.classList.remove('dragover');
+      const files = e.dataTransfer.files;
+      if (files.length > 0) handleFile(files[0]);
+    });
+    fileInput.addEventListener('change', e => {
+      if (e.target.files.length > 0) handleFile(e.target.files[0]);
+    });
+
+    function handleFile(file) {
+      status.textContent = '変換中...';
+      const formData = new FormData();
+      formData.append('file', file);
+
+      fetch('/convert', {
+        method: 'POST',
+        body: formData
+      })
+      .then(async response => {
+        if (!response.ok) {
+          // JSONエラーでなければtextで取得
+          let errMsg = '変換に失敗しました';
+          try {
+            const err = await response.json();
+            errMsg = err.error || errMsg;
+          } catch {
+            const errText = await response.text();
+            errMsg = errText || errMsg;
+          }
+          throw new Error(errMsg);
+        }
+        return response.blob();
+      })
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = file.name.replace(/\.[^.]+$/, '') + '.md';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(url);
+        status.textContent = '変換完了！mdファイルをダウンロードしました。';
+      })
+      .catch(err => {
+        status.textContent = 'エラー: ' + err.message;
+      });
+    }
+  </script>
+</body>
+</html>
