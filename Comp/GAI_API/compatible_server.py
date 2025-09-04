@@ -292,7 +292,7 @@ def create_chat_completion():
             return messages
 
         # Modify system and user messages to include original system prompt
-        #messages = modifyMessagesForGAI(messages)
+        messages = modifyMessagesForGAI(messages)
         #custom_logger.debug(messages)
 
         # Azure OpenAI Completions
