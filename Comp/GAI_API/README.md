@@ -81,3 +81,6 @@ pythonw compatible_server.py
 
 ### setting LLM
 https://docs.openwebui.com/getting-started/quick-start/starting-with-openai-compatible
+- OpenAI LLM connected.
+- compatible_server.py connected.
+- Azure OpenAI cannot be connected.

@@ -8,10 +8,6 @@ size: 16:9
 theme: my-theme
 ---
 
-<style>
-
-</style>
-
 <!-- _class: opening -->
  
 # Marp サンプル
@@ -36,9 +32,11 @@ theme: my-theme
 
   
 ---
+<style scoped>section { --font-size-h2: 40px; }</style>
+<style>:root {--font-size-section: 22px;}</style>
+<style scoped>td,th {padding: 8px 10px;}</style>
 
-<!-- ◇このスライド(section)に設定するclassを記述 -->
-<!-- _class: table5 -->　
+<!-- _class: table5 -->
 
 ## テーブル・見出し・箇条書き
 
@@ -58,20 +56,11 @@ theme: my-theme
     - その他
 
 ---
-
 ## スタイル・記号 (1/2)
 
 ### スタイル
 - 全ページ共通：　`<style></style>`
 - ページ独自：　`<style scoped></style>`
-<style scoped>
-  section {
-    --font-size-h2: 40px;
-  }
-</style>
-<style> 
-  :root {--font-size-section: 22px;} 
-</style>
 
 ### 記号文字
 
