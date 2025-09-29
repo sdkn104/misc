@@ -16,6 +16,9 @@ theme: my-theme
 ### theme: my-theme
 
 ---
+<style scoped>section { --font-size-h2: 40px; }</style>
+<style>:root {--font-size-section: 22px; --font-size-h3: 1.2em;}</style>
+<style>table td, table th {padding: 8px 12px;}</style>
 
 ## About Marp
 
@@ -32,11 +35,8 @@ theme: my-theme
 
   
 ---
-<style scoped>section { --font-size-h2: 40px; }</style>
-<style>:root {--font-size-section: 22px;}</style>
-<style scoped>td,th {padding: 8px 10px;}</style>
 
-<!-- _class: table5 -->
+<!-- _class: table5-->
 
 ## テーブル・見出し・箇条書き
 

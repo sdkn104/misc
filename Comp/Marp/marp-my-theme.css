@@ -1,18 +1,12 @@
 /* @theme my-theme */
 
-/*
-@import 'default';
-*/
-
+/* @import 'default'; */
 
 /* ---- Material Symbols Outlined フォントの設定 ---- */
-
-  /* https://fonts.google.com/icons?hl=ja */
-  /* https://developers.google.com/fonts/docs/material_symbols?hl=ja */
-
+/* https://fonts.google.com/icons?hl=ja */
+/* https://developers.google.com/fonts/docs/material_symbols?hl=ja */
 /*
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=home,search,settings");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,search,settings");
 */
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
@@ -48,7 +42,7 @@
   --font-size-section: 22px; /* スライドの基本フォントサイズ */
   --font-size-h1: 56px;
   --font-size-h2: 40px;
-  --font-size-h3: 1.3em;
+  --font-size-h3: 1.2em;
 }
 
 /* --------------- ページの基本スタイル --------------- */
@@ -238,13 +232,13 @@ table {
     color: black;
     font-weight: normal;
     border: none; 
-    padding: 8px 10px;
+    padding: 8px 12px;
   }
   td {
     background-color:#dfe8f8;
     color: black;
     border: none; 
-    padding: 8px 10px;
+    padding: 8px 12px;
   }
 }
 
