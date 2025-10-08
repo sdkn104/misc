@@ -69,4 +69,9 @@
     ```
 
 ### Run
+- To install python module (to current environment)
+    - in jupyter cell,
+    ```
+    %pip install <module>
+    ```
 
