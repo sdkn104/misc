@@ -282,6 +282,9 @@ eth0 -. NAT:80,443 .-> nginx
 
 # Text Embedding Model (for RAG)
 
+### benchmarks
+- https://github.com/sbintuitions/JMTEB/blob/main/leaderboard.md
+
 ### ruri-large model
 https://docs.dify.ai/en/development/models-integration/ollama#integrate-local-models-deployed-by-ollama
 1. install ollama in Windows
@@ -293,6 +296,7 @@ https://docs.dify.ai/en/development/models-integration/ollama#integrate-local-mo
     ```powershell
     # download
     ollama pull kun432/cl-nagoya-ruri-large
+    #ollama pull qllama/multilingual-e5-small:latest
     ollama list  # list pulled models
     # start running model
     curl http://localhost:11434/api/embed -Method Post -ContentType application/json -Body '{
