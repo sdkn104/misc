@@ -356,7 +356,8 @@ https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
 ## Setting
 1.  Tools → MCP -> Add MCP Server (HTTP), setting MCP URL and name
-  - MCPがツールとして設定される
+    - MCPがツールとして設定される
+    - Currently, only MCP servers supporting HTTP transport can be used.
 1. DifyのアプリにMCPツールを設定する
     - エージェントアプリの場合
       1. Difyエージェントアプリを開き、[ツール]の[追加]を押し、以下を設定する
