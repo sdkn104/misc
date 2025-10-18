@@ -10,12 +10,12 @@ https://github.com/supercorp-ai/supergateway
 https://deepwiki.com/supercorp-ai/supergateway/1-supergateway-overview
 
 - install and start
-```node
-# stdio -> SSE
-nvm use 22.20
-npm install supergateway
-npx supergateway --stdio "D:\oracle\sqlcl-25.3.0.274.1210\sqlcl\bin\sql.exe -mcp -port 8000"
-```
+    ```node
+    # stdio -> SSE
+    nvm use 22.20
+    npm install supergateway
+    npx supergateway --stdio "D:\oracle\sqlcl-25.3.0.274.1210\sqlcl\bin\sql.exe -mcp -port 8000"
+    ```
 
 ## fetch MCP server
 https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
