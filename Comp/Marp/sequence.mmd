@@ -5,7 +5,7 @@ sequenceDiagram
     participant System
     participant WF
 
-    note left of System: 品質設計書チェックシート：承認依頼ボタン押下
+    note left of System: 承認依頼ボタン押下
     System->>+WF: シートＩＤ，副番、承認種類
     alt 承認
         WF-->>System: status=検認済
@@ -13,5 +13,5 @@ sequenceDiagram
         WF-->>-System: status=作成中
     end 
 
-    note left of System: 品質設計書チェックシート：承認取消ボタン押下
+    note left of System: 承認取消ボタン押下
     System->>+WF: 承認取消：
