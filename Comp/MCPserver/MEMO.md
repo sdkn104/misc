@@ -60,8 +60,11 @@ https://docs.oracle.com/en/database/oracle/sql-developer-command-line/25.2/sqcug
     -  前提条件としてOracle SQLcl 25.2.0以上とJRE 17以上(Oracle Java or OpenJDK)が必要です。
         - Oracle DB 23ai(23.7) clientをインストール　https://download.oracle.com/otn-pub/otn_software/db-express/WINDOWS.X64_237000_free.zip
             - マイナーバージョンまでsqlclと合わせる必要あり。
-            - 直リンクでinstant clientを落とす：https://download.oracle.com/otn_software/nt/instantclient/2370000/instantclient-basic-windows.x64-23.7.0.25.02.zip
+            - あうClientがない場合、直リンクでinstant clientを落とす：
+                - https://www.oracle.com/database/technologies/instant-client/downloads.html
+                - https://download.oracle.com/otn_software/nt/instantclient/2370000/instantclient-basic-windows.x64-23.7.0.25.01.zip
                 - マイナーバージョンは、ここで調べる：https://yum.oracle.com/repo/OracleLinux/OL8/oracle/instantclient23/x86_64/
+            - instant client解凍。PATHを通す(ライブラリ参照のため)。
         - Oralce Java SE 21をインストール　https://www.oracle.com/java/technologies/downloads/archive/
     -  SQLcl 25.3をダウンロード・解凍。https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/download/
         - zip解凍
