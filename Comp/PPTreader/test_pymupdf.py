@@ -3,8 +3,9 @@
 import fitz
 
 try:
+    pdf = "CorpStrategy2025.pdf"
     #doc = fitz.open("pdf_test.pdf")
-    doc = fitz.open("CorpStrategy2025.pdf")
+    doc = fitz.open(pdf)
     
     page = doc[15]
 
@@ -23,9 +24,16 @@ try:
         print(f"Text: {block[4].strip()}")
         print("-" * 20)
 
-
-
-
+    page.get_text("dict")  # 辞書形式で取得することも可能   
     doc.close()
+
+    import pymupdf4llm
+    pdf = "generally_02.pptx"
+    md_text = pymupdf4llm.to_markdown(pdf)
+    # Write the text to some file in UTF8-encoding
+    import pathlib
+    pathlib.Path(pdf + ".md").write_bytes(md_text.encode())
+
+
 except Exception as e:
     print(f"エラー: {e}")
