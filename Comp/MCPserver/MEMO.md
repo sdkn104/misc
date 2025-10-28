@@ -1,5 +1,21 @@
+# MCP clients
+
 ## VS Code MCP setting
 https://code.visualstudio.com/docs/copilot/chat/mcp-servers
+
+# MCP servers
+
+## Supergateway (stdio <-> SSE, streamable HTTP)
+https://github.com/supercorp-ai/supergateway
+https://deepwiki.com/supercorp-ai/supergateway/1-supergateway-overview
+
+- install and start
+    ```node
+    # stdio -> SSE
+    nvm use 22.20
+    npm install supergateway
+    npx supergateway --stdio "D:\oracle\sqlcl-25.3.0.274.1210\sqlcl\bin\sql.exe -mcp -port 8000"
+    ```
 
 ## fetch MCP server
 https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
@@ -43,9 +59,8 @@ https://docs.oracle.com/en/database/oracle/sql-developer-command-line/25.2/sqcug
 - インストール手順:
     -  前提条件としてOracle SQLcl 25.2.0以上とJRE 17以上(Oracle Java or OpenJDK)が必要です。
         - Oracle DB 23ai(23.7) clientをインストール　https://download.oracle.com/otn-pub/otn_software/db-express/WINDOWS.X64_237000_free.zip
-        - マイナーバージョンまでsqlclと合わせる必要あり。あうClientがないときは
+            - マイナーバージョンまでsqlclと合わせる必要あり。
             - 直リンクでinstant clientを落とす：https://download.oracle.com/otn_software/nt/instantclient/2370000/instantclient-basic-windows.x64-23.7.0.25.02.zip
-            - instant client解凍。PATHを通す(ライブラリ参照のため)。
                 - マイナーバージョンは、ここで調べる：https://yum.oracle.com/repo/OracleLinux/OL8/oracle/instantclient23/x86_64/
         - Oralce Java SE 21をインストール　https://www.oracle.com/java/technologies/downloads/archive/
     -  SQLcl 25.3をダウンロード・解凍。https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/download/
