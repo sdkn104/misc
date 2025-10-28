@@ -64,6 +64,7 @@ https://docs.oracle.com/en/database/oracle/sql-developer-command-line/25.2/sqcug
                 - https://www.oracle.com/database/technologies/instant-client/downloads.html
                 - https://download.oracle.com/otn_software/nt/instantclient/2370000/instantclient-basic-windows.x64-23.7.0.25.01.zip
                 - マイナーバージョンは、ここで調べる：https://yum.oracle.com/repo/OracleLinux/OL8/oracle/instantclient23/x86_64/
+            - instant client解凍。PATHを通す(ライブラリ参照のため)。
         - Oralce Java SE 21をインストール　https://www.oracle.com/java/technologies/downloads/archive/
     -  SQLcl 25.3をダウンロード・解凍。https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/download/
         - zip解凍
