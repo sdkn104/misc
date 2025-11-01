@@ -72,6 +72,7 @@ https://docs.oracle.com/en/database/oracle/sql-developer-command-line/25.2/sqcug
         chcp 65001
         cd path/to/bin
         .\sql.exe sys/freepdb1 as sysdba
+        .\sql.exe USERNAME@servicename
         ```
     -  conn -saveコマンドを使ってOracle Databaseへの接続情報を事前設定する。~/.dbtools(~/.sqlcl??)ディレクトリに保存します。→ MCPでは接続名一覧取得と、接続名を使って接続する。`connmgr list` `connmgr delete -conn myconn`
         ```
@@ -88,7 +89,7 @@ https://docs.oracle.com/en/database/oracle/sql-developer-command-line/25.2/sqcug
     https://docs.oracle.com/en/database/oracle/sql-developer-command-line/25.2/sqcug/using-oracle-sqlcl-mcp-server.html
 
         ```
-        Clineの場合：
+        Clineの場合： Cline -> MCP server ([三]アイコン)
         {
             "mcpServers": {
                 "sqlcl": {
