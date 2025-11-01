@@ -1,0 +1,82 @@
+0: unspecified with name=_root_
+ 1: chapter with name=slide-0
+  2: paragraph: プラン名
+  3: paragraph: （サブタイトル含め30字以内）
+  4: paragraph: チーム名：
+  5: paragraph: ＊「プラン名」「チーム名」を必ず表紙に記載してください。
+  6: paragraph: ＊表紙は写真その他自由にデザインしてください。書体や文字の大きさの変更も自由です。
+  7: paragraph: ＊この斜体の青字は、提案時にはすべて削除してください。（以下ページすべて共通）
+  8: picture
+ 9: chapter with name=slide-1
+  10: picture
+  11: paragraph: ＊解決したい社会課題に相当する探究テーマと、その探究テーマを選んだ理由を簡潔に記述してください。
+  12: paragraph: ＊探究テーマに関わるSDGsゴール（メイン1つ、サブがあればサイズ小さめで複数追加可）のアイコンを配置してください。
+  13: paragraph: 　（アイコン画像は最終ページにありますのでご活用ください） ＊レイアウトは例です。自由に変更してもらってかまいません。
+  14: paragraph: １．探究テーマとそれを選んだ理由
+  15: picture
+  16: paragraph: ＜探究テーマ＞
+  17: paragraph: 
+  18: paragraph: ＜そのテーマを選んだ理由＞
+  19: paragraph: 【対象ゴール】
+  20: picture
+  21: picture
+  22: picture
+ 23: chapter with name=slide-2
+  24: picture
+  25: paragraph: ＊「１．探究テーマ」における具体的な「SDGsアクション」のアイデアを記載してください。その際に、そのSDGsアクションはどの目標（１－１７ゴール）の解決に結びついているか、アイコンで示してください。
+  26: paragraph: ２．「SDGsアクション」アイデアと「目標」
+  27: picture
+ 28: chapter with name=slide-3
+  29: picture
+  30: paragraph: ＊「２．SDGsアクション（行動やパートナーシップ）」は、どうしたらもっと大勢の人が参加できるでしょうか。それを広めるためにはどうしたらよいでしょうか。逆にどんなことが壁になっているでしょうか。それら
+  31: paragraph: ３．「SDGsアクション」を広める方法
+  32: picture
+ 33: chapter with name=slide-4
+  34: picture
+  35: paragraph: ＊「３．SDGsアクションを広める方法」で、そのアクションが多くのひとに広がると世界や社会、あるいは解決を目指す課題はどのように変化すると思いますか。もし可能なら、解決を目指す最終的な姿まで、どのよう
+  36: paragraph: ４．「SDGsアクション」が広がるとどう変わるのか
+  37: picture
+ 38: chapter with name=slide-5
+  39: paragraph: ＜提出方法＞　※提出時にはこのページは削除してください
+  40: paragraph: 【提出していただくアイデアプラン資料】
+  41: paragraph: この様式（1～5ページ）にプランを整理し、PDFに変換したデータ
+  42: paragraph: 
+  43: paragraph: ☆PDFで保存(エクスポート)したものを提出してください。
+  44: paragraph: ・動作環境による体裁崩れ等を防ぐために、PDFでの提出をお願いします。
+  45: paragraph: ・提出ファイルが正しく確認できない場合、修正・再提出を求める場合があります。
+  46: paragraph: ・〆切日を超えて再提出がなかった場合、エントリーが受付けられない場合があります。
+  47: paragraph: 　予めご了承いただき、余裕を持った提出をお願いいたします。
+  48: paragraph: ・文字や写真、図表など表現方法は自由。
+  49: paragraph: ・5分間でプレゼンテーションが完結するようにポイントを絞ってください。
+  50: paragraph: 
+  51: paragraph: 【重要】
+  52: paragraph: ・ファイル名は「エントリーナンバー+高校名+チーム名.pdf」で提出してください。
+  53: paragraph: ・枚数はテンプレートの内容を厳守してください。
+  54: paragraph: ・スライドの加除は審査対象外になる可能性があります。
+  55: paragraph: ※静止画状態で審査しますので、アニメーションや動画埋込は審査対象にはなりません。
+  56: paragraph: 
+  57: paragraph: <PowerPointデータをPDFに変換する方法>
+  58: paragraph: 1. [ファイル]>[エクスポート]の順に選択します。
+  59: paragraph: 2. [PDF/XPSドキュメントの作成]をクリックし、[PDF/XPSの作成]をクリックします。
+  60: paragraph: 3. [PDFまたはXPS形式で発行]ダイアログボックスで、ファイルの保存場所を選びます。
+  61: paragraph: 4.[ファイル名]ボックスにエントリーナンバー+高校名+チーム名を入力します。
+ 62: chapter with name=slide-6
+  63: picture
+  64: picture
+  65: picture
+  66: picture
+  67: picture
+  68: picture
+  69: picture
+  70: picture
+  71: picture
+  72: picture
+  73: picture
+  74: picture
+  75: picture
+  76: picture
+  77: picture
+  78: picture
+  79: picture
+  80: paragraph: ＜素材＞　※提出時にはこのページは削除してください
+  81: picture

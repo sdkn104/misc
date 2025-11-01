@@ -1,0 +1,244 @@
+0: unspecified with name=_root_
+ 1: chapter with name=slide-0
+  2: paragraph: 「生命保険」に関する
+  3: paragraph: スライド集
+ 4: chapter with name=slide-1
+  5: paragraph: 【利用方法】
+  6: paragraph: 
+  7: paragraph: 以下の当センタ－作成資料をご利用する際に、自助の一手段として「生命保険」について
+  8: paragraph: 説明する際の補足資料としてご利用ください。
+  9: paragraph: 
+  10: paragraph: ①高校公民科向け「自助・共助・公助について考えよう」
+  11: paragraph: 　　・・・該当箇所:第3章『自助って何？』
+  12: paragraph: 
+  13: paragraph: ②高校家庭科向け「生活設計とリスクへの備え」
+  14: paragraph:     ・・・該当箇所:第3章『公的保障と私的保障』
+  15: paragraph: 
+  16: paragraph: ③高校家庭科向け「事例から考えるリスクマネジメント」  
+  17: paragraph:     ・・・該当箇所:第3章『私的保障』
+ 18: chapter with name=slide-2
+  19: paragraph: ①「生命保険」に関するクイズ
+  20: paragraph: スライド集
+ 21: chapter with name=slide-3
+  22: paragraph: どのくらいの家族が契約しているの?
+  23: paragraph: 
+  24: paragraph: 【問題】 
+  25: paragraph: 国内で「生命保険」を契約している
+  26: paragraph: 家族の割合は約何%？
+  27: paragraph: A.約50％　　B.約70％　　C.約90％
+  28: picture
+  29: paragraph: 1件でも生命保険に加入している家族の割合だよ。
+  30: paragraph: 【答え】 
+  31: paragraph: 　　　89.8％　
+  32: paragraph: 　　　　　⇒　C.約90％
+  33: paragraph: 
+  34: paragraph: 
+  35: paragraph: ＊生命保険文化センター「2021年度　生命保険に関する全国実態調査」
+  36: paragraph: 4
+ 37: chapter with name=slide-4
+  38: paragraph: 何件契約しているの?
+  39: paragraph: 
+  40: paragraph: 【問題】 
+  41: paragraph: 家族で契約している生命保険の
+  42: paragraph: 件数は平均で何件？
+  43: paragraph: A.約1件　B.約4件　C.約6件
+  44: picture
+  45: paragraph: 例えば3人家族で
+  46: paragraph: それぞれ病気やケガに備えるために「医療保険」に契約していれば3件分の加入になるよ。
+  47: paragraph: 【答え】 
+  48: paragraph: 　　平均3.9件　
+  49: paragraph: 　　　　⇒　B.約4件　
+  50: paragraph: 
+  51: paragraph: 
+  52: paragraph: ＊生命保険文化センター「2021年度　生命保険に関する全国実態調査」
+  53: paragraph: 5
+ 54: chapter with name=slide-5
+  55: paragraph: いくら支払っているの?
+  56: paragraph: 
+  57: paragraph: 【問題】 
+  58: paragraph: 家族が1年間で保険会社に
+  59: paragraph: 支払っているお金（保険料）はいくら？
+  60: paragraph: A.約20万円　B.約40万円　C.約60万円
+  61: paragraph: 水道光熱費や食費、携帯電話のお金などの他に、これだけの金額を負担してるんだね。
+  62: picture
+  63: paragraph: 【答え】 
+  64: paragraph: 　　平均37.1万円(年間)
+  65: paragraph:     (月々約3.1万円)
+  66: paragraph: 
+  67: paragraph: ⇒　B.約40万円
+  68: paragraph: 
+  69: paragraph: ＊生命保険文化センター「2021年度　生命保険に関する全国実態調査」
+  70: paragraph: 6
+ 71: chapter with name=slide-6
+  72: paragraph: 生命保険会社全体でいくら支払われているの?
+  73: paragraph: 
+  74: paragraph: 【問題】 
+  75: paragraph: 1年間で国内の保険会社から契約者に
+  76: paragraph: 支払われるお金（保険金等）はいくら？
+  77: paragraph: A.約3,000億円　　B.約3兆円　　C.約30兆円
+  78: picture
+  79: paragraph: 1年間で全生命保険会社が集めた保険料は約29.7兆円。一部は将来の支払いに備えて「資産運用」を
+  80: paragraph: してるんだって。
+  81: paragraph: 【答え】 
+  82: paragraph: 　約31.4兆円　
+  83: paragraph: 　　　⇒　C.約30兆円
+  84: paragraph: 
+  85: paragraph: ＊生命保険協会「2022年版　生命保険の動向」
+  86: paragraph: 7
+ 87: chapter with name=slide-7
+  88: paragraph: ②「生命保険」商品
+  89: paragraph: スライド集
+ 90: chapter with name=slide-8
+  91: paragraph: 万一(死亡)に備える生命保険①
+  92: paragraph: 「定期保険・養老保険・終身保険」
+  93: paragraph: 種類によって備えることができる期間や保険料の金額が異なります。
+  94: paragraph: 定期保険
+  95: paragraph: 保険期間は一定で、その間に死亡した場合に死亡保険金が受け取れる。
+  96: paragraph: 養老保険
+  97: paragraph: 終身保険
+  98: paragraph: 保険期間は一定で、その間に死亡した場合に死亡保険金を、無事に満期を迎えたときには満期保険金を受け取れる。
+  99: paragraph: 死亡保障が一生続き、死亡したときに死亡保険金を受け取れる。
+  100: picture
+  101: picture
+  102: picture
+  103: paragraph: ※　　　　　　　　は、将来の保険金の支払いに備えて積み立てられる部分を表しています。
+ 104: chapter with name=slide-9
+  105: list with name=list
+   106: list_item: 30歳契約、死亡保険金は1,000万円
+   107: list_item: 定期保険、養老保険の保険期間は30年(60歳になるまで)、終身保険は一生涯
+   108: list_item: 保険料払込期間は30年(60歳になるまで)
+  109: paragraph: 条件
+  110: table
+  111: paragraph: ※保険料は月払で、生命保険会社または契約の内容によって異なります。
+  112: paragraph: ※生命保険文化センター「遺族保障ガイド」（2021年12月改訂）
+  113: paragraph: 万一(死亡)に備える生命保険②
+  114: paragraph: 保険料の違い
+  115: paragraph: 保険料や受け取れる金額など、保険の種類によって特徴があります。
+  116: paragraph: しっかりと理解して契約しましょう。
+ 117: chapter with name=slide-10
+  118: paragraph: 病気やケガなどに備える生命保険
+  119: paragraph: 「医療保険」
+  120: paragraph: ①入院給付金                 (入院した場合に受け取れるお金)
+  121: paragraph: ②手術給付金　　　　　　　　　　　　(手術した場合に受け取れるお金)
+  122: paragraph: 
+  123: paragraph: 日額●●円　×　入院した日数
+  124: paragraph: 日額●●円　×　
+  125: paragraph: 手術の種類に応じた倍率(10・20・40倍)
+  126: paragraph: 「がん」で入院した場合など、特定の病気に特化した
+  127: paragraph: 「医療保険」もあります。
+  128: paragraph: 事例
+  129: paragraph: 22日間、入院した場合に１日「7,000円」が受け取れる「医療保険」に入っていたら…
+  130: paragraph: 　①入院給付金(入院した場合に受け取れるお金)
+  131: paragraph: 　　　　　　　　「7,000円」　×　22日　＝　15.4万円
+  132: paragraph: 　②手術給付金(手術した場合に受け取れるお金)
+  133: paragraph: 　　　　　　　　「7,000円」　×　10倍の場合＝　7万円
+  134: paragraph: 
+  135: paragraph: 　
+  136: paragraph: ①＋②＝
+  137: paragraph: 　　22.4万円
+  138: paragraph: 　　が受け取れる
+ 139: chapter with name=slide-11
+  140: paragraph: 介護に備える生命保険
+  141: paragraph: 「介護保険」
+  142: paragraph: 
+  143: paragraph: 　一時金・・・介護のための家の大規模リフォーム費用、老人ホームの入居費用など
+  144: paragraph: 　年金・・・公的介護保険の自己負担や介護による収入の減少の補てんなど
+  145: paragraph: 
+  146: paragraph: 介護が必要な状態になったときにまとまったお金が受け取れる。
+  147: paragraph: 
+  148: paragraph: 
+  149: paragraph: 介護が必要な状態になったときに年金として毎年お金が受け取れる。
+  150: paragraph: 
+  151: paragraph: ①「一時金」でお金が受け取れる
+  152: paragraph: ②「年金形式」で毎年お金が受け取れる
+  153: paragraph: 介護保険には公的介護保険による自己負担や保障されない支出、収入の減少に備える役割があります。
+  154: paragraph: 一時金・年金の活用例
+ 155: chapter with name=slide-12
+  156: paragraph: 老後の生活に備える生命保険
+  157: paragraph: 「個人年金保険」
+  158: picture
+  159: paragraph: 受取期間
+  160: paragraph: ・契約した時に決めた年齢から年金を受け取ることができる。
+  161: paragraph: ・年金を受け取れる期間は10年、 20年など決まっているものから 一生涯のものなど、様々。
+  162: paragraph: 退職から公的年金が支給されるまでの「つなぎ資金」や、ゆとりある老後のための「上乗せ資金」に活用されています。
+ 163: chapter with name=slide-13
+  164: paragraph: ライフステージによる必要な保障の違い
+  165: paragraph: 家族の状況の変化などで、必要な保障の金額が異なります。
+  166: paragraph: ＜結婚＞
+  167: paragraph: 
+  168: paragraph: 「万一」のとき、残される配偶者のための死亡保障が必要となります。
+  169: paragraph: ＜出産＞
+  170: paragraph: 
+  171: paragraph: 遺族の生活費や教育費をまかなうための、より大きな保障が必要となります。
+  172: paragraph: ＜子どもの独立・老後＞
+  173: paragraph: 
+  174: paragraph: 親としての責任は減るため、死亡
+  175: paragraph: 保障の必要な金額はその分減少します。
+  176: paragraph: ・亡くなったときに必要な金額（イメージ）
+  177: paragraph: ▲
+  178: paragraph: 就職
+  179: paragraph: ▲
+  180: paragraph: 結婚
+  181: paragraph: ▲
+  182: paragraph: 第1子誕生
+  183: paragraph: ▲
+  184: paragraph: 第2子誕生
+  185: paragraph: ▲
+  186: paragraph: 子ども独立
+  187: paragraph: ▲
+  188: paragraph: 老後
+  189: paragraph: 必要な金額
+  190: picture
+  191: picture
+  192: picture
+  193: picture
+  194: picture
+  195: picture
+ 196: chapter with name=slide-14
+  197: paragraph: ③「生命保険」契約
+  198: paragraph: スライド集
+ 199: chapter with name=slide-15
+  200: paragraph: 申し込みから保険証券が届くまでの流れ
+  201: paragraph: ●生命保険は生命保険会社との長期間にわたる契約です。
+  202: paragraph: 情報収集を行い、自分にとって必要な保険商品を選ぶことが大切。
+  203: paragraph: 
+  204: paragraph: ●契約に際しては、さまざまな書類があります。
+  205: paragraph: どのようなときにお金を受け取れるのかなど書面に書いてある内容
+  206: paragraph: をしっかりと把握しておきましょう。
+  207: paragraph: ステップ①
+  208: paragraph: 申込書の提出
+  209: paragraph: ステップ②
+  210: paragraph: 告知（診査）
+  211: paragraph: ステップ③
+  212: paragraph: 保険料の払い込み
+  213: paragraph: ステップ④
+  214: paragraph: 書類（保険証券）
+  215: paragraph: が届く
+  216: picture
+  217: picture
+  218: picture
+  219: picture
+ 220: chapter with name=slide-16
+  221: paragraph: 正しく告知しよう
+  222: paragraph: 生命保険の契約には告知義務があります。
+  223: paragraph: ●健康状態などを正しく伝えていないときは・・・
+  224: paragraph: 
+  225: paragraph: 　契約が解除されて、リスクが起きてしまっても
+  226: paragraph: 　　　　　　　　　　　　保険金等のお金を受け取れないことがあります。
+  227: paragraph: 
+  228: paragraph: ●事実と異なる告知をすることを告知義務違反といいます。
+  229: paragraph: 生命保険を契約する際には、契約する人々の公平性を保つために、現在の健康状態や傷病歴などについて保険会社に伝える「告知義務」があります。
+  230: picture
+  231: picture
+ 232: chapter with name=slide-17
+  233: paragraph: 申込みの取り消しができる期間は、8日以内！
+  234: picture
+  235: paragraph: ●クーリング・オフを活用すると、保険料はそのまま返金されます。
+  236: paragraph: 
+  237: paragraph: ●生命保険会社や商品によっては9日以上の期間を設けている場合
+  238: paragraph: もあります。
+  239: paragraph: やっぱり申込みをやめたいなと思ったときは・・・
+  240: paragraph: 8日以内ならクーリング・オフを使うことができます。
+  241: paragraph: 
+  242: paragraph: 一般的に、「クーリング・オフに関する書面を受け取った日」か「申込日」のいずれか遅い日から、その日を含めて8日以内ならば申し込みを撤回できます。
+  243: paragraph: 申込みをやめたいと思ったら

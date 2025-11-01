@@ -1,0 +1,296 @@
+0: unspecified with name=_root_
+ 1: chapter with name=slide-0
+  2: title: 入門！認知行動療法  ストレスに対処しよう
+  3: paragraph: 1
+  4: picture
+  5: picture
+  6: text: 【進行】
+「全7回のプログラムの第6回目です。それぞれの回は独立しており1回だけの参加が可能なようになっています。」
+「今回講師を担当する〇〇です、書記の〇〇です。」
+「皆さんの名前を教えてください」
+ 7: chapter with name=slide-1
+  8: title: 本日のテーマ
+  9: paragraph: ①ストレスの特徴を学ぶ
+  10: paragraph: 
+  11: paragraph: ②自分のストレス状況、ストレス反応を知る。
+  12: paragraph: 
+  13: paragraph: ③ストレス対処法について話し合い、
+  14: paragraph: 　自分に合った対処法をカードにまとめる。
+  15: paragraph: 
+  16: paragraph: 2
+  17: picture
+  18: text: 【進行】
+「それでは、本日のテーマです」
+参加者を一人あて、「ストレスの・・・」から読んでもらう。
+ 19: chapter with name=slide-2
+  20: title: ストレス状況とストレス反応
+  21: paragraph: 人はストレス状況になると、それに反応して変化する。ストレス状況によって引き起こされる心と体の 反応を、ストレス反応という。
+  22: paragraph: 
+  23: paragraph: 
+  24: paragraph: 
+  25: paragraph: ストレスの無い状態
+  26: paragraph: ストレスが加わった状態
+  27: paragraph: ストレス状況
+  28: paragraph: ストレス状況
+  29: paragraph: ストレス反応
+  30: paragraph: ストレス反応
+  31: paragraph: 3
+  32: text: 【進行】
+「『ストレス』という言葉を聞いたことはありますか？」
+「実は『ストレス』という言葉は、『ストレス状況』と『ストレス反応』の両方を指すことがありますので、これを区別したいと思います。」
+参加者
+ 33: chapter with name=slide-3
+  34: title: 物理的ストレス状況とストレス反応
+  35: paragraph: 　　　　　　　寒い　        ⇔　　　体がふるえる　　
+  36: paragraph: 　　　　　　　暑い　        ⇔　　　汗をかく
+  37: paragraph: 　　　　　　　けが　        ⇔　　　皮ふがはれる
+  38: paragraph: 疲労・睡眠不足　        ⇔　　　緊張、興奮
+  39: paragraph: 　　　　　　日差し          ⇔　　　日焼けする
+  40: picture
+  41: picture
+  42: paragraph: 4
+  43: paragraph: ストレス状況
+  44: paragraph: ストレス反応
+  45: text: 【進行】
+「物理的なストレスを例にとって、ストレス状況とストレス反応の違いを見てみましょう。」
+「たとえば寒い環境というのはストレス状況の一種です、寒いところでは人は身体が震え、手足の血管が閉まります
+ 46: chapter with name=slide-4
+  47: paragraph: 意外なストレス状況
+  48: title: 心理的ストレス状況
+  49: list with name=list
+   50: list_item: 喪失
+   51: list_item: 不自由
+   52: list_item: 不和
+  53: paragraph: 　大切な人との別れ・死別
+  54: paragraph: 　思い通りできない
+  55: paragraph: 　自分で決められない
+  56: paragraph: 　人に責められる
+  57: paragraph: 　意見の対立
+  58: paragraph: 　周囲の人の無理解
+  59: paragraph: 　他の人との競争
+  60: list with name=list
+   61: list_item: 変化
+  62: paragraph: 　初めての人と会う
+  63: paragraph: 　引っ越し
+  64: paragraph: 　就職、転職、入学、転校
+  65: paragraph: 　昇進、結婚
+  66: paragraph: 　大きな問題が解決した時
+  67: paragraph: 
+  68: paragraph: 関係、役割、立場の変化は、良い方向の変化でも ストレスになります。
+  69: picture
+  70: paragraph: 5
+  71: text: 【進行】
+「それでは次に、心理的なストレス状況についてみていきたいと思います。」
+「さまざまな状況がストレス状況になりますが、大きく分けると『喪失』『不自由』『不和』『変化』があります。」
+参加者を一
+ 72: chapter with name=slide-5
+  73: paragraph: 6
+  74: title: ストレスに対する心の反応
+  75: paragraph: ストレス状況に対する 最初の反応
+  76: paragraph: 
+  77: list with name=list
+   78: list_item: イライラする
+   79: list_item: 緊張する
+   80: list_item: 落ち着かない
+   81: list_item: 泣きたくなる
+   82: list_item: 不安になる
+  83: paragraph: ストレス状況が 長びいた時の反応
+  84: paragraph: 
+  85: list with name=list
+   86: list_item: 意欲が湧かない
+   87: list_item: ゆううつ
+   88: list_item: 将来に希望がない
+   89: list_item: 自信を失う
+  90: picture
+  91: picture
+  92: text: 【進行】
+ストレス反応についてみていきたいと思います。
+参加者を一人当て、「ストレス状況に対する最初の・・・」から読み上げてもらう。
+「このなかで過去に経験したことのあるストレス反応はありますか？」と
+ 93: chapter with name=slide-6
+  94: paragraph: 7
+  95: picture
+  96: title: ストレスに対する体の反応
+  97: list with name=list
+   98: list_item: 頭痛
+   99: list_item: 肩がこる
+   100: list_item: 血圧が上がる
+   101: list_item: 便秘
+   102: list_item: 下痢
+   103: list_item: 動悸
+   104: list_item: 顔がほてる
+  105: list with name=list
+   106: list_item: 胃が痛い
+   107: list_item: 食欲がない
+   108: list_item: 息苦しい、呼吸が早い
+   109: list_item: 眠れない、眠くなる
+   110: list_item: 疲れる、
+   111: list_item: めまい
+   112: list_item: 胸焼け
+  113: picture
+  114: paragraph: 体は正直者！
+  115: paragraph: 「ストレスがある」「つらい」と感じる前に、 体の変化が先に出る人もいます。身体の 不調は、ストレスの証拠かもしれません。
+  116: text: 【進行】
+次に、体に出てくるストレス反応についてみていきたいと思います。
+参加者を一人当て「頭痛・・・」の所から下に向けて読んでもらう。
+「このなかで過去に経験したことのあるストレス反応はありますか？
+ 117: chapter with name=slide-7
+  118: title: ストレスの良い面と悪い面
+  119: paragraph: 良い面は・・・
+  120: paragraph: 適度なストレスは人を生き生きさせる。
+  121: paragraph: 上手なストレス対処を増やし、不適切なストレス対処を減らすことでストレス耐性はあがり、成長できる。
+  122: paragraph: 
+  123: paragraph: 悪い面は・・・
+  124: paragraph: 長く続くと抑うつが出現する、身体的不調の原因となる。
+  125: paragraph: ストレス状況で不適切なストレス対処法をとってしまうと、大切なものを失ってしまう。
+  126: paragraph: 
+  127: paragraph: 8
+  128: picture
+  129: picture
+  130: text: 【進行】
+「ストレスには良い面と悪い面があります」
+参加者を一人当て「良い面は・・・」を読み上げてもらう。
+「ストレスというと悪いだけのもののように見られがちですが、実はストレスにも良い点があります」
+ 131: chapter with name=slide-8
+  132: title: ストレスにどう向きあうか
+  133: paragraph: ステップ①
+  134: paragraph: ストレス状況を避ける、解決する（＝問題解決法）
+  135: paragraph: 例：寒い時は上着を着る 失敗が多い時は足りないスキルを身につける 相性の悪い人からは距離を取る
+  136: paragraph: しかし、問題の解決に時間がかかる場合や、 ストレス状況がさけられない時は・・・
+  137: paragraph: ステップ②
+  138: paragraph: ストレス反応を和らげる（＝ストレス対処法）
+  139: paragraph: 行動や考えを変えることで心と体の反応を軽くすることができます。
+  140: picture
+  141: picture
+  142: paragraph: 9
+  143: text: 【進行】
+次にストレスに向き合っていく際の原則をお話しします。
+参加者を一人当て「ステップ①・・・」から読み上げてもらう。
+「ストレスに対処する際に一番大事なのは、不要なストレス状況を避け、問題が解決
+ 144: chapter with name=slide-9
+  145: title: ストレス対処法の一例
+  146: paragraph: 体を動かす
+  147: paragraph: リラックス法
+  148: list with name=list
+   149: list_item: 好きな音楽をきく
+   150: list_item: アロマをたく
+   151: list_item: お茶をする
+   152: list_item: 深呼吸をする
+  153: paragraph: 
+  154: list with name=list
+   155: list_item: 昔のことを思い出す
+   156: list_item: 相手の立場に立ってみる
+   157: list_item: 他の人はどうかと見渡す
+  158: paragraph: 視野を広げる
+  159: paragraph: 10
+  160: list with name=list
+   161: list_item: 散歩をする
+   162: list_item: バッティングセンターに行く
+   163: list_item: カラオケに行く
+  164: paragraph: 気分転換
+  165: paragraph: 映画を見に行く
+  166: paragraph: 友達と話す
+  167: paragraph: おいしいものを食べる
+  168: paragraph: 「今・ここ」に集中する
+  169: list with name=list
+   170: list_item: まわりの景色を見渡す
+   171: list_item: まわりの音に聞き入る
+  172: text: 「ストレス対処法の一例を挙げていきます」
+参加者を一人当て「体を動かす・・・」から読み上げてもらう
+「この中で役に立った対処法はありますか？」と読み上げた人に尋ね、答えてもらう。
+ 173: chapter with name=slide-10
+  174: title: 昔うまくいったストレス対処方法
+  175: paragraph: 11
+  176: paragraph: 不安な時・悲しい時
+  177: paragraph: 
+  178: paragraph: 腹立たしい時・イライラした時
+  179: paragraph: ・
+  180: paragraph: ・
+  181: paragraph: ・
+  182: paragraph: ・
+  183: paragraph: ・
+  184: paragraph: ・
+  185: paragraph: ・
+  186: paragraph: 
+  187: paragraph: 
+  188: paragraph: ・
+  189: paragraph: ・
+  190: paragraph: ・
+  191: paragraph: ・
+  192: paragraph: ・
+  193: paragraph: ・
+  194: paragraph: ・
+  195: paragraph: 
+  196: paragraph: 
+  197: text: 【進行】
+「それでは、過去に実際試して有効だったストレス対処法を皆さんで共有していきたいと思います」
+「少しお時間を取りますので、不安な時・悲しい時、腹立たしい時・イライラした時に分けて、有効だった対
+ 198: chapter with name=slide-11
+  199: title: 過去に役立ったはげましの言葉
+  200: paragraph: 不安な時・悲しい時
+  201: list with name=list
+   202: list_item: 例：「もっと大変だった時も乗り越えることができた」
+   203: list_item: 「　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　」
+   204: list_item: 「　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　」
+   205: list_item: 
+   206: list_item: 「腹を立てて、好きでもない人のことばかり 考えるのは、ばかばかしい」
+   207: list_item: 「　　　　　　　　　　　　　　　　　　　　　　　　　　　　」　　　　　　　　　　　　　　　　　　　　　　　　　　
+   208: list_item: 「　　　　　　　　　　　　　　　　　　　　　　　　　　　　」
+   209: list_item: 
+  210: paragraph: いらいらした時・腹が立った時
+  211: paragraph: 12
+  212: picture
+  213: paragraph: 人にかけたり、人にかけてもらったり、自分に言い聞かせて有効だったはげましの言葉を教えてください。
+  214: text: 【進行】
+「次に過去に役立った励ましの言葉を共有していきたいと思います」
+参加者を一人当て「不安な時・悲しい時・・・」から読み上げてもらう。
+「それでは少し時間を取りますので、過去に自分自身にかけたり
+ 215: chapter with name=slide-12
+  216: title: 上手なストレス対処法
+  217: paragraph: 上手なストレス対処法
+  218: paragraph: 自分や他人を傷つけない
+  219: paragraph: お金がかからない
+  220: paragraph: 問題解決のさまたげにならない
+  221: paragraph: 
+  222: paragraph: 
+  223: paragraph: 不適切なストレス対処法
+  224: paragraph: 自分や他人を傷つけてしまう
+  225: paragraph: お金がかかりすぎる
+  226: paragraph: 問題解決をさまたげてしまう
+  227: paragraph: 
+  228: picture
+  229: picture
+  230: paragraph: 13
+  231: text: 【進行】
+「ストレス対処法には上手な対処法とあまり上手でない対処法があります」
+参加者を一人当て「上手なストレス対処法」の所から読み上げてもらう
+「上手な対処法を身につけていけるといいですね」
+ 232: chapter with name=slide-13
+  233: title: 　私のストレス対処法カード
+  234: paragraph: 悲しい時・不安な時　　　　　　　
+  235: list with name=list
+   236: list_item: 　
+   237: list_item: 　
+   238: list_item:  
+   239: list_item: 　
+  240: paragraph: 自分をはげます言葉
+  241: paragraph: 「　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　」
+  242: paragraph: 腹が立った時、いらいらした時
+  243: paragraph: 自分をはげます言葉「　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　」
+  244: paragraph: ------------------------------------ --------------------------------------------------------------
+  245: text: 【進行】
+「それでは、最後に『ストレス対処カード』というものを作成していきたいと思います」
+「不安な時・悲しい時と腹が立った時・イライラした時に分けて、ストレスが生じた時に取る対処法を予め考えておきま
+ 246: chapter with name=slide-14
+  247: title: 感想を教えてください
+  248: paragraph: 分からなかったところ
+  249: paragraph: 
+  250: paragraph: 
+  251: paragraph: 参考になったところ・役に立ちそうなところ
+  252: paragraph: 15
+  253: picture
+  254: text: 【進行】
+「それでは本日のプログラムはこれで終了です」
+「わからなかった所、参考になったところなどを教えてください」
+時間的に余裕があれば1人1人聞いていく。
+「最後に皆さんにフィードバックペーパーを

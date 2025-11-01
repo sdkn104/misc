@@ -1,0 +1,294 @@
+0: unspecified with name=_root_
+ 1: chapter with name=slide-0
+  2: paragraph: 人生を豊かにするお金の知恵
+  3: picture
+  4: picture
+  5: picture
+ 6: chapter with name=slide-1
+  7: paragraph: 資産運用
+  8: paragraph: ～始める前に～
+  9: paragraph: 日本証券業協会
+  10: paragraph: 東京証券取引所
+  11: paragraph: 投資信託協会
+ 12: chapter with name=slide-2
+  13: paragraph: 利子
+  14: paragraph: 　経済活動と金融の関係
+  15: picture
+  16: picture
+  17: paragraph: 家計
+  18: picture
+  19: paragraph: 債券・株式
+  20: paragraph: 　預金
+  21: paragraph: 　貸出
+  22: paragraph: 銀行
+  23: paragraph: 企業
+  24: paragraph: 政府
+  25: picture
+  26: paragraph: 設備投資
+  27: paragraph: 商品・サービスの提供
+  28: paragraph: 株主への配当
+  29: paragraph: 従業員への給与　
+  30: paragraph: 国債
+  31: paragraph: 証券会社
+  32: paragraph: など
+  33: paragraph: 投資
+  34: paragraph: 利子・配当
+  35: paragraph: 利子
+  36: paragraph: 預金や投資したお金は
+  37: paragraph: 経済活動に使われる
+  38: picture
+  39: paragraph: 公共サービスの充実
+  40: paragraph: 私たちの生活が
+  41: paragraph: より豊かで便利に
+  42: picture
+  43: picture
+ 44: chapter with name=slide-3
+  45: paragraph: ●ふやすことを重視
+  46: paragraph: ●元本保証はない
+  47: paragraph: ●運用成果（結果）は
+  48: paragraph: 　　期待できるが、予測できない
+  49: paragraph: 預貯金
+  50: paragraph: 投資
+  51: paragraph: ●貯めることを重視
+  52: paragraph: ●元本保証など確実性を重視
+  53: paragraph: ●運用成果（結果）は
+  54: paragraph: 　　商品選択時に決まっている
+  55: paragraph: 金融資産の運用には、「預貯金」と「投資」がある
+  56: picture
+  57: picture
+  58: paragraph: 　預貯金と投資
+  59: paragraph: 普通預金
+  60: paragraph: 定期預金
+  61: paragraph: 積立定期預金
+  62: paragraph: 投資信託
+  63: paragraph: 債　券
+  64: paragraph: （国債・地方債など）
+  65: paragraph: 主な金融商品
+  66: paragraph: 株　式　
+ 67: chapter with name=slide-4
+  68: title: 　３つの観点
+  69: paragraph: 金融商品の特徴は、 ３つの観点からとらえる
+  70: paragraph: 元本(元手)や利子の
+  71: paragraph: 支払いが確実か
+  72: paragraph: 安全性
+  73: paragraph: 必要なときにすぐに
+  74: paragraph: 換金できるか
+  75: paragraph: 流動性
+  76: paragraph: 期待できる
+  77: paragraph: 収益の大きさか
+  78: paragraph: 収益性
+ 79: chapter with name=slide-5
+  80: paragraph: ３つとも　　　の金融商品はない
+  81: paragraph: 　金融商品の比較例
+  82: paragraph: 収益性も少しありつつ
+  83: paragraph: 安全性も高い
+  84: paragraph: 安全性
+  85: paragraph: 収益性
+  86: paragraph: 流動性
+  87: paragraph: 普通預金
+  88: paragraph: 国内株式
+  89: paragraph: 国内債券
+  90: picture
+  91: picture
+  92: picture
+  93: paragraph: ◎
+  94: paragraph: 収益性は高くはないが
+  95: paragraph: 安全性、流動性は高い
+  96: paragraph: 安全性は低くても大きな
+  97: paragraph: 収益性が期待できる
+  98: paragraph: ＊金融機関が破綻した場合＊
+  99: list with name=list
+   100: list_item: 普通預金は預金保険制度により元本1,000万円（1金融機関ごとに預金者１人当たり）までとその利息等が保護
+   101: list_item: 株式・債券は分別管理と投資者保護基金による補償の二重の制度によって保護
+ 102: chapter with name=slide-6
+  103: paragraph: 　「リスク」と「リターン」の関係 
+  104: paragraph: 「リスク」という言葉の意味は、
+  105: paragraph: 「危ない」という意味だと思っていませんか？
+  106: list with name=list
+   107: list_item: 金融商品の「リターン」とは、「資産運用を行うことで得られる成果、収益・利益」のこと
+  108: list with name=list
+   109: list_item: 金融や投資の世界の「リスク」とは、「リターンの振れ幅」のこと
+  110: paragraph: 金融や投資の世界の「リターン」と「リスク」
+ 111: chapter with name=slide-7
+  112: picture
+  113: paragraph: 「ローリスク・ハイリターン」の金融商品はない
+  114: paragraph: 　「リスク」と「リターン」の関係 
+  115: paragraph: リターン
+  116: paragraph: リスク
+  117: paragraph: 小(低)
+  118: paragraph: 小(低)
+  119: paragraph: 大(高)
+  120: paragraph: 大(高)
+  121: paragraph: ローリスク・
+  122: paragraph: ローリターン
+  123: paragraph: ハイリスク・
+  124: paragraph: ハイリターン
+  125: paragraph: 商品によって
+  126: paragraph: リスク・リターンはさまざま
+  127: paragraph: 満期まで保有すると元本または額面金額を受取れる
+  128: paragraph: ※これは一般的なイメージ図であり、すべての金融商品があてはまるものではありません。
+  129: picture
+ 130: chapter with name=slide-8
+  131: title: 　株式の仕組み
+  132: picture
+  133: picture
+  134: paragraph: ① 資金提供
+  135: paragraph: ② 出資金に応じ
+  136: paragraph: 　　株式を発行
+  137: paragraph: 投資家と
+  138: paragraph: 会社を仲介
+  139: paragraph: 投資家
+  140: paragraph: ③ 資金を使い
+  141: paragraph: 　　　　　　事業拡大
+  142: paragraph: 株式会社
+  143: paragraph: ④ 事業拡大に伴い
+  144: paragraph: 　　業績UP
+  145: picture
+  146: picture
+  147: picture
+  148: picture
+  149: picture
+  150: picture
+  151: paragraph: ⑤ 株式価値UP、配当金・株主優待
+  152: paragraph: 証券会社
+  153: picture
+ 154: chapter with name=slide-9
+  155: title: 　債券の仕組み
+  156: picture
+  157: picture
+  158: paragraph: 投資家
+  159: paragraph: 国
+  160: paragraph: 地方公共団体
+  161: paragraph: 会社など
+  162: paragraph: ① 資金提供
+  163: paragraph: ② 債券の発行
+  164: paragraph: ③ 利子
+  165: paragraph: ④ 満期償還
+  166: paragraph: 額面金額が戻る
+  167: picture
+  168: picture
+  169: picture
+  170: picture
+ 171: chapter with name=slide-10
+  172: paragraph: パッケージ商品なので、
+  173: paragraph: 分散投資でリスクを軽減
+  174: paragraph: 専門家に運用はお任せ
+  175: paragraph: 少額で投資可能
+  176: paragraph: 株式や債券などを組み合わせたパッケージ商品
+  177: paragraph: 積立投資なら、500円や1,000円程度からの場合も。
+  178: picture
+  179: picture
+  180: picture
+  181: title: 　投資信託とは？
+ 182: chapter with name=slide-11
+  183: title: 　投資信託のイメージ
+  184: picture
+  185: picture
+  186: picture
+  187: picture
+  188: paragraph: 様々な
+  189: paragraph: 投資対象に
+  190: paragraph: 分散投資
+  191: paragraph: 投資家
+  192: picture
+  193: paragraph: 資金をまとめる
+  194: paragraph: 少額投資
+  195: paragraph: 収益の分配
+  196: paragraph: 専門家が運用
+  197: paragraph: （運用会社）
+ 198: chapter with name=slide-12
+  199: picture
+  200: title: 　投資信託の仕組み
+  201: paragraph: 投資家
+  202: picture
+  203: picture
+  204: picture
+  205: paragraph: 運用会社【委託者】
+  206: paragraph: 信託銀行
+  207: paragraph: 【受託者】
+  208: paragraph: ○○アセット・マネジメント
+  209: paragraph: ①購入
+  210: picture
+  211: paragraph: ①購入
+  212: paragraph: 資産の
+  213: paragraph: 保管・管理
+  214: paragraph: ②投資信託の設定
+  215: paragraph: ③運用の
+  216: paragraph: 　　 指図
+  217: picture
+  218: picture
+  219: picture
+  220: paragraph: 金融市場
+  221: paragraph: ④売買（分散投資）
+  222: paragraph: ⑤運用成果
+  223: picture
+  224: picture
+  225: paragraph: ⑤運用
+  226: paragraph: 　　成果
+  227: picture
+  228: picture
+  229: paragraph: ⑥分配金
+  230: paragraph: 　　償還金
+  231: picture
+  232: picture
+  233: picture
+  234: paragraph: 
+  235: paragraph: 販売会社
+  236: paragraph: 証券会社/銀行など
+  237: picture
+  238: paragraph: 投資信託
+  239: paragraph: (ファンド)
+  240: picture
+  241: picture
+  242: picture
+  243: picture
+ 244: chapter with name=slide-13
+  245: paragraph: 海外株式
+  246: paragraph: 株式
+  247: paragraph: 　投資対象が何かを確認
+  248: title: 　投資信託選びのポイント
+  249: paragraph: 国内
+  250: paragraph: 国内債券
+  251: paragraph: 国内株式
+  252: paragraph: 国内REIT
+  253: paragraph: コモディティ（商品）など
+  254: picture
+  255: picture
+  256: paragraph: 投資地域
+  257: paragraph: 投資対象
+  258: paragraph: 債券
+  259: paragraph: 不動産
+  260: paragraph: 海外債券
+  261: paragraph: 海外
+  262: paragraph: 海外REIT
+  263: paragraph: その他(金など)
+  264: paragraph: バランス型
+ 265: chapter with name=slide-14
+  266: paragraph: 投資信託説明書（交付目論見書）でチェック！
+  267: paragraph: トータルリターンの通知制度
+  268: paragraph: 購入した投信の損益の全体を把握
+  269: title: 　購入前のチェック事項
+  270: picture
+  271: picture
+  272: picture
+  273: picture
+  274: paragraph: ※ 主なコスト・・・購入時手数料、運用管理費用（信託報酬）
+  275: paragraph: 　　　　　　　　　信託財産留保額（解約時の費用）、税金など
+  276: paragraph: ※
+  277: paragraph: 重要情報の確認
+  278: paragraph: ポイント
+  279: paragraph: 理解できないものには投資しない
+ 280: chapter with name=slide-15
+  281: title: まとめ（資産運用）
+  282: list with name=list
+   283: list_item: 金融資産の運用の手段には
+  284: paragraph: 貯めることを重視する預貯金と
+  285: paragraph: ふやすことを重視する投資がある
+  286: list with name=list
+   287: list_item: 投資のための商品には株式、債券と
+  288: paragraph: 　 それをパッケージにした投資信託がある
+  289: list with name=list
+   290: list_item: 金融は経済成長や生活を豊かにするには欠かせないもの
+  291: list with name=list
+   292: list_item: ローリスク・ハイリターンの金融商品は
+  293: paragraph: 　 存在しない
