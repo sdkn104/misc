@@ -1,0 +1,1180 @@
+<?xml version="1.0" ?>
+<pages>
+<page id="1" bbox="0.000,0.000,960.009,540.000" rotate="0">
+<textbox id="0" bbox="7.087,485.675,183.077,513.681">
+<textline bbox="7.087,485.675,183.077,513.681">
+<text font="BAAAAA+MeiryoUI" bbox="7.087,485.675,25.683,513.681" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="25.655,485.675,53.661,513.681" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="53.605,485.675,81.611,513.681" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">貯</text>
+<text font="BAAAAA+MeiryoUI" bbox="81.555,485.675,109.561,513.681" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="109.533,485.675,127.121,513.681" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="127.121,485.675,155.127,513.681" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="155.071,485.675,183.077,513.681" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">資</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="1" bbox="36.397,430.442,649.222,462.445">
+<textline bbox="36.397,430.442,649.222,462.445">
+<text font="BAAAAA+MeiryoUI" bbox="36.397,430.442,68.400,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="68.400,430.442,100.403,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">融</text>
+<text font="BAAAAA+MeiryoUI" bbox="100.403,430.442,132.406,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="132.406,430.442,164.409,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">産</text>
+<text font="BAAAAA+MeiryoUI" bbox="164.441,430.442,190.555,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">の</text>
+<text font="BAAAAA+MeiryoUI" bbox="190.555,430.442,222.558,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">運</text>
+<text font="BAAAAA+MeiryoUI" bbox="222.590,430.442,254.593,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">用</text>
+<text font="BAAAAA+MeiryoUI" bbox="254.593,430.442,279.716,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">に</text>
+<text font="BAAAAA+MeiryoUI" bbox="279.748,430.442,307.110,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">は</text>
+<text font="BAAAAA+MeiryoUI" bbox="307.110,430.442,328.360,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">、</text>
+<text font="BAAAAA+MeiryoUI" bbox="328.360,430.442,344.362,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">「</text>
+<text font="BAAAAA+MeiryoUI" bbox="344.362,430.442,376.365,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="376.397,430.442,408.400,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">貯</text>
+<text font="BAAAAA+MeiryoUI" bbox="408.400,430.442,440.403,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="440.403,430.442,456.404,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">」</text>
+<text font="BAAAAA+MeiryoUI" bbox="456.404,430.442,476.502,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="476.534,430.442,492.536,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">「</text>
+<text font="BAAAAA+MeiryoUI" bbox="492.536,430.442,524.539,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="524.571,430.442,556.574,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="556.574,430.442,572.575,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">」</text>
+<text font="BAAAAA+MeiryoUI" bbox="572.575,430.442,598.690,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">が</text>
+<text font="BAAAAA+MeiryoUI" bbox="598.722,430.442,624.836,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">あ</text>
+<text font="BAAAAA+MeiryoUI" bbox="624.868,430.442,649.222,462.445" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">る</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="2" bbox="58.791,338.769,154.800,370.772">
+<textline bbox="58.791,338.769,154.800,370.772">
+<text font="BAAAAA+MeiryoUI" bbox="58.791,338.769,90.794,370.772" colourspace="DeviceRGB" ncolour="(1.0, 1.0, 1.0)" size="32.003">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="90.794,338.769,122.797,370.772" colourspace="DeviceRGB" ncolour="(1.0, 1.0, 1.0)" size="32.003">貯</text>
+<text font="BAAAAA+MeiryoUI" bbox="122.797,338.769,154.800,370.772" colourspace="DeviceRGB" ncolour="(1.0, 1.0, 1.0)" size="32.003">金</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="3" bbox="439.483,338.089,503.489,370.092">
+<textline bbox="439.483,338.089,503.489,370.092">
+<text font="BAAAAA+MeiryoUI" bbox="439.483,338.089,471.486,370.092" colourspace="DeviceRGB" ncolour="(1.0, 1.0, 1.0)" size="32.003">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="471.486,338.089,503.489,370.092" colourspace="DeviceRGB" ncolour="(1.0, 1.0, 1.0)" size="32.003">資</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="4" bbox="9.439,151.114,303.166,275.895">
+<textline bbox="9.439,251.886,193.061,275.895">
+<text font="BAAAAA+MeiryoUI" bbox="9.439,251.886,33.448,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.6901960784, 0.3137254901)" size="24.009">●</text>
+<text font="BAAAAA+MeiryoUI" bbox="33.449,251.886,57.458,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">貯</text>
+<text font="BAAAAA+MeiryoUI" bbox="57.434,251.886,77.025,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">め</text>
+<text font="BAAAAA+MeiryoUI" bbox="77.025,251.886,95.296,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">る</text>
+<text font="BAAAAA+MeiryoUI" bbox="95.296,251.886,111.886,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">こ</text>
+<text font="BAAAAA+MeiryoUI" bbox="111.886,251.886,126.964,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="126.964,251.886,145.043,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">を</text>
+<text font="BAAAAA+MeiryoUI" bbox="145.043,251.886,169.052,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">重</text>
+<text font="BAAAAA+MeiryoUI" bbox="169.052,251.886,193.061,275.895" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">視</text>
+<text>
+</text>
+</textline>
+<textline bbox="9.439,218.295,303.166,242.304">
+<text font="BAAAAA+MeiryoUI" bbox="9.439,218.295,33.448,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.6901960784, 0.3137254901)" size="24.009">●</text>
+<text font="BAAAAA+MeiryoUI" bbox="33.449,218.295,57.458,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">元</text>
+<text font="BAAAAA+MeiryoUI" bbox="57.434,218.295,81.443,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">本</text>
+<text font="BAAAAA+MeiryoUI" bbox="81.443,218.295,105.452,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">保</text>
+<text font="BAAAAA+MeiryoUI" bbox="105.452,218.295,129.461,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">証</text>
+<text font="BAAAAA+MeiryoUI" bbox="129.437,218.295,149.965,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="149.965,218.295,165.042,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">ど</text>
+<text font="BAAAAA+MeiryoUI" bbox="165.066,218.295,189.075,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">確</text>
+<text font="BAAAAA+MeiryoUI" bbox="189.075,218.295,213.084,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">実</text>
+<text font="BAAAAA+MeiryoUI" bbox="213.060,218.295,237.069,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">性</text>
+<text font="BAAAAA+MeiryoUI" bbox="237.069,218.295,255.148,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">を</text>
+<text font="BAAAAA+MeiryoUI" bbox="255.148,218.295,279.157,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">重</text>
+<text font="BAAAAA+MeiryoUI" bbox="279.157,218.295,303.166,242.304" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">視</text>
+<text>
+</text>
+</textline>
+<textline bbox="9.439,184.705,245.977,208.714">
+<text font="BAAAAA+MeiryoUI" bbox="9.439,184.705,33.448,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.6901960784, 0.3137254901)" size="24.009">●</text>
+<text font="BAAAAA+MeiryoUI" bbox="33.449,184.705,57.458,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">運</text>
+<text font="BAAAAA+MeiryoUI" bbox="57.434,184.705,81.443,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">用</text>
+<text font="BAAAAA+MeiryoUI" bbox="81.443,184.705,105.452,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">成</text>
+<text font="BAAAAA+MeiryoUI" bbox="105.452,184.705,129.461,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">果</text>
+<text font="BAAAAA+MeiryoUI" bbox="129.437,184.705,153.446,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">（</text>
+<text font="BAAAAA+MeiryoUI" bbox="153.446,184.705,177.455,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">結</text>
+<text font="BAAAAA+MeiryoUI" bbox="177.455,184.705,201.464,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">果</text>
+<text font="BAAAAA+MeiryoUI" bbox="201.440,184.705,225.449,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">）</text>
+<text font="BAAAAA+MeiryoUI" bbox="225.449,184.705,245.977,208.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">は</text>
+<text>
+</text>
+</textline>
+<textline bbox="9.439,151.114,294.042,175.123">
+<text font="BAAAAA+MeiryoUI" bbox="9.439,151.114,25.381,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="25.381,151.114,41.323,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="41.323,151.114,65.332,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">商</text>
+<text font="BAAAAA+MeiryoUI" bbox="65.332,151.114,89.341,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">品</text>
+<text font="BAAAAA+MeiryoUI" bbox="89.317,151.114,113.326,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">選</text>
+<text font="BAAAAA+MeiryoUI" bbox="113.326,151.114,137.335,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">択</text>
+<text font="BAAAAA+MeiryoUI" bbox="137.335,151.114,161.344,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">時</text>
+<text font="BAAAAA+MeiryoUI" bbox="161.320,151.114,180.167,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">に</text>
+<text font="BAAAAA+MeiryoUI" bbox="180.167,151.114,204.176,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">決</text>
+<text font="BAAAAA+MeiryoUI" bbox="204.176,151.114,222.255,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">ま</text>
+<text font="BAAAAA+MeiryoUI" bbox="222.255,151.114,237.332,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">っ</text>
+<text font="BAAAAA+MeiryoUI" bbox="237.356,151.114,256.204,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">て</text>
+<text font="BAAAAA+MeiryoUI" bbox="256.179,151.114,275.771,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">い</text>
+<text font="BAAAAA+MeiryoUI" bbox="275.771,151.114,294.042,175.123" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">る</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="5" bbox="365.102,153.694,662.261,278.474">
+<textline bbox="365.102,254.465,547.163,278.474">
+<text font="BAAAAA+MeiryoUI" bbox="365.102,254.465,389.111,278.474" colourspace="DeviceRGB" ncolour="(1.0, 0.2, 0.0)" size="24.009">●</text>
+<text font="BAAAAA+MeiryoUI" bbox="389.112,254.465,408.703,278.474" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">ふ</text>
+<text font="BAAAAA+MeiryoUI" bbox="408.703,254.465,429.039,278.474" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">や</text>
+<text font="BAAAAA+MeiryoUI" bbox="429.039,254.465,449.375,278.474" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">す</text>
+<text font="BAAAAA+MeiryoUI" bbox="449.375,254.465,465.965,278.474" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">こ</text>
+<text font="BAAAAA+MeiryoUI" bbox="465.965,254.465,481.042,278.474" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="481.066,254.465,499.145,278.474" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">を</text>
+<text font="BAAAAA+MeiryoUI" bbox="499.145,254.465,523.154,278.474" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">重</text>
+<text font="BAAAAA+MeiryoUI" bbox="523.154,254.465,547.163,278.474" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">視</text>
+<text>
+</text>
+</textline>
+<textline bbox="365.102,220.875,545.747,244.884">
+<text font="BAAAAA+MeiryoUI" bbox="365.102,220.875,389.111,244.884" colourspace="DeviceRGB" ncolour="(1.0, 0.2, 0.0)" size="24.009">●</text>
+<text font="BAAAAA+MeiryoUI" bbox="389.112,220.875,413.121,244.884" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">元</text>
+<text font="BAAAAA+MeiryoUI" bbox="413.097,220.875,437.106,244.884" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">本</text>
+<text font="BAAAAA+MeiryoUI" bbox="437.106,220.875,461.115,244.884" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">保</text>
+<text font="BAAAAA+MeiryoUI" bbox="461.115,220.875,485.124,244.884" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">証</text>
+<text font="BAAAAA+MeiryoUI" bbox="485.100,220.875,505.628,244.884" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">は</text>
+<text font="BAAAAA+MeiryoUI" bbox="505.628,220.875,526.155,244.884" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="526.155,220.875,545.747,244.884" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">い</text>
+<text>
+</text>
+</textline>
+<textline bbox="365.102,187.284,601.640,211.293">
+<text font="BAAAAA+MeiryoUI" bbox="365.102,187.284,389.111,211.293" colourspace="DeviceRGB" ncolour="(1.0, 0.2, 0.0)" size="24.009">●</text>
+<text font="BAAAAA+MeiryoUI" bbox="389.112,187.284,413.121,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">運</text>
+<text font="BAAAAA+MeiryoUI" bbox="413.097,187.284,437.106,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">用</text>
+<text font="BAAAAA+MeiryoUI" bbox="437.106,187.284,461.115,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">成</text>
+<text font="BAAAAA+MeiryoUI" bbox="461.115,187.284,485.124,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">果</text>
+<text font="BAAAAA+MeiryoUI" bbox="485.100,187.284,509.109,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">（</text>
+<text font="BAAAAA+MeiryoUI" bbox="509.109,187.284,533.118,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">結</text>
+<text font="BAAAAA+MeiryoUI" bbox="533.118,187.284,557.127,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">果</text>
+<text font="BAAAAA+MeiryoUI" bbox="557.103,187.284,581.112,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">）</text>
+<text font="BAAAAA+MeiryoUI" bbox="581.112,187.284,601.640,211.293" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">は</text>
+<text>
+</text>
+</textline>
+<textline bbox="365.102,153.694,662.261,177.703">
+<text font="BAAAAA+MeiryoUI" bbox="365.102,153.694,381.044,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="381.044,153.694,396.986,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="396.986,153.694,420.995,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">期</text>
+<text font="BAAAAA+MeiryoUI" bbox="420.995,153.694,445.004,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">待</text>
+<text font="BAAAAA+MeiryoUI" bbox="444.980,153.694,464.571,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">で</text>
+<text font="BAAAAA+MeiryoUI" bbox="464.571,153.694,482.650,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">き</text>
+<text font="BAAAAA+MeiryoUI" bbox="482.650,153.694,500.921,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">る</text>
+<text font="BAAAAA+MeiryoUI" bbox="500.921,153.694,520.512,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">が</text>
+<text font="BAAAAA+MeiryoUI" bbox="520.512,153.694,536.454,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">、</text>
+<text font="BAAAAA+MeiryoUI" bbox="536.454,153.694,560.463,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">予</text>
+<text font="BAAAAA+MeiryoUI" bbox="560.463,153.694,584.472,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">測</text>
+<text font="BAAAAA+MeiryoUI" bbox="584.472,153.694,604.064,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">で</text>
+<text font="BAAAAA+MeiryoUI" bbox="604.064,153.694,622.142,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">き</text>
+<text font="BAAAAA+MeiryoUI" bbox="622.142,153.694,642.670,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="642.670,153.694,662.261,177.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">い</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="6" bbox="46.346,84.869,142.358,108.878">
+<textline bbox="46.346,84.869,142.358,108.878">
+<text font="BAAAAA+MeiryoUI" bbox="46.346,84.869,70.355,108.878" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">普</text>
+<text font="BAAAAA+MeiryoUI" bbox="70.331,84.869,94.340,108.878" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">通</text>
+<text font="BAAAAA+MeiryoUI" bbox="94.340,84.869,118.349,108.878" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="118.349,84.869,142.358,108.878" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">金</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="7" bbox="241.172,100.788,451.952,136.788">
+<textline bbox="241.172,100.788,451.952,136.788">
+<text font="BAAAAA+MeiryoUI" bbox="241.172,100.788,277.172,136.788" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">主</text>
+<text font="BAAAAA+MeiryoUI" bbox="277.172,100.788,307.952,136.788" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="307.952,100.788,343.952,136.788" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="343.952,100.788,379.952,136.788" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">融</text>
+<text font="BAAAAA+MeiryoUI" bbox="379.952,100.788,415.952,136.788" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">商</text>
+<text font="BAAAAA+MeiryoUI" bbox="415.952,100.788,451.952,136.788" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">品</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="8" bbox="565.002,84.869,644.880,108.878">
+<textline bbox="565.002,84.869,644.880,108.878">
+<text font="BAAAAA+MeiryoUI" bbox="565.002,84.869,589.011,108.878" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">株</text>
+<text font="BAAAAA+MeiryoUI" bbox="588.987,84.869,604.929,108.878" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="604.929,84.869,628.938,108.878" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">式</text>
+<text font="BAAAAA+MeiryoUI" bbox="628.938,84.869,644.880,108.878" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">　</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="9" bbox="45.099,27.467,319.981,51.476">
+<textline bbox="45.099,27.467,319.981,51.476">
+<text font="BAAAAA+MeiryoUI" bbox="45.099,27.467,69.108,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">定</text>
+<text font="BAAAAA+MeiryoUI" bbox="69.084,27.467,93.093,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">期</text>
+<text font="BAAAAA+MeiryoUI" bbox="93.093,27.467,117.102,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="117.102,27.467,141.111,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">金</text>
+<text> </text>
+<text font="BAAAAA+MeiryoUI" bbox="175.975,27.467,199.984,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">積</text>
+<text font="BAAAAA+MeiryoUI" bbox="199.960,27.467,223.969,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">立</text>
+<text font="BAAAAA+MeiryoUI" bbox="223.969,27.467,247.978,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">定</text>
+<text font="BAAAAA+MeiryoUI" bbox="247.978,27.467,271.987,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">期</text>
+<text font="BAAAAA+MeiryoUI" bbox="271.963,27.467,295.972,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="295.972,27.467,319.981,51.476" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">金</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="10" bbox="365.528,22.005,527.222,63.991">
+<textline bbox="419.698,43.978,473.033,63.991">
+<text font="BAAAAA+MeiryoUI" bbox="419.698,43.978,439.711,63.991" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">債</text>
+<text font="BAAAAA+MeiryoUI" bbox="439.711,43.978,453.000,63.991" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="453.020,43.978,473.033,63.991" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">券</text>
+<text>
+</text>
+</textline>
+<textline bbox="365.528,22.005,527.222,40.005">
+<text font="BAAAAA+MeiryoUI" bbox="365.528,22.005,383.528,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">（</text>
+<text font="BAAAAA+MeiryoUI" bbox="383.528,22.005,401.528,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">国</text>
+<text font="BAAAAA+MeiryoUI" bbox="401.528,22.005,419.528,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">債</text>
+<text font="BAAAAA+MeiryoUI" bbox="419.528,22.005,428.528,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">・</text>
+<text font="BAAAAA+MeiryoUI" bbox="428.510,22.005,446.510,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">地</text>
+<text font="BAAAAA+MeiryoUI" bbox="446.510,22.005,464.510,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">方</text>
+<text font="BAAAAA+MeiryoUI" bbox="464.510,22.005,482.510,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">債</text>
+<text font="BAAAAA+MeiryoUI" bbox="482.510,22.005,497.900,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="497.900,22.005,509.204,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">ど</text>
+<text font="BAAAAA+MeiryoUI" bbox="509.222,22.005,527.222,40.005" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">）</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="11" bbox="557.036,26.815,653.048,50.824">
+<textline bbox="557.036,26.815,653.048,50.824">
+<text font="BAAAAA+MeiryoUI" bbox="557.036,26.815,581.045,50.824" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="581.021,26.815,605.030,50.824" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="605.030,26.815,629.039,50.824" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">信</text>
+<text font="BAAAAA+MeiryoUI" bbox="629.039,26.815,653.048,50.824" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">託</text>
+<text>
+</text>
+</textline>
+</textbox>
+<rect linewidth="0" bbox="0.000,0.028,959.981,540.000" />
+<rect linewidth="0" bbox="0.000,0.000,960.009,540.000" />
+<figure name="Im4" bbox="0.000,476.929,738.794,506.835">
+<image width="738" height="29" />
+</figure>
+<figure name="Im5" bbox="745.228,482.712,924.548,525.430">
+<image width="179" height="42" />
+</figure>
+<figure name="Im6" bbox="0.000,-9.496,959.981,25.512">
+<image width="959" height="35" />
+</figure>
+<curve linewidth="0" bbox="346.734,14.939,679.805,136.602" pts="513.269,14.939,346.734,14.939,346.734,136.602,679.805,136.602,679.805,14.939,513.269,14.939"/>
+<curve linewidth="0" bbox="17.235,14.712,345.260,136.375" pts="181.247,14.712,17.235,14.712,17.235,136.375,345.260,136.375,345.260,14.712,181.247,14.712"/>
+<figure name="Tr16" bbox="23.641,298.290,213.761,713.453">
+<figure name="Im15" bbox="23.641,298.346,190.091,415.190">
+<image width="166" height="116" />
+</figure>
+</figure>
+<curve linewidth="0" bbox="28.205,304.384,185.528,412.101" pts="28.205,358.243,28.205,358.243,38.750,385.172,67.521,404.872,106.866,412.101,106.866,412.101,146.183,404.872,174.983,385.172,185.528,358.243,185.528,358.243,185.528,358.243,174.983,331.313,146.211,311.613,106.866,304.384,106.866,304.384,67.550,311.613,38.750,331.313,28.205,358.243,28.205,358.243"/>
+<curve linewidth="0" bbox="28.205,304.384,185.528,412.101" pts="28.205,358.243,28.205,358.243,38.750,385.172,67.521,404.872,106.866,412.101,106.866,412.101,146.183,404.872,174.983,385.172,185.528,358.243,185.528,358.243,185.528,358.243,174.983,331.313,146.211,311.613,106.866,304.384,106.866,304.384,67.550,311.613,38.750,331.313,28.205,358.243,28.205,358.243"/>
+<figure name="Tr21" bbox="383.414,299.282,943.086,712.093">
+<figure name="Im20" bbox="383.414,299.339,559.644,412.838">
+<image width="176" height="113" />
+</figure>
+</figure>
+<figure name="Tr23" bbox="387.921,305.291,943.086,715.096">
+<curve linewidth="0" bbox="387.921,305.320,555.137,409.805" pts="387.921,357.562,387.921,357.562,399.118,383.669,429.732,402.803,471.515,409.805,471.515,409.805,513.326,402.803,543.940,383.698,555.137,357.562,555.137,357.562,555.137,357.562,543.940,331.427,513.326,312.321,471.515,305.320,471.515,305.320,429.732,312.321,399.118,331.427,387.921,357.562,387.921,357.562"/>
+</figure>
+<line linewidth="1" bbox="344.013,12.161,346.706,367.030" />
+<curve linewidth="0" bbox="2.296,426.671,683.830,472.677" pts="343.077,426.671,2.296,426.671,2.296,472.677,683.830,472.677,683.830,426.671,343.077,426.671"/>
+<figure name="Im35" bbox="192.019,295.058,304.951,413.404">
+<image width="112" height="118" />
+</figure>
+<figure name="Im37" bbox="555.165,295.087,677.367,409.720">
+<image width="122" height="114" />
+</figure>
+<curve linewidth="0" bbox="33.109,79.370,155.594,119.622" pts="33.137,112.904,33.137,112.904,34.044,116.249,36.482,118.715,39.855,119.622,148.876,119.594,148.876,119.594,152.220,118.687,154.687,116.249,155.594,112.876,155.594,112.876,155.594,86.088,155.594,86.088,154.687,82.743,152.249,80.277,148.876,79.370,39.827,79.370,39.827,79.370,36.482,80.277,34.016,82.715,33.109,86.088,33.137,112.904"/>
+<curve linewidth="2" bbox="33.109,79.370,155.594,119.622" pts="33.137,112.904,33.137,112.904,34.044,116.249,36.482,118.715,39.855,119.622,148.876,119.594,148.876,119.594,152.220,118.687,154.687,116.249,155.594,112.876,155.594,112.876,155.594,86.088,155.594,86.088,154.687,82.743,152.249,80.277,148.876,79.370,39.827,79.370,39.827,79.370,36.482,80.277,34.016,82.715,33.109,86.088,33.137,112.904"/>
+<curve linewidth="0" bbox="32.003,21.969,154.176,62.220" pts="32.031,55.502,32.031,55.502,32.939,58.847,35.376,61.313,38.750,62.220,147.458,62.192,147.458,62.192,150.803,61.285,153.269,58.847,154.176,55.474,154.176,55.474,154.176,28.687,154.176,28.687,153.269,25.342,150.831,22.876,147.458,21.969,38.721,21.969,38.721,21.969,35.376,22.876,32.910,25.313,32.003,28.687,32.031,55.502"/>
+<curve linewidth="2" bbox="32.003,21.969,154.176,62.220" pts="32.031,55.502,32.031,55.502,32.939,58.847,35.376,61.313,38.750,62.220,147.458,62.192,147.458,62.192,150.803,61.285,153.269,58.847,154.176,55.474,154.176,55.474,154.176,28.687,154.176,28.687,153.269,25.342,150.831,22.876,147.458,21.969,38.721,21.969,38.721,21.969,35.376,22.876,32.910,25.313,32.003,28.687,32.031,55.502"/>
+<curve linewidth="0" bbox="160.668,21.969,335.282,62.220" pts="160.696,55.502,160.696,55.502,161.603,58.847,164.041,61.313,167.414,62.220,328.564,62.192,328.564,62.192,331.909,61.285,334.375,58.847,335.282,55.474,335.282,55.474,335.282,28.687,335.282,28.687,334.375,25.342,331.937,22.876,328.564,21.969,167.386,21.969,167.386,21.969,164.041,22.876,161.575,25.313,160.668,28.687,160.696,55.502"/>
+<curve linewidth="2" bbox="160.668,21.969,335.282,62.220" pts="160.696,55.502,160.696,55.502,161.603,58.847,164.041,61.313,167.414,62.220,328.564,62.192,328.564,62.192,331.909,61.285,334.375,58.847,335.282,55.474,335.282,55.474,335.282,28.687,335.282,28.687,334.375,25.342,331.937,22.876,328.564,21.969,167.386,21.969,167.386,21.969,164.041,22.876,161.575,25.313,160.668,28.687,160.696,55.502"/>
+<curve linewidth="0" bbox="543.940,21.317,666.113,61.569" pts="543.969,54.850,543.969,54.850,544.876,58.195,547.313,60.661,550.687,61.569,659.395,61.540,659.395,61.540,662.740,60.633,665.206,58.195,666.113,54.822,666.113,54.822,666.113,28.035,666.113,28.035,665.206,24.690,662.769,22.224,659.395,21.317,550.658,21.317,550.658,21.317,547.313,22.224,544.847,24.661,543.940,28.035,543.969,54.850"/>
+<curve linewidth="2" bbox="543.940,21.317,666.113,61.569" pts="543.969,54.850,543.969,54.850,544.876,58.195,547.313,60.661,550.687,61.569,659.395,61.540,659.395,61.540,662.740,60.633,665.206,58.195,666.113,54.822,666.113,54.822,666.113,28.035,666.113,28.035,665.206,24.690,662.769,22.224,659.395,21.317,550.658,21.317,550.658,21.317,547.313,22.224,544.847,24.661,543.940,28.035,543.969,54.850"/>
+<curve linewidth="0" bbox="353.537,18.142,539.206,72.369" pts="353.565,63.326,353.565,63.326,354.784,67.833,358.072,71.150,362.608,72.369,530.164,72.340,530.164,72.340,534.671,71.121,537.987,67.833,539.206,63.298,539.206,63.298,539.206,27.184,539.206,27.184,537.987,22.677,534.699,19.361,530.164,18.142,362.580,18.142,362.580,18.142,358.072,19.361,354.756,22.649,353.537,27.184,353.565,63.326"/>
+<curve linewidth="2" bbox="353.537,18.142,539.206,72.369" pts="353.565,63.326,353.565,63.326,354.784,67.833,358.072,71.150,362.608,72.369,530.164,72.340,530.164,72.340,534.671,71.121,537.987,67.833,539.206,63.298,539.206,63.298,539.206,27.184,539.206,27.184,537.987,22.677,534.699,19.361,530.164,18.142,362.580,18.142,362.580,18.142,358.072,19.361,354.756,22.649,353.537,27.184,353.565,63.326"/>
+<curve linewidth="0" bbox="232.072,97.313,461.027,148.167" pts="346.564,97.313,232.072,97.313,232.072,148.167,461.027,148.167,461.027,97.313,346.564,97.313"/>
+<curve linewidth="4" bbox="232.072,97.313,461.027,148.167" pts="346.564,97.313,232.072,97.313,232.072,148.167,461.027,148.167,461.027,97.313,346.564,97.313"/>
+<curve linewidth="0" bbox="543.912,79.370,665.943,119.622" pts="543.940,112.904,543.940,112.904,544.847,116.249,547.285,118.715,550.658,119.622,659.225,119.594,659.225,119.594,662.570,118.687,665.036,116.249,665.943,112.876,665.943,112.876,665.943,86.088,665.943,86.088,665.036,82.743,662.598,80.277,659.225,79.370,550.630,79.370,550.630,79.370,547.285,80.277,544.819,82.715,543.912,86.088,543.940,112.904"/>
+<curve linewidth="2" bbox="543.912,79.370,665.943,119.622" pts="543.940,112.904,543.940,112.904,544.847,116.249,547.285,118.715,550.658,119.622,659.225,119.594,659.225,119.594,662.570,118.687,665.036,116.249,665.943,112.876,665.943,112.876,665.943,86.088,665.943,86.088,665.036,82.743,662.598,80.277,659.225,79.370,550.630,79.370,550.630,79.370,547.285,80.277,544.819,82.715,543.912,86.088,543.940,112.904"/>
+<layout>
+<textgroup bbox="7.087,22.005,662.261,513.681">
+<textgroup bbox="7.087,338.089,649.222,513.681">
+<textgroup bbox="7.087,430.442,649.222,513.681">
+<textbox id="0" bbox="7.087,485.675,183.077,513.681" />
+<textbox id="1" bbox="36.397,430.442,649.222,462.445" />
+</textgroup>
+<textgroup bbox="58.791,338.089,503.489,370.772">
+<textbox id="2" bbox="58.791,338.769,154.800,370.772" />
+<textbox id="3" bbox="439.483,338.089,503.489,370.092" />
+</textgroup>
+</textgroup>
+<textgroup bbox="9.439,22.005,662.261,278.474">
+<textgroup bbox="9.439,84.869,662.261,278.474">
+<textgroup bbox="9.439,151.114,662.261,278.474">
+<textbox id="4" bbox="9.439,151.114,303.166,275.895" />
+<textbox id="5" bbox="365.102,153.694,662.261,278.474" />
+</textgroup>
+<textgroup bbox="46.346,84.869,644.880,136.788">
+<textgroup bbox="46.346,84.869,451.952,136.788">
+<textbox id="6" bbox="46.346,84.869,142.358,108.878" />
+<textbox id="7" bbox="241.172,100.788,451.952,136.788" />
+</textgroup>
+<textbox id="8" bbox="565.002,84.869,644.880,108.878" />
+</textgroup>
+</textgroup>
+<textgroup bbox="45.099,22.005,653.048,63.991">
+<textbox id="9" bbox="45.099,27.467,319.981,51.476" />
+<textgroup bbox="365.528,22.005,653.048,63.991">
+<textbox id="10" bbox="365.528,22.005,527.222,63.991" />
+<textbox id="11" bbox="557.036,26.815,653.048,50.824" />
+</textgroup>
+</textgroup>
+</textgroup>
+</textgroup>
+</layout>
+</page>
+<page id="2" bbox="0.000,0.000,960.009,540.000" rotate="0">
+<textbox id="0" bbox="366.690,438.122,438.693,462.131">
+<textline bbox="366.690,438.122,438.693,462.131">
+<text font="CAAAAA+MeiryoUI-Bold" bbox="366.690,438.122,390.699,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">安</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="390.675,438.122,414.684,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">全</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="414.684,438.122,438.693,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">性</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="1" bbox="489.373,438.122,676.973,462.131">
+<textline bbox="489.373,438.122,676.973,462.131">
+<text font="CAAAAA+MeiryoUI-Bold" bbox="489.373,438.122,513.382,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">収</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="513.358,438.122,537.367,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">益</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="537.367,438.122,561.376,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">性</text>
+<text> </text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="604.970,438.122,628.979,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">流</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="628.955,438.122,652.964,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">動</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="652.964,438.122,676.973,462.131" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="24.009">性</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="2" bbox="5.811,487.319,242.910,515.325">
+<textline bbox="5.811,487.319,242.910,515.325">
+<text font="BAAAAA+MeiryoUI" bbox="5.811,487.319,24.407,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="24.351,487.319,52.357,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="52.301,487.319,80.307,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">融</text>
+<text font="BAAAAA+MeiryoUI" bbox="80.279,487.319,108.285,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">商</text>
+<text font="BAAAAA+MeiryoUI" bbox="108.229,487.319,136.235,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">品</text>
+<text font="BAAAAA+MeiryoUI" bbox="136.179,487.319,159.032,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">の</text>
+<text font="BAAAAA+MeiryoUI" bbox="159.004,487.319,187.010,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">比</text>
+<text font="BAAAAA+MeiryoUI" bbox="186.954,487.319,214.960,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">較</text>
+<text font="BAAAAA+MeiryoUI" bbox="214.904,487.319,242.910,515.325" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">例</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="3" bbox="8.646,372.983,136.658,404.986">
+<textline bbox="8.646,372.983,136.658,404.986">
+<text font="BAAAAA+MeiryoUI" bbox="8.646,372.983,40.649,404.986" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">普</text>
+<text font="BAAAAA+MeiryoUI" bbox="40.649,372.983,72.652,404.986" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">通</text>
+<text font="BAAAAA+MeiryoUI" bbox="72.652,372.983,104.655,404.986" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="104.655,372.983,136.658,404.986" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">金</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="4" bbox="155.339,369.225,342.320,413.247">
+<textline bbox="155.339,393.234,329.612,413.247">
+<text font="BAAAAA+MeiryoUI" bbox="155.339,393.234,175.352,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">収</text>
+<text font="BAAAAA+MeiryoUI" bbox="175.352,393.234,195.365,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">益</text>
+<text font="BAAAAA+MeiryoUI" bbox="195.385,393.234,215.398,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">性</text>
+<text font="BAAAAA+MeiryoUI" bbox="215.418,393.234,232.529,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">は</text>
+<text font="BAAAAA+MeiryoUI" bbox="232.549,393.234,252.562,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">高</text>
+<text font="BAAAAA+MeiryoUI" bbox="252.582,393.234,262.649,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">く</text>
+<text font="BAAAAA+MeiryoUI" bbox="262.669,393.234,279.780,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">は</text>
+<text font="BAAAAA+MeiryoUI" bbox="279.800,393.234,296.911,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="296.931,393.234,313.262,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">い</text>
+<text font="BAAAAA+MeiryoUI" bbox="313.282,393.234,329.612,413.247" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">が</text>
+<text>
+</text>
+</textline>
+<textline bbox="155.339,369.225,342.320,389.238">
+<text font="BAAAAA+MeiryoUI" bbox="155.339,369.225,175.352,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">安</text>
+<text font="BAAAAA+MeiryoUI" bbox="175.352,369.225,195.365,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">全</text>
+<text font="BAAAAA+MeiryoUI" bbox="195.385,369.225,215.398,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">性</text>
+<text font="BAAAAA+MeiryoUI" bbox="215.418,369.225,228.707,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">、</text>
+<text font="BAAAAA+MeiryoUI" bbox="228.727,369.225,248.740,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">流</text>
+<text font="BAAAAA+MeiryoUI" bbox="248.760,369.225,268.773,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">動</text>
+<text font="BAAAAA+MeiryoUI" bbox="268.793,369.225,288.806,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">性</text>
+<text font="BAAAAA+MeiryoUI" bbox="288.826,369.225,305.937,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">は</text>
+<text font="BAAAAA+MeiryoUI" bbox="305.957,369.225,325.970,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">高</text>
+<text font="BAAAAA+MeiryoUI" bbox="325.990,369.225,342.320,389.238" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">い</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="5" bbox="10.205,291.119,138.217,323.122">
+<textline bbox="10.205,291.119,138.217,323.122">
+<text font="BAAAAA+MeiryoUI" bbox="10.205,291.119,42.208,323.122" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">国</text>
+<text font="BAAAAA+MeiryoUI" bbox="42.208,291.119,74.211,323.122" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">内</text>
+<text font="BAAAAA+MeiryoUI" bbox="74.211,291.119,106.214,323.122" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">株</text>
+<text font="BAAAAA+MeiryoUI" bbox="106.214,291.119,138.217,323.122" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">式</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="6" bbox="155.310,287.502,345.874,331.524">
+<textline bbox="155.310,311.511,345.874,331.524">
+<text font="BAAAAA+MeiryoUI" bbox="155.310,311.511,175.323,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">安</text>
+<text font="BAAAAA+MeiryoUI" bbox="175.323,311.511,195.336,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">全</text>
+<text font="BAAAAA+MeiryoUI" bbox="195.356,311.511,215.369,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">性</text>
+<text font="BAAAAA+MeiryoUI" bbox="215.389,311.511,232.500,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">は</text>
+<text font="BAAAAA+MeiryoUI" bbox="232.520,311.511,252.533,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">低</text>
+<text font="BAAAAA+MeiryoUI" bbox="252.553,311.511,262.620,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">く</text>
+<text font="BAAAAA+MeiryoUI" bbox="262.640,311.511,278.350,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">て</text>
+<text font="BAAAAA+MeiryoUI" bbox="278.370,311.511,293.600,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">も</text>
+<text font="BAAAAA+MeiryoUI" bbox="293.640,311.511,313.653,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">大</text>
+<text font="BAAAAA+MeiryoUI" bbox="313.673,311.511,328.743,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">き</text>
+<text font="BAAAAA+MeiryoUI" bbox="328.763,311.511,345.874,331.524" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">な</text>
+<text>
+</text>
+</textline>
+<textline bbox="155.310,287.502,318.496,307.515">
+<text font="BAAAAA+MeiryoUI" bbox="155.310,287.502,175.323,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">収</text>
+<text font="BAAAAA+MeiryoUI" bbox="175.323,287.502,195.336,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">益</text>
+<text font="BAAAAA+MeiryoUI" bbox="195.356,287.502,215.369,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">性</text>
+<text font="BAAAAA+MeiryoUI" bbox="215.389,287.502,231.720,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">が</text>
+<text font="BAAAAA+MeiryoUI" bbox="231.760,287.502,251.773,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">期</text>
+<text font="BAAAAA+MeiryoUI" bbox="251.793,287.502,271.806,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">待</text>
+<text font="BAAAAA+MeiryoUI" bbox="271.826,287.502,288.156,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">で</text>
+<text font="BAAAAA+MeiryoUI" bbox="288.176,287.502,303.246,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">き</text>
+<text font="BAAAAA+MeiryoUI" bbox="303.266,287.502,318.496,307.515" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">る</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="7" bbox="13.011,210.700,141.023,242.703">
+<textline bbox="13.011,210.700,141.023,242.703">
+<text font="BAAAAA+MeiryoUI" bbox="13.011,210.700,45.014,242.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">国</text>
+<text font="BAAAAA+MeiryoUI" bbox="45.014,210.700,77.017,242.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">内</text>
+<text font="BAAAAA+MeiryoUI" bbox="77.017,210.700,109.020,242.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">債</text>
+<text font="BAAAAA+MeiryoUI" bbox="109.020,210.700,141.023,242.703" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">券</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="8" bbox="159.647,208.444,329.898,252.466">
+<textline bbox="159.647,232.453,329.898,252.466">
+<text font="BAAAAA+MeiryoUI" bbox="159.647,232.453,179.660,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">収</text>
+<text font="BAAAAA+MeiryoUI" bbox="179.660,232.453,199.673,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">益</text>
+<text font="BAAAAA+MeiryoUI" bbox="199.693,232.453,219.706,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">性</text>
+<text font="BAAAAA+MeiryoUI" bbox="219.726,232.453,234.956,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">も</text>
+<text font="BAAAAA+MeiryoUI" bbox="234.996,232.453,255.009,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">少</text>
+<text font="BAAAAA+MeiryoUI" bbox="255.029,232.453,269.478,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">し</text>
+<text font="BAAAAA+MeiryoUI" bbox="269.498,232.453,285.829,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">あ</text>
+<text font="BAAAAA+MeiryoUI" bbox="285.849,232.453,298.417,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">り</text>
+<text font="BAAAAA+MeiryoUI" bbox="298.457,232.453,314.167,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">つ</text>
+<text font="BAAAAA+MeiryoUI" bbox="314.187,232.453,329.898,252.466" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">つ</text>
+<text>
+</text>
+</textline>
+<textline bbox="159.647,208.444,271.360,228.457">
+<text font="BAAAAA+MeiryoUI" bbox="159.647,208.444,179.660,228.457" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">安</text>
+<text font="BAAAAA+MeiryoUI" bbox="179.660,208.444,199.673,228.457" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">全</text>
+<text font="BAAAAA+MeiryoUI" bbox="199.693,208.444,219.706,228.457" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">性</text>
+<text font="BAAAAA+MeiryoUI" bbox="219.726,208.444,234.956,228.457" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">も</text>
+<text font="BAAAAA+MeiryoUI" bbox="234.996,208.444,255.009,228.457" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">高</text>
+<text font="BAAAAA+MeiryoUI" bbox="255.029,208.444,271.360,228.457" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="20.013">い</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="9" bbox="137.792,135.355,552.231,167.358">
+<textline bbox="137.792,135.355,552.231,167.358">
+<text font="CAAAAA+MeiryoUI-Bold" bbox="137.792,135.355,169.795,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">３</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="169.795,135.355,196.133,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">つ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="196.133,135.355,218.824,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">と</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="218.824,135.355,245.802,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">も</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="245.834,135.355,267.084,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">　</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="267.084,135.355,288.334,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">　</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="288.334,135.355,309.584,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">　</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="309.584,135.355,338.931,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">の</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="338.963,135.355,370.966,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">金</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="370.966,135.355,402.969,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">融</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="402.969,135.355,434.972,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">商</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="435.004,135.355,467.007,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">品</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="467.007,135.355,495.490,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">は</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="495.522,135.355,524.324,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">な</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="524.324,135.355,552.231,167.358" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">い</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="10" bbox="257.414,113.625,323.405,179.616">
+<textline bbox="257.414,113.625,323.405,179.616">
+<text font="BAAAAA+MeiryoUI" bbox="257.414,113.625,323.405,179.616" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="65.991">◎</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="11" bbox="15.902,70.506,662.912,113.507">
+<textline bbox="15.902,95.507,237.698,113.507">
+<text font="BAAAAA+MeiryoUI" bbox="15.902,95.507,33.902,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">＊</text>
+<text font="BAAAAA+MeiryoUI" bbox="33.902,95.507,51.902,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="51.902,95.507,69.902,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">融</text>
+<text font="BAAAAA+MeiryoUI" bbox="69.902,95.507,87.902,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">機</text>
+<text font="BAAAAA+MeiryoUI" bbox="87.902,95.507,105.902,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">関</text>
+<text font="BAAAAA+MeiryoUI" bbox="105.902,95.507,120.590,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">が</text>
+<text font="BAAAAA+MeiryoUI" bbox="120.590,95.507,138.590,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">破</text>
+<text font="BAAAAA+MeiryoUI" bbox="138.590,95.507,156.590,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">綻</text>
+<text font="BAAAAA+MeiryoUI" bbox="156.590,95.507,169.586,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">し</text>
+<text font="BAAAAA+MeiryoUI" bbox="169.586,95.507,183.716,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">た</text>
+<text font="BAAAAA+MeiryoUI" bbox="183.698,95.507,201.698,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">場</text>
+<text font="BAAAAA+MeiryoUI" bbox="201.698,95.507,219.698,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">合</text>
+<text font="BAAAAA+MeiryoUI" bbox="219.698,95.507,237.698,113.507" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">＊</text>
+<text>
+</text>
+</textline>
+<textline bbox="15.902,70.506,662.912,89.480">
+<text font="DAAAAA+Wingdings-Regular" bbox="15.902,71.480,30.194,89.480" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000"></text>
+<text> </text>
+<text font="BAAAAA+MeiryoUI" bbox="42.917,70.506,60.917,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">普</text>
+<text font="BAAAAA+MeiryoUI" bbox="60.917,70.506,78.917,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">通</text>
+<text font="BAAAAA+MeiryoUI" bbox="78.917,70.506,96.917,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="96.917,70.506,114.917,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="114.917,70.506,130.307,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">は</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="130.309,70.506,148.309,88.506" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">預</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="148.309,70.506,166.309,88.506" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">金</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="166.309,70.506,184.309,88.506" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">保</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="184.309,70.506,202.309,88.506" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">険</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="202.309,70.506,220.309,88.506" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">制</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="220.309,70.506,238.309,88.506" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">度</text>
+<text font="BAAAAA+MeiryoUI" bbox="238.309,70.506,252.439,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">に</text>
+<text font="BAAAAA+MeiryoUI" bbox="252.421,70.506,265.975,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">よ</text>
+<text font="BAAAAA+MeiryoUI" bbox="265.975,70.506,277.279,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">り</text>
+<text font="BAAAAA+MeiryoUI" bbox="277.279,70.506,295.279,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">元</text>
+<text font="BAAAAA+MeiryoUI" bbox="295.279,70.506,313.279,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">本</text>
+<text font="BAAAAA+MeiryoUI" bbox="313.342,70.506,324.520,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">1</text>
+<text font="BAAAAA+MeiryoUI" bbox="324.502,70.506,330.784,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">,</text>
+<text font="BAAAAA+MeiryoUI" bbox="330.784,70.506,341.962,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">0</text>
+<text font="BAAAAA+MeiryoUI" bbox="341.944,70.506,353.122,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">0</text>
+<text font="BAAAAA+MeiryoUI" bbox="353.104,70.506,364.282,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">0</text>
+<text font="BAAAAA+MeiryoUI" bbox="364.337,70.506,382.337,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">万</text>
+<text font="BAAAAA+MeiryoUI" bbox="382.337,70.506,400.337,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">円</text>
+<text font="BAAAAA+MeiryoUI" bbox="400.337,70.506,418.337,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">（</text>
+<text font="BAAAAA+MeiryoUI" bbox="418.337,70.506,429.515,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">1</text>
+<text font="BAAAAA+MeiryoUI" bbox="429.506,70.506,447.506,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="447.506,70.506,465.506,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">融</text>
+<text font="BAAAAA+MeiryoUI" bbox="465.506,70.506,483.506,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">機</text>
+<text font="BAAAAA+MeiryoUI" bbox="483.506,70.506,501.506,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">関</text>
+<text font="BAAAAA+MeiryoUI" bbox="501.506,70.506,515.348,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">ご</text>
+<text font="BAAAAA+MeiryoUI" bbox="515.348,70.506,526.652,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="526.670,70.506,540.800,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">に</text>
+<text font="BAAAAA+MeiryoUI" bbox="540.782,70.506,558.782,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">預</text>
+<text font="BAAAAA+MeiryoUI" bbox="558.782,70.506,576.782,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="576.782,70.506,594.782,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">者</text>
+<text font="BAAAAA+MeiryoUI" bbox="594.782,70.506,612.782,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">１</text>
+<text font="BAAAAA+MeiryoUI" bbox="612.782,70.506,630.782,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">人</text>
+<text font="BAAAAA+MeiryoUI" bbox="630.782,70.506,648.782,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">当</text>
+<text font="BAAAAA+MeiryoUI" bbox="648.782,70.506,662.912,88.506" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">た</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="12" bbox="42.917,45.504,244.571,63.504">
+<textline bbox="42.917,45.504,244.571,63.504">
+<text font="BAAAAA+MeiryoUI" bbox="42.917,45.504,54.221,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">り</text>
+<text font="BAAAAA+MeiryoUI" bbox="54.221,45.504,72.221,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">）</text>
+<text font="BAAAAA+MeiryoUI" bbox="72.221,45.504,85.775,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">ま</text>
+<text font="BAAAAA+MeiryoUI" bbox="85.775,45.504,100.463,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">で</text>
+<text font="BAAAAA+MeiryoUI" bbox="100.463,45.504,111.767,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="111.767,45.504,125.195,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">そ</text>
+<text font="BAAAAA+MeiryoUI" bbox="125.195,45.504,139.883,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">の</text>
+<text font="BAAAAA+MeiryoUI" bbox="139.883,45.504,157.883,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">利</text>
+<text font="BAAAAA+MeiryoUI" bbox="157.883,45.504,175.883,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">息</text>
+<text font="BAAAAA+MeiryoUI" bbox="175.883,45.504,193.883,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">等</text>
+<text font="BAAAAA+MeiryoUI" bbox="193.883,45.504,208.571,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">が</text>
+<text font="BAAAAA+MeiryoUI" bbox="208.571,45.504,226.571,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">保</text>
+<text font="BAAAAA+MeiryoUI" bbox="226.571,45.504,244.571,63.504" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">護</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="13" bbox="15.902,20.503,616.467,39.477">
+<textline bbox="15.902,20.503,616.467,39.477">
+<text font="DAAAAA+Wingdings-Regular" bbox="15.902,21.477,30.194,39.477" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000"></text>
+<text> </text>
+<text font="BAAAAA+MeiryoUI" bbox="42.917,20.503,60.917,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">株</text>
+<text font="BAAAAA+MeiryoUI" bbox="60.917,20.503,78.917,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">式</text>
+<text font="BAAAAA+MeiryoUI" bbox="78.917,20.503,87.917,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">・</text>
+<text font="BAAAAA+MeiryoUI" bbox="87.899,20.503,105.899,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">債</text>
+<text font="BAAAAA+MeiryoUI" bbox="105.899,20.503,123.899,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">券</text>
+<text font="BAAAAA+MeiryoUI" bbox="123.899,20.503,139.289,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">は</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="139.323,20.503,157.323,38.503" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">分</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="157.323,20.503,175.323,38.503" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">別</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="175.323,20.503,193.323,38.503" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">管</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="193.323,20.503,211.323,38.503" colourspace="DeviceRGB" ncolour="(1.0, 0.0, 0.0)" size="18.000">理</text>
+<text font="BAAAAA+MeiryoUI" bbox="211.323,20.503,222.627,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="222.627,20.503,240.627,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="240.627,20.503,258.627,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="258.627,20.503,276.627,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">者</text>
+<text font="BAAAAA+MeiryoUI" bbox="276.627,20.503,294.627,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">保</text>
+<text font="BAAAAA+MeiryoUI" bbox="294.627,20.503,312.627,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">護</text>
+<text font="BAAAAA+MeiryoUI" bbox="312.627,20.503,330.627,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">基</text>
+<text font="BAAAAA+MeiryoUI" bbox="330.627,20.503,348.627,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">金</text>
+<text font="BAAAAA+MeiryoUI" bbox="348.627,20.503,362.757,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">に</text>
+<text font="BAAAAA+MeiryoUI" bbox="362.739,20.503,376.293,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">よ</text>
+<text font="BAAAAA+MeiryoUI" bbox="376.293,20.503,389.991,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">る</text>
+<text font="BAAAAA+MeiryoUI" bbox="389.991,20.503,407.991,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">補</text>
+<text font="BAAAAA+MeiryoUI" bbox="407.991,20.503,425.991,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">償</text>
+<text font="BAAAAA+MeiryoUI" bbox="425.991,20.503,440.679,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">の</text>
+<text font="BAAAAA+MeiryoUI" bbox="440.679,20.503,458.679,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">二</text>
+<text font="BAAAAA+MeiryoUI" bbox="458.679,20.503,476.679,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">重</text>
+<text font="BAAAAA+MeiryoUI" bbox="476.679,20.503,491.367,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">の</text>
+<text font="BAAAAA+MeiryoUI" bbox="491.367,20.503,509.367,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">制</text>
+<text font="BAAAAA+MeiryoUI" bbox="509.367,20.503,527.367,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">度</text>
+<text font="BAAAAA+MeiryoUI" bbox="527.367,20.503,541.497,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">に</text>
+<text font="BAAAAA+MeiryoUI" bbox="541.479,20.503,555.033,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">よ</text>
+<text font="BAAAAA+MeiryoUI" bbox="555.033,20.503,566.337,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">っ</text>
+<text font="BAAAAA+MeiryoUI" bbox="566.337,20.503,580.467,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">て</text>
+<text font="BAAAAA+MeiryoUI" bbox="580.467,20.503,598.467,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">保</text>
+<text font="BAAAAA+MeiryoUI" bbox="598.467,20.503,616.467,38.503" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="18.000">護</text>
+<text>
+</text>
+</textline>
+</textbox>
+<rect linewidth="0" bbox="0.000,0.028,959.981,540.000" />
+<rect linewidth="0" bbox="0.000,0.000,960.009,540.000" />
+<figure name="Im4" bbox="0.000,476.929,738.794,506.835">
+<image width="738" height="29" />
+</figure>
+<figure name="Im5" bbox="745.228,482.712,924.548,525.430">
+<image width="179" height="42" />
+</figure>
+<figure name="Im6" bbox="0.000,-9.496,959.981,25.512">
+<image width="959" height="35" />
+</figure>
+<curve linewidth="0" bbox="125.263,192.472,686.721,267.307" pts="125.263,267.307,125.263,267.307,686.721,267.307,686.721,267.307,686.721,192.472,686.721,192.472,125.263,192.472,125.263,192.472,125.263,267.307"/>
+<curve linewidth="0" bbox="125.263,273.373,686.721,349.058" pts="125.263,349.058,125.263,349.058,686.721,349.058,686.721,349.058,686.721,273.373,686.721,273.373,125.263,273.373,125.263,273.373,125.263,349.058"/>
+<curve linewidth="0" bbox="125.263,356.117,686.721,430.951" pts="125.263,430.951,125.263,430.951,686.721,430.951,686.721,430.951,686.721,356.117,686.721,356.117,125.263,356.117,125.263,356.117,125.263,430.951"/>
+<figure name="Tr78" bbox="596.948,155.906,1307.112,632.695">
+<figure name="Im77" bbox="596.948,155.962,710.135,476.816">
+<image width="113" height="320" />
+</figure>
+</figure>
+<figure name="Tr80" bbox="599.216,183.628,1281.657,658.148">
+<curve linewidth="0" bbox="599.216,183.657,682.413,474.520" pts="640.828,183.657,599.216,183.657,599.216,474.520,682.413,474.520,682.413,183.657,640.828,183.657"/>
+</figure>
+<figure name="Tr84" bbox="480.387,155.906,1073.281,632.695">
+<figure name="Im83" bbox="480.387,155.962,592.866,476.816">
+<image width="112" height="320" />
+</figure>
+</figure>
+<figure name="Tr86" bbox="482.655,183.628,1047.827,658.148">
+<curve linewidth="0" bbox="482.655,183.657,565.143,474.520" pts="523.899,183.657,482.655,183.657,482.655,474.520,565.143,474.520,565.143,183.657,523.899,183.657"/>
+</figure>
+<figure name="Tr90" bbox="353.792,155.906,826.101,632.695">
+<figure name="Im89" bbox="353.792,155.962,472.280,476.816">
+<image width="118" height="320" />
+</figure>
+</figure>
+<figure name="Tr92" bbox="356.060,183.628,800.646,658.148">
+<curve linewidth="0" bbox="356.060,183.657,444.557,474.520" pts="400.309,183.657,356.060,183.657,356.060,474.520,444.557,474.520,444.557,183.657,400.309,183.657"/>
+</figure>
+<curve linewidth="0" bbox="2.920,272.920,146.806,347.754" pts="2.920,335.282,2.920,335.282,4.592,341.518,9.156,346.082,15.392,347.754,134.306,347.754,134.306,347.754,140.542,346.082,145.106,341.518,146.778,335.282,146.778,335.282,146.806,285.420,146.806,285.420,145.134,279.184,140.570,274.620,134.334,272.948,15.392,272.920,15.392,272.920,9.156,274.592,4.592,279.156,2.920,285.392,2.920,335.282"/>
+<curve linewidth="0" bbox="3.628,192.472,147.798,267.307" pts="3.628,254.835,3.628,254.835,5.301,261.071,9.865,265.635,16.101,267.307,135.298,267.307,135.298,267.307,141.534,265.635,146.098,261.071,147.770,254.835,147.770,254.835,147.798,204.973,147.798,204.973,146.126,198.737,141.562,194.173,135.326,192.501,16.101,192.472,16.101,192.472,9.865,194.145,5.301,198.709,3.628,204.945,3.628,254.835"/>
+<curve linewidth="0" bbox="3.628,356.258,147.515,431.093" pts="3.628,418.620,3.628,418.620,5.301,424.857,9.865,429.420,16.101,431.093,135.014,431.093,135.014,431.093,141.250,429.420,145.814,424.857,147.487,418.620,147.487,418.620,147.515,368.759,147.515,368.759,145.843,362.523,141.279,357.959,135.043,356.287,16.101,356.258,16.101,356.258,9.865,357.931,5.301,362.494,3.628,368.731,3.628,418.620"/>
+<curve linewidth="0" bbox="11.991,131.584,678.472,177.591" pts="345.231,131.584,11.991,131.584,11.991,177.591,678.472,177.591,678.472,131.584,345.231,131.584"/>
+<figure name="Im117" bbox="351.780,364.394,688.111,423.865">
+<image width="336" height="59" />
+</figure>
+<figure name="Im119" bbox="362.183,280.687,683.433,340.980">
+<image width="321" height="60" />
+</figure>
+<figure name="Im121" bbox="362.183,201.798,686.693,259.398">
+<image width="324" height="57" />
+</figure>
+<curve linewidth="0" bbox="6.917,18.709,678.501,122.655" pts="6.945,116.220,6.945,116.220,7.795,119.424,10.148,121.776,13.380,122.655,672.066,122.627,672.066,122.627,675.269,121.776,677.622,119.424,678.501,116.192,678.501,116.192,678.501,25.143,678.501,25.143,677.650,21.940,675.298,19.587,672.066,18.709,13.351,18.709,13.351,18.709,10.148,19.559,7.795,21.912,6.917,25.143,6.945,116.220"/>
+<layout>
+<textgroup bbox="5.811,20.503,676.973,515.325">
+<textgroup bbox="5.811,208.444,676.973,515.325">
+<textgroup bbox="366.690,438.122,676.973,462.131">
+<textbox id="0" bbox="366.690,438.122,438.693,462.131" />
+<textbox id="1" bbox="489.373,438.122,676.973,462.131" />
+</textgroup>
+<textgroup bbox="5.811,208.444,345.874,515.325">
+<textbox id="2" bbox="5.811,487.319,242.910,515.325" />
+<textgroup bbox="8.646,208.444,345.874,413.247">
+<textgroup bbox="8.646,369.225,342.320,413.247">
+<textbox id="3" bbox="8.646,372.983,136.658,404.986" />
+<textbox id="4" bbox="155.339,369.225,342.320,413.247" />
+</textgroup>
+<textgroup bbox="10.205,208.444,345.874,331.524">
+<textgroup bbox="10.205,287.502,345.874,331.524">
+<textbox id="5" bbox="10.205,291.119,138.217,323.122" />
+<textbox id="6" bbox="155.310,287.502,345.874,331.524" />
+</textgroup>
+<textgroup bbox="13.011,208.444,329.898,252.466">
+<textbox id="7" bbox="13.011,210.700,141.023,242.703" />
+<textbox id="8" bbox="159.647,208.444,329.898,252.466" />
+</textgroup>
+</textgroup>
+</textgroup>
+</textgroup>
+</textgroup>
+<textgroup bbox="15.902,20.503,662.912,179.616">
+<textgroup bbox="137.792,113.625,552.231,179.616">
+<textbox id="9" bbox="137.792,135.355,552.231,167.358" />
+<textbox id="10" bbox="257.414,113.625,323.405,179.616" />
+</textgroup>
+<textgroup bbox="15.902,20.503,662.912,113.507">
+<textbox id="11" bbox="15.902,70.506,662.912,113.507" />
+<textgroup bbox="15.902,20.503,616.467,63.504">
+<textbox id="12" bbox="42.917,45.504,244.571,63.504" />
+<textbox id="13" bbox="15.902,20.503,616.467,39.477" />
+</textgroup>
+</textgroup>
+</textgroup>
+</textgroup>
+</layout>
+</page>
+<page id="3" bbox="0.000,0.000,960.009,540.000" rotate="0">
+<textbox id="0" bbox="7.200,488.934,207.107,516.940">
+<textline bbox="7.200,488.934,207.107,516.940">
+<text font="BAAAAA+MeiryoUI" bbox="7.200,488.934,25.796,516.940" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">　</text>
+<text font="BAAAAA+MeiryoUI" bbox="25.768,488.934,53.774,516.940" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="53.718,488.934,81.724,516.940" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="81.668,488.934,109.674,516.940" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">信</text>
+<text font="BAAAAA+MeiryoUI" bbox="109.646,488.934,137.652,516.940" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">託</text>
+<text font="BAAAAA+MeiryoUI" bbox="137.596,488.934,155.184,516.940" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="155.184,488.934,179.129,516.940" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">は</text>
+<text font="BAAAAA+MeiryoUI" bbox="179.101,488.934,207.107,516.940" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">？</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="1" bbox="25.228,425.736,618.843,457.739">
+<textline bbox="25.228,425.736,618.843,457.739">
+<text font="BAAAAA+MeiryoUI" bbox="25.228,425.736,57.231,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">株</text>
+<text font="BAAAAA+MeiryoUI" bbox="57.231,425.736,89.234,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">式</text>
+<text font="BAAAAA+MeiryoUI" bbox="89.234,425.736,116.341,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">や</text>
+<text font="BAAAAA+MeiryoUI" bbox="116.373,425.736,148.376,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">債</text>
+<text font="BAAAAA+MeiryoUI" bbox="148.408,425.736,180.411,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">券</text>
+<text font="BAAAAA+MeiryoUI" bbox="180.411,425.736,207.773,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="207.805,425.736,227.903,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">ど</text>
+<text font="BAAAAA+MeiryoUI" bbox="227.935,425.736,252.033,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">を</text>
+<text font="BAAAAA+MeiryoUI" bbox="252.065,425.736,284.068,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">組</text>
+<text font="BAAAAA+MeiryoUI" bbox="284.068,425.736,312.423,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">み</text>
+<text font="BAAAAA+MeiryoUI" bbox="312.455,425.736,344.458,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">合</text>
+<text font="BAAAAA+MeiryoUI" bbox="344.490,425.736,371.596,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">わ</text>
+<text font="BAAAAA+MeiryoUI" bbox="371.628,425.736,398.735,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">せ</text>
+<text font="BAAAAA+MeiryoUI" bbox="398.767,425.736,423.889,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">た</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="424.233,425.736,452.972,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">パ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="453.004,425.736,473.870,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">ッ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="473.870,425.736,499.632,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">ケ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="499.664,425.736,527.859,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">ー</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="527.891,425.736,554.837,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">ジ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="554.837,425.736,586.840,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">商</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="586.840,425.736,618.843,457.739" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="32.003">品</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="2" bbox="204.973,299.710,589.144,387.698">
+<textline bbox="204.973,347.701,565.106,387.698">
+<text font="BAAAAA+MeiryoUI" bbox="204.973,347.701,238.850,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">パ</text>
+<text font="BAAAAA+MeiryoUI" bbox="238.810,347.701,261.929,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">ッ</text>
+<text font="BAAAAA+MeiryoUI" bbox="261.929,347.701,293.326,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">ケ</text>
+<text font="BAAAAA+MeiryoUI" bbox="293.286,347.701,325.924,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">ー</text>
+<text font="BAAAAA+MeiryoUI" bbox="325.924,347.701,359.201,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">ジ</text>
+<text font="BAAAAA+MeiryoUI" bbox="359.161,347.701,399.158,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">商</text>
+<text font="BAAAAA+MeiryoUI" bbox="399.118,347.701,439.115,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">品</text>
+<text font="BAAAAA+MeiryoUI" bbox="439.075,347.701,473.273,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="473.273,347.701,505.910,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">の</text>
+<text font="BAAAAA+MeiryoUI" bbox="505.910,347.701,538.548,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">で</text>
+<text font="BAAAAA+MeiryoUI" bbox="538.548,347.701,565.106,387.698" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">、</text>
+<text>
+</text>
+</textline>
+<textline bbox="204.973,299.710,589.144,339.707">
+<text font="BAAAAA+MeiryoUI" bbox="204.973,299.710,244.970,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">分</text>
+<text font="BAAAAA+MeiryoUI" bbox="244.930,299.710,284.927,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">散</text>
+<text font="BAAAAA+MeiryoUI" bbox="284.887,299.710,324.884,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="324.844,299.710,364.841,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="364.801,299.710,397.439,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">で</text>
+<text font="BAAAAA+MeiryoUI" bbox="397.439,299.710,420.837,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">リ</text>
+<text font="BAAAAA+MeiryoUI" bbox="420.837,299.710,451.435,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">ス</text>
+<text font="BAAAAA+MeiryoUI" bbox="451.435,299.710,479.072,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">ク</text>
+<text font="BAAAAA+MeiryoUI" bbox="479.072,299.710,509.190,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">を</text>
+<text font="BAAAAA+MeiryoUI" bbox="509.190,299.710,549.187,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">軽</text>
+<text font="BAAAAA+MeiryoUI" bbox="549.147,299.710,589.144,339.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="39.997">減</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="3" bbox="198.425,189.202,607.701,233.196">
+<textline bbox="198.425,189.202,607.701,233.196">
+<text font="BAAAAA+MeiryoUI" bbox="198.425,189.202,242.419,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">専</text>
+<text font="BAAAAA+MeiryoUI" bbox="242.419,189.202,286.413,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">門</text>
+<text font="BAAAAA+MeiryoUI" bbox="286.413,189.202,330.407,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">家</text>
+<text font="BAAAAA+MeiryoUI" bbox="330.407,189.202,364.942,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">に</text>
+<text font="BAAAAA+MeiryoUI" bbox="364.942,189.202,408.936,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">運</text>
+<text font="BAAAAA+MeiryoUI" bbox="408.936,189.202,452.930,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">用</text>
+<text font="BAAAAA+MeiryoUI" bbox="452.930,189.202,490.545,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">は</text>
+<text font="BAAAAA+MeiryoUI" bbox="490.545,189.202,526.444,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">お</text>
+<text font="BAAAAA+MeiryoUI" bbox="526.444,189.202,570.438,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">任</text>
+<text font="BAAAAA+MeiryoUI" bbox="570.438,189.202,607.701,233.196" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="43.994">せ</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="4" bbox="199.871,33.435,640.404,129.870">
+<textline bbox="199.871,101.864,390.508,129.870">
+<text font="BAAAAA+MeiryoUI" bbox="199.871,101.864,227.877,129.870" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">少</text>
+<text font="BAAAAA+MeiryoUI" bbox="227.821,101.864,255.827,129.870" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">額</text>
+<text font="BAAAAA+MeiryoUI" bbox="255.771,101.864,278.624,129.870" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">で</text>
+<text font="BAAAAA+MeiryoUI" bbox="278.624,101.864,306.630,129.870" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="306.574,101.864,334.580,129.870" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="334.524,101.864,362.530,129.870" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">可</text>
+<text font="BAAAAA+MeiryoUI" bbox="362.502,101.864,390.508,129.870" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">能</text>
+<text>
+</text>
+</textline>
+<textline bbox="199.871,67.054,640.404,95.060">
+<text font="BAAAAA+MeiryoUI" bbox="199.871,67.054,227.877,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">積</text>
+<text font="BAAAAA+MeiryoUI" bbox="227.821,67.054,255.827,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">立</text>
+<text font="BAAAAA+MeiryoUI" bbox="255.771,67.054,283.777,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">投</text>
+<text font="BAAAAA+MeiryoUI" bbox="283.749,67.054,311.755,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="311.699,67.054,335.644,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">な</text>
+<text font="BAAAAA+MeiryoUI" bbox="335.616,67.054,354.968,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">ら</text>
+<text font="BAAAAA+MeiryoUI" bbox="354.940,67.054,373.536,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">、</text>
+<text font="BAAAAA+MeiryoUI" bbox="373.521,67.054,390.913,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">5</text>
+<text font="BAAAAA+MeiryoUI" bbox="390.885,67.054,408.276,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">0</text>
+<text font="BAAAAA+MeiryoUI" bbox="408.276,67.054,425.668,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">0</text>
+<text font="BAAAAA+MeiryoUI" bbox="425.622,67.054,453.628,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">円</text>
+<text font="BAAAAA+MeiryoUI" bbox="453.572,67.054,477.293,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">や</text>
+<text font="BAAAAA+MeiryoUI" bbox="477.269,67.054,494.661,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">1</text>
+<text font="BAAAAA+MeiryoUI" bbox="494.633,67.054,504.407,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">,</text>
+<text font="BAAAAA+MeiryoUI" bbox="504.379,67.054,521.771,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">0</text>
+<text font="BAAAAA+MeiryoUI" bbox="521.771,67.054,539.162,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">0</text>
+<text font="BAAAAA+MeiryoUI" bbox="539.162,67.054,556.554,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">0</text>
+<text font="BAAAAA+MeiryoUI" bbox="556.498,67.054,584.504,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">円</text>
+<text font="BAAAAA+MeiryoUI" bbox="584.448,67.054,612.454,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">程</text>
+<text font="BAAAAA+MeiryoUI" bbox="612.398,67.054,640.404,95.060" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">度</text>
+<text>
+</text>
+</textline>
+<textline bbox="199.871,33.435,360.653,61.441">
+<text font="BAAAAA+MeiryoUI" bbox="199.871,33.435,222.724,61.441" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">か</text>
+<text font="BAAAAA+MeiryoUI" bbox="222.696,33.435,242.048,61.441" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">ら</text>
+<text font="BAAAAA+MeiryoUI" bbox="242.020,33.435,264.873,61.441" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">の</text>
+<text font="BAAAAA+MeiryoUI" bbox="264.845,33.435,292.851,61.441" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">場</text>
+<text font="BAAAAA+MeiryoUI" bbox="292.795,33.435,320.801,61.441" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">合</text>
+<text font="BAAAAA+MeiryoUI" bbox="320.773,33.435,342.085,61.441" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">も</text>
+<text font="BAAAAA+MeiryoUI" bbox="342.057,33.435,360.653,61.441" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">。</text>
+<text>
+</text>
+</textline>
+</textbox>
+<rect linewidth="0" bbox="0.000,0.028,959.981,540.000" />
+<rect linewidth="0" bbox="0.000,0.000,960.009,540.000" />
+<figure name="Im4" bbox="0.000,476.929,738.794,506.835">
+<image width="738" height="29" />
+</figure>
+<figure name="Im5" bbox="745.228,482.712,924.548,525.430">
+<image width="179" height="42" />
+</figure>
+<figure name="Im6" bbox="0.000,-9.496,959.981,25.512">
+<image width="959" height="35" />
+</figure>
+<curve linewidth="0" bbox="10.743,19.616,678.472,140.428" pts="10.743,120.302,10.743,120.302,13.436,130.365,20.806,137.735,30.869,140.428,658.318,140.428,658.318,140.428,668.381,137.735,675.751,130.365,678.444,120.302,678.444,120.302,678.472,39.770,678.472,39.770,675.780,29.707,668.409,22.337,658.346,19.644,30.869,19.616,30.869,19.616,20.806,22.309,13.436,29.679,10.743,39.742,10.743,120.302"/>
+<curve linewidth="0" bbox="12.472,152.249,678.614,269.915" pts="12.501,250.299,12.501,250.299,15.137,260.107,22.309,267.279,32.117,269.915,658.998,269.887,658.998,269.887,668.806,267.250,675.978,260.079,678.614,250.271,678.614,250.271,678.614,171.865,678.614,171.865,675.978,162.057,668.806,154.885,658.998,152.249,32.088,152.249,32.088,152.249,22.280,154.885,15.109,162.057,12.472,171.865,12.501,250.299"/>
+<curve linewidth="0" bbox="12.472,281.934,678.614,410.173" pts="12.501,388.800,12.501,388.800,15.364,399.487,23.187,407.310,33.874,410.173,657.241,410.145,657.241,410.145,667.928,407.282,675.751,399.458,678.614,388.772,678.614,388.772,678.614,303.307,678.614,303.307,675.751,292.620,667.928,284.797,657.241,281.934,33.846,281.934,33.846,281.934,23.159,284.797,15.335,292.620,12.472,303.307,12.501,388.800"/>
+<figure name="Im169" bbox="30.501,159.449,153.014,258.265">
+<image width="122" height="98" />
+</figure>
+<figure name="Im171" bbox="32.230,53.405,165.260,120.671">
+<image width="133" height="67" />
+</figure>
+<figure name="Im173" bbox="39.203,286.611,151.313,407.197">
+<image width="112" height="120" />
+</figure>
+<layout>
+<textgroup bbox="7.200,33.435,640.404,516.940">
+<textgroup bbox="7.200,425.736,618.843,516.940">
+<textbox id="0" bbox="7.200,488.934,207.107,516.940" />
+<textbox id="1" bbox="25.228,425.736,618.843,457.739" />
+</textgroup>
+<textgroup bbox="198.425,33.435,640.404,387.698">
+<textbox id="2" bbox="204.973,299.710,589.144,387.698" />
+<textgroup bbox="198.425,33.435,640.404,233.196">
+<textbox id="3" bbox="198.425,189.202,607.701,233.196" />
+<textbox id="4" bbox="199.871,33.435,640.404,129.870" />
+</textgroup>
+</textgroup>
+</textgroup>
+</layout>
+</page>
+<page id="4" bbox="0.000,0.000,960.009,540.000" rotate="0">
+<textbox id="0" bbox="32.173,493.640,261.486,521.646">
+<textline bbox="32.173,493.640,261.486,521.646">
+<text font="BAAAAA+MeiryoUI" bbox="32.173,493.640,53.262,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">ま</text>
+<text font="BAAAAA+MeiryoUI" bbox="53.234,493.640,70.821,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">と</text>
+<text font="BAAAAA+MeiryoUI" bbox="70.821,493.640,93.674,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">め</text>
+<text font="BAAAAA+MeiryoUI" bbox="93.674,493.640,121.680,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">（</text>
+<text font="BAAAAA+MeiryoUI" bbox="121.624,493.640,149.630,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">資</text>
+<text font="BAAAAA+MeiryoUI" bbox="149.574,493.640,177.580,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">産</text>
+<text font="BAAAAA+MeiryoUI" bbox="177.552,493.640,205.558,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">運</text>
+<text font="BAAAAA+MeiryoUI" bbox="205.502,493.640,233.508,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">用</text>
+<text font="BAAAAA+MeiryoUI" bbox="233.480,493.640,261.486,521.646" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="28.006">）</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="1" bbox="12.331,427.707,472.677,465.712">
+<textline bbox="12.331,427.707,472.677,465.712">
+<text font="DAAAAA+Wingdings-Regular" bbox="12.331,429.712,40.591,465.712" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000"></text>
+<text> </text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="57.345,427.707,93.345,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">金</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="93.345,427.707,129.345,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">融</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="129.345,427.707,165.345,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">資</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="165.345,427.707,201.345,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">産</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="201.345,427.707,234.357,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">の</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="234.357,427.707,270.357,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">運</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="270.357,427.707,306.357,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">用</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="306.357,427.707,339.369,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">の</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="339.369,427.707,375.369,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">手</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="375.369,427.707,411.369,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">段</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="411.369,427.707,440.637,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">に</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="440.637,427.707,472.677,463.707" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">は</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="2" bbox="54.822,347.714,526.962,423.711">
+<textline bbox="54.822,387.711,496.758,423.711">
+<text font="CAAAAA+MeiryoUI-Bold" bbox="54.822,387.711,90.822,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">貯</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="90.822,387.711,121.926,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">め</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="121.926,387.711,150.834,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">る</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="150.834,387.711,176.934,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">こ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="176.934,387.711,202.458,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">と</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="202.458,387.711,231.726,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">を</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="231.726,387.711,267.726,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">重</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="267.726,387.711,303.726,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">視</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="303.726,387.711,334.326,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">す</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="334.326,387.711,363.234,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">る</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="363.234,387.711,399.234,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">預</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="399.234,387.711,435.234,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">貯</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="435.234,387.711,471.234,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">金</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="471.234,387.711,496.758,423.711" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">と</text>
+<text>
+</text>
+</textline>
+<textline bbox="54.822,347.714,526.962,383.714">
+<text font="CAAAAA+MeiryoUI-Bold" bbox="54.822,347.714,86.862,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ふ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="86.862,347.714,116.814,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">や</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="116.814,347.714,147.414,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">す</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="147.414,347.714,173.514,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">こ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="173.514,347.714,199.038,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">と</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="199.038,347.714,228.306,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">を</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="228.306,347.714,264.306,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">重</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="264.306,347.714,300.306,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">視</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="300.306,347.714,330.906,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">す</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="330.906,347.714,359.814,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">る</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="359.814,347.714,395.814,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">投</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="395.814,347.714,431.814,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">資</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="431.814,347.714,465.690,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">が</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="465.690,347.714,498.054,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">あ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="498.054,347.714,526.962,383.714" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">る</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="3" bbox="12.359,285.380,654.217,323.385">
+<textline bbox="12.359,285.380,654.217,323.385">
+<text font="DAAAAA+Wingdings-Regular" bbox="12.359,287.385,40.619,323.385" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000"></text>
+<text> </text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="57.373,285.380,93.373,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">金</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="93.373,285.380,129.373,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">融</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="129.373,285.380,161.413,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">は</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="161.413,285.380,197.413,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">経</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="197.413,285.380,233.413,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">済</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="233.413,285.380,269.413,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">成</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="269.413,285.380,305.413,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">長</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="305.413,285.380,335.365,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">や</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="335.365,285.380,371.365,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">生</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="371.365,285.380,407.365,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">活</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="407.365,285.380,436.633,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">を</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="436.633,285.380,472.633,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">豊</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="472.633,285.380,504.133,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">か</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="504.133,285.380,533.401,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">に</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="533.401,285.380,564.001,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">す</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="564.001,285.380,592.909,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">る</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="592.909,285.380,622.177,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">に</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="622.177,285.380,654.217,321.380" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">は</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="4" bbox="57.373,242.180,282.589,278.180">
+<textline bbox="57.373,242.180,282.589,278.180">
+<text font="CAAAAA+MeiryoUI-Bold" bbox="57.373,242.180,93.373,278.180" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">欠</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="93.373,242.180,124.873,278.180" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">か</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="124.873,242.180,155.437,278.180" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">せ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="155.437,242.180,187.837,278.180" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">な</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="187.837,242.180,219.229,278.180" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">い</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="219.229,242.180,249.577,278.180" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">も</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="249.577,242.180,282.589,278.180" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">の</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="5" bbox="12.359,132.111,606.935,213.316">
+<textline bbox="12.359,175.311,583.261,213.316">
+<text font="DAAAAA+Wingdings-Regular" bbox="12.359,177.316,40.619,213.316" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000"></text>
+<text> </text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="57.373,175.311,93.373,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">投</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="93.373,175.311,129.373,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">資</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="129.373,175.311,162.385,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">の</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="162.385,175.311,192.409,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">た</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="192.409,175.311,223.513,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">め</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="223.513,175.311,256.525,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">の</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="256.525,175.311,292.525,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">商</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="292.525,175.311,328.525,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">品</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="328.525,175.311,357.793,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">に</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="357.793,175.311,389.833,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">は</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="389.833,175.311,425.833,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">株</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="425.833,175.311,461.833,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">式</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="461.833,175.311,485.737,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">、</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="485.737,175.311,521.737,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">債</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="521.737,175.311,557.737,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">券</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="557.737,175.311,583.261,211.311" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">と</text>
+<text>
+</text>
+</textline>
+<textline bbox="12.359,132.111,606.935,168.111">
+<text font="CAAAAA+MeiryoUI-Bold" bbox="12.359,132.111,36.263,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">　</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="36.263,132.111,48.215,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000"> </text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="48.215,132.111,75.503,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">そ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="75.503,132.111,105.635,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">れ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="105.635,132.111,134.903,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">を</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="134.903,132.111,167.231,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">パ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="167.231,132.111,190.703,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ッ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="190.703,132.111,219.683,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ケ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="219.683,132.111,251.399,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ー</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="251.399,132.111,281.711,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ジ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="281.711,132.111,310.979,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">に</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="310.979,132.111,337.763,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">し</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="337.763,132.111,367.787,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">た</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="367.787,132.111,403.787,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">投</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="403.787,132.111,439.787,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">資</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="439.787,132.111,475.787,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">信</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="475.787,132.111,511.787,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">託</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="511.787,132.111,545.663,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">が</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="545.663,132.111,578.027,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">あ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="578.027,132.111,606.935,168.111" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">る</text>
+<text>
+</text>
+</textline>
+</textbox>
+<textbox id="6" bbox="12.359,24.989,603.241,106.194">
+<textline bbox="12.359,68.189,603.241,106.194">
+<text font="DAAAAA+Wingdings-Regular" bbox="12.359,70.194,40.619,106.194" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000"></text>
+<text> </text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="57.373,68.189,86.425,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ロ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="86.425,68.189,118.141,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ー</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="118.141,68.189,143.377,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">リ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="143.377,68.189,172.753,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ス</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="172.753,68.189,201.841,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ク</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="201.841,68.189,220.561,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">・</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="220.561,68.189,251.233,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ハ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="251.233,68.189,280.465,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">イ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="280.465,68.189,305.701,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">リ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="305.701,68.189,334.537,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">タ</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="334.537,68.189,366.253,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ー</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="366.253,68.189,394.189,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">ン</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="394.189,68.189,427.201,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">の</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="427.201,68.189,463.201,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">金</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="463.201,68.189,499.201,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">融</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="499.201,68.189,535.201,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">商</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="535.201,68.189,571.201,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">品</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="571.201,68.189,603.241,104.189" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">は</text>
+<text>
+</text>
+</textline>
+<textline bbox="12.359,24.989,210.791,60.989">
+<text font="CAAAAA+MeiryoUI-Bold" bbox="12.359,24.989,36.263,60.989" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">　</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="36.263,24.989,48.215,60.989" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000"> </text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="48.215,24.989,84.215,60.989" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">存</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="84.215,24.989,120.215,60.989" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">在</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="120.215,24.989,146.999,60.989" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">し</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="146.999,24.989,179.399,60.989" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">な</text>
+<text font="CAAAAA+MeiryoUI-Bold" bbox="179.399,24.989,210.791,60.989" colourspace="DeviceRGB" ncolour="(0.0, 0.0, 0.0)" size="36.000">い</text>
+<text>
+</text>
+</textline>
+</textbox>
+<rect linewidth="0" bbox="0.000,0.028,959.981,540.000" />
+<rect linewidth="0" bbox="0.000,0.000,960.009,540.000" />
+<figure name="Im4" bbox="0.000,476.929,738.794,506.835">
+<image width="738" height="29" />
+</figure>
+<figure name="Im5" bbox="745.228,482.712,924.548,525.430">
+<image width="179" height="42" />
+</figure>
+<figure name="Im6" bbox="0.000,-9.496,959.981,25.512">
+<image width="959" height="35" />
+</figure>
+<figure name="Tr188" bbox="5.244,343.134,683.716,814.707">
+<curve linewidth="0" bbox="5.244,343.162,678.444,471.572" pts="341.858,343.162,5.244,343.162,5.244,471.572,678.444,471.572,678.444,343.162,341.858,343.162"/>
+</figure>
+<figure name="Tr197" bbox="5.272,127.871,682.043,350.250">
+<curve linewidth="0" bbox="5.272,127.899,676.743,222.378" pts="341.008,127.899,5.272,127.899,5.272,222.378,676.743,222.378,676.743,127.899,341.008,127.899"/>
+</figure>
+<figure name="Tr205" bbox="5.272,237.940,682.043,570.388">
+<curve linewidth="0" bbox="5.272,237.969,676.743,332.447" pts="341.008,237.969,5.272,237.969,5.272,332.447,676.743,332.447,676.743,237.969,341.008,237.969"/>
+</figure>
+<figure name="Tr212" bbox="5.272,20.750,682.043,136.008">
+<curve linewidth="0" bbox="5.272,20.778,676.743,115.257" pts="341.008,20.778,5.272,20.778,5.272,115.257,676.743,115.257,676.743,20.778,341.008,20.778"/>
+</figure>
+<layout>
+<textgroup bbox="12.331,24.989,654.217,521.646">
+<textgroup bbox="12.331,347.714,526.962,521.646">
+<textbox id="0" bbox="32.173,493.640,261.486,521.646" />
+<textgroup bbox="12.331,347.714,526.962,465.712">
+<textbox id="1" bbox="12.331,427.707,472.677,465.712" />
+<textbox id="2" bbox="54.822,347.714,526.962,423.711" />
+</textgroup>
+</textgroup>
+<textgroup bbox="12.359,24.989,654.217,323.385">
+<textgroup bbox="12.359,242.180,654.217,323.385">
+<textbox id="3" bbox="12.359,285.380,654.217,323.385" />
+<textbox id="4" bbox="57.373,242.180,282.589,278.180" />
+</textgroup>
+<textgroup bbox="12.359,24.989,606.935,213.316">
+<textbox id="5" bbox="12.359,132.111,606.935,213.316" />
+<textbox id="6" bbox="12.359,24.989,603.241,106.194" />
+</textgroup>
+</textgroup>
+</textgroup>
+</layout>
+</page>
+</pages>
