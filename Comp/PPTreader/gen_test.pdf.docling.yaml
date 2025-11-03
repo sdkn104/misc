@@ -1,0 +1,5403 @@
+body:
+  children:
+  - $ref: '#/texts/0'
+  - $ref: '#/texts/1'
+  - $ref: '#/texts/2'
+  - $ref: '#/pictures/0'
+  - $ref: '#/groups/0'
+  - $ref: '#/texts/9'
+  - $ref: '#/texts/10'
+  - $ref: '#/texts/11'
+  - $ref: '#/texts/12'
+  - $ref: '#/texts/13'
+  - $ref: '#/texts/14'
+  - $ref: '#/texts/15'
+  - $ref: '#/texts/16'
+  - $ref: '#/texts/17'
+  - $ref: '#/groups/1'
+  - $ref: '#/texts/19'
+  - $ref: '#/texts/20'
+  - $ref: '#/texts/21'
+  - $ref: '#/texts/22'
+  - $ref: '#/texts/23'
+  - $ref: '#/texts/24'
+  - $ref: '#/pictures/1'
+  - $ref: '#/texts/46'
+  - $ref: '#/texts/47'
+  - $ref: '#/texts/48'
+  - $ref: '#/texts/49'
+  - $ref: '#/groups/16'
+  - $ref: '#/texts/53'
+  - $ref: '#/texts/54'
+  - $ref: '#/texts/55'
+  - $ref: '#/texts/56'
+  - $ref: '#/groups/17'
+  - $ref: '#/texts/60'
+  - $ref: '#/texts/61'
+  - $ref: '#/groups/18'
+  - $ref: '#/groups/19'
+  - $ref: '#/texts/66'
+  - $ref: '#/texts/67'
+  - $ref: '#/texts/68'
+  - $ref: '#/pictures/2'
+  - $ref: '#/texts/177'
+  - $ref: '#/texts/178'
+  - $ref: '#/texts/179'
+  - $ref: '#/texts/180'
+  - $ref: '#/texts/181'
+  - $ref: '#/texts/182'
+  - $ref: '#/texts/183'
+  - $ref: '#/texts/184'
+  - $ref: '#/groups/24'
+  - $ref: '#/texts/188'
+  - $ref: '#/texts/189'
+  - $ref: '#/texts/190'
+  - $ref: '#/texts/191'
+  - $ref: '#/texts/192'
+  - $ref: '#/texts/193'
+  - $ref: '#/pictures/3'
+  - $ref: '#/texts/197'
+  - $ref: '#/texts/198'
+  - $ref: '#/texts/199'
+  - $ref: '#/texts/200'
+  - $ref: '#/texts/201'
+  - $ref: '#/texts/202'
+  - $ref: '#/texts/203'
+  - $ref: '#/texts/204'
+  - $ref: '#/texts/205'
+  - $ref: '#/texts/206'
+  - $ref: '#/texts/207'
+  - $ref: '#/texts/208'
+  - $ref: '#/texts/209'
+  - $ref: '#/texts/210'
+  - $ref: '#/texts/211'
+  - $ref: '#/groups/25'
+  - $ref: '#/texts/213'
+  - $ref: '#/texts/214'
+  - $ref: '#/texts/215'
+  - $ref: '#/texts/216'
+  - $ref: '#/texts/217'
+  - $ref: '#/texts/218'
+  - $ref: '#/texts/219'
+  - $ref: '#/texts/220'
+  - $ref: '#/texts/221'
+  - $ref: '#/texts/222'
+  - $ref: '#/texts/223'
+  - $ref: '#/texts/224'
+  - $ref: '#/texts/225'
+  - $ref: '#/pictures/4'
+  - $ref: '#/texts/229'
+  - $ref: '#/texts/230'
+  - $ref: '#/texts/231'
+  - $ref: '#/pictures/5'
+  - $ref: '#/texts/233'
+  content_layer: body
+  label: unspecified
+  name: _root_
+  self_ref: '#/body'
+form_items: []
+furniture:
+  children: []
+  content_layer: furniture
+  label: unspecified
+  name: _root_
+  self_ref: '#/furniture'
+groups:
+- children:
+  - $ref: '#/texts/3'
+  - $ref: '#/texts/4'
+  - $ref: '#/texts/5'
+  - $ref: '#/texts/6'
+  - $ref: '#/texts/7'
+  - $ref: '#/texts/8'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/0'
+- children:
+  - $ref: '#/texts/18'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/1'
+- children:
+  - $ref: '#/texts/29'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/2'
+- children:
+  - $ref: '#/texts/30'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/3'
+- children:
+  - $ref: '#/texts/31'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/4'
+- children:
+  - $ref: '#/texts/32'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/5'
+- children:
+  - $ref: '#/texts/33'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/6'
+- children:
+  - $ref: '#/texts/34'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/7'
+- children:
+  - $ref: '#/texts/35'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/8'
+- children:
+  - $ref: '#/texts/36'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/9'
+- children:
+  - $ref: '#/texts/37'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/10'
+- children:
+  - $ref: '#/texts/38'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/11'
+- children:
+  - $ref: '#/texts/39'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/12'
+- children:
+  - $ref: '#/texts/40'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/13'
+- children:
+  - $ref: '#/texts/41'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/14'
+- children:
+  - $ref: '#/texts/42'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/1'
+  self_ref: '#/groups/15'
+- children:
+  - $ref: '#/texts/50'
+  - $ref: '#/texts/51'
+  - $ref: '#/texts/52'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/16'
+- children:
+  - $ref: '#/texts/57'
+  - $ref: '#/texts/58'
+  - $ref: '#/texts/59'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/17'
+- children:
+  - $ref: '#/texts/62'
+  - $ref: '#/texts/63'
+  - $ref: '#/texts/64'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/18'
+- children:
+  - $ref: '#/texts/65'
+  content_layer: body
+  label: key_value_area
+  name: group
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/19'
+- children:
+  - $ref: '#/texts/160'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/2'
+  self_ref: '#/groups/20'
+- children:
+  - $ref: '#/texts/161'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/2'
+  self_ref: '#/groups/21'
+- children:
+  - $ref: '#/texts/163'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/2'
+  self_ref: '#/groups/22'
+- children:
+  - $ref: '#/texts/164'
+  content_layer: body
+  label: list
+  name: group
+  parent:
+    $ref: '#/pictures/2'
+  self_ref: '#/groups/23'
+- children:
+  - $ref: '#/texts/185'
+  - $ref: '#/texts/186'
+  - $ref: '#/texts/187'
+  content_layer: body
+  label: key_value_area
+  name: group
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/24'
+- children:
+  - $ref: '#/texts/212'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/25'
+key_value_items: []
+name: gen_test
+origin:
+  binary_hash: 3793607075576371714
+  filename: gen_test.pdf
+  mimetype: application/pdf
+pages:
+  '1':
+    page_no: 1
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '10':
+    page_no: 10
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '2':
+    page_no: 2
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '3':
+    page_no: 3
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '4':
+    page_no: 4
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '5':
+    page_no: 5
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '6':
+    page_no: 6
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '7':
+    page_no: 7
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '8':
+    page_no: 8
+    size:
+      height: 540.0
+      width: 780.0094604492188
+  '9':
+    page_no: 9
+    size:
+      height: 540.0
+      width: 780.0094604492188
+pictures:
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 228.90771484375
+      coord_origin: BOTTOMLEFT
+      l: 48.222564697265625
+      r: 193.4350128173828
+      t: 406.28167724609375
+    charspan:
+    - 0
+    - 0
+    page_no: 2
+  references: []
+  self_ref: '#/pictures/0'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/25'
+  - $ref: '#/texts/26'
+  - $ref: '#/texts/27'
+  - $ref: '#/texts/28'
+  - $ref: '#/groups/2'
+  - $ref: '#/groups/3'
+  - $ref: '#/groups/4'
+  - $ref: '#/groups/5'
+  - $ref: '#/groups/6'
+  - $ref: '#/groups/7'
+  - $ref: '#/groups/8'
+  - $ref: '#/groups/9'
+  - $ref: '#/groups/10'
+  - $ref: '#/groups/11'
+  - $ref: '#/groups/12'
+  - $ref: '#/groups/13'
+  - $ref: '#/groups/14'
+  - $ref: '#/groups/15'
+  - $ref: '#/texts/43'
+  - $ref: '#/texts/44'
+  - $ref: '#/texts/45'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 69.329345703125
+      coord_origin: BOTTOMLEFT
+      l: 2.2424304485321045
+      r: 778.8522338867188
+      t: 452.49878692626953
+    charspan:
+    - 0
+    - 0
+    page_no: 4
+  references: []
+  self_ref: '#/pictures/1'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/69'
+  - $ref: '#/texts/70'
+  - $ref: '#/texts/71'
+  - $ref: '#/texts/72'
+  - $ref: '#/texts/73'
+  - $ref: '#/texts/74'
+  - $ref: '#/texts/75'
+  - $ref: '#/texts/76'
+  - $ref: '#/texts/77'
+  - $ref: '#/texts/78'
+  - $ref: '#/texts/79'
+  - $ref: '#/texts/80'
+  - $ref: '#/texts/81'
+  - $ref: '#/texts/82'
+  - $ref: '#/texts/83'
+  - $ref: '#/texts/84'
+  - $ref: '#/texts/85'
+  - $ref: '#/texts/86'
+  - $ref: '#/texts/87'
+  - $ref: '#/texts/88'
+  - $ref: '#/texts/89'
+  - $ref: '#/texts/90'
+  - $ref: '#/texts/91'
+  - $ref: '#/texts/92'
+  - $ref: '#/texts/93'
+  - $ref: '#/texts/94'
+  - $ref: '#/texts/95'
+  - $ref: '#/texts/96'
+  - $ref: '#/texts/97'
+  - $ref: '#/texts/98'
+  - $ref: '#/texts/99'
+  - $ref: '#/texts/100'
+  - $ref: '#/texts/101'
+  - $ref: '#/texts/102'
+  - $ref: '#/texts/103'
+  - $ref: '#/texts/104'
+  - $ref: '#/texts/105'
+  - $ref: '#/texts/106'
+  - $ref: '#/texts/107'
+  - $ref: '#/texts/108'
+  - $ref: '#/texts/109'
+  - $ref: '#/texts/110'
+  - $ref: '#/texts/111'
+  - $ref: '#/texts/112'
+  - $ref: '#/texts/113'
+  - $ref: '#/texts/114'
+  - $ref: '#/texts/115'
+  - $ref: '#/texts/116'
+  - $ref: '#/texts/117'
+  - $ref: '#/texts/118'
+  - $ref: '#/texts/119'
+  - $ref: '#/texts/120'
+  - $ref: '#/texts/121'
+  - $ref: '#/texts/122'
+  - $ref: '#/texts/123'
+  - $ref: '#/texts/124'
+  - $ref: '#/texts/125'
+  - $ref: '#/texts/126'
+  - $ref: '#/texts/127'
+  - $ref: '#/texts/128'
+  - $ref: '#/texts/129'
+  - $ref: '#/texts/130'
+  - $ref: '#/texts/131'
+  - $ref: '#/texts/132'
+  - $ref: '#/texts/133'
+  - $ref: '#/texts/134'
+  - $ref: '#/texts/135'
+  - $ref: '#/texts/136'
+  - $ref: '#/texts/137'
+  - $ref: '#/texts/138'
+  - $ref: '#/texts/139'
+  - $ref: '#/texts/140'
+  - $ref: '#/texts/141'
+  - $ref: '#/texts/142'
+  - $ref: '#/texts/143'
+  - $ref: '#/texts/144'
+  - $ref: '#/texts/145'
+  - $ref: '#/texts/146'
+  - $ref: '#/texts/147'
+  - $ref: '#/texts/148'
+  - $ref: '#/texts/149'
+  - $ref: '#/texts/150'
+  - $ref: '#/texts/151'
+  - $ref: '#/texts/152'
+  - $ref: '#/texts/153'
+  - $ref: '#/texts/154'
+  - $ref: '#/texts/155'
+  - $ref: '#/texts/156'
+  - $ref: '#/texts/157'
+  - $ref: '#/texts/158'
+  - $ref: '#/texts/159'
+  - $ref: '#/groups/20'
+  - $ref: '#/groups/21'
+  - $ref: '#/texts/162'
+  - $ref: '#/groups/22'
+  - $ref: '#/groups/23'
+  - $ref: '#/texts/165'
+  - $ref: '#/texts/166'
+  - $ref: '#/texts/167'
+  - $ref: '#/texts/168'
+  - $ref: '#/texts/169'
+  - $ref: '#/texts/170'
+  - $ref: '#/texts/171'
+  - $ref: '#/texts/172'
+  - $ref: '#/texts/173'
+  - $ref: '#/texts/174'
+  - $ref: '#/texts/175'
+  - $ref: '#/texts/176'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 41.405487060546875
+      coord_origin: BOTTOMLEFT
+      l: 0.5303299427032471
+      r: 780.0
+      t: 458.4396286010742
+    charspan:
+    - 0
+    - 0
+    page_no: 6
+  references: []
+  self_ref: '#/pictures/2'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/194'
+  - $ref: '#/texts/195'
+  - $ref: '#/texts/196'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 8.72021484375
+      coord_origin: BOTTOMLEFT
+      l: 28.011587142944336
+      r: 262.8644714355469
+      t: 266.5835266113281
+    charspan:
+    - 0
+    - 0
+    page_no: 8
+  references: []
+  self_ref: '#/pictures/3'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/226'
+  - $ref: '#/texts/227'
+  - $ref: '#/texts/228'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 206.972412109375
+      coord_origin: BOTTOMLEFT
+      l: 118.0070571899414
+      r: 613.7530517578125
+      t: 291.98577880859375
+    charspan:
+    - 0
+    - 0
+    page_no: 10
+  references: []
+  self_ref: '#/pictures/4'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/232'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 6.99322509765625
+      coord_origin: BOTTOMLEFT
+      l: 49.3260383605957
+      r: 64.28652954101562
+      t: 22.1612548828125
+    charspan:
+    - 0
+    - 0
+    page_no: 10
+  references: []
+  self_ref: '#/pictures/5'
+schema_name: DoclingDocument
+tables: []
+texts:
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7B2C\uFF12\u6642\u9650 \u7279\u8A31\u5236\u5EA6\u6982\u8981\uFF08\uFF12\
+    \uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 90.80200000000002
+      coord_origin: BOTTOMLEFT
+      l: 202.054
+      r: 616.936
+      t: 209.548
+    charspan:
+    - 0
+    - 14
+    page_no: 1
+  self_ref: '#/texts/0'
+  text: "\u7B2C\uFF12\u6642\u9650 \u7279\u8A31\u5236\u5EA6\u6982\u8981\uFF08\uFF12\
+    \uFF09"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '1'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 7.528999999999996
+      coord_origin: BOTTOMLEFT
+      l: 741.543
+      r: 748.629
+      t: 24.613000000000056
+    charspan:
+    - 0
+    - 1
+    page_no: 1
+  self_ref: '#/texts/1'
+  text: '1'
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7B2C\uFF12\u6642\u9650\u3000\u76EE\u6B21"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 484.588
+      coord_origin: BOTTOMLEFT
+      l: 56.948
+      r: 285.44
+      t: 520.552
+    charspan:
+    - 0
+    - 7
+    page_no: 2
+  self_ref: '#/texts/2'
+  text: "\u7B2C\uFF12\u6642\u9650\u3000\u76EE\u6B21"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uFF12\uFF0D\uFF11\u3000\u7279\u8A31\u5236\u5EA6\u3068\u7814\u7A76\u30FB\u958B\
+    \u767A\u8005"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 379.733
+      coord_origin: BOTTOMLEFT
+      l: 223.71
+      r: 490.743
+      t: 399.726
+    charspan:
+    - 0
+    - 15
+    page_no: 2
+  self_ref: '#/texts/3'
+  text: "\uFF12\uFF0D\uFF11\u3000\u7279\u8A31\u5236\u5EA6\u3068\u7814\u7A76\u30FB\u958B\
+    \u767A\u8005"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uFF12\uFF0D\uFF12\u3000\u7279\u8A31\u3092\u53D7\u3051\u308B\u3053\u3068\u304C\
+    \u3067\u304D\u308B\u767A\u660E"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 348.694
+      coord_origin: BOTTOMLEFT
+      l: 223.71
+      r: 542.377
+      t: 368.687
+    charspan:
+    - 0
+    - 18
+    page_no: 2
+  self_ref: '#/texts/4'
+  text: "\uFF12\uFF0D\uFF12\u3000\u7279\u8A31\u3092\u53D7\u3051\u308B\u3053\u3068\u304C\
+    \u3067\u304D\u308B\u767A\u660E"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uFF12\uFF0D\uFF13\u3000\u65B0\u898F\u6027\u306B\u3064\u3044\u3066"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 317.655
+      coord_origin: BOTTOMLEFT
+      l: 223.71
+      r: 419.957
+      t: 337.648
+    charspan:
+    - 0
+    - 11
+    page_no: 2
+  self_ref: '#/texts/5'
+  text: "\uFF12\uFF0D\uFF13\u3000\u65B0\u898F\u6027\u306B\u3064\u3044\u3066"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uFF12\uFF0D\uFF14\u3000\u9032\u6B69\u6027\u306B\u3064\u3044\u3066"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 286.615
+      coord_origin: BOTTOMLEFT
+      l: 223.71
+      r: 419.957
+      t: 306.608
+    charspan:
+    - 0
+    - 11
+    page_no: 2
+  self_ref: '#/texts/6'
+  text: "\uFF12\uFF0D\uFF14\u3000\u9032\u6B69\u6027\u306B\u3064\u3044\u3066"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uFF12\uFF0D\uFF15\u3000\u7279\u8A31\u6A29\u306E\u52B9\u529B\u306B\u3064\u3044\
+    \u3066"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 255.57600000000002
+      coord_origin: BOTTOMLEFT
+      l: 223.71
+      r: 480.237
+      t: 275.569
+    charspan:
+    - 0
+    - 14
+    page_no: 2
+  self_ref: '#/texts/7'
+  text: "\uFF12\uFF0D\uFF15\u3000\u7279\u8A31\u6A29\u306E\u52B9\u529B\u306B\u3064\u3044\
+    \u3066"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uFF12\uFF0D\uFF16\u3000\u5916\u56FD\u3067\u306E\u7279\u8A31\u6A29\u306E\u53D6\
+    \u5F97\u306B\u3064\u3044\u3066"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 224.53700000000003
+      coord_origin: BOTTOMLEFT
+      l: 223.71
+      r: 558.668
+      t: 244.52999999999997
+    charspan:
+    - 0
+    - 18
+    page_no: 2
+  self_ref: '#/texts/8'
+  text: "\uFF12\uFF0D\uFF16\u3000\u5916\u56FD\u3067\u306E\u7279\u8A31\u6A29\u306E\u53D6\
+    \u5F97\u306B\u3064\u3044\u3066"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '2'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 11.701999999999998
+      coord_origin: BOTTOMLEFT
+      l: 748.431
+      r: 755.426
+      t: 24.493000000000052
+    charspan:
+    - 0
+    - 1
+    page_no: 2
+  self_ref: '#/texts/9'
+  text: '2'
+- children: []
+  content_layer: furniture
+  label: page_header
+  orig: "\uFF12\uFF0D1"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 504.558
+      coord_origin: BOTTOMLEFT
+      l: 7.087
+      r: 68.173
+      t: 532.536
+    charspan:
+    - 0
+    - 3
+    page_no: 3
+  self_ref: '#/texts/10'
+  text: "\uFF12\uFF0D1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF08\u76EE\u7684\uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 387.104
+      coord_origin: BOTTOMLEFT
+      l: 46.233
+      r: 106.312
+      t: 407.097
+    charspan:
+    - 0
+    - 4
+    page_no: 3
+  self_ref: '#/texts/11'
+  text: "\uFF08\u76EE\u7684\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7B2C\uFF11\u6761\u3000\u3053\u306E\u6CD5\u5F8B\u306F\u3001\u767A\u660E\u306E\
+    \u4FDD\u8B77\u53CA\u3073\u5229\u7528\u3092\u56F3\u308B\u3053\u3068\u306B\u3088\
+    \u308A\u3001\u767A\u660E\u3092 \u5968\u52B1\u3057\u3001\u3082\u3064\u3066\u7523\
+    \u696D\u306E\u767A\u9054\u306B\u5BC4\u4E0E\u3059\u308B\u3053\u3068\u3092\u76EE\
+    \u7684\u3068\u3059\u308B\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 334.322
+      coord_origin: BOTTOMLEFT
+      l: 46.233
+      r: 609.636
+      t: 380.706
+    charspan:
+    - 0
+    - 58
+    page_no: 3
+  self_ref: '#/texts/12'
+  text: "\u7B2C\uFF11\u6761\u3000\u3053\u306E\u6CD5\u5F8B\u306F\u3001\u767A\u660E\u306E\
+    \u4FDD\u8B77\u53CA\u3073\u5229\u7528\u3092\u56F3\u308B\u3053\u3068\u306B\u3088\
+    \u308A\u3001\u767A\u660E\u3092 \u5968\u52B1\u3057\u3001\u3082\u3064\u3066\u7523\
+    \u696D\u306E\u767A\u9054\u306B\u5BC4\u4E0E\u3059\u308B\u3053\u3068\u3092\u76EE\
+    \u7684\u3068\u3059\u308B\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u767A\u660E\u306E\u4FDD\u8B77 \uFF08\u6A29\u5229\u8005\uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 247.29899999999998
+      coord_origin: BOTTOMLEFT
+      l: 54.283
+      r: 154.408
+      t: 291.301
+    charspan:
+    - 0
+    - 11
+    page_no: 3
+  self_ref: '#/texts/13'
+  text: "\u767A\u660E\u306E\u4FDD\u8B77 \uFF08\u6A29\u5229\u8005\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7279\u8A31\u306F\u767A\u660E\u3092\u30AA\u30FC\u30D7\u30F3 \u306B\u3059\
+    \u308B\u3053\u3068\u304C\u524D\u63D0"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 146.27999999999997
+      coord_origin: BOTTOMLEFT
+      l: 71.206
+      r: 299.075
+      t: 199.065
+    charspan:
+    - 0
+    - 19
+    page_no: 3
+  self_ref: '#/texts/14'
+  text: "\u7279\u8A31\u306F\u767A\u660E\u3092\u30AA\u30FC\u30D7\u30F3 \u306B\u3059\
+    \u308B\u3053\u3068\u304C\u524D\u63D0"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u767A\u660E\u306E\u5229\u7528"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 63.557000000000016
+      coord_origin: BOTTOMLEFT
+      l: 53.263
+      r: 153.388
+      t: 83.55000000000001
+    charspan:
+    - 0
+    - 5
+    page_no: 3
+  self_ref: '#/texts/15'
+  text: "\u767A\u660E\u306E\u5229\u7528"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4E00\u5B9A\u671F\u9593\u72EC\u5360\u6A29\u306E\u4ED8\u4E0E \uFF08\u6A21\
+    \u5023\u306B\u5BFE\u3057\u3066\u300C\u3084\u3081\u306A\u3055\u3044\uFF01\u300D\
+    \ \u3068\u8A00\u3048\u308B\u6A29\u5229\uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 219.726
+      coord_origin: BOTTOMLEFT
+      l: 409.294
+      r: 714.16
+      t: 301.311
+    charspan:
+    - 0
+    - 34
+    page_no: 3
+  self_ref: '#/texts/16'
+  text: "\u4E00\u5B9A\u671F\u9593\u72EC\u5360\u6A29\u306E\u4ED8\u4E0E \uFF08\u6A21\
+    \u5023\u306B\u5BFE\u3057\u3066\u300C\u3084\u3081\u306A\u3055\u3044\uFF01\u300D\
+    \ \u3068\u8A00\u3048\u308B\u6A29\u5229\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u52DD\u624B\u306B\u4F7F\u3063\u305F\u3089\u30C0\u30E1\uFF01"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 193.772
+      coord_origin: BOTTOMLEFT
+      l: 596.665
+      r: 724.456
+      t: 207.76099999999997
+    charspan:
+    - 0
+    - 10
+    page_no: 3
+  self_ref: '#/texts/17'
+  text: "\u52DD\u624B\u306B\u4F7F\u3063\u305F\u3089\u30C0\u30E1\uFF01"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u516C\u958B\u3055\u308C\u305F\u767A\u660E\u3092\u3082\u3068\u306B\u3057\u305F\
+    \u6539\u826F"
+  parent:
+    $ref: '#/groups/1'
+  prov:
+  - bbox:
+      b: 99.61400000000003
+      coord_origin: BOTTOMLEFT
+      l: 408.444
+      r: 683.683
+      t: 119.60699999999997
+    charspan:
+    - 0
+    - 15
+    page_no: 3
+  self_ref: '#/texts/18'
+  text: "\u516C\u958B\u3055\u308C\u305F\u767A\u660E\u3092\u3082\u3068\u306B\u3057\u305F\
+    \u6539\u826F"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6280\u8853\u306E\u958B\u767A\uFF08\u6539\u826F\u767A\u660E\u306E\u8A98\u767A\
+    \u3001 \u65B0\u305F\u306A\u767A\u660E\u306E\u6A5F\u4F1A\uFF09\u3001 \u767A\u660E\
+    \u306E\u5229\u7528\u7B49\u306E\u4FC3\u9032"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 27.585000000000036
+      coord_origin: BOTTOMLEFT
+      l: 408.444
+      r: 672.135
+      t: 95.59699999999998
+    charspan:
+    - 0
+    - 35
+    page_no: 3
+  self_ref: '#/texts/19'
+  text: "\u6280\u8853\u306E\u958B\u767A\uFF08\u6539\u826F\u767A\u660E\u306E\u8A98\u767A\
+    \u3001 \u65B0\u305F\u306A\u767A\u660E\u306E\u6A5F\u4F1A\uFF09\u3001 \u767A\u660E\
+    \u306E\u5229\u7528\u7B49\u306E\u4FC3\u9032"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7814\u7A76\u958B\u767A\u306E\u7121\u99C4 \uFF08\u30ED\u30B9\uFF09\u3092\
+    \u306A\u304F\u3059"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 13.551000000000045
+      coord_origin: BOTTOMLEFT
+      l: 618.208
+      r: 729.829
+      t: 48.71300000000002
+    charspan:
+    - 0
+    - 16
+    page_no: 3
+  self_ref: '#/texts/20'
+  text: "\u7814\u7A76\u958B\u767A\u306E\u7121\u99C4 \uFF08\u30ED\u30B9\uFF09\u3092\
+    \u306A\u304F\u3059"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7279\u8A31\u5236\u5EA6\u306E\u76EE\u7684"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 481.584
+      coord_origin: BOTTOMLEFT
+      l: 121.323
+      r: 373.323
+      t: 517.548
+    charspan:
+    - 0
+    - 7
+    page_no: 3
+  self_ref: '#/texts/21'
+  text: "\u7279\u8A31\u5236\u5EA6\u306E\u76EE\u7684"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '3'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 3.4470000000000027
+      coord_origin: BOTTOMLEFT
+      l: 753.931
+      r: 760.595
+      t: 17.326999999999998
+    charspan:
+    - 0
+    - 1
+    page_no: 3
+  self_ref: '#/texts/22'
+  text: '3'
+- children: []
+  content_layer: furniture
+  label: page_header
+  orig: "\uFF12\uFF0D\uFF12"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 504.558
+      coord_origin: BOTTOMLEFT
+      l: 7.058
+      r: 81.761
+      t: 532.536
+    charspan:
+    - 0
+    - 3
+    page_no: 4
+  self_ref: '#/texts/23'
+  text: "\uFF12\uFF0D\uFF12"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7279\u8A31\u3092\u53D7\u3051\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u767A\
+    \u660E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 484.843
+      coord_origin: BOTTOMLEFT
+      l: 119.339
+      r: 614.123
+      t: 520.807
+    charspan:
+    - 0
+    - 14
+    page_no: 4
+  self_ref: '#/texts/24'
+  text: "\u7279\u8A31\u3092\u53D7\u3051\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u767A\
+    \u660E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6280\u8853\u7684 \u601D\u60F3"
+  parent:
+    $ref: '#/pictures/1'
+  prov:
+  - bbox:
+      b: 249.34500000000003
+      coord_origin: BOTTOMLEFT
+      l: 426.472
+      r: 492.375
+      t: 293.289
+    charspan:
+    - 0
+    - 6
+    page_no: 4
+  self_ref: '#/texts/25'
+  text: "\u6280\u8853\u7684 \u601D\u60F3"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u9AD8\u5EA6\u6027"
+  parent:
+    $ref: '#/pictures/1'
+  prov:
+  - bbox:
+      b: 161.861
+      coord_origin: BOTTOMLEFT
+      l: 422.504
+      r: 476.864
+      t: 179.84299999999996
+    charspan:
+    - 0
+    - 3
+    page_no: 4
+  self_ref: '#/texts/26'
+  text: "\u9AD8\u5EA6\u6027"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5275\u4F5C\u6027"
+  parent:
+    $ref: '#/pictures/1'
+  prov:
+  - bbox:
+      b: 158.488
+      coord_origin: BOTTOMLEFT
+      l: 314.476
+      r: 368.404
+      t: 184.55200000000002
+    charspan:
+    - 0
+    - 3
+    page_no: 4
+  self_ref: '#/texts/27'
+  text: "\u5275\u4F5C\u6027"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u81EA\u7136\u6CD5\u5247 \u306E\u5229\u7528"
+  parent:
+    $ref: '#/pictures/1'
+  prov:
+  - bbox:
+      b: 242.13800000000003
+      coord_origin: BOTTOMLEFT
+      l: 305.065
+      r: 377.605
+      t: 278.12
+    charspan:
+    - 0
+    - 8
+    page_no: 4
+  self_ref: '#/texts/28'
+  text: "\u81EA\u7136\u6CD5\u5247 \u306E\u5229\u7528"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7\u81EA\u7136\u6CD5\u5247\u4EE5\u5916\u306E\u6CD5\u5247"
+  parent:
+    $ref: '#/groups/2'
+  prov:
+  - bbox:
+      b: 386.269
+      coord_origin: BOTTOMLEFT
+      l: 102.217
+      r: 231.894
+      t: 399.267
+    charspan:
+    - 0
+    - 10
+    page_no: 4
+  self_ref: '#/texts/29'
+  text: "\xD7\u81EA\u7136\u6CD5\u5247\u4EE5\u5916\u306E\u6CD5\u5247"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2192\u7D4C\u6E08\u6CD5\u5247\u7B49"
+  parent:
+    $ref: '#/groups/3'
+  prov:
+  - bbox:
+      b: 367.787
+      coord_origin: BOTTOMLEFT
+      l: 102.217
+      r: 180.062
+      t: 380.785
+    charspan:
+    - 0
+    - 6
+    page_no: 4
+  self_ref: '#/texts/30'
+  text: "\u2192\u7D4C\u6E08\u6CD5\u5247\u7B49"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7\u4EBA\u70BA\u7684\u53D6\u308A\u6C7A\u3081"
+  parent:
+    $ref: '#/groups/4'
+  prov:
+  - bbox:
+      b: 349.306
+      coord_origin: BOTTOMLEFT
+      l: 102.217
+      r: 202.437
+      t: 362.304
+    charspan:
+    - 0
+    - 8
+    page_no: 4
+  self_ref: '#/texts/31'
+  text: "\xD7\u4EBA\u70BA\u7684\u53D6\u308A\u6C7A\u3081"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2192\u5546\u58F2\u65B9\u6CD5\u7B49"
+  parent:
+    $ref: '#/groups/5'
+  prov:
+  - bbox:
+      b: 330.824
+      coord_origin: BOTTOMLEFT
+      l: 102.217
+      r: 180.062
+      t: 343.822
+    charspan:
+    - 0
+    - 6
+    page_no: 4
+  self_ref: '#/texts/32'
+  text: "\u2192\u5546\u58F2\u65B9\u6CD5\u7B49"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7\u81EA\u7136\u6CD5\u5247\u81EA\u4F53\uFF08\u300C\u5229\u7528\u300D\u306B\
+    \ \u3042\u305F\u3089\u306A\u3044"
+  parent:
+    $ref: '#/groups/6'
+  prov:
+  - bbox:
+      b: 300.351
+      coord_origin: BOTTOMLEFT
+      l: 102.217
+      r: 250.577
+      t: 325.34
+    charspan:
+    - 0
+    - 19
+    page_no: 4
+  self_ref: '#/texts/33'
+  text: "\xD7\u81EA\u7136\u6CD5\u5247\u81EA\u4F53\uFF08\u300C\u5229\u7528\u300D\u306B\
+    \ \u3042\u305F\u3089\u306A\u3044"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2192\u300C\u30A8\u30CD\u30EB\u30AE\u30FC\u4FDD\u5B58\u306E\u6CD5 \u5247\
+    \u300D\u3001\u300C\u4E07\u6709\u5F15\u529B\u306E\u6CD5\u5247\u300D\u81EA\u4F53"
+  parent:
+    $ref: '#/groups/7'
+  prov:
+  - bbox:
+      b: 269.879
+      coord_origin: BOTTOMLEFT
+      l: 102.217
+      r: 259.975
+      t: 294.867
+    charspan:
+    - 0
+    - 26
+    page_no: 4
+  self_ref: '#/texts/34'
+  text: "\u2192\u300C\u30A8\u30CD\u30EB\u30AE\u30FC\u4FDD\u5B58\u306E\u6CD5 \u5247\
+    \u300D\u3001\u300C\u4E07\u6709\u5F15\u529B\u306E\u6CD5\u5247\u300D\u81EA\u4F53"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7 \u3044\u308F\u3086\u308B\u6280\u80FD"
+  parent:
+    $ref: '#/groups/8'
+  prov:
+  - bbox:
+      b: 359.89
+      coord_origin: BOTTOMLEFT
+      l: 510.463
+      r: 596.419
+      t: 375.022
+    charspan:
+    - 0
+    - 8
+    page_no: 4
+  self_ref: '#/texts/35'
+  text: "\xD7 \u3044\u308F\u3086\u308B\u6280\u80FD"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2192\u30D5\u30A9\u30FC\u30AF\u30DC\u30FC\u30EB\u306E\u6295\u3052\u65B9"
+  parent:
+    $ref: '#/groups/9'
+  prov:
+  - bbox:
+      b: 345.507
+      coord_origin: BOTTOMLEFT
+      l: 510.463
+      r: 656.694
+      t: 358.505
+    charspan:
+    - 0
+    - 12
+    page_no: 4
+  self_ref: '#/texts/36'
+  text: "\u2192\u30D5\u30A9\u30FC\u30AF\u30DC\u30FC\u30EB\u306E\u6295\u3052\u65B9"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7 \u5358\u306A\u308B\u60C5\u5831\u306E\u63D0\u793A"
+  parent:
+    $ref: '#/groups/10'
+  prov:
+  - bbox:
+      b: 328.652
+      coord_origin: BOTTOMLEFT
+      l: 510.463
+      r: 622.051
+      t: 343.784
+    charspan:
+    - 0
+    - 10
+    page_no: 4
+  self_ref: '#/texts/37'
+  text: "\xD7 \u5358\u306A\u308B\u60C5\u5831\u306E\u63D0\u793A"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2192\u30C7\u30B8\u30BF\u30EB\u30AB\u30E1\u30E9\u306E\u64AE\u5F71\u30C7\u30FC\
+    \u30BF"
+  parent:
+    $ref: '#/groups/11'
+  prov:
+  - bbox:
+      b: 314.269
+      coord_origin: BOTTOMLEFT
+      l: 510.463
+      r: 674.688
+      t: 327.267
+    charspan:
+    - 0
+    - 14
+    page_no: 4
+  self_ref: '#/texts/38'
+  text: "\u2192\u30C7\u30B8\u30BF\u30EB\u30AB\u30E1\u30E9\u306E\u64AE\u5F71\u30C7\u30FC\
+    \u30BF"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7 \u7F8E\u7684\u5275\u4F5C\u7269"
+  parent:
+    $ref: '#/groups/12'
+  prov:
+  - bbox:
+      b: 297.414
+      coord_origin: BOTTOMLEFT
+      l: 510.463
+      r: 586.167
+      t: 312.546
+    charspan:
+    - 0
+    - 7
+    page_no: 4
+  self_ref: '#/texts/39'
+  text: "\xD7 \u7F8E\u7684\u5275\u4F5C\u7269"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2192\u7D75\u753B\u3001\u5F6B\u523B"
+  parent:
+    $ref: '#/groups/13'
+  prov:
+  - bbox:
+      b: 283.032
+      coord_origin: BOTTOMLEFT
+      l: 510.463
+      r: 583.936
+      t: 296.03
+    charspan:
+    - 0
+    - 6
+    page_no: 4
+  self_ref: '#/texts/40'
+  text: "\u2192\u7D75\u753B\u3001\u5F6B\u523B"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u25CB\u5929\u7136\u7269\u304B\u3089\u4EBA\u70BA\u7684\u306B\u5206 \u96E2\
+    \u3057\u305F\u5316\u5B66\u7269\u8CEA"
+  parent:
+    $ref: '#/groups/14'
+  prov:
+  - bbox:
+      b: 126.42099999999999
+      coord_origin: BOTTOMLEFT
+      l: 113.584
+      r: 264.271
+      t: 157.22000000000003
+    charspan:
+    - 0
+    - 19
+    page_no: 4
+  self_ref: '#/texts/41'
+  text: "\u25CB\u5929\u7136\u7269\u304B\u3089\u4EBA\u70BA\u7684\u306B\u5206 \u96E2\
+    \u3057\u305F\u5316\u5B66\u7269\u8CEA"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7 \u5929\u7136\u7269\u306E\u5358\u306A\u308B\u767A\u898B\u306A \u3069"
+  parent:
+    $ref: '#/groups/15'
+  prov:
+  - bbox:
+      b: 92.80200000000002
+      coord_origin: BOTTOMLEFT
+      l: 113.584
+      r: 260.911
+      t: 124.56700000000001
+    charspan:
+    - 0
+    - 14
+    page_no: 4
+  self_ref: '#/texts/42'
+  text: "\xD7 \u5929\u7136\u7269\u306E\u5358\u306A\u308B\u767A\u898B\u306A \u3069"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u53C2\u8003\uFF1A"
+  parent:
+    $ref: '#/pictures/1'
+  prov:
+  - bbox:
+      b: 142.86199999999997
+      coord_origin: BOTTOMLEFT
+      l: 496.942
+      r: 531.978
+      t: 156.851
+    charspan:
+    - 0
+    - 3
+    page_no: 4
+  self_ref: '#/texts/43'
+  text: "\u53C2\u8003\uFF1A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5B9F\u7528\u65B0\u6848\u6CD5\uFF12\u6761\uFF11\u9805 \u3053\u306E\u6CD5\
+    \u5F8B\u3067\u300C\u8003\u6848\u300D\u3068\u306F\u3001 \u81EA\u7136\u6CD5\u5247\
+    \u3092\u5229\u7528\u3057\u305F\u6280\u8853 \u7684\u601D\u60F3\u306E\u5275\u4F5C\
+    \u3092\u3044\u3046\u3002"
+  parent:
+    $ref: '#/pictures/1'
+  prov:
+  - bbox:
+      b: 75.62400000000002
+      coord_origin: BOTTOMLEFT
+      l: 496.942
+      r: 644.758
+      t: 140.04200000000003
+    charspan:
+    - 0
+    - 45
+    page_no: 4
+  self_ref: '#/texts/44'
+  text: "\u5B9F\u7528\u65B0\u6848\u6CD5\uFF12\u6761\uFF11\u9805 \u3053\u306E\u6CD5\
+    \u5F8B\u3067\u300C\u8003\u6848\u300D\u3068\u306F\u3001 \u81EA\u7136\u6CD5\u5247\
+    \u3092\u5229\u7528\u3057\u305F\u6280\u8853 \u7684\u601D\u60F3\u306E\u5275\u4F5C\
+    \u3092\u3044\u3046\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u767A\u660E\u3067\u3042\u308B\u3053\u3068"
+  parent:
+    $ref: '#/pictures/1'
+  prov:
+  - bbox:
+      b: 416.072
+      coord_origin: BOTTOMLEFT
+      l: 39.827
+      r: 152.615
+      t: 434.054
+    charspan:
+    - 0
+    - 7
+    page_no: 4
+  self_ref: '#/texts/45'
+  text: "\u767A\u660E\u3067\u3042\u308B\u3053\u3068"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7279\u8A31\u6CD5\u3000\uFF12\u9805\uFF11\u9805\u3000\u3053\u306E\u6CD5\u5F8B\
+    \u3067\u300C\u767A\u660E\u300D\u3068\u306F\u3001\u81EA\u7136\u6CD5\u5247\u3092\
+    \ \u5229\u7528\u3057\u305F\u6280\u8853\u7684\u601D\u60F3\u306E\u5275\u4F5C\u306E\
+    \u3046\u3061\u9AD8\u5EA6\u306E\u3082\u306E\u3092\u3044\u3046\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 19.30499999999995
+      coord_origin: BOTTOMLEFT
+      l: 28.573
+      r: 390.483
+      t: 54.466999999999985
+    charspan:
+    - 0
+    - 51
+    page_no: 4
+  self_ref: '#/texts/46'
+  text: "\u7279\u8A31\u6CD5\u3000\uFF12\u9805\uFF11\u9805\u3000\u3053\u306E\u6CD5\u5F8B\
+    \u3067\u300C\u767A\u660E\u300D\u3068\u306F\u3001\u81EA\u7136\u6CD5\u5247\u3092\
+    \ \u5229\u7528\u3057\u305F\u6280\u8853\u7684\u601D\u60F3\u306E\u5275\u4F5C\u306E\
+    \u3046\u3061\u9AD8\u5EA6\u306E\u3082\u306E\u3092\u3044\u3046\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7279\u8A31\u8981\u4EF6\u306E\u8A73\u7D30\u306F\u3001\u6B21\u306E\u30B9\u30E9\
+    \u30A4\u30C9\u3078"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 29.39100000000002
+      coord_origin: BOTTOMLEFT
+      l: 533.197
+      r: 742.22
+      t: 43.379999999999995
+    charspan:
+    - 0
+    - 16
+    page_no: 4
+  self_ref: '#/texts/47'
+  text: "\u7279\u8A31\u8981\u4EF6\u306E\u8A73\u7D30\u306F\u3001\u6B21\u306E\u30B9\u30E9\
+    \u30A4\u30C9\u3078"
+- children: []
+  content_layer: body
+  label: text
+  orig: '4'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 3.4470000000000027
+      coord_origin: BOTTOMLEFT
+      l: 753.931
+      r: 760.595
+      t: 17.326999999999998
+    charspan:
+    - 0
+    - 1
+    page_no: 4
+  self_ref: '#/texts/48'
+  text: '4'
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\uFF12\uFF0D\uFF13 \u65B0\u898F\u6027\u306B\u3064\u3044\u3066"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 484.843
+      coord_origin: BOTTOMLEFT
+      l: 7.058
+      r: 378.881
+      t: 531.288
+    charspan:
+    - 0
+    - 11
+    page_no: 5
+  self_ref: '#/texts/49'
+  text: "\uFF12\uFF0D\uFF13 \u65B0\u898F\u6027\u306B\u3064\u3044\u3066"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "1\uFF0E\u7279\u8A31\u51FA\u9858\u524D\u306B\u65E5\u672C\u56FD\u5185\u53C8\
+    \u306F\u5916\u56FD\u306B\u304A\u3044\u3066\u516C\u7136\u77E5\u3089\u308C\u305F\
+    \u767A\u660E"
+  parent:
+    $ref: '#/groups/16'
+  prov:
+  - bbox:
+      b: 407.597
+      coord_origin: BOTTOMLEFT
+      l: 22.706
+      r: 524.806
+      t: 425.579
+    charspan:
+    - 0
+    - 28
+    page_no: 5
+  self_ref: '#/texts/50'
+  text: "1\uFF0E\u7279\u8A31\u51FA\u9858\u524D\u306B\u65E5\u672C\u56FD\u5185\u53C8\
+    \u306F\u5916\u56FD\u306B\u304A\u3044\u3066\u516C\u7136\u77E5\u3089\u308C\u305F\
+    \u767A\u660E"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "2\uFF0E\u7279\u8A31\u51FA\u9858\u524D\u306B\u65E5\u672C\u56FD\u5185\u53C8\
+    \u306F\u5916\u56FD\u306B\u304A\u3044\u3066\u516C\u7136\u5B9F\u65BD\u3092\u3055\
+    \u308C\u305F\u767A\u660E"
+  parent:
+    $ref: '#/groups/16'
+  prov:
+  - bbox:
+      b: 383.587
+      coord_origin: BOTTOMLEFT
+      l: 22.706
+      r: 557.518
+      t: 401.569
+    charspan:
+    - 0
+    - 30
+    page_no: 5
+  self_ref: '#/texts/51'
+  text: "2\uFF0E\u7279\u8A31\u51FA\u9858\u524D\u306B\u65E5\u672C\u56FD\u5185\u53C8\
+    \u306F\u5916\u56FD\u306B\u304A\u3044\u3066\u516C\u7136\u5B9F\u65BD\u3092\u3055\
+    \u308C\u305F\u767A\u660E"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "3\uFF0E\u7279\u8A31\u51FA\u9858\u524D\u306B\u65E5\u672C\u56FD\u5185\u53C8\
+    \u306F\u5916\u56FD\u306B\u304A\u3044\u3066\u3001\u9812\u5E03\u3055\u308C\u305F\
+    \u520A\u884C\u7269\u306B\u8A18\u8F09\u3055\u308C\u305F\u767A\u660E \u53C8\u306F\
+    \u96FB\u6C17\u901A\u4FE1\u56DE\u7DDA\u3092\u901A\u3058\u3066\u516C\u8846\u306B\
+    \u5229\u7528\u53EF\u80FD\u3068\u306A\u3064\u305F\u767A\u660E\u3000\uFF0829\u6761\
+    1\u9805\uFF09"
+  parent:
+    $ref: '#/groups/16'
+  prov:
+  - bbox:
+      b: 335.568
+      coord_origin: BOTTOMLEFT
+      l: 22.706
+      r: 673.306
+      t: 377.56
+    charspan:
+    - 0
+    - 71
+    page_no: 5
+  self_ref: '#/texts/52'
+  text: "3\uFF0E\u7279\u8A31\u51FA\u9858\u524D\u306B\u65E5\u672C\u56FD\u5185\u53C8\
+    \u306F\u5916\u56FD\u306B\u304A\u3044\u3066\u3001\u9812\u5E03\u3055\u308C\u305F\
+    \u520A\u884C\u7269\u306B\u8A18\u8F09\u3055\u308C\u305F\u767A\u660E \u53C8\u306F\
+    \u96FB\u6C17\u901A\u4FE1\u56DE\u7DDA\u3092\u901A\u3058\u3066\u516C\u8846\u306B\
+    \u5229\u7528\u53EF\u80FD\u3068\u306A\u3064\u305F\u767A\u660E\u3000\uFF0829\u6761\
+    1\u9805\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65B0 \u898F \u6027 \u304C \u55AA \u5931 \u3057 \u3066 \u3044 \u308B \u3082\
+    \ \u306E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 137.358
+      coord_origin: BOTTOMLEFT
+      l: 17.178
+      r: 78.803
+      t: 303.695
+    charspan:
+    - 0
+    - 23
+    page_no: 5
+  self_ref: '#/texts/53'
+  text: "\u65B0 \u898F \u6027 \u304C \u55AA \u5931 \u3057 \u3066 \u3044 \u308B \u3082\
+    \ \u306E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u516C\u7136\u3068\u77E5\u3089\u308C\u305F\u767A\u660E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 267.206
+      coord_origin: BOTTOMLEFT
+      l: 155.594
+      r: 359.406
+      t: 291.191
+    charspan:
+    - 0
+    - 9
+    page_no: 5
+  self_ref: '#/texts/54'
+  text: "\u516C\u7136\u3068\u77E5\u3089\u308C\u305F\u767A\u660E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u516C\u7136\u3068\u5B9F\u65BD\u3055\u308C\u305F\u767A\u660E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 196.31100000000004
+      coord_origin: BOTTOMLEFT
+      l: 144.057
+      r: 370.894
+      t: 220.296
+    charspan:
+    - 0
+    - 10
+    page_no: 5
+  self_ref: '#/texts/55'
+  text: "\u516C\u7136\u3068\u5B9F\u65BD\u3055\u308C\u305F\u767A\u660E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u520A\u884C\u7269\u7B49\u306B\u8A18\u8F09\u3055\u308C\u305F\u767A\u660E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 124.08499999999998
+      coord_origin: BOTTOMLEFT
+      l: 117.326
+      r: 396.407
+      t: 148.07
+    charspan:
+    - 0
+    - 12
+    page_no: 5
+  self_ref: '#/texts/56'
+  text: "\u520A\u884C\u7269\u7B49\u306B\u8A18\u8F09\u3055\u308C\u305F\u767A\u660E"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7\u767A\u8868\u3001 \u30C6\u30EC\u30D3\u653E\u6620"
+  parent:
+    $ref: '#/groups/17'
+  prov:
+  - bbox:
+      b: 75.488
+      coord_origin: BOTTOMLEFT
+      l: 33.08
+      r: 164.959
+      t: 91.459
+    charspan:
+    - 0
+    - 10
+    page_no: 5
+  self_ref: '#/texts/57'
+  text: "\xD7\u767A\u8868\u3001 \u30C6\u30EC\u30D3\u653E\u6620"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7 \u8CA9 \u58F2\u3001 \u88FD\u9020\u72B6\u6CC1 \u306E \u4E0D \u7279\u5B9A\
+    \u8005\u898B\u5B66"
+  parent:
+    $ref: '#/groups/17'
+  prov:
+  - bbox:
+      b: 56.297000000000025
+      coord_origin: BOTTOMLEFT
+      l: 33.08
+      r: 267.056
+      t: 72.26800000000003
+    charspan:
+    - 0
+    - 21
+    page_no: 5
+  self_ref: '#/texts/58'
+  text: "\xD7 \u8CA9 \u58F2\u3001 \u88FD\u9020\u72B6\u6CC1 \u306E \u4E0D \u7279\u5B9A\
+    \u8005\u898B\u5B66"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\xD7\u7279\u8A31\u516C\u5831\u3001 \u8AD6\u6587 \u3001 CD-ROM \u3001 \u66F8\
+    \u7C4D \u3001\u30A4\u30F3\u30BF\u30FC\u30CD \u30C3\u30C8"
+  parent:
+    $ref: '#/groups/17'
+  prov:
+  - bbox:
+      b: 37.10699999999997
+      coord_origin: BOTTOMLEFT
+      l: 33.08
+      r: 372.509
+      t: 53.077999999999975
+    charspan:
+    - 0
+    - 33
+    page_no: 5
+  self_ref: '#/texts/59'
+  text: "\xD7\u7279\u8A31\u516C\u5831\u3001 \u8AD6\u6587 \u3001 CD-ROM \u3001 \u66F8\
+    \u7C4D \u3001\u30A4\u30F3\u30BF\u30FC\u30CD \u30C3\u30C8"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65B0\u898F\u6027"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 244.76999999999998
+      coord_origin: BOTTOMLEFT
+      l: 578.863
+      r: 674.872
+      t: 276.741
+    charspan:
+    - 0
+    - 3
+    page_no: 5
+  self_ref: '#/texts/60'
+  text: "\u65B0\u898F\u6027"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65B0\u898F\u6027\u55AA\u5931\u306E\u4F8B\u5916\uFF08\u7B2C30\u6761\uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 158.51800000000003
+      coord_origin: BOTTOMLEFT
+      l: 463.465
+      r: 703.9
+      t: 178.51099999999997
+    charspan:
+    - 0
+    - 14
+    page_no: 5
+  self_ref: '#/texts/61'
+  text: "\u65B0\u898F\u6027\u55AA\u5931\u306E\u4F8B\u5916\uFF08\u7B2C30\u6761\uFF09"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u30FB\u81EA\u3089\u304C\u7814\u7A76\u4F1A\u767A\u8868"
+  parent:
+    $ref: '#/groups/18'
+  prov:
+  - bbox:
+      b: 136.803
+      coord_origin: BOTTOMLEFT
+      l: 463.465
+      r: 612.919
+      t: 154.78499999999997
+    charspan:
+    - 0
+    - 9
+    page_no: 5
+  self_ref: '#/texts/62'
+  text: "\u30FB\u81EA\u3089\u304C\u7814\u7A76\u4F1A\u767A\u8868"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u30FB\u81EA\u3089\u304C\u535A\u89A7\u4F1A\u3078\u51FA\u54C1"
+  parent:
+    $ref: '#/groups/18'
+  prov:
+  - bbox:
+      b: 115.20299999999997
+      coord_origin: BOTTOMLEFT
+      l: 463.465
+      r: 630.919
+      t: 133.185
+    charspan:
+    - 0
+    - 10
+    page_no: 5
+  self_ref: '#/texts/63'
+  text: "\u30FB\u81EA\u3089\u304C\u535A\u89A7\u4F1A\u3078\u51FA\u54C1"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u30FB\u81EA\u3089\u304C\uFF34\uFF36\u306B\u767A\u8868\u3000\u3000\u3000\u7B49"
+  parent:
+    $ref: '#/groups/18'
+  prov:
+  - bbox:
+      b: 93.60300000000001
+      coord_origin: BOTTOMLEFT
+      l: 463.465
+      r: 653.653
+      t: 111.58499999999998
+    charspan:
+    - 0
+    - 13
+    page_no: 5
+  self_ref: '#/texts/64'
+  text: "\u30FB\u81EA\u3089\u304C\uFF34\uFF36\u306B\u767A\u8868\u3000\u3000\u3000\u7B49"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4F8B\u5916\u7684 \u63AA\u7F6E \uFF01\uFF01"
+  parent:
+    $ref: '#/groups/19'
+  prov:
+  - bbox:
+      b: 64.57600000000002
+      coord_origin: BOTTOMLEFT
+      l: 518.428
+      r: 644.428
+      t: 82.55799999999999
+    charspan:
+    - 0
+    - 9
+    page_no: 5
+  self_ref: '#/texts/65'
+  text: "\u4F8B\u5916\u7684 \u63AA\u7F6E \uFF01\uFF01"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '5'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 0.07399999999995543
+      coord_origin: BOTTOMLEFT
+      l: 753.931
+      r: 760.595
+      t: 13.95399999999995
+    charspan:
+    - 0
+    - 1
+    page_no: 5
+  self_ref: '#/texts/66'
+  text: '5'
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF12\uFF0D\uFF13"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 503.31
+      coord_origin: BOTTOMLEFT
+      l: 7.058
+      r: 73.236
+      t: 531.288
+    charspan:
+    - 0
+    - 3
+    page_no: 6
+  self_ref: '#/texts/67'
+  text: "\uFF12\uFF0D\uFF13"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u65B0\u898F\u6027\u55AA\u5931\u306E\u4F8B\u5916"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 480.251
+      coord_origin: BOTTOMLEFT
+      l: 138.614
+      r: 426.614
+      t: 516.215
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/68'
+  text: "\u65B0\u898F\u6027\u55AA\u5931\u306E\u4F8B\u5916"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u672C\u4EBA"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 364.378
+      coord_origin: BOTTOMLEFT
+      l: 320.06
+      r: 368.054
+      t: 388.363
+    charspan:
+    - 0
+    - 2
+    page_no: 6
+  self_ref: '#/texts/69'
+  text: "\u672C\u4EBA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8AD6\u6587 \u7B49\u3067\u767A\u8868"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 306.342
+      coord_origin: BOTTOMLEFT
+      l: 310.564
+      r: 404.735
+      t: 322.313
+    charspan:
+    - 0
+    - 7
+    page_no: 6
+  self_ref: '#/texts/70'
+  text: "\u8AD6\u6587 \u7B49\u3067\u767A\u8868"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF13"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 239.132
+      coord_origin: BOTTOMLEFT
+      l: 319.181
+      r: 330.1
+      t: 255.103
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/71'
+  text: "\uFF13"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF10"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 239.132
+      coord_origin: BOTTOMLEFT
+      l: 330.066
+      r: 340.985
+      t: 255.103
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/72'
+  text: "\uFF10"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6761"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 239.132
+      coord_origin: BOTTOMLEFT
+      l: 340.98
+      r: 356.967
+      t: 255.103
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/73'
+  text: "\u6761"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u9069"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 239.132
+      coord_origin: BOTTOMLEFT
+      l: 356.939
+      r: 372.926
+      t: 255.103
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/74'
+  text: "\u9069"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7528\u51FA\u9858"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 239.132
+      coord_origin: BOTTOMLEFT
+      l: 372.898
+      r: 420.763
+      t: 255.103
+    charspan:
+    - 0
+    - 3
+    page_no: 6
+  self_ref: '#/texts/75'
+  text: "\u7528\u51FA\u9858"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF16"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 298.603
+      coord_origin: BOTTOMLEFT
+      l: 261.723
+      r: 277.71
+      t: 314.574
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/76'
+  text: "\uFF16"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6708"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 285.762
+      coord_origin: BOTTOMLEFT
+      l: 261.723
+      r: 277.71
+      t: 301.733
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/77'
+  text: "\u6708"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4EE5"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 269.803
+      coord_origin: BOTTOMLEFT
+      l: 261.723
+      r: 277.71
+      t: 285.774
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/78'
+  text: "\u4EE5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5185"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 253.844
+      coord_origin: BOTTOMLEFT
+      l: 261.723
+      r: 277.71
+      t: 269.815
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/79'
+  text: "\u5185"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8A3C"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 166.93399999999997
+      coord_origin: BOTTOMLEFT
+      l: 314.674
+      r: 330.661
+      t: 182.90499999999997
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/80'
+  text: "\u8A3C"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u660E"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 166.93399999999997
+      coord_origin: BOTTOMLEFT
+      l: 330.633
+      r: 346.62
+      t: 182.90499999999997
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/81'
+  text: "\u660E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u66F8\u985E"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 166.93399999999997
+      coord_origin: BOTTOMLEFT
+      l: 346.592
+      r: 378.518
+      t: 182.90499999999997
+    charspan:
+    - 0
+    - 2
+    page_no: 6
+  self_ref: '#/texts/82'
+  text: "\u66F8\u985E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u306E\u63D0\u51FA"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 166.93399999999997
+      coord_origin: BOTTOMLEFT
+      l: 378.51
+      r: 426.375
+      t: 182.90499999999997
+    charspan:
+    - 0
+    - 3
+    page_no: 6
+  self_ref: '#/texts/83'
+  text: "\u306E\u63D0\u51FA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF13"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 231.615
+      coord_origin: BOTTOMLEFT
+      l: 262.743
+      r: 276.746
+      t: 245.60400000000004
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/84'
+  text: "\uFF13"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF10"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 220.33299999999997
+      coord_origin: BOTTOMLEFT
+      l: 262.743
+      r: 276.746
+      t: 234.322
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/85'
+  text: "\uFF10"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65E5"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 209.02300000000002
+      coord_origin: BOTTOMLEFT
+      l: 262.743
+      r: 276.746
+      t: 223.012
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/86'
+  text: "\u65E5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4EE5"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 194.99099999999999
+      coord_origin: BOTTOMLEFT
+      l: 262.743
+      r: 276.746
+      t: 208.98000000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/87'
+  text: "\u4EE5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5185"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 180.96000000000004
+      coord_origin: BOTTOMLEFT
+      l: 262.743
+      r: 276.746
+      t: 194.949
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/88'
+  text: "\u5185"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u767A\u8868\u3068\u51FA\u9858\u306E\u30BF\u30A4 \u30DF \u30F3 \u30B0"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 418.567
+      coord_origin: BOTTOMLEFT
+      l: 307.502
+      r: 484.399
+      t: 436.549
+    charspan:
+    - 0
+    - 14
+    page_no: 6
+  self_ref: '#/texts/89'
+  text: "\u767A\u8868\u3068\u51FA\u9858\u306E\u30BF\u30A4 \u30DF \u30F3 \u30B0"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4ED6"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 364.378
+      coord_origin: BOTTOMLEFT
+      l: 445.351
+      r: 469.36
+      t: 388.363
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/90'
+  text: "\u4ED6"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4EBA"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 364.378
+      coord_origin: BOTTOMLEFT
+      l: 469.332
+      r: 493.341
+      t: 388.363
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/91'
+  text: "\u4EBA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4ED6"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 272.864
+      coord_origin: BOTTOMLEFT
+      l: 437.783
+      r: 453.77
+      t: 288.835
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/92'
+  text: "\u4ED6"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4EBA\u306E\u51FA\u9858"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 272.864
+      coord_origin: BOTTOMLEFT
+      l: 453.742
+      r: 517.546
+      t: 288.835
+    charspan:
+    - 0
+    - 4
+    page_no: 6
+  self_ref: '#/texts/93'
+  text: "\u4EBA\u306E\u51FA\u9858"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u25CB\u672C\u4EBA\u306E\u51FA\u9858\u2192 \u4ED6 \u4EBA\u306E \u5148 \u51FA\
+    \u9858\u3068 \u540C \u4E00\u3067\u3042\u308C \u3070\u62D2\u7D76 \u3055\u308C\u308B\
+    \u3002 \u25CB \u4ED6 \u4EBA\u306E\u51FA\u9858\u2192 \u8AD6\u6587 \u304C\u516C\u77E5\
+    \u6280\u8853\u3068\u306A\u308A \u62D2\u7D76 \u3055\u308C\u308B\u304C\u3001 \u672C\
+    \u4EBA\u3082\u7279\u8A31\u304C\u53D6\u308C\u306A\u3044 \u5834\u5408 \u304C\u3042\
+    \u308B\u3002"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 52.43399999999997
+      coord_origin: BOTTOMLEFT
+      l: 250.072
+      r: 548.831
+      t: 96.048
+    charspan:
+    - 0
+    - 84
+    page_no: 6
+  self_ref: '#/texts/94'
+  text: "\u25CB\u672C\u4EBA\u306E\u51FA\u9858\u2192 \u4ED6 \u4EBA\u306E \u5148 \u51FA\
+    \u9858\u3068 \u540C \u4E00\u3067\u3042\u308C \u3070\u62D2\u7D76 \u3055\u308C\u308B\
+    \u3002 \u25CB \u4ED6 \u4EBA\u306E\u51FA\u9858\u2192 \u8AD6\u6587 \u304C\u516C\u77E5\
+    \u6280\u8853\u3068\u306A\u308A \u62D2\u7D76 \u3055\u308C\u308B\u304C\u3001 \u672C\
+    \u4EBA\u3082\u7279\u8A31\u304C\u53D6\u308C\u306A\u3044 \u5834\u5408 \u304C\u3042\
+    \u308B\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5BFE"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 358.16
+      coord_origin: BOTTOMLEFT
+      l: 638.929
+      r: 656.929
+      t: 376.142
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/95'
+  text: "\u5BFE"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8C61"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 340.16
+      coord_origin: BOTTOMLEFT
+      l: 638.929
+      r: 656.929
+      t: 358.142
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/96'
+  text: "\u8C61"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u671F"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 358.16
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 376.142
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/97'
+  text: "\u671F"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u9593"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 340.16
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 358.142
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/98'
+  text: "\u9593"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u51FA\u9858"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 364.16
+      coord_origin: BOTTOMLEFT
+      l: 743.669
+      r: 767.639
+      t: 376.139
+    charspan:
+    - 0
+    - 2
+    page_no: 6
+  self_ref: '#/texts/99'
+  text: "\u51FA\u9858"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6642\u624B"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 352.17
+      coord_origin: BOTTOMLEFT
+      l: 743.669
+      r: 767.639
+      t: 364.149
+    charspan:
+    - 0
+    - 2
+    page_no: 6
+  self_ref: '#/texts/100'
+  text: "\u6642\u624B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7D9A"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 340.179
+      coord_origin: BOTTOMLEFT
+      l: 749.65
+      r: 761.641
+      t: 352.158
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/101'
+  text: "\u7D9A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65E5"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 304.159
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 320.13
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/102'
+  text: "\u65E5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u672C"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 288.2
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 304.171
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/103'
+  text: "\u672C"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3059\u3079\u3066\u306E\u516C\u77E5\u884C\u70BA"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 311.127
+      coord_origin: BOTTOMLEFT
+      l: 591.789
+      r: 703.967
+      t: 325.116
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/104'
+  text: "\u3059\u3079\u3066\u306E\u516C\u77E5\u884C\u70BA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF08\u7279\u8A31\u516C\u5831\u7B49\u306B\u3088"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 297.067
+      coord_origin: BOTTOMLEFT
+      l: 591.789
+      r: 703.967
+      t: 311.056
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/105'
+  text: "\uFF08\u7279\u8A31\u516C\u5831\u7B49\u306B\u3088"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u308B\u516C\u958B\u3092\u9664\u304F\uFF09"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 283.007
+      coord_origin: BOTTOMLEFT
+      l: 598.791
+      r: 696.924
+      t: 296.996
+    charspan:
+    - 0
+    - 7
+    page_no: 6
+  self_ref: '#/texts/106'
+  text: "\u308B\u516C\u958B\u3092\u9664\u304F\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF16"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 304.132
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 322.114
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/107'
+  text: "\uFF16"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6708"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 286.132
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 304.114
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/108'
+  text: "\u6708"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5FC5"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 304.132
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 322.114
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/109'
+  text: "\u5FC5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8981"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 286.132
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 304.114
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/110'
+  text: "\u8981"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7C73"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 250.10199999999998
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 266.073
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/111'
+  text: "\u7C73"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u56FD"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 234.14300000000003
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 250.11400000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/112'
+  text: "\u56FD"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3059\u3079\u3066\u306E\u516C\u77E5\u884C\u70BA"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 243.01
+      coord_origin: BOTTOMLEFT
+      l: 591.789
+      r: 703.967
+      t: 256.999
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/113'
+  text: "\u3059\u3079\u3066\u306E\u516C\u77E5\u884C\u70BA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF11"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 250.075
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 268.057
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/114'
+  text: "\uFF11"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5E74"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 232.075
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 250.05700000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/115'
+  text: "\u5E74"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4E0D"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 250.075
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 268.057
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/116'
+  text: "\u4E0D"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8981"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 232.075
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 250.05700000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/117'
+  text: "\u8981"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6B27"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 199.67399999999998
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 215.64499999999998
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/118'
+  text: "\u6B27"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5DDE"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 183.71500000000003
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 199.68600000000004
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/119'
+  text: "\u5DDE"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u9650\u5B9A\u3055\u308C\u305F\u56FD\u969B\u535A"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 199.61199999999997
+      coord_origin: BOTTOMLEFT
+      l: 591.789
+      r: 703.967
+      t: 213.601
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/120'
+  text: "\u9650\u5B9A\u3055\u308C\u305F\u56FD\u969B\u535A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u89A7\u4F1A"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 185.55200000000002
+      coord_origin: BOTTOMLEFT
+      l: 633.883
+      r: 661.903
+      t: 199.541
+    charspan:
+    - 0
+    - 2
+    page_no: 6
+  self_ref: '#/texts/121'
+  text: "\u89A7\u4F1A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF16"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 199.647
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 217.62900000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/122'
+  text: "\uFF16"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6708"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 181.647
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 199.62900000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/123'
+  text: "\u6708"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5FC5"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 199.647
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 217.62900000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/124'
+  text: "\u5FC5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8981"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 181.647
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 199.62900000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/125'
+  text: "\u8981"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4E2D"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 137.22699999999998
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 153.19799999999998
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/126'
+  text: "\u4E2D"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u56FD"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 121.26800000000003
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 137.23900000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/127'
+  text: "\u56FD"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u9650\u5B9A\u3055\u308C\u305F\u56FD\u969B\u535A"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 151.224
+      coord_origin: BOTTOMLEFT
+      l: 591.789
+      r: 703.967
+      t: 165.21299999999997
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/128'
+  text: "\u9650\u5B9A\u3055\u308C\u305F\u56FD\u969B\u535A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u89A7\u4F1A"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 137.164
+      coord_origin: BOTTOMLEFT
+      l: 633.883
+      r: 661.903
+      t: 151.15300000000002
+    charspan:
+    - 0
+    - 2
+    page_no: 6
+  self_ref: '#/texts/129'
+  text: "\u89A7\u4F1A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6240\u5B9A\u306E\u5B66\u8853\u4F1A\u8B70\u307E"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 123.10500000000002
+      coord_origin: BOTTOMLEFT
+      l: 591.789
+      r: 703.967
+      t: 137.094
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/130'
+  text: "\u6240\u5B9A\u306E\u5B66\u8853\u4F1A\u8B70\u307E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u305F\u306F\u6280\u8853\u4F1A\u8B70"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 109.04500000000002
+      coord_origin: BOTTOMLEFT
+      l: 605.82
+      r: 689.936
+      t: 123.03399999999999
+    charspan:
+    - 0
+    - 6
+    page_no: 6
+  self_ref: '#/texts/131'
+  text: "\u305F\u306F\u6280\u8853\u4F1A\u8B70"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF16"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 137.2
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 155.18200000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/132'
+  text: "\uFF16"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6708"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 119.19999999999999
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 137.18200000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/133'
+  text: "\u6708"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5FC5"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 137.2
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 155.18200000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/134'
+  text: "\u5FC5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8981"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 119.19999999999999
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 137.18200000000002
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/135'
+  text: "\u8981"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u97D3"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 71.17899999999997
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 87.14999999999998
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/136'
+  text: "\u97D3"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u56FD"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 55.22000000000003
+      coord_origin: BOTTOMLEFT
+      l: 561.572
+      r: 577.559
+      t: 71.19100000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/137'
+  text: "\u56FD"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3059\u3079\u3066\u306E\u516C\u77E5\u884C\u70BA"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 78.14699999999999
+      coord_origin: BOTTOMLEFT
+      l: 591.789
+      r: 703.967
+      t: 92.13599999999997
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/138'
+  text: "\u3059\u3079\u3066\u306E\u516C\u77E5\u884C\u70BA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF08\u7279\u8A31\u516C\u5831\u7B49\u306B\u3088"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 64.08699999999999
+      coord_origin: BOTTOMLEFT
+      l: 591.789
+      r: 703.967
+      t: 78.07600000000002
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/139'
+  text: "\uFF08\u7279\u8A31\u516C\u5831\u7B49\u306B\u3088"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u308B\u516C\u958B\u3092\u9664\u304F\uFF09"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 50.02699999999999
+      coord_origin: BOTTOMLEFT
+      l: 598.791
+      r: 696.924
+      t: 64.01600000000002
+    charspan:
+    - 0
+    - 7
+    page_no: 6
+  self_ref: '#/texts/140'
+  text: "\u308B\u516C\u958B\u3092\u9664\u304F\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF11"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 71.15199999999999
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 89.13400000000001
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/141'
+  text: "\uFF11"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5E74"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 53.15199999999999
+      coord_origin: BOTTOMLEFT
+      l: 720.312
+      r: 738.312
+      t: 71.13400000000001
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/142'
+  text: "\u5E74"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5FC5"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 71.15199999999999
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 89.13400000000001
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/143'
+  text: "\u5FC5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8981"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 53.15199999999999
+      coord_origin: BOTTOMLEFT
+      l: 746.646
+      r: 764.646
+      t: 71.13400000000001
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/144'
+  text: "\u8981"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65B0\u898F\u6027\u55AA\u5931\u306E\u4F8B\u5916\u898F\u5B9A"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 422.392
+      coord_origin: BOTTOMLEFT
+      l: 585.78
+      r: 745.218
+      t: 438.363
+    charspan:
+    - 0
+    - 10
+    page_no: 6
+  self_ref: '#/texts/145'
+  text: "\u65B0\u898F\u6027\u55AA\u5931\u306E\u4F8B\u5916\u898F\u5B9A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u56FD"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 395.208
+      coord_origin: BOTTOMLEFT
+      l: 633.657
+      r: 649.644
+      t: 411.179
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/146'
+  text: "\u56FD"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u969B\u6BD4\u8F03"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 395.208
+      coord_origin: BOTTOMLEFT
+      l: 649.616
+      r: 697.481
+      t: 411.179
+    charspan:
+    - 0
+    - 3
+    page_no: 6
+  self_ref: '#/texts/147'
+  text: "\u969B\u6BD4\u8F03"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65B0\u898F\u6027\u55AA\u5931\u306E\u4F8B\u5916\u306E"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 424.688
+      coord_origin: BOTTOMLEFT
+      l: 28.715
+      r: 172.214
+      t: 440.659
+    charspan:
+    - 0
+    - 9
+    page_no: 6
+  self_ref: '#/texts/148'
+  text: "\u65B0\u898F\u6027\u55AA\u5931\u306E\u4F8B\u5916\u306E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u9069"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 424.688
+      coord_origin: BOTTOMLEFT
+      l: 172.346
+      r: 188.333
+      t: 440.659
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/149'
+  text: "\u9069"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7528"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 424.688
+      coord_origin: BOTTOMLEFT
+      l: 188.306
+      r: 204.293
+      t: 440.659
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/150'
+  text: "\u7528"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u304C\u53D7\u3051\u3089\u308C\u308B \u5834\u5408"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 397.504
+      coord_origin: BOTTOMLEFT
+      l: 55.729
+      r: 177.23
+      t: 413.475
+    charspan:
+    - 0
+    - 9
+    page_no: 6
+  self_ref: '#/texts/151'
+  text: "\u304C\u53D7\u3051\u3089\u308C\u308B \u5834\u5408"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF08\u7279\u8A31\u6CD5\u7B2C\uFF13 \uFF10 \u6761\uFF09"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 370.319
+      coord_origin: BOTTOMLEFT
+      l: 57.713
+      r: 175.275
+      t: 386.29
+    charspan:
+    - 0
+    - 11
+    page_no: 6
+  self_ref: '#/texts/152'
+  text: "\uFF08\u7279\u8A31\u6CD5\u7B2C\uFF13 \uFF10 \u6761\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7279\u8A31\u3092\u53D7\u3051\u308B\u6A29\u5229\u3092"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 334.992
+      coord_origin: BOTTOMLEFT
+      l: 11.877
+      r: 113.992
+      t: 346.971
+    charspan:
+    - 0
+    - 9
+    page_no: 6
+  self_ref: '#/texts/153'
+  text: "\u7279\u8A31\u3092\u53D7\u3051\u308B\u6A29\u5229\u3092"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6301"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 334.992
+      coord_origin: BOTTOMLEFT
+      l: 114.094
+      r: 126.085
+      t: 346.971
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/154'
+  text: "\u6301"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3063\u3066\u3044\u308B\u4EBA"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 334.992
+      coord_origin: BOTTOMLEFT
+      l: 126.085
+      r: 180.236
+      t: 346.971
+    charspan:
+    - 0
+    - 5
+    page_no: 6
+  self_ref: '#/texts/155'
+  text: "\u3063\u3066\u3044\u308B\u4EBA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF08\u767A\u660E\u8005\u3084\u767A\u660E\u8005\u304B\u3089\u6A29\u5229\u3092"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 316.283
+      coord_origin: BOTTOMLEFT
+      l: 11.877
+      r: 157.616
+      t: 328.262
+    charspan:
+    - 0
+    - 13
+    page_no: 6
+  self_ref: '#/texts/156'
+  text: "\uFF08\u767A\u660E\u8005\u3084\u767A\u660E\u8005\u304B\u3089\u6A29\u5229\u3092"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8B72\u6E21"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 316.283
+      coord_origin: BOTTOMLEFT
+      l: 157.776
+      r: 181.77
+      t: 328.262
+    charspan:
+    - 0
+    - 2
+    page_no: 6
+  self_ref: '#/texts/157'
+  text: "\u8B72\u6E21"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3055\u308C\u305F\u8005\uFF09"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 316.283
+      coord_origin: BOTTOMLEFT
+      l: 181.786
+      r: 231.98
+      t: 328.262
+    charspan:
+    - 0
+    - 5
+    page_no: 6
+  self_ref: '#/texts/158'
+  text: "\u3055\u308C\u305F\u8005\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u306E\u884C\u70BA\u306B\u3088\u308B"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 297.575
+      coord_origin: BOTTOMLEFT
+      l: 11.877
+      r: 79.794
+      t: 309.554
+    charspan:
+    - 0
+    - 6
+    page_no: 6
+  self_ref: '#/texts/159'
+  text: "\u306E\u884C\u70BA\u306B\u3088\u308B"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u25CB\u520A\u884C\u7269\u3084\u30A4\u30F3\u30BF\u30FC\u30CD \u30C3\u30C8\
+    \ \u3092\u901A\u3058\u305F\u767A\u8868 \u25CB\u520A\u884C\u7269\u3084\u30A4\u30F3\
+    \u30BF\u30FC\u30CD \u30C3\u30C8 \u3092\u901A\u3058\u305F\u767A\u8868"
+  parent:
+    $ref: '#/groups/20'
+  prov:
+  - bbox:
+      b: 278.866
+      coord_origin: BOTTOMLEFT
+      l: 5.924
+      r: 207.024
+      t: 296.798
+    charspan:
+    - 0
+    - 41
+    page_no: 6
+  self_ref: '#/texts/160'
+  text: "\u25CB\u520A\u884C\u7269\u3084\u30A4\u30F3\u30BF\u30FC\u30CD \u30C3\u30C8\
+    \ \u3092\u901A\u3058\u305F\u767A\u8868 \u25CB\u520A\u884C\u7269\u3084\u30A4\u30F3\
+    \u30BF\u30FC\u30CD \u30C3\u30C8 \u3092\u901A\u3058\u305F\u767A\u8868"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u25CB\u7814\u7A76 \u96C6 \u4F1A\uFF08\u5B66\u4F1A\uFF09\u3067\u306E\u767A\
+    \u8868 \u25CB\u7814\u7A76 \u96C6 \u4F1A\uFF08\u5B66\u4F1A\uFF09\u3067\u306E\u767A\
+    \u8868"
+  parent:
+    $ref: '#/groups/21'
+  prov:
+  - bbox:
+      b: 260.157
+      coord_origin: BOTTOMLEFT
+      l: 5.924
+      r: 154.585
+      t: 278.089
+    charspan:
+    - 0
+    - 31
+    page_no: 6
+  self_ref: '#/texts/161'
+  text: "\u25CB\u7814\u7A76 \u96C6 \u4F1A\uFF08\u5B66\u4F1A\uFF09\u3067\u306E\u767A\
+    \u8868 \u25CB\u7814\u7A76 \u96C6 \u4F1A\uFF08\u5B66\u4F1A\uFF09\u3067\u306E\u767A\
+    \u8868"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3084\u535A\u89A7\u4F1A\u3078\u306E\u51FA\u54C1"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 241.449
+      coord_origin: BOTTOMLEFT
+      l: 11.877
+      r: 115.731
+      t: 253.428
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/162'
+  text: "\u3084\u535A\u89A7\u4F1A\u3078\u306E\u51FA\u54C1"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u25CB\uFF34\uFF36\u30FB\u30E9\u30B8\u30AA\u3067\u306E\u516C\u8868 \u25CB\
+    \uFF34\uFF36\u30FB\u30E9\u30B8\u30AA\u3067\u306E\u516C\u8868"
+  parent:
+    $ref: '#/groups/22'
+  prov:
+  - bbox:
+      b: 222.74
+      coord_origin: BOTTOMLEFT
+      l: 5.924
+      r: 124.245
+      t: 240.67200000000003
+    charspan:
+    - 0
+    - 23
+    page_no: 6
+  self_ref: '#/texts/163'
+  text: "\u25CB\uFF34\uFF36\u30FB\u30E9\u30B8\u30AA\u3067\u306E\u516C\u8868 \u25CB\
+    \uFF34\uFF36\u30FB\u30E9\u30B8\u30AA\u3067\u306E\u516C\u8868"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: "\u25CB"
+  orig: "\u25CB \u88FD \u54C1\u306E \u8CA9 \u25CB \u88FD \u54C1\u306E \u8CA9"
+  parent:
+    $ref: '#/groups/23'
+  prov:
+  - bbox:
+      b: 204.031
+      coord_origin: BOTTOMLEFT
+      l: 5.924
+      r: 71.859
+      t: 221.96299999999997
+    charspan:
+    - 0
+    - 17
+    page_no: 6
+  self_ref: '#/texts/164'
+  text: "\u88FD \u54C1\u306E \u8CA9 \u25CB \u88FD \u54C1\u306E \u8CA9"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u58F2\u3000\u3000\u3000\u3000\u306A\u3069"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 204.031
+      coord_origin: BOTTOMLEFT
+      l: 71.858
+      r: 137.101
+      t: 216.01
+    charspan:
+    - 0
+    - 7
+    page_no: 6
+  self_ref: '#/texts/165'
+  text: "\u58F2\u3000\u3000\u3000\u3000\u306A\u3069"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7279\u8A31\u3092\u53D7\u3051\u308B\u6A29\u5229\u3092"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 340.945
+      coord_origin: BOTTOMLEFT
+      l: 5.924
+      r: 108.039
+      t: 352.924
+    charspan:
+    - 0
+    - 9
+    page_no: 6
+  self_ref: '#/texts/166'
+  text: "\u7279\u8A31\u3092\u53D7\u3051\u308B\u6A29\u5229\u3092"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6301"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 340.945
+      coord_origin: BOTTOMLEFT
+      l: 108.142
+      r: 120.133
+      t: 352.924
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/167'
+  text: "\u6301"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3063\u3066\u3044\u308B\u4EBA"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 340.945
+      coord_origin: BOTTOMLEFT
+      l: 120.132
+      r: 174.283
+      t: 352.924
+    charspan:
+    - 0
+    - 5
+    page_no: 6
+  self_ref: '#/texts/168'
+  text: "\u3063\u3066\u3044\u308B\u4EBA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF08\u767A\u660E\u8005\u3084\u767A\u660E\u8005\u304B\u3089\u6A29\u5229\u3092"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 322.236
+      coord_origin: BOTTOMLEFT
+      l: 5.924
+      r: 151.663
+      t: 334.215
+    charspan:
+    - 0
+    - 13
+    page_no: 6
+  self_ref: '#/texts/169'
+  text: "\uFF08\u767A\u660E\u8005\u3084\u767A\u660E\u8005\u304B\u3089\u6A29\u5229\u3092"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8B72\u6E21"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 322.236
+      coord_origin: BOTTOMLEFT
+      l: 151.824
+      r: 175.818
+      t: 334.215
+    charspan:
+    - 0
+    - 2
+    page_no: 6
+  self_ref: '#/texts/170'
+  text: "\u8B72\u6E21"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3055\u308C\u305F\u8005\uFF09"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 322.236
+      coord_origin: BOTTOMLEFT
+      l: 175.833
+      r: 226.027
+      t: 334.215
+    charspan:
+    - 0
+    - 5
+    page_no: 6
+  self_ref: '#/texts/171'
+  text: "\u3055\u308C\u305F\u8005\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u306E\u884C\u70BA\u306B\u3088\u308B"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 303.527
+      coord_origin: BOTTOMLEFT
+      l: 5.924
+      r: 73.841
+      t: 315.506
+    charspan:
+    - 0
+    - 6
+    page_no: 6
+  self_ref: '#/texts/172'
+  text: "\u306E\u884C\u70BA\u306B\u3088\u308B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3084\u535A\u89A7\u4F1A\u3078\u306E\u51FA\u54C1"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 247.401
+      coord_origin: BOTTOMLEFT
+      l: 5.924
+      r: 109.778
+      t: 259.38
+    charspan:
+    - 0
+    - 8
+    page_no: 6
+  self_ref: '#/texts/173'
+  text: "\u3084\u535A\u89A7\u4F1A\u3078\u306E\u51FA\u54C1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u58F2\u3000\u3000\u3000\u3000\u306A\u3069"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 209.98400000000004
+      coord_origin: BOTTOMLEFT
+      l: 65.906
+      r: 131.149
+      t: 221.96299999999997
+    charspan:
+    - 0
+    - 7
+    page_no: 6
+  self_ref: '#/texts/174'
+  text: "\u58F2\u3000\u3000\u3000\u3000\u306A\u3069"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u305D \u306E \u7D50\u679C \u305D \u306E \u7D50\u679C"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 156.502
+      coord_origin: BOTTOMLEFT
+      l: 85.153
+      r: 149.734
+      t: 174.457
+    charspan:
+    - 0
+    - 13
+    page_no: 6
+  self_ref: '#/texts/175'
+  text: "\u305D \u306E \u7D50\u679C \u305D \u306E \u7D50\u679C"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u767A\u660E\u304C \u521D \u3081\u3066 \u516C\u77E5\u3068\u306A\u308B \u767A\
+    \u660E\u304C \u521D \u3081\u3066 \u516C\u77E5\u3068\u306A\u308B"
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 63.271000000000015
+      coord_origin: BOTTOMLEFT
+      l: 68.655
+      r: 168.5
+      t: 104.38499999999999
+    charspan:
+    - 0
+    - 29
+    page_no: 6
+  self_ref: '#/texts/176'
+  text: "\u767A\u660E\u304C \u521D \u3081\u3066 \u516C\u77E5\u3068\u306A\u308B \u767A\
+    \u660E\u304C \u521D \u3081\u3066 \u516C\u77E5\u3068\u306A\u308B"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '6'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 3.4470000000000027
+      coord_origin: BOTTOMLEFT
+      l: 753.931
+      r: 760.595
+      t: 17.326999999999998
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/177'
+  text: '6'
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u65B0\u898F\u6027\uFF08\u65B0\u3057\u3055\uFF09\u306E \u5224\u65AD \u624B\
+    \u6CD5 \uFF12\uFF0D\uFF13"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 485.07
+      coord_origin: BOTTOMLEFT
+      l: 7.058
+      r: 528.548
+      t: 531.288
+    charspan:
+    - 0
+    - 19
+    page_no: 7
+  self_ref: '#/texts/178'
+  text: "\u65B0\u898F\u6027\uFF08\u65B0\u3057\u3055\uFF09\u306E \u5224\u65AD \u624B\
+    \u6CD5 \uFF12\uFF0D\uFF13"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u767A\u660E\u306E \u30D1 \u30FC \u30C4 \uFF08\u767A\u660E\u7279\u5B9A \u4E8B\
+    \ \u9805\uFF09\u306E \u6BD4\u8F03 \u306B\u3088\u308B \u5224\u65AD"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 418.186
+      coord_origin: BOTTOMLEFT
+      l: 26.589
+      r: 599.584
+      t: 446.164
+    charspan:
+    - 0
+    - 31
+    page_no: 7
+  self_ref: '#/texts/179'
+  text: "\u767A\u660E\u306E \u30D1 \u30FC \u30C4 \uFF08\u767A\u660E\u7279\u5B9A \u4E8B\
+    \ \u9805\uFF09\u306E \u6BD4\u8F03 \u306B\u3088\u308B \u5224\u65AD"
+- children: []
+  content_layer: body
+  label: text
+  orig: '7'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 377.71
+      coord_origin: BOTTOMLEFT
+      l: 19.729
+      r: 25.725
+      t: 389.689
+    charspan:
+    - 0
+    - 1
+    page_no: 7
+  self_ref: '#/texts/180'
+  text: '7'
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u81EA \u5DF1 \u306E\u767A\u660E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 355.937
+      coord_origin: BOTTOMLEFT
+      l: 65.197
+      r: 205.03
+      t: 383.915
+    charspan:
+    - 0
+    - 7
+    page_no: 7
+  self_ref: '#/texts/181'
+  text: "\u81EA \u5DF1 \u306E\u767A\u660E"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u5148 \u884C\u6280\u8853"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 356.674
+      coord_origin: BOTTOMLEFT
+      l: 453.43
+      r: 565.314
+      t: 384.652
+    charspan:
+    - 0
+    - 5
+    page_no: 7
+  self_ref: '#/texts/182'
+  text: "\u5148 \u884C\u6280\u8853"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u77E9\u5F62\u5F62\u72B6 \u306E\uFF08\u8981\u4EF6 A \uFF09 \u30B9 \u30C6\
+    \ \u30F3 \u30EC \u30B9 \u88FD\u30B1 \u30FC\u30B9\u306B\uFF08 \uFF22 \uFF09 \u6ED1\
+    \ \u308A \u6B62 \u3081\u306E \u5857\u6599 \u3092 \u5857 \u3063\u305F\uFF08 \uFF23\
+    \ \uFF09 \u643A\u5E2F \u96FB \u8A71 \uFF08 \uFF24 \uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 232.85000000000002
+      coord_origin: BOTTOMLEFT
+      l: 51.109
+      r: 340.314
+      t: 343.235
+    charspan:
+    - 0
+    - 72
+    page_no: 7
+  self_ref: '#/texts/183'
+  text: "\u77E9\u5F62\u5F62\u72B6 \u306E\uFF08\u8981\u4EF6 A \uFF09 \u30B9 \u30C6\
+    \ \u30F3 \u30EC \u30B9 \u88FD\u30B1 \u30FC\u30B9\u306B\uFF08 \uFF22 \uFF09 \u6ED1\
+    \ \u308A \u6B62 \u3081\u306E \u5857\u6599 \u3092 \u5857 \u3063\u305F\uFF08 \uFF23\
+    \ \uFF09 \u643A\u5E2F \u96FB \u8A71 \uFF08 \uFF24 \uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u77E9\u5F62\u5F62\u72B6 \u306E\uFF08\u8981\u4EF6 \uFF21 \uFF09 \u30B9 \u30C6\
+    \ \u30F3 \u30EC \u30B9 \u88FD\u30B1 \u30FC\u30B9\u306B\uFF08 \uFF22 \uFF09 \u6ED1\
+    \ \u308A \u6B62 \u3081\u306E \u5857\u6599 \u3092 \u5857 \u3063\u305F\uFF08 \uFF23\
+    \ \uFF09 \u30C7\u30B8\u30BF\u30EB\u30AB\u30E1\u30E9\uFF08 E \uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 229.22199999999998
+      coord_origin: BOTTOMLEFT
+      l: 432.057
+      r: 721.262
+      t: 339.607
+    charspan:
+    - 0
+    - 72
+    page_no: 7
+  self_ref: '#/texts/184'
+  text: "\u77E9\u5F62\u5F62\u72B6 \u306E\uFF08\u8981\u4EF6 \uFF21 \uFF09 \u30B9 \u30C6\
+    \ \u30F3 \u30EC \u30B9 \u88FD\u30B1 \u30FC\u30B9\u306B\uFF08 \uFF22 \uFF09 \u6ED1\
+    \ \u308A \u6B62 \u3081\u306E \u5857\u6599 \u3092 \u5857 \u3063\u305F\uFF08 \uFF23\
+    \ \uFF09 \u30C7\u30B8\u30BF\u30EB\u30AB\u30E1\u30E9\uFF08 E \uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF21\uFF0B\uFF22\uFF0B\uFF23\uFF0B\uFF24"
+  parent:
+    $ref: '#/groups/24'
+  prov:
+  - bbox:
+      b: 148.04399999999998
+      coord_origin: BOTTOMLEFT
+      l: 110.466
+      r: 278.026
+      t: 176.022
+    charspan:
+    - 0
+    - 7
+    page_no: 7
+  self_ref: '#/texts/185'
+  text: "\uFF21\uFF0B\uFF22\uFF0B\uFF23\uFF0B\uFF24"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u76F8\u9055\u70B9"
+  parent:
+    $ref: '#/groups/24'
+  prov:
+  - bbox:
+      b: 148.04399999999998
+      coord_origin: BOTTOMLEFT
+      l: 296.702
+      r: 380.608
+      t: 176.022
+    charspan:
+    - 0
+    - 3
+    page_no: 7
+  self_ref: '#/texts/186'
+  text: "\u76F8\u9055\u70B9"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF1A \uFF24 \u3068 \uFF25"
+  parent:
+    $ref: '#/groups/24'
+  prov:
+  - bbox:
+      b: 148.04399999999998
+      coord_origin: BOTTOMLEFT
+      l: 380.58
+      r: 457.015
+      t: 176.022
+    charspan:
+    - 0
+    - 7
+    page_no: 7
+  self_ref: '#/texts/187'
+  text: "\uFF1A \uFF24 \u3068 \uFF25"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65B0\u3057\u3044\uFF01\uFF01\uFF01"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 29.413999999999987
+      coord_origin: BOTTOMLEFT
+      l: 245.849
+      r: 405.567
+      t: 57.391999999999996
+    charspan:
+    - 0
+    - 6
+    page_no: 7
+  self_ref: '#/texts/188'
+  text: "\u65B0\u3057\u3044\uFF01\uFF01\uFF01"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF21\uFF0B\uFF22\uFF0B\uFF23\uFF0B\uFF25"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 148.04399999999998
+      coord_origin: BOTTOMLEFT
+      l: 497.197
+      r: 663.441
+      t: 176.022
+    charspan:
+    - 0
+    - 7
+    page_no: 7
+  self_ref: '#/texts/189'
+  text: "\uFF21\uFF0B\uFF22\uFF0B\uFF23\uFF0B\uFF25"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '7'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 3.475999999999999
+      coord_origin: BOTTOMLEFT
+      l: 753.902
+      r: 760.566
+      t: 17.355999999999995
+    charspan:
+    - 0
+    - 1
+    page_no: 7
+  self_ref: '#/texts/190'
+  text: '7'
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u65B0\u898F\u6027\u306E \u5224\u65AD \u624B\u6CD5 \uFF12\uFF0D\uFF13"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 484.843
+      coord_origin: BOTTOMLEFT
+      l: 7.058
+      r: 412.072
+      t: 531.288
+    charspan:
+    - 0
+    - 14
+    page_no: 8
+  self_ref: '#/texts/191'
+  text: "\u65B0\u898F\u6027\u306E \u5224\u65AD \u624B\u6CD5 \uFF12\uFF0D\uFF13"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7279\u8A31\u767A\u660E\u304C \u5305\u542B \u3059\u308B\u6280\u8853\u7684\
+    \ \u7BC4\u56F2 \u306B\u3088\u308B \u5224\u65AD"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 405.977
+      coord_origin: BOTTOMLEFT
+      l: 15.704
+      r: 608.116
+      t: 437.948
+    charspan:
+    - 0
+    - 24
+    page_no: 8
+  self_ref: '#/texts/192'
+  text: "\u7279\u8A31\u767A\u660E\u304C \u5305\u542B \u3059\u308B\u6280\u8853\u7684\
+    \ \u7BC4\u56F2 \u306B\u3088\u308B \u5224\u65AD"
+- children: []
+  content_layer: body
+  label: text
+  orig: "8 \u767A\u660E \u03B1 \uFF08\u516C\u77E5\u767A\u660E\uFF09 \u65AD\u9762\u516D\
+    \u89D2\u5F62 \uFF08 \uFF21 \uFF09 \u306E \u925B\u7B46 \uFF08 \uFF22 \uFF09 \u767A\
+    \u660E \u03B1 \uFF08\u516C\u77E5\u767A\u660E\uFF09 \u65AD\u9762\u516D\u89D2\u5F62\
+    \ \uFF08 \uFF21 \uFF09 \u306E \u925B\u7B46 \uFF08 \uFF22 \uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 289.889
+      coord_origin: BOTTOMLEFT
+      l: 15.477
+      r: 213.451
+      t: 382.07
+    charspan:
+    - 0
+    - 71
+    page_no: 8
+  self_ref: '#/texts/193'
+  text: "8 \u767A\u660E \u03B1 \uFF08\u516C\u77E5\u767A\u660E\uFF09 \u65AD\u9762\u516D\
+    \u89D2\u5F62 \uFF08 \uFF21 \uFF09 \u306E \u925B\u7B46 \uFF08 \uFF22 \uFF09 \u767A\
+    \u660E \u03B1 \uFF08\u516C\u77E5\u767A\u660E\uFF09 \u65AD\u9762\u516D\u89D2\u5F62\
+    \ \uFF08 \uFF21 \uFF09 \u306E \u925B\u7B46 \uFF08 \uFF22 \uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u767A\u660E \u03B1"
+  parent:
+    $ref: '#/pictures/3'
+  prov:
+  - bbox:
+      b: 150.447
+      coord_origin: BOTTOMLEFT
+      l: 79.483
+      r: 151.483
+      t: 174.43200000000002
+    charspan:
+    - 0
+    - 4
+    page_no: 8
+  self_ref: '#/texts/194'
+  text: "\u767A\u660E \u03B1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u767A\u660E \u03B2"
+  parent:
+    $ref: '#/pictures/3'
+  prov:
+  - bbox:
+      b: 68.74400000000003
+      coord_origin: BOTTOMLEFT
+      l: 129.373
+      r: 189.468
+      t: 88.73699999999997
+    charspan:
+    - 0
+    - 4
+    page_no: 8
+  self_ref: '#/texts/195'
+  text: "\u767A\u660E \u03B2"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4E0A\u4F4D \u6982 \u5FF5"
+  parent:
+    $ref: '#/pictures/3'
+  prov:
+  - bbox:
+      b: 234.94799999999998
+      coord_origin: BOTTOMLEFT
+      l: 114.35
+      r: 210.359
+      t: 258.933
+    charspan:
+    - 0
+    - 6
+    page_no: 8
+  self_ref: '#/texts/196'
+  text: "\u4E0A\u4F4D \u6982 \u5FF5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 328.61
+      coord_origin: BOTTOMLEFT
+      l: 435.657
+      r: 448.654
+      t: 354.578
+    charspan:
+    - 0
+    - 1
+    page_no: 8
+  self_ref: '#/texts/197'
+  text: "\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u767A\u660E \u03B2 \uFF08\u51FA\u9858\uFF11\uFF09 \u65AD\u9762\u516D\u89D2\
+    \u5F62 \uFF08 \uFF21 \u6D88 \u3057 \u30B4\u30E0 \u4ED8\uFF08 \uFF23 \uFF09 \u306E\
+    \ \u925B\u7B46 \uFF08 \uFF22 \uFF09 \u767A\u660E \u03B2 \uFF08\u51FA\u9858\uFF11\
+    \uFF09 \u65AD\u9762\u516D\u89D2\u5F62 \uFF08 \uFF21 \u6D88 \u3057 \u30B4\u30E0\
+    \ \u4ED8\uFF08 \uFF23 \uFF09 \u306E \u925B\u7B46 \uFF08 \uFF22 \uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 260.295
+      coord_origin: BOTTOMLEFT
+      l: 273.827
+      r: 445.734
+      t: 383.657
+    charspan:
+    - 0
+    - 91
+    page_no: 8
+  self_ref: '#/texts/198'
+  text: "\u767A\u660E \u03B2 \uFF08\u51FA\u9858\uFF11\uFF09 \u65AD\u9762\u516D\u89D2\
+    \u5F62 \uFF08 \uFF21 \u6D88 \u3057 \u30B4\u30E0 \u4ED8\uFF08 \uFF23 \uFF09 \u306E\
+    \ \u925B\u7B46 \uFF08 \uFF22 \uFF09 \u767A\u660E \u03B2 \uFF08\u51FA\u9858\uFF11\
+    \uFF09 \u65AD\u9762\u516D\u89D2\u5F62 \uFF08 \uFF21 \u6D88 \u3057 \u30B4\u30E0\
+    \ \u4ED8\uFF08 \uFF23 \uFF09 \u306E \u925B\u7B46 \uFF08 \uFF22 \uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 322.657
+      coord_origin: BOTTOMLEFT
+      l: 441.609
+      r: 454.606
+      t: 348.625
+    charspan:
+    - 0
+    - 1
+    page_no: 8
+  self_ref: '#/texts/199'
+  text: "\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4E0B\u4F4D \u6982 \u5FF5 \uFF08 \u7BC4\u56F2 \u5185\uFF09 \u767A\u660E\
+    \ \u03B1 \u306B\u5BFE\u3057\u3066 \u65B0\u898F\u6027\u6709\u308A"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 154.387
+      coord_origin: BOTTOMLEFT
+      l: 271.446
+      r: 463.45
+      t: 235.97199999999998
+    charspan:
+    - 0
+    - 30
+    page_no: 8
+  self_ref: '#/texts/200'
+  text: "\u4E0B\u4F4D \u6982 \u5FF5 \uFF08 \u7BC4\u56F2 \u5185\uFF09 \u767A\u660E\
+    \ \u03B1 \u306B\u5BFE\u3057\u3066 \u65B0\u898F\u6027\u6709\u308A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF08 \u203B \uFF09\u5229\u7528\u767A\u660E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 125.58699999999999
+      coord_origin: BOTTOMLEFT
+      l: 271.446
+      r: 415.462
+      t: 149.572
+    charspan:
+    - 0
+    - 9
+    page_no: 8
+  self_ref: '#/texts/201'
+  text: "\uFF08 \u203B \uFF09\u5229\u7528\u767A\u660E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u767A\u660E \u03B3"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 51.06400000000002
+      coord_origin: BOTTOMLEFT
+      l: 303.222
+      r: 375.222
+      t: 75.04899999999998
+    charspan:
+    - 0
+    - 4
+    page_no: 8
+  self_ref: '#/texts/202'
+  text: "\u767A\u660E \u03B3"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u767A\u660E \u03B3 \uFF08\u51FA\u9858\uFF12\uFF09 \u65AD\u9762\u516D\u89D2\
+    \u5F62 \uFF08 \uFF21 \uFF09 \u6D88 \u3057 \u30B4\u30E0 \u4ED8\uFF08 \uFF23 \uFF09\
+    \ \u306E\u30DC\u30FC\u30EB \u30DA \u30F3\uFF08 \uFF24 \u767A\u660E \u03B3 \uFF08\
+    \u51FA\u9858\uFF12\uFF09 \u65AD\u9762\u516D\u89D2\u5F62 \uFF08 \uFF21 \uFF09 \u6D88\
+    \ \u3057 \u30B4\u30E0 \u4ED8\uFF08 \uFF23 \uFF09 \u306E\u30DC\u30FC\u30EB \u30DA\
+    \ \u30F3\uFF08 \uFF24 \uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 260.833
+      coord_origin: BOTTOMLEFT
+      l: 530.107
+      r: 724.862
+      t: 384.196
+    charspan:
+    - 0
+    - 99
+    page_no: 8
+  self_ref: '#/texts/203'
+  text: "\u767A\u660E \u03B3 \uFF08\u51FA\u9858\uFF12\uFF09 \u65AD\u9762\u516D\u89D2\
+    \u5F62 \uFF08 \uFF21 \uFF09 \u6D88 \u3057 \u30B4\u30E0 \u4ED8\uFF08 \uFF23 \uFF09\
+    \ \u306E\u30DC\u30FC\u30EB \u30DA \u30F3\uFF08 \uFF24 \u767A\u660E \u03B3 \uFF08\
+    \u51FA\u9858\uFF12\uFF09 \u65AD\u9762\u516D\u89D2\u5F62 \uFF08 \uFF21 \uFF09 \u6D88\
+    \ \u3057 \u30B4\u30E0 \u4ED8\uFF08 \uFF23 \uFF09 \u306E\u30DC\u30FC\u30EB \u30DA\
+    \ \u30F3\uFF08 \uFF24 \uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 260.833
+      coord_origin: BOTTOMLEFT
+      l: 717.817
+      r: 730.814
+      t: 286.801
+    charspan:
+    - 0
+    - 1
+    page_no: 8
+  self_ref: '#/texts/204'
+  text: "\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4E0A\u4F4D \u30FB \u4E0B\u4F4D \u3067\u306A\u3044\uFF08 \u7BC4 \u56F2 \u5916\
+    \uFF09 \u767A\u660E \u306B\u5BFE\u3057\u3066"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 151.382
+      coord_origin: BOTTOMLEFT
+      l: 528.18
+      r: 738.17
+      t: 232.96699999999998
+    charspan:
+    - 0
+    - 27
+    page_no: 8
+  self_ref: '#/texts/205'
+  text: "\u4E0A\u4F4D \u30FB \u4E0B\u4F4D \u3067\u306A\u3044\uFF08 \u7BC4 \u56F2 \u5916\
+    \uFF09 \u767A\u660E \u306B\u5BFE\u3057\u3066"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u03B1 \u65B0\u898F\u6027\u6709\u308A"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 122.582
+      coord_origin: BOTTOMLEFT
+      l: 528.18
+      r: 642.079
+      t: 175.36699999999996
+    charspan:
+    - 0
+    - 7
+    page_no: 8
+  self_ref: '#/texts/206'
+  text: "\u03B1 \u65B0\u898F\u6027\u6709\u308A"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '8'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 3.475999999999999
+      coord_origin: BOTTOMLEFT
+      l: 753.902
+      r: 760.566
+      t: 17.355999999999995
+    charspan:
+    - 0
+    - 1
+    page_no: 8
+  self_ref: '#/texts/207'
+  text: '8'
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u9032\u6B69\u6027\u304C \u5426 \u5B9A\u3055\u308C\u308B \u4E8B \u4F8B \uFF12\
+    \uFF0D\uFF14"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 484.843
+      coord_origin: BOTTOMLEFT
+      l: 7.058
+      r: 506.835
+      t: 531.288
+    charspan:
+    - 0
+    - 19
+    page_no: 9
+  self_ref: '#/texts/208'
+  text: "\u9032\u6B69\u6027\u304C \u5426 \u5B9A\u3055\u308C\u308B \u4E8B \u4F8B \uFF12\
+    \uFF0D\uFF14"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\uFF0D \u6700\u9069\u6750\u6599 \u306E \u9078\u629E \u30FB \u8A2D\u8A08\u5909\
+    \u66F4 \uFF0D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 409.35
+      coord_origin: BOTTOMLEFT
+      l: 154.346
+      r: 586.828
+      t: 441.321
+    charspan:
+    - 0
+    - 20
+    page_no: 9
+  self_ref: '#/texts/209'
+  text: "\uFF0D \u6700\u9069\u6750\u6599 \u306E \u9078\u629E \u30FB \u8A2D\u8A08\u5909\
+    \u66F4 \uFF0D"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6700\u9069\u6750\u6599 \u306E \u9078\u629E \u3001 \u6570\u5024\u7BC4\u56F2\
+    \ \u306E \u6700\u9069 \u5316\u3001 \u5177 \u4F53\u7684 \u9069 \u7528\u306B \u4F34\
+    \ \u3046 \u8A2D\u8A08\u5909\u66F4"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 365.823
+      coord_origin: BOTTOMLEFT
+      l: 13.55
+      r: 684.995
+      t: 389.808
+    charspan:
+    - 0
+    - 43
+    page_no: 9
+  self_ref: '#/texts/210'
+  text: "\u6700\u9069\u6750\u6599 \u306E \u9078\u629E \u3001 \u6570\u5024\u7BC4\u56F2\
+    \ \u306E \u6700\u9069 \u5316\u3001 \u5177 \u4F53\u7684 \u9069 \u7528\u306B \u4F34\
+    \ \u3046 \u8A2D\u8A08\u5909\u66F4"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3010 \u672C\u9858\u767A\u660E \u3011 \u30B1 \u30FC\u30B9\u3092 \u539A \u3055\
+    0 .5\uFF5E 0 .8mm \u306E FRP \u3068\u3057\u305F \u643A\u5E2F \u96FB \u8A71"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 287.126
+      coord_origin: BOTTOMLEFT
+      l: 17.065
+      r: 243.298
+      t: 355.137
+    charspan:
+    - 0
+    - 47
+    page_no: 9
+  self_ref: '#/texts/211'
+  text: "\u3010 \u672C\u9858\u767A\u660E \u3011 \u30B1 \u30FC\u30B9\u3092 \u539A \u3055\
+    0 .5\uFF5E 0 .8mm \u306E FRP \u3068\u3057\u305F \u643A\u5E2F \u96FB \u8A71"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u203B\u7E4A\u7DAD\u5F37 \u5316\u30D7\u30E9\u30B9 \u30C6\u30A3\u30C3 \u30AF"
+  parent:
+    $ref: '#/groups/25'
+  prov:
+  - bbox:
+      b: 252.45600000000002
+      coord_origin: BOTTOMLEFT
+      l: 20.041
+      r: 212.103
+      t: 270.438
+    charspan:
+    - 0
+    - 15
+    page_no: 9
+  self_ref: '#/texts/212'
+  text: "\u203B\u7E4A\u7DAD\u5F37 \u5316\u30D7\u30E9\u30B9 \u30C6\u30A3\u30C3 \u30AF"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u6587\u732E \uFF11 \u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 219.03700000000003
+      coord_origin: BOTTOMLEFT
+      l: 20.069
+      r: 93.856
+      t: 239.02999999999997
+    charspan:
+    - 0
+    - 7
+    page_no: 9
+  self_ref: '#/texts/213'
+  text: "\u3010\u6587\u732E \uFF11 \u3011"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u643A\u5E2F \u96FB \u8A71 \u306E \u30B1 \u30FC\u30B9\u306F \u539A \u3044\
+    \ \u307B \u3069 \u5F37 \u5EA6\u304C\u9AD8\u3044\u304C\u3001 \u5168 \u4F53\u306E\
+    \ \u5BF8 \u6CD5\u3092\u8003 \u616E \u3059\u308B\u3068 1 . 0 \uFF5E 1 .5mm \u306E\
+    \ \u539A \u3055\u304C \u597D\u307E \u3057\u3044"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 123.0
+      coord_origin: BOTTOMLEFT
+      l: 20.069
+      r: 265.371
+      t: 215.02099999999996
+    charspan:
+    - 0
+    - 76
+    page_no: 9
+  self_ref: '#/texts/214'
+  text: "\u643A\u5E2F \u96FB \u8A71 \u306E \u30B1 \u30FC\u30B9\u306F \u539A \u3044\
+    \ \u307B \u3069 \u5F37 \u5EA6\u304C\u9AD8\u3044\u304C\u3001 \u5168 \u4F53\u306E\
+    \ \u5BF8 \u6CD5\u3092\u8003 \u616E \u3059\u308B\u3068 1 . 0 \uFF5E 1 .5mm \u306E\
+    \ \u539A \u3055\u304C \u597D\u307E \u3057\u3044"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6570\u5024\u7BC4\u56F2 \u306E \u6700\u9069 \u5316 \u5F37 \u5EA6\u3068 \u5C0F\
+    \u578B \u5316\u306E \u4E21\u7ACB \u306E\u305F\u3081\u306E \u30B1 \u30FC\u30B9\u306E\
+    \ \u539A \u3055\u3092\u6C7A\u5B9A\u3059\u308B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 23.993000000000052
+      coord_origin: BOTTOMLEFT
+      l: 20.098
+      r: 324.116
+      t: 105.57799999999997
+    charspan:
+    - 0
+    - 45
+    page_no: 9
+  self_ref: '#/texts/215'
+  text: "\u6570\u5024\u7BC4\u56F2 \u306E \u6700\u9069 \u5316 \u5F37 \u5EA6\u3068 \u5C0F\
+    \u578B \u5316\u306E \u4E21\u7ACB \u306E\u305F\u3081\u306E \u30B1 \u30FC\u30B9\u306E\
+    \ \u539A \u3055\u3092\u6C7A\u5B9A\u3059\u308B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3010 \u672C\u9858\u52B9 \u679C\u3011 FRP \u3092\u7528\u3044\u308B\u3053\
+    \u3068\u306B\u3088\u308A\u3001 \u5F37 \u5EA6\u3092 \u7DAD\u6301 \u3057\u3064\u3064\
+    \ \u643A\u5E2F \u96FB \u8A71 \u306E \u5C0F\u578B \u5316\u3092\u56F3\u308B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 258.864
+      coord_origin: BOTTOMLEFT
+      l: 397.077
+      r: 648.085
+      t: 350.885
+    charspan:
+    - 0
+    - 52
+    page_no: 9
+  self_ref: '#/texts/216'
+  text: "\u3010 \u672C\u9858\u52B9 \u679C\u3011 FRP \u3092\u7528\u3044\u308B\u3053\
+    \u3068\u306B\u3088\u308A\u3001 \u5F37 \u5EA6\u3092 \u7DAD\u6301 \u3057\u3064\u3064\
+    \ \u643A\u5E2F \u96FB \u8A71 \u306E \u5C0F\u578B \u5316\u3092\u56F3\u308B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3010\u6587\u732E \uFF12 \u3011 \u30B1 \u30FC\u30B9\u306B FRP \u3092\u7528\
+    \u3044\u305F\u96FB \u5B50 \u624B \u5E33 FRP \u306F \u5F37 \u5EA6\u304C \u5F37\
+    \ \u3044\u305F\u3081\u3001 \u539A \u3055\u30920 . 9 \uFF5E 1 . 2 mm \u3068 \u8584\
+    \ \u304F\u3059\u308B\u3053\u3068\u304C\u3067\u304D\u308B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 123.0
+      coord_origin: BOTTOMLEFT
+      l: 397.077
+      r: 662.57
+      t: 239.02999999999997
+    charspan:
+    - 0
+    - 82
+    page_no: 9
+  self_ref: '#/texts/217'
+  text: "\u3010\u6587\u732E \uFF12 \u3011 \u30B1 \u30FC\u30B9\u306B FRP \u3092\u7528\
+    \u3044\u305F\u96FB \u5B50 \u624B \u5E33 FRP \u306F \u5F37 \u5EA6\u304C \u5F37\
+    \ \u3044\u305F\u3081\u3001 \u539A \u3055\u30920 . 9 \uFF5E 1 . 2 mm \u3068 \u8584\
+    \ \u304F\u3059\u308B\u3053\u3068\u304C\u3067\u304D\u308B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u516C\u77E5\u306E \u6750\u6599 \u304B\u3089\u306E \u9078\u629E \uFF26\uFF32\
+    \uFF30 \u3092\u7528\u3044\u308B\u3053\u3068\u306B\u3088\u308A \u30B1 \u30FC\u30B9\
+    \u3092 \u8584 \u304F\u3059\u308B\u3053\u3068\u304C\u3067\u304D\u308B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 23.993000000000052
+      coord_origin: BOTTOMLEFT
+      l: 403.569
+      r: 697.148
+      t: 105.57799999999997
+    charspan:
+    - 0
+    - 45
+    page_no: 9
+  self_ref: '#/texts/218'
+  text: "\u516C\u77E5\u306E \u6750\u6599 \u304B\u3089\u306E \u9078\u629E \uFF26\uFF32\
+    \uFF30 \u3092\u7528\u3044\u308B\u3053\u3068\u306B\u3088\u308A \u30B1 \u30FC\u30B9\
+    \u3092 \u8584 \u304F\u3059\u308B\u3053\u3068\u304C\u3067\u304D\u308B"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '9'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 3.4470000000000027
+      coord_origin: BOTTOMLEFT
+      l: 753.931
+      r: 760.595
+      t: 17.326999999999998
+    charspan:
+    - 0
+    - 1
+    page_no: 9
+  self_ref: '#/texts/219'
+  text: '9'
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7279\u8A31\u6A29\u306E\u52B9\u529B \uFF12\uFF0D\uFF15"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 484.815
+      coord_origin: BOTTOMLEFT
+      l: 7.058
+      r: 340.072
+      t: 531.288
+    charspan:
+    - 0
+    - 10
+    page_no: 10
+  self_ref: '#/texts/220'
+  text: "\u7279\u8A31\u6A29\u306E\u52B9\u529B \uFF12\uFF0D\uFF15"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u2460\u7A4D\u6975 \u7684\u52B9\u529B\u3068 \u6D88\u6975 \u7684\u52B9\u529B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 417.244
+      coord_origin: BOTTOMLEFT
+      l: 49.323
+      r: 331.685
+      t: 441.229
+    charspan:
+    - 0
+    - 15
+    page_no: 10
+  self_ref: '#/texts/221'
+  text: "\u2460\u7A4D\u6975 \u7684\u52B9\u529B\u3068 \u6D88\u6975 \u7684\u52B9\u529B"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7A4D\u6975 \u7684\u52B9\u529B \u7A4D\u6975 \u7684\u52B9\u529B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 368.856
+      coord_origin: BOTTOMLEFT
+      l: 133.03
+      r: 255.008
+      t: 394.826
+    charspan:
+    - 0
+    - 13
+    page_no: 10
+  self_ref: '#/texts/222'
+  text: "\u7A4D\u6975 \u7684\u52B9\u529B \u7A4D\u6975 \u7684\u52B9\u529B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7279\u8A31\u6A29\u8005\u304C\u3001\u7279\u8A31\u767A\u660E\u3092\u72EC\u5360\
+    \u7684 \u306B\u5B9F\u65BD\u3059\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u52B9\
+    \u529B\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 299.881
+      coord_origin: BOTTOMLEFT
+      l: 56.948
+      r: 327.724
+      t: 343.884
+    charspan:
+    - 0
+    - 29
+    page_no: 10
+  self_ref: '#/texts/223'
+  text: "\u7279\u8A31\u6A29\u8005\u304C\u3001\u7279\u8A31\u767A\u660E\u3092\u72EC\u5360\
+    \u7684 \u306B\u5B9F\u65BD\u3059\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u52B9\
+    \u529B\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u6D88\u6975 \u7684\u52B9\u529B \u6D88\u6975 \u7684\u52B9\u529B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 370.869
+      coord_origin: BOTTOMLEFT
+      l: 467.065
+      r: 589.042
+      t: 396.838
+    charspan:
+    - 0
+    - 13
+    page_no: 10
+  self_ref: '#/texts/224'
+  text: "\u6D88\u6975 \u7684\u52B9\u529B \u6D88\u6975 \u7684\u52B9\u529B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4ED6 \u4EBA\u306B\u3088\u308B\u5B9F\u65BD\u3092 \u6392\u9664 \u3067\u304D\
+    \u308B\u52B9 \u529B\uFF08 \u6392\u4ED6 \u6027\uFF09\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 299.881
+      coord_origin: BOTTOMLEFT
+      l: 394.214
+      r: 657.33
+      t: 343.884
+    charspan:
+    - 0
+    - 27
+    page_no: 10
+  self_ref: '#/texts/225'
+  text: "\u4ED6 \u4EBA\u306B\u3088\u308B\u5B9F\u65BD\u3092 \u6392\u9664 \u3067\u304D\
+    \u308B\u52B9 \u529B\uFF08 \u6392\u4ED6 \u6027\uFF09\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u72EC\u5360\u7684\u306B\u5B9F\u65BD"
+  parent:
+    $ref: '#/pictures/4'
+  prov:
+  - bbox:
+      b: 236.697
+      coord_origin: BOTTOMLEFT
+      l: 134.306
+      r: 253.303
+      t: 256.69
+    charspan:
+    - 0
+    - 6
+    page_no: 10
+  self_ref: '#/texts/226'
+  text: "\u72EC\u5360\u7684\u306B\u5B9F\u65BD"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4ED6 \u8005\u3092 \u6392\u9664"
+  parent:
+    $ref: '#/pictures/4'
+  prov:
+  - bbox:
+      b: 239.702
+      coord_origin: BOTTOMLEFT
+      l: 489.146
+      r: 586.396
+      t: 259.695
+    charspan:
+    - 0
+    - 7
+    page_no: 10
+  self_ref: '#/texts/227'
+  text: "\u4ED6 \u8005\u3092 \u6392\u9664"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7279\u8A31\u6A29\u306E \u7BC4\u56F2"
+  parent:
+    $ref: '#/pictures/4'
+  prov:
+  - bbox:
+      b: 233.62400000000002
+      coord_origin: BOTTOMLEFT
+      l: 327.997
+      r: 405.823
+      t: 246.622
+    charspan:
+    - 0
+    - 7
+    page_no: 10
+  self_ref: '#/texts/228'
+  text: "\u7279\u8A31\u6A29\u306E \u7BC4\u56F2"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u300C\u7279\u8A31\u6A29\u8005\u306F\u3001\u696D\u3068\u3057\u3066\u7279\u8A31\
+    \u767A\u660E\u306E\u5B9F\u65BD\u3092\u3059\u308B\u6A29\u5229\u3092 \u5C02 \u6709\
+    \u3059\u308B\u300D\uFF08\uFF16 \uFF18 \u6761\uFF09 \u7279\u8A31\u6A29\u8005\u81EA\
+    \ \u8EAB \u306B\u3088\u308B\u5B9F\u65BD\u306E \u307F \u306A\u3089 \u305A \u3001\
+    \u5B9F\u65BD\u8A31 \u8AFE \u3057\u305F\u8005\u3092\u901A\u3058\u3066\u7279\u8A31\
+    \u767A\u660E\u3092\u5B9F\u65BD\u3059\u308B\u3053\u3068 \u3082 \u7A4D\u6975 \u7684\
+    \u52B9\u529B\u3068\u3044\u3048\u308B\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 122.62799999999999
+      coord_origin: BOTTOMLEFT
+      l: 61.172
+      r: 653.613
+      t: 176.98000000000002
+    charspan:
+    - 0
+    - 100
+    page_no: 10
+  self_ref: '#/texts/229'
+  text: "\u300C\u7279\u8A31\u6A29\u8005\u306F\u3001\u696D\u3068\u3057\u3066\u7279\u8A31\
+    \u767A\u660E\u306E\u5B9F\u65BD\u3092\u3059\u308B\u6A29\u5229\u3092 \u5C02 \u6709\
+    \u3059\u308B\u300D\uFF08\uFF16 \uFF18 \u6761\uFF09 \u7279\u8A31\u6A29\u8005\u81EA\
+    \ \u8EAB \u306B\u3088\u308B\u5B9F\u65BD\u306E \u307F \u306A\u3089 \u305A \u3001\
+    \u5B9F\u65BD\u8A31 \u8AFE \u3057\u305F\u8005\u3092\u901A\u3058\u3066\u7279\u8A31\
+    \u767A\u660E\u3092\u5B9F\u65BD\u3059\u308B\u3053\u3068 \u3082 \u7A4D\u6975 \u7684\
+    \u52B9\u529B\u3068\u3044\u3048\u308B\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u2461 \u7279\u8A31\u6A29\u306E\u4FDD\u8B77\u671F\u9593\u304A\u3088\u3073\
+    \u767A \u751F \u30FB \u6D88\u6EC5"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 71.98399999999998
+      coord_origin: BOTTOMLEFT
+      l: 49.323
+      r: 439.794
+      t: 95.969
+    charspan:
+    - 0
+    - 21
+    page_no: 10
+  self_ref: '#/texts/230'
+  text: "\u2461 \u7279\u8A31\u6A29\u306E\u4FDD\u8B77\u671F\u9593\u304A\u3088\u3073\
+    \u767A \u751F \u30FB \u6D88\u6EC5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u300C\u7523\u696D\u306E\u767A \u5C55 \u300D\u306B \u5FC5 \u8981\u304B\u3064\
+    \ \u9069\u5207 \u306A\u671F\u9593\u306B\u9650\u3063\u3066\u4FDD\u8B77\u3055\u308C\
+    \u308B\u3002\u2192\u3000\u51FA\u9858\u304B\u3089\uFF12 \uFF10\u5E74 \u6A29\u5229\
+    \u306E\u767A \u751F \u306F\u3001 \u8A2D \u5B9A \u767B\u9332 \u306E\u65E5\u3000\
+    \u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\
+    \u3000\u3000\u3000\u3000\u3000\u3000\uFF08\u7279\u8A31\u6A29\u306E\u5B58 \u7D9A\
+    \ \u671F\u9593\u306E \u5EF6\u9577 \u5236\u5EA6\u5229\u7528\u306E \u5834"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 25.682999999999993
+      coord_origin: BOTTOMLEFT
+      l: 49.294
+      r: 742.705
+      t: 60.84500000000003
+    charspan:
+    - 0
+    - 106
+    page_no: 10
+  self_ref: '#/texts/231'
+  text: "\u300C\u7523\u696D\u306E\u767A \u5C55 \u300D\u306B \u5FC5 \u8981\u304B\u3064\
+    \ \u9069\u5207 \u306A\u671F\u9593\u306B\u9650\u3063\u3066\u4FDD\u8B77\u3055\u308C\
+    \u308B\u3002\u2192\u3000\u51FA\u9858\u304B\u3089\uFF12 \uFF10\u5E74 \u6A29\u5229\
+    \u306E\u767A \u751F \u306F\u3001 \u8A2D \u5B9A \u767B\u9332 \u306E\u65E5\u3000\
+    \u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\
+    \u3000\u3000\u3000\u3000\u3000\u3000\uFF08\u7279\u8A31\u6A29\u306E\u5B58 \u7D9A\
+    \ \u671F\u9593\u306E \u5EF6\u9577 \u5236\u5EA6\u5229\u7528\u306E \u5834"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5408"
+  parent:
+    $ref: '#/pictures/5'
+  prov:
+  - bbox:
+      b: 6.493000000000052
+      coord_origin: BOTTOMLEFT
+      l: 49.294
+      r: 65.281
+      t: 22.463999999999942
+    charspan:
+    - 0
+    - 1
+    page_no: 10
+  self_ref: '#/texts/232'
+  text: "\u5408"
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: '10'
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 3.4470000000000027
+      coord_origin: BOTTOMLEFT
+      l: 750.586
+      r: 763.884
+      t: 17.326999999999998
+    charspan:
+    - 0
+    - 2
+    page_no: 10
+  self_ref: '#/texts/233'
+  text: '10'
+version: 1.7.0

@@ -1,0 +1,214 @@
+0: unspecified with name=_root_
+ 1: picture
+ 2: section_header: 入門！認知行動療法
+ 3: section_header: ストレスに対処し よう
+ 4: page_footer: 1
+ 5: section_header: 本日のテーマ
+ 6: list with name=list
+  7: list_item: ①ストレスの特徴を学ぶ
+  8: list_item: ②自分のストレス状況、ストレス反応を知 る。
+  9: list_item: ③ストレス対処法について話し合い、 自分に合った対処法をカードにまとめる。
+ 10: picture
+ 11: page_footer: 2
+ 12: section_header: ストレス状況とストレス反応
+ 13: text: 人はストレス状況になると、それに反応して変化 する。ストレス状況によって引き起こされる心と 体の
+ 14: picture
+  15: text: 反応を、ストレス反応という。
+  16: text: ストレス
+  17: text: 状況
+  18: text: ストレス
+  19: text: 状況
+  20: text: ストレス
+  21: text: 反応
+  22: text: ストレス
+  23: text: 反応
+ 24: text: ストレスの無い状態
+ 25: text: ストレスが加わった状態
+ 26: page_footer: 3
+ 27: section_header: 物理的ストレス状況とストレス反応
+ 28: section_header: ストレス状況
+ 29: section_header: ストレス反応
+ 30: picture
+ 31: key_value_area with name=group
+  32: text: える
+  33: text: 暑い　        ⇔　　　汗をかく
+  34: text: けが　        ⇔　　　皮ふがは
+ 35: picture
+ 36: text: 日差し          ⇔　　　日焼けす
+ 37: text: 寒い　        ⇔　　　体がふる
+ 38: text: れる
+ 39: text: 疲労・睡眠不足　        ⇔　　　緊張、興奮
+ 40: text: る
+ 41: picture
+ 42: picture
+ 43: page_footer: 4
+ 44: section_header:  喪失
+ 45: list with name=list
+  46: list_item:  不自由
+ 47: section_header: 心理的ストレス状況
+ 48: text: 大切な人との別れ・死別
+ 49: text: 思い通りできない 自分で決められない
+ 50: text: 人に責められる 意見の対立 周囲の人の無理解 他の人との競争
+ 51: section_header:  不和
+ 52: section_header: 意外なストレス状況
+ 53: section_header:  変化
+ 54: text: 引っ越し
+ 55: text: 初めての人と会う
+ 56: text: 就職、転職、入学、転校 昇進、結婚
+ 57: text: 大きな問題が解決した時
+ 58: picture
+ 59: text: 関係、役割、立場の変化 は、良い方向の変化でも ストレスになります。
+ 60: page_footer: 5
+ 61: section_header: ストレスに対する心の反応
+ 62: text: ストレス状況に対する 最初の反応
+ 63: list with name=list
+  64: list_item:  イライラする
+  65: list_item:  落ち着かない
+  66: list_item:  緊張する
+  67: list_item:  泣きたくなる
+  68: list_item:  不安になる
+ 69: picture
+ 70: text: ストレス状況が 長びいた時の反応
+ 71: list with name=list
+  72: list_item:  意欲が湧かない
+  73: list_item:  将来に希望がない
+  74: list_item:  ゆううつ
+  75: list_item:  自信を失う
+ 76: picture
+ 77: page_footer: 6
+ 78: section_header: ストレスに対する体の反応
+ 79: list with name=list
+  80: list_item:  頭痛
+  81: list_item:  血圧が上がる
+  82: list_item:  肩がこる
+  83: list_item:  便秘
+  84: list_item:  動悸
+  85: list_item:  下痢
+  86: list_item:  顔がほてる
+  87: list_item:  胃が痛い
+  88: list_item:  息苦しい、呼吸が早 い
+  89: list_item:  食欲がない
+  90: list_item:  眠れない、眠くなる
+  91: list_item:  めまい
+  92: list_item:  疲れる、
+  93: list_item:  胸焼け
+ 94: picture
+ 95: text: 「ストレスがある」「つらい」と感じる 前に、 体の変化が先に出る人もいます。身体の 不調は、ストレスの証拠かもしれません。
+ 96: picture
+ 97: text: 体は正直者！
+ 98: page_footer: 7
+ 99: section_header: ストレスの良い面と悪い面
+ 100: section_header: 良い面は・・・
+ 101: list with name=list
+  102: list_item: 上手なストレス対処を増やし、不適切なストレス対処を 減らすことでストレス耐性はあがり、成長できる。
+  103: list_item: 適度なストレスは人を生き生きさせる。
+ 104: section_header: 悪い面は・・・
+ 105: list with name=list
+  106: list_item: ストレス状況で不適切なストレス対処法をとってしまう と、大切なものを失ってしまう。
+  107: list_item: 長く続くと抑うつが出現する、身体的不調の原因となる。
+ 108: picture
+ 109: picture
+ 110: page_footer: 8
+ 111: text: 1
+ 112: text: 2
+ 113: section_header: ステップ①
+ 114: section_header: か
+ 115: text: ストレス状況 を避ける、解決する（＝ 問題解決 法）
+ 116: key_value_area with name=group
+  117: text: 例：寒い時は上着を着る
+  118: text: 失敗が多い時は足りないスキルを身につける 相性の悪い人からは距離を取る
+ 119: text: しかし、問題の解決に時間がかかる場合や、 ストレス状況がさけられない時は・・・
+ 120: section_header: ステップ②
+ 121: text: ストレス反応 を和らげる（＝ ストレス対処法） 行動や考えを変えることで心と体の反応を軽く
+ 122: text: 9
+ 123: section_header: ストレス対処法の一例
+ 124: section_header: 体を動かす
+ 125: list with name=list
+  126: list_item: 散歩をする
+  127: list_item: カラ オケ に行く
+  128: list_item: バッティングセンターに行く
+ 129: section_header: 視野を広げる
+ 130: list with name=list
+  131: list_item: 昔のことを思い出す
+  132: list_item: 他の人はどうかと見渡す
+  133: list_item: 相手の立場に立ってみる
+ 134: section_header: リラックス法
+ 135: list with name=list
+  136: list_item: アロマをたく
+  137: list_item: 好きな音楽をきく
+  138: list_item: お茶をする
+  139: list_item: 深呼吸をする
+ 140: section_header: 気分転換
+ 141: list with name=list
+  142: list_item: 友達 と話す
+  143: list_item: 映画 を見に行く
+  144: list_item: おいしいものを食 べ
+ 145: text: する · ま わ りの 景色 を見渡 す
+ 146: section_header: る 「今・ここ」に集中
+ 147: list with name=list
+  148: list_item: ま わ りの音に 聞 き入
+ 149: page_footer: 10
+ 150: text: 法
+ 151: text: 不安な時・ 悲 しい時 腹 立たしい時・イライラした時
+ 152: text: ・
+ 153: text: ・
+ 154: text: ・
+ 155: text: ・
+ 156: text: ・
+ 157: text: ・
+ 158: text: ・
+ 159: text: ・
+ 160: text: ・
+ 161: text: ・
+ 162: text: ・
+ 163: text: ・
+ 164: text: ・
+ 165: text: ・
+ 166: page_footer: 11
+ 167: section_header: 過去 に役立ったはげましの 言葉
+ 168: list with name=list
+  169: list_item: 不安な時・ 悲 しい時
+  170: list_item: 」 -
+  171: list_item: -例：「もっと大変 だ った時も 乗 り越えることができた」 -「
+ 172: text: 「
+ 173: text: 」
+ 174: list with name=list
+  175: list_item: いらいらした時・ 腹 が立った時
+  176: list_item: -
+ 177: text: 「
+ 178: list with name=list
+  179: list_item: -「 腹 を立てて、好きでもない人のこと ば かり 考えるのは、 ば か ば かしい」
+ 180: text: 」
+ 181: text: 「
+ 182: list with name=list
+  183: list_item: -」
+ 184: text: 人にかけたり、人にかけてもらったり、自分に 言 い 聞 かせて 有効だ ったはげましの 言葉 を 教 えてく だ さ
+ 185: picture
+ 186: text: 12
+ 187: section_header: 上手なストレス対処法
+ 188: section_header: 上手なストレス対処法
+ 189: list with name=list
+  190: list_item: お 金 がかからない
+  191: list_item: 自分や他人を 傷 つけない
+  192: list_item: 問題解決のさまたげにならない
+ 193: section_header: 不適切なストレス対処法
+ 194: list with name=list
+  195: list_item: お 金 がかかりす ぎ る
+  196: list_item: 自分や他人を 傷 つけてしまう
+  197: list_item: 問題解決をさまたげてしまう
+ 198: picture
+  199: text: n
+ 200: picture
+ 201: page_footer: 13
+ 202: text: ------------------------------------
+ 203: section_header: 私 のストレス対処法カード
+ 204: text: 
+ 205: text: ------------------------------------------------------------------------------
+ 206: code: 悲 しい時・不安な時   自分をはげます言葉 「 」
+ 207: code: 腹 が立った時、いらいらした時   自分をはげます言葉 「
+ 208: section_header: 感 想 を 教 えてく だ さい
+ 209: list with name=list
+  210: list_item: 分からなかったとこ ろ
+  211: list_item: 参 考になったとこ ろ ・役に立ちそうなと こ ろ
+ 212: picture
+ 213: page_footer: 15

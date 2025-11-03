@@ -1,0 +1,539 @@
+0: unspecified with name=_root_
+ 1: section_header: 参考資料 4
+ 2: section_header: 労働者向け研修資料
+ 3: text: ～職場のパワーハラスメントを考える～
+ 4: list with name=list
+  5: list_item:  解説動画は、次の URL からダウンロードすることができます。 https://www.no-harassment.mhlw.go.jp/movie/ index
+  6: list_item:  本研修資料の著作権は、厚生労働省に帰属します。パワーハラスメントの防止に資する社内研修目的で利 用する場合には、本資料を無償でご利用いただけますが、出典は、厚生労働省の本資料であることを明示
+  7: list_item:  スライドの赤字部分は、企業によって異なる部分です。各社の実態に合わせて変更してご利用ください。
+ 8: section_header: 研修担当者様：
+ 9: text: 左記注意書きは、研修の際の 留意点を示したものです。 研修資料の投影や配布にあ たっては、本記載を削除して ご使用ください。
+ 10: page_footer: １
+ 11: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved. してください。
+ 12: page_header: 本研修の目的
+ 13: list with name=list
+  14: list_item:  職場におけるパワーハラスメントとは何か、現状を知る
+  15: list_item:  労働者全員が互いに尊重し合いパワーハラスメントを起こさせな い風通しの良い、働きやすい職場をつくる
+  16: list_item:  ハラスメントを行った際、行為者として生じる責任を理解する
+  17: list_item:  職場におけるパワーハラスメントをなくすためには、どうすれば よいか学ぶ
+  18: list_item:  職場におけるパワーハラスメントが起きた際の対応を学ぶ
+ 19: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 20: page_footer: 2
+ 21: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 22: section_header: 1ｰ1.　パワーハラスメントの現状
+ 23: list with name=list
+  24: list_item:  パワーハラスメントの発生状況 （パワハラを受けた経験）
+ 25: text: 過去３年間にパワハラを 受けたことはありますか？
+ 26: picture
+  27: text: ある
+  28: text: 32.5％
+  29: text: ない
+  30: text: 67.5％
+ 31: text: （平成 28 年度 厚生労働省
+ 32: text: 「職場のパワーハラスメントに関する実態調査」従業員調査より）
+ 33: key_value_area with name=group
+ 34: text: （回答：
+ 35: text: 10,000 人）
+ 36: list with name=list
+  37: list_item:  パワーハラスメントを受けて （被害者の行動）
+ 38: text: そのパワハラを受けた後 どうしましたか？（複数回答）
+ 39: picture
+  40: caption: 40.9%
+  41: text: 何も
+  42: text: しなかっ
+  43: text: た
+  44: text: 同僚に
+  45: text: 相談
+  46: text: 上司に
+  47: text: 相談
+  48: text: 会社を
+  49: text: 退職
+  50: text: 16.0%
+  51: text: 12.7%
+  52: text: 12.9%
+ 53: text: （平成 28 年度 厚生労働省
+ 54: key_value_area with name=group
+ 55: text: 「職場のパワーハラスメントに関する実態調査」従業員調査より） （回答： 3,250 人（過去３年間にパワハラを受けたと回答した者））
+ 56: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 57: page_footer: ３
+ 58: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 59: section_header: 1ｰ2.　なぜ職場のパワーハラスメントが問題なのか？
+ 60: section_header:  社員への影響は？
+ 61: list with name=list
+  62: list_item: ●職場環境の悪化
+  63: list_item: ●心身の健康を害し、休職等に至る
+ 64: section_header:  会社への影響は？
+ 65: list with name=list
+  66: list_item: ●人材の流出
+  67: list_item: ●モラールの低下⇒生産性の低下⇒業績の悪化
+  68: list_item: ●訴訟による賠償⇒業績の悪化
+  69: list_item: ●企業イメージの悪化⇒採用への影響
+ 70: section_header:  その他
+ 71: list with name=list
+  72: list_item: ●コンプライアンス上の問題 民法、刑法、就業規則違反
+ 73: picture
+  74: text: 職場の雰囲気が
+  75: text: 悪くなる
+  76: text: 従業員の心の
+  77: text: 健康を害する
+  78: text: 従業員が十分に能力を
+  79: text: 発揮できなくなる
+  80: text: 人材が流出してしまう
+  81: text: 職場の生産性が
+  82: text: 低下する
+  83: text: 企業イメージが悪化する
+  84: text: 訴訟などによる損害賠償
+  85: text: などの金銭的負担が生じる
+  86: text: その他
+  87: section_header:  パワーハラスメントによる影響（複数回答）
+  88: text: 93.5
+  89: text: 91.5
+  90: text: 81.0
+  91: text: 78.9
+  92: text: 67.8
+  93: text: 54.1
+  94: text: 45.7
+  95: text: 1.2
+  96: text: 0.2
+ 97: text: （平成 28 年度 厚生労働省「職場のパワーハラスメントに関する実態調 特に影響はない
+ 98: picture
+ 99: text: （企業調査
+ 100: text: 回答：
+ 101: text: 査」より）
+ 102: text: 4,587
+ 103: text: 社）
+ 104: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 105: page_footer: ４
+ 106: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 107: section_header: 2.　職場におけるパワーハラスメントとは？
+ 108: text: 職場におけるパワーハラスメントとは、改正労働施策総合推進法 （令和元年６月５日公布）により、以下の３つの要素をすべて満た すものとしています。
+ 109: list with name=list
+  110: list_item: ① 優越的な関係を背景とした言動であって
+  111: list_item: ② 業務上必要かつ相当な範囲を超えたものにより
+  112: list_item: ③ 労働者の就業環境が害されること
+  113: list_item:  改正法では、パワーハラスメント防止のため、 相談体制の整備等の雇用管理上 必要な措置を講じること を事業主に義務付けており、令和２年６月１日（中小事 業主は令和４年４月１日）に施行されます。
+  114: list_item:  パワーハラスメントに対する基本的な考え方や該当する/しないと考えられる 例、事業主が講ずべき雇用管理上の措置の具体的な内容等については、「事業主 が職場における優越的な関係を背景とした言動に起因す
+ 115: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 116: page_footer: 5
+ 117: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 118: section_header: ハラスメント対策の強化（男女雇用機会均等法、育児 介護休業法、労働施策総合推進法 ・ ※の改正）
+ 119: list with name=list
+  120: list_item: 【 現状】・ 職場のいじめ・嫌がらせに関する都道府県労働局への相談は ７万２千件超（ H29 年度）で６年連続で全ての相談の中でトッ プ。
+ 121: section_header: まる。
+ 122: list with name=list
+  123: list_item: ・ セクハラの相談件数は約７千件（Ｈ 29 年度）と高水準にとど
+  124: list_item: （1）国の施策八卜对策明記 (劳動施策合推進法)
+  125: list_item: 国の施策に 「職場における労働者の就業環境を害する言動に起因する問題の解決の促進」（ハラスメント対策）を明 記 する。
+  126: list_item: （２）パワーハラスメント防止対策の法制化（労働施策総合推進法）
+  127: list_item: O 一、「①優越的関背景、「②業務上必要相当超言動 「③就業環境害(身体的若<精神的苦痛与)明記。
+  128: list_item: 事業主、一防止の、相谈体制の整等の履用管理上の措置講義務付。
+  129: list_item: 八一八の具体的定義事業主講雇用管理上の措置の具体的内容定、 厚生大臣指針策定寸二上寸。
+ 130: picture
+  131: text: ハラスメントのない社会の実現に向けて、
+  132: text: 職場のパワハラ対策、セクハラ対策を強化することが必要
+ 133: section_header: 〔指針で規定する内容〕
+ 134: list with name=list
+  135: list_item: ３つの要素の具体的内容
+  136: list_item: ・パワハラの具体的な定義
+  137: list_item: パワハラに該当する／しない行為例
+  138: list_item: 適正な範囲の業務指示や指導についてはパワハラに 当たらないこと 等
+  139: list_item: ・雇用管 理 上の措置の具体的内容 （現行のセクハラ防止の措置義務と 同様
+  140: list_item: 苦情 などに対する相談体制の整備
+  141: list_item: 事 業 主 によるパワハラ防止の社内 方 針の明確 化 と 周知 ・ 啓発
+  142: list_item: 被害を受けた労働者への ケア や 再発 防止 等
+  143: list_item: ※ 取引先や顧客等からの著しい迷惑行為（いわゆるカスタマーハラスメント）については、法律上の措置義務の対象とはしないが、 指針において労働者からの相談体制の整備や被害者への適切な配慮等を行うことが望ま
+  144: list_item: パワーハラスメントに関する労使紛争について、都道府県労働局長による紛争解決援助、紛争調整委員会による調停 （行政 ADR ）の対象とするとともに、措置義務等について履行確保（助言、指導、勧告等）のため
+  145: list_item: る。 ○ 中 小事 業 主 に対する配慮等 パワーハラスメント防止対策の措置義務は、中 小事 業 主 の施行 日 に配慮（ 令和 ４年３ 月 31 日 までは 努力 義務）。 ※ そ の 他 、 事 
+ 146: text: ※ 労働施策の 総 合的な 推進並び に労働者の雇用の 安 定 及び 職業生 活 の 充 実等に関する法律
+ 147: picture
+ 148: text: ）
+ 149: page_footer: 6
+ 150: section_header: （３）セクシュアルハラスメント等の防止対策の強化（男女雇用機会均等法、育児 介護休業法、労働施策総合推進法） ・
+ 151: list with name=list
+  152: list_item: ① セク シュアル ハラスメント等に関する国、 事 業 主及び 労働者の 責 務の明確 化
+  153: list_item: 注意を 払 うこと等を関 係 者の 責 務として明記する。
+ 154: text: セク シュアル ハラスメント等は行ってはならないこと等に対する関 心 と 理 解を 深 めることや、 他 の労働者に対する言 動に
+ 155: text: ※ ②④ パワーハラスメント、いわゆるマタ ニティ ハラスメントについても 同様 （ も 同 じ）
+ 156: list with name=list
+  157: list_item: 事業主仁相谈等儿大者二对寸不利益取极\の禁止
+ 158: text: 者相等行歸、者等事主相 等理由不利益取极禁止。
+ 159: list with name=list
+  160: list_item: ③自社の動者等他社の動者八行場合の協力对応
+ 161: text: 事業主对、他社雇用管理上の措置の寒施（事寒確等)関必要協力求場合、二応 努力義務設付。
+ 162: list with name=list
+  163: list_item: ※、自社の動者他社の者等受場合、相応等の措義務の对象 上指針飞明確化寸。
+ 164: section_header: 4 調停の出頭·意見取の对象者の大
+ 165: text: 等の調停制度、争調整委会必要場合、当事者の同意の有無 、職場の同僚等参考人出頭の求意見取行、对象者大。
+ 166: page_footer: 7
+ 167: text: 容
+ 168: text: 容
+ 169: list with name=list
+  170: list_item: １ ． 職場におけるパワーハラスメントの内 １ ． 職場におけるパワーハラスメントの内
+ 171: text: ＜職場におけるパワーハラスメントとは＞
+ 172: list with name=list
+  173: list_item: 職場において行われる ①優越的な関係を背景とした言動であって、②業務上必要かつ相当な範囲を超えた ものにより、③労働者の就業環境が害されるもの であり、①～③までの要素を全てみたすもの。
+  174: list_item: →　客観的にみて、業務上必要かつ相当な範囲で行われる適正な業務指示や指導については、該当しない。
+ 175: table
+  176: footnote: ○　個別の事案の判断に際しては、相談窓口の担当者等が相談者の心身の状況や当該言動が行われた際の受け止めな どその認識にも配慮しながら、相談者及び行 為 者の 双 方から 丁寧 に事 実確 認等を行うこ
+ 177: section_header: 事業主が職場における優越的な関係を背景とした言動に起因する問題に関して 雇用管理上講ずべき措置等についての指針 概要 事業主が職場における優越的な関係を背景とした言動に起因する問題に関して 雇用管理上
+ 178: text: 令和 ２年１ 月 １ ５日 厚生労働省告示 第５号
+ 179: page_footer: 8
+ 180: text: ＜職場におけるパワハラに該当すると考えられる例／該当しないと考えられる例＞
+ 181: list with name=list
+  182: list_item: 以下は 代表 的な言動の 類型 、 類型ご とに 典型 的に職場におけるパワハラに該当し、 又 は該当しないと考えられる例。
+ 183: text: 要。
+ 184: text: 個別の事案の状況等によって判断が異なる場合もあり得ること、例は限定列挙ではないことに十分留意し、職場に おけるパワハラに該当するか微妙なものも含め広く相談に対応するなど、適切な対応を行うようにすること
+ 185: table
+ 186: list with name=list
+  187: list_item: ★ プライ バシ ー 保護 の観 点 から、 機微 な個人 情報 を 暴露 することのないよう、労働者に 周知・啓 発する等の措置を講じることが必要
+ 188: page_footer: 9
+ 189: text: 10
+ 190: section_header: ２ ． 職場における 優越 的な関 係 を 背景 とした言動に 起因 する 問題 に関し雇用管 理 上 講 ず べ き措置 ２ ． 職場における 優越 的な関 係 を 背景 とした言動に 起因 する 
+ 191: section_header: （１）事業主の方針の明確化及びその周知・啓発
+ 192: list with name=list
+  193: list_item: ②行 為 者について 厳 正に対 処 する 旨 の方針 ・ 対 処 の内容を就業規則等の 文書 に規 定 し、労働者に 周知・啓 発すること
+  194: list_item: ①職場におけるパワハラの内容 ・ パワハラを行ってはならない 旨 の方針を 明確 化し、労働者に 周知・啓 発すること
+ 195: section_header: （２）相談に応じ、適切に対応するために必要な体制の整備
+ 196: text: ④ 相談窓口担当者が、内容や状況に 応 じ適 切 に対 応 できるようにすること 職場におけるパワハラの発生のおそれがある場合や、パワハラに該当するか 否 か 微妙 な場合であっても、 広 く相談に 
+ 197: list with name=list
+  198: list_item: ③相談窓口をあらかじめ 定 め、労働者に 周知 すること
+ 199: section_header: （３）職場におけるパワーハラスメントにかかる事後の迅速かつ適切な対応
+ 200: list with name=list
+  201: list_item: ⑥速 やかに被害者に対する配慮の措置を適正に行うこと ⑦ 行 為 者に対する措置を適正に行うこと
+  202: list_item: ⑤ 事 実 関係を 迅速 かつ正 確 に 確 認すること
+  203: list_item: ⑧再 発防止に 向 けた措置を講ずること ※⑥⑦ は事 実確 認ができた場合、 ⑧ はできなかった場合も 同様
+  204: list_item: ⑨ 相談者 ・ 行 為 者等のプライ バシ ーを 保護 するために必要な措置を講じ、 周知 すること
+ 205: section_header: （４）（１）から（３）までの措置と併せて講ずべき措置
+ 206: list with name=list
+  207: list_item: ⑩ 相談したこと等を理 由 として 不利益 な 取扱 いを行ってはならない 旨 を 定 め、労働者に 周知・啓 発すること
+  208: list_item: ３ ． 職場における 優越 的な関 係 を 背景 とした言動に 起因 する 問題 に関し行うことが望ましい取 ３ ． 職場における 優越 的な関 係 を 背景 とした言動に 起因 する 問題 に関し行
+  209: list_item: セク ハラ、 妊娠・ 出産 ・育児 休業等に関するハラスメント等と 一 元的に相談に 応 じることのできる体 制 の 整備
+ 210: text: 組
+ 211: text: 組
+ 212: list with name=list
+  213: list_item: 職場におけるパワハラの 原 因や背景となる要因を 解消 するための 取組
+  214: list_item: 労働者や労働 組 合等の 参画 を 得 つつ、アン ケ ート 調査 や 意見交換 等を 実 施するなどにより、雇用管理上の措置の 運 用状況の的 確 な 把握 や必要な 見直 しの 検討 等に 努 め
+  215: list_item: ・ コ ミュニケ ー ショ ンの 活 性化 ・円滑 化のための研修等や、適正な業務目 標 の 設定 等の職場環境の改 善 のための 取組
+ 216: section_header: ４ ．自 らの雇用する労働者 以外 の者（ 就活 生等）に対する言動に関し行うことが望ましい取 組 ４ ．自 らの雇用する労働者 以外 の者（ 就活 生等）に対する言動に関し行うことが望ましい取 組
+ 217: list with name=list
+  218: list_item: 職場におけるパワハラを行ってはならない 旨 の方針の 明確 化等を行う際に、他の事業主の雇用する労働者、 就職 活 動中の 学 生等の 求 職者、個人事業主、イン タ ーン シッ プを行う者等に対して
+  219: list_item: ５．他 の 事 業 主 の雇用する労働者等からのパワーハラスメントや顧客等からの著しい迷惑行為 （いわゆるカスタマーハラスメント）に関し行うことが望ましい取 組 ５．他 の 事 業 主 の雇用する労働
+  220: list_item: 雇用管理上の措置全体も 参 考にしつつ、適 切 な相談対 応 等に 努 める
+  221: list_item: 相談に 応 じ、適 切 に対 応 するために必要な体 制 の 整備 ○ 被害者への配慮のための 取組
+  222: list_item: 被害防止のための 取組 （ マニュ アル 作成 や研修の 実 施等、業 種・ 業 態 等の状況に 応 じた 取組 ）
+ 223: section_header: 31.　パワーハラスメントが起こったら
+ 224: section_header: もし、あなたが行 為 者になったら ・・・・・
+ 225: list with name=list
+  226: list_item:  懲罰規定（就業規則）：「減給」「降格」「けん責」「出勤停止」 「諭旨解雇」「懲戒解雇」等
+  227: list_item:  社内での 処 分
+  228: list_item:  民事上の 責任 として損害賠償を 請求 される
+ 229: text: 民法715条の使用者責任
+ 230: list with name=list
+  231: list_item:  民事上の責任：（行為者には）民法709条の不法行為責任 （会社には）　民法415条の債務不履行責任（安全配慮義務違反）
+  232: list_item:  刑事 罰 に 課せ られる
+  233: list_item:  刑事罰：名誉棄損、侮辱罪、脅迫罪、暴行罪、傷害罪等 ⇒そして、社会的信用、社会的地位を失う。自身の家庭が崩壊する。
+ 234: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 235: page_footer: 11
+ 236: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 237: section_header: 32.　パワーハラスメント行 為 者の 責任
+ 238: text: あなたがパワーハラスメントの行 為 者になった場合、ど ん なことが起 こるでし ょ うか。
+ 239: text: まず、民事上の 責任 です。民法 709条 の 不 法行 為責任 に基 づ く損害賠 償を 請求 される 可 能性があります。また、会社には民法 4 1 5条 の 債 務 不 履 行 責任 （ 安 全
+ 240: text: また、刑事事 件 として訴えられる 可 能性もあります。例え ば 、パワー ハラスメント行 為 によって被害者が 精神病 を 患 った（ 医師 の 診 断あり） 場合、 傷 害 罪 に当たる 可 能性
+ 241: text: 裁 判にならないまでも、職場内での 信 用や、 地位 を 失 ったり、 家庭 へ の影響、 家庭 の 崩壊 なども考えられます。
+ 242: text: リ ー ダ 職の方は、 自 分 自 身の言動はも ちろん 、 チ ー ム のメン バ ーが 仲 間 にそのような行 為 をしないよう、 注意 や指導をすることも必要です。
+ 243: picture
+ 244: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 245: picture
+ 246: page_footer: 12
+ 247: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 248: section_header: 41.　あなたの職場でこのようなことが起こっていま せん か？ 改めて日 頃 の言動を 見 つめ 直 しまし ょ う。
+ 249: list with name=list
+  250: list_item:  問題がある企 画書 について、 書類 を 投げ つけ て修正を 命 じる
+  251: list_item:  部 下を 叱責 しながら、 近 くにあった 物差 しで 頭 を 叩 く
+  252: list_item:  「 説明 しても分からない だろ う」と、 一 人 だ け 打ち 合わ せ から 外 す
+  253: list_item:  仕 事が 終 わって 帰ろ うとする 部 下に、「 俺 が 残 っているのに 先 に 帰 るのか」と言う
+  254: list_item:  やる気を 引 き出そうとの 意図 で「 意欲 がない なら会社を 辞 めるべき」とのメールを本人に 送 るとともに、職場の 同僚 も ｃｃ にいれて 送 信 する
+  255: list_item:  明 らかに 納期 に 間 に合わないと分かってい て、 資料 の 作成 を 命 じる
+  256: list_item:  能力に 見 合わない 程度 の低い業務を 継続 的に 命 じる
+  257: list_item:  「 俺 の 若 いこ ろ は、もっと 厳 しかった んだ 。 それに 比 べ、 今 の 若 い者は、 甘 やかされてい る」と日 ごろ から言う
+  258: list_item:  個人的な 趣味・嗜好 について必要以上に 聞 く
+  259: list_item:  特 定 の 部 下 だ けを、 何度 も 同僚 の 前 で 叱責 す る
+  260: list_item:  特 定 の 同僚 を 仲間外 れにする
+ 261: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 262: page_footer: 13
+ 263: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 264: section_header: 42.　職場のパワーハラスメントについて考える（1）
+ 265: text: 以下の事例を 読ん で、考えてく だ さい。
+ 266: list with name=list
+  267: list_item:  なぜ、この 先輩 はそのような対 応 をするのか
+  268: list_item:  どの 部 分がパワーハラスメントになる 可 能性があるか
+ 269: key_value_area with name=group
+  270: text: 先輩 ：
+  271: text: おい ！多々良！ 早 く 来 い ！ 納期 の 件 で 佐藤商 事の 部長 より クレ ー ムだ！！
+  272: text: 多々良：
+  273: text: 本当ですか？
+  274: text: 先輩
+  275: text: ：俺 は、 何 も 聞 いてない ぞ！納期 はどういう 話 になっていた んだ！ 納期 は、基本の「き」 だろ！部長 は ペナ ル ティ を要 求 している ぞ！
+  276: text: 多々良：先
+  277: text: 方の担当者には 確 認を 取 って、 了解 いた だ いて … .
+  278: text: 先輩 ：
+  279: text: じ ゃ あ、な ん で クレ ー ム が 来 る んだ！！子供 みたいに言い 訳 する ん じ ゃ ない ！
+  280: text: な
+  281: text: ん で 納期 がずれると分かった 時点 で 報告・ 相談しなかった ！
+  282: text: う
+  283: text: ち の 信頼 を損なうような 大 問題になったらどうするつもり だ！ 怠慢だぞ！ この 給料泥棒！
+  284: text: お
+  285: text: 前 に 任せ た 仕 事 だ といっても、 自 分 だ けで判断して進めるのは1 00 年 早 い ！
+  286: text: 半 人 前 のく せ して 思 い上がって 自 分を 過信 するな ！
+  287: text: まずは、 先 方に 謝罪 に行ってき ちん とお 詫 びして 来 い ！
+  288: text: 最初 から言い 訳 な ん かする ん じ ゃ ない ぞ 、 早 く行け ！
+ 289: text: （
+ 290: text: 厚 生労働 省 あかるい職場 応 援団HP 「動 画 で 学 ぶ
+ 291: text: 」
+ 292: text: パワハラにならない 叱 り方「ア ウ ト レ ベ ル」より）
+ 293: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 294: page_footer: 14
+ 295: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 296: section_header: 42.　職場のパワーハラスメントについて考える（2）
+ 297: list with name=list
+  298: list_item:  職場の業務を 円滑 に 進 めるために、管 理 職には 一 定の権 限 が 与 え ら れ ています。
+  299: list_item:  業務上 必 要な指示や注意・指導なども そ の 一 つです。 厳 しい指導 であっても、「業務上の適正な範囲」と 認 めら れ る 限 り、パワー ハラスメントには当たりませ ん 。
+ 300: section_header: 例え ば
+ 301: text: 、
+ 302: list with name=list
+  303: list_item: →それ だ けではパワーハラスメントとは言えま せん 。 しかし、
+  304: list_item:  取引先 のア ポ イント 時間 を 間 違えて 部 下が 遅刻 したときに、 同 行した上 司 が 「 何 やってる んだ！ 」と 注意 した。
+  305: list_item:  さらに「 だ からおまえとは 仕 事をしたくない んだ！ 」「 噂 どおり 役 立 たず だ な ！ 」「 仕 事しなくていいから 帰 って 寝 て ろ！ 」などと人 格 を 否定 するような 言
+  306: list_item: →パワーハラスメント行 為 に該当する場合があります。 社内の相談窓口等に相談してみまし ょ う。
+ 307: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 308: page_footer: 15
+ 309: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 310: section_header: 51.　職場のパワーハラスメントを 予 防するためには（1）
+ 311: list with name=list
+  312: list_item: 起の考
+  313: list_item: 上司部下二少
+  314: list_item: 上司自分報告連絡心
+ 315: text: 左記は一つの例であり、パ ワーハラスメントが起きる原 因のすべてを網羅するもので はないことに留意する必要が あります。
+ 316: list with name=list
+  317: list_item: 上司相、困点自分の意見 具体的整理<
+ 318: section_header: 研修担当者様：
+ 319: text: 会社の実態に合わせて、適宜 修正し、御活用ください。
+ 320: list with name=list
+  321: list_item: 上司同僚八受感
+  322: list_item: 一人、周の人相谈口相谈
+  323: list_item: 正社員正社員以外の樣立場の一動 一八の行為者可能性
+  324: list_item: 自分の感情識 (怒、怖、悲、焦、柘)
+  325: list_item: 相手見接方工夫
+  326: list_item: 不要解招二一心挂
+ 327: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 328: page_footer: 16
+ 329: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 330: page_header: 52.　職場のパワーハラスメントを 予 防するためには（2）
+ 331: section_header:  パワーハラスメントの発生を予防するために大切なこと
+ 332: list with name=list
+  333: list_item:  パワーハラスメントについての十分な理 解・ 関心を 深 め、他の労働者（ ※ ）に対 する言動に必要な 注意 を 払 う。
+ 334: text: （
+ 335: list with name=list
+  336: list_item: ※ ） 取引先 等の他の事業主が雇用する労働者や休職者も 含 まれます。
+  337: list_item:  お 互 いを 尊 重 し、理 解 することが必要
+  338: list_item:  自 らの行 為 がパワーハラスメント、 嫌 がら せ になっていないか 注意
+  339: list_item:  隠 れたパワーハラスメントがないか、職場や 周 囲のメン バ ーの 変 化に 注意
+  340: list_item:  事業主の講ずる雇用管理上の措置に 協 力する
+ 341: section_header: 研修担当者様：
+ 342: text: 会社の実態に合わせて、適宜 修正し、御活用ください。
+ 343: text: 左記は一つの例であり、パ ワーハラスメントをなくす対 応のすべてを網羅するもので はないことに留意する必要が あります。
+ 344: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 345: page_footer: 17
+ 346: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 347: section_header: 6 -1.　わが社のルール（1）
+ 348: section_header: ＜ 就業規則の規 定 ＞
+ 349: section_header: 第□ 条 職場におけるハラスメントの 禁 止
+ 350: text: 研修担当者様： 本スライドは就業規則への 規定例を記載しています。各 企業で規定している内容に 合わせて修正してくださ い。
+ 351: text: パワーハラスメント、 セクシュ アルハラスメント及び 妊娠・ 出産 ・育児 休業等に関するハラスメントについては、 第 ○ 条 （ 服 務 規 律 ）及び 第△ 条 （ 懲 戒 ）の ほ か、 詳細 
+ 352: section_header: ＜詳細 について 定 めた別規 定 ＞
+ 353: section_header: （目的）
+ 354: section_header: － 職場におけるハラスメントの防止に関する規定 －
+ 355: text: □ 第 １ 条 本規定は、 就 業規 則 第 条 に 基づ き、職場におけるパワーハラスメント、セク シュアル ハラスメント 及び妊 娠 ・出 産 ・ 育 児休 業等に関するハラスメント（ 以下 ｢ 
+ 356: text: なお、この規定にいう従業員とは、正社員だけではなく、 契 約社員 及び 派遣 労働者も 含 ま れ るものとする。
+ 357: text: （パワーハラスメント、セク シュアル ハラスメント 及び妊 娠 ・出 産 ・ 育 児休 業等に関するハラスメントの定義） 第 ２ 条 パワーハラスメントとは、 優越 的な関 係 を 背景 とした言動で
+ 358: list with name=list
+  359: list_item: ２ セク シュアル ハラスメントとは、職場における 性 的な言動に対する 他 の従業員の対 応 等により当該従業員の労働 条 件に関して 不 利 益 を 与 えること 又 は 性 的な言動により 他 
+  360: list_item: ３ 前 項 の 他 の従業員とは 直接 的に 性 的な言動の相 手方 となった被害者に 限 ら ず 、 性 的な言動により 就 業 環境 を害さ れ たす べ ての 従業員を 含む ものとする。
+  361: list_item: ４ 妊 娠 ・出 産 ・ 育 児休 業等に関するハラスメントとは、職場において、上 司 や 同僚 が、従業員の 妊 娠 ・出 産 及び育 児 等に関する 制度 又 は措置の利用に関する言動により従業員
+  362: list_item: ５ 第 １ 項 、 第 ２ 項 及び第 ４ 項 の職場とは、 勤 務部 店 の み なら ず 、従業員が業務を 遂 行するす べ ての場 所 をいい、また、 就 業 時 間 内に 限 ら ず 、実 質
+ 363: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 364: page_footer: 18
+ 365: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 366: section_header: 6 -1.　わが社のルール（2）
+ 367: section_header: （ 禁 止行為）
+ 368: text: 本スライドは就業規則への 規定例を記載しています。各 企業で規定している内容に 合わせて修正してくださ い。
+ 369: text: る義務を 負 うとともに、 そ の言動に注意を 払 い、職場内において次の 第 ２ 項 から 第５ 項 に 掲 げ る行為をしてはならない。また、 自 社の従業員
+ 370: text: 第 ３ 条 す べ ての従業員は、 他 の従業員を業務 遂 行上の対等なパート ナ ーとして 認 め、職場における 健 全な 秩序 並び に 協力 関 係 を 保 持 す
+ 371: text: 以外 の者に対しても、こ れ に 類 する行為を行ってはならない。
+ 372: list with name=list
+  373: list_item: ２ パワーハラスメント ( 第 ２ 条 第 １ 項 の要件を 満 たした 以下 のような行為 )
+  374: list_item: ② 人 格 を 否 定するような言動をするなどの 精神 的な 攻撃
+  375: list_item: ① 殴打 、 足蹴 りするなどの 身 体的 攻撃
+  376: list_item: ③ 自身 の意に 沿 わない従業員に対して、 仕事 を 外 し、長 期 間にわたり、 別室 に 隔離 するなどの人間関 係 からの切り 離 し
+  377: list_item: ⑤ 管 理 職である部 下 を 退 職させるため 誰 でも 遂 行 可能 な業務を行わせるなどの過 小 な要 求
+  378: list_item: ④ 長 期 間にわたり、 肉 体的 苦痛 を 伴 う過 酷 な 環境下 で、 勤 務に 直接 関 係 ない作業を 命 じるなどの過 大 な要 求
+  379: list_item: ⑥ 他 の従業員の 性 的指向・ 性自認 や 病歴 などの 機微 な 個 人 情 報 について本人の 了 解を 得ず に 他 の従業員に 暴 露 するなどの 個 の 侵 害
+  380: list_item: ３ セク シュアル ハラスメント ( 第 ２ 条 第 ２ 項 の要件を 満 たした 以下 のような行為 )
+  381: list_item: ② わいせつ 図 画の 閲覧 、配 付 、 掲 示
+  382: list_item: ① 性 的 及び身 体上の 事 柄 に関する 不必 要な 質問 ・ 発 言
+  383: list_item: ③ うわさの 流 布
+  384: list_item: ⑤ 性 的な言動により、 他 の従業員の 就 業意 欲 を 低下 せしめ、 能力 の 発揮 を 阻 害する行為
+  385: list_item: ④ 不必 要な 身 体への 接 触
+  386: list_item: ⑥ 交 際・ 性 的関 係 の 強 要
+  387: list_item: ⑧ そ の 他 、相 手方及び他 の従業員に 不快感 を 与 える 性 的な言動
+  388: list_item: ⑦ 性 的な言動への 抗 議 又 は 拒否 等を行った従業員に対して、解雇、 不 当な人 事 考 課 、配置 転換 等の 不 利 益 を 与 える行為
+  389: list_item: ４ 妊 娠 ・出 産 ・ 育 児休 業等に関するハラスメント ( 第 ２ 条 第５ 項 の要件を 満 たした 以下 のような行為 )
+  390: list_item: ② 部 下又 は 同僚 の 妊 娠 ・出 産 、 育 児･介護 に関する制度や措置の利用を 阻 害する言動
+  391: list_item: ① 部 下 の 妊 娠 ・出 産 、 育 児･介護 に関する制度や措置の利用等に関し、解雇 そ の 他不 利 益 な取 扱 いを示 唆 する言動
+  392: list_item: ③ 部 下又 は 同僚 が 妊 娠 ・出 産 、 育 児･介護 に関する制度や措置を利用したことによる嫌がらせ等
+  393: list_item: ⑤ 部 下又 は 同僚 が 妊 娠 ・出 産 等したことに対する嫌がらせ等
+  394: list_item: ④ 部 下 が 妊 娠 ・出 産 等したことにより、解雇 そ の 他 の 不 利 益 な取 扱 いを示 唆 する言動
+  395: list_item: ５ 部 下 である従業員が職場におけるハラスメントを受けている 事 実を 認 めながら、こ れ を 黙 認 する上 司 の行為
+ 396: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 397: section_header: 研修担当者様：
+ 398: page_footer: 19
+ 399: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 400: section_header: 6 -1.　わが社のルール（ 3 ）
+ 401: section_header: （ 懲戒 ）
+ 402: text: ① ① ① ⑤ ⑧ 第 ３ 条 第 ２ 項 （ を除く。）、 第 ３ 条 第 ３ 項 から 及 及び第 ４ 項 の行為を行った場合
+ 403: text: 第 ４ 条 次の各 号 に 掲 げ る場合に 応 じ、当該各 号 に定める 懲戒処 分を行う。
+ 404: text: ▽ ① ④ 就 業規 則 第 条 第 １ 項 から までに定めるけ ん 責 、 減 給 、出 勤 停止 又 は 降 格
+ 405: text: ② ① ⑥ ⑦ 前号 の行為が 再 度に 及 ん だ場合、 そ の 情 状が 悪質 と 認 めら れ る場合、 第 ３ 条 第 ２ 項 又 は 第 ３ 条 第 ３ 項 、 の行為を行った場合 ▽ ⑤ 
+ 406: section_header: （相談 及び苦情 への対 応 ）
+ 407: list with name=list
+  408: list_item: ２ 職場におけるハラスメントの被害者に 限 ら ず 、す べ ての従業員は、パワーハラスメントや 性 的な言動、 妊 娠 ・出 産 ・ 育 児休 業等に関す る 就 業 環境 を害する言動に関する相談
+ 409: text: 第５ 条 職場におけるハラスメントに関する相談 窓口 は本社 及び 各 事 業場で 設 けることとし、 そ の 責任 者は人 事 部長とする。人 事 部長は、 窓口 担 当者の 名前 を人 事 異動等
+ 410: list with name=list
+  411: list_item: ３ 対 応 マ ニュアル に 沿 い、相談 窓口 担 当者は相談者からの 事 実確 認 の 後 、本社においては人 事 部長へ、各 事 業場においては 所 属長へ 報 告 する。 報 告に 基づ き、
+  412: list_item: ４ 前 項 の 聴 取を 求 めら れ た従業員は、正当な 理 由 なくこ れ を 拒む ことはできない。
+  413: list_item: ５ 対 応 マ ニュアル に 沿 い、 所 属長は人 事 部長に 事 実関 係 を 報 告し、人 事 部長は、 問題 解決のための措置として、 第 ４ 条 による 懲戒 の 他 、 行為者の異動等被害
+  414: list_item: ６ 相談 及び苦情 への対 応 に当たっては、関 係 者のプライ バ シ ーは保 護 さ れ るとともに、相談をしたこと 又 は 事 実関 係 の確 認 に 協力 したこ と等を 理 由 として 不 
+ 415: section_header: （ 再発 防止の義務）
+ 416: text: 第 ６ 条 人 事 部長は、職場におけるハラスメント 事 案 が生じた 時 は、 周知 の 再 徹 底及び 研修の実施、 事 案 発 生の 原因 の分 析 等、適切な 再発 防止策を 講 じなけ れば
+ 417: section_header: （ そ の 他 ）
+ 418: text: わないよう注意すること。
+ 419: text: 第 ７ 条 性別 役割 分 担 意 識 に 基づ く言動は、セク シュアル ハラスメントの 発 生の 原因 や要 因 になり 得 ること、また、 妊 娠 ・出 産 ・ 育 児休 業 等に関する 否 定
+ 420: text: ○ ○ ○ 附則 本規定は 令和 年 月 日 より実施する。
+ 421: section_header: 研修担当者様：
+ 422: text: 本スライドは就業規則への 規定例を記載しています。各 企業で規定している内容に 合わせて修正してくださ い。
+ 423: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 424: page_footer: 20
+ 425: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 426: section_header: 6 -2.　わが社でのパワーハラスメントに関する相談への対 応 の流れ
+ 427: section_header: １ ． 本人（相談者）との 面 談
+ 428: picture
+ 429: text: 面 談にあたっては、必ずプライ バシ ーが 確保 できる場 所 を 準 備 します 秘密 は 絶 対に 守 ります ！
+ 430: section_header: ２ ． 事 実 関係の 確 認
+ 431: text: まずは、上 司 や 相談窓口等へ相談を ！
+ 432: text: 為 者 ヒ ア リ ン グ／第三 者 ヒ ア リ ン グ （必ず本人（相談者）の 了解 をとってから行います）
+ 433: text: 行
+ 434: picture
+ 435: list with name=list
+  436: list_item: ３ ． 行 為 者、相談者の 意向 を 確 認し、 各 人への対 応 を 検討
+ 437: text: 「配置 転 換 」「行 為 者 謝罪 」「関係改 善 援助 」「 不利益 回 復 」「職場環境回 復 」 「メン タ ル ケ ア」等
+ 438: text: ( 例 )
+ 439: text: ＜ 懲 戒 に 値 する場合（就業規則 第 ４ 条参 照 ） ＞
+ 440: picture
+ 441: text: 「け ん責 」「 減 給 」「 降格 」「出 勤停 止」「 懲 戒 解 雇」等
+ 442: list with name=list
+  443: list_item: 4 ． 相談者、行 為 者への フォロ ー
+  444: list_item: 5 ． 再 発防止
+ 445: picture
+ 446: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 447: page_footer: 21
+ 448: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 449: section_header: 6 -3 .　職場でパワーハラスメントが起きてしまったら
+ 450: list with name=list
+  451: list_item:  パワーハラスメントを受けた人は
+  452: list_item:  一 人で 悩 まず、上 司 や人事 部 ●● 課 や社内相談窓口、あるいは、社 外 相談窓口に相談しまし ょ う
+  453: list_item:  パワーハラスメントを 我 慢 していても 解 決 しま せん 。 逆 に エ ス カ レ ートする 可 能性もあります。
+  454: list_item:  人事 部 ●● 課 や相談窓口では、相談者の方の 了解 を 得 た場合にのみ、上 司 や行 為 者の方に対する ヒ ア リ ン グ などの対 応 を行います
+  455: list_item:  パワーハラスメントに気付いた人は
+  456: list_item:  見 て 見 ぬふ りをしていては職場環境が悪化してしまうかもしれま せん 他人 ご とではなく、 自 らにも 降 りかかってくる 可 能性もあります
+  457: list_item:  パワーハラスメントを受けた人から相談があった場合
+  458: list_item:  ゆ っくり 時間 をかけて相談者の 話 を 聞 きまし ょ う
+  459: list_item:  公 平 、 迅速 な対 応 を心がけまし ょ う
+  460: list_item:  相談者の 了解 を 得 て、上 司 や人事 部 ●● 課 に 報告 し、対 応 について相談しまし ょ う
+  461: list_item:  個人 情報 には十分 注意 しまし ょ う
+  462: list_item: ●● 人 事 部 課
+  463: list_item: ●● ： 内 線
+ 464: text: ●●
+ 465: text: ●●●●
+ 466: text: ●●●●
+ 467: text: －
+ 468: text: －
+ 469: list with name=list
+  470: list_item: ●● ： 内 線
+ 471: picture
+ 472: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 473: list with name=list
+  474: list_item: 社 外 相談 窓口 ：
+  475: list_item: 社内相談 窓口
+ 476: page_footer: 22
+ 477: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 478: section_header: 最後 に（ト ッ プメ ッセ ージ）
+ 479: text: ん！！
+ 480: section_header: 研修担当者様： 各企業の実態に合わせて修 正してください。
+ 481: section_header: ハラスメントは 許 しませ
+ 482: text: ○○○ ○○○ 株式 会社 代表 取 締役 社長
+ 483: text: ○ ○ ○ 令和 年 月 日
+ 484: list with name=list
+  485: list_item: １ 職場におけるハラスメントは、労働者の 個 人としての 尊 厳 を 不 当に 傷 つける社会的に 許 さ れ ない行為であるとともに、労働者の 能力 の 有 効 な 発揮 を 妨げ 、また、会社にと
+ 486: text: 性別 役割 分 担 意 識 に 基づ く言動は、セク シュアル ハラスメントの 発 生の 原因 や 背景 となることがあり、また、 妊 娠 ・出 産 ・ 育 児休 業等 に関する 否 定的な言動は、 
+ 487: list with name=list
+  488: list_item: ２ 我 が社は 下 記のハラスメント行為を 許 しませ ん 。また、 我 が社の従業員 以外 の者に対しても、こ れ に 類 する行為を行ってはなりませ
+  489: list_item: ＜ パワーハラスメント ＞
+  490: list_item: ん 。 （なお、 以下 のパワーハラスメントについては、 優越 的な関 係 を 背景 として行わ れ たものであることが 前提 です。）
+  491: list_item: ① 隔離 ・ 仲 間 外 し・無 視 等人間関 係 からの切り 離 しを行うこと
+  492: list_item: ＜ セク シュアル ハラスメント ＞
+  493: list_item: ② 私 的なことに過度に 立ち入 ること
+  494: list_item: ③ 性 的な 冗 談、からかい、 質問 ④ わいせつ 図 画の 閲覧 、配 付 、 掲 示 ⑤ そ の 他 、 他 人に 不快感 を 与 える 性 的な言動
+  495: list_item: ⑥ 部 下又 は 同僚 による 妊 娠 ・出 産 、 育 児･介護 に関する制度や措置の利用を 阻 害する言動
+  496: list_item: ＜ 妊 娠 ・出 産 ・ 育 児休 業・ 介護休 業等に関するハラスメント ＞
+  497: list_item: ⑦ 部 下又 は 同僚 が 妊 娠 ・出 産 、 育 児･介護 に関する制度や措置を利用したことによる嫌がらせ等
+ 498: text: ○ ② 「 就 業規 則 第 条 他 人の人権を 侵 害したり、業務を 妨 害したり、 退 職を 強 要する行為」とは、次のとおりです。
+ 499: list with name=list
+  500: list_item: ⑧ 部 下又 は 同僚 が 妊 娠 ・出 産 等したことによる嫌がらせ等
+  501: list_item: ＜ パワーハラスメント ＞
+  502: list_item: ⑩ 業務上の合 理性 なく、 能力 や 経験 とかけ 離れ た 程 度の 低 い 仕事 を 命 じることや 仕事 を 与 えないこと
+  503: list_item: ⑨ 業務上明らかに 不 要なことや 遂 行 不可能 なことの 強 制、 仕事 の 妨 害を行うこと
+  504: list_item: ＜ セク シュアル ハラスメント ＞
+  505: list_item: ⑫ 身 体への 不必 要な 接 触
+  506: list_item: ⑪ 性 的な 噂 の 流 布
+  507: list_item: ⑬ 性 的な言動により社員等の 就 業意 欲 を 低下 させ、 能力発揮 を 阻 害する行為
+  508: list_item: ⑭ 部 下 による 妊 娠 ・出 産 、 育 児･介護 に関する制度や措置の利用等に関し、解雇 そ の 他不 利 益 な取 扱 いを示 唆 する行為
+  509: list_item: ＜ 妊 娠 ・出 産 ・ 育 児休 業・ 介護休 業等に関するハラスメント ＞
+ 510: text: ⑮ 部 下 が 妊 娠 ・出 産 等したことにより、解雇 そ の 他不 利 益 な取 扱 いを示 唆 する行為
+ 511: text: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 512: page_footer: 23
+ 513: page_footer: Copyright © Ministry of Health, Labour and Welfare, All Right reserved.
+ 514: section_header: 職場におけるハラスメント対策の総合情報サイト 「あかるい職場応援団」 職場におけるハラスメント対策の総合情報サイト 「あかるい職場応援団」
+ 515: text: 職場のハラスメントに関する 基 礎 情 報 やハラスメントに 悩 む方 向けの相談 窓口 情 報 等 を 掲 載しています。 ぜ ひ 参考にしてください。
+ 516: picture
+  517: text: 相口案内
+  518: text: 相口
+ 519: picture
+ 520: text: ポ スターやパン フ レ ット、研修用資料など、ダウンロード資料も 充 実しています。
+ 521: picture
+  522: text: NO
+  523: text: n
+  524: text: 防止措置全企果
+  525: text: 4
+ 526: picture
+  527: list with name=group
+   528: list_item: 旺·出屋·育完休等同八又卜村
+  529: text: 2922年4月号
+  530: text: A2
+  531: text: CnCyCHRO
+ 532: picture
+  533: text: NO
+ 534: section_header: 加職場応援过
+ 535: text: 利用
+ 536: picture
+ 537: text: 企業の取 組 事 例や、 裁 判 例等を 紹介 する ハラスメント対策の 総 合 情 報 サ イトです。 是非 ご 活 用ください ！
+ 538: page_footer: 24

@@ -1,0 +1,5629 @@
+body:
+  children:
+  - $ref: '#/texts/0'
+  - $ref: '#/texts/1'
+  - $ref: '#/texts/2'
+  - $ref: '#/groups/0'
+  - $ref: '#/texts/6'
+  - $ref: '#/texts/7'
+  - $ref: '#/pictures/0'
+  - $ref: '#/texts/8'
+  - $ref: '#/texts/9'
+  - $ref: '#/texts/10'
+  - $ref: '#/pictures/1'
+  - $ref: '#/texts/11'
+  - $ref: '#/texts/12'
+  - $ref: '#/texts/13'
+  - $ref: '#/texts/14'
+  - $ref: '#/pictures/2'
+  - $ref: '#/texts/16'
+  - $ref: '#/texts/17'
+  - $ref: '#/pictures/3'
+  - $ref: '#/texts/18'
+  - $ref: '#/texts/19'
+  - $ref: '#/texts/20'
+  - $ref: '#/pictures/4'
+  - $ref: '#/texts/21'
+  - $ref: '#/texts/22'
+  - $ref: '#/texts/23'
+  - $ref: '#/pictures/5'
+  - $ref: '#/texts/25'
+  - $ref: '#/texts/26'
+  - $ref: '#/pictures/6'
+  - $ref: '#/texts/27'
+  - $ref: '#/texts/28'
+  - $ref: '#/texts/29'
+  - $ref: '#/texts/30'
+  - $ref: '#/texts/31'
+  - $ref: '#/texts/32'
+  - $ref: '#/texts/33'
+  - $ref: '#/pictures/7'
+  - $ref: '#/texts/35'
+  - $ref: '#/texts/36'
+  - $ref: '#/texts/37'
+  - $ref: '#/texts/38'
+  - $ref: '#/texts/39'
+  - $ref: '#/texts/40'
+  - $ref: '#/texts/41'
+  - $ref: '#/texts/42'
+  - $ref: '#/pictures/8'
+  - $ref: '#/texts/44'
+  - $ref: '#/texts/45'
+  - $ref: '#/texts/46'
+  - $ref: '#/texts/47'
+  - $ref: '#/texts/48'
+  - $ref: '#/texts/49'
+  - $ref: '#/pictures/9'
+  - $ref: '#/texts/54'
+  - $ref: '#/texts/55'
+  - $ref: '#/pictures/10'
+  - $ref: '#/texts/61'
+  - $ref: '#/pictures/11'
+  - $ref: '#/texts/62'
+  - $ref: '#/texts/63'
+  - $ref: '#/texts/64'
+  - $ref: '#/pictures/12'
+  - $ref: '#/texts/70'
+  - $ref: '#/texts/71'
+  - $ref: '#/texts/72'
+  - $ref: '#/groups/1'
+  - $ref: '#/tables/0'
+  - $ref: '#/texts/78'
+  - $ref: '#/texts/79'
+  - $ref: '#/texts/80'
+  - $ref: '#/groups/2'
+  - $ref: '#/texts/84'
+  - $ref: '#/texts/85'
+  - $ref: '#/texts/86'
+  - $ref: '#/texts/87'
+  - $ref: '#/groups/3'
+  - $ref: '#/texts/89'
+  - $ref: '#/texts/90'
+  - $ref: '#/texts/91'
+  - $ref: '#/pictures/13'
+  - $ref: '#/texts/92'
+  - $ref: '#/groups/4'
+  - $ref: '#/texts/94'
+  - $ref: '#/texts/95'
+  - $ref: '#/texts/96'
+  - $ref: '#/texts/97'
+  - $ref: '#/texts/98'
+  - $ref: '#/texts/99'
+  - $ref: '#/texts/100'
+  - $ref: '#/texts/101'
+  - $ref: '#/texts/102'
+  - $ref: '#/texts/103'
+  - $ref: '#/groups/5'
+  - $ref: '#/texts/105'
+  - $ref: '#/texts/106'
+  - $ref: '#/pictures/14'
+  - $ref: '#/groups/6'
+  - $ref: '#/texts/116'
+  - $ref: '#/texts/117'
+  - $ref: '#/texts/118'
+  - $ref: '#/texts/119'
+  - $ref: '#/pictures/15'
+  - $ref: '#/texts/133'
+  - $ref: '#/texts/134'
+  - $ref: '#/texts/135'
+  - $ref: '#/texts/136'
+  - $ref: '#/texts/137'
+  - $ref: '#/texts/138'
+  - $ref: '#/texts/139'
+  - $ref: '#/texts/140'
+  - $ref: '#/pictures/16'
+  - $ref: '#/groups/7'
+  - $ref: '#/texts/159'
+  - $ref: '#/texts/160'
+  - $ref: '#/pictures/17'
+  - $ref: '#/pictures/18'
+  - $ref: '#/texts/162'
+  - $ref: '#/groups/8'
+  - $ref: '#/texts/165'
+  - $ref: '#/texts/166'
+  - $ref: '#/texts/167'
+  - $ref: '#/groups/9'
+  - $ref: '#/pictures/19'
+  content_layer: body
+  label: unspecified
+  name: _root_
+  self_ref: '#/body'
+form_items: []
+furniture:
+  children: []
+  content_layer: furniture
+  label: unspecified
+  name: _root_
+  self_ref: '#/furniture'
+groups:
+- children:
+  - $ref: '#/texts/3'
+  - $ref: '#/texts/4'
+  - $ref: '#/texts/5'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/0'
+- children:
+  - $ref: '#/texts/73'
+  - $ref: '#/texts/74'
+  - $ref: '#/texts/75'
+  - $ref: '#/texts/76'
+  - $ref: '#/texts/77'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/1'
+- children:
+  - $ref: '#/texts/81'
+  - $ref: '#/texts/82'
+  - $ref: '#/texts/83'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/2'
+- children:
+  - $ref: '#/texts/88'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/3'
+- children:
+  - $ref: '#/texts/93'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/4'
+- children:
+  - $ref: '#/texts/104'
+  content_layer: body
+  label: key_value_area
+  name: group
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/5'
+- children:
+  - $ref: '#/texts/114'
+  - $ref: '#/texts/115'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/6'
+- children:
+  - $ref: '#/texts/157'
+  - $ref: '#/texts/158'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/7'
+- children:
+  - $ref: '#/texts/163'
+  - $ref: '#/texts/164'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/8'
+- children:
+  - $ref: '#/texts/168'
+  - $ref: '#/texts/170'
+  - $ref: '#/texts/171'
+  content_layer: body
+  label: list
+  name: list
+  parent:
+    $ref: '#/body'
+  self_ref: '#/groups/9'
+key_value_items: []
+name: seiho_slides(2023)_2
+origin:
+  binary_hash: 7183656791998780385
+  filename: seiho_slides(2023)_2.pdf
+  mimetype: application/pdf
+pages:
+  '1':
+    page_no: 1
+    size:
+      height: 540.0
+      width: 720.0
+  '10':
+    page_no: 10
+    size:
+      height: 540.0
+      width: 720.0
+  '11':
+    page_no: 11
+    size:
+      height: 540.0
+      width: 720.0
+  '12':
+    page_no: 12
+    size:
+      height: 540.0
+      width: 720.0
+  '13':
+    page_no: 13
+    size:
+      height: 540.0
+      width: 720.0
+  '14':
+    page_no: 14
+    size:
+      height: 540.0
+      width: 720.0
+  '15':
+    page_no: 15
+    size:
+      height: 540.0
+      width: 720.0
+  '16':
+    page_no: 16
+    size:
+      height: 540.0
+      width: 720.0
+  '17':
+    page_no: 17
+    size:
+      height: 540.0
+      width: 720.0
+  '18':
+    page_no: 18
+    size:
+      height: 540.0
+      width: 720.0
+  '2':
+    page_no: 2
+    size:
+      height: 540.0
+      width: 720.0
+  '3':
+    page_no: 3
+    size:
+      height: 540.0
+      width: 720.0
+  '4':
+    page_no: 4
+    size:
+      height: 540.0
+      width: 720.0
+  '5':
+    page_no: 5
+    size:
+      height: 540.0
+      width: 720.0
+  '6':
+    page_no: 6
+    size:
+      height: 540.0
+      width: 720.0
+  '7':
+    page_no: 7
+    size:
+      height: 540.0
+      width: 720.0
+  '8':
+    page_no: 8
+    size:
+      height: 540.0
+      width: 720.0
+  '9':
+    page_no: 9
+    size:
+      height: 540.0
+      width: 720.0
+pictures:
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 413.9633560180664
+      coord_origin: BOTTOMLEFT
+      l: 32.612937927246094
+      r: 119.63522338867188
+      t: 444.9064025878906
+    charspan:
+    - 0
+    - 0
+    page_no: 4
+  references: []
+  self_ref: '#/pictures/0'
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 142.8753662109375
+      coord_origin: BOTTOMLEFT
+      l: 32.25228500366211
+      r: 114.27783966064453
+      t: 173.6676025390625
+    charspan:
+    - 0
+    - 0
+    page_no: 4
+  references: []
+  self_ref: '#/pictures/1'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/15'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 19.6795654296875
+      coord_origin: BOTTOMLEFT
+      l: 627.5637817382812
+      r: 715.0790405273438
+      t: 124.7984619140625
+    charspan:
+    - 0
+    - 0
+    page_no: 4
+  references: []
+  self_ref: '#/pictures/2'
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 413.94993591308594
+      coord_origin: BOTTOMLEFT
+      l: 32.597740173339844
+      r: 119.74947357177734
+      t: 444.92669677734375
+    charspan:
+    - 0
+    - 0
+    page_no: 5
+  references: []
+  self_ref: '#/pictures/3'
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 142.85174560546875
+      coord_origin: BOTTOMLEFT
+      l: 32.32490921020508
+      r: 114.44457244873047
+      t: 173.62228393554688
+    charspan:
+    - 0
+    - 0
+    page_no: 5
+  references: []
+  self_ref: '#/pictures/4'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/24'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 19.115478515625
+      coord_origin: BOTTOMLEFT
+      l: 647.355712890625
+      r: 708.3475341796875
+      t: 123.92144775390625
+    charspan:
+    - 0
+    - 0
+    page_no: 5
+  references: []
+  self_ref: '#/pictures/5'
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 414.74678802490234
+      coord_origin: BOTTOMLEFT
+      l: 32.36039733886719
+      r: 119.67951202392578
+      t: 445.620361328125
+    charspan:
+    - 0
+    - 0
+    page_no: 6
+  references: []
+  self_ref: '#/pictures/6'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/34'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 19.23834228515625
+      coord_origin: BOTTOMLEFT
+      l: 640.8807373046875
+      r: 710.6542358398438
+      t: 121.90478515625
+    charspan:
+    - 0
+    - 0
+    page_no: 6
+  references: []
+  self_ref: '#/pictures/7'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/43'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 19.4222412109375
+      coord_origin: BOTTOMLEFT
+      l: 629.5944213867188
+      r: 705.1560668945312
+      t: 138.597412109375
+    charspan:
+    - 0
+    - 0
+    page_no: 7
+  references: []
+  self_ref: '#/pictures/8'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/50'
+  - $ref: '#/texts/51'
+  - $ref: '#/texts/52'
+  - $ref: '#/texts/53'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 158.803955078125
+      coord_origin: BOTTOMLEFT
+      l: 37.840885162353516
+      r: 226.465087890625
+      t: 299.2460479736328
+    charspan:
+    - 0
+    - 0
+    page_no: 9
+  references: []
+  self_ref: '#/pictures/9'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/56'
+  - $ref: '#/texts/57'
+  - $ref: '#/texts/58'
+  - $ref: '#/texts/59'
+  - $ref: '#/texts/60'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 141.40811157226562
+      coord_origin: BOTTOMLEFT
+      l: 254.8057861328125
+      r: 460.18994140625
+      t: 299.10255432128906
+    charspan:
+    - 0
+    - 0
+    page_no: 9
+  references: []
+  self_ref: '#/pictures/10'
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 98.51657104492188
+      coord_origin: BOTTOMLEFT
+      l: 41.44436264038086
+      r: 112.80574798583984
+      t: 118.98208618164062
+    charspan:
+    - 0
+    - 0
+    page_no: 9
+  references: []
+  self_ref: '#/pictures/11'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/65'
+  - $ref: '#/texts/66'
+  - $ref: '#/texts/67'
+  - $ref: '#/texts/68'
+  - $ref: '#/texts/69'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 146.5294189453125
+      coord_origin: BOTTOMLEFT
+      l: 478.63519287109375
+      r: 684.4883422851562
+      t: 299.87754821777344
+    charspan:
+    - 0
+    - 0
+    page_no: 9
+  references: []
+  self_ref: '#/pictures/12'
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 124.70144653320312
+      coord_origin: BOTTOMLEFT
+      l: 460.5997009277344
+      r: 505.2270202636719
+      t: 187.86648559570312
+    charspan:
+    - 0
+    - 0
+    page_no: 11
+  references: []
+  self_ref: '#/pictures/13'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/107'
+  - $ref: '#/texts/108'
+  - $ref: '#/texts/109'
+  - $ref: '#/texts/110'
+  - $ref: '#/texts/111'
+  - $ref: '#/texts/112'
+  - $ref: '#/texts/113'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 149.22036743164062
+      coord_origin: BOTTOMLEFT
+      l: 3.7770438194274902
+      r: 686.9633178710938
+      t: 440.20692443847656
+    charspan:
+    - 0
+    - 0
+    page_no: 13
+  references: []
+  self_ref: '#/pictures/14'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/120'
+  - $ref: '#/texts/121'
+  - $ref: '#/texts/122'
+  - $ref: '#/texts/123'
+  - $ref: '#/texts/124'
+  - $ref: '#/texts/125'
+  - $ref: '#/texts/126'
+  - $ref: '#/texts/127'
+  - $ref: '#/texts/128'
+  - $ref: '#/texts/129'
+  - $ref: '#/texts/130'
+  - $ref: '#/texts/131'
+  - $ref: '#/texts/132'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 172.08242797851562
+      coord_origin: BOTTOMLEFT
+      l: 27.14419174194336
+      r: 690.7598266601562
+      t: 362.36830139160156
+    charspan:
+    - 0
+    - 0
+    page_no: 14
+  references: []
+  self_ref: '#/pictures/15'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/141'
+  - $ref: '#/texts/142'
+  - $ref: '#/texts/143'
+  - $ref: '#/texts/144'
+  - $ref: '#/texts/145'
+  - $ref: '#/texts/146'
+  - $ref: '#/texts/147'
+  - $ref: '#/texts/148'
+  - $ref: '#/texts/149'
+  - $ref: '#/texts/150'
+  - $ref: '#/texts/151'
+  - $ref: '#/texts/152'
+  - $ref: '#/texts/153'
+  - $ref: '#/texts/154'
+  - $ref: '#/texts/155'
+  - $ref: '#/texts/156'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 242.0416259765625
+      coord_origin: BOTTOMLEFT
+      l: 28.48349380493164
+      r: 688.106201171875
+      t: 463.9153289794922
+    charspan:
+    - 0
+    - 0
+    page_no: 16
+  references: []
+  self_ref: '#/pictures/16'
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 279.1420593261719
+      coord_origin: BOTTOMLEFT
+      l: 201.1501007080078
+      r: 307.58526611328125
+      t: 409.3096160888672
+    charspan:
+    - 0
+    - 0
+    page_no: 17
+  references: []
+  self_ref: '#/pictures/17'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/161'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 284.6358184814453
+      coord_origin: BOTTOMLEFT
+      l: 404.478271484375
+      r: 475.0247497558594
+      t: 409.12205505371094
+    charspan:
+    - 0
+    - 0
+    page_no: 17
+  references: []
+  self_ref: '#/pictures/18'
+- annotations: []
+  captions: []
+  children:
+  - $ref: '#/texts/169'
+  content_layer: body
+  footnotes: []
+  label: picture
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 213.25747680664062
+      coord_origin: BOTTOMLEFT
+      l: 489.8269348144531
+      r: 680.6992797851562
+      t: 403.746337890625
+    charspan:
+    - 0
+    - 0
+    page_no: 18
+  references: []
+  self_ref: '#/pictures/19'
+schema_name: DoclingDocument
+tables:
+- annotations: []
+  captions: []
+  children: []
+  content_layer: body
+  data:
+    grid:
+    - - col_span: 1
+        column_header: false
+        end_col_offset_idx: 1
+        end_row_offset_idx: 1
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 0
+        start_row_offset_idx: 0
+        text: ''
+      - bbox:
+          b: 229.315
+          coord_origin: TOPLEFT
+          l: 166.224
+          r: 238.224
+          t: 206.473
+        col_span: 2
+        column_header: true
+        end_col_offset_idx: 3
+        end_row_offset_idx: 1
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 1
+        start_row_offset_idx: 0
+        text: "\u5B9A\u671F\u4FDD\u967A"
+      - bbox:
+          b: 229.315
+          coord_origin: TOPLEFT
+          l: 166.224
+          r: 238.224
+          t: 206.473
+        col_span: 2
+        column_header: true
+        end_col_offset_idx: 3
+        end_row_offset_idx: 1
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 1
+        start_row_offset_idx: 0
+        text: "\u5B9A\u671F\u4FDD\u967A"
+      - bbox:
+          b: 229.315
+          coord_origin: TOPLEFT
+          l: 371.055
+          r: 443.055
+          t: 206.473
+        col_span: 2
+        column_header: true
+        end_col_offset_idx: 5
+        end_row_offset_idx: 1
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 3
+        start_row_offset_idx: 0
+        text: "\u990A\u8001\u4FDD\u967A"
+      - bbox:
+          b: 229.315
+          coord_origin: TOPLEFT
+          l: 371.055
+          r: 443.055
+          t: 206.473
+        col_span: 2
+        column_header: true
+        end_col_offset_idx: 5
+        end_row_offset_idx: 1
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 3
+        start_row_offset_idx: 0
+        text: "\u990A\u8001\u4FDD\u967A"
+      - bbox:
+          b: 229.315
+          coord_origin: TOPLEFT
+          l: 575.887
+          r: 647.887
+          t: 206.473
+        col_span: 2
+        column_header: true
+        end_col_offset_idx: 7
+        end_row_offset_idx: 1
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 5
+        start_row_offset_idx: 0
+        text: "\u7D42\u8EAB\u4FDD\u967A"
+      - bbox:
+          b: 229.315
+          coord_origin: TOPLEFT
+          l: 575.887
+          r: 647.887
+          t: 206.473
+        col_span: 2
+        column_header: true
+        end_col_offset_idx: 7
+        end_row_offset_idx: 1
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 5
+        start_row_offset_idx: 0
+        text: "\u7D42\u8EAB\u4FDD\u967A"
+    - - bbox:
+          b: 258.512
+          coord_origin: TOPLEFT
+          l: 34.724
+          r: 70.724
+          t: 235.67000000000002
+        col_span: 1
+        column_header: true
+        end_col_offset_idx: 1
+        end_row_offset_idx: 2
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 0
+        start_row_offset_idx: 1
+        text: "\u6027\u5225"
+      - bbox:
+          b: 258.512
+          coord_origin: TOPLEFT
+          l: 133.03
+          r: 169.03
+          t: 235.67000000000002
+        col_span: 1
+        column_header: true
+        end_col_offset_idx: 2
+        end_row_offset_idx: 2
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 1
+        start_row_offset_idx: 1
+        text: "\u7537\u6027"
+      - bbox:
+          b: 258.512
+          coord_origin: TOPLEFT
+          l: 235.446
+          r: 271.446
+          t: 235.67000000000002
+        col_span: 1
+        column_header: true
+        end_col_offset_idx: 3
+        end_row_offset_idx: 2
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 2
+        start_row_offset_idx: 1
+        text: "\u5973\u6027"
+      - bbox:
+          b: 258.512
+          coord_origin: TOPLEFT
+          l: 337.861
+          r: 373.861
+          t: 235.67000000000002
+        col_span: 1
+        column_header: true
+        end_col_offset_idx: 4
+        end_row_offset_idx: 2
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 3
+        start_row_offset_idx: 1
+        text: "\u7537\u6027"
+      - bbox:
+          b: 258.512
+          coord_origin: TOPLEFT
+          l: 440.277
+          r: 476.277
+          t: 235.67000000000002
+        col_span: 1
+        column_header: true
+        end_col_offset_idx: 5
+        end_row_offset_idx: 2
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 4
+        start_row_offset_idx: 1
+        text: "\u5973\u6027"
+      - bbox:
+          b: 258.512
+          coord_origin: TOPLEFT
+          l: 542.693
+          r: 578.693
+          t: 235.67000000000002
+        col_span: 1
+        column_header: true
+        end_col_offset_idx: 6
+        end_row_offset_idx: 2
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 5
+        start_row_offset_idx: 1
+        text: "\u7537\u6027"
+      - bbox:
+          b: 258.512
+          coord_origin: TOPLEFT
+          l: 645.109
+          r: 681.109
+          t: 235.67000000000002
+        col_span: 1
+        column_header: true
+        end_col_offset_idx: 7
+        end_row_offset_idx: 2
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 6
+        start_row_offset_idx: 1
+        text: "\u5973\u6027"
+    - - bbox:
+          b: 288.332
+          coord_origin: TOPLEFT
+          l: 25.71
+          r: 79.71
+          t: 265.49
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 1
+        end_row_offset_idx: 3
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 0
+        start_row_offset_idx: 2
+        text: "\u4FDD\u967A\u6599"
+      - bbox:
+          b: 290.284
+          coord_origin: TOPLEFT
+          l: 115.625
+          r: 186.406
+          t: 264.887
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 2
+        end_row_offset_idx: 3
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 1
+        start_row_offset_idx: 2
+        text: "3,600 \u5186"
+      - bbox:
+          b: 290.284
+          coord_origin: TOPLEFT
+          l: 217.077
+          r: 289.842
+          t: 264.887
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 3
+        end_row_offset_idx: 3
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 2
+        start_row_offset_idx: 2
+        text: "2,800\u5186"
+      - bbox:
+          b: 290.284
+          coord_origin: TOPLEFT
+          l: 317.735
+          r: 393.995
+          t: 264.887
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 4
+        end_row_offset_idx: 3
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 3
+        start_row_offset_idx: 2
+        text: "2.99\u4E07\u5186"
+      - bbox:
+          b: 290.284
+          coord_origin: TOPLEFT
+          l: 420.151
+          r: 496.411
+          t: 264.887
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 5
+        end_row_offset_idx: 3
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 4
+        start_row_offset_idx: 2
+        text: "2.97\u4E07\u5186"
+      - bbox:
+          b: 290.284
+          coord_origin: TOPLEFT
+          l: 522.567
+          r: 598.827
+          t: 264.887
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 6
+        end_row_offset_idx: 3
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 5
+        start_row_offset_idx: 2
+        text: "2.77\u4E07\u5186"
+      - bbox:
+          b: 290.284
+          coord_origin: TOPLEFT
+          l: 624.983
+          r: 701.243
+          t: 264.887
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 7
+        end_row_offset_idx: 3
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 6
+        start_row_offset_idx: 2
+        text: "2.69\u4E07\u5186"
+    - - bbox:
+          b: 319.57
+          coord_origin: TOPLEFT
+          l: 16.724
+          r: 88.724
+          t: 296.728
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 1
+        end_row_offset_idx: 4
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 0
+        start_row_offset_idx: 3
+        text: "\u6255\u8FBC\u7DCF\u984D"
+      - bbox:
+          b: 321.522
+          coord_origin: TOPLEFT
+          l: 118.318
+          r: 183.67
+          t: 296.125
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 2
+        end_row_offset_idx: 4
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 1
+        start_row_offset_idx: 3
+        text: "128 \u4E07\u5186"
+      - bbox:
+          b: 321.522
+          coord_origin: TOPLEFT
+          l: 218.806
+          r: 288.065
+          t: 296.125
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 3
+        end_row_offset_idx: 4
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 2
+        start_row_offset_idx: 3
+        text: "102\u4E07\u5186"
+      - bbox:
+          b: 321.522
+          coord_origin: TOPLEFT
+          l: 311.499
+          r: 400.203
+          t: 296.125
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 4
+        end_row_offset_idx: 4
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 3
+        start_row_offset_idx: 3
+        text: "1,075\u4E07\u5186"
+      - bbox:
+          b: 321.522
+          coord_origin: TOPLEFT
+          l: 413.915
+          r: 502.619
+          t: 296.125
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 5
+        end_row_offset_idx: 4
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 4
+        start_row_offset_idx: 3
+        text: "1,067\u4E07\u5186"
+      - bbox:
+          b: 321.522
+          coord_origin: TOPLEFT
+          l: 526.054
+          r: 595.312
+          t: 296.125
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 6
+        end_row_offset_idx: 4
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 5
+        start_row_offset_idx: 3
+        text: "996\u4E07\u5186"
+      - bbox:
+          b: 321.522
+          coord_origin: TOPLEFT
+          l: 628.469
+          r: 697.728
+          t: 296.125
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 7
+        end_row_offset_idx: 4
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 6
+        start_row_offset_idx: 3
+        text: "969\u4E07\u5186"
+    - - bbox:
+          b: 376.603
+          coord_origin: TOPLEFT
+          l: 16.186
+          r: 89.239
+          t: 330.97
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 1
+        end_row_offset_idx: 5
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 0
+        start_row_offset_idx: 4
+        text: "60\u6B73\u6642\u306E \u53D7\u53D6\u308A"
+      - bbox:
+          b: 380.16999999999996
+          coord_origin: TOPLEFT
+          l: 130.762
+          r: 171.226
+          t: 354.773
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 2
+        end_row_offset_idx: 5
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 1
+        start_row_offset_idx: 4
+        text: "0 \u4E07\u5186"
+      - bbox:
+          b: 380.16999999999996
+          coord_origin: TOPLEFT
+          l: 231.25
+          r: 275.62
+          t: 354.773
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 3
+        end_row_offset_idx: 5
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 2
+        start_row_offset_idx: 4
+        text: "0\u4E07\u5186"
+      - bbox:
+          b: 380.16999999999996
+          coord_origin: TOPLEFT
+          l: 311.499
+          r: 400.203
+          t: 339.523
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 4
+        end_row_offset_idx: 5
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 3
+        start_row_offset_idx: 4
+        text: "\u6E80\u671F\u4FDD\u967A\u91D1 1,000\u4E07\u5186"
+      - bbox:
+          b: 380.16999999999996
+          coord_origin: TOPLEFT
+          l: 413.915
+          r: 502.619
+          t: 339.523
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 5
+        end_row_offset_idx: 5
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 4
+        start_row_offset_idx: 4
+        text: "\u6E80\u671F\u4FDD\u967A\u91D1 1,000\u4E07\u5186"
+      - bbox:
+          b: 383.23199999999997
+          coord_origin: TOPLEFT
+          l: 522.737
+          r: 598.52
+          t: 327.334
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 6
+        end_row_offset_idx: 5
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 5
+        start_row_offset_idx: 4
+        text: "\u89E3\u7D04\u3057\u305F\u5834\u5408\u306E \u89E3\u7D04\u8FD4\u623B\
+          \u91D1 904\u4E07\u5186"
+      - bbox:
+          b: 383.23199999999997
+          coord_origin: TOPLEFT
+          l: 625.153
+          r: 700.936
+          t: 327.334
+        col_span: 1
+        column_header: false
+        end_col_offset_idx: 7
+        end_row_offset_idx: 5
+        fillable: false
+        row_header: false
+        row_section: false
+        row_span: 1
+        start_col_offset_idx: 6
+        start_row_offset_idx: 4
+        text: "\u89E3\u7D04\u3057\u305F\u5834\u5408\u306E \u89E3\u7D04\u8FD4\u623B\
+          \u91D1 885\u4E07\u5186"
+    num_cols: 7
+    num_rows: 5
+    table_cells:
+    - bbox:
+        b: 229.315
+        coord_origin: TOPLEFT
+        l: 166.224
+        r: 238.224
+        t: 206.473
+      col_span: 2
+      column_header: true
+      end_col_offset_idx: 3
+      end_row_offset_idx: 1
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 1
+      start_row_offset_idx: 0
+      text: "\u5B9A\u671F\u4FDD\u967A"
+    - bbox:
+        b: 229.315
+        coord_origin: TOPLEFT
+        l: 371.055
+        r: 443.055
+        t: 206.473
+      col_span: 2
+      column_header: true
+      end_col_offset_idx: 5
+      end_row_offset_idx: 1
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 3
+      start_row_offset_idx: 0
+      text: "\u990A\u8001\u4FDD\u967A"
+    - bbox:
+        b: 229.315
+        coord_origin: TOPLEFT
+        l: 575.887
+        r: 647.887
+        t: 206.473
+      col_span: 2
+      column_header: true
+      end_col_offset_idx: 7
+      end_row_offset_idx: 1
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 5
+      start_row_offset_idx: 0
+      text: "\u7D42\u8EAB\u4FDD\u967A"
+    - bbox:
+        b: 258.512
+        coord_origin: TOPLEFT
+        l: 34.724
+        r: 70.724
+        t: 235.67000000000002
+      col_span: 1
+      column_header: true
+      end_col_offset_idx: 1
+      end_row_offset_idx: 2
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 0
+      start_row_offset_idx: 1
+      text: "\u6027\u5225"
+    - bbox:
+        b: 258.512
+        coord_origin: TOPLEFT
+        l: 133.03
+        r: 169.03
+        t: 235.67000000000002
+      col_span: 1
+      column_header: true
+      end_col_offset_idx: 2
+      end_row_offset_idx: 2
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 1
+      start_row_offset_idx: 1
+      text: "\u7537\u6027"
+    - bbox:
+        b: 258.512
+        coord_origin: TOPLEFT
+        l: 235.446
+        r: 271.446
+        t: 235.67000000000002
+      col_span: 1
+      column_header: true
+      end_col_offset_idx: 3
+      end_row_offset_idx: 2
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 2
+      start_row_offset_idx: 1
+      text: "\u5973\u6027"
+    - bbox:
+        b: 258.512
+        coord_origin: TOPLEFT
+        l: 337.861
+        r: 373.861
+        t: 235.67000000000002
+      col_span: 1
+      column_header: true
+      end_col_offset_idx: 4
+      end_row_offset_idx: 2
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 3
+      start_row_offset_idx: 1
+      text: "\u7537\u6027"
+    - bbox:
+        b: 258.512
+        coord_origin: TOPLEFT
+        l: 440.277
+        r: 476.277
+        t: 235.67000000000002
+      col_span: 1
+      column_header: true
+      end_col_offset_idx: 5
+      end_row_offset_idx: 2
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 4
+      start_row_offset_idx: 1
+      text: "\u5973\u6027"
+    - bbox:
+        b: 258.512
+        coord_origin: TOPLEFT
+        l: 542.693
+        r: 578.693
+        t: 235.67000000000002
+      col_span: 1
+      column_header: true
+      end_col_offset_idx: 6
+      end_row_offset_idx: 2
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 5
+      start_row_offset_idx: 1
+      text: "\u7537\u6027"
+    - bbox:
+        b: 258.512
+        coord_origin: TOPLEFT
+        l: 645.109
+        r: 681.109
+        t: 235.67000000000002
+      col_span: 1
+      column_header: true
+      end_col_offset_idx: 7
+      end_row_offset_idx: 2
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 6
+      start_row_offset_idx: 1
+      text: "\u5973\u6027"
+    - bbox:
+        b: 288.332
+        coord_origin: TOPLEFT
+        l: 25.71
+        r: 79.71
+        t: 265.49
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 1
+      end_row_offset_idx: 3
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 0
+      start_row_offset_idx: 2
+      text: "\u4FDD\u967A\u6599"
+    - bbox:
+        b: 290.284
+        coord_origin: TOPLEFT
+        l: 115.625
+        r: 186.406
+        t: 264.887
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 2
+      end_row_offset_idx: 3
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 1
+      start_row_offset_idx: 2
+      text: "3,600 \u5186"
+    - bbox:
+        b: 290.284
+        coord_origin: TOPLEFT
+        l: 217.077
+        r: 289.842
+        t: 264.887
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 3
+      end_row_offset_idx: 3
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 2
+      start_row_offset_idx: 2
+      text: "2,800\u5186"
+    - bbox:
+        b: 290.284
+        coord_origin: TOPLEFT
+        l: 317.735
+        r: 393.995
+        t: 264.887
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 4
+      end_row_offset_idx: 3
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 3
+      start_row_offset_idx: 2
+      text: "2.99\u4E07\u5186"
+    - bbox:
+        b: 290.284
+        coord_origin: TOPLEFT
+        l: 420.151
+        r: 496.411
+        t: 264.887
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 5
+      end_row_offset_idx: 3
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 4
+      start_row_offset_idx: 2
+      text: "2.97\u4E07\u5186"
+    - bbox:
+        b: 290.284
+        coord_origin: TOPLEFT
+        l: 522.567
+        r: 598.827
+        t: 264.887
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 6
+      end_row_offset_idx: 3
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 5
+      start_row_offset_idx: 2
+      text: "2.77\u4E07\u5186"
+    - bbox:
+        b: 290.284
+        coord_origin: TOPLEFT
+        l: 624.983
+        r: 701.243
+        t: 264.887
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 7
+      end_row_offset_idx: 3
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 6
+      start_row_offset_idx: 2
+      text: "2.69\u4E07\u5186"
+    - bbox:
+        b: 319.57
+        coord_origin: TOPLEFT
+        l: 16.724
+        r: 88.724
+        t: 296.728
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 1
+      end_row_offset_idx: 4
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 0
+      start_row_offset_idx: 3
+      text: "\u6255\u8FBC\u7DCF\u984D"
+    - bbox:
+        b: 321.522
+        coord_origin: TOPLEFT
+        l: 118.318
+        r: 183.67
+        t: 296.125
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 2
+      end_row_offset_idx: 4
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 1
+      start_row_offset_idx: 3
+      text: "128 \u4E07\u5186"
+    - bbox:
+        b: 321.522
+        coord_origin: TOPLEFT
+        l: 218.806
+        r: 288.065
+        t: 296.125
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 3
+      end_row_offset_idx: 4
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 2
+      start_row_offset_idx: 3
+      text: "102\u4E07\u5186"
+    - bbox:
+        b: 321.522
+        coord_origin: TOPLEFT
+        l: 311.499
+        r: 400.203
+        t: 296.125
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 4
+      end_row_offset_idx: 4
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 3
+      start_row_offset_idx: 3
+      text: "1,075\u4E07\u5186"
+    - bbox:
+        b: 321.522
+        coord_origin: TOPLEFT
+        l: 413.915
+        r: 502.619
+        t: 296.125
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 5
+      end_row_offset_idx: 4
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 4
+      start_row_offset_idx: 3
+      text: "1,067\u4E07\u5186"
+    - bbox:
+        b: 321.522
+        coord_origin: TOPLEFT
+        l: 526.054
+        r: 595.312
+        t: 296.125
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 6
+      end_row_offset_idx: 4
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 5
+      start_row_offset_idx: 3
+      text: "996\u4E07\u5186"
+    - bbox:
+        b: 321.522
+        coord_origin: TOPLEFT
+        l: 628.469
+        r: 697.728
+        t: 296.125
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 7
+      end_row_offset_idx: 4
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 6
+      start_row_offset_idx: 3
+      text: "969\u4E07\u5186"
+    - bbox:
+        b: 376.603
+        coord_origin: TOPLEFT
+        l: 16.186
+        r: 89.239
+        t: 330.97
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 1
+      end_row_offset_idx: 5
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 0
+      start_row_offset_idx: 4
+      text: "60\u6B73\u6642\u306E \u53D7\u53D6\u308A"
+    - bbox:
+        b: 380.16999999999996
+        coord_origin: TOPLEFT
+        l: 130.762
+        r: 171.226
+        t: 354.773
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 2
+      end_row_offset_idx: 5
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 1
+      start_row_offset_idx: 4
+      text: "0 \u4E07\u5186"
+    - bbox:
+        b: 380.16999999999996
+        coord_origin: TOPLEFT
+        l: 231.25
+        r: 275.62
+        t: 354.773
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 3
+      end_row_offset_idx: 5
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 2
+      start_row_offset_idx: 4
+      text: "0\u4E07\u5186"
+    - bbox:
+        b: 380.16999999999996
+        coord_origin: TOPLEFT
+        l: 311.499
+        r: 400.203
+        t: 339.523
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 4
+      end_row_offset_idx: 5
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 3
+      start_row_offset_idx: 4
+      text: "\u6E80\u671F\u4FDD\u967A\u91D1 1,000\u4E07\u5186"
+    - bbox:
+        b: 380.16999999999996
+        coord_origin: TOPLEFT
+        l: 413.915
+        r: 502.619
+        t: 339.523
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 5
+      end_row_offset_idx: 5
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 4
+      start_row_offset_idx: 4
+      text: "\u6E80\u671F\u4FDD\u967A\u91D1 1,000\u4E07\u5186"
+    - bbox:
+        b: 383.23199999999997
+        coord_origin: TOPLEFT
+        l: 522.737
+        r: 598.52
+        t: 327.334
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 6
+      end_row_offset_idx: 5
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 5
+      start_row_offset_idx: 4
+      text: "\u89E3\u7D04\u3057\u305F\u5834\u5408\u306E \u89E3\u7D04\u8FD4\u623B\u91D1\
+        \ 904\u4E07\u5186"
+    - bbox:
+        b: 383.23199999999997
+        coord_origin: TOPLEFT
+        l: 625.153
+        r: 700.936
+        t: 327.334
+      col_span: 1
+      column_header: false
+      end_col_offset_idx: 7
+      end_row_offset_idx: 5
+      fillable: false
+      row_header: false
+      row_section: false
+      row_span: 1
+      start_col_offset_idx: 6
+      start_row_offset_idx: 4
+      text: "\u89E3\u7D04\u3057\u305F\u5834\u5408\u306E \u89E3\u7D04\u8FD4\u623B\u91D1\
+        \ 885\u4E07\u5186"
+  footnotes: []
+  label: table
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 152.37020874023438
+      coord_origin: BOTTOMLEFT
+      l: 4.630672931671143
+      r: 715.576904296875
+      t: 338.0474853515625
+    charspan:
+    - 0
+    - 0
+    page_no: 10
+  references: []
+  self_ref: '#/tables/0'
+texts:
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u300C\u751F\u547D\u4FDD\u967A\u300D\u306B\u95A2\u3059\u308B \u30B9\u30E9\
+    \u30A4\u30C9\u96C6"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 188.038
+      coord_origin: BOTTOMLEFT
+      l: 106.469
+      r: 614.505
+      t: 336.19
+    charspan:
+    - 0
+    - 16
+    page_no: 1
+  self_ref: '#/texts/0'
+  text: "\u300C\u751F\u547D\u4FDD\u967A\u300D\u306B\u95A2\u3059\u308B \u30B9\u30E9\
+    \u30A4\u30C9\u96C6"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u5229\u7528\u65B9\u6CD5\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 443.411
+      coord_origin: BOTTOMLEFT
+      l: 269.972
+      r: 449.972
+      t: 489.095
+    charspan:
+    - 0
+    - 6
+    page_no: 2
+  self_ref: '#/texts/1'
+  text: "\u3010\u5229\u7528\u65B9\u6CD5\u3011"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4EE5\u4E0B\u306E\u5F53\u30BB\u30F3\u30BF\uFF0D\u4F5C\u6210\u8CC7\u6599\u3092\
+    \u3054\u5229\u7528\u3059\u308B\u969B\u306B\u3001\u81EA\u52A9\u306E\u4E00\u624B\
+    \u6BB5\u3068\u3057\u3066\u300C\u751F\u547D\u4FDD\u967A\u300D\u306B\u3064\u3044\
+    \u3066 \u8AAC\u660E\u3059\u308B\u969B\u306E\u88DC\u8DB3\u8CC7\u6599\u3068\u3057\
+    \u3066\u3054\u5229\u7528\u304F\u3060\u3055\u3044\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 386.026
+      coord_origin: BOTTOMLEFT
+      l: 59.754
+      r: 627.548
+      t: 425.503
+    charspan:
+    - 0
+    - 62
+    page_no: 2
+  self_ref: '#/texts/2'
+  text: "\u4EE5\u4E0B\u306E\u5F53\u30BB\u30F3\u30BF\uFF0D\u4F5C\u6210\u8CC7\u6599\u3092\
+    \u3054\u5229\u7528\u3059\u308B\u969B\u306B\u3001\u81EA\u52A9\u306E\u4E00\u624B\
+    \u6BB5\u3068\u3057\u3066\u300C\u751F\u547D\u4FDD\u967A\u300D\u306B\u3064\u3044\
+    \u3066 \u8AAC\u660E\u3059\u308B\u969B\u306E\u88DC\u8DB3\u8CC7\u6599\u3068\u3057\
+    \u3066\u3054\u5229\u7528\u304F\u3060\u3055\u3044\u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2460\u9AD8\u6821\u516C\u6C11\u79D1\u5411\u3051\u300C\u81EA\u52A9\u30FB\u5171\
+    \u52A9\u30FB\u516C\u52A9\u306B\u3064\u3044\u3066\u8003\u3048\u3088\u3046\u300D\
+    \ \u30FB\u30FB\u30FB\u8A72\u5F53\u7B87\u6240:\u7B2C3\u7AE0\u300E\u81EA\u52A9\u3063\
+    \u3066\u4F55\uFF1F\u300F"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 299.536
+      coord_origin: BOTTOMLEFT
+      l: 59.754
+      r: 602.742
+      t: 358.804
+    charspan:
+    - 0
+    - 46
+    page_no: 2
+  self_ref: '#/texts/3'
+  text: "\u2460\u9AD8\u6821\u516C\u6C11\u79D1\u5411\u3051\u300C\u81EA\u52A9\u30FB\u5171\
+    \u52A9\u30FB\u516C\u52A9\u306B\u3064\u3044\u3066\u8003\u3048\u3088\u3046\u300D\
+    \ \u30FB\u30FB\u30FB\u8A72\u5F53\u7B87\u6240:\u7B2C3\u7AE0\u300E\u81EA\u52A9\u3063\
+    \u3066\u4F55\uFF1F\u300F"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2461\u9AD8\u6821\u5BB6\u5EAD\u79D1\u5411\u3051\u300C\u751F\u6D3B\u8A2D\u8A08\
+    \u3068\u30EA\u30B9\u30AF\u3078\u306E\u5099\u3048\u300D \u30FB\u30FB\u30FB\u8A72\
+    \u5F53\u7B87\u6240:\u7B2C3\u7AE0\u300E\u516C\u7684\u4FDD\u969C\u3068\u79C1\u7684\
+    \u4FDD\u969C\u300F"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 213.13599999999997
+      coord_origin: BOTTOMLEFT
+      l: 59.754
+      r: 527.935
+      t: 272.404
+    charspan:
+    - 0
+    - 45
+    page_no: 2
+  self_ref: '#/texts/4'
+  text: "\u2461\u9AD8\u6821\u5BB6\u5EAD\u79D1\u5411\u3051\u300C\u751F\u6D3B\u8A2D\u8A08\
+    \u3068\u30EA\u30B9\u30AF\u3078\u306E\u5099\u3048\u300D \u30FB\u30FB\u30FB\u8A72\
+    \u5F53\u7B87\u6240:\u7B2C3\u7AE0\u300E\u516C\u7684\u4FDD\u969C\u3068\u79C1\u7684\
+    \u4FDD\u969C\u300F"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2462\u9AD8\u6821\u5BB6\u5EAD\u79D1\u5411\u3051\u300C\u4E8B\u4F8B\u304B\u3089\
+    \u8003\u3048\u308B\u30EA\u30B9\u30AF\u30DE\u30CD\u30B8\u30E1\u30F3\u30C8\u300D\
+    \ \u30FB\u30FB\u30FB\u8A72\u5F53\u7B87\u6240:\u7B2C3\u7AE0\u300E\u79C1\u7684\u4FDD\
+    \u969C\u300F"
+  parent:
+    $ref: '#/groups/0'
+  prov:
+  - bbox:
+      b: 126.73599999999999
+      coord_origin: BOTTOMLEFT
+      l: 59.754
+      r: 610.448
+      t: 186.00400000000002
+    charspan:
+    - 0
+    - 44
+    page_no: 2
+  self_ref: '#/texts/5'
+  text: "\u2462\u9AD8\u6821\u5BB6\u5EAD\u79D1\u5411\u3051\u300C\u4E8B\u4F8B\u304B\u3089\
+    \u8003\u3048\u308B\u30EA\u30B9\u30AF\u30DE\u30CD\u30B8\u30E1\u30F3\u30C8\u300D\
+    \ \u30FB\u30FB\u30FB\u8A72\u5F53\u7B87\u6240:\u7B2C3\u7AE0\u300E\u79C1\u7684\u4FDD\
+    \u969C\u300F"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u2460\u300C\u751F\u547D\u4FDD\u967A\u300D\u306B\u95A2\u3059\u308B\u30AF\u30A4\
+    \u30BA \u30B9\u30E9\u30A4\u30C9\u96C6"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 216.96799999999996
+      coord_origin: BOTTOMLEFT
+      l: 72.992
+      r: 647.78
+      t: 335.468
+    charspan:
+    - 0
+    - 20
+    page_no: 3
+  self_ref: '#/texts/6'
+  text: "\u2460\u300C\u751F\u547D\u4FDD\u967A\u300D\u306B\u95A2\u3059\u308B\u30AF\u30A4\
+    \u30BA \u30B9\u30E9\u30A4\u30C9\u96C6"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3069\u306E\u304F\u3089\u3044\u306E\u5BB6\u65CF\u304C\u5951\u7D04\u3057\u3066\
+    \u3044\u308B\u306E?"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 43.455
+      r: 504.144
+      t: 530.184
+    charspan:
+    - 0
+    - 17
+    page_no: 4
+  self_ref: '#/texts/7'
+  text: "\u3069\u306E\u304F\u3089\u3044\u306E\u5BB6\u65CF\u304C\u5951\u7D04\u3057\u3066\
+    \u3044\u308B\u306E?"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u554F\u984C\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 410.202
+      coord_origin: BOTTOMLEFT
+      l: 28.573
+      r: 135.221
+      t: 450.814
+    charspan:
+    - 0
+    - 4
+    page_no: 4
+  self_ref: '#/texts/8'
+  text: "\u3010\u554F\u984C\u3011"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u56FD\u5185\u3067\u300C\u751F\u547D\u4FDD\u967A\u300D\u3092\u5951\u7D04\u3057\
+    \u3066\u3044\u308B \u5BB6\u65CF\u306E\u5272\u5408\u306F\u7D04\u4F55%\uFF1F"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 298.151
+      coord_origin: BOTTOMLEFT
+      l: 81.893
+      r: 638.091
+      t: 404.891
+    charspan:
+    - 0
+    - 27
+    page_no: 4
+  self_ref: '#/texts/9'
+  text: "\u56FD\u5185\u3067\u300C\u751F\u547D\u4FDD\u967A\u300D\u3092\u5951\u7D04\u3057\
+    \u3066\u3044\u308B \u5BB6\u65CF\u306E\u5272\u5408\u306F\u7D04\u4F55%\uFF1F"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "A.\u7D0450\uFF05\u3000\u3000B.\u7D0470\uFF05\u3000\u3000C.\u7D0490\uFF05"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 206.46299999999997
+      coord_origin: BOTTOMLEFT
+      l: 56.494
+      r: 629.263
+      t: 252.147
+    charspan:
+    - 0
+    - 22
+    page_no: 4
+  self_ref: '#/texts/10'
+  text: "A.\u7D0450\uFF05\u3000\u3000B.\u7D0470\uFF05\u3000\u3000C.\u7D0490\uFF05"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u7B54\u3048\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 138.64300000000003
+      coord_origin: BOTTOMLEFT
+      l: 28.091
+      r: 130.163
+      t: 179.255
+    charspan:
+    - 0
+    - 4
+    page_no: 4
+  self_ref: '#/texts/11'
+  text: "\u3010\u7B54\u3048\u3011"
+- children: []
+  content_layer: body
+  label: text
+  orig: "89.8\uFF05"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 93.82799999999997
+      coord_origin: BOTTOMLEFT
+      l: 28.091
+      r: 221.347
+      t: 134.44
+    charspan:
+    - 0
+    - 5
+    page_no: 4
+  self_ref: '#/texts/12'
+  text: "89.8\uFF05"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u21D2\u3000C.\u7D0490\uFF05"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 52.41300000000001
+      coord_origin: BOTTOMLEFT
+      l: 40.365
+      r: 340.639
+      t: 93.02499999999998
+    charspan:
+    - 0
+    - 8
+    page_no: 4
+  self_ref: '#/texts/13'
+  text: "\u21D2\u3000C.\u7D0490\uFF05"
+- children: []
+  content_layer: body
+  label: text
+  orig: "1 \u4EF6\u3067\u3082\u751F\u547D\u4FDD \u967A\u306B\u52A0\u5165\u3057\u3066\
+    \u3044 \u308B\u5BB6\u65CF\u306E\u5272\u5408\u3060 \u3088\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 62.89100000000002
+      coord_origin: BOTTOMLEFT
+      l: 443.367
+      r: 583.558
+      t: 163.89800000000002
+    charspan:
+    - 0
+    - 27
+    page_no: 4
+  self_ref: '#/texts/14'
+  text: "1 \u4EF6\u3067\u3082\u751F\u547D\u4FDD \u967A\u306B\u52A0\u5165\u3057\u3066\
+    \u3044 \u308B\u5BB6\u65CF\u306E\u5272\u5408\u3060 \u3088\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: '4'
+  parent:
+    $ref: '#/pictures/2'
+  prov:
+  - bbox:
+      b: 17.110000000000014
+      coord_origin: BOTTOMLEFT
+      l: 670.706
+      r: 676.773
+      t: 31.738999999999976
+    charspan:
+    - 0
+    - 1
+    page_no: 4
+  self_ref: '#/texts/15'
+  text: '4'
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: "\uFF0A\u751F\u547D\u4FDD\u967A\u6587\u5316\u30BB\u30F3\u30BF\u30FC\u300C\
+    2021\u5E74\u5EA6\u3000\u751F\u547D\u4FDD\u967A\u306B\u95A2\u3059\u308B\u5168\u56FD\
+    \u5B9F\u614B\u8ABF\u67FB\u300D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 20.881999999999948
+      coord_origin: BOTTOMLEFT
+      l: 17.32
+      r: 326.241
+      t: 34.19100000000003
+    charspan:
+    - 0
+    - 34
+    page_no: 4
+  self_ref: '#/texts/16'
+  text: "\uFF0A\u751F\u547D\u4FDD\u967A\u6587\u5316\u30BB\u30F3\u30BF\u30FC\u300C\
+    2021\u5E74\u5EA6\u3000\u751F\u547D\u4FDD\u967A\u306B\u95A2\u3059\u308B\u5168\u56FD\
+    \u5B9F\u614B\u8ABF\u67FB\u300D"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u4F55\u4EF6\u5951\u7D04\u3057\u3066\u3044\u308B\u306E?"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 43.455
+      r: 322.954
+      t: 530.184
+    charspan:
+    - 0
+    - 10
+    page_no: 5
+  self_ref: '#/texts/17'
+  text: "\u4F55\u4EF6\u5951\u7D04\u3057\u3066\u3044\u308B\u306E?"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u554F\u984C\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 409.891
+      coord_origin: BOTTOMLEFT
+      l: 28.573
+      r: 135.221
+      t: 450.503
+    charspan:
+    - 0
+    - 4
+    page_no: 5
+  self_ref: '#/texts/18'
+  text: "\u3010\u554F\u984C\u3011"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u5BB6\u65CF\u3067\u5951\u7D04\u3057\u3066\u3044\u308B\u751F\u547D\u4FDD\u967A\
+    \u306E \u4EF6\u6570\u306F\u5E73\u5747\u3067\u4F55\u4EF6\uFF1F"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 297.839
+      coord_origin: BOTTOMLEFT
+      l: 99.808
+      r: 620.169
+      t: 404.58
+    charspan:
+    - 0
+    - 24
+    page_no: 5
+  self_ref: '#/texts/19'
+  text: "\u5BB6\u65CF\u3067\u5951\u7D04\u3057\u3066\u3044\u308B\u751F\u547D\u4FDD\u967A\
+    \u306E \u4EF6\u6570\u306F\u5E73\u5747\u3067\u4F55\u4EF6\uFF1F"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "A.\u7D041\u4EF6\u3000B.\u7D044\u4EF6\u3000C.\u7D046\u4EF6"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 204.19600000000003
+      coord_origin: BOTTOMLEFT
+      l: 115.342
+      r: 567.128
+      t: 249.88
+    charspan:
+    - 0
+    - 17
+    page_no: 5
+  self_ref: '#/texts/20'
+  text: "A.\u7D041\u4EF6\u3000B.\u7D044\u4EF6\u3000C.\u7D046\u4EF6"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u7B54\u3048\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 138.84199999999998
+      coord_origin: BOTTOMLEFT
+      l: 28.091
+      r: 130.163
+      t: 179.454
+    charspan:
+    - 0
+    - 4
+    page_no: 5
+  self_ref: '#/texts/21'
+  text: "\u3010\u7B54\u3048\u3011"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5E73\u57473.9\u4EF6 \u21D2\u3000B.\u7D044\u4EF6"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 52.61200000000002
+      coord_origin: BOTTOMLEFT
+      l: 28.091
+      r: 330.311
+      t: 134.63800000000003
+    charspan:
+    - 0
+    - 14
+    page_no: 5
+  self_ref: '#/texts/22'
+  text: "\u5E73\u57473.9\u4EF6 \u21D2\u3000B.\u7D044\u4EF6"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4F8B\u3048\u3070 3 \u4EBA\u5BB6\u65CF\u3067 \u305D\u308C\u305E\u308C\u75C5\
+    \u6C17\u3084\u30B1\u30AC \u306B\u5099\u3048\u308B\u305F\u3081\u306B\u300C\u533B\
+    \ \u7642\u4FDD\u967A\u300D\u306B\u5951\u7D04\u3057\u3066 \u3044\u308C\u3070 3\
+    \ \u4EF6\u5206\u306E\u52A0\u5165 \u306B\u306A\u308B\u3088\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 37.64699999999999
+      coord_origin: BOTTOMLEFT
+      l: 426.246
+      r: 588.246
+      t: 171.711
+    charspan:
+    - 0
+    - 58
+    page_no: 5
+  self_ref: '#/texts/23'
+  text: "\u4F8B\u3048\u3070 3 \u4EBA\u5BB6\u65CF\u3067 \u305D\u308C\u305E\u308C\u75C5\
+    \u6C17\u3084\u30B1\u30AC \u306B\u5099\u3048\u308B\u305F\u3081\u306B\u300C\u533B\
+    \ \u7642\u4FDD\u967A\u300D\u306B\u5951\u7D04\u3057\u3066 \u3044\u308C\u3070 3\
+    \ \u4EF6\u5206\u306E\u52A0\u5165 \u306B\u306A\u308B\u3088\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: '5'
+  parent:
+    $ref: '#/pictures/5'
+  prov:
+  - bbox:
+      b: 17.110000000000014
+      coord_origin: BOTTOMLEFT
+      l: 670.706
+      r: 676.773
+      t: 31.738999999999976
+    charspan:
+    - 0
+    - 1
+    page_no: 5
+  self_ref: '#/texts/24'
+  text: '5'
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: "\uFF0A\u751F\u547D\u4FDD\u967A\u6587\u5316\u30BB\u30F3\u30BF\u30FC\u300C\
+    2021\u5E74\u5EA6\u3000\u751F\u547D\u4FDD\u967A\u306B\u95A2\u3059\u308B\u5168\u56FD\
+    \u5B9F\u614B\u8ABF\u67FB\u300D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 20.881999999999948
+      coord_origin: BOTTOMLEFT
+      l: 17.32
+      r: 326.241
+      t: 34.19100000000003
+    charspan:
+    - 0
+    - 34
+    page_no: 5
+  self_ref: '#/texts/25'
+  text: "\uFF0A\u751F\u547D\u4FDD\u967A\u6587\u5316\u30BB\u30F3\u30BF\u30FC\u300C\
+    2021\u5E74\u5EA6\u3000\u751F\u547D\u4FDD\u967A\u306B\u95A2\u3059\u308B\u5168\u56FD\
+    \u5B9F\u614B\u8ABF\u67FB\u300D"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3044\u304F\u3089\u652F\u6255\u3063\u3066\u3044\u308B\u306E?"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 43.455
+      r: 327.347
+      t: 530.184
+    charspan:
+    - 0
+    - 11
+    page_no: 6
+  self_ref: '#/texts/26'
+  text: "\u3044\u304F\u3089\u652F\u6255\u3063\u3066\u3044\u308B\u306E?"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u554F\u984C\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 410.571
+      coord_origin: BOTTOMLEFT
+      l: 28.573
+      r: 135.221
+      t: 451.183
+    charspan:
+    - 0
+    - 4
+    page_no: 6
+  self_ref: '#/texts/27'
+  text: "\u3010\u554F\u984C\u3011"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u5BB6\u65CF\u304C1\u5E74\u9593\u3067\u4FDD\u967A\u4F1A\u793E\u306B \u652F\
+    \u6255\u3063\u3066\u3044\u308B\u304A\u91D1\uFF08\u4FDD\u967A\u6599\uFF09\u306F\
+    \u3044\u304F\u3089\uFF1F"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 298.52
+      coord_origin: BOTTOMLEFT
+      l: 38.551
+      r: 681.383
+      t: 405.26
+    charspan:
+    - 0
+    - 31
+    page_no: 6
+  self_ref: '#/texts/28'
+  text: "\u5BB6\u65CF\u304C1\u5E74\u9593\u3067\u4FDD\u967A\u4F1A\u793E\u306B \u652F\
+    \u6255\u3063\u3066\u3044\u308B\u304A\u91D1\uFF08\u4FDD\u967A\u6599\uFF09\u306F\
+    \u3044\u304F\u3089\uFF1F"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "A.\u7D0420\u4E07\u5186\u3000B.\u7D0440\u4E07\u5186\u3000C.\u7D0460\u4E07\u5186"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 205.613
+      coord_origin: BOTTOMLEFT
+      l: 43.54
+      r: 676.46
+      t: 251.29700000000003
+    charspan:
+    - 0
+    - 23
+    page_no: 6
+  self_ref: '#/texts/29'
+  text: "A.\u7D0420\u4E07\u5186\u3000B.\u7D0440\u4E07\u5186\u3000C.\u7D0460\u4E07\u5186"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u7B54\u3048\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 153.15700000000004
+      coord_origin: BOTTOMLEFT
+      l: 28.091
+      r: 130.163
+      t: 193.769
+    charspan:
+    - 0
+    - 4
+    page_no: 6
+  self_ref: '#/texts/30'
+  text: "\u3010\u7B54\u3048\u3011"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5E73\u574737.1\u4E07\u5186(\u5E74\u9593) (\u6708\u3005\u7D043.1\u4E07\u5186\
+    )"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 83.935
+      coord_origin: BOTTOMLEFT
+      l: 28.091
+      r: 346.612
+      t: 148.95299999999997
+    charspan:
+    - 0
+    - 23
+    page_no: 6
+  self_ref: '#/texts/31'
+  text: "\u5E73\u574737.1\u4E07\u5186(\u5E74\u9593) (\u6708\u3005\u7D043.1\u4E07\u5186\
+    )"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u21D2\u3000B.\u7D0440\u4E07\u5186"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 35.122000000000014
+      coord_origin: BOTTOMLEFT
+      l: 83.169
+      r: 310.167
+      t: 75.73399999999998
+    charspan:
+    - 0
+    - 9
+    page_no: 6
+  self_ref: '#/texts/32'
+  text: "\u21D2\u3000B.\u7D0440\u4E07\u5186"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6C34\u9053\u5149\u71B1\u8CBB\u3084\u98DF\u8CBB\u3001 \u643A\u5E2F\u96FB\
+    \u8A71\u306E\u304A\u91D1\u306A\u3069 \u306E\u4ED6\u306B\u3001\u3053\u308C\u3060\
+    \u3051\u306E \u91D1\u984D\u3092\u8CA0\u62C5\u3057\u3066\u308B\u3093 \u3060\u306D\
+    \u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 37.733000000000004
+      coord_origin: BOTTOMLEFT
+      l: 430.98
+      r: 592.98
+      t: 150.197
+    charspan:
+    - 0
+    - 43
+    page_no: 6
+  self_ref: '#/texts/33'
+  text: "\u6C34\u9053\u5149\u71B1\u8CBB\u3084\u98DF\u8CBB\u3001 \u643A\u5E2F\u96FB\
+    \u8A71\u306E\u304A\u91D1\u306A\u3069 \u306E\u4ED6\u306B\u3001\u3053\u308C\u3060\
+    \u3051\u306E \u91D1\u984D\u3092\u8CA0\u62C5\u3057\u3066\u308B\u3093 \u3060\u306D\
+    \u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: '6'
+  parent:
+    $ref: '#/pictures/7'
+  prov:
+  - bbox:
+      b: 17.110000000000014
+      coord_origin: BOTTOMLEFT
+      l: 670.706
+      r: 676.773
+      t: 31.738999999999976
+    charspan:
+    - 0
+    - 1
+    page_no: 6
+  self_ref: '#/texts/34'
+  text: '6'
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: "\uFF0A\u751F\u547D\u4FDD\u967A\u6587\u5316\u30BB\u30F3\u30BF\u30FC\u300C\
+    2021\u5E74\u5EA6\u3000\u751F\u547D\u4FDD\u967A\u306B\u95A2\u3059\u308B\u5168\u56FD\
+    \u5B9F\u614B\u8ABF\u67FB\u300D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 9.543000000000006
+      coord_origin: BOTTOMLEFT
+      l: 17.32
+      r: 326.241
+      t: 22.851999999999975
+    charspan:
+    - 0
+    - 34
+    page_no: 6
+  self_ref: '#/texts/35'
+  text: "\uFF0A\u751F\u547D\u4FDD\u967A\u6587\u5316\u30BB\u30F3\u30BF\u30FC\u300C\
+    2021\u5E74\u5EA6\u3000\u751F\u547D\u4FDD\u967A\u306B\u95A2\u3059\u308B\u5168\u56FD\
+    \u5B9F\u614B\u8ABF\u67FB\u300D"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u751F\u547D\u4FDD\u967A\u4F1A\u793E\u5168\u4F53\u3067\u3044\u304F\u3089\u652F\
+    \u6255\u308F\u308C\u3066\u3044\u308B\u306E?"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 43.427
+      r: 643.495
+      t: 530.184
+    charspan:
+    - 0
+    - 21
+    page_no: 7
+  self_ref: '#/texts/36'
+  text: "\u751F\u547D\u4FDD\u967A\u4F1A\u793E\u5168\u4F53\u3067\u3044\u304F\u3089\u652F\
+    \u6255\u308F\u308C\u3066\u3044\u308B\u306E?"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u554F\u984C\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 413.061
+      coord_origin: BOTTOMLEFT
+      l: 29.169
+      r: 129.099
+      t: 451.119
+    charspan:
+    - 0
+    - 4
+    page_no: 7
+  self_ref: '#/texts/37'
+  text: "\u3010\u554F\u984C\u3011"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "1\u5E74\u9593\u3067\u56FD\u5185\u306E\u4FDD\u967A\u4F1A\u793E\u304B\u3089\
+    \u5951\u7D04\u8005\u306B \u652F\u6255\u308F\u308C\u308B\u304A\u91D1\uFF08\u4FDD\
+    \u967A\u91D1\u7B49\uFF09\u306F\u3044\u304F\u3089\uFF1F"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 312.196
+      coord_origin: BOTTOMLEFT
+      l: 65.367
+      r: 655.623
+      t: 408.28
+    charspan:
+    - 0
+    - 36
+    page_no: 7
+  self_ref: '#/texts/38'
+  text: "1\u5E74\u9593\u3067\u56FD\u5185\u306E\u4FDD\u967A\u4F1A\u793E\u304B\u3089\
+    \u5951\u7D04\u8005\u306B \u652F\u6255\u308F\u308C\u308B\u304A\u91D1\uFF08\u4FDD\
+    \u967A\u91D1\u7B49\uFF09\u306F\u3044\u304F\u3089\uFF1F"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "A.\u7D043,000\u5104\u5186\u3000\u3000B.\u7D043\u5146\u5186\u3000\u3000C.\u7D04\
+    30\u5146\u5186"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 213.53499999999997
+      coord_origin: BOTTOMLEFT
+      l: 38.438
+      r: 676.998
+      t: 254.147
+    charspan:
+    - 0
+    - 27
+    page_no: 7
+  self_ref: '#/texts/39'
+  text: "A.\u7D043,000\u5104\u5186\u3000\u3000B.\u7D043\u5146\u5186\u3000\u3000C.\u7D04\
+    30\u5146\u5186"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u3010\u7B54\u3048\u3011"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 137.50900000000001
+      coord_origin: BOTTOMLEFT
+      l: 28.602
+      r: 130.673
+      t: 178.12099999999998
+    charspan:
+    - 0
+    - 4
+    page_no: 7
+  self_ref: '#/texts/40'
+  text: "\u3010\u7B54\u3048\u3011"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7D0431.4\u5146\u5186 \u21D2\u3000C.\u7D0430\u5146\u5186"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 51.27999999999997
+      coord_origin: BOTTOMLEFT
+      l: 28.602
+      r: 335.849
+      t: 133.30600000000004
+    charspan:
+    - 0
+    - 17
+    page_no: 7
+  self_ref: '#/texts/41'
+  text: "\u7D0431.4\u5146\u5186 \u21D2\u3000C.\u7D0430\u5146\u5186"
+- children: []
+  content_layer: body
+  label: text
+  orig: "1 \u5E74\u9593\u3067\u5168\u751F\u547D\u4FDD\u967A \u4F1A\u793E\u304C\u96C6\
+    \u3081\u305F\u4FDD\u967A \u6599\u306F\u7D04 29.7 \u5146\u5186\u3002\u4E00 \u90E8\
+    \u306F\u5C06\u6765\u306E\u652F\u6255\u3044 \u306B\u5099\u3048\u3066\u300C\u8CC7\
+    \u7523\u904B \u7528\u300D\u3092 \u3057\u3066\u308B\u3093\u3060\u3063\u3066\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 11.244000000000028
+      coord_origin: BOTTOMLEFT
+      l: 403.965
+      r: 580.01
+      t: 184.27999999999997
+    charspan:
+    - 0
+    - 64
+    page_no: 7
+  self_ref: '#/texts/42'
+  text: "1 \u5E74\u9593\u3067\u5168\u751F\u547D\u4FDD\u967A \u4F1A\u793E\u304C\u96C6\
+    \u3081\u305F\u4FDD\u967A \u6599\u306F\u7D04 29.7 \u5146\u5186\u3002\u4E00 \u90E8\
+    \u306F\u5C06\u6765\u306E\u652F\u6255\u3044 \u306B\u5099\u3048\u3066\u300C\u8CC7\
+    \u7523\u904B \u7528\u300D\u3092 \u3057\u3066\u308B\u3093\u3060\u3063\u3066\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: '7'
+  parent:
+    $ref: '#/pictures/8'
+  prov:
+  - bbox:
+      b: 17.110000000000014
+      coord_origin: BOTTOMLEFT
+      l: 670.706
+      r: 676.773
+      t: 31.738999999999976
+    charspan:
+    - 0
+    - 1
+    page_no: 7
+  self_ref: '#/texts/43'
+  text: '7'
+- children: []
+  content_layer: furniture
+  label: page_footer
+  orig: "\uFF0A\u751F\u547D\u4FDD\u967A\u5354\u4F1A\u300C2022\u5E74\u7248\u3000\u751F\
+    \u547D\u4FDD\u967A\u306E\u52D5\u5411\u300D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 21.760999999999967
+      coord_origin: BOTTOMLEFT
+      l: 16.894
+      r: 225.175
+      t: 35.06999999999999
+    charspan:
+    - 0
+    - 23
+    page_no: 7
+  self_ref: '#/texts/44'
+  text: "\uFF0A\u751F\u547D\u4FDD\u967A\u5354\u4F1A\u300C2022\u5E74\u7248\u3000\u751F\
+    \u547D\u4FDD\u967A\u306E\u52D5\u5411\u300D"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u2461\u300C\u751F\u547D\u4FDD\u967A\u300D\u5546\u54C1 \u30B9\u30E9\u30A4\
+    \u30C9\u96C6"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 216.96799999999996
+      coord_origin: BOTTOMLEFT
+      l: 168.491
+      r: 552.419
+      t: 335.468
+    charspan:
+    - 0
+    - 15
+    page_no: 8
+  self_ref: '#/texts/45'
+  text: "\u2461\u300C\u751F\u547D\u4FDD\u967A\u300D\u5546\u54C1 \u30B9\u30E9\u30A4\
+    \u30C9\u96C6"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u4E07\u4E00(\u6B7B\u4EA1)\u306B\u5099\u3048\u308B\u751F\u547D\u4FDD\u967A\
+    \u2460"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 42.123
+      r: 473.052
+      t: 530.184
+    charspan:
+    - 0
+    - 15
+    page_no: 9
+  self_ref: '#/texts/46'
+  text: "\u4E07\u4E00(\u6B7B\u4EA1)\u306B\u5099\u3048\u308B\u751F\u547D\u4FDD\u967A\
+    \u2460"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u300C\u5B9A\u671F\u4FDD\u967A\u30FB\u990A\u8001\u4FDD\u967A\u30FB\u7D42\u8EAB\
+    \u4FDD\u967A\u300D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 436.295
+      coord_origin: BOTTOMLEFT
+      l: 35.546
+      r: 428.134
+      t: 471.834
+    charspan:
+    - 0
+    - 16
+    page_no: 9
+  self_ref: '#/texts/47'
+  text: "\u300C\u5B9A\u671F\u4FDD\u967A\u30FB\u990A\u8001\u4FDD\u967A\u30FB\u7D42\u8EAB\
+    \u4FDD\u967A\u300D"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u5B9A\u671F\u4FDD\u967A"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 393.801
+      coord_origin: BOTTOMLEFT
+      l: 96.548
+      r: 176.64
+      t: 419.198
+    charspan:
+    - 0
+    - 4
+    page_no: 9
+  self_ref: '#/texts/48'
+  text: "\u5B9A\u671F\u4FDD\u967A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4FDD\u967A\u671F\u9593\u306F\u4E00\u5B9A\u3067\u3001\u305D\u306E\u9593\u306B\
+    \u6B7B\u4EA1 \u3057\u305F\u5834\u5408\u306B\u6B7B\u4EA1\u4FDD\u967A\u91D1\u304C\
+    \u53D7\u3051\u53D6\u308C \u308B\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 329.208
+      coord_origin: BOTTOMLEFT
+      l: 35.972
+      r: 229.675
+      t: 380.597
+    charspan:
+    - 0
+    - 34
+    page_no: 9
+  self_ref: '#/texts/49'
+  text: "\u4FDD\u967A\u671F\u9593\u306F\u4E00\u5B9A\u3067\u3001\u305D\u306E\u9593\u306B\
+    \u6B7B\u4EA1 \u3057\u305F\u5834\u5408\u306B\u6B7B\u4EA1\u4FDD\u967A\u91D1\u304C\
+    \u53D7\u3051\u53D6\u308C \u308B\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6B7B\u4EA1\u4FDD\u9662\u91D1"
+  parent:
+    $ref: '#/pictures/9'
+  prov:
+  - bbox:
+      b: 240.66666666666669
+      coord_origin: BOTTOMLEFT
+      l: 106.33333333333333
+      r: 161.0
+      t: 253.66666666666669
+    charspan:
+    - 0
+    - 5
+    page_no: 9
+  self_ref: '#/texts/50'
+  text: "\u6B7B\u4EA1\u4FDD\u9662\u91D1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u52A0\u5165"
+  parent:
+    $ref: '#/pictures/9'
+  prov:
+  - bbox:
+      b: 158.66666666666663
+      coord_origin: BOTTOMLEFT
+      l: 40.333333333333336
+      r: 53.33333333333333
+      t: 185.33333333333331
+    charspan:
+    - 0
+    - 2
+    page_no: 9
+  self_ref: '#/texts/51'
+  text: "\u52A0\u5165"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4FDD\u6599\u624E\u8FBE\u671F\u9593"
+  parent:
+    $ref: '#/pictures/9'
+  prov:
+  - bbox:
+      b: 171.33333333333337
+      coord_origin: BOTTOMLEFT
+      l: 96.66666666666667
+      r: 171.66666666666666
+      t: 183.66666666666663
+    charspan:
+    - 0
+    - 6
+    page_no: 9
+  self_ref: '#/texts/52'
+  text: "\u4FDD\u6599\u624E\u8FBE\u671F\u9593"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6EE1\u671F"
+  parent:
+    $ref: '#/pictures/9'
+  prov:
+  - bbox:
+      b: 158.66666666666663
+      coord_origin: BOTTOMLEFT
+      l: 214.0
+      r: 227.0
+      t: 185.66666666666669
+    charspan:
+    - 0
+    - 2
+    page_no: 9
+  self_ref: '#/texts/53'
+  text: "\u6EE1\u671F"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u990A\u8001\u4FDD\u967A"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 393.801
+      coord_origin: BOTTOMLEFT
+      l: 317.679
+      r: 397.771
+      t: 419.198
+    charspan:
+    - 0
+    - 4
+    page_no: 9
+  self_ref: '#/texts/54'
+  text: "\u990A\u8001\u4FDD\u967A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4FDD\u967A\u671F\u9593\u306F\u4E00\u5B9A\u3067\u3001\u305D\u306E\u9593\u306B\
+    \u6B7B\u4EA1 \u3057\u305F\u5834\u5408\u306B\u6B7B\u4EA1\u4FDD\u967A\u91D1\u3092\
+    \u3001\u7121\u4E8B\u306B \u6E80\u671F\u3092\u8FCE\u3048\u305F\u3068\u304D\u306B\
+    \u306F\u6E80\u671F\u4FDD\u967A\u91D1\u3092 \u53D7\u3051\u53D6\u308C\u308B\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 312.399
+      coord_origin: BOTTOMLEFT
+      l: 257.102
+      r: 454.852
+      t: 380.597
+    charspan:
+    - 0
+    - 55
+    page_no: 9
+  self_ref: '#/texts/55'
+  text: "\u4FDD\u967A\u671F\u9593\u306F\u4E00\u5B9A\u3067\u3001\u305D\u306E\u9593\u306B\
+    \u6B7B\u4EA1 \u3057\u305F\u5834\u5408\u306B\u6B7B\u4EA1\u4FDD\u967A\u91D1\u3092\
+    \u3001\u7121\u4E8B\u306B \u6E80\u671F\u3092\u8FCE\u3048\u305F\u3068\u304D\u306B\
+    \u306F\u6E80\u671F\u4FDD\u967A\u91D1\u3092 \u53D7\u3051\u53D6\u308C\u308B\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6EE1\u671F\u4FDD\u9662\u91D1"
+  parent:
+    $ref: '#/pictures/10'
+  prov:
+  - bbox:
+      b: 212.66666666666669
+      coord_origin: BOTTOMLEFT
+      l: 441.66666666666663
+      r: 452.33333333333337
+      t: 276.6666666666667
+    charspan:
+    - 0
+    - 5
+    page_no: 9
+  self_ref: '#/texts/56'
+  text: "\u6EE1\u671F\u4FDD\u9662\u91D1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6B7B\u4EA1\u4FDD\u91D1"
+  parent:
+    $ref: '#/pictures/10'
+  prov:
+  - bbox:
+      b: 241.0
+      coord_origin: BOTTOMLEFT
+      l: 324.0
+      r: 378.33333333333337
+      t: 254.0
+    charspan:
+    - 0
+    - 4
+    page_no: 9
+  self_ref: '#/texts/57'
+  text: "\u6B7B\u4EA1\u4FDD\u91D1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u52A0\u5165"
+  parent:
+    $ref: '#/pictures/10'
+  prov:
+  - bbox:
+      b: 159.66666666666663
+      coord_origin: BOTTOMLEFT
+      l: 258.3333333333333
+      r: 272.0
+      t: 185.66666666666669
+    charspan:
+    - 0
+    - 2
+    page_no: 9
+  self_ref: '#/texts/58'
+  text: "\u52A0\u5165"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6EE1\u671F"
+  parent:
+    $ref: '#/pictures/10'
+  prov:
+  - bbox:
+      b: 160.0
+      coord_origin: BOTTOMLEFT
+      l: 431.66666666666663
+      r: 444.0
+      t: 186.0
+    charspan:
+    - 0
+    - 2
+    page_no: 9
+  self_ref: '#/texts/59'
+  text: "\u6EE1\u671F"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4FDD\u6599\u624E\u671F\u95F4"
+  parent:
+    $ref: '#/pictures/10'
+  prov:
+  - bbox:
+      b: 169.0
+      coord_origin: BOTTOMLEFT
+      l: 314.0
+      r: 388.66666666666663
+      t: 181.33333333333337
+    charspan:
+    - 0
+    - 5
+    page_no: 9
+  self_ref: '#/texts/60'
+  text: "\u4FDD\u6599\u624E\u671F\u95F4"
+- children: []
+  content_layer: body
+  label: caption
+  orig: "\u203B\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u306F\u3001\u5C06\u6765\
+    \u306E\u4FDD\u967A\u91D1\u306E\u652F\u6255\u3044\u306B\u5099\u3048\u3066\u7A4D\
+    \u307F\u7ACB\u3066\u3089\u308C\u308B\u90E8\u5206\u3092\u8868\u3057\u3066\u3044\
+    \u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 102.43299999999999
+      coord_origin: BOTTOMLEFT
+      l: 41.641
+      r: 461.061
+      t: 117.649
+    charspan:
+    - 0
+    - 42
+    page_no: 9
+  self_ref: '#/texts/61'
+  text: "\u203B\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u306F\u3001\u5C06\u6765\
+    \u306E\u4FDD\u967A\u91D1\u306E\u652F\u6255\u3044\u306B\u5099\u3048\u3066\u7A4D\
+    \u307F\u7ACB\u3066\u3089\u308C\u308B\u90E8\u5206\u3092\u8868\u3057\u3066\u3044\
+    \u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7A2E\u985E\u306B\u3088\u3063\u3066\u5099\u3048\u308B\u3053\u3068\u304C\u3067\
+    \u304D\u308B\u671F\u9593\u3084\u4FDD\u967A\u6599\u306E\u91D1\u984D\u304C\u7570\
+    \u306A\u308A\u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 45.750999999999976
+      coord_origin: BOTTOMLEFT
+      l: 37.247
+      r: 690.844
+      t: 76.219
+    charspan:
+    - 0
+    - 31
+    page_no: 9
+  self_ref: '#/texts/62'
+  text: "\u7A2E\u985E\u306B\u3088\u3063\u3066\u5099\u3048\u308B\u3053\u3068\u304C\u3067\
+    \u304D\u308B\u671F\u9593\u3084\u4FDD\u967A\u6599\u306E\u91D1\u984D\u304C\u7570\
+    \u306A\u308A\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7D42\u8EAB\u4FDD\u967A"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 393.801
+      coord_origin: BOTTOMLEFT
+      l: 538.809
+      r: 618.901
+      t: 419.198
+    charspan:
+    - 0
+    - 4
+    page_no: 9
+  self_ref: '#/texts/63'
+  text: "\u7D42\u8EAB\u4FDD\u967A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6B7B\u4EA1\u4FDD\u969C\u304C\u4E00\u751F\u7D9A\u304D\u3001\u6B7B\u4EA1\u3057\
+    \u305F\u3068\u304D \u306B\u6B7B\u4EA1\u4FDD\u967A\u91D1\u3092\u53D7\u3051\u53D6\
+    \u308C\u308B\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 345.99
+      coord_origin: BOTTOMLEFT
+      l: 478.233
+      r: 676.291
+      t: 380.569
+    charspan:
+    - 0
+    - 30
+    page_no: 9
+  self_ref: '#/texts/64'
+  text: "\u6B7B\u4EA1\u4FDD\u969C\u304C\u4E00\u751F\u7D9A\u304D\u3001\u6B7B\u4EA1\u3057\
+    \u305F\u3068\u304D \u306B\u6B7B\u4EA1\u4FDD\u967A\u91D1\u3092\u53D7\u3051\u53D6\
+    \u308C\u308B\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4E00\u751F\u6DAF"
+  parent:
+    $ref: '#/pictures/12'
+  prov:
+  - bbox:
+      b: 267.3333333333333
+      coord_origin: BOTTOMLEFT
+      l: 662.6666666666667
+      r: 675.6666666666667
+      t: 298.0
+    charspan:
+    - 0
+    - 3
+    page_no: 9
+  self_ref: '#/texts/65'
+  text: "\u4E00\u751F\u6DAF"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6B7B\u4EA1\u4FDD\u91D1"
+  parent:
+    $ref: '#/pictures/12'
+  prov:
+  - bbox:
+      b: 241.0
+      coord_origin: BOTTOMLEFT
+      l: 543.6666666666667
+      r: 597.0
+      t: 254.0
+    charspan:
+    - 0
+    - 4
+    page_no: 9
+  self_ref: '#/texts/66'
+  text: "\u6B7B\u4EA1\u4FDD\u91D1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u52A0"
+  parent:
+    $ref: '#/pictures/12'
+  prov:
+  - bbox:
+      b: 172.66666666666663
+      coord_origin: BOTTOMLEFT
+      l: 481.66666666666663
+      r: 494.0
+      t: 185.0
+    charspan:
+    - 0
+    - 1
+    page_no: 9
+  self_ref: '#/texts/67'
+  text: "\u52A0"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6EE1\u4E86"
+  parent:
+    $ref: '#/pictures/12'
+  prov:
+  - bbox:
+      b: 160.33333333333337
+      coord_origin: BOTTOMLEFT
+      l: 622.6666666666667
+      r: 637.0
+      t: 186.0
+    charspan:
+    - 0
+    - 2
+    page_no: 9
+  self_ref: '#/texts/68'
+  text: "\u6EE1\u4E86"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4FDD\u9675\u6599\u8FBE\u671F\u9593"
+  parent:
+    $ref: '#/pictures/12'
+  prov:
+  - bbox:
+      b: 169.0
+      coord_origin: BOTTOMLEFT
+      l: 521.6666666666667
+      r: 594.3333333333333
+      t: 181.33333333333337
+    charspan:
+    - 0
+    - 6
+    page_no: 9
+  self_ref: '#/texts/69'
+  text: "\u4FDD\u9675\u6599\u8FBE\u671F\u9593"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u4E07\u4E00(\u6B7B\u4EA1)\u306B\u5099\u3048\u308B\u751F\u547D\u4FDD\u967A\
+    \u2461"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 42.123
+      r: 473.052
+      t: 530.184
+    charspan:
+    - 0
+    - 15
+    page_no: 10
+  self_ref: '#/texts/70'
+  text: "\u4E07\u4E00(\u6B7B\u4EA1)\u306B\u5099\u3048\u308B\u751F\u547D\u4FDD\u967A\
+    \u2461"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u4FDD\u967A\u6599\u306E\u9055\u3044"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 432.015
+      coord_origin: BOTTOMLEFT
+      l: 31.805
+      r: 193.708
+      t: 467.554
+    charspan:
+    - 0
+    - 6
+    page_no: 10
+  self_ref: '#/texts/71'
+  text: "\u4FDD\u967A\u6599\u306E\u9055\u3044"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6761 \u4EF6"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 389.161
+      coord_origin: BOTTOMLEFT
+      l: 33.335
+      r: 47.338
+      t: 423.468
+    charspan:
+    - 0
+    - 3
+    page_no: 10
+  self_ref: '#/texts/72'
+  text: "\u6761 \u4EF6"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uF06C 30\u6B73\u5951\u7D04\u3001\u6B7B\u4EA1\u4FDD\u967A\u91D1\u306F1,000\u4E07\
+    \u5186"
+  parent:
+    $ref: '#/groups/1'
+  prov:
+  - bbox:
+      b: 394.562
+      coord_origin: BOTTOMLEFT
+      l: 71.433
+      r: 374.655
+      t: 417.404
+    charspan:
+    - 0
+    - 21
+    page_no: 10
+  self_ref: '#/texts/73'
+  text: "\uF06C 30\u6B73\u5951\u7D04\u3001\u6B7B\u4EA1\u4FDD\u967A\u91D1\u306F1,000\u4E07\
+    \u5186"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uF06C \u4FDD\u967A\u6599\u6255\u8FBC\u671F\u9593\u306F30\u5E74(60\u6B73\u306B\
+    \u306A\u308B\u307E\u3067)"
+  parent:
+    $ref: '#/groups/1'
+  prov:
+  - bbox:
+      b: 351.362
+      coord_origin: BOTTOMLEFT
+      l: 71.433
+      r: 403.392
+      t: 374.204
+    charspan:
+    - 0
+    - 23
+    page_no: 10
+  self_ref: '#/texts/74'
+  text: "\uF06C \u4FDD\u967A\u6599\u6255\u8FBC\u671F\u9593\u306F30\u5E74(60\u6B73\u306B\
+    \u306A\u308B\u307E\u3067)"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\uF06C \u5B9A\u671F\u4FDD\u967A\u3001\u990A\u8001\u4FDD\u967A\u306E\u4FDD\
+    \u967A\u671F\u9593\u306F30\u5E74(60\u6B73\u306B\u306A\u308B\u307E\u3067)\u3001\
+    \u7D42\u8EAB\u4FDD\u967A\u306F\u4E00\u751F\u6DAF"
+  parent:
+    $ref: '#/groups/1'
+  prov:
+  - bbox:
+      b: 372.962
+      coord_origin: BOTTOMLEFT
+      l: 71.433
+      r: 673.368
+      t: 395.804
+    charspan:
+    - 0
+    - 39
+    page_no: 10
+  self_ref: '#/texts/75'
+  text: "\uF06C \u5B9A\u671F\u4FDD\u967A\u3001\u990A\u8001\u4FDD\u967A\u306E\u4FDD\
+    \u967A\u671F\u9593\u306F30\u5E74(60\u6B73\u306B\u306A\u308B\u307E\u3067)\u3001\
+    \u7D42\u8EAB\u4FDD\u967A\u306F\u4E00\u751F\u6DAF"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u203B\u4FDD\u967A\u6599\u306F\u6708\u6255\u3067\u3001\u751F\u547D\u4FDD\u967A\
+    \u4F1A\u793E\u307E\u305F\u306F\u5951\u7D04\u306E\u5185\u5BB9\u306B\u3088\u3063\
+    \u3066\u7570\u306A\u308A\u307E\u3059\u3002"
+  parent:
+    $ref: '#/groups/1'
+  prov:
+  - bbox:
+      b: 135.72000000000003
+      coord_origin: BOTTOMLEFT
+      l: 12.699
+      r: 335.101
+      t: 149.67700000000002
+    charspan:
+    - 0
+    - 33
+    page_no: 10
+  self_ref: '#/texts/76'
+  text: "\u203B\u4FDD\u967A\u6599\u306F\u6708\u6255\u3067\u3001\u751F\u547D\u4FDD\u967A\
+    \u4F1A\u793E\u307E\u305F\u306F\u5951\u7D04\u306E\u5185\u5BB9\u306B\u3088\u3063\
+    \u3066\u7570\u306A\u308A\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u203B\u751F\u547D\u4FDD\u967A\u6587\u5316\u30BB\u30F3\u30BF\u30FC\u300C\u907A\
+    \u65CF\u4FDD\u969C\u30AC\u30A4\u30C9\u300D\uFF082021\u5E7412\u6708\u6539\u8A02\
+    \uFF09"
+  parent:
+    $ref: '#/groups/1'
+  prov:
+  - bbox:
+      b: 122.50999999999999
+      coord_origin: BOTTOMLEFT
+      l: 12.699
+      r: 310.997
+      t: 136.46699999999998
+    charspan:
+    - 0
+    - 32
+    page_no: 10
+  self_ref: '#/texts/77'
+  text: "\u203B\u751F\u547D\u4FDD\u967A\u6587\u5316\u30BB\u30F3\u30BF\u30FC\u300C\u907A\
+    \u65CF\u4FDD\u969C\u30AC\u30A4\u30C9\u300D\uFF082021\u5E7412\u6708\u6539\u8A02\
+    \uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4FDD\u967A\u6599\u3084\u53D7\u3051\u53D6\u308C\u308B\u91D1\u984D\u306A\u3069\
+    \u3001\u4FDD\u967A\u306E\u7A2E\u985E\u306B\u3088\u3063\u3066\u7279\u5FB4\u304C\
+    \u3042\u308A\u307E\u3059\u3002 \u3057\u3063\u304B\u308A\u3068\u7406\u89E3\u3057\
+    \u3066\u5951\u7D04\u3057\u307E\u3057\u3087\u3046\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 36.50999999999999
+      coord_origin: BOTTOMLEFT
+      l: 30.671
+      r: 690.75
+      t: 95.77800000000002
+    charspan:
+    - 0
+    - 49
+    page_no: 10
+  self_ref: '#/texts/78'
+  text: "\u4FDD\u967A\u6599\u3084\u53D7\u3051\u53D6\u308C\u308B\u91D1\u984D\u306A\u3069\
+    \u3001\u4FDD\u967A\u306E\u7A2E\u985E\u306B\u3088\u3063\u3066\u7279\u5FB4\u304C\
+    \u3042\u308A\u307E\u3059\u3002 \u3057\u3063\u304B\u308A\u3068\u7406\u89E3\u3057\
+    \u3066\u5951\u7D04\u3057\u307E\u3057\u3087\u3046\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u75C5\u6C17\u3084\u30B1\u30AC\u306A\u3069\u306B\u5099\u3048\u308B\u751F\u547D\
+    \u4FDD\u967A"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 42.123
+      r: 474.836
+      t: 530.184
+    charspan:
+    - 0
+    - 15
+    page_no: 11
+  self_ref: '#/texts/79'
+  text: "\u75C5\u6C17\u3084\u30B1\u30AC\u306A\u3069\u306B\u5099\u3048\u308B\u751F\u547D\
+    \u4FDD\u967A"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u300C\u533B\u7642\u4FDD\u967A\u300D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 440.972
+      coord_origin: BOTTOMLEFT
+      l: 24.009
+      r: 163.815
+      t: 476.511
+    charspan:
+    - 0
+    - 6
+    page_no: 11
+  self_ref: '#/texts/80'
+  text: "\u300C\u533B\u7642\u4FDD\u967A\u300D"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2460\u5165\u9662\u7D66\u4ED8\u91D1"
+  parent:
+    $ref: '#/groups/2'
+  prov:
+  - bbox:
+      b: 398.777
+      coord_origin: BOTTOMLEFT
+      l: 49.068
+      r: 331.438
+      t: 429.245
+    charspan:
+    - 0
+    - 6
+    page_no: 11
+  self_ref: '#/texts/81'
+  text: "\u2460\u5165\u9662\u7D66\u4ED8\u91D1"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "(\u5165\u9662\u3057\u305F\u5834\u5408\u306B\u53D7\u3051\u53D6\u308C\u308B\
+    \u304A\u91D1)"
+  parent:
+    $ref: '#/groups/2'
+  prov:
+  - bbox:
+      b: 377.243
+      coord_origin: BOTTOMLEFT
+      l: 49.068
+      r: 291.225
+      t: 400.085
+    charspan:
+    - 0
+    - 16
+    page_no: 11
+  self_ref: '#/texts/82'
+  text: "(\u5165\u9662\u3057\u305F\u5834\u5408\u306B\u53D7\u3051\u53D6\u308C\u308B\
+    \u304A\u91D1)"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2461\u624B\u8853\u7D66\u4ED8"
+  parent:
+    $ref: '#/groups/2'
+  prov:
+  - bbox:
+      b: 317.962
+      coord_origin: BOTTOMLEFT
+      l: 49.068
+      r: 169.065
+      t: 348.43
+    charspan:
+    - 0
+    - 5
+    page_no: 11
+  self_ref: '#/texts/83'
+  text: "\u2461\u624B\u8853\u7D66\u4ED8"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u305F\u5834\u5408\u306B\u53D7\u3051\u53D6\u308C\u308B\u304A\u91D1)"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 267.627
+      coord_origin: BOTTOMLEFT
+      l: 49.068
+      r: 234.305
+      t: 290.469
+    charspan:
+    - 0
+    - 12
+    page_no: 11
+  self_ref: '#/texts/84'
+  text: "\u305F\u5834\u5408\u306B\u53D7\u3051\u53D6\u308C\u308B\u304A\u91D1)"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u91D1\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\
+    (\u624B\u8853\u3057"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 289.162
+      coord_origin: BOTTOMLEFT
+      l: 49.068
+      r: 321.235
+      t: 319.63
+    charspan:
+    - 0
+    - 17
+    page_no: 11
+  self_ref: '#/texts/85'
+  text: "\u91D1\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\
+    (\u624B\u8853\u3057"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u4E8B\u4F8B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 258.046
+      coord_origin: BOTTOMLEFT
+      l: 63.099
+      r: 99.099
+      t: 280.888
+    charspan:
+    - 0
+    - 2
+    page_no: 11
+  self_ref: '#/texts/86'
+  text: "\u4E8B\u4F8B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "22\u65E5\u9593\u3001\u5165\u9662\u3057\u305F\u5834\u5408\u306B \uFF11\u65E5\
+    \u300C7,000\u5186\u300D \u304C\u53D7\u3051\u53D6\u308C\u308B\u300C\u533B\u7642\
+    \u4FDD\u967A\u300D\u306B\u5165\u3063\u3066\u3044\u305F\u3089\u2026"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 224.53999999999996
+      coord_origin: BOTTOMLEFT
+      l: 49.068
+      r: 661.484
+      t: 247.382
+    charspan:
+    - 0
+    - 44
+    page_no: 11
+  self_ref: '#/texts/87'
+  text: "22\u65E5\u9593\u3001\u5165\u9662\u3057\u305F\u5834\u5408\u306B \uFF11\u65E5\
+    \u300C7,000\u5186\u300D \u304C\u53D7\u3051\u53D6\u308C\u308B\u300C\u533B\u7642\
+    \u4FDD\u967A\u300D\u306B\u5165\u3063\u3066\u3044\u305F\u3089\u2026"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2461\u624B\u8853\u7D66\u4ED8\u91D1(\u624B\u8853\u3057\u305F\u5834\u5408\
+    \u306B\u53D7\u3051\u53D6\u308C\u308B\u304A\u91D1) \u300C7,000\u5186\u300D\u3000\
+    \xD7\u300010\u500D\u306E\u5834\u5408\uFF1D 7\u4E07\u5186"
+  parent:
+    $ref: '#/groups/3'
+  prov:
+  - bbox:
+      b: 138.14
+      coord_origin: BOTTOMLEFT
+      l: 49.068
+      r: 439.257
+      t: 182.582
+    charspan:
+    - 0
+    - 45
+    page_no: 11
+  self_ref: '#/texts/88'
+  text: "\u2461\u624B\u8853\u7D66\u4ED8\u91D1(\u624B\u8853\u3057\u305F\u5834\u5408\
+    \u306B\u53D7\u3051\u53D6\u308C\u308B\u304A\u91D1) \u300C7,000\u5186\u300D\u3000\
+    \xD7\u300010\u500D\u306E\u5834\u5408\uFF1D 7\u4E07\u5186"
+- children: []
+  content_layer: body
+  label: text
+  orig: "22.4\u4E07\u5186"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 144.45299999999997
+      coord_origin: BOTTOMLEFT
+      l: 535.833
+      r: 656.819
+      t: 174.921
+    charspan:
+    - 0
+    - 6
+    page_no: 11
+  self_ref: '#/texts/89'
+  text: "22.4\u4E07\u5186"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u2460\uFF0B\u2461\uFF1D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 173.253
+      coord_origin: BOTTOMLEFT
+      l: 519.902
+      r: 615.914
+      t: 203.721
+    charspan:
+    - 0
+    - 4
+    page_no: 11
+  self_ref: '#/texts/90'
+  text: "\u2460\uFF0B\u2461\uFF1D"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u304C\u53D7\u3051\u53D6\u308C\u308B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 120.48500000000001
+      coord_origin: BOTTOMLEFT
+      l: 519.902
+      r: 652.268
+      t: 145.882
+    charspan:
+    - 0
+    - 6
+    page_no: 11
+  self_ref: '#/texts/91'
+  text: "\u304C\u53D7\u3051\u53D6\u308C\u308B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u300C\u304C\u3093\u300D\u3067\u5165\u9662\u3057\u305F\u5834\u5408\u306A\u3069\
+    \u3001\u7279\u5B9A\u306E\u75C5\u6C17\u306B\u7279\u5316\u3057\u305F \u300C\u533B\
+    \u7642\u4FDD\u967A\u300D\u3082\u3042\u308A\u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 14.187999999999988
+      coord_origin: BOTTOMLEFT
+      l: 65.991
+      r: 648.376
+      t: 83.346
+    charspan:
+    - 0
+    - 37
+    page_no: 11
+  self_ref: '#/texts/92'
+  text: "\u300C\u304C\u3093\u300D\u3067\u5165\u9662\u3057\u305F\u5834\u5408\u306A\u3069\
+    \u3001\u7279\u5B9A\u306E\u75C5\u6C17\u306B\u7279\u5316\u3057\u305F \u300C\u533B\
+    \u7642\u4FDD\u967A\u300D\u3082\u3042\u308A\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u2460\u5165\u9662\u7D66\u4ED8\u91D1(\u5165\u9662\u3057\u305F\u5834\u5408\
+    \u306B\u53D7\u3051\u53D6\u308C\u308B\u304A\u91D1) \u300C7,000\u5186\u300D\u3000\
+    \xD7\u300022\u65E5\u3000\uFF1D 15.4\u4E07\u5186"
+  parent:
+    $ref: '#/groups/4'
+  prov:
+  - bbox:
+      b: 181.34000000000003
+      coord_origin: BOTTOMLEFT
+      l: 49.068
+      r: 431.121
+      t: 225.78200000000004
+    charspan:
+    - 0
+    - 46
+    page_no: 11
+  self_ref: '#/texts/93'
+  text: "\u2460\u5165\u9662\u7D66\u4ED8\u91D1(\u5165\u9662\u3057\u305F\u5834\u5408\
+    \u306B\u53D7\u3051\u53D6\u308C\u308B\u304A\u91D1) \u300C7,000\u5186\u300D\u3000\
+    \xD7\u300022\u65E5\u3000\uFF1D 15.4\u4E07\u5186"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65E5\u984D\u25CF\u25CF\u5186\u3000\xD7\u3000\u5165\u9662\u3057\u305F\u65E5\
+    \u6570"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 386.985
+      coord_origin: BOTTOMLEFT
+      l: 344.806
+      r: 648.143
+      t: 417.453
+    charspan:
+    - 0
+    - 14
+    page_no: 11
+  self_ref: '#/texts/94'
+  text: "\u65E5\u984D\u25CF\u25CF\u5186\u3000\xD7\u3000\u5165\u9662\u3057\u305F\u65E5\
+    \u6570"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u65E5\u984D\u25CF\u25CF\u5186\u3000\xD7\u3000 \u624B\u8853\u306E\u7A2E\u985E\
+    \u306B\u5FDC\u3058\u305F \u500D\u7387(10\u30FB20\u30FB40\u500D)"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 303.745
+      coord_origin: BOTTOMLEFT
+      l: 344.806
+      r: 687.4
+      t: 353.151
+    charspan:
+    - 0
+    - 32
+    page_no: 11
+  self_ref: '#/texts/95'
+  text: "\u65E5\u984D\u25CF\u25CF\u5186\u3000\xD7\u3000 \u624B\u8853\u306E\u7A2E\u985E\
+    \u306B\u5FDC\u3058\u305F \u500D\u7387(10\u30FB20\u30FB40\u500D)"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u4ECB\u8B77\u306B\u5099\u3048\u308B\u751F\u547D\u4FDD\u967A"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 42.123
+      r: 345.383
+      t: 530.184
+    charspan:
+    - 0
+    - 10
+    page_no: 12
+  self_ref: '#/texts/96'
+  text: "\u4ECB\u8B77\u306B\u5099\u3048\u308B\u751F\u547D\u4FDD\u967A"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u300C\u4ECB\u8B77\u4FDD\u967A\u300D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 435.36
+      coord_origin: BOTTOMLEFT
+      l: 35.518
+      r: 175.324
+      t: 470.899
+    charspan:
+    - 0
+    - 6
+    page_no: 12
+  self_ref: '#/texts/97'
+  text: "\u300C\u4ECB\u8B77\u4FDD\u967A\u300D"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u2460\u300C\u4E00\u6642\u91D1\u300D\u3067\u304A\u91D1\u304C\u53D7\u3051\u53D6\
+    \u308C\u308B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 393.036
+      coord_origin: BOTTOMLEFT
+      l: 39.543
+      r: 298.211
+      t: 418.433
+    charspan:
+    - 0
+    - 15
+    page_no: 12
+  self_ref: '#/texts/98'
+  text: "\u2460\u300C\u4E00\u6642\u91D1\u300D\u3067\u304A\u91D1\u304C\u53D7\u3051\u53D6\
+    \u308C\u308B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4ECB\u8B77\u304C\u5FC5\u8981\u306A\u72B6\u614B\u306B \u306A\u3063\u305F\
+    \u3068\u304D\u306B \u307E\u3068\u307E\u3063 \u305F\u304A\u91D1 \u304C\u53D7\u3051\
+    \u53D6\u308C\u308B\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 255.613
+      coord_origin: BOTTOMLEFT
+      l: 24.321
+      r: 303.96
+      t: 363.404
+    charspan:
+    - 0
+    - 33
+    page_no: 12
+  self_ref: '#/texts/99'
+  text: "\u4ECB\u8B77\u304C\u5FC5\u8981\u306A\u72B6\u614B\u306B \u306A\u3063\u305F\
+    \u3068\u304D\u306B \u307E\u3068\u307E\u3063 \u305F\u304A\u91D1 \u304C\u53D7\u3051\
+    \u53D6\u308C\u308B\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u2461\u300C\u5E74\u91D1\u5F62\u5F0F\u300D\u3067\u6BCE\u5E74\u304A\u91D1\u304C\
+    \u53D7\u3051\u53D6\u308C\u308B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 393.036
+      coord_origin: BOTTOMLEFT
+      l: 358.016
+      r: 676.783
+      t: 418.433
+    charspan:
+    - 0
+    - 18
+    page_no: 12
+  self_ref: '#/texts/100'
+  text: "\u2461\u300C\u5E74\u91D1\u5F62\u5F0F\u300D\u3067\u6BCE\u5E74\u304A\u91D1\u304C\
+    \u53D7\u3051\u53D6\u308C\u308B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4ECB\u8B77\u304C\u5FC5\u8981\u306A\u72B6\u614B\u306B\u306A\u3063\u305F\
+    \ \u3068\u304D\u306B \u5E74\u91D1\u3068\u3057\u3066\u6BCE\u5E74\u304A\u91D1 \u304C\
+    \u53D7\u3051\u53D6\u308C\u308B\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 256.775
+      coord_origin: BOTTOMLEFT
+      l: 336.302
+      r: 671.87
+      t: 364.566
+    charspan:
+    - 0
+    - 34
+    page_no: 12
+  self_ref: '#/texts/101'
+  text: "\u4ECB\u8B77\u304C\u5FC5\u8981\u306A\u72B6\u614B\u306B\u306A\u3063\u305F\
+    \ \u3068\u304D\u306B \u5E74\u91D1\u3068\u3057\u3066\u6BCE\u5E74\u304A\u91D1 \u304C\
+    \u53D7\u3051\u53D6\u308C\u308B\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4ECB\u8B77\u4FDD\u967A\u306B\u306F\u516C\u7684\u4ECB\u8B77\u4FDD\u967A\u306B\
+    \u3088\u308B\u81EA\u5DF1\u8CA0\u62C5\u3084\u4FDD\u969C\u3055\u308C\u306A\u3044\
+    \u652F\u51FA\u3001 \u53CE\u5165\u306E\u6E1B\u5C11\u306B\u5099\u3048\u308B\u5F79\
+    \u5272\u304C\u3042\u308A\u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 149.81
+      coord_origin: BOTTOMLEFT
+      l: 35.546
+      r: 684.989
+      t: 209.07799999999997
+    charspan:
+    - 0
+    - 47
+    page_no: 12
+  self_ref: '#/texts/102'
+  text: "\u4ECB\u8B77\u4FDD\u967A\u306B\u306F\u516C\u7684\u4ECB\u8B77\u4FDD\u967A\u306B\
+    \u3088\u308B\u81EA\u5DF1\u8CA0\u62C5\u3084\u4FDD\u969C\u3055\u308C\u306A\u3044\
+    \u652F\u51FA\u3001 \u53CE\u5165\u306E\u6E1B\u5C11\u306B\u5099\u3048\u308B\u5F79\
+    \u5272\u304C\u3042\u308A\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u4E00\u6642\u91D1\u30FB\u5E74\u91D1\u306E\u6D3B\u7528\u4F8B"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 102.87700000000001
+      coord_origin: BOTTOMLEFT
+      l: 61.937
+      r: 229.607
+      t: 125.719
+    charspan:
+    - 0
+    - 10
+    page_no: 12
+  self_ref: '#/texts/103'
+  text: "\u4E00\u6642\u91D1\u30FB\u5E74\u91D1\u306E\u6D3B\u7528\u4F8B"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4E00\u6642\u91D1\u30FB\u30FB\u30FB\u4ECB\u8B77\u306E\u305F\u3081\u306E\u5BB6\
+    \u306E\u5927\u898F\u6A21\u30EA\u30D5\u30A9\u30FC\u30E0\u8CBB\u7528\u3001\u8001\
+    \u4EBA\u30DB\u30FC\u30E0\u306E\u5165\u5C45\u8CBB\u7528\u306A\u3069 \u5E74\u91D1\
+    \u30FB\u30FB\u30FB\u516C\u7684\u4ECB\u8B77\u4FDD\u967A\u306E\u81EA\u5DF1\u8CA0\
+    \u62C5\u3084\u4ECB\u8B77\u306B\u3088\u308B\u53CE\u5165\u306E\u6E1B\u5C11\u306E\
+    \u88DC\u3066\u3093\u306A\u3069"
+  parent:
+    $ref: '#/groups/5'
+  prov:
+  - bbox:
+      b: 18.833999999999946
+      coord_origin: BOTTOMLEFT
+      l: 20.296
+      r: 664.935
+      t: 80.231
+    charspan:
+    - 0
+    - 71
+    page_no: 12
+  self_ref: '#/texts/104'
+  text: "\u4E00\u6642\u91D1\u30FB\u30FB\u30FB\u4ECB\u8B77\u306E\u305F\u3081\u306E\u5BB6\
+    \u306E\u5927\u898F\u6A21\u30EA\u30D5\u30A9\u30FC\u30E0\u8CBB\u7528\u3001\u8001\
+    \u4EBA\u30DB\u30FC\u30E0\u306E\u5165\u5C45\u8CBB\u7528\u306A\u3069 \u5E74\u91D1\
+    \u30FB\u30FB\u30FB\u516C\u7684\u4ECB\u8B77\u4FDD\u967A\u306E\u81EA\u5DF1\u8CA0\
+    \u62C5\u3084\u4ECB\u8B77\u306B\u3088\u308B\u53CE\u5165\u306E\u6E1B\u5C11\u306E\
+    \u88DC\u3066\u3093\u306A\u3069"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u8001\u5F8C\u306E\u751F\u6D3B\u306B\u5099\u3048\u308B\u751F\u547D\u4FDD\u967A"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 42.123
+      r: 438.768
+      t: 530.184
+    charspan:
+    - 0
+    - 13
+    page_no: 13
+  self_ref: '#/texts/105'
+  text: "\u8001\u5F8C\u306E\u751F\u6D3B\u306B\u5099\u3048\u308B\u751F\u547D\u4FDD\u967A"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u300C\u500B\u4EBA\u5E74\u91D1\u4FDD\u967A\u300D"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 441.794
+      coord_origin: BOTTOMLEFT
+      l: 42.094
+      r: 237.828
+      t: 477.333
+    charspan:
+    - 0
+    - 8
+    page_no: 13
+  self_ref: '#/texts/106'
+  text: "\u300C\u500B\u4EBA\u5E74\u91D1\u4FDD\u967A\u300D"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u53D7\u53D6\u671F\u9593"
+  parent:
+    $ref: '#/pictures/14'
+  prov:
+  - bbox:
+      b: 351.897
+      coord_origin: BOTTOMLEFT
+      l: 497.735
+      r: 577.827
+      t: 371.89
+    charspan:
+    - 0
+    - 4
+    page_no: 13
+  self_ref: '#/texts/107'
+  text: "\u53D7\u53D6\u671F\u9593"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u6B7B\u4EA1\u7D66\u4ED8\u91D1"
+  parent:
+    $ref: '#/pictures/14'
+  prov:
+  - bbox:
+      b: 270.22880045572913
+      coord_origin: BOTTOMLEFT
+      l: 222.320556640625
+      r: 324.38104248046875
+      t: 289.2165222167969
+    charspan:
+    - 0
+    - 5
+    page_no: 13
+  self_ref: '#/texts/108'
+  text: "\u6B7B\u4EA1\u7D66\u4ED8\u91D1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5E74\u91D1"
+  parent:
+    $ref: '#/pictures/14'
+  prov:
+  - bbox:
+      b: 242.64286295572913
+      coord_origin: BOTTOMLEFT
+      l: 515.2983805338541
+      r: 558.4778238932291
+      t: 265.21317545572913
+    charspan:
+    - 0
+    - 2
+    page_no: 13
+  self_ref: '#/texts/109'
+  text: "\u5E74\u91D1"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5951\u7D04"
+  parent:
+    $ref: '#/pictures/14'
+  prov:
+  - bbox:
+      b: 184.24666341145831
+      coord_origin: BOTTOMLEFT
+      l: 38.540321350097656
+      r: 102.06048583984375
+      t: 207.89174397786462
+    charspan:
+    - 0
+    - 2
+    page_no: 13
+  self_ref: '#/texts/110'
+  text: "\u5951\u7D04"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5E74\u91D1\u53D7\u53D6\u958B\u59CB"
+  parent:
+    $ref: '#/pictures/14'
+  prov:
+  - bbox:
+      b: 186.39619954427081
+      coord_origin: BOTTOMLEFT
+      l: 326.1653238932292
+      r: 448.5665283203125
+      t: 205.38393147786462
+    charspan:
+    - 0
+    - 6
+    page_no: 13
+  self_ref: '#/texts/111'
+  text: "\u5E74\u91D1\u53D7\u53D6\u958B\u59CB"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4FDD\u6599\u624E\u8FBE\u671F\u9593"
+  parent:
+    $ref: '#/pictures/14'
+  prov:
+  - bbox:
+      b: 157.01898193359375
+      coord_origin: BOTTOMLEFT
+      l: 151.30644734700522
+      r: 293.6915283203125
+      t: 174.93192545572919
+    charspan:
+    - 0
+    - 6
+    page_no: 13
+  self_ref: '#/texts/112'
+  text: "\u4FDD\u6599\u624E\u8FBE\u671F\u9593"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5E74\u91D1\u53D7\u53D6\u671F\u9593"
+  parent:
+    $ref: '#/pictures/14'
+  prov:
+  - bbox:
+      b: 157.01898193359375
+      coord_origin: BOTTOMLEFT
+      l: 476.4012044270833
+      r: 598.0887044270834
+      t: 174.93192545572919
+    charspan:
+    - 0
+    - 6
+    page_no: 13
+  self_ref: '#/texts/113'
+  text: "\u5E74\u91D1\u53D7\u53D6\u671F\u9593"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u30FB\u5951\u7D04\u3057\u305F\u6642\u306B\u6C7A\u3081\u305F\u5E74\u9F62\u304B\
+    \u3089\u5E74\u91D1\u3092\u53D7\u3051\u53D6\u308B\u3053\u3068\u304C\u3067\u304D\
+    \u308B\u3002"
+  parent:
+    $ref: '#/groups/6'
+  prov:
+  - bbox:
+      b: 125.66399999999999
+      coord_origin: BOTTOMLEFT
+      l: 30.841
+      r: 403.402
+      t: 145.95100000000002
+    charspan:
+    - 0
+    - 28
+    page_no: 13
+  self_ref: '#/texts/114'
+  text: "\u30FB\u5951\u7D04\u3057\u305F\u6642\u306B\u6C7A\u3081\u305F\u5E74\u9F62\u304B\
+    \u3089\u5E74\u91D1\u3092\u53D7\u3051\u53D6\u308B\u3053\u3068\u304C\u3067\u304D\
+    \u308B\u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u30FB\u5E74\u91D1\u3092\u53D7\u3051\u53D6\u308C\u308B\u671F\u9593\u306F\
+    10\u5E74\u3001 20\u5E74\u306A\u3069\u6C7A\u307E\u3063\u3066\u3044\u308B\u3082\u306E\
+    \u304B\u3089 \u4E00\u751F\u6DAF\u306E\u3082\u306E\u306A\u3069\u3001\u69D8\u3005\
+    \u3002"
+  parent:
+    $ref: '#/groups/6'
+  prov:
+  - bbox:
+      b: 106.47300000000001
+      coord_origin: BOTTOMLEFT
+      l: 30.841
+      r: 603.861
+      t: 126.75999999999999
+    charspan:
+    - 0
+    - 45
+    page_no: 13
+  self_ref: '#/texts/115'
+  text: "\u30FB\u5E74\u91D1\u3092\u53D7\u3051\u53D6\u308C\u308B\u671F\u9593\u306F\
+    10\u5E74\u3001 20\u5E74\u306A\u3069\u6C7A\u307E\u3063\u3066\u3044\u308B\u3082\u306E\
+    \u304B\u3089 \u4E00\u751F\u6DAF\u306E\u3082\u306E\u306A\u3069\u3001\u69D8\u3005\
+    \u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u9000\u8077\u304B\u3089\u516C\u7684\u5E74\u91D1\u304C\u652F\u7D66\u3055\u308C\
+    \u308B\u307E\u3067\u306E\u300C\u3064\u306A\u304E\u8CC7\u91D1\u300D\u3084\u3001\
+    \u3086\u3068\u308A\u3042\u308B \u8001\u5F8C\u306E\u305F\u3081\u306E\u300C\u4E0A\
+    \u4E57\u305B\u8CC7\u91D1\u300D\u306B\u6D3B\u7528\u3055\u308C\u3066\u3044\u307E\
+    \u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 26.701999999999998
+      coord_origin: BOTTOMLEFT
+      l: 28.006
+      r: 665.685
+      t: 85.97000000000003
+    charspan:
+    - 0
+    - 55
+    page_no: 13
+  self_ref: '#/texts/116'
+  text: "\u9000\u8077\u304B\u3089\u516C\u7684\u5E74\u91D1\u304C\u652F\u7D66\u3055\u308C\
+    \u308B\u307E\u3067\u306E\u300C\u3064\u306A\u304E\u8CC7\u91D1\u300D\u3084\u3001\
+    \u3086\u3068\u308A\u3042\u308B \u8001\u5F8C\u306E\u305F\u3081\u306E\u300C\u4E0A\
+    \u4E57\u305B\u8CC7\u91D1\u300D\u306B\u6D3B\u7528\u3055\u308C\u3066\u3044\u307E\
+    \u3059\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u30E9\u30A4\u30D5\u30B9\u30C6\u30FC\u30B8\u306B\u3088\u308B\u5FC5\u8981\u306A\
+    \u4FDD\u969C\u306E\u9055\u3044"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 489.572
+      coord_origin: BOTTOMLEFT
+      l: 43.455
+      r: 548.686
+      t: 530.184
+    charspan:
+    - 0
+    - 18
+    page_no: 14
+  self_ref: '#/texts/117'
+  text: "\u30E9\u30A4\u30D5\u30B9\u30C6\u30FC\u30B8\u306B\u3088\u308B\u5FC5\u8981\u306A\
+    \u4FDD\u969C\u306E\u9055\u3044"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u5BB6\u65CF\u306E\u72B6\u6CC1\u306E\u5909\u5316\u306A\u3069\u3067\u3001\u5FC5\
+    \u8981\u306A\u4FDD\u969C\u306E\u91D1\u984D\u304C\u7570\u306A\u308A\u307E\u3059\
+    \u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 433.955
+      coord_origin: BOTTOMLEFT
+      l: 43.087
+      r: 634.237
+      t: 464.423
+    charspan:
+    - 0
+    - 27
+    page_no: 14
+  self_ref: '#/texts/118'
+  text: "\u5BB6\u65CF\u306E\u72B6\u6CC1\u306E\u5909\u5316\u306A\u3069\u3067\u3001\u5FC5\
+    \u8981\u306A\u4FDD\u969C\u306E\u91D1\u984D\u304C\u7570\u306A\u308A\u307E\u3059\
+    \u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u30FB\u4EA1\u304F\u306A\u3063\u305F\u3068\u304D\u306B\u5FC5\u8981\u306A\u91D1\
+    \u984D\uFF08\u30A4\u30E1\u30FC\u30B8\uFF09"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 382.766
+      coord_origin: BOTTOMLEFT
+      l: 40.592
+      r: 312.339
+      t: 403.053
+    charspan:
+    - 0
+    - 20
+    page_no: 14
+  self_ref: '#/texts/119'
+  text: "\u30FB\u4EA1\u304F\u306A\u3063\u305F\u3068\u304D\u306B\u5FC5\u8981\u306A\u91D1\
+    \u984D\uFF08\u30A4\u30E1\u30FC\u30B8\uFF09"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u25B2"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 189.755
+      coord_origin: BOTTOMLEFT
+      l: 64.97
+      r: 80.957
+      t: 210.04200000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 14
+  self_ref: '#/texts/120'
+  text: "\u25B2"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5C31\u8077"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 170.565
+      coord_origin: BOTTOMLEFT
+      l: 56.976
+      r: 88.902
+      t: 190.85199999999998
+    charspan:
+    - 0
+    - 2
+    page_no: 14
+  self_ref: '#/texts/121'
+  text: "\u5C31\u8077"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u25B2"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 189.755
+      coord_origin: BOTTOMLEFT
+      l: 169.143
+      r: 185.13
+      t: 210.04200000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 14
+  self_ref: '#/texts/122'
+  text: "\u25B2"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7D50\u5A5A"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 170.565
+      coord_origin: BOTTOMLEFT
+      l: 161.15
+      r: 193.076
+      t: 190.85199999999998
+    charspan:
+    - 0
+    - 2
+    page_no: 14
+  self_ref: '#/texts/123'
+  text: "\u7D50\u5A5A"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u25B2"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 189.755
+      coord_origin: BOTTOMLEFT
+      l: 275.981
+      r: 291.968
+      t: 210.04200000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 14
+  self_ref: '#/texts/124'
+  text: "\u25B2"
+- children: []
+  content_layer: body
+  label: caption
+  orig: "\u7B2C 1\u5B50 \u8A95 \u751F"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 170.565
+      coord_origin: BOTTOMLEFT
+      l: 246.643
+      r: 321.307
+      t: 190.85199999999998
+    charspan:
+    - 0
+    - 8
+    page_no: 14
+  self_ref: '#/texts/125'
+  text: "\u7B2C 1\u5B50 \u8A95 \u751F"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u25B2"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 189.755
+      coord_origin: BOTTOMLEFT
+      l: 379.332
+      r: 395.319
+      t: 210.04200000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 14
+  self_ref: '#/texts/126'
+  text: "\u25B2"
+- children: []
+  content_layer: body
+  label: caption
+  orig: "\u7B2C 2\u5B50 \u8A95 \u751F"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 170.565
+      coord_origin: BOTTOMLEFT
+      l: 349.994
+      r: 424.658
+      t: 190.85199999999998
+    charspan:
+    - 0
+    - 8
+    page_no: 14
+  self_ref: '#/texts/127'
+  text: "\u7B2C 2\u5B50 \u8A95 \u751F"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u25B2"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 189.755
+      coord_origin: BOTTOMLEFT
+      l: 486.454
+      r: 502.441
+      t: 210.04200000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 14
+  self_ref: '#/texts/128'
+  text: "\u25B2"
+- children: []
+  content_layer: body
+  label: caption
+  orig: "\u5B50\u3069\u3082\u72EC\u7ACB"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 170.565
+      coord_origin: BOTTOMLEFT
+      l: 458.22
+      r: 530.561
+      t: 190.85199999999998
+    charspan:
+    - 0
+    - 5
+    page_no: 14
+  self_ref: '#/texts/129'
+  text: "\u5B50\u3069\u3082\u72EC\u7ACB"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u25B2"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 189.755
+      coord_origin: BOTTOMLEFT
+      l: 587.254
+      r: 603.241
+      t: 210.04200000000003
+    charspan:
+    - 0
+    - 1
+    page_no: 14
+  self_ref: '#/texts/130'
+  text: "\u25B2"
+- children: []
+  content_layer: body
+  label: caption
+  orig: "\u8001\u5F8C"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 170.565
+      coord_origin: BOTTOMLEFT
+      l: 579.26
+      r: 611.186
+      t: 190.85199999999998
+    charspan:
+    - 0
+    - 2
+    page_no: 14
+  self_ref: '#/texts/131'
+  text: "\u8001\u5F8C"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5FC5 \u8981 \u306A \u91D1 \u984D"
+  parent:
+    $ref: '#/pictures/15'
+  prov:
+  - bbox:
+      b: 241.913
+      coord_origin: BOTTOMLEFT
+      l: 27.694
+      r: 43.681
+      t: 326.036
+    charspan:
+    - 0
+    - 9
+    page_no: 14
+  self_ref: '#/texts/132'
+  text: "\u5FC5 \u8981 \u306A \u91D1 \u984D"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\uFF1C\u7D50\u5A5A\uFF1E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 136.80399999999997
+      coord_origin: BOTTOMLEFT
+      l: 140.145
+      r: 203.949
+      t: 157.091
+    charspan:
+    - 0
+    - 4
+    page_no: 14
+  self_ref: '#/texts/133'
+  text: "\uFF1C\u7D50\u5A5A\uFF1E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u300C\u4E07\u4E00\u300D\u306E\u3068\u304D\u3001\u6B8B\u3055\u308C\u308B\u914D\
+    \u5076\u8005 \u306E\u305F\u3081\u306E\u6B7B\u4EA1\u4FDD\u969C\u304C\u5FC5\u8981\
+    \u3068\u306A\u308A \u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 80.41200000000003
+      coord_origin: BOTTOMLEFT
+      l: 82.46
+      r: 261.432
+      t: 131.8
+    charspan:
+    - 0
+    - 34
+    page_no: 14
+  self_ref: '#/texts/134'
+  text: "\u300C\u4E07\u4E00\u300D\u306E\u3068\u304D\u3001\u6B8B\u3055\u308C\u308B\u914D\
+    \u5076\u8005 \u306E\u305F\u3081\u306E\u6B7B\u4EA1\u4FDD\u969C\u304C\u5FC5\u8981\
+    \u3068\u306A\u308A \u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\uFF1C\u51FA\u7523\uFF1E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 136.80399999999997
+      coord_origin: BOTTOMLEFT
+      l: 340.384
+      r: 404.188
+      t: 157.091
+    charspan:
+    - 0
+    - 4
+    page_no: 14
+  self_ref: '#/texts/135'
+  text: "\uFF1C\u51FA\u7523\uFF1E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u907A\u65CF\u306E\u751F\u6D3B\u8CBB\u3084\u6559\u80B2\u8CBB\u3092\u307E\u304B\
+    \ \u306A\u3046\u305F\u3081\u306E\u3001\u3088\u308A\u5927\u304D\u306A\u4FDD\u969C\
+    \u304C \u5FC5\u8981\u3068\u306A\u308A\u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 80.41200000000003
+      coord_origin: BOTTOMLEFT
+      l: 283.861
+      r: 455.622
+      t: 131.8
+    charspan:
+    - 0
+    - 37
+    page_no: 14
+  self_ref: '#/texts/136'
+  text: "\u907A\u65CF\u306E\u751F\u6D3B\u8CBB\u3084\u6559\u80B2\u8CBB\u3092\u307E\u304B\
+    \ \u306A\u3046\u305F\u3081\u306E\u3001\u3088\u308A\u5927\u304D\u306A\u4FDD\u969C\
+    \u304C \u5FC5\u8981\u3068\u306A\u308A\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\uFF1C\u5B50\u3069\u3082\u306E\u72EC\u7ACB\u30FB\u8001\u5F8C\uFF1E"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 136.80399999999997
+      coord_origin: BOTTOMLEFT
+      l: 496.12
+      r: 655.159
+      t: 157.091
+    charspan:
+    - 0
+    - 11
+    page_no: 14
+  self_ref: '#/texts/137'
+  text: "\uFF1C\u5B50\u3069\u3082\u306E\u72EC\u7ACB\u30FB\u8001\u5F8C\uFF1E"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u89AA\u3068\u3057\u3066\u306E\u8CAC\u4EFB\u306F\u6E1B\u308B\u305F\u3081\u3001\
+    \u6B7B\u4EA1 \u4FDD\u969C\u306E\u5FC5\u8981\u306A\u91D1\u984D\u306F\u305D\u306E\
+    \u5206\u6E1B\u5C11\u3057 \u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 80.41200000000003
+      coord_origin: BOTTOMLEFT
+      l: 474.888
+      r: 673.016
+      t: 131.8
+    charspan:
+    - 0
+    - 35
+    page_no: 14
+  self_ref: '#/texts/138'
+  text: "\u89AA\u3068\u3057\u3066\u306E\u8CAC\u4EFB\u306F\u6E1B\u308B\u305F\u3081\u3001\
+    \u6B7B\u4EA1 \u4FDD\u969C\u306E\u5FC5\u8981\u306A\u91D1\u984D\u306F\u305D\u306E\
+    \u5206\u6E1B\u5C11\u3057 \u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u2462\u300C\u751F\u547D\u4FDD\u967A\u300D\u5951\u7D04 \u30B9\u30E9\u30A4\
+    \u30C9\u96C6"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 216.96799999999996
+      coord_origin: BOTTOMLEFT
+      l: 168.491
+      r: 552.419
+      t: 335.468
+    charspan:
+    - 0
+    - 15
+    page_no: 15
+  self_ref: '#/texts/139'
+  text: "\u2462\u300C\u751F\u547D\u4FDD\u967A\u300D\u5951\u7D04 \u30B9\u30E9\u30A4\
+    \u30C9\u96C6"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7533 \u3057 \u8FBC\u307F \u304B\u3089\u4FDD\u967A \u8A3C\u5238 \u304C \u5C4A\
+    \ \u304F\u307E\u3067\u306E \u6D41 \u308C"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 494.108
+      coord_origin: BOTTOMLEFT
+      l: 19.389
+      r: 537.675
+      t: 534.72
+    charspan:
+    - 0
+    - 27
+    page_no: 16
+  self_ref: '#/texts/140'
+  text: "\u7533 \u3057 \u8FBC\u307F \u304B\u3089\u4FDD\u967A \u8A3C\u5238 \u304C \u5C4A\
+    \ \u304F\u307E\u3067\u306E \u6D41 \u308C"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u30B9\u30C6 \u30C3\u30D7 \u2460"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 441.225
+      coord_origin: BOTTOMLEFT
+      l: 28.205
+      r: 110.495
+      t: 466.622
+    charspan:
+    - 0
+    - 7
+    page_no: 16
+  self_ref: '#/texts/141'
+  text: "\u30B9\u30C6 \u30C3\u30D7 \u2460"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u7533\u8FBC\u66F8 \u306E \u63D0 \u51FA"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 422.083
+      coord_origin: BOTTOMLEFT
+      l: 28.205
+      r: 122.655
+      t: 442.37
+    charspan:
+    - 0
+    - 9
+    page_no: 16
+  self_ref: '#/texts/142'
+  text: "\u7533\u8FBC\u66F8 \u306E \u63D0 \u51FA"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u30B9\u30C6"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 366.22
+      coord_origin: BOTTOMLEFT
+      l: 203.924
+      r: 235.785
+      t: 391.617
+    charspan:
+    - 0
+    - 2
+    page_no: 16
+  self_ref: '#/texts/143'
+  text: "\u30B9\u30C6"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u30C3\u30D7"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 366.22
+      coord_origin: BOTTOMLEFT
+      l: 235.814
+      r: 266.174
+      t: 391.617
+    charspan:
+    - 0
+    - 2
+    page_no: 16
+  self_ref: '#/texts/144'
+  text: "\u30C3\u30D7"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u2461"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 366.22
+      coord_origin: BOTTOMLEFT
+      l: 266.202
+      r: 286.215
+      t: 391.617
+    charspan:
+    - 0
+    - 1
+    page_no: 16
+  self_ref: '#/texts/145'
+  text: "\u2461"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u544A\u77E5"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 347.078
+      coord_origin: BOTTOMLEFT
+      l: 203.924
+      r: 235.85
+      t: 367.365
+    charspan:
+    - 0
+    - 2
+    page_no: 16
+  self_ref: '#/texts/146'
+  text: "\u544A\u77E5"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF08"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 347.078
+      coord_origin: BOTTOMLEFT
+      l: 235.843
+      r: 251.83
+      t: 367.365
+    charspan:
+    - 0
+    - 1
+    page_no: 16
+  self_ref: '#/texts/147'
+  text: "\uFF08"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8A3A\u67FB"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 347.078
+      coord_origin: BOTTOMLEFT
+      l: 251.802
+      r: 283.728
+      t: 367.365
+    charspan:
+    - 0
+    - 2
+    page_no: 16
+  self_ref: '#/texts/148'
+  text: "\u8A3A\u67FB"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\uFF09"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 347.078
+      coord_origin: BOTTOMLEFT
+      l: 283.72
+      r: 299.707
+      t: 367.365
+    charspan:
+    - 0
+    - 1
+    page_no: 16
+  self_ref: '#/texts/149'
+  text: "\uFF09"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u30B9\u30C6 \u30C3\u30D7 \u2462"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 441.225
+      coord_origin: BOTTOMLEFT
+      l: 368.702
+      r: 450.993
+      t: 466.622
+    charspan:
+    - 0
+    - 7
+    page_no: 16
+  self_ref: '#/texts/150'
+  text: "\u30B9\u30C6 \u30C3\u30D7 \u2462"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u4FDD\u967A\u6599\u306E\u6255\u3044"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 422.083
+      coord_origin: BOTTOMLEFT
+      l: 368.702
+      r: 461.011
+      t: 442.37
+    charspan:
+    - 0
+    - 6
+    page_no: 16
+  self_ref: '#/texts/151'
+  text: "\u4FDD\u967A\u6599\u306E\u6255\u3044"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u8FBC\u307F"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 422.083
+      coord_origin: BOTTOMLEFT
+      l: 461.083
+      r: 490.707
+      t: 442.37
+    charspan:
+    - 0
+    - 2
+    page_no: 16
+  self_ref: '#/texts/152'
+  text: "\u8FBC\u307F"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u30B9\u30C6 \u30C3\u30D7\u2463"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 374.837
+      coord_origin: BOTTOMLEFT
+      l: 569.424
+      r: 651.706
+      t: 400.234
+    charspan:
+    - 0
+    - 6
+    page_no: 16
+  self_ref: '#/texts/153'
+  text: "\u30B9\u30C6 \u30C3\u30D7\u2463"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u66F8 \u985E\uFF08\u4FDD\u967A \u8A3C\u5238 \uFF09 \u304C \u5C4A \u304F"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 336.505
+      coord_origin: BOTTOMLEFT
+      l: 569.424
+      r: 697.124
+      t: 375.982
+    charspan:
+    - 0
+    - 17
+    page_no: 16
+  self_ref: '#/texts/154'
+  text: "\u66F8 \u985E\uFF08\u4FDD\u967A \u8A3C\u5238 \uFF09 \u304C \u5C4A \u304F"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u5927"
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 338.56653340657556
+      coord_origin: BOTTOMLEFT
+      l: 399.1703694661458
+      r: 423.0554606119792
+      t: 354.04133097330725
+    charspan:
+    - 0
+    - 1
+    page_no: 16
+  self_ref: '#/texts/155'
+  text: "\u5927"
+- children: []
+  content_layer: body
+  label: text
+  orig: '?'
+  parent:
+    $ref: '#/pictures/16'
+  prov:
+  - bbox:
+      b: 303.29839070638025
+      coord_origin: BOTTOMLEFT
+      l: 248.9838663736979
+      r: 256.945556640625
+      t: 309.0564524332682
+    charspan:
+    - 0
+    - 1
+    page_no: 16
+  self_ref: '#/texts/156'
+  text: '?'
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: "\u25CF"
+  orig: "\u25CF \u751F\u547D\u4FDD\u967A\u306F\u751F\u547D\u4FDD\u967A\u4F1A\u793E\
+    \u3068\u306E \u9577 \u671F\u9593\u306B\u308F\u305F\u308B\u5951\u7D04\u3067\u3059\
+    \u3002 \u60C5\u5831 \u53CE\u96C6\u3092 \u884C \u3044\u3001\u81EA\u5206\u306B\u3068\
+    \u3063\u3066\u5FC5\u8981\u306A\u4FDD\u967A\u5546\u54C1\u3092 \u9078\u3076 \u3053\
+    \u3068\u304C\u5927 \u5207 \u3002"
+  parent:
+    $ref: '#/groups/7'
+  prov:
+  - bbox:
+      b: 152.58799999999997
+      coord_origin: BOTTOMLEFT
+      l: 25.625
+      r: 699.715
+      t: 217.04399999999998
+    charspan:
+    - 0
+    - 67
+    page_no: 16
+  self_ref: '#/texts/157'
+  text: "\u751F\u547D\u4FDD\u967A\u306F\u751F\u547D\u4FDD\u967A\u4F1A\u793E\u3068\u306E\
+    \ \u9577 \u671F\u9593\u306B\u308F\u305F\u308B\u5951\u7D04\u3067\u3059\u3002 \u60C5\
+    \u5831 \u53CE\u96C6\u3092 \u884C \u3044\u3001\u81EA\u5206\u306B\u3068\u3063\u3066\
+    \u5FC5\u8981\u306A\u4FDD\u967A\u5546\u54C1\u3092 \u9078\u3076 \u3053\u3068\u304C\
+    \u5927 \u5207 \u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: "\u25CF"
+  orig: "\u25CF \u5951\u7D04\u306B\u969B\u3057\u3066\u306F\u3001\u3055\u307E \u3056\
+    \ \u307E\u306A \u66F8 \u985E\u304C\u3042\u308A\u307E\u3059\u3002 \u3069\u306E\u3088\
+    \u3046\u306A\u3068\u304D\u306B\u304A\u91D1\u3092\u53D7\u3051\u53D6\u308C\u308B\
+    \u306E\u304B\u306A\u3069 \u66F8\u9762 \u306B \u66F8 \u3044\u3066\u3042\u308B\u5185\
+    \ \u5BB9 \u3092\u3057\u3063\u304B\u308A\u3068 \u628A\u63E1 \u3057\u3066\u304A\u304D\
+    \u307E\u3057\u3087\u3046\u3002"
+  parent:
+    $ref: '#/groups/7'
+  prov:
+  - bbox:
+      b: 31.43599999999998
+      coord_origin: BOTTOMLEFT
+      l: 25.625
+      r: 677.111
+      t: 129.878
+    charspan:
+    - 0
+    - 83
+    page_no: 16
+  self_ref: '#/texts/158'
+  text: "\u5951\u7D04\u306B\u969B\u3057\u3066\u306F\u3001\u3055\u307E \u3056 \u307E\
+    \u306A \u66F8 \u985E\u304C\u3042\u308A\u307E\u3059\u3002 \u3069\u306E\u3088\u3046\
+    \u306A\u3068\u304D\u306B\u304A\u91D1\u3092\u53D7\u3051\u53D6\u308C\u308B\u306E\
+    \u304B\u306A\u3069 \u66F8\u9762 \u306B \u66F8 \u3044\u3066\u3042\u308B\u5185 \u5BB9\
+    \ \u3092\u3057\u3063\u304B\u308A\u3068 \u628A\u63E1 \u3057\u3066\u304A\u304D\u307E\
+    \u3057\u3087\u3046\u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u6B63 \u3057\u304F \u544A\u77E5 \u3057\u3088\u3046"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 494.108
+      coord_origin: BOTTOMLEFT
+      l: 19.389
+      r: 231.086
+      t: 534.72
+    charspan:
+    - 0
+    - 11
+    page_no: 17
+  self_ref: '#/texts/159'
+  text: "\u6B63 \u3057\u304F \u544A\u77E5 \u3057\u3088\u3046"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u751F\u547D\u4FDD\u967A\u306E\u5951\u7D04\u306B\u306F \u544A\u77E5\u7FA9\
+    \u52D9 \u304C\u3042\u308A\u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 433.632
+      coord_origin: BOTTOMLEFT
+      l: 68.683
+      r: 643.971
+      t: 479.316
+    charspan:
+    - 0
+    - 21
+    page_no: 17
+  self_ref: '#/texts/160'
+  text: "\u751F\u547D\u4FDD\u967A\u306E\u5951\u7D04\u306B\u306F \u544A\u77E5\u7FA9\
+    \u52D9 \u304C\u3042\u308A\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: '@.0'
+  parent:
+    $ref: '#/pictures/18'
+  prov:
+  - bbox:
+      b: 351.0
+      coord_origin: BOTTOMLEFT
+      l: 428.3333333333333
+      r: 458.3333333333333
+      t: 367.66666666666663
+    charspan:
+    - 0
+    - 3
+    page_no: 17
+  self_ref: '#/texts/161'
+  text: '@.0'
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u751F\u547D\u4FDD\u967A\u3092\u5951\u7D04\u3059\u308B\u969B\u306B\u306F\u3001\
+    \u5951\u7D04\u3059\u308B\u4EBA\u3005\u306E\u516C\u5E73\u6027\u3092\u4FDD\u3064\
+    \u305F\u3081\u306B\u3001\u73FE\u5728\u306E\u5065\u5EB7 \u72B6\u614B\u3084\u50B7\
+    \u75C5\u6B74\u306A\u3069\u306B\u3064\u3044\u3066\u4FDD\u967A\u4F1A\u793E\u306B\
+    \u4F1D\u3048\u308B\u300C\u544A\u77E5\u7FA9\u52D9\u300D\u304C\u3042\u308A\u307E\
+    \u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 215.077
+      coord_origin: BOTTOMLEFT
+      l: 28.828
+      r: 659.778
+      t: 264.483
+    charspan:
+    - 0
+    - 68
+    page_no: 17
+  self_ref: '#/texts/162'
+  text: "\u751F\u547D\u4FDD\u967A\u3092\u5951\u7D04\u3059\u308B\u969B\u306B\u306F\u3001\
+    \u5951\u7D04\u3059\u308B\u4EBA\u3005\u306E\u516C\u5E73\u6027\u3092\u4FDD\u3064\
+    \u305F\u3081\u306B\u3001\u73FE\u5728\u306E\u5065\u5EB7 \u72B6\u614B\u3084\u50B7\
+    \u75C5\u6B74\u306A\u3069\u306B\u3064\u3044\u3066\u4FDD\u967A\u4F1A\u793E\u306B\
+    \u4F1D\u3048\u308B\u300C\u544A\u77E5\u7FA9\u52D9\u300D\u304C\u3042\u308A\u307E\
+    \u3059\u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u25CF\u5065\u5EB7 \u72B6 \u614B \u306A\u3069\u3092 \u6B63 \u3057\u304F \u4F1D\
+    \ \u3048\u3066\u3044\u306A\u3044\u3068\u304D\u306F\u30FB\u30FB\u30FB \u5951\u7D04\
+    \u304C\u89E3 \u9664 \u3055\u308C\u3066\u3001\u30EA\u30B9\u30AF\u304C \u8D77 \u304D\
+    \u3066\u3057\u307E\u3063\u3066\u3082 \u4FDD\u967A\u91D1\u7B49\u306E\u304A\u91D1\
+    \u3092\u53D7\u3051\u53D6\u308C\u306A\u3044\u3053\u3068\u304C\u3042\u308A\u307E\
+    \u3059\u3002"
+  parent:
+    $ref: '#/groups/8'
+  prov:
+  - bbox:
+      b: 93.089
+      coord_origin: BOTTOMLEFT
+      l: 27.723
+      r: 682.326
+      t: 187.13800000000003
+    charspan:
+    - 0
+    - 79
+    page_no: 17
+  self_ref: '#/texts/163'
+  text: "\u25CF\u5065\u5EB7 \u72B6 \u614B \u306A\u3069\u3092 \u6B63 \u3057\u304F \u4F1D\
+    \ \u3048\u3066\u3044\u306A\u3044\u3068\u304D\u306F\u30FB\u30FB\u30FB \u5951\u7D04\
+    \u304C\u89E3 \u9664 \u3055\u308C\u3066\u3001\u30EA\u30B9\u30AF\u304C \u8D77 \u304D\
+    \u3066\u3057\u307E\u3063\u3066\u3082 \u4FDD\u967A\u91D1\u7B49\u306E\u304A\u91D1\
+    \u3092\u53D7\u3051\u53D6\u308C\u306A\u3044\u3053\u3068\u304C\u3042\u308A\u307E\
+    \u3059\u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: "\u25CF"
+  orig: "\u25CF \u4E8B \u5B9F \u3068\u7570\u306A\u308B \u544A\u77E5 \u3092\u3059\u308B\
+    \u3053\u3068\u3092 \u544A\u77E5\u7FA9\u52D9 \u9055 \u53CD \u3068\u3044\u3044\u307E\
+    \u3059\u3002"
+  parent:
+    $ref: '#/groups/8'
+  prov:
+  - bbox:
+      b: 45.09899999999999
+      coord_origin: BOTTOMLEFT
+      l: 27.723
+      r: 601.461
+      t: 75.56700000000001
+    charspan:
+    - 0
+    - 36
+    page_no: 17
+  self_ref: '#/texts/164'
+  text: "\u4E8B \u5B9F \u3068\u7570\u306A\u308B \u544A\u77E5 \u3092\u3059\u308B\u3053\
+    \u3068\u3092 \u544A\u77E5\u7FA9\u52D9 \u9055 \u53CD \u3068\u3044\u3044\u307E\u3059\
+    \u3002"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7533\u8FBC\u307F \u3092\u3084\u3081\u305F\u3044\u3068 \u601D \u3063\u305F\
+    \u3089"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 494.108
+      coord_origin: BOTTOMLEFT
+      l: 19.389
+      r: 373.812
+      t: 534.72
+    charspan:
+    - 0
+    - 16
+    page_no: 18
+  self_ref: '#/texts/165'
+  text: "\u7533\u8FBC\u307F \u3092\u3084\u3081\u305F\u3044\u3068 \u601D \u3063\u305F\
+    \u3089"
+- children: []
+  content_layer: body
+  label: section_header
+  level: 1
+  orig: "\u7533\u8FBC\u307F \u306E\u53D6\u308A \u6D88 \u3057\u304C\u3067\u304D\u308B\
+    \u671F\u9593\u306F\u30018\u65E5\u4EE5\u5185 \uFF01"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 424.221
+      coord_origin: BOTTOMLEFT
+      l: 51.647
+      r: 669.033
+      t: 469.905
+    charspan:
+    - 0
+    - 25
+    page_no: 18
+  self_ref: '#/texts/166'
+  text: "\u7533\u8FBC\u307F \u306E\u53D6\u308A \u6D88 \u3057\u304C\u3067\u304D\u308B\
+    \u671F\u9593\u306F\u30018\u65E5\u4EE5\u5185 \uFF01"
+- children: []
+  content_layer: body
+  label: text
+  orig: "\u3084\u3063\u3071\u308A\u7533\u8FBC\u307F\u3092\u3084\u3081\u305F\u3044\u306A\
+    \u3068\u601D\u3063\u305F\u3068\u304D\u306F\u30FB\u30FB\u30FB 8\u65E5\u4EE5\u5185\
+    \u306A\u3089 \u30AF\u30FC\u30EA\u30F3 \u30B0 \u30FB \u30AA \u30D5 \u3092\u4F7F\
+    \u3046\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002"
+  parent:
+    $ref: '#/body'
+  prov:
+  - bbox:
+      b: 313.637
+      coord_origin: BOTTOMLEFT
+      l: 33.959
+      r: 426.369
+      t: 363.044
+    charspan:
+    - 0
+    - 55
+    page_no: 18
+  self_ref: '#/texts/167'
+  text: "\u3084\u3063\u3071\u308A\u7533\u8FBC\u307F\u3092\u3084\u3081\u305F\u3044\u306A\
+    \u3068\u601D\u3063\u305F\u3068\u304D\u306F\u30FB\u30FB\u30FB 8\u65E5\u4EE5\u5185\
+    \u306A\u3089 \u30AF\u30FC\u30EA\u30F3 \u30B0 \u30FB \u30AA \u30D5 \u3092\u4F7F\
+    \u3046\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: ''
+  orig: "\u4E00\u822C\u7684\u306B\u3001\u300C\u30AF\u30FC\u30EA\u30F3\u30B0\u30FB\u30AA\
+    \u30D5\u306B\u95A2\u3059\u308B\u66F8\u9762\u3092\u53D7\u3051\u53D6\u3063\u305F\
+    \ \u65E5\u300D\u304B\u300C\u7533\u8FBC\u65E5\u300D\u306E\u3044\u305A\u308C\u304B\
+    \u9045\u3044\u65E5\u304B\u3089\u3001\u305D\u306E\u65E5\u3092\u542B\u3081\u3066\
+    \ 8\u65E5\u4EE5\u5185\u306A\u3089\u3070\u7533\u3057\u8FBC\u307F\u3092\u64A4\u56DE\
+    \u3067\u304D\u307E\u3059\u3002"
+  parent:
+    $ref: '#/groups/9'
+  prov:
+  - bbox:
+      b: 228.39999999999998
+      coord_origin: BOTTOMLEFT
+      l: 33.959
+      r: 462.697
+      t: 301.816
+    charspan:
+    - 0
+    - 73
+    page_no: 18
+  self_ref: '#/texts/168'
+  text: "\u4E00\u822C\u7684\u306B\u3001\u300C\u30AF\u30FC\u30EA\u30F3\u30B0\u30FB\u30AA\
+    \u30D5\u306B\u95A2\u3059\u308B\u66F8\u9762\u3092\u53D7\u3051\u53D6\u3063\u305F\
+    \ \u65E5\u300D\u304B\u300C\u7533\u8FBC\u65E5\u300D\u306E\u3044\u305A\u308C\u304B\
+    \u9045\u3044\u65E5\u304B\u3089\u3001\u305D\u306E\u65E5\u3092\u542B\u3081\u3066\
+    \ 8\u65E5\u4EE5\u5185\u306A\u3089\u3070\u7533\u3057\u8FBC\u307F\u3092\u64A4\u56DE\
+    \u3067\u304D\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  label: text
+  orig: "8\u65E5\u4EE5\u5185\u9F99"
+  parent:
+    $ref: '#/pictures/19'
+  prov:
+  - bbox:
+      b: 373.4913202921549
+      coord_origin: BOTTOMLEFT
+      l: 595.0594482421875
+      r: 666.8144938151041
+      t: 387.54079945882165
+    charspan:
+    - 0
+    - 5
+    page_no: 18
+  self_ref: '#/texts/169'
+  text: "8\u65E5\u4EE5\u5185\u9F99"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: "\u25CF"
+  orig: "\u25CF \u30AF\u30FC\u30EA\u30F3 \u30B0 \u30FB \u30AA \u30D5\u3092\u6D3B\u7528\
+    \u3059\u308B\u3068\u3001\u4FDD\u967A\u6599\u306F\u305D\u306E\u307E\u307E \u8FD4\
+    \ \u91D1\u3055\u308C\u307E\u3059\u3002"
+  parent:
+    $ref: '#/groups/9'
+  prov:
+  - bbox:
+      b: 119.90499999999997
+      coord_origin: BOTTOMLEFT
+      l: 21.061
+      r: 645.795
+      t: 150.373
+    charspan:
+    - 0
+    - 38
+    page_no: 18
+  self_ref: '#/texts/170'
+  text: "\u30AF\u30FC\u30EA\u30F3 \u30B0 \u30FB \u30AA \u30D5\u3092\u6D3B\u7528\u3059\
+    \u308B\u3068\u3001\u4FDD\u967A\u6599\u306F\u305D\u306E\u307E\u307E \u8FD4 \u91D1\
+    \u3055\u308C\u307E\u3059\u3002"
+- children: []
+  content_layer: body
+  enumerated: false
+  label: list_item
+  marker: "\u25CF"
+  orig: "\u25CF \u751F\u547D\u4FDD\u967A\u4F1A\u793E\u3084\u5546\u54C1\u306B\u3088\
+    \u3063\u3066\u306F9\u65E5\u4EE5\u4E0A\u306E\u671F\u9593\u3092\u8A2D\u3051\u3066\
+    \u3044\u308B\u5834\u5408 \u3082\u3042\u308A\u307E\u3059\u3002"
+  parent:
+    $ref: '#/groups/9'
+  prov:
+  - bbox:
+      b: 47.90499999999997
+      coord_origin: BOTTOMLEFT
+      l: 21.061
+      r: 684.094
+      t: 107.173
+    charspan:
+    - 0
+    - 38
+    page_no: 18
+  self_ref: '#/texts/171'
+  text: "\u751F\u547D\u4FDD\u967A\u4F1A\u793E\u3084\u5546\u54C1\u306B\u3088\u3063\u3066\
+    \u306F9\u65E5\u4EE5\u4E0A\u306E\u671F\u9593\u3092\u8A2D\u3051\u3066\u3044\u308B\
+    \u5834\u5408 \u3082\u3042\u308A\u307E\u3059\u3002"
+version: 1.7.0

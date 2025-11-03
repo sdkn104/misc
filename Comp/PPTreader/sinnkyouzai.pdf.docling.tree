@@ -1,0 +1,380 @@
+0: unspecified with name=_root_
+ 1: page_header: 資料１
+ 2: section_header: 認知症サポーター養成講座 新教材対応資料
+ 3: list with name=list
+  4: list_item: 三郷市役所長寿いきがい課　地域包括係　作成
+ 5: section_header: 初めに
+ 6: list with name=list
+  7: list_item: ・新教材について 令和６年度４月１日以降の認知症サポーター養成講座において参加者に 対して使用（配布）する
+  8: list_item: ・令和６年度以降の講座の進め方について 新教材の内容に準じた講義の実施は必須。 実施方法（※パワポの使用有無）についてはキャラバンメイト自身の判断による。
+  9: list_item: ・本資料についてはあくまでパワポ資料の例　ご自由にお使いください。
+ 10: picture
+ 11: section_header: 新教材における変更点
+ 12: list with name=list
+  13: list_item: ・新教材
+ 14: text: （認知症を学びみんなで考える）
+ 15: list with name=list
+  16: list_item: ・テーマ
+ 17: text: 認知症を我がごととして考える
+ 18: list with name=list
+  19: list_item: ・講義内容の順番 「我がごととして考える」 「認知症とともに」 「認知症を理解する」
+  20: list_item: ・旧教材
+ 21: text: （認知症を学び地域で支えよう）
+ 22: list with name=list
+  23: list_item: ・テーマ
+ 24: text: 認知症を知識として理解する
+ 25: list with name=list
+  26: list_item: ・講義内容の順番 「認知症を理解する」 「認知症サポーターとは」
+ 27: text: 旧教材では認知症の知識と種類について教材で多く説明されているのに対し、 新教材では認知症サポーターについての説明や本人や家族の言葉が重要視
+ 28: picture
+  29: text: ?
+  30: text: ?
+ 31: section_header: なぜ認知症を学ぶのか
+ 32: list with name=list
+  33: list_item: ・認知症になったら何もわからなくなる
+  34: list_item: ・普通の生活を送れなくなる
+ 35: text: というイメージを持っていませんか？？
+ 36: key_value_area with name=group
+ 37: page_footer: 教材： 2 ページ
+ 38: picture
+  39: text: V
+ 40: list with name=list
+  41: list_item: ・認知症があっても活躍している人は増えており、 認知症に対する捉え方も 大きく変わりつつあります。
+  42: list_item: ・認知症という生活の困難を抱えても、 前向きに暮らしている人がたくさんいます。
+  43: list_item: ・講座で認知症 本人や家族の声 を学びましょう！！
+  44: list_item: ・認知症があってもなくても地域の中で 安心して暮らせる社会 を考えてみましょう！！
+ 45: key_value_area with name=group
+ 46: text: 教材： 2 ページ
+ 47: section_header: １、わがごととして考えてみよう
+ 48: page_footer: 教材：４ページ
+ 49: section_header: ●認知症とは ：脳の疾患により、認知機能が低下し日常生活に不具合が生じる状態
+ 50: picture
+  51: text: 年齢が高くな
+  52: text: 身近な人が認
+  53: text: 年齢階級別の認知症有病率
+  54: text: GLYPH<1>
+  55: text: ⚫︎
+  56: text: GLYPH<3>
+  57: text: 自分
+  58: text: 71.8
+  59: text: 70%
+  60: text: 48.5
+  61: text: 64.2
+  62: text: 60%
+  63: text: 44.3
+  64: text: 35.6
+  65: text: 50%
+  66: text: 全体
+  67: text: 24.0
+  68: text: 42.4
+  69: text: 40%
+  70: text: +男性
+  71: text: 22.4
+  72: text: 女性
+  73: text: 30%
+  74: text: 20.0
+  75: text: 11.0
+  76: text: 10.4
+  77: text: 20%
+  78: text: 3.8
+  79: text: 1.6
+  80: text: 3.6
+  81: text: 9.6
+  82: text: 1.5
+  83: text: 10%
+  84: text: 3.4
+  85: text: 1.5
+  86: text: 0%
+  87: text: 65-69
+  88: text: 70-74
+  89: text: 75-79
+  90: text: 80-84
+  91: text: 85-89
+  92: text: 90+
+ 93: text: 教材：４ペー
+ 94: list with name=list
+  95: list_item: ●認知症サポーターとは ：認知症について正しく理解し、偏見を持たず、 認知症の人や家族に対して温かく接する 「応援者」
+ 96: picture
+  97: text: 偏見
+  98: text: 応援
+ 99: picture
+ 100: text: です。
+ 101: text: 何か特別なこ 無関心ではな
+ 102: key_value_area with name=group
+ 103: text: 教材：５ページ
+ 104: section_header: ●認知症サポーターはどんなことをしているの ：
+ 105: text: 近所の認知症の方を さりげなく気にかける 。 親身に 話を聞いたり、相談に乗る 。 地域の中で認知症に対する 誤解や偏見の解消 を行うために話し合う。
+ 106: text: 他、 認知症カフェ や サロン など一歩進んだ活動もあります。
+ 107: picture
+ 108: list with name=list
+  109: list_item: ●チームオレンジ ：地域で暮らす認知症の人や家族の困りごとの支援ニーズと 認知症サポーターを結びつける取り組み。認知症の人もチームに参加します。
+ 110: text: 三郷市においても現在６団体があります。
+ 111: picture
+ 112: key_value_area with name=group
+ 113: text: 教材：５、６ページ
+ 114: section_header: ２、認知症とともに
+ 115: text: 当事者から認知症サポーターの皆様 へ　　　　　今伝えたいこと
+ 116: key_value_area with name=group
+ 117: page_footer: 教材：７ページ
+ 118: section_header: 「認知症とともに生きる希望宣言」
+ 119: section_header: ひと足先に認知症になった私たちから全ての人たちへ
+ 120: list with name=list
+  121: list_item: １、自分自身がとらわれている常識の殻を破り、前を向いて生きていきます
+  122: list_item: ２、自分の力を活かして、大切にしたい暮らしを続け、社会の一員として、 楽しみながらチャレンジしていきます。
+  123: list_item: ３、私たち本人同士が、出会い、つながり、生きる力をわき立たせ、元気に 暮らしていきます。
+  124: list_item: ４、自分の思いや希望を伝えながら、味方になってくれる人たちを身近な まちで見つけ一緒に歩んでいきます。
+  125: list_item: ５、認知症とともに生きてる体験や工夫を活かし、暮らしやすいわがまち を一緒に作ってきます。
+ 126: key_value_area with name=group
+ 127: page_footer: 教材：７ページ
+ 128: section_header: いい日々、いい人生を、地域の中で先輩からのアドバイス
+ 129: picture
+  130: text: ①変化に気づき始めた頃
+  131: text: ②元気に自分らしく暮らす
+ 132: key_value_area with name=group
+  133: text: 心情　　：不安、心配、外に出たくない、喧嘩してしまうなど
+  134: text: 実際の声：「自分はこれからどうなってしまうのか」 「人に会いたくない」
+  135: text: ポイント①：自分なりの生活を続ける
+  136: text: ポイント②：地域にいる仲間と出会う
+ 137: text: 本人はどのような気持ちなのか ともに生きる家族へのメッセージ につまっています
+ 138: key_value_area with name=group
+ 139: page_footer: 教材：８、９ページ
+ 140: section_header: 認知症の人とともに生きる家族
+ 141: text: 家族の心情の変化はどのように起こるのでしょうか？
+ 142: picture
+  143: text: 第１ステップ とまどい・否定
+  144: text: 第２ステップ 混乱・怒り・拒絶
+  145: text: 第３ステップ 割り切り
+  146: text: 第４ステップ 受容
+  147: text: 行きつ戻りつ
+ 148: key_value_area with name=group
+ 149: page_footer: 教材： 10 ページ
+ 150: section_header: 周りの人はどのような心がけが必要でしょうか
+ 151: text: されたら嫌な思いをすることは、、、
+ 152: text: 失敗やできないことを 指摘される
+ 153: text: 何もしないうちから、 いろいろできないかの ような態度を取られる
+ 154: text: では周りの人は、どのようなことを気に 留 めたら 良 いのか？？
+ 155: list with name=list
+  156: list_item: 「認知症だから」の前 提 を取り 払 う GLYPH<1> ⚫︎ GLYPH<3>
+  157: list_item: →そ こにいるのは 「認知症の人」ではなく、〇〇さんが認知症になっただけ のこと
+  158: list_item: 得意 なことを 頼 りにし、力を 発揮 してもらう ⚫︎ GLYPH<3>
+  159: list_item: → 「期待される」存在であることは誰でも嬉しい
+  160: list_item: 重要 なことほど、じっくり話し合って 決 める ⚫︎ GLYPH<3>
+  161: list_item: →相手 の自 尊 心や 意志 を 蔑 ろにしては 逆効果 となることもある
+ 162: text: 一方的に周 囲 から何か してもらう立 場 になる
+ 163: key_value_area with name=group
+ 164: page_footer: 教材： 12 ページ
+ 165: text: 1 驚かせない
+ 166: section_header: ◎認知症の人に接する際の３つのない
+ 167: text: 2 急がせない
+ 168: list with name=list
+  169: list_item: 3 自尊心を傷つけない
+ 170: section_header: ◎認知症の人に接する際の具体的な７つのポイント
+ 171: list with name=list
+  172: list_item: １ まずは見守る
+  173: list_item: ３ 声をかけるときは 1 人で
+ 174: text: ２ 余裕をもって対応する
+ 175: list with name=list
+  176: list_item: ４ 後ろから声をかけない
+ 177: text: ５ 相手に目線を合わせて　優しい口調で
+ 178: text: ６ おだやかに、はっきりした口調で
+ 179: text: ７ 相手の言葉に耳を傾けて　ゆっくり対応する
+ 180: key_value_area with name=group
+ 181: page_footer: 教材：
+ 182: page_footer: 13 ページ
+ 183: section_header: ３、認知症を理解する
+ 184: key_value_area with name=group
+ 185: page_footer: 教材： 14 ページ
+ 186: section_header: 認知症とは？？
+ 187: list with name=list
+  188: list_item: ●認知症とは 様々な原因により脳に変化が起こり 、これまでできたことができなくなり、 生活に支障をきたした状態 をいいます
+  189: list_item: ○原因となる疾患はさまざま
+ 190: text: 「アルツハイマー型認知症」 「レビー小体型認知症」 「 前頭側頭型認知症」 「 脳血管性認知症」
+ 191: picture
+ 192: text: 脳の働きは部位によって様々。
+ 193: picture
+  194: text: 運動
+  195: text: 知觉感
+  196: text: 新
+  197: text: 考出
+  198: text: 考
+  199: text: 判断
+  200: text: mo
+  201: text: 聞<
+ 202: text: 原因疾患によって、現れる症状にも差異が生じる。
+ 203: key_value_area with name=group
+ 204: page_footer: 教材： 14 ページ
+ 205: picture
+  206: text: ?
+ 207: section_header: 認知症になるとおこること
+ 208: text: 認知機能障害 【中核症状】 ( 治すことができないこと )
+ 209: text: 行動・心理症状 【 BPSD 】 ( 周りの人の助けで よくなることがある )
+ 210: text: 脳の細胞が死んでしまうことでおきる
+ 211: list with name=list
+  212: list_item: ・覚えられない　・忘れてしまう
+  213: list_item: ・考えるスピードが遅くなる
+ 214: text: 性格や環境で表出の有無がある。
+ 215: list with name=list
+  216: list_item: ・元気がなくなる　・道に迷う
+  217: list_item: ・「物を取られた」と思い込む
+ 218: picture
+ 219: key_value_area with name=group
+ 220: page_footer: 18 教材： 14 ページ
+ 221: section_header: 認知機能障害について
+ 222: section_header: ●「そんなこと聞いてない」・・・もの忘れ【記憶障害】
+ 223: list with name=list
+  224: list_item: ・自身の 経験をすっぽりと忘れてしまう 。 例 ： 夕食 を 食べ たことを 忘 れるなど
+  225: list_item: ・出 来事そ のものを 忘 れてしまうことから、 ヒントがあっても思い出せない 。
+ 226: picture
+  227: text: 若いとき
+  228: text: 老化の 場合
+  229: text: 認知症に なると
+  230: text: 認知症 が進行
+  231: text: 大切情報
+  232: text: 心の情報
+  233: text: 無默情報
+  234: text: "0
+ 235: key_value_area with name=group
+ 236: page_footer: 教材： 15 ページ
+ 237: section_header: ●「きょうは何日？」・・・失見当識
+ 238: list with name=list
+  239: list_item: ・ 今 何年の何 月 何日なのか、時 刻 はいつか、どこにいるのか 全 く分からない状態。
+  240: list_item: ・認知症の進行と 共 に、自分の 置 かれた状態はわかりにくくなります。
+ 241: section_header: 時間の見当識
+ 242: list with name=list
+  243: list_item: ・進行すると 季節感 や年齢がわからなくなっていきます。
+ 244: section_header: 場所の見当識
+ 245: section_header: 人の見当識
+ 246: picture
+ 247: list with name=list
+  248: list_item: ・時 刻 や 予 定を合わせて 準備 することが 苦手 に。
+  249: list_item: ・自分が 今 どこにいるのかわからなくなる。
+  250: list_item: ・「ここはどこだ」と混乱してしまうことも
+  251: list_item: ・ 最 近の 記憶 が 薄 れ、自身や家族の「いま」があいまいになる。
+  252: list_item: ・自分が若いころの家族をイメージしてしまう。
+ 253: text: スマートフォンのリマインダー機能や家族の声かけなど、 苦手なことを補う方法はたくさんあります
+ 254: key_value_area with name=group
+ 255: page_footer: 教材： 16 ページ
+ 256: section_header: ●理解・判断力について
+ 257: list with name=list
+  258: list_item: ・周 囲 から受け取る情 報 を 選択 して 行動に移すことが遅くなる 。
+  259: list_item: ・ 予期せぬことへの対応が苦手 になります。
+  260: list_item: １．考えるスピードがゆっくりになります。
+  261: list_item: ３．いつもと違うできごとが起こると混乱しやすくなります。
+  262: list_item: ２．同時に二つ以上のことを処理することが難しくなります。
+  263: list_item: ４．目に見えない仕組みが理解しずらくなります。
+ 264: section_header: ●実行 ( 遂行 ) 機能について
+ 265: list with name=list
+  266: list_item: ・ 目 的に 沿 って、 計画 を立てて実行し、結 果 を 振 り 返 ること 【実行機能】の遂行が難しくなる 。
+  267: list_item: ・ 段 取りよく進めるのが難しくなっても、 個々の動作は保たれてることは少なくない 。
+ 268: picture
+  269: text: サポートできる体制を 構築することが必要
+  270: page_footer: 教材： 17 ページ
+ 271: text: セルフレジ 自動改札・発券機 など
+ 272: section_header: 行動・心理症状 (BPSD) を理解する
+ 273: section_header: 不安やうつ
+ 274: section_header: イライラと興奮
+ 275: section_header: 幻覚・妄想
+ 276: section_header: 歩き回る 道に迷う
+ 277: list with name=list
+  278: list_item: ・認知症 初期 には 今後 自分はどうなっていくのかと不安に。 ・うつ症状を 伴 う 場 合もあり。
+  279: list_item: ・これまでできていたことがうまくいかず、 苛 立ってしまう。
+  280: list_item: ・ 感 情の コ ン トロ ー ル が 効 かず、 興奮 してしまう。
+  281: list_item: ・ 物 とられ 妄想 「自分は 忘 れはしない」という 意 識から ・ 幻視
+  282: list_item: ・ 道 に 迷 ってしまい、歩き 回 ってしまうことがあります。
+ 283: text: 本人がポジティブな気持ちでいられる環境はそれ自体が行動・心理症状の予防となります！！ ( 例 ) 仲間がいる　日常的に褒められる、感謝される場面がある
+ 284: key_value_area with name=group
+ 285: text: 教材：
+ 286: list with name=list
+  287: list_item: ・環境
+  288: list_item: ・原因疾患 によっては発現
+  289: list_item: ・性格
+ 290: picture
+ 291: page_footer: 18 ペー
+ 292: section_header: あらわれかたは十人十色
+ 293: list with name=list
+  294: list_item: ・認知症の進行や現れる症状は人や 原因 疾患によって大きく 異 なります。
+ 295: section_header: 神経変性疾患
+ 296: key_value_area with name=group
+  297: list with name=group
+   298: list_item: ・アルツハイマー型認知症 ： 全体の 50 ～ 60 ％ を占める。進行は比較的緩やか。 アミロイド β というたんぱく質が蓄積し、脳萎縮が発生。
+  299: list with name=group
+   300: list_item: ・レビー小体型認知症 ：全体の 15 ％。 進行は急激 に変動。 脳にレビー小体が蓄積し、発症。記憶障害・幻視が多い。
+  301: list with name=group
+   302: list_item: ・前頭側頭型認知症 ：同じ行動を繰り返す、我慢が苦手になるなどのタイプ ( 前頭葉の疾患 ) 言葉の意味理解が苦手になるタイプ ( 意味性認知症、側頭葉の疾
+ 303: section_header: 患 )
+ 304: section_header: 血管障害
+ 305: list with name=list
+  306: list_item: ・血管性認知症 ：脳梗塞・脳出血などで脳の血管に損傷を起こし、脳に栄養や酸素が いきわたらなくなる状態。起きる症状は部位によって様々。
+ 307: key_value_area with name=group
+ 308: page_footer: 教材：
+ 309: page_footer: 20 ページ
+ 310: section_header: 認知症の経過
+ 311: section_header: ●進行・経過は個人差が大きい
+ 312: list with name=list
+  313: list_item: ・原因となる疾患により、治療法やケア方法も異なる。
+  314: list_item: ・固定観念に基づいた不適切な対応は行動・心理症状を招いてしまいかねない。 ⇒個人によって対応方法は異なる。
+ 315: section_header: ●初期のうちに将来を考える
+ 316: list with name=list
+  317: list_item: ・日ごろから周囲の人に自身の生き方や考え方を理解してもらうよう心掛ける必要がある。 ⇒ 事前指示書の記入・家族との対話 など
+ 318: picture
+  319: text: MCI( 軽度認知障害 ) 認知症とは診断されないものの、 正常とは言い切れない中間段階。
+  320: text: 脳の活性化に取り組むことが重要
+  321: section_header: 知症の释過
+  322: text: 知症不休
+  323: text: 知症
+  324: text: 健常
+  325: text: MCI
+  326: text: 軽度知症
+  327: text: 中度知症
+  328: text: 重度知症
+  329: text: （軽度知障害）
+  330: text: 1年飞
+  331: text: 16~41%
+  332: text: 回復
+  333: text: 1年5~15%
+  334: text: 加知症仁移行
+ 335: text: 教材：
+ 336: key_value_area with name=group
+  337: text: 21
+ 338: text: ページ
+ 339: section_header: 若年性認知症とは
+ 340: list with name=list
+  341: list_item: ●６５歳未満で発症する認知症の呼称
+  342: list_item: ・現役世代の若 年層 が発症する場合、世 帯 としての 経済的困難 に 陥 ってしまう 恐 れあり。
+  343: list_item: ⇒ 高齢者 とは異なったリス ク の発生がある。 早期発見が重要 。
+  344: list_item: ・本人 含 め、 職 場や家族が 認知症の受け入れに時間がかかってしまう ことが多い。
+ 345: section_header: 認知症は予防できる？
+ 346: list with name=list
+  347: list_item: ・「認知症にならない」という予防法はない 。
+  348: list_item: ・しかし、認知症発症 リスクを減らすこと は 可 能。
+  349: list_item: ●予防のためのポイント
+  350: list_item: ・血管性認知症を予防する
+  351: list_item: ・アルツハイマー型認知症を予防する
+  352: list_item: ・脳の病気の加速因子を防ぐ
+ 353: section_header: 脑活性化の4原则
+ 354: list with name=list
+  355: list_item: 快刺激笑颜 心地刺激、笑、意欲脑内物 質（）<放出。
+  356: list_item: 安
+ 357: text: 社会の接触失、知機能の低下促進 。人家族時間切。
+ 358: list with name=list
+  359: list_item: 役割·日課 の役課取、生活充 、知機能の維持役立。
+  360: list_item: 低幼·低幼5机 放出 活動意欲高。
+ 361: key_value_area with name=group
+ 362: text: 教材：
+ 363: picture
+ 364: page_footer: 22 ， 23 ページ
+ 365: section_header: 早期の受診から前向きな生活へ
+ 366: section_header: ●診断は認知症専門の医療機関へ
+ 367: list with name=list
+  368: list_item: ・ 初期状態での診断は難しく、うつ状態などと区別がつきにくい ことがある。 ⇒ 熟練 した 技術 と 高 度な 検査 機 器 を 有 する 専門の医療機関への受診が重要 。
+ 369: section_header: ●早期に受診することのメリット
+ 370: list with name=list
+  371: list_item: ・原因疾患を 初期 に治療することで認知症状の進行を 遅 ら せ ることが 可 能
+  372: list_item: ・ 初期 段階であれ ば ある ほ ど、周囲から 受 け 入 れられやすい
+  373: list_item: ・ 大 切なのは認知症に診断された、その 先 の 暮 らし。
+  374: list_item: ・ 皆 さんも認知症サポーターとして、自 己 発 信 を 支援 していきまし ょ う。
+  375: list_item: ・ 希望 を 実 現さ せ るために、 少 しづつでも周りの人に 自 分 のことについて 話 し合うことが重要です。
+ 376: picture
+ 377: key_value_area with name=group
+ 378: page_footer: 教材：
+ 379: page_footer: 24 ページ

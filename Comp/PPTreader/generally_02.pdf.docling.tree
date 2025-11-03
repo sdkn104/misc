@@ -1,0 +1,801 @@
+0: unspecified with name=_root_
+ 1: section_header: 本資料の利用について
+ 2: list with name=list
+  3: list_item:  本資料は、「平成24年度特許庁大学知財研究推進事業」において、特許庁の委託 を受けた国立大学法人大阪大学知的財産センターが開発したものであり、著作者 人格権は国立大学法人大阪大学に、著作財産権は特
+  4: list_item:  本資料は、著作権法上認められる利用のほか、非営利目的に限り、改変・引用・ 複製・頒布を行うことができますが、これらの行為及びその内容に関する責任は利 用者自身が負うものとします。
+  5: list_item:  本資料は、正確を期して開発したものですが、不正確な情報や、古くなった情報を 含んでいる可能性があります。
+  6: list_item:  本資料を利用したことから生じるあらゆる損害・損失について、国立大学法人大阪 大学及び特許庁は、一切の責任を負いません。
+  7: list_item:  営利目的での利用、翻訳の希望その他、不明な点がありましたら、以下へご連絡く ださい。
+ 8: text: 特許庁企画調査課活用企画班 03-3581-1101 （内線）2165
+ 9: section_header: 第２時限 特許制度概要（２）
+ 10: page_footer: 2
+ 11: section_header: 第２時限　目次
+ 12: picture
+ 13: list with name=list
+  14: list_item: ２－１　特許制度と研究・開発者
+  15: list_item: ２－２　特許を受けることができる発明
+  16: list_item: ２－３　新規性について
+  17: list_item: ２－４　進歩性について
+  18: list_item: ２－５　特許権の効力について
+  19: list_item: ２－６　外国での特許権の取得について
+ 20: page_footer: 3
+ 21: picture
+ 22: text: ２－１
+ 23: section_header: 特許制度と研究・開発者
+ 24: picture
+  25: text: 出願
+  26: text: 特許
+  27: text: 権の
+  28: text: 発生
+  29: section_header: 研究・開発者と発明とのかかわり
+  30: text: 4
+  31: text: 発明の嗅ぎ分け
+  32: text: 出願しない
+  33: text: 研究立案
+  34: text: 文献調査
+  35: text: 実　験
+  36: text: 発明の完成
+  37: text: ノウハウとして 秘密管理
+  38: text: 成果発表
+  39: text: （論文・学会）
+  40: text: 特許権の利用
+  41: text: （ライセンス契約等）
+  42: text: 特許出願をする場合には、
+  43: text: 出願後に成果発表を！
+ 44: page_header: ２－1
+ 45: text: （目的）
+ 46: text: 第１条　この法律は、発明の保護及び利用を図ることにより、発明を 奨励し、もつて産業の発達に寄与することを目的とする。
+ 47: text: 発明の保護 （権利者）
+ 48: text: 特許は発明をオープン にすることが前提
+ 49: text: 発明の利用
+ 50: text: 一定期間独占権の付与 （模倣に対して「やめなさい！」 と言える権利）
+ 51: text: 勝 手 に 使 ったら ダメ ！
+ 52: text: 公開された発明をもとにした改良 技術の開発（改良発明の誘発、 新たな発明の機会）、 発明の利用等の促進
+ 53: text: 研究開発の無駄 （ロス）をなくす
+ 54: section_header: 特許制度の目的
+ 55: page_footer: 5
+ 56: page_header: ２－２
+ 57: section_header: 特許を受けることができる発明
+ 58: picture
+  59: text: 技術的 思想
+  60: text: 高
+  61: text: 度性
+  62: text: 創作性
+  63: text: 自 然 法 則 の利用
+  64: list with name=group
+   65: list_item: × 自 然 法 則 以外の法 則
+  66: list with name=group
+   67: list_item: →経済 法 則 等
+  68: list with name=group
+   69: list_item: × 人為的取り 決 め
+  70: list with name=group
+   71: list_item: →商売方 法等
+  72: list with name=group
+   73: list_item: × 自 然 法 則 自 体 （「利用」に あたらない
+  74: list with name=group
+   75: list_item: → 「 エネルギ ー保 存 の法 則 」、「 万有 引力の法 則 」自 体
+  76: list with name=group
+   77: list_item: × いわゆる技能
+  78: list with name=group
+   79: list_item: →フォ ー クボ ー ル の 投げ方 × 単 なる情報の提 示
+  80: list with name=group
+   81: list_item: →デジ タ ルカメ ラの 撮影デ ータ
+  82: list with name=group
+   83: list_item: × 美 的 創 作 物
+  84: list with name=group
+   85: list_item: →絵 画、 彫刻
+  86: text: 特許法　２ 項 １ 項 この法律で「発明」とは、自 然 法 則 を 利用した技術的 思想 の 創 作のう ち高 度のものをいう。
+  87: text: ○天然物
+  88: text: から人為的に分
+  89: text: 離
+  90: text: した
+  91: text: 化
+  92: text: 学
+  93: text: 物質
+  94: list with name=group
+   95: list_item: × 天然物 の 単 なる発 見 な ど
+  96: section_header: 参考：
+  97: text: 実用新案法２条１ 項 この法律で「 考 案」とは、 自 然 法 則 を利用した技術 的 思想 の 創 作をいう。
+  98: section_header: 発明であること
+  99: text: 特許要 件 の 詳細 は、次のスライ ド へ
+  100: page_footer: 6
+ 101: text: ２－２
+ 102: section_header: 特許を受けることができる発明
+ 103: key_value_area with name=group
+  104: text: ★ 前提 ： 「発明」であること（１－２
+  105: text: ．参照 ）
+ 106: picture
+  107: section_header: 該当 しないも
+  108: text: の
+  109: text: ：
+  110: text: ①
+  111: text: 特許
+  112: list with name=group
+   113: list_item: の 申請 前に テレビ な ど で 放送 さ れ、公 然 と知られたもの、
+  114: list with name=group
+   115: list_item: ② 特許の 申請 前に製 品 として 販 売 されるな ど して、公 然 と実 施 さ れたも
+  116: list with name=group
+   117: list_item: の、
+  118: list with name=group
+   119: list_item: ③ 特許の 申請 前に、 書籍 やイン ター ネット な ど で公表されたもの
+  120: text: ★ 前提 ： 「発明」であること（１－２
+  121: text: ．参照 ）
+  122: text: 紙幣 の 偽造 機 械 な ど 、 犯罪 につかわれ るもの等でないこと
+  123: section_header: 該当 しないもの ：
+  124: list with name=group
+   125: list_item: ① 人間を 手 術、 治療 、 診断 する 方 法
+  126: list with name=group
+   127: list_item: ②現 実に実 施 することが できないことが明らかなもの
+  128: list with name=group
+   129: list_item: ③個 人的にの み 実 施 され、
+  130: list with name=group
+   131: list_item: 市販 な ど の可能性がないもの
+  132: text: 産業上利用 できる ２ ９ 条１ 項柱 書
+  133: text: 新しい （新規性 ) ２ ９ 条１ 項各号
+  134: text: 同 一発明に つき、 先 に特 許出願がされ ていないこと ３ ９ 条
+  135: text: 容 易 に 考 え出す ことができない （進歩性 ) ２ ９ 条２ 項
+  136: text: 公 序 良 俗 に 反 しない ３２条
+  137: text: 出願 書類 が一 定の要 件 を 満 たしている ３６条
+  138: text: 手続 的要 件
+  139: section_header: 発明の要 件
+  140: page_footer: 7
+  141: text: o
+ 142: section_header: 第２時限　目次
+ 143: picture
+ 144: text: ２－１　特許制度と研究・開発者
+ 145: text: ２－２　特許を受けることができる発明
+ 146: text: ２－３　新規性について
+ 147: text: ２－４　進歩性について
+ 148: text: ２－５　特許権の効力について
+ 149: text: ２－６　外国での特許権の取得について
+ 150: page_footer: 8
+ 151: section_header: ２－３ 新規性について
+ 152: list with name=list
+  153: list_item: 1 ． 特許出願前に 日 本国内 又 は外国において公 然 知られた発明
+  154: list_item: 2 ． 特許出願前に 日 本国内 又 は外国において公 然 実 施 をされた発明
+  155: list_item: 3 ． 特許出願前に 日 本国内 又 は外国において、頒布された 刊 行 物 に 記載 された発明 又 は 電気通信回 線を 通 じて公 衆 に利用可能となつた発明　（2 9 条1 項 ）
+ 156: text: 新 規 性 が 喪 失 し て い る も の
+ 157: text: 公 然 と知られた発明
+ 158: text: 公 然 と実 施 された発明
+ 159: text: 刊 行 物 等に 記載 された発明
+ 160: list with name=list
+  161: list_item: × 発表、 テレビ放映
+  162: list_item: ×販売 、製 造状況 の不特定者 見 学
+  163: list_item: × 特許公報、論文、 CD -ROM 、 書籍 、インター ネット
+ 164: text: 新規性
+ 165: text: 新規性 喪 失の 例 外（第30条）
+ 166: list with name=list
+  167: list_item: ・自らが研究会発表
+  168: list_item: ・自らが 博覧 会へ出 品
+  169: list_item: ・自らが
+  170: list_item: ＴＶ に発表　　　等
+ 171: key_value_area with name=group
+  172: text: 例 外的 措置 ！！
+ 173: page_footer: 9
+ 174: section_header: 新規性（新しさ）とは ２－３
+ 175: section_header: 「新規性」がない発明とは
+ 176: list with name=list
+  177: list_item:  公 然 知られた発明
+  178: list_item:  例：口頭 発表、 ＴＶ放送
+  179: list_item:  公 然 実 施 をされた発明
+  180: list_item:  例：店 で 販売 、不特定 多数 の 客 の前での デモ
+  181: list_item:  頒布された 刊 行 物 に 記載 された発明
+  182: list_item:  例： 特許公報、論文、 書籍 、 パ ン フレット
+  183: list_item:  電気通信回 線を 通 じて公 衆 に利用可能となった発明
+  184: list_item:  例： インター ネット 上のウ ェブ で公開
+ 185: section_header: →注意 ！！！
+ 186: text: 守 秘 義務 のない第 三 者に発明の内容を 漏 らさないように
+ 187: picture
+ 188: picture
+ 189: picture
+ 190: picture
+ 191: page_footer: 10
+ 192: text: ２－３
+ 193: section_header: 新規性 喪 失の 例 外
+ 194: picture
+  195: text: 本人
+  196: text: 論文等で発表
+  197: text: ３
+  198: text: ０
+  199: text: 条
+  200: text: 適
+  201: text: 用出願
+  202: text: ６
+  203: text: 月
+  204: text: 以
+  205: text: 内
+  206: text: 証 明 書類 の提出
+  207: text: ３
+  208: text: ０
+  209: text: 日
+  210: text: 以
+  211: text: 内
+  212: section_header: 発表と出願のタイ ミ ン グ
+  213: text: 他人
+  214: text: 他人の出願
+  215: text: ○ 本人の出願 → 他人の 先 出願と 同 一であれ ば拒絶 される。 ○ 他人の出願 → 論文が公知技術となり 拒絶 されるが、 本人も特許が取れない場合がある。
+  216: text: 対
+  217: text: 象
+  218: text: 期
+  219: text: 間
+  220: text: 出願
+  221: text: 時手
+  222: text: 続
+  223: text: 日
+  224: text: 本
+  225: text: すべての公知行為
+  226: text: （特許公報等によ
+  227: text: る公開を除く）
+  228: text: ６
+  229: text: 月
+  230: text: 必
+  231: text: 要
+  232: text: 米
+  233: text: 国
+  234: text: すべての公知行為
+  235: text: １
+  236: text: 年
+  237: text: 不
+  238: text: 要
+  239: text: 欧
+  240: text: 州
+  241: text: 限定された国際博
+  242: text: 覧会
+  243: text: ６
+  244: text: 月
+  245: text: 必
+  246: text: 要
+  247: text: 中
+  248: text: 国
+  249: text: 限定された国際博
+  250: text: 覧会
+  251: text: 所定の学術会議ま
+  252: text: たは技術会議
+  253: text: ６
+  254: text: 月
+  255: text: 必
+  256: text: 要
+  257: text: 韓
+  258: text: 国
+  259: text: すべての公知行為
+  260: text: （特許公報等によ
+  261: text: る公開を除く）
+  262: text: １
+  263: text: 年
+  264: text: 必
+  265: text: 要
+  266: text: 新規性
+  267: text: 喪
+  268: text: 失の
+  269: text: 例
+  270: text: 外規定
+  271: text: 国
+  272: text: 際比較
+  273: text: 新規性
+  274: text: 喪
+  275: text: 失の
+  276: text: 例
+  277: text: 外の
+  278: text: 適
+  279: text: 用
+  280: text: が受けられる場合
+  281: text: （特許法第３ ０ 条）
+  282: text: 特許を受ける権利を
+  283: text: 持
+  284: text: っている人
+  285: text: （発明者や発明者から権利を
+  286: text: 譲渡
+  287: text: された者）
+  288: text: の行為による
+  289: list with name=group
+   290: list_item: ○刊 行 物 やインター ネット を 通 じた発表 ○刊 行 物 やインター ネット を 通 じた発表
+  291: list with name=group
+   292: list_item: 研究 集 会（学会）での発表 ○ 研究 集 会（学会）での発表
+  293: text: や
+  294: text: 博覧
+  295: text: 会への出
+  296: text: 品
+  297: list with name=group
+   298: list_item: ○ＴＶ ・ラ ジ オでの公表 ○ＴＶ ・ラ ジ オでの公表
+  299: list with name=group
+   300: list_item: 製 品 の 販売 ○ 製 品 の 販売
+  301: text: な
+  302: text: ど
+  303: text: 特許を受ける権利を
+  304: text: 持
+  305: text: っている人
+  306: text: （発明者や発明者から権利を
+  307: text: 譲渡
+  308: text: された者）
+  309: text: の行為による
+  310: text: や
+  311: text: 博覧
+  312: text: 会への出
+  313: text: 品
+  314: text: な
+  315: text: ど
+  316: text: その 結 果 その 結 果
+  317: text: 発明が 初 めて 公知となる 発明が 初 めて 公知となる
+ 318: page_footer: 11
+ 319: section_header: 新規性（新しさ）の 判断手 法 ２－３
+ 320: section_header: 発明の パ ー ツ （発明特定事 項 ）の 比較 による 判断
+ 321: text: 12
+ 322: section_header: 自 己 の発明
+ 323: section_header: 先 行技術
+ 324: text: 矩形形状 の（要 件A ） ス テ ン レ ス製 ケ ースに（ Ｂ ） 滑 り 止 めの 塗 料を 塗 った（ Ｃ ） 携帯電話 （ Ｄ ）
+ 325: text: 矩形形状 の（要 件Ａ ） ス テ ン レ ス製 ケ ースに（ Ｂ ） 滑 り 止 めの 塗 料を 塗 った（ Ｃ ） デジ タ ルカメ ラ（ E ）
+ 326: key_value_area with name=group
+  327: text: Ａ＋Ｂ＋Ｃ＋Ｄ
+  328: text: 相違 点
+  329: text: ：Ｄ と Ｅ
+ 330: text: 新しい！！！
+ 331: text: Ａ＋Ｂ＋Ｃ＋Ｅ
+ 332: page_footer: 12
+ 333: section_header: 新規性の 判断手 法 ２－３
+ 334: section_header: 上 位 概 念 ・下 位 概 念
+ 335: text: 13
+ 336: picture
+  337: text: 乗物
+  338: text: 電車
+  339: text: 車両
+ 340: section_header: 上 位 概 念= より 抽象 的
+ 341: text: 〔車両 （ 乗物 ） 〕
+ 342: list with name=list
+  343: list_item: ・後の発明を「新規性なし」として 排除 できる可能性が 低 い
+  344: list_item: ・権利 範囲 が 広 い
+ 345: section_header: 下 位 概 念= より 具体 的
+ 346: text: 〔電車 、 車両 、 乗物〕
+ 347: list with name=list
+  348: list_item: ・後の発明を「新規性なし」として 排除 できる可能性が 高 い
+  349: list_item: ・権利 範囲 が 狭 い
+ 350: page_footer: 13
+ 351: section_header: 新規性の 判断手 法 ２－３
+ 352: section_header: 特許発明が 包 含する技術的 範囲 による 判断
+ 353: text: 14 発明 α （公知発明） 断面六角形 （ Ａ ） の 鉛筆 （ Ｂ ） 発明 α （公知発明） 断面六角形 （ Ａ ） の 鉛筆 （ Ｂ ）
+ 354: picture
+  355: text: 発明 α
+  356: text: 発明 β
+  357: text: 上 位 概 念
+ 358: text: ）
+ 359: text: 発明 β （出願１） 断面六角形 （ Ａ 消 し ゴム 付（ Ｃ ） の 鉛筆 （ Ｂ ） 発明 β （出願１） 断面六角形 （ Ａ 消 し ゴム 付（ Ｃ ） の 鉛筆 （ Ｂ ）
+ 360: text: ）
+ 361: text: 下 位 概 念 （ 範囲 内） 発明 α に対して 新規性 有 り
+ 362: text: （ ※ ）利用発明
+ 363: text: 発明 γ
+ 364: text: 発明 γ （出願２） 断面六角形 （ Ａ ） 消 し ゴム 付（ Ｃ ） の ボ ー ルペ ン（ Ｄ 発明 γ （出願２） 断面六角形 （ Ａ ） 消 し ゴム 付（ Ｃ ） の ボ ー ルペ ン（ 
+ 365: text: ）
+ 366: text: 上 位 ・下 位 でない（ 範 囲 外） 発明 α に対して
+ 367: text: 新規性
+ 368: text: 有 り
+ 369: page_footer: 14
+ 370: section_header: 第２時限　目次
+ 371: picture
+ 372: list with name=list
+  373: list_item: ２－１　特許制度と研究・開発者
+ 374: text: ２－２　特許を受けることができる発明
+ 375: list with name=list
+  376: list_item: ２－３　新規性について
+  377: list_item: ２－４　進歩性について
+  378: list_item: ２－５　特許権の効力について
+ 379: text: ２－６　外国での特許権の取得について
+ 380: page_footer: 15
+ 381: section_header: 進歩性の 判断 について ２－４
+ 382: text: 特許出願前にその発明の属する技術の分 野 における 通常 の知 識 を 有 する者が前 項各号 に 掲げ る発 明に 基 いて容 易 に発明をすることができたときは、その発明については、 同項 の規定
+ 383: picture
+  384: list with name=group
+   385: list_item: 当 業者から み て、その発明に 至 る 考 え 方 の 道筋 が容 易 かを 判断
+  386: list with name=group
+   387: list_item: ① 公 然 と知られた発明や実 施 された発明を 単 に寄せ 集 めただけにすぎない発明
+  388: list with name=group
+   389: list_item: ② 発明の 構 成要 素 の一 部 を 置 き 換 えたにすぎない発明
+  390: text: 新規性・進歩性の 判断
+  391: text: 進歩性
+  392: page_footer: 16
+  393: text: 現在の技術儿 公知证来技術）
+  394: text: 新规性以
+  395: text: 新规性女
+  396: text: 新规性女
+  397: text: 進步性女儿
+  398: text: 進步性以
+  399: text: 細線の）
+  400: text: 太線の
+  401: text: 可能> 差L替
+  402: text: 田上太線用 贴付付
+ 403: section_header: 進歩性とは ２－４
+ 404: text: 当 業者（ ※ ）が 先 行技術から容 易 に 考 えだせる （ ＝ 進歩性を 有 していない）と 判断 される 例
+ 405: list with name=list
+  406: list_item:  最 適 材 料の 選択 ・ 設計 変 更
+  407: list_item:  単 なる寄せ 集 め
+  408: list_item:  作用、機能の 共 通 性
+  409: list_item:  技術分 野 の関連性
+  410: list_item:  引用文献 中 の 示 唆
+  411: list_item:  課 題 の 共 通 性
+ 412: text: ※当 業者 ： その技術分 野 について 通常 の知 識 を 持 つ者 複 数 の技術分 野 の 専門家 からなる「 チ ー ム 」
+ 413: picture
+ 414: page_footer: 17
+ 415: section_header: 進歩性とは ２－４
+ 416: text: 18
+ 417: list with name=list
+  418: list_item: 一 見 容 易 とされる場合も … 先 行技術と 比 べ て
+ 419: text: ・
+ 420: text: ・
+ 421: list with name=list
+  422: list_item: 異 質 な効果
+  423: list_item: 同質 であるが 際 立って 優 れた効果
+ 424: text: があり、これらの効果を 当 業者が 予測 できない場合は 進歩性の 存 在 が推認される。
+ 425: page_footer: 18
+ 426: section_header: 進歩性とは ２－４
+ 427: picture
+  428: text: 単 なる寄せ 集 め 例： 音声 確認と 指紋 確認
+  429: text: 作用・機能の 共 通 性 例： 光触媒材 料を 被覆
+  430: text: 課 題 の 共 通 性 例： ガ イ ド 機能付き
+  431: text: 引用文献 中 の 示 唆 例：デ ィ スプ レ イ
+  432: text: 最 適 材 料の 選択 ・ 設計 変 更 例：ケ ースの 材 料
+  433: text: 技術分 野 の関連性 例： 雑音 除 去 機能
+  434: section_header: 進歩性 判断 の 例 （ 携帯電話 に以下の 工夫 をした場合・・・ ？ ）
+  435: page_footer: 19
+ 436: section_header: 進歩性が 否 定される事 例 ２－４
+ 437: section_header: － 最 適 材 料の 選択 ・ 設計 変 更 －
+ 438: text: 最 適 材 料の 選択 、 数 値 範囲 の 最 適化 、 具体 的 適 用に 伴 う 設計 変 更
+ 439: text: 【 本願発明 】 ケ ースを 厚 さ0 . 5 ～ 0 . 8 mm の F R P とした 携帯電話
+ 440: list with name=list
+  441: list_item: ※ 繊維強 化 プラス テ ィ ック
+ 442: section_header: 【 文献１ 】
+ 443: text: 携帯電話 の ケ ースは 厚 いほ ど 強 度が 高 いが、 全 体 の 寸 法を 考 慮 すると 1 . 0 ～ 1 . 5 mm の 厚 さが 好 ましい
+ 444: text: 数 値 範囲 の 最 適化 強 度と 小型 化 の 両 立のための ケ ースの 厚 さを 決 定する
+ 445: text: 【 本願効果 】 F R P を用いることにより、 強 度を 維 持 しつつ 携帯電話 の 小型 化 を図る
+ 446: text: 【 文献２ 】 ケ ースに F R P を用いた 電 子 手 帳 F R P は 強 度が 強 いため、 厚 さを0 . 9 ～ 1 . 2 mm と 薄 くすることができる
+ 447: text: 公知の 材 料からの 選択 ＦＲＰ を用いることにより ケ ースを 薄 くすることができる
+ 448: page_footer: 20
+ 449: section_header: 進歩性が 否 定される事 例 ２－４
+ 450: section_header: － 単 なる寄せ 集 め－
+ 451: text: 各 々 が機能的 又 は作用的に関連していない
+ 452: section_header: 【 本願効果 】 指紋 の他に 声紋 により本人 確認を行うことで一 層厳 密な 確認をすることができる
+ 453: section_header: 【 文献２ 】 声紋 で 登録 者を確認する
+ 454: text: 音声 確認 手 段 を 備 えた 携帯電話
+ 455: section_header: 【 本願発明 】
+ 456: text: 指紋 で本人確認する 指紋 確認 手 段 と 声紋 で本人確認する 音声 確認 手 段 と を 備 えた 携帯電話
+ 457: text: 【 文献１ 】
+ 458: text: 指紋 で 登録
+ 459: text: 者を確認する
+ 460: text: 指紋 確認 手 段 を 備 えた 携帯電話
+ 461: text: 指紋 確認 手 段 と 音声 確認 手 段 に 機能的、作用的な関連がない
+ 462: picture
+ 463: page_footer: 21
+ 464: section_header: 進歩性が 否 定される事 例 ２－４
+ 465: section_header: －作用・機能の 共 通 性－
+ 466: text: 分 野 が 異 なっても作用、機能が 共 通 することは、 有 力な 根拠 となる
+ 467: text: 【 本願発明 】 本 体 表 面 を 光触媒材 料で 被覆 した 携帯電話
+ 468: text: 【 文献１ 】 本 体 表 面 に 銀 イオンを 担 持 させた
+ 469: text: 携帯電話
+ 470: picture
+ 471: text: 【 本願効果 】 本 体 表 面 に 抗菌 性を 付与したため 衛 生的である。
+ 472: text: 【 文献２ 】
+ 473: text: 本 体 を
+ 474: text: 光触媒材 料で 被覆 した 筆記具
+ 475: text: 作用・機能が 共 通 （ 抗菌 性を付与）
+ 476: picture
+ 477: picture
+ 478: page_footer: 22
+ 479: section_header: 進歩性が 否 定される事 例 ２－４
+ 480: section_header: －技術分 野 の関連性－
+ 481: text: 課 題解 決 のために、関連する技術分 野 の技術 手 段 を 適 用したもの
+ 482: text: 【 本願発明 】 周辺 の 騒音 と 逆 位相 の 音波 を 発するノイ ズキャ ンセ ル 機能を 備 えた 携帯電話
+ 483: picture
+  484: text: 【 文献１ 】 携帯電話
+ 485: text: 関連する技術分 野 の技術を 適 用 （ 音声 を 送 受 信 する 装 置 ）
+ 486: picture
+  487: text: WM
+ 488: text: 【 本願効果 】 周辺 の 騒音 の 影 響 を 軽減
+ 489: text: できる
+ 490: text: 【 文献２ 】 周辺 の 騒音 と 逆 位相 の 音波 を 発するノイ ズキャ ンセ ル 機能を 備 えた ト ラン シ ー バ ー
+ 491: picture
+ 492: page_footer: 23
+ 493: section_header: 進歩性が 否 定される事 例 ２－４
+ 494: section_header: －引用文献 中 の 示 唆 －
+ 495: text: 引用発明の内容に 示 唆 があれ ば 、 有 力な 根拠 となる
+ 496: text: 【 本願発明 】 デ ィ スプ レ イに発 光 ダ イオー ド を用いた 携帯電話
+ 497: section_header: 【 文献１ 】
+ 498: text: デ ィ スプ レ イに 液晶 を用いた 携帯電話 。 なお、発 光 ダ イオー ド を用いることにより、 更 に 省 エネ 性に 優 れたものとなるが 現 在 、 青色 は 未 開発である。
+ 499: text: 【 本願効果 】 省 エネ 性に 優 れた 携帯電話
+ 500: text: 【 文献２ 】 街 頭 の デ ィ スプ レ イには、 発 光 ダ イオー ド が 用いられている。
+ 501: text: 引用文献 中 の 示 唆
+ 502: picture
+ 503: page_footer: 24
+ 504: section_header: 進歩性が 否 定される事 例 ２－４
+ 505: picture
+  506: text: 課 題 が 共 通 することは、 有 力な 根拠 となる
+  507: text: 【 本願発明 】 操 作 キ ーが 操 作された 際 に 操 作内容を 音声 で 教 示 する 携帯電話
+  508: text: 【 本願効果 】 目の不自 由 な 使 用者の 操 作を容 易 にする
+  509: text: 【 文献１ 】
+  510: text: 操 作 キ ーに点 字 を付 設 した
+  511: text: 携帯電話
+  512: text: 【 文献２ 】 操 作 キ ーが 操 作された 際 に 操 作内容を 音声 で 教 示 する エ アコ ン用 リ モ コ ン
+  513: text: 技術分 野 は 異 なるが 課 題 が 共 通 する
+  514: text: GUI DE
+  515: section_header: －課 題 の 共 通 性－
+  516: page_footer: 25
+ 517: section_header: 進歩性の 判断 ２－４
+ 518: section_header: 数 値 限定を 伴 った発明の 考 え 方
+ 519: section_header: 数 値 を限定した場合
+ 520: list with name=list
+  521: list_item:  数 値 範囲 内の 全 ての 部 分で効果がある
+  522: list_item:  臨界 的 意義 （ ※ ）がある
+  523: list_item: の 両方 を 満 たす 必 要がある
+ 524: section_header: 臨界 的 意義 とは・・・
+ 525: text: 発明が 先 行技術の 延長 線上にあるときに、 （課 題 が 共 通 し、 装 置 が 数 値 限定の 有 無の み の場合） 効果がその 数 値 限定の内と外で 量 的に 顕 著な 差異 があること
+ 526: page_footer: 26
+ 527: section_header: 第２時限　目次
+ 528: picture
+ 529: text: ２－１　特許制度と研究・開発者
+ 530: text: ２－２　特許を受けることができる発明
+ 531: text: ２－３　新規性について
+ 532: text: ２－４　進歩性について
+ 533: text: ２－５　特許権の効力について
+ 534: text: ２－６　外国での特許権の取得について
+ 535: page_footer: 27
+ 536: section_header: 特許権の効力 ２－５
+ 537: section_header: ① 積極 的効力と 消 極 的効力
+ 538: section_header: 積極 的効力 積極 的効力
+ 539: text: 特許権者が、特許発明を独占的 に実 施 することができる効力。
+ 540: section_header: 消 極 的効力 消 極 的効力
+ 541: text: 他人による実 施 を 排除 できる効 力（ 排 他性）。
+ 542: picture
+  543: text: 独占的に実 施
+  544: text: 他者を 排除
+  545: text: 特許権の 範囲
+ 546: text: 「特許権者は、業として特許発明の実 施 をする権利を 専有 する」（６ ８ 条） 特許権者自身による実 施 の み なら ず 、実 施 許 諾 した者を 通 じて特許発明を実 施 すること も 積極 
+ 547: section_header: ② 特許権の保護期間および発生・ 消 滅
+ 548: text: 「産業の発 展 」に 必 要かつ 適 切な期間に限って保護される。 → 出願から２ ０ 年 権利の発生は、 設 定 登録 の 日 （特許権の 存続 期間の 延長 制度利用の場
+ 549: picture
+ 550: text: 合
+ 551: page_footer: 28
+ 552: section_header: 第２時限　目次
+ 553: picture
+ 554: text: ２－１　特許制度と研究・開発者
+ 555: text: ２－２　特許を受けることができる発明
+ 556: text: ２－３　新規性について
+ 557: text: ２－４　進歩性について
+ 558: text: ２－５　特許権の効力について
+ 559: text: ２－６　外国での特許権の取得について
+ 560: page_footer: 29
+ 561: page_header: ２－６
+ 562: section_header: 外国での特許権の取得について
+ 563: text: Q. どうして外国で特許を取る必要があるのか？
+ 564: section_header: 特許権はそれを取得した国でしか効力がない（各国特許独立の原 則）
+ 565: text: 特許権等の効力は権利を取得した国の中でしか及ばない（属地主義）。 特許に係る製品が外国で製造 販売等される場合は外国出願を検討する必要がある。 ・
+ 566: picture
+ 567: text: Q. 外国出願するとき、どのような方法があるか？
+ 568: list with name=list
+  569: list_item: ①直接各国に出願をするルート（パリ優先ルート） ②国際出願経由で各国へ移行するルート（ＰＣＴルー ト）
+ 570: picture
+ 571: page_footer: 30
+ 572: text: ２－６
+ 573: section_header: 外国での特許権の取得について
+ 574: picture
+  575: text: Ｐ
+  576: text: ＣＴル
+  577: text: ー
+  578: text: ト
+  579: text: 受理
+  580: text: 官
+  581: text: 庁
+  582: text: 受理
+  583: text: 官
+  584: text: 庁
+  585: text: 国
+  586: text: 際
+  587: text: 調査
+  588: text: 国 際 公開（１ ８ 月 ）
+  589: text: 予備審
+  590: text: 査
+  591: text: 請
+  592: text: 求
+  593: text: 各 国の法 令 にしたがって権利が付与
+  594: text: 米
+  595: text: 国
+  596: text: 米
+  597: text: 国
+  598: text: Ｅ
+  599: text: ＰＯ
+  600: text: Ｅ
+  601: text: ＰＯ
+  602: text: 各
+  603: text: 指
+  604: text: 定国に翻訳文を提出
+  605: text: （出願から３
+  606: text: ０月
+  607: text: ）
+  608: text: パ
+  609: text: リ
+  610: text: 条約
+  611: text: ル
+  612: text: ー
+  613: text: ト
+  614: text: 各 国の法 令 で定められた 様式 、言 語 によりそれ ぞ れ出願
+  615: text: 米
+  616: text: 国
+  617: text: 米
+  618: text: 国
+  619: text: Ｅ
+  620: text: ＰＯ
+  621: text: Ｅ
+  622: text: ＰＯ
+  623: text: 各
+  624: text: 国の法
+  625: text: 令
+  626: text: にしたがって権利を付与
+  627: text: 優
+  628: text: 先
+  629: text: 権
+  630: text: 主張
+  631: text: をし、　　　　　12
+  632: text: 月
+  633: text: 以内に外国出願
+  634: text: 基
+  635: text: 礎
+  636: text: 出願
+  637: text: ＝
+  638: text: 日
+  639: text: 本特許庁
+  640: page_footer: 31
+ 641: section_header: ２－６
+ 642: section_header: 補 論 ：パ リ 条約の 優 先 権
+ 643: text: パ リ 条約による 優 先 権の 主張 を 伴 う出願である場合、第一国出願の明 細書 等と 我 が国への出願時の願 書 に 最 初 に 添 付した明 細書 、特許 請 求 の 範囲又 は図 面 （以
+ 644: picture
+  645: text: 第１国出願
+  646: text: 日
+  647: text: 本出願
+  648: text: １年以内に
+  649: text: 日
+  650: text: 本へ出願
+  651: text: 出願公開
+  652: text: 第１国出願より１年６
+  653: text: ヶ
+  654: text: 月
+  655: text: で出願公開
+  656: text: 発明
+  657: text: A
+  658: text: 、
+  659: text: B
+  660: text: 、
+  661: text: C
+  662: text: 発明
+  663: text: A
+  664: text: 、
+  665: text: B
+  666: text: 、
+  667: text: D
+  668: text: A
+  669: text: 、
+  670: text: B
+  671: text: は第１国出願
+  672: text: 日
+  673: text: に
+  674: text: 日
+  675: text: 本出願、
+  676: text: D
+  677: text: につ
+  678: text: いては
+  679: text: 日
+  680: text: 本出願
+  681: text: 日
+  682: text: に
+  683: text: 出願されたものと
+  684: text: 扱
+  685: text: う。
+ 686: page_footer: 32
+ 687: page_header: ２－６
+ 688: section_header: 主 要 五 か国の 近 年の出願 件数 の推 移
+ 689: picture
+  690: text: 0
+  691: text: 100000
+  692: text: 200000
+  693: text: 300000
+  694: text: 400000
+  695: text: 500000
+  696: text: 600000
+  697: text: 2005
+  698: text: 2006
+  699: text: 2007
+  700: text: 2008
+  701: text: 2009
+  702: text: 2010
+  703: text: 2011
+  704: text: 日
+  705: text: 本
+  706: text: ア
+  707: text: メ
+  708: text: リ
+  709: text: カ
+  710: text: 欧州
+  711: text: 中
+  712: text: 国
+  713: text: 韓
+  714: text: 国
+ 715: page_footer: ※ 特許行 政 年次報 告 書 ＜統計 ・資料 編＞ ２ ０ １ ０ 年 版 、２ ０ １１年 版 、２ ０ １２年 版 を 基 に作成
+ 716: page_footer: 33
+ 717: section_header: 海 外から 主 要 五 か国への出願 件数 の推 移 （ 主 要 五 か国への外国人出願） ２－６
+ 718: picture
+  719: text: 300000
+  720: text: 250000
+  721: text: 200000
+  722: text: ←日本
+  723: text: 十了刘力
+  724: text: 150000
+  725: text: +欧州
+  726: text: 中国
+  727: text: 100000
+  728: text: 米韓国
+  729: text: 50000
+  730: text: 2005
+  731: text: 2006
+  732: text: 2007
+  733: text: 2008
+  734: text: 2009
+  735: text: 2010
+  736: text: 2011
+ 737: text: ※ 特許行 政 年次報 告 書 ２ ０ １２年 版 、 ＵＳＰ Ｔ Ｏ 、 Ｅ ＰＯ 、 ＳＩＰＯ 、 ＫＩＰＯ 各 ホ ー ムペ ー ジ を 基 に作成
+ 738: page_footer: 34
+ 739: section_header: 主 要 五 か国 各 国への他の 四 か国からの出願 件数 （２ ０ １ ０ 年度） ２－６
+ 740: picture
+  741: text: 海外办の出件数
+  742: text: 250000
+  743: text: 200000
+  744: text: 150000
+  745: text: 100000
+  746: text: 出件数
+  747: text: 50000
+  748: text: 了力入
+  749: text: 中国^
+  750: text: 欧州^
+  751: text: 日本^
+  752: text: 韓国~
+  753: text: 出件数
+  754: text: 197043
+  755: text: 94179
+  756: text: 68107
+  757: text: 50240
+  758: text: 36231
+ 759: text: ※特許行政年次報告書２０１２年版を基に作成
+ 760: page_footer: 35
+ 761: section_header: 主 要 五 か国（ 日 本 除 く）から他の４か国への 出願 状況 （２ ０ １ ０ 年度） ２－６
+ 762: picture
+  763: text: ※特許行政年次報告書２０１２年版を基に作
+  764: text: 36
+  765: text: 力の出件数
+  766: text: 欧州办5の出原件数
+  767: text: 韓国
+  768: text: 韓国
+  769: text: 11516
+  770: text: 9852
+  771: text: 日本
+  772: text: 日本
+  773: text: 21122
+  774: text: 23183
+  775: text: 中国
+  776: text: 27739
+  777: text: 中国
+  778: text: 25380
+  779: text: 刘力
+  780: text: 78824
+  781: text: 欧州
+  782: text: 39519
+  783: text: 韩国加5の出件数
+  784: text: 中国办6の出件数
+  785: text: 欧州
+  786: text: 4715
+  787: text: 韓国
+  788: text: 517
+  789: text: 日本
+  790: text: 4872
+  791: text: 日本
+  792: text: 1063
+  793: text: 中国
+  794: text: 7178
+  795: text: 欧州
+  796: text: 2049
+  797: text: 划力
+  798: text: 26040
+  799: text: 力
+  800: text: 8162

@@ -1,0 +1,267 @@
+0: unspecified with name=_root_
+ 1: section_header: 第２時限 特許制度概要（２）
+ 2: page_footer: 1
+ 3: section_header: 第２時限　目次
+ 4: picture
+ 5: list with name=list
+  6: list_item: ２－１　特許制度と研究・開発者
+  7: list_item: ２－２　特許を受けることができる発明
+  8: list_item: ２－３　新規性について
+  9: list_item: ２－４　進歩性について
+  10: list_item: ２－５　特許権の効力について
+  11: list_item: ２－６　外国での特許権の取得について
+ 12: page_footer: 2
+ 13: page_header: ２－1
+ 14: text: （目的）
+ 15: text: 第１条　この法律は、発明の保護及び利用を図ることにより、発明を 奨励し、もつて産業の発達に寄与することを目的とする。
+ 16: text: 発明の保護 （権利者）
+ 17: text: 特許は発明をオープン にすることが前提
+ 18: text: 発明の利用
+ 19: text: 一定期間独占権の付与 （模倣に対して「やめなさい！」 と言える権利）
+ 20: text: 勝手に使ったらダメ！
+ 21: list with name=list
+  22: list_item: 公開された発明をもとにした改良
+ 23: text: 技術の開発（改良発明の誘発、 新たな発明の機会）、 発明の利用等の促進
+ 24: text: 研究開発の無駄 （ロス）をなくす
+ 25: section_header: 特許制度の目的
+ 26: page_footer: 3
+ 27: page_header: ２－２
+ 28: section_header: 特許を受けることができる発明
+ 29: picture
+  30: text: 技術的 思想
+  31: text: 高度性
+  32: text: 創作性
+  33: text: 自然法則 の利用
+  34: list with name=group
+   35: list_item: ×自然法則以外の法則
+  36: list with name=group
+   37: list_item: →経済法則等
+  38: list with name=group
+   39: list_item: ×人為的取り決め
+  40: list with name=group
+   41: list_item: →商売方法等
+  42: list with name=group
+   43: list_item: ×自然法則自体（「利用」に あたらない
+  44: list with name=group
+   45: list_item: →「エネルギー保存の法 則」、「万有引力の法則」自体
+  46: list with name=group
+   47: list_item: × いわゆる技能
+  48: list with name=group
+   49: list_item: →フォークボールの投げ方
+  50: list with name=group
+   51: list_item: × 単なる情報の提示
+  52: list with name=group
+   53: list_item: →デジタルカメラの撮影データ
+  54: list with name=group
+   55: list_item: × 美的創作物
+  56: list with name=group
+   57: list_item: →絵画、彫刻
+  58: list with name=group
+   59: list_item: ○天然物から人為的に分 離した化学物質
+  60: list with name=group
+   61: list_item: × 天然物の単なる発見な ど
+  62: section_header: 参考：
+  63: text: 実用新案法２条１項 この法律で「考案」とは、 自然法則を利用した技術 的思想の創作をいう。
+  64: section_header: 発明であること
+ 65: text: 特許法　２項１項　この法律で「発明」とは、自然法則を 利用した技術的思想の創作のうち高度のものをいう。
+ 66: text: 特許要件の詳細は、次のスライドへ
+ 67: text: 4
+ 68: section_header: ２－３ 新規性について
+ 69: list with name=list
+  70: list_item: 1．特許出願前に日本国内又は外国において公然知られた発明
+  71: list_item: 2．特許出願前に日本国内又は外国において公然実施をされた発明
+  72: list_item: 3．特許出願前に日本国内又は外国において、頒布された刊行物に記載された発明 又は電気通信回線を通じて公衆に利用可能となつた発明　（29条1項）
+ 73: text: 新 規 性 が 喪 失 し て い る も の
+ 74: text: 公然と知られた発明
+ 75: text: 公然と実施された発明
+ 76: text: 刊行物等に記載された発明
+ 77: list with name=list
+  78: list_item: ×発表、 テレビ放映
+  79: list_item: × 販 売、 製造状況 の 不 特定者見学
+  80: list_item: ×特許公報、 論文 、 CD-ROM 、 書籍 、インターネ ット
+ 81: text: 新規性
+ 82: text: 新規性喪失の例外（第30条）
+ 83: list with name=list
+  84: list_item: ・自らが研究会発表
+  85: list_item: ・自らが博覧会へ出品
+  86: list_item: ・自らがＴＶに発表　　　等
+ 87: key_value_area with name=group
+  88: text: 例外的 措置 ！！
+ 89: page_footer: 5
+ 90: text: ２－３
+ 91: section_header: 新規性喪失の例外
+ 92: picture
+  93: text: 本人
+  94: text: 論文 等で発表
+  95: text: ３
+  96: text: ０
+  97: text: 条
+  98: text: 適
+  99: text: 用出願
+  100: text: ６
+  101: text: 月
+  102: text: 以
+  103: text: 内
+  104: text: 証
+  105: text: 明
+  106: text: 書類
+  107: text: の提出
+  108: text: ３
+  109: text: ０
+  110: text: 日
+  111: text: 以
+  112: text: 内
+  113: section_header: 発表と出願のタイ ミ ン グ
+  114: text: 他
+  115: text: 人
+  116: text: 他
+  117: text: 人の出願
+  118: text: ○本人の出願→ 他 人の 先 出願と 同 一であれ ば拒絶 される。 ○ 他 人の出願→ 論文 が公知技術となり 拒絶 されるが、 本人も特許が取れない 場合 がある。
+  119: text: 対
+  120: text: 象
+  121: text: 期
+  122: text: 間
+  123: text: 出願
+  124: text: 時手
+  125: text: 続
+  126: text: 日
+  127: text: 本
+  128: text: すべての公知行為
+  129: text: （特許公報等によ
+  130: text: る公開を除く）
+  131: text: ６
+  132: text: 月
+  133: text: 必
+  134: text: 要
+  135: text: 米
+  136: text: 国
+  137: text: すべての公知行為
+  138: text: １
+  139: text: 年
+  140: text: 不
+  141: text: 要
+  142: text: 欧
+  143: text: 州
+  144: text: 限定された国際博
+  145: text: 覧会
+  146: text: ６
+  147: text: 月
+  148: text: 必
+  149: text: 要
+  150: text: 中
+  151: text: 国
+  152: text: 限定された国際博
+  153: text: 覧会
+  154: text: 所定の学術会議ま
+  155: text: たは技術会議
+  156: text: ６
+  157: text: 月
+  158: text: 必
+  159: text: 要
+  160: text: 韓
+  161: text: 国
+  162: text: すべての公知行為
+  163: text: （特許公報等によ
+  164: text: る公開を除く）
+  165: text: １
+  166: text: 年
+  167: text: 必
+  168: text: 要
+  169: text: 新規性喪失の例外規定
+  170: text: 国
+  171: text: 際比較
+  172: text: 新規性喪失の例外の
+  173: text: 適
+  174: text: 用
+  175: text: が受けられる 場合
+  176: text: （特許法第３ ０ 条）
+  177: text: 特許を受ける権利を
+  178: text: 持
+  179: text: っている人
+  180: text: （発明者や発明者から権利を
+  181: text: 譲渡
+  182: text: された者）
+  183: text: の行為による
+  184: list with name=group
+   185: list_item: ○刊行物やインターネ ット を通じた発表 ○刊行物やインターネ ット を通じた発表
+  186: list with name=group
+   187: list_item: ○研究 集 会（学会）での発表 ○研究 集 会（学会）での発表
+  188: text: や博覧会への出品
+  189: list with name=group
+   190: list_item: ○ＴＶ・ラジオでの公表 ○ＴＶ・ラジオでの公表
+  191: list with name=group
+   192: list_item: 製 品の 販 ○ 製 品の 販
+  193: text: 売　　　　など
+  194: text: 特許を受ける権利を
+  195: text: 持
+  196: text: っている人
+  197: text: （発明者や発明者から権利を
+  198: text: 譲渡
+  199: text: された者）
+  200: text: の行為による
+  201: text: や博覧会への出品
+  202: text: 売　　　　など
+  203: text: そ の 結果 そ の 結果
+  204: text: 発明が 初 めて 公知となる 発明が 初 めて 公知となる
+ 205: page_footer: 6
+ 206: section_header: 新規性（新しさ）の 判断 手法 ２－３
+ 207: section_header: 発明の パ ー ツ （発明特定 事 項）の 比較 による 判断
+ 208: text: 7
+ 209: section_header: 自 己 の発明
+ 210: section_header: 先 行技術
+ 211: text: 矩形形状 の（要件 A ） ス テ ン レ ス 製ケ ースに（ Ｂ ） 滑 り 止 めの 塗料 を 塗 った（ Ｃ ） 携帯 電 話 （ Ｄ ）
+ 212: text: 矩形形状 の（要件 Ａ ） ス テ ン レ ス 製ケ ースに（ Ｂ ） 滑 り 止 めの 塗料 を 塗 った（ Ｃ ） デジタルカメラ（ E ）
+ 213: key_value_area with name=group
+  214: text: Ａ＋Ｂ＋Ｃ＋Ｄ
+  215: text: 相違点
+  216: text: ： Ｄ と Ｅ
+ 217: text: 新しい！！！
+ 218: text: Ａ＋Ｂ＋Ｃ＋Ｅ
+ 219: page_footer: 7
+ 220: section_header: 新規性の 判断 手法 ２－３
+ 221: section_header: 特許発明が 包含 する技術的 範囲 による 判断
+ 222: text: 8 発明 α （公知発明） 断面六角形 （ Ａ ） の 鉛筆 （ Ｂ ） 発明 α （公知発明） 断面六角形 （ Ａ ） の 鉛筆 （ Ｂ ）
+ 223: picture
+  224: text: 発明 α
+  225: text: 発明 β
+  226: text: 上位 概 念
+ 227: text: ）
+ 228: text: 発明 β （出願１） 断面六角形 （ Ａ 消 し ゴム 付（ Ｃ ） の 鉛筆 （ Ｂ ） 発明 β （出願１） 断面六角形 （ Ａ 消 し ゴム 付（ Ｃ ） の 鉛筆 （ Ｂ ）
+ 229: text: ）
+ 230: text: 下位 概 念 （ 範囲 内） 発明 α に対して 新規性有り
+ 231: text: （ ※ ）利用発明
+ 232: text: 発明 γ
+ 233: text: 発明 γ （出願２） 断面六角形 （ Ａ ） 消 し ゴム 付（ Ｃ ） のボール ペ ン（ Ｄ 発明 γ （出願２） 断面六角形 （ Ａ ） 消 し ゴム 付（ Ｃ ） のボール ペ ン（ Ｄ ）
+ 234: text: ）
+ 235: text: 上位 ・ 下位 でない（ 範 囲 外） 発明 に対して
+ 236: text: α 新規性有り
+ 237: page_footer: 8
+ 238: section_header: 進歩性が 否 定される 事 例 ２－４
+ 239: section_header: － 最適材料 の 選択 ・ 設計変更 －
+ 240: text: 最適材料 の 選択 、 数値範囲 の 最適 化、 具 体的 適 用に 伴 う 設計変更
+ 241: text: 【 本願発明 】 ケ ースを 厚 さ0 .5～ 0 .8mm の FRP とした 携帯 電 話
+ 242: list with name=list
+  243: list_item: ※繊維強 化プラス ティッ ク
+ 244: section_header: 【文献 １ 】
+ 245: text: 携帯 電 話 の ケ ースは 厚 い ほ ど 強 度が高いが、 全 体の 寸 法を考 慮 すると 1 . 0 ～ 1 .5mm の 厚 さが 好ま しい
+ 246: text: 数値範囲 の 最適 化 強 度と 小型 化の 両立 のための ケ ースの 厚 さを決定する
+ 247: text: 【 本願効 果】 FRP を用いることにより、 強 度を 維持 しつつ 携帯 電 話 の 小型 化を図る
+ 248: text: 【文献 ２ 】 ケ ースに FRP を用いた電 子 手 帳 FRP は 強 度が 強 いため、 厚 さを0 . 9 ～ 1 . 2 mm と 薄 くすることができる
+ 249: text: 公知の 材料 からの 選択 ＦＲＰ を用いることにより ケ ースを 薄 くすることができる
+ 250: page_footer: 9
+ 251: section_header: 特許権の効力 ２－５
+ 252: section_header: ①積極 的効力と 消極 的効力
+ 253: section_header: 積極 的効力 積極 的効力
+ 254: text: 特許権者が、特許発明を独占的 に実施することができる効力。
+ 255: section_header: 消極 的効力 消極 的効力
+ 256: text: 他 人による実施を 排除 できる効 力（ 排他 性）。
+ 257: picture
+  258: text: 独占的に実施
+  259: text: 他 者を 排除
+  260: text: 特許権の 範囲
+ 261: text: 「特許権者は、業として特許発明の実施をする権利を 専 有する」（６ ８ 条） 特許権者自 身 による実施の み なら ず 、実施許 諾 した者を通じて特許発明を実施すること も 積極 的効力といえる。
+ 262: section_header: ② 特許権の保護期間および発 生 ・ 消滅
+ 263: text: 「産業の発 展 」に 必 要かつ 適切 な期間に限って保護される。→　出願から２ ０年 権利の発 生 は、 設 定 登録 の日　　　　　　　　　　　　　　　　　　　　（特許権の存 続 期間の 延長 制
+ 264: picture
+  265: text: 合
+ 266: page_footer: 10

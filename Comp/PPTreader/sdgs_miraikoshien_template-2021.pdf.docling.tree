@@ -1,0 +1,128 @@
+0: unspecified with name=_root_
+ 1: text: チーム名：
+ 2: list with name=list
+  3: list_item: ＊「プラン名」「チーム名」を必ず表紙に記載してください。
+  4: list_item: ＊この斜体の青字は、提案時にはすべて削除してください。（以下ページすべて共通）
+  5: list_item: ＊表紙は写真その他自由にデザインしてください。書体や文字の大きさの変更も自由です。
+ 6: section_header: プラン名 （サブタイトル含め 30 字以内）
+ 7: picture
+ 8: section_header: １．探究テーマとそれを選んだ理由
+ 9: picture
+  10: text: SDGs
+  11: text: QUEST
+  12: text: 5甲子
+ 13: picture
+  14: section_header: ＜探究テーマ＞
+  15: section_header: 【対象ゴール】
+  16: text: 3
+  17: text: 平等
+  18: text: 健康上福社
+  19: text: 实現L
+  20: text: W
+  21: text: 贺の高教育
+  22: text: 孙人
+ 23: text: ＜そのテーマを選んだ理由＞
+ 24: text: ＊解決したい社会課題に相当する探究テーマと、その探究テーマを選んだ理由を簡潔に記述してください。 ＊探究テーマに関わる SDGs ゴール（メイン 1 つ、サブがあればサイズ小さめで複数追加可）のアイコ
+ 25: section_header: ２．「 SDGs アクション」アイデアと「目標」
+ 26: picture
+  27: text: SDGs
+  28: text: QUEST
+  29: text: 5甲子
+ 30: text: ＊「１．探究テーマ」における具体的な「 SDGs アクション」のアイデアを記載してください。その際に、その SDGs アクションは どの目標（１－１７ゴール）の解決に結びついているか、アイコンで示して
+ 31: section_header: ３．「 SDGs アクション」を広める方法
+ 32: picture
+  33: text: SDGs
+  34: text: QUEST
+  35: text: 5甲子
+ 36: text: ＊「２． SDGs アクション（行動やパートナーシップ）」は、どうしたらもっと大勢の人が参加できるでしょうか。それを広める ためにはどうしたらよいでしょうか。逆にどんなことが壁になっているでしょうか。
+ 37: section_header: ４．「 SDGs アクション」が広がるとどう変わるのか
+ 38: picture
+  39: text: SDGs
+  40: text: QUEST
+  41: text: 5甲子
+ 42: text: ＊「３． SDGs アクションを広める方法」で、そのアクションが多くのひとに広がると世界や社会、あるいは解決を目指す課題は どのように変化すると思いますか。もし可能なら、解決を目指す最終的な姿まで、ど
+ 43: section_header: ＜提出方法＞　※提出時にはこのページは削除してください
+ 44: text: 【提出していただくアイデアプラン資料】 この様式（ 1 ～ 5 ページ）にプランを整理し、 PDF に変換したデータ
+ 45: section_header: PDF ☆ で保存 ( エクスポート ) したものを提出してください。
+ 46: list with name=list
+  47: list_item: ・提出ファイルが正しく確認できない場合、修正・再提出を求める場合があります。
+  48: list_item: ・動作環境による体裁崩れ等を防ぐために、 PDF での提出をお願いします。
+  49: list_item: ・〆切日を超えて再提出がなかった場合、エントリーが受付けられない場合があります。 予めご了承いただき、余裕を持った提出をお願いいたします。
+  50: list_item: ・ 5 分間でプレゼンテーションが完結するようにポイントを絞ってください。
+  51: list_item: ・文字や写真、図表など表現方法は自由。
+ 52: section_header: 【重要】
+ 53: list with name=list
+  54: list_item: ・枚数はテンプレートの内容を厳守してください。
+  55: list_item: ・ファイル名は「エントリーナンバー + 高校名 + チーム名 .pdf 」で提出してください。
+  56: list_item: ・スライドの加除は審査対象外になる可能性があります。
+  57: list_item: ※静止画状態で審査しますので、アニメーションや動画埋込は審査対象にはなりません。
+ 58: text: <PowerPoint データを PDF に変換する方法 >
+ 59: list with name=list
+  60: list_item: [PDF/XPS ド キュ メントの作 成 ] をクリックし、 [PDF/XPS の作 成 ] をクリックします。
+  61: list_item: [ ファイル ]>[ エクスポート ] の順に選 択 します。
+  62: list_item: [PDF または XPS 形式 で 発 行 ] ダ イア ログボ ックスで、ファイルの 保存 場 所 を選びます。
+  63: list_item: 4.[ ファイル名 ] ボ ックスに エントリーナンバー + 高校名 + チーム名 を 入力 します。
+ 64: picture
+ 65: section_header: ＜素材＞　※提出時にはこのページは削除してください
+ 66: picture
+  67: text: 困
+  68: text: 1
+ 69: picture
+ 70: picture
+  71: text: 7G
+  72: text: 饥
+  73: text: 口
+  74: text: SSS
+ 75: picture
+  76: text: 8
+  77: text: 動
+  78: text: 经济成長必
+ 79: picture
+  80: text: 13
+ 81: picture
+  82: text: 14
+  83: text: 海の
+  84: text: 守
+ 85: picture
+ 86: picture
+  87: text: 3
+  88: text: 健康上福社
+  89: text: LW
+ 90: picture
+  91: text: 9
+  92: text: 産業技術革新の
+  93: text: 基盤
+ 94: picture
+  95: text: 15
+  96: text: の
+  97: text: 守万
+ 98: picture
+  99: text: 4
+  100: text: 質の高教育
+ 101: picture
+  102: text: 人中国の不平等
+ 103: picture
+  104: text: 16
+  105: text: の
+ 106: picture
+  107: text: 5
+  108: text: 平等
+  109: text: 实現L
+ 110: picture
+  111: text: 11
+  112: text: 住
+ 113: picture
+  114: text: 目標達成
+ 115: picture
+  116: text: 6
+  117: text: 安全
+  118: text: 世界中记
+ 119: picture
+  120: text: 12
+  121: text: 任
+  122: text: 任
+  123: text: QO
+ 124: picture
+  125: text: SDGs
+  126: text: QUEST
+  127: text: 5甲子園

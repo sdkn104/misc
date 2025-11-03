@@ -20,7 +20,7 @@ _log = logging.getLogger(__name__)
 
 def main():
     input_paths = [
-        
+        Path("gen_test.pdf"),        
         Path("pwhr2020_manual_ref_4_staff.pptx"),
         Path("sinnkyouzai.pptx"),
         Path("2021_theme137_2.pptx"),
@@ -31,6 +31,14 @@ def main():
         Path("04-1.pptx"),
         Path("地方議会活性化シンポジウム.pdf"),
         Path("CorpStrategy2025.pdf"),
+        Path("pwhr2020_manual_ref_4_staff.pdf"),
+        Path("sinnkyouzai.pdf"),
+        Path("2021_theme137_2.pdf"),
+        Path("sdgs_miraikoshien_template-2021.pdf"),
+        Path("nyumon6.pdf"),
+        Path("generally_02.pdf"),
+        Path("seiho_slides(2023)_2.pdf"),        
+        Path("04-1.pdf"),
     ]
 
     ## to customize use:
@@ -62,22 +70,22 @@ def main():
         )
         _log.debug(res.document._export_to_indented_text(max_text_len=16))
         # Export Docling document to Markdown:
-        with (out_path / f"{res.input.file.stem}.md").open("w", encoding="utf-8") as fp:
+        with (out_path / f"{res.input.file}.docling.md").open("w", encoding="utf-8") as fp:
             fp.write(res.document.export_to_markdown().encode("utf-8", errors="replace").decode("utf-8"))
 
-        with (out_path / f"{res.input.file.stem}.json").open("w", encoding="utf-8") as fp:
+        with (out_path / f"{res.input.file}.docling.json").open("w", encoding="utf-8") as fp:
             fp.write(json.dumps(res.document.export_to_dict()))
 
-        with (out_path / f"{res.input.file.stem}.yaml").open("w", encoding="utf-8") as fp:
+        with (out_path / f"{res.input.file}.docling.yaml").open("w", encoding="utf-8") as fp:
             fp.write(yaml.safe_dump(res.document.export_to_dict()))
 
-        with (out_path / f"{res.input.file.stem}.htm").open("w", encoding="utf-8") as fp:
+        with (out_path / f"{res.input.file}.docling.htm").open("w", encoding="utf-8") as fp:
             fp.write(res.document.export_to_html().encode("utf-8", errors="replace").decode("utf-8"))
 
-        with (out_path / f"{res.input.file.stem}.tree").open("w", encoding="utf-8") as fp:
+        with (out_path / f"{res.input.file}.docling.tree").open("w", encoding="utf-8") as fp:
             fp.write(res.document.export_to_element_tree())
 
-        with (out_path / f"{res.input.file.stem}.doctags").open("w", encoding="utf-8") as fp:
+        with (out_path / f"{res.input.file}.docling.doctags").open("w", encoding="utf-8") as fp:
             fp.write(res.document.export_to_doctags())
 
 
