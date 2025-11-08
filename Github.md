@@ -2,6 +2,11 @@
 * http://qiita.com/nnahito/items/565f8755e70c51532459
 
 ### Initial (initial remote first, then clone)
+0) proxy
+```
+$ git config --global http.proxy http://proxy.example.com:5151
+$ git config --global https.proxy http://proxy.example.com:5151
+```
 1) clone (url should be get on clone button in github page)
 ```
 $ git clone https://github.com/sdkn104/AppEngine.git
