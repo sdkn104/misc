@@ -143,6 +143,17 @@ def slides2md(in_file):
 
 
 if __name__ == "__main__":
+    # from tkinter import filedialog
+    # def choose_file():
+    #     root = tk.Tk()
+    #     root.withdraw()
+    #     path = filedialog.askopenfilename(
+    #         title="ファイルを選択",
+    #         filetypes=[("テキストファイル", "*.txt"), ("PDFファイル", "*.pdf"), ("すべて", "*.*")]
+    #     )
+    #     root.destroy()
+    # in_file = choose_file()
+
     in_file = sys.argv[1]
     md = slides2md(in_file)
     with open(in_file + '.slides.md', 'w', encoding='utf-8') as fout:
