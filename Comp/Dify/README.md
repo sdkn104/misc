@@ -44,11 +44,12 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 
 
 ## Install Docker Engine on WSL2
-https://docs.docker.com/engine/install/ -> select "Ubuntu"
-
+* https://docs.docker.com/engine/install/ -> select "Ubuntu"
 * Since commercial use of Docker Desktop in larger enterprises 
   requires a paid subscription, we use Docker Engine instead.
 
+0. Turn on Nested Virtualization, if you install on a virtual machine
+    - https://docs.docker.com/desktop/setup/vm-vdi/#turn-on-nested-virtualization
 1. Install docker engine 
     - Do the things in "Install using the apt repository" in https://docs.docker.com/engine/install/ubuntu/
     - if failed at `sudo docker run hello-world`, i.e., `docker pull` failed,
@@ -100,6 +101,7 @@ cp .env.example .env
 cd dify/docker
 sudo docker compose up -d
 # -> access with browser http://localhost
+#sudo docker compose down
 ```    
 ```bash
 #check if Dify running
@@ -154,7 +156,7 @@ PCapp -. Listen .-> vEther
 eth0 -. NAT:80,443 .-> nginx
 ```
 
-- listen 0.0.0.0 == listen all NICs in the host
+- listen 0.0.0.0 -> listen all NICs in the host
 - check all NICs in the host
   - `PS> ipconfig` 
   - `WSL> ip addr`

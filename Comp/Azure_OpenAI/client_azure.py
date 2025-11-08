@@ -19,6 +19,8 @@ import os
 from openai import AzureOpenAI
 import openai
 from pprint import pprint
+import tiktoken
+import pprint
 
 openai.log = "debug"
 
@@ -50,15 +52,21 @@ response = client.chat.completions.create(
 )
 
 print(response)
-#print(list(response))
+
+encoding = tiktoken.encoding_for_model("gpt-4")
+text = "こんにちは、Azure OpenAI APIを使っています。"
+tokens = encoding.encode(text)
+print(f"トークン数: {len(tokens)}")
+
 
 if stream == False:
     #pprint(dict(response.headers))
     #print(response.text)
     print("----------")
     #print("Status Code:", response.status_code)
+    print("Response:", response.json())
+    print(response.usage.total_tokens, response.usage.prompt_tokens, response.usage.completion_tokens)
     print("Message: ", response.choices[0].message.content)
-    #print("Response:", response.json())
 else:
     for chunk in response:
         pprint(chunk)
