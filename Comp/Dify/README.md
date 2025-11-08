@@ -327,7 +327,7 @@ https://docs.dify.ai/en/development/models-integration/ollama#integrate-local-mo
 https://learn.microsoft.com/ja-jp/windows/wsl/disk-space
 https://qiita.com/siruku6/items/c91a40d460095013540d
 
-* Check the amount of disk space available in the VHD for a Linux distribution
+* Check the amount of disk space available in the VHD (upper limit) for a Linux distribution
   ```
   wsl.exe --system -d ubuntu df -h /mnt/wslg/distro
   ```
@@ -340,6 +340,14 @@ https://qiita.com/siruku6/items/c91a40d460095013540d
   ```
     * basically VHD file size = used disk size in Ubuntu.
     * but even if reduce used disk in ubuntsu, the file size not reduced.
+* To set available disk size before create distro
+  * https://uniforce.co.jp/media/blog/cqpi6dndy/
+  * Before `wsl --install`, create file c:\Users\USERNAME\\.wslconfig
+    ```
+    [wsl2]
+    defaultVhdSize=30000000000
+    ```
+  
 * To shrink disk in such case
   ```
   wsl --shutdown
