@@ -2,10 +2,21 @@
 import os
 import openai
 from openai import OpenAI
+import sys
+import PyPDF2
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1")
 #OPENAI_API_BASE = "http://localhost:5000/v1"  # Use local server for testing
+
+# PDFファイルの読み込み
+def extract_text_from_pdf(file_path):
+    text = ""
+    with open(file_path, "rb") as f:
+        reader = PyPDF2.PdfReader(f)
+        for page in reader.pages:
+            text += page.extract_text()
+    return text
 
 client = OpenAI(base_url=OPENAI_API_BASE, api_key=OPENAI_API_KEY)
 
@@ -15,7 +26,8 @@ response = client.chat.completions.create(
     model="gpt-4.1",  # or your deployed model name
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "what is tallest mountain in the world? answer in one word."}
+#        {"role": "user", "content": "以下の文章を要約して：\n\n" + extract_text_from_pdf(sys.argv[1])},
+        {"role": "user", "content": "what is tallest mountain in the world? answer in one word."},
     ],
     stream=stream
 )

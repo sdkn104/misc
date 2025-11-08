@@ -15,7 +15,7 @@ def extract_text_from_pdf(file_path):
     return text
 
 # トークン数の計算（GPT-4用）
-def count_tokens(text, model="gpt-4"):
+def count_tokens(text, model="gpt-4.1"):
     encoding = tiktoken.encoding_for_model(model)
     tokens = encoding.encode(text)
     return len(tokens)

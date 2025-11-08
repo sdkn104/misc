@@ -1,26 +1,11 @@
-# import os
-# from openai import AzureOpenAI
-    
-# client = AzureOpenAI(
-#     api_key=os.getenv(""),  
-#     api_version="2024-02-01",
-#     azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-#     )
-    
-# deployment_name='REPLACE_WITH_YOUR_DEPLOYMENT_NAME' #This will correspond to the custom name you chose for your deployment when you deployed a model. Use a gpt-35-turbo-instruct deployment. 
-    
-# # Send a completion call to generate an answer
-# print('Sending a test completion job')
-# start_phrase = 'Write a tagline for an ice cream shop. '
-# response = client.completions.create(model=deployment_name, prompt=start_phrase, max_tokens=10)
-# print(start_phrase+response.choices[0].text)
-
 import os
 from openai import AzureOpenAI
 import openai
 from pprint import pprint
 import tiktoken
 import pprint
+import sys
+import PyPDF2
 
 openai.log = "debug"
 
@@ -31,6 +16,16 @@ subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "")
 print(endpoint)
 print(deployment)
 print(subscription_key)
+
+# PDFファイルの読み込み
+def extract_text_from_pdf(file_path):
+    text = ""
+    with open(file_path, "rb") as f:
+        reader = PyPDF2.PdfReader(f)
+        for page in reader.pages:
+            text += page.extract_text()
+    return text
+
 
 stream = False
 
@@ -47,6 +42,7 @@ response = client.chat.completions.create(
         {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
         {"role": "assistant", "content": "Yes, customer managed keys are supported by Azure OpenAI."},
         {"role": "user", "content": "世界一高い山の名前は？単語１つで答えてください。"},
+#        {"role": "user", "content": "以下の文章を要約して：\n\n" + extract_text_from_pdf(sys.argv[1])},
     ],
     stream=stream, 
 )
@@ -65,7 +61,7 @@ if stream == False:
     print("----------")
     #print("Status Code:", response.status_code)
     print("Response:", response.json())
-    print(response.usage.total_tokens, response.usage.prompt_tokens, response.usage.completion_tokens)
+    print("usage tokens: ", response.usage.total_tokens, response.usage.prompt_tokens, response.usage.completion_tokens)
     print("Message: ", response.choices[0].message.content)
 else:
     for chunk in response:
