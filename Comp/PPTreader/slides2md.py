@@ -48,11 +48,13 @@ def slides2md(in_file):
 
     # Convert PPTX to PDF
     if in_file.endswith('.pptx'):
-        pptxtopdf.convert(in_file)
+        out_folder = os.path.dirname(in_file)
+        print(f'Converting {in_file} to PDF in {out_folder}...')
+        pptxtopdf.convert(in_file, out_folder)
         in_file = os.path.splitext(in_file)[0] + '.pdf'
 
     # Pdfplumber processing
-    print(f'Processing {in_file}...')
+    print(f'Pdfplumber {in_file}...')
     with pdfplumber.open(in_file, laparams={"line_overlap": 0.5 }) as pdf:
         # output files
         #pages_obj = [page.objects for page in pdf.pages]
