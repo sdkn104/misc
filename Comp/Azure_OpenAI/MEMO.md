@@ -43,9 +43,10 @@
 - https://learn.microsoft.com/ja-jp/azure/ai-foundry/responsible-ai/openai/data-privacy?tabs=azure-portal
 - 不正利用監視のためのデータ保存のオプトアウト
     - https://learn.microsoft.com/ja-jp/azure/ai-foundry/openai/concepts/abuse-monitoring
+    - https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/limited-access
     - https://www.genspark.ai/spark/azure-openai%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%82%AA%E3%83%97%E3%83%88%E3%82%A2%E3%82%A6%E3%83%88%E5%BE%8C%E3%81%AE%E3%83%AD%E3%82%B0%E7%9B%A3%E8%A6%96/e3258a3a-86dd-4fea-9eb7-c141608a4cdc
     - https://zenn.dev/microsoft/articles/azure-openai-faq
-    - 入力や出力データは特に何も構成されない場合、最大30日間は不正利用監視のために限られたメンバーのみが閲覧できる状態でMicrosoftが保存します、この不正監視のためのデータ保存はオプトアウトを申請することができます。
+    - 入力や出力データは特に何も構成されない場合、最大30日間は不正利用監視(Abuse monitoring)のために限られたメンバーのみが閲覧できる状態でMicrosoftが保存します。この不正監視のためのデータ保存に対してオプトアウトを申請することができます。
 - データ処理の場所
     - デプロイ時にDataZoneで日本を指定すると、データ処理は日本国内にとどまる。
 - 設定
