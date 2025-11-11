@@ -36,13 +36,18 @@ def slides2md(in_file):
     doc_converter = DocumentConverter()
     gen = doc_converter.convert_all([in_file])
     res = next(gen)
+    if in_file.endswith('.pptx'):
+        coord_scale = 12700  # 1 pt = 12700 EMU
+    else:
+        coord_scale = 1
     docling_tables = []
     for table_ix, table in enumerate(res.document.tables):
         table_df: pd.DataFrame = table.export_to_dataframe()
+        b = table.prov[0].bbox
         docling_tables.append({
             "table_ix": table_ix, 
             "page_no": table.prov[0].page_no, 
-            "bbox": table.prov[0].bbox, 
+            "bbox": {"l": b.l / coord_scale, "t": b.t / coord_scale, "r": b.r / coord_scale, "b": b.b / coord_scale }, 
             "md": table_df.to_markdown(),
         })
 
@@ -99,14 +104,21 @@ def slides2md(in_file):
             page2 = page
             for t in page_docling_tables:
                 bb = t["bbox"]
-                bbx = (bb.l, page.height - bb.t, bb.r, page.height - bb.b)
+                bbx = (bb["l"], page.height - bb["t"], bb["r"], page.height - bb["b"])
+                print(page2)
+                print(bb)
+                print(bbx)
                 page2 = page2.outside_bbox(bbx, relative=False, strict=True)
 
-            # Textboxes
+            # Write comment
+            fout.append(f"<!--- Page {page.page_number} -->\n\n")
+
+            # Write Page title
             tboxes = page2.objects.get("textboxhorizontal", [])
             title_list = [tbox.get("text","") for tbox in tboxes if tbox.get("lay_title", False)]
             title_text = " ".join(title_list).replace('\n','').strip()
             fout.append("## " + title_text + '\n\n')
+            # Write Textboxes
             for tbox in tboxes:
                 if "lay_title" not in tbox:
                     fout.append("<div class='textbox'>\n")
