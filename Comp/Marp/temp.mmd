@@ -1,0 +1,39 @@
+flowchart LR
+
+  subgraph Azure_Megcloud[Azure（Megcloud）]
+    Azure_Megcloud_OpenAI["Azure OpenAI API"]
+    style Azure_Megcloud_OpenAI fill:#f9f,stroke:#333,stroke-width:4px
+    Azure_Megcloud_WebConsole["Webコンソール"]
+    style Azure_Megcloud_WebConsole fill:#f9f,stroke:#333,stroke-width:4px
+  end
+
+  subgraph OnPremise["オンプレミス(社内環境)"]
+    OnPremise_PC["PC（クラウド管理担当）"]
+    style OnPremise_PC fill:#f9f,stroke:#333,stroke-width:4px
+    
+    subgraph OnPremise_Server1["サーバ（仮想サーバ）A"]
+      OnPremise_Server_Chukei["API中継サーバ(Python)<br>フィルタ、ログ保存"]
+      style OnPremise_Server_Chukei fill:#f9f,stroke:#333,stroke-width:4px
+      OnPremise_Server_log[(Log)]
+      style OnPremise_Server_log fill:#f9f,stroke:#333,stroke-width:4px
+    end
+    subgraph OnPremise_Server2["サーバ（仮想サーバ）B"]
+      OnPremise_Server_Dify["Dify"]
+    end
+    subgraph OnPremise_PC_EndUser["PC（エンドユーザ）"]
+      OnPremise_PC_EndUser_Excel["エクセル（VBA）"]
+      OnPremise_PC_EndUser_Cline["Cline"]
+      OnPremise_PC_EndUser_Other["他"]
+      OnPremise_PC_EndUser_Edge["Edgeブラウザ"]
+    end
+  end
+
+  %% 適当に末端ノード間の矢印も追加
+OnPremise_Server_Chukei --Azure API Key--> Azure_Megcloud_OpenAI
+OnPremise_PC -- 管理ID/PW --> Azure_Megcloud_WebConsole
+OnPremise_Server_Chukei -.-> OnPremise_Server_log
+OnPremise_Server_Dify --Key1--> OnPremise_Server_Chukei
+OnPremise_PC_EndUser_Excel --Key2--> OnPremise_Server_Chukei
+OnPremise_PC_EndUser_Other --Key3--> OnPremise_Server_Chukei
+OnPremise_PC_EndUser_Cline --Key4--> OnPremise_Server_Chukei
+OnPremise_PC_EndUser_Edge --ID/PW--> OnPremise_Server_Dify
