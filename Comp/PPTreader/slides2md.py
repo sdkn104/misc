@@ -112,6 +112,7 @@ def slides2md(in_file):
 
             # Write comment
             fout.append(f"<!--- Page {page.page_number} -->\n\n")
+            print(f"<!--- Page {page.page_number} --->\n\n")
 
             # Write Page title
             tboxes = page2.objects.get("textboxhorizontal", [])
@@ -122,8 +123,10 @@ def slides2md(in_file):
             for tbox in tboxes:
                 if "lay_title" not in tbox:
                     fout.append("<div class='textbox'>\n")
-                    fout.append(tbox.get("text","") + '\n')
+                    fout.append(tbox.get("text",""))
                     fout.append("</div>\n\n")
+            print("===========")
+            pprint(tboxes)
 
             ## Pdfplumber tables
             # for table in page.extract_tables():
@@ -139,7 +142,8 @@ def slides2md(in_file):
                 fout.append("\n<!--- docling --->\n")
                 fout.append(table["md"])
                 fout.append("\n\n")  
-
+            print("===========")
+            pprint(page_docling_tables)
             fout.append('\n\n------------------------------\n\n')
 
         return "".join(fout)
