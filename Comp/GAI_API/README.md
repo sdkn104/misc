@@ -66,6 +66,11 @@ pythonw compatible_server.py
     netsh advfirewall firewall delete rule name="★FlaskApp TCP 5000"
     ```
 
+### Client Setting (Dify)
+
+![w:100px](Dify_GAI_API_panel.jpg)
+
+
 # Open WebUI
 - https://github.com/open-webui/open-webui
 - https://docs.openwebui.com/
