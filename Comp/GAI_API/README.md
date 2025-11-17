@@ -68,7 +68,7 @@ pythonw compatible_server.py
 
 ### Client Setting (Dify)
 
-![w:100px](Dify_GAI_API_panel.jpg)
+![w:200px](Dify_GAI_API_panel.jpg)
 
 
 # Open WebUI
