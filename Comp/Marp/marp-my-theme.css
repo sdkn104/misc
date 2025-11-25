@@ -408,12 +408,6 @@ pre code {
   border-radius: 4px;
 }
 
-.c-red {
-  color: red;
-}
-.c-blue {
-  color: blue;
-}
 .w50pct {
   width: 50%;
 }
@@ -423,3 +417,22 @@ pre code {
 .w70pct {
   width: 70%;
 }
+
+.red { color: red; }
+.blue { color: blue; }
+
+.f26 { font-size: 26px; }
+.f28 { font-size: 28px; }
+.f30 { font-size: 30px; }
+.f40 { font-size: 40px; }
+.f50 { font-size: 50px; }
+.f60 { font-size: 60px; }
+
+.i2 { padding-left: 2ex; }
+.i4 { padding-left: 4ex; }
+.i6 { padding-left: 6ex; }
+.i8 { padding-left: 8ex; }
+.i10 { padding-left: 10ex; }
+.i15 { padding-left: 15ex; }
+.i20 { padding-left: 20ex; }
+
