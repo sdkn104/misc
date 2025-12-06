@@ -1,0 +1,231 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: テスト_Mail
+  use_icon_as_answer_icon: false
+dependencies: []
+kind: app
+version: 0.4.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: end
+      id: 1765020541454-source-1756391420318-target
+      source: '1765020541454'
+      sourceHandle: source
+      target: '1756391420318'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1756390781563-source-1765031046882-target
+      source: '1756390781563'
+      sourceHandle: source
+      target: '1765031046882'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1765031046882-source-1765020541454-target
+      source: '1765031046882'
+      sourceHandle: source
+      target: '1765020541454'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 開始
+        type: start
+        variables: []
+      height: 54
+      id: '1756390781563'
+      position:
+        x: 234.71036266807124
+        y: 298.0442214308068
+      positionAbsolute:
+        x: 234.71036266807124
+        y: 298.0442214308068
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector: []
+          variable: file
+        - value_selector:
+          - '1765020541454'
+          - result
+          value_type: string
+          variable: text
+        selected: false
+        title: 終了
+        type: end
+      height: 90
+      id: '1756391420318'
+      position:
+        x: 1090.5797730121674
+        y: 298.0442214308068
+      positionAbsolute:
+        x: 1090.5797730121674
+        y: 298.0442214308068
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import smtplib\nfrom email.mime.text import MIMEText\n\ndef main(to,\
+          \ subject, body) -> dict:\n\n    # 送信元・送信先\n    from_addr = \"your_address@gmail.com\"\
+          \n    to_addr = to\n\n    # メールの内容\n    msg = MIMEText(body)\n    msg[\"\
+          Subject\"] = subject\n    msg[\"From\"] = from_addr\n    msg[\"To\"] = to_addr\n\
+          \n    # Gmail SMTP\n    smtp_server = \"34.187.250.95\"\n    smtp_port =\
+          \ 1025\n\n    with smtplib.SMTP(smtp_server, smtp_port) as server:\n   \
+          \     #server.starttls()\n        #server.login(from_addr, password)\n \
+          \       server.send_message(msg)\n\n    print(\"送信完了\")\n\n    return {}\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: コード実行
+        type: code
+        variables:
+        - value_selector:
+          - sys
+          - user_id
+          value_type: string
+          variable: to
+        - value_selector:
+          - sys
+          - user_id
+          value_type: string
+          variable: subject
+        - value_selector:
+          - sys
+          - user_id
+          value_type: string
+          variable: body
+      height: 54
+      id: '1765020541454'
+      position:
+        x: 817.7486018211831
+        y: 298.0442214308068
+      positionAbsolute:
+        x: 817.7486018211831
+        y: 298.0442214308068
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import requests\n\ndef main(arg1: str, arg2: str) -> dict:\n    url\
+          \ = \"http://34.187.250.95:1025\"\n    params = {\"key\": \"value\"}\n \
+          \   response = requests.get(url, params=params)\n    return {\n        \"\
+          status\": response.status_code,\n        \"body\": response.text\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          body:
+            children: null
+            type: string
+          status:
+            children: null
+            type: number
+        selected: false
+        title: コード実行 2
+        type: code
+        variables:
+        - value_selector:
+          - sys
+          - user_id
+          value_type: string
+          variable: arg1
+        - value_selector:
+          - sys
+          - user_id
+          value_type: string
+          variable: arg2
+      height: 54
+      id: '1765031046882'
+      position:
+        x: 517.7486018211831
+        y: 298.0442214308068
+      positionAbsolute:
+        x: 517.7486018211831
+        y: 298.0442214308068
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -137.37898585447385
+      y: 168.01222138684304
+      zoom: 0.7937005539662414
