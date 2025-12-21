@@ -118,10 +118,6 @@ public:
         State s = *this;
         return s;
     }
-    
-
-
-
 };
 
 class Simulator {
@@ -174,38 +170,42 @@ private:
     }
     
     // DFS exploration helper (no lambda) that explores sequences of choices for same id `j`.
-    void dfsExplore(int j, int remaining, State s, int tcur, vector<int> &seq,
+    void dfsExplore(long long apples0, int t0, int remaining, State s, int tcur, vector<pair<int,int>> &seq,
                     long long &best_final, int &best_i, int &best_j, int Tlocal) const {
         if (remaining == 0) {
             State ss = s.deepCopy();
             int tt = tcur;
             while (tt < Tlocal) { ss.produceApples(); ++tt; }
             long long finalApples = ss.apples;
-            cout << "# Final apples:" << finalApples;
-            if (finalApples > best_final) {
-                best_final = finalApples;
-                best_j = j;
-                best_i = seq.empty() ? -1 : seq[0];
+            //cout << "# Final apples:" << finalApples << "\n";
+            long long value = (finalApples - apples0) * (Tlocal - t0) / (tcur - t0 + 1);    
+            if (value > best_final) {
+                best_final = value;
+                best_i = seq.empty() ? -1 : seq[0].first;
+                best_j = seq.empty() ? -1 : seq[0].second;
             }
             return;
         }
 
+
         for (int lvl = 0; lvl < s.L; ++lvl) {
-            State ns = s.deepCopy();
-            int nt = tcur;
-            while (nt < Tlocal && !ns.canUpgrade(lvl, j)) {
+            for (int n = 0; n < s.N; ++n) {
+                State ns = s.deepCopy();
+                int nt = tcur;
+                while (nt < Tlocal && !ns.canUpgrade(lvl, n)) {
+                    ns.produceApples();
+                    ++nt;
+                }
+                if (nt >= Tlocal) continue;
+                ns.upgradeMachine(lvl, n);
                 ns.produceApples();
                 ++nt;
-            }
-            if (nt >= Tlocal) continue;
-            ns.upgradeMachine(lvl, j);
-            ns.produceApples();
-            ++nt;
 
-            seq.push_back(lvl);
-            dfsExplore(j, remaining - 1, ns, nt, seq, best_final, best_i, best_j, Tlocal);
-            cout << "# -depth: " << remaining << " j:" << j << " l:" << seq.back() << " tcur: " << nt << "\n";
-            seq.pop_back();
+                //cout << "# -dep: " << remaining << " l:" << lvl << " n:" << n << " tcur: " << nt << " appls:" << ns.apples << "\n";
+                seq.push_back({lvl, n});
+                dfsExplore(apples0, t0, remaining - 1, ns, nt, seq, best_final, best_i, best_j, Tlocal);
+                seq.pop_back();
+            }
         }
     }
 
@@ -215,11 +215,10 @@ private:
 
         //int depth = min(3, T - turn); // depth can be tuned
 
-        for (int j = 0; j < state.N; ++j) {
-            State s0 = state.deepCopy();
-            vector<int> seq;
-            dfsExplore(j, depth, s0, turn, seq, best_final, best_i, best_j, T);
-        }
+        State s0 = state.deepCopy();
+        vector<pair<int,int>> seq;
+        dfsExplore(s0.apples, turn, depth, s0, turn, seq, best_final, best_i, best_j, T);
+        cout << "# Choise:" << best_i << " " << best_j << "\n";
 
         if (best_i == -1) return {-1, -1};
         if (!state.canUpgrade(best_i, best_j)) return {-1, -1};
@@ -313,7 +312,7 @@ public:
     
     void runSimulation() {
         for (int turn = 0; turn < T; turn++) {
-            auto [best_i, best_j] = findBestUpgrade2(turn, 1);
+            auto [best_i, best_j] = findBestUpgrade2(turn, 2);
             
             if (best_i != -1) {
                 state.upgradeMachine(best_i, best_j);
