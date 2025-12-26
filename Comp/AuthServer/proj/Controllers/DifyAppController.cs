@@ -26,14 +26,14 @@ namespace AuthServer.Controllers
         /// Difyアプリをiframeで埋め込む
         /// </summary>
         [HttpGet("{*path}")]
-        [AllowAnonymous]
-        public IActionResult Index(string path)
+        //[AllowAnonymous]
+        public IActionResult Index(string path, [FromQuery] string message = "")
         {
             var userName = User?.Identity?.Name ?? "Anonymous";
             var clientIp = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
             var requestUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}{HttpContext.Request.Path}{HttpContext.Request.QueryString}";
 
-            _logger.LogInformation("Dify App accessed by {User} from {IpAddress}. Path: {Path}", userName, clientIp, path);
+            _logger.LogInformation("USER: {User} | {Message} | {IpAddress}\n",  userName, message, clientIp);
 
             // Get Dify base URL from configuration
             var difyBaseUrl = _configuration["Dify:BaseUrl"] ?? "http://dify.example.com";
@@ -90,7 +90,7 @@ namespace AuthServer.Controllers
 <body>
     <div class=""container"">
         <div class=""header"">
-            <h1>Application</h1>
+            <h1>Dify Application</h1>  [注意点:] 
         </div>
         <div class=""content"">
             <iframe src=""{difyUrl}"" title=""Dify Application""></iframe>

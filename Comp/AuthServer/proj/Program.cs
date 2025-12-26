@@ -1,19 +1,24 @@
 using Serilog;
+//using Microsoft.OpenApi.Models; // 追加
 
-var builder = WebApplicationBuilder.CreateBuilder(args);
+//var builder = WebApplicationBuilder.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog
 var logPath = Path.Combine(AppContext.BaseDirectory, "logs", "access-.txt");
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
     .WriteTo.File(logPath, 
-        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] User:{User} | URL:{RequestPath}{QueryString} | Status:{StatusCode} | IP:{RemoteIpAddress} | {Message:lj}",
+        //outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] User:{User} | URL:{RequestPath}{QueryString} | Status:{StatusCode} | IP:{RemoteIpAddress} | {Message:lj}\n",
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {RequestPath} | {Message:lj}\n",
         rollingInterval: RollingInterval.Infinite,
         fileSizeLimitBytes: 52428800, // 50MB
         retainedFileCountLimit: null)
     .CreateLogger();
 
 builder.Host.UseSerilog();
+
+builder.Logging.AddConsole(); //★
 
 // Add services to the container
 builder.Services.AddAuthentication(Microsoft.AspNetCore.Authentication.Negotiate.NegotiateDefaults.AuthenticationScheme)
@@ -35,6 +40,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddHttpClient(); //★
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -44,9 +50,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage(); //★
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 // Custom middleware to capture request/response details for logging
 app.Use(async (context, next) =>
@@ -64,11 +71,9 @@ app.Use(async (context, next) =>
     }
     finally
     {
-        // Log the request
-        Log.Information("", null);
-        var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
-        logger.LogInformation("User:{User} | URL:{RequestPath}{QueryString} | Status:{StatusCode} | IP:{RemoteIp}",
-            user, requestPath, queryString, statusCode, remoteIp);
+        //var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
+        //logger.LogInformation("Midle: User:{User} | URL:{RequestPath}{QueryString} | Status:{StatusCode} | IP:{RemoteIp}",
+        //    user, requestPath, queryString, statusCode, remoteIp);
     }
 });
 

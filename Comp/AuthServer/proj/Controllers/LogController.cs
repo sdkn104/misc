@@ -34,8 +34,8 @@ namespace AuthServer.Controllers
             try
             {
                 _logger.LogInformation(
-                    "LogName:{LogName} | Message:{Message} | User:{User} | IP:{IpAddress}",
-                    name, message, userName, clientIp);
+                    "USER: {User} | {LogName} | {Message} | {IpAddress}\n",
+                    userName, name, message, clientIp);
 
                 return Ok(new { status = "success", message = "Log recorded successfully" });
             }
@@ -61,8 +61,8 @@ namespace AuthServer.Controllers
             try
             {
                 _logger.LogInformation(
-                    "LogName:{LogName} | Message:{Message} | Metadata:{Metadata} | User:{User} | IP:{IpAddress}",
-                    name, payload.Message, payload.Metadata ?? "", userName, clientIp);
+                    "USER: {User} | {LogName} | {Message} | Metadata:{Metadata} | {IpAddress}\n",
+                    userName, name, payload.Message, payload.Metadata ?? "", clientIp);
 
                 return Ok(new { status = "success", message = "Log recorded successfully" });
             }
