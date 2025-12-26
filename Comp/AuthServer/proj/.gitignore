@@ -1,0 +1,55 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio
+.vs/
+*.sln.docstates
+*.user
+*.userosscache
+*.sln.locks
+*.sln
+.vscode/
+*.code-workspace
+
+# Rider
+.idea/
+*.sln.iml
+
+# Dependencies
+.nuget/
+nuget.config
+packages/
+
+# Logs
+logs/
+*.log
+*.serilog-sink
+
+# User secrets
+appsettings.*.local.json
+secret.json
+*.key
+*.crt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# IIS
+web.*.config
+app_offline.htm
+
+# Environment
+.env
+.env.local
+myenv/
+venv/
