@@ -167,7 +167,7 @@ pydantic-settings==2.8.1
 pydantic_core==2.33.0
 Pygments==2.19.1
 pyparsing==3.2.3
-pypdf==5.4.0
+pypdf==6.6.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
 python-json-logger==3.3.0
