@@ -47,7 +47,7 @@ faiss-cpu==1.10.0
 fastavro==1.10.0
 fastjsonschema==2.21.1
 feedparser==6.0.11
-filelock==3.18.0
+filelock==3.20.3
 filetype==1.2.0
 fonttools==4.57.0
 fqdn==1.5.1
