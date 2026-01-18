@@ -12,7 +12,7 @@ from vanna.integrations.local.agent_memory import DemoAgentMemory
 #from vanna.llm import OpenAI_Chat
 from openai import AzureOpenAI
 import os
-from pprint import pprint
+from pprint import pprint, pformat
 
 # Configure your LLM
 llm = AzureOpenAILlmService(
@@ -42,12 +42,28 @@ class SimpleUserResolver(UserResolver):
         user_email = request_context.get_cookie('vanna_email') or 'guest@example.com'
         group = 'admin' if user_email == 'admin@example.com' else 'user'
         return User(id=user_email, email=user_email, group_memberships=[group])
-
 user_resolver = SimpleUserResolver()
+
+
+# ReadFileTool
+from vanna.tools.file_system import ReadFileTool, WriteFileTool, ListFilesTool
+from vanna.integrations.local import LocalFileSystem
+fs = LocalFileSystem()
+read_tool = ReadFileTool(file_system=fs)
+write_tool = WriteFileTool(file_system=fs)
+
+# SQLite tool
+from vanna.integrations.sqlite import SqliteRunner
+sqlite_tool = RunSqlTool(
+    sql_runner=SqliteRunner(database_path="./test.db")
+)
 
 # Create your agent
 tools = ToolRegistry()
-tools.register_local_tool(db_tool, access_groups=['admin', 'user'])
+tools.register_local_tool(read_tool, access_groups=['admin', 'user'])
+tools.register_local_tool(write_tool, access_groups=['admin', 'user'])
+#tools.register_local_tool(db_tool, access_groups=['admin', 'user'])
+tools.register_local_tool(sqlite_tool, access_groups=['admin', 'user'])
 tools.register_local_tool(SaveQuestionToolArgsTool(), access_groups=['admin'])
 tools.register_local_tool(SearchSavedCorrectToolUsesTool(), access_groups=['admin', 'user'])
 tools.register_local_tool(SaveTextMemoryTool(), access_groups=['admin', 'user'])
@@ -60,8 +76,8 @@ agent = Agent(
     agent_memory=agent_memory
 )
 
-result = agent.get_available_tools(user_resolver)
-pprint(result)
+results = agent.get_available_tools(user_resolver)
+print(results)
 
 # Run the server
 server = VannaFastAPIServer(agent)
