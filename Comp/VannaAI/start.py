@@ -52,7 +52,7 @@ fs = LocalFileSystem()
 read_tool = ReadFileTool(file_system=fs)
 write_tool = WriteFileTool(file_system=fs)
 
-# SQLite tool
+# SQLite DB tool
 from vanna.integrations.sqlite import SqliteRunner
 sqlite_tool = RunSqlTool(
     sql_runner=SqliteRunner(database_path="./test.db")
