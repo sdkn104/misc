@@ -365,9 +365,22 @@ https://qiita.com/siruku6/items/c91a40d460095013540d
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
 ## Setting
-1.  Tools → MCP -> Add MCP Server (HTTP), setting MCP URL and name
-    - MCPがツールとして設定される
+https://docs.dify.ai/en/use-dify/nodes/tools#mcp-tools
+
+1.  Tools → MCP -> Add MCP Server (HTTP) => set MCP URL and name
+    - ⇒MCPがツールとして設定される（Tools → MCPに表示される）
     - Currently, only MCP servers supporting HTTP transport can be used.
+    - URLはホスト(Windows)のIPアドレスで指定（localhost, 127.0.0.1等はだめ） 
+    - ホストのfirewall設定しておく(remoteip=192.168.99.99することによりサーバ外部からのアクセスを遮断する)
+        ```powershell
+      # set firewall
+      netsh advfirewall firewall add rule name="★MCP TCP 9000" dir=in action=allow protocol=TCP localport=9000 remoteip=192.168.99.99 profile=private,domain
+      # show firewall
+      netsh advfirewall firewall show rule name="★MCP TCP 9000"
+      # delete firewall
+      netsh advfirewall firewall delete rule name="★MCP TCP 9000"
+      ```
+
 1. DifyのアプリにMCPツールを設定する
     - エージェントアプリの場合
       1. Difyエージェントアプリを開き、[ツール]の[追加]を押し、以下を設定する

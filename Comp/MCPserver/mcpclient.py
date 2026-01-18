@@ -3,7 +3,9 @@ from fastmcp import Client
 from pprint import pformat, pprint
 
 #client = Client("mcpserver.py") # Assumes my_mcp_server.py exists
-client = Client("http://127.0.0.1:9000/mcp")
+#client = Client("http://127.0.0.1:9000/mcp")
+client = Client("http://192.168.1.2:9000/mcp")
+
 
 print("- SERVER to connect:", client.transport)
 

@@ -2,6 +2,7 @@
 from fastmcp import FastMCP
 #from typing import Annotated
 from pydantic import Field
+from pprint import pprint, pformat
 
 """
 FastMCP2.0を使ってOracleのテーブルをUPDATEするMCPサーバのコードを書いてください。
@@ -11,8 +12,6 @@ yoteibi列に指定値を登録するものとします。
 また、固定値を返す、テスト用のツールを追加してください。
 """
 
-# Oracle接続情報（適宜修正してください）
-ORACLE_DSN = "user/password@localhost:1521/ORCLPDB1"
 
 mcp = FastMCP(
     name="oracle_db",
@@ -42,8 +41,7 @@ def get_users():
 
 
 if __name__ == "__main__":
-    print(mcp)  # サーバ情報を表示
-    # Settings are accessible via mcp.settings
-    print("mcp settings:", mcp.settings)
-    mcp.run(transport="streamable-http", host="127.0.0.1", port=9000)
+    print("MCP server:", mcp)  # サーバ情報を表示
+    print("mcp settings:", pformat(mcp.settings.__dict__))
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=9000)
     #mcp.run(transport="stdio")
