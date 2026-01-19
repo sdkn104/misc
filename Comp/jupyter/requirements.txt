@@ -39,7 +39,7 @@ deepmerge==2.0
 defusedxml==0.7.1
 dill==0.3.9
 diskcache==5.6.3
-distributed==2025.3.0
+distributed==2026.1.1
 distro==1.9.0
 eval_type_backport==0.2.2
 executing==2.2.0
