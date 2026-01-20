@@ -405,7 +405,6 @@ https://docs.dify.ai/en/use-dify/nodes/tools#mcp-tools
     ```
 1. 使い方
 
-<<<<<<< HEAD
 - Instruction (System Prompt)の例
   ```
   使用可能なMCPツールのリストを表示してください。
@@ -428,22 +427,3 @@ https://docs.dify.ai/en/use-dify/nodes/tools#mcp-tools
     - `wsl -d Ubuntu`
     - ???
     
-=======
-  - Instruction (System Prompt)の例
-    ```
-    使用可能なMCPツールのリストを表示してください。
-    ```
-  - Instruction (System Prompt)の例
-    ```
-    Userの指示に従い適切なツールを使用してください。
-    今日の日付を取得する際には、CurrentTimeを使ってください。
-    昨日や明日や明後日などの日付を取得する際にはCurrentTimeから計算を行い取得してください。
-    曜日について指示があった際にはWeekday Calculatorを用いて計算してください。
-    予定について尋ねられた際にはzapier_mcpから得られるGoogle Calendar情報を用いて予定を取得してください。
-    日付を指定されている場合その日以外の予定は送信しないでください。
-    予定についてはカレンダーに書いている情報以外は書かないでください。
-    送信は行わなくてよいです。
-    出力は質問内容への解答だけでいいです。
-    ```
-  
->>>>>>> d1664b4c8c5ecd7be70f2d685d04beb3e13b3e3c
