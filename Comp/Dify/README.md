@@ -365,9 +365,22 @@ https://qiita.com/siruku6/items/c91a40d460095013540d
 https://docs.dify.ai/ja-jp/plugins/best-practice/how-to-use-mcp-zapier
 https://zenn.dev/upgradetech/articles/24a7d76133af4c
 ## Setting
-1.  Tools → MCP -> Add MCP Server (HTTP), setting MCP URL and name
-    - MCPがツールとして設定される
+https://docs.dify.ai/en/use-dify/nodes/tools#mcp-tools
+
+1.  Tools → MCP -> Add MCP Server (HTTP) => set MCP URL and name
+    - ⇒MCPがツールとして設定される（Tools → MCPに表示される）
     - Currently, only MCP servers supporting HTTP transport can be used.
+    - URLはホスト(Windows)のIPアドレスで指定（localhost, 127.0.0.1等はだめ） 
+    - ホストのfirewall設定しておく(remoteip=192.168.99.99することによりサーバ外部からのアクセスを遮断する)
+        ```powershell
+      # set firewall
+      netsh advfirewall firewall add rule name="★MCP TCP 9000" dir=in action=allow protocol=TCP localport=9000 remoteip=192.168.99.99 profile=private,domain
+      # show firewall
+      netsh advfirewall firewall show rule name="★MCP TCP 9000"
+      # delete firewall
+      netsh advfirewall firewall delete rule name="★MCP TCP 9000"
+      ```
+
 1. DifyのアプリにMCPツールを設定する
     - エージェントアプリの場合
       1. Difyエージェントアプリを開き、[ツール]の[追加]を押し、以下を設定する
@@ -390,7 +403,9 @@ https://zenn.dev/upgradetech/articles/24a7d76133af4c
       }
     }
     ```
+1. 使い方
 
+<<<<<<< HEAD
 - Instruction (System Prompt)の例
   ```
   使用可能なMCPツールのリストを表示してください。
@@ -413,3 +428,22 @@ https://zenn.dev/upgradetech/articles/24a7d76133af4c
     - `wsl -d Ubuntu`
     - ???
     
+=======
+  - Instruction (System Prompt)の例
+    ```
+    使用可能なMCPツールのリストを表示してください。
+    ```
+  - Instruction (System Prompt)の例
+    ```
+    Userの指示に従い適切なツールを使用してください。
+    今日の日付を取得する際には、CurrentTimeを使ってください。
+    昨日や明日や明後日などの日付を取得する際にはCurrentTimeから計算を行い取得してください。
+    曜日について指示があった際にはWeekday Calculatorを用いて計算してください。
+    予定について尋ねられた際にはzapier_mcpから得られるGoogle Calendar情報を用いて予定を取得してください。
+    日付を指定されている場合その日以外の予定は送信しないでください。
+    予定についてはカレンダーに書いている情報以外は書かないでください。
+    送信は行わなくてよいです。
+    出力は質問内容への解答だけでいいです。
+    ```
+  
+>>>>>>> d1664b4c8c5ecd7be70f2d685d04beb3e13b3e3c
