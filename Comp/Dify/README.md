@@ -424,6 +424,8 @@ https://docs.dify.ai/en/use-dify/nodes/tools#mcp-tools
   
   # Auto Start on Server Start
   - Set taskscheduler to start WSL2 when Server start
-    - `wsl -d Ubuntu`
-    - ???
+    - `wsl -d Ubuntu -e bash -lc "tail -f /dev/null"`
+    - when wsl start, automatically dify start.
+    - tail -f /dev/null continue eternally, so wsl not stop.
+    
     
