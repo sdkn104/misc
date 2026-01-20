@@ -408,3 +408,8 @@ https://zenn.dev/upgradetech/articles/24a7d76133af4c
   出力は質問内容への解答だけでいいです。
   ```
   
+  # Auto Start on Server Start
+  - Set taskscheduler to start WSL2 when Server start
+    - `wsl -d Ubuntu`
+    - ???
+    

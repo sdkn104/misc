@@ -2,10 +2,10 @@ import os
 from openai import AzureOpenAI
 import openai
 from pprint import pprint
-import tiktoken
+#import tiktoken
 import pprint
 import sys
-import PyPDF2
+#import PyPDF2
 
 openai.log = "debug"
 
@@ -18,13 +18,13 @@ print(deployment)
 print(subscription_key)
 
 # PDFファイルの読み込み
-def extract_text_from_pdf(file_path):
-    text = ""
-    with open(file_path, "rb") as f:
-        reader = PyPDF2.PdfReader(f)
-        for page in reader.pages:
-            text += page.extract_text()
-    return text
+#def extract_text_from_pdf(file_path):
+    # text = ""
+    # with open(file_path, "rb") as f:
+    #     reader = PyPDF2.PdfReader(f)
+    #     for page in reader.pages:
+    #         text += page.extract_text()
+    # return text
 
 
 stream = False
@@ -49,10 +49,10 @@ response = client.chat.completions.create(
 
 print(response)
 
-encoding = tiktoken.encoding_for_model("gpt-4")
-text = "こんにちは、Azure OpenAI APIを使っています。"
-tokens = encoding.encode(text)
-print(f"トークン数: {len(tokens)}")
+#encoding = tiktoken.encoding_for_model("gpt-4")
+#text = "こんにちは、Azure OpenAI APIを使っています。"
+#tokens = encoding.encode(text)
+#print(f"トークン数: {len(tokens)}")
 
 
 if stream == False:
