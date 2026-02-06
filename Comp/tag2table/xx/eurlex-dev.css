@@ -1,0 +1,5906 @@
+/* Deprecated per EURLEXNEW-4374 *//*Header*/
+/*.MyAccount li.OptSocialNet a:before {
+    content: "\f0c0";
+}
+.MyAccount li.OptBackOffice a:before {
+    content: "\f013";
+}*/
+/*Header (end)*/
+
+/*Homepage*/
+#ojBoxTop > a{
+	color: #0c7ea9;
+}
+#ojBoxBottom > .HomeOJMore{
+	margin-top: 10px;
+
+}
+.editorialContentEditIcon img{
+	z-index: 4;
+	position: absolute;
+	right: 10px;
+}
+.Promo .editorialContentEditIcon img{
+	max-height: 35px;
+	border-radius:0px;
+	min-width:0px;
+ }
+/*Homepage (end)*/
+
+/*Statistics Legal acts */
+table#legalActsStatisticsTable thead td{
+	height: 20px;
+	vertical-align:middle;
+	text-align:center;
+	font-weight:bold;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table#legalActsStatisticsTable thead th{
+	width: 70%;
+	height: 20px;
+	vertical-align:middle;
+	text-align:center;
+	font-weight:bold;
+	background-color:rgba(255,255,255,0.0);
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table#legalActsStatisticsTable tbody th {
+	text-align:left;
+	font-weight:normal;
+	padding:6px 4px 4px 25px;
+	vertical-align:middle;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table#legalActsStatisticsTable tbody tr td {
+	padding:2px 2px 2px 5px;
+	vertical-align:middle;
+	text-align:center;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table#legalActsStatisticsTable tbody th[id*="labelText"]{
+	text-align:left;
+	font-weight:bold;
+	padding-left:6px;
+}
+table#legalActsStatisticsTable tbody th[id*="labelTextNotBold"]{
+	text-align:left;
+	padding-left:6px;
+}
+table#legalActsStatisticsTable tbody th[id*="italicText"]{
+	font-style:italic;
+}
+table#legalActsStatisticsTable tbody tr.totalRow td{
+	background-color:rgba(0,0,0,0.07);
+}
+table#legalActsStatisticsTable tbody th.totalRow{
+	background-color:rgba(0,0,0,0.07);
+	text-align:left;
+	padding-left:6px;
+}
+table#legalActsStatisticsTable tbody tr:hover th{
+	background-color:#FFF;
+}
+table#legalActsStatisticsTable tbody tr.totalRow:hover th{
+	background-color:#EEE;
+}
+table#legalActsStatisticsTable tbody tr:hover td{
+	background-color:#F2F3F5;
+}
+table#legalActsStatisticsTable tbody tr td:hover{
+	background-color:#80CCE5;
+}
+
+table#legalActsStatisticsTable tbody tr.totalRow:hover td{
+	background-color:#D6D6D6;
+}
+table#legalActsStatisticsTable tbody tr.totalRow td:hover{
+	background-color:#80CCE5;
+}
+p.cpCategory {
+    color: #AAA;
+    font-weight: bold;
+    font-size: 21px;
+}
+.linkText {
+	padding: 5px 0 5px 0;
+}
+/*Statistics Legal acts (end)*/
+
+/*Statistics EU - Law */
+#printTable1, #printTable2, #printTable3, #printTable4{
+		display: none;
+}
+table#textStatisticsTable  tbody  tr  th {border: 0;}
+table#sectorStatisticsTable tbody  tr  th {border: 0;}
+/*Statistics EU - Law (end)*/
+
+/*Fallback OJ widget*/
+.ojFallBackDescription{
+	margin-bottom: 20px;
+}
+.ojFallBackDescriptionCheckLex{
+	margin-bottom: 10px;
+}
+table#ojFallBackTable {
+	border-bottom: 1px solid;
+	border-bottom-color: gainsboro;
+}
+#ojFallBackTable ul li ul.hoverDropdownList{
+    display: none;
+    position: relative;
+    left: 0;
+	margin: 0px;
+}
+#ojFallBackTable ul li ul.hoverDropdownList {
+    white-space: nowrap;
+}
+#ojFallBackTable ul li:hover ul.hoverDropdownList{
+    display: block;
+}
+#ojFallBackTable ul li ul.hoverDropdownList li{
+    display: block;
+}
+/*Fallback OJ widget (end)*/
+
+/*Fallback Direct Access widget*/
+.DaFallBack{
+	margin-top: 20px;
+	background: #EEE;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+/*Fallback Direct Access widget (end)*/
+
+/*Auto Complete*/
+.typeahead {
+	z-index: 1051;
+}
+div.QuickSearch > ul.typeahead{
+	width: 100%
+}
+.QuickSearchPadding{
+	padding: 7px 13px;
+}
+.autocompleteField + ul.typeahead{
+	width: 96%
+}
+.autocompleteField + .dropdown-menu > li > a {
+    white-space:normal;
+    word-wrap: break-word;
+}
+.dropdown-menu > .appearActive > a, .dropdown-menu > .appearActive > a:hover, .dropdown-menu > .appearActive > a:focus {
+    color: #ffffff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #087faa;
+}
+/*Auto Complete (end)*/
+
+/*Browsing Tree*/
+ul.browseTree {
+	padding-left: 15px;
+}
+ul.browseTree li {
+	list-style: none;
+	margin: 4px 0;
+	padding-left: 4px;
+}
+ul.browseTree li.leaf>i:before { /* facet-tree.tag */
+/*	content: "\f111";*/
+	font-family: FontAwesome;
+	display: inline-block;
+	width: 13px;
+	color: #CCC;
+	font-size: 6px;
+}
+ul.browseTree li.leaf>i:hover:before,
+ul.browseTree li.leaf>i:focus:before	{
+	color:#087FAA;
+}
+ul.browseTree li a {
+	font-weight: normal;
+	color: #444 ;
+}
+ul#tree.browseTree li a.gotoResultLink {
+	color: #0e47cb;
+}
+@media (max-width: 767px){
+	ul#tree.browseTree li a.gotoResultLink {
+		margin-left: 15px;
+	}
+}
+ul#tree.browseTree li a i[class="fa fa-search"]:before {
+	position: absolute;
+	font-family: 'FontAwesome';
+	top: 0;
+	left: 5px;
+	color: #0e47cb;
+	font-size: 14px;
+	font-weight: normal;
+}
+/*OJ special edition tree with id institutionTree*/
+ul#institutionTree.browseTree > li.leaf{
+	padding-left:15px;
+}
+ul#tree.browseTree, ul#institutionTree.browseTree {
+	padding-left:0px;
+}
+ul#institutionTree.browseTree ul[id^="tree"] {
+	padding-left:25px;
+}
+ul#institutionTree.browseTree li ul li a {
+	color: #0e47cb;
+}
+ul#institutionTree.browseTree ul li a[id^="search"] {
+	text-decoration: none;
+}
+ul#institutionTree.browseTree ul li a[id^="search"]:hover {
+	text-decoration: underline;
+}
+ul#institutionTree.browseTree ul li a[id^="search"]:focus {
+	text-decoration: underline !important;
+}
+ul#institutionTree.browseTree li a {
+	color: #0e47cb;
+	text-decoration: underline ;
+	padding: 0 !important;
+}
+ul#institutionTree.browseTree li a:hover{
+	text-decoration: none;
+}
+ul#institutionTree.browseTree ul[id^="tree"] li{
+	list-style-type: square;
+	color: #097eaa;
+}
+.backIconSpecialEd{
+	padding-right: 10px;
+	color: #0e47cb;
+}
+/*Add some space between top-level nodes*/
+ ul#tree.browseTree > li {
+	margin-top: 12px;
+}
+ul#tree.browseTree li a {
+	font-weight: bold;
+	color: #333;
+}
+ul#tree.browseTree li.leaf {
+	font-weight: bold;
+	padding-left:15px;
+}
+ul#tree.browseTree li a.gotoResultLink {
+	padding-left: 25px;
+  	position: relative;
+	font-weight: normal;
+	color: #0e47cb;
+}
+ul#tree.browseTree li a i:before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  top: 0;
+  left: 5px;
+  /*content: "\f002";*/
+}
+ul#tree.browseTree li a.gotoResultLink:hover:before {
+	color: #5599ff;
+}
+.normalTreeLink.ViewMoreInfo{
+	padding:0 0px 0 27px;
+ 	text-transform:none;
+ 	font-size: 14px;
+	color: #333333;
+ }
+ ul.browseTree li.leaf i.fa-circle {
+	margin-right: 4px; /* list dots alignment  */
+}
+ul.browseTree li.leaf i.fa-circle:hover:before  {
+	color: #097eaa;
+}
+/*Browsing Tree (end)*/
+span.magnifyingIcon{
+	padding-right: 5px;
+	color: #0e47cb;
+
+}
+
+/*Filter Input*/
+/* Advanced & Expert search field button clear*/
+#treefilterSearch-clearAdvancedSearchIconButton, #expertFilter-clearAdvancedSearchIconButton, #advancedFilter-clearAdvancedSearchIconButton, #metadataFilterSimple-clearAdvancedSearchIconButton, #metadataFilterAdvanced-clearAdvancedSearchIconButton{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    color: #B40404;
+    display:none;
+	z-index:10;
+}
+#treefilterSearch, #expertFilter, #advancedFilter, #metadataFilterSimple, #metadataFilterAdvanced {
+	padding-right:30px;
+}
+/*Filter Input (end)*/
+
+/* EURLEXNEW-4490 */
+.adjustHeight {
+   height: 33px !important;
+}
+.addBoxBorders {
+   box-shadow: 0 0 0 1px #cccccc !important;
+   max-width: unset;
+}
+.removeSolidBorders {
+   border: 0px;
+}
+.GroupCheckLabel.noBorder {
+   border: 0px !important;
+}
+/* EURLEXNEW-4520 */
+.removeRightPadding {
+   padding-right: 0;
+}
+/* ---------------------- */
+
+/*Highlight of EuroVoc tree nodes when searching in the filter field of the page*/
+.em{
+	color:#09C;
+	font-style:italic;
+	display: inline;
+}
+/*Highlight of EuroVoc tree nodes when searching in the filter field of the page (end)*/
+
+/*Focus Outline rules*/
+#main_menu_glossary li a[href]:focus, .SearchResultDoc li a {
+	outline-offset:-2px;
+	}
+/* Amplifies focus effect on metadata tabs */
+.nav-tabs li a:focus, .nav-tabs li.active a:focus{
+	outline:none;
+	box-shadow:inset 0px 0px 0px 3px #ffd617;
+    -webkit-transition: all 0s ease;
+    -moz-transition: all 0s ease;
+    -o-transition: all 0s ease;
+    transition: all 0s ease;
+    background-color:#EEE;
+ }
+div.checkbox input.greyedOut:focus{
+	outline: none;
+}
+button#remove:focus{
+	outline: 3px solid #ffd617 ;
+	outline-offset: -3px;
+}
+div.tab-pane:focus {
+	outline: none;
+}
+@media (max-width : 767px){
+	.OJTable tr td a[href]:focus {
+		outline-offset:0;
+	}
+	#contentfiche ul.glossaryContent li a[href]:focus {
+		outline-offset:-1px;
+	}
+}
+/*Focus Outline rules (end)*/
+
+/* Glossary */
+.glossaryContent ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.glossaryContent li,  ul.glossaryContent > li:before, #contentfiche ul#main_menu_glossary > li:before {
+	background: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#contentfiche ul#main_menu_glossary {
+	margin-left: 0px;
+}
+#contentfiche span.superscript {
+	vertical-align: super;
+	font-size: smaller;
+}
+/* Glossary (end)*/
+
+/*Notice TXT/ALL */
+#PP1Contents > div > p.invisible{
+	display: none;
+}
+#PPClass_Contents > .panel-body > ul > li > div {
+	display: -webkit-box;
+}
+#PPClass_Contents > .panel-body > ul > li > div > div{
+	padding-left: 25px;
+}
+.PanelBodyB > span{
+	margin-bottom: 5px;
+}
+.formatLanguagesBtn{
+	height: 30px;
+}
+.PubFormatType{
+    white-space: nowrap;
+}
+.rectificatifDisplay{
+    background: #FFF;
+	padding: 0;
+	float: none;
+}
+.nonTransform{
+	text-transform: none;
+}
+.languageAsterisk{
+	top: -1em;
+	left: -0.5em;
+	font-size: 55%;
+}
+.panel-group .PagePanel .eurlexPanel{
+	border: 0px solid #EEE;
+}
+#rectificatifPanelContents > div > .PubFormats > .PubFormat{
+	background: #FFF;
+}
+.exi-recueil:after{
+	top:-272px;
+}
+.sortOptionsMargin{
+	margin-top:2px;
+}
+.forceIndicator span {
+	display: inline-block;
+}
+/*Notice TXT/ALL (end)*/
+
+/*Notice NIM (start)*/
+#ntmTable > hr{
+    margin-bottom: 10px;
+	width: 100%;
+}
+.ntmRow{
+	margin-bottom: 10px;
+}
+.ntmHeading{
+	background: #EEE;
+	padding: 5px;
+}
+.transposition{
+	border: 5px;
+	padding: 10px;
+}
+.panel-group .PagePanel .eurlexPanel .MT_panel{
+	border: 3px solid #EEE;
+}
+@media (max-width: 767px)
+{
+	#PPNtm_Contents > .panel-body {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.ntmRow {
+		padding-right: 0;
+	}
+	.ntmRow > .visible-xs{
+		margin-top: 5px;
+		background: #EFF8FB;
+	}
+	.ntmRow > .visible-xs > b {
+		font-weight: normal;
+	}
+	a.noNims {
+		padding-left: 0;
+	}
+	a.countryToggle {
+		font-weight: bold;
+	}
+	.countryPanel {
+		padding-left: 10px;
+	}
+	.ntmRow > div.col-sm-4 {
+		padding-left: 0;
+	}
+	.countryToggle.ViewMoreInfo{
+		padding-left: 27px;
+	}
+	.countryToggle.ViewMoreInfo:before, .countryToggle.ViewMoreInfo.collapsed:before {
+		left: 0px;
+	}
+}
+.countryPanel{
+	overflow-x: auto;
+	width: 100%;
+	background: #EEE;
+}
+.countryPanel > p > a{
+	margin-top: 15px;
+}
+.ViewMoreInfo.ntmMore:before{
+	/*content: url(../images/term.png);*/
+	content: none;
+	transform: none;
+}
+.ViewMoreInfo.ntmMore > span{
+	font-size: 14px;
+	color: #333333;
+}
+.ViewMoreInfo.ntmMore.collapsed .VMIMore{
+	display: inline-block;
+}
+.ViewMoreInfo .VMIMore, .ViewMoreInfo.collapsed .VMILess {
+    display: none;
+}
+.ViewMoreInfo.ntmMore > span:hover {
+	background-color: #0099CC;
+	color: #ffffff;
+	border-color: #0099CC;
+	cursor: pointer;
+}
+.ViewMoreInfo.ntmMore.noNimsBtn > span:hover {
+	background-color: #ffffff;
+	color: #333333;
+	cursor: auto;
+}
+.btn.btn-link.ViewMoreInfo span.VMIMore, .btn.btn-link.ViewMoreInfo span.VMILess,
+.btn.btn-link.ViewMoreInfo span.VMIMore h3, .btn.btn-link.ViewMoreInfo span.VMILess h3,
+.btn.btn-link.ViewMoreInfo div.VMIMore strong, .btn.btn-link.ViewMoreInfo div.VMILess strong{
+	color:#333333;
+}
+.noNims{
+	padding-left: 33px;
+	font-size: 14px;
+	color: #333333;
+	margin-top: 5px;
+}
+.noNims:hover{
+	text-decoration: none;
+	cursor: auto;
+}
+.eurlexPanel + .ntmRow{
+	border-top: 1px solid #EEE;
+}
+.ntmRow > div.col-sm-4{
+	margin-top: 10px;
+}
+.ntmRow.exMemberBorder{
+	height: 1px;
+	border-top: 4px solid #EEE;
+}
+.extraMarginTop{
+	margin-top: 20px;
+}
+/*Notice NIM (end)*/
+
+/* Notice Procedure/HIS (start) */
+#procedureHeading {
+    color: #444;
+    overflow: auto;
+}
+#procedureHeading.alert-procedure {
+    color: unset;
+    background-color: white;
+    border: 1px solid #d8d8d8;
+}
+#procedureHeading.alert-case-file {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+#procedureHeading > p {
+	margin-top: 10px;
+}
+.ProcedureCMT, .ProcedureEDPS{
+    border-radius: 0;
+}
+.ProcedureEDPS{
+	background:#006400;
+}
+.ProcedureCOR{
+	background:#8e5d00;
+}
+.ProcedureCMT{
+	background: #99ff00;
+}
+.info-eult {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1971a1;
+    text-align: center;
+    margin: 20px auto 10px auto;
+    padding: 10px 30px 18px;
+    background-color: white;
+    border: 1px solid #1971a1;
+    border-radius: 8px;
+}
+@media (max-width: 575px) {
+    .info-eult {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+@media (min-width: 576px) {
+    .info-eult {
+        width: 75%;
+    }
+}
+@media (min-width: 768px) {
+    .info-eult {
+        width: 60%;
+    }
+}
+@media (min-width: 992px) {
+    .info-eult {
+        width: 50%;
+    }
+}
+.info-eult a.btn {
+    margin-top: 20px;
+    text-decoration: none !important;
+}
+/* Notice Procedure/HIS (end) */
+
+/*Machine Translation (start)*/
+.ViewMoreInfo.MTInfo:before{
+	content: "";
+	transform: none;
+}
+.panel-collapse > .panel-body > ul{
+	padding-left: 0;
+}
+#multilingualPoint + .PagePanel{
+	margin-top: 10px;
+}
+#multilingualPoint + #multilingualPoint{
+	margin-top: 10px;
+}
+.MTlanguageSelect{
+	width: auto;
+}
+.MTbutton{
+	width: 120px;
+	height: 34px;
+}
+.MTFromTo{
+	font-weight: bold;
+	width: auto;
+}
+@media (max-width: 767px)
+{
+	.MTFromTo, .MTlanguageSelect, .MTbutton{
+		margin-bottom: 10px;
+	}
+	.MTlanguageSelect, .MTbutton{
+		margin-left: 10px;
+	}
+	.MTbutton{
+		float: left;
+	}
+}
+@media (min-width: 768px)
+{
+	.MTFromTo{
+		padding: 0px;
+		margin-top: 7px;
+		margin-right: 15px;
+	}
+}
+.mtImg{
+	position: absolute;
+    left: 0;
+}
+.mtImg + span, .mtImg + span + span{
+	margin-left:10px;
+}
+.countryPanel.childPanel > p{
+	margin-left: 5px;
+}
+/*Machine Translation (end)*/
+
+/*See also in Summaries chapters*/
+.see-also{
+	font-weight: bold;
+}
+.see-also-list ul li{
+    list-style-type: none;
+	padding: 5px 5px 5px 0px;
+}
+.see-also-list ul{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.editorialBottom{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+/*See also in Summaries chapters (end)*/
+
+/*Summaries chapters*/
+.summaryPageTools {
+	padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+ul.summaryTree {
+	padding-left: 0px;
+}
+ul.summaryTree li {
+	list-style: none;
+	margin: 4px 0;
+	padding-left: 4px;
+}
+ul.storedSummaryLink {
+    padding-left: 10px;
+}
+ul.storedSummaryLink li {
+	list-style-type: none;
+}
+ul.storedSummarybrowseTree {
+    padding-left: 18px;
+}
+ul.storedSummarybrowseTree li{
+	list-style: none;
+	margin: 4px 0;
+}
+ul.storedSummarybrowseTreeLeaf li.summaryDoc {
+	padding-left: 12px;
+	font-weight: normal;
+	margin-left:0px;
+}
+ul.storedSummarybrowseTree li a.summaryTopicTitle {
+	font-weight: bold;
+}
+ul.storedSummarybrowseTree > li > a.firstLevel, ul.storedSummarybrowseTree > li > a.firstLevel:visited {
+	color: #097eaa !important;
+}
+ul.storedSummarybrowseTree > li > a.lowerLevel, ul.storedSummarybrowseTree > li > a.lowerLevel:visited {
+	color: #444 !important;
+}
+ul.storedSummarybrowseTreeLeaf {
+	padding-left: 10px;
+}
+.affix-top #summariesByTopic {
+	top: 100%;
+}
+.affix #summariesByTopic {
+	margin-top: 20px;
+}
+#summariesByTopic {
+	position: absolute;
+    height: 600px;
+    overflow-y: auto;
+    width: inherit;
+}
+#summariesByTopic li.Selected {
+	display: block;
+    padding: 5px 10px 5px 10px;
+	background: #888f9e;
+    color: #fff;
+    box-shadow: inset 0 0 0 1px #fff;
+}
+#summariesByTopic li {
+	padding: 0px 5px 0px 5px;
+}
+#summariesByTopic li a{
+	font-size: 12px;
+	color: #3366cc;
+}
+#summariesByTopic li a.active {
+	outline: 3px solid #ffd617;
+}
+#summariesByTopic .MenuList a:hover {
+	color: #5599ff;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+/*4601 ECB summaries*/
+
+ul.ecbSummaryTree  {
+	padding-left: 0px;
+}
+ul.ecbSummaryTree li {
+	margin: 4px 0;
+	padding-left: 4px;
+}
+.ecbSummaryTree  .btn.btn-link.btnAlignment:not(.collapsed) i::before { transform: rotate(90deg);}
+.ecbSummaryTree  .btn.btn-link.btnAlignment > i::before {  font-family: FontAwesome; font-size: 16px; font-weight: bold; display: block; transition: all .1s ease-out; line-height: 20px !important; color: #0e47cb;}
+
+ul.ecbStoredSummaryLink {
+	padding-left: 10px;
+}
+ul.ecbStoredSummaryLink, ul[id^="ecbStoredSummaryLink"]  {
+	list-style-type: none;
+}
+ul.ecbStoredSummarybrowseTree li{
+	list-style: disc;
+	margin: 4px 0;
+}
+li.ecbSummaryDocLeafs {
+	list-style: square !important;
+	color:#337ab7;
+	margin: 4px 0;
+}
+ul.ecbStoredSummarybrowseTreeLeaf li.ecbSummaryDoc {
+	padding-left: 12px;
+	font-weight: normal;
+	margin-left:0px;
+	list-style: circle ;
+
+}
+.btnECB{
+	text-decoration: none !important;
+}
+#ecbSummaryParentLabel {
+	padding: inherit;
+	color: #333333;
+}
+#ecbSummaryParentLabelMulti{
+	padding-left: 5px;
+	color: #333333;
+}
+#ecbSummaryParentLabel:hover {
+	text-decoration: underline;
+}
+.btnECB:focus  #ecbSummaryParentLabel {text-decoration: underline;}
+ul.ecbStoredSummarybrowseTreeMultipleNodes{
+	padding-left: 13px;
+}
+ul.ecbStoredSummarybrowseTree li::marker{
+	width: 20px;
+	color: #CCC;
+}
+ul.ecbStoredSummarybrowseTreeLeafs  li::marker{
+	color:#337ab7;
+}
+ul.MultipleNodesPadding {
+	padding-left: 45px;
+}
+
+/*EURLEXNEW-4352, add external link icon to intro text links*/
+div.intro_section a[href]:not([href*='eur-lex']):not([href^='.']):not([href^='#']):not([href^='/']):not([href^='javascrip']):not([href^='https://europa.eu/european-union/']):after {
+    font-family: 'FontAwesome';
+    /*content: "\f08e";*/
+    margin-left: 5px;
+}
+/*Summaries chapters (end)*/
+
+/*make the very long text wrap*/
+.longtext-wrap {
+    word-break: break-all; /* webkit */
+    word-wrap: break-word;
+   /* white-space: pre;*/
+    /*white-space: -moz-pre-wrap;*/ /* fennec */
+    /*white-space: pre-wrap;*/
+    /*white-space: pre\9;*/ /* IE7+ */
+}/*Summaries sub-chapters (end)*/
+
+/*Summaries adv Search form*/
+.displayElement{
+	display:block;
+}
+/*Summaries adv Search form (end)*/
+
+/*Advanced Search form*/
+.searchHiddenBtn{
+	position:absolute;
+	left:-10000px;
+}
+.RemoveControlAddon,
+.input-group-sm > .RemoveControlAddon{
+	border:0;
+	padding:0 0px;
+	border-radius:0 1px 2px 0;
+	background:rgba(0,0,0,.05);
+	font-size:14px;
+}
+.RemoveControlAddon button{
+	color:#c00;
+	border-style:none;
+}
+.RemoveControlAddon button:hover,
+.RemoveControlAddon button:focus{
+	color:#900;
+}
+.panel-group .AdvancedSearchPanel + script + .AdvancedSearchPanel {
+    margin-top: 10px;
+}
+/*change the margin between radio buttons*/
+.GroupRadioMargin{
+	margin-bottom:2px;
+	margin-top:2px;
+}
+.GroupCheckLabelOther{
+	pading:5px 4px;
+	display: table-cell;
+    background: rgba(255,255,255,.3);
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+    padding-left: 8px
+}
+/*EURLEXNEW-4657 - Advanced search - Misalignment issues*/
+.input-group.input-group-sm:has(>label.GroupCheckLabelOther){
+	margin-left: -9px
+}
+.GroupCheckLabelOther span {
+    display: block;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+.GroupCheckLabelOther input {
+    float: left;
+}
+.DateLabelMargin{
+	margin-top:23px;
+}
+span[id*="Calendarbtn"] {
+	border:none;
+	padding:0px 0px 0px 0px !important; ;
+}
+/*override the style of cursor in datepicker view mode */
+.datepicker-years .picker-switch {
+cursor: default !important;
+background: inherit !important;
+}
+.rowDateRange{
+	margin-left: 50%;
+}
+@media (max-width: 991px) {
+	.rowDateRange {
+		margin-left:0%;
+	}
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+	.AdvancedSearchPanel .col-md-push-10{
+		padding: 10px 2px;
+	}
+}
+.ProcRadioMargin{
+	margin-top:40px;
+}
+.greyedOut {
+	 opacity:0.4;
+}
+
+/*Scrolling Search bar: EURLEXNEW-3524*/
+.AdvancedSearchBar.affix {
+  top: 0;
+  left: 50%;
+  top: 0%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
+  border: 3px solid rgba(8, 127, 170, 0.5);
+  max-width: 1200px;
+}
+@media (max-width: 767px) {
+	.AdvancedSearchBar .hidden-sm.hidden-md.hidden-lg {
+		z-index: 1;
+	}
+	.AdvancedSearchBar .hidden-sm.hidden-md.hidden-lg div{
+		margin-bottom: 15px;
+	}
+	.AdvancedSearchBar.affix > .row > div:not(:first-child) {
+		visibility: hidden;
+		height: 0;
+	}
+}
+.AdvancedSearch #facets {
+	background: #EEE;
+	padding: 10px;
+	margin: 0 0 10px 0;
+}
+.AdvancedSearch #facets ul{
+    margin-left: 40px;
+    padding: 0;
+    list-style: none;
+}
+.AdvancedSearch #facets ul > li:before {
+	content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 33px;
+    width: 5px;
+    height: 5px;
+    background: #097eaa;
+}
+.AdvancedSearch #facets ul input {
+	margin-top: 3px
+}
+/*Scrolling Search bar: EURLEXNEW-3524 (end)*/
+/*Advanced Search form (end)*/
+
+/* Procedure timeline */
+#timeline-container {
+    margin-bottom: 45px;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#timeline-container > dt.timelineDt,
+#timeline-container > dt.timelineDt > div,
+#timeline-container > dd.timelineDd {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#timeline-container > dt.timelineDt, #timeline-container > dd.timelineDd {
+    min-height: 30px;
+    border-top: 1px solid #d8d8d8;
+}
+#timeline-container > dt.timelineDt:first-of-type,
+#timeline-container > dd.timelineDd:first-of-type,
+#timeline-container > dd.timelineDd:nth-of-type(2) {
+    border-top: none;
+}
+#timeline-container > dt.timelineDt {
+    font-size: 14px;
+	margin-bottom: 0;
+	padding: 5px 0 5px 20px;
+	background-color: #f5f5f5;
+}
+#timeline-container > dt.invisible {
+	padding: 0;
+	margin-bottom: 0;
+	border-top: 1px solid transparent; /* For layout purposes only. */
+}
+#timeline-container > dd.timelineDd {
+	padding: 5px 0 5px 0;
+	background-color: white;
+}
+#timeline-container > dd.timeline-line.timelineDd.visible-xs {
+    padding-left: 10px;
+    background-color: #f5f5f5;
+}
+#timeline-container > dt.timelineDt.hidden-xs:nth-last-of-type(-n + 2),
+#timeline-container > dd.timeline-line.timelineDd.visible-xs:first-of-type,
+#timeline-container > dd.timeline-line.timelineDd:has(+ dt.invisible) {
+    border-bottom: 1px solid #d8d8d8;
+}
+#timeline-container > dd.yearDd {
+    padding: 0;
+    border: none;
+}
+@media (max-width: 991px) {
+	#timeline-container > dd {
+		padding: 5px 5px;
+		width:100%;
+	}
+	#timeline-container > dd.yearDd {
+	    border-top: none;
+	}
+	.timeline-line.timelineDd.visible-xs {
+	    padding: 5px 5px;
+	    background: #f5f5f5;
+	    color: #333333;
+        font-weight: normal;
+	}
+	#timeline-container > dd.timeline-line.timelineDd:not(.visible-xs) {
+        min-width: fit-content !important;
+    }
+}
+dd.yearDd > .tm-years > span {
+	border-top: 0;
+	z-index: 1;
+}
+.timeline-line {
+	background-color: white;
+}
+.tm-events {
+	position:relative;
+	min-height:20px;
+}
+.tm-events a {
+	position:absolute;
+	margin-left:35px;
+}
+.tm-years {
+	position: relative;
+	min-height: 20px;
+	margin-top: 2px;
+	margin-bottom: 3px;
+	background: white;
+}
+.tm-years span {
+	position: absolute;
+	width: 60px;
+	font-size: 14px;
+	text-align: center;
+}
+.tm-year-separator {
+	position: absolute;
+	height: calc(100% + 10px);
+	min-height: 30px;
+	top: -5px;
+	border-left: 1px solid #d8d8d8;
+}
+
+/* bubble classes used by Timeline plugin. Refactored styles to reflect bootstrap's popover classes */
+.bubble-container {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1060;
+	width:299px;
+	padding:1px;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-weight:400;
+	line-height:1.42857143;
+	text-align:left;
+	text-align:start;
+	text-decoration:none;
+	text-shadow:none;
+	text-transform:none;
+	letter-spacing:normal;
+	word-break:normal;
+	word-spacing:normal;
+	word-wrap:normal;
+	white-space:normal;
+	background-color:#fff;
+	-webkit-background-clip:padding-box;
+	background-clip:padding-box;
+	border:1px solid #ccc;
+	border:1px solid rgba(0,0,0,.2);
+	border-radius:6px;
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,.2);
+	box-shadow:0 5px 10px rgba(0,0,0,.2);
+	line-break:auto;
+}
+@media(max-width: 767px){
+	.bubble-container {width: auto;}
+}
+.bubble-right {
+	margin-left:10px;
+}
+.bubble-left {
+	margin-left:-10px;
+}
+.bubble-container .bubble > dd, .bubble-container .bubble > span, .bubble-container .bubble > div, .bubble-container .bubble > .detail-ev {
+	padding: 1px 14px 1px 14px;
+}
+.bubble-container .bubble a.title-ev,.bubble-container .bubble div.title-ev {
+	display:block;
+	padding:9px 14px 3px 14px;
+	margin:0;
+	font-size:14px;
+	background-color:#f7f7f7;
+	border-bottom:1px solid #ebebeb;
+	border-radius:5px 5px 0 0;
+}
+.bubble-container .bubble span {
+	color:#AAA;
+	display:block;
+}
+.bubble-container .bubble a.detail-ev {
+	color:#aa8b2b;
+	display:block;
+}
+.bubble > a:first-of-type {
+    display: none;
+}
+@media(min-width: 768px){
+	.bubble-container .bubble .bubble-deco{
+		position:absolute;
+		z-index:5122;
+		left:139px;
+		bottom:-15px;
+		background:url(../../images/pointe.png) center top no-repeat;
+		width:30px;
+		height:15px;
+	}
+	.bubble-right .bubble .bubble-deco{
+		left:-30px;
+		bottom:auto;
+		top:7px;
+		background:url(../../images/pointe-left.png) right center no-repeat;
+	}
+	.bubble-left .bubble .bubble-deco{
+		right:-16px;
+		bottom:auto;
+		top:7px;
+		background:url(../../images/pointe-right.png) right center no-repeat;
+		left:auto;
+	}
+}
+/*Procedure timeline (end)*/
+
+/*Paging*/
+.form-control.input-sm.pagingInvalid{
+	border: 1px solid red;
+	outline: 0;
+	color: red;
+}
+.form-control.fewPages{
+    padding: 5px 9px 3px 9px;
+    border-radius: 1px;
+	opacity: 65%;
+}
+.PaginationGroup .form-control {
+	background: #ffffff;
+	color: #333333;
+	border: 2px solid #176793;
+}
+.bottomPaging{
+	order: 2;
+	margin-top: 10px;
+}
+/*Paging (end)*/
+
+/*Multilingual display*/
+.multilingualLink{
+	padding:15px;
+}
+.EurlexContent.col-xs-12.visible-xs-block.visible-sm-block{
+	min-height: none;
+}
+#multilingualText > tbody > tr > td{
+	padding: 2px 2px 2px 5px;
+	border: 1px solid white;
+}
+.multilingualActionLinks{
+	-webkit-padding-start: 0;
+}
+.multilingualHeading{
+	background: #EEE;
+}
+.multilingualHeading > .panel-title{
+	margin-top:0;
+}
+.nomarginSeparator{
+	margin:0;
+}
+/*TODO: re-evaluate this*/
+/*This is some of the old css used in multilingual display*/
+.multilingual-line{
+	overflow:hidden;
+	clear:both;
+	position:relative;
+	zoom:1;
+}
+.multilingual-line-text{
+	margin-bottom:5px;
+}
+.multilingual-column{
+	float:left;
+	word-wrap: break-word;
+	/* EURLEXNEW-4219 */
+	max-width: 780px;
+}
+.multilingual-error-column{
+	font-weight: bold;
+}
+/*Multilingual display (end)*/
+
+/*Data Tables custom css*/
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+	font-weight: bold;
+	background-color: #dddddd;
+	text-align: left;
+	padding: 6px 4px 4px 6px;
+	vertical-align: top;
+	height: 50px;
+	cursor: pointer;
+	*cursor: hand;
+}
+.data-table #relatedDocsTb th,
+.data-table-MS #relatedDocsTbMS th{
+	border-left:1px solid white;
+}
+#relatedDocsTb_filter, #relatedDocsTbMS_filter{
+	display: none;
+}
+#relatedDocsTbMS th select,
+#relatedDocsTb th select{
+	display: block;
+	height: fit-content !important;
+	padding: unset !important;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+	background-color: #087faa !important;
+}
+/*Data Tables custom css (end)*/
+/* Expert Search form (start)*/
+#expertHelp > .fa-spinner{
+    font-size: 35px;
+	margin-top: 200px;
+	color: #087faa;
+}
+.ExpertSearchValuePanel > .fa-spinner{
+    font-size: 35px;
+	color: #087faa;
+}
+#filter > .fa-spinner{
+    font-size: 15px;
+	color: #087faa;
+}
+.has-error .form-control.NoBorders{
+	border: 1px solid #a94442;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+div#input-file.has-error span.btn{
+	border: 1px solid #a94442;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	border-left: none;
+}
+.exDate > .btn, .rangeDate > .btn{
+	margin-top: 10px;
+}
+.ExpertSearchValueTree > a.has-arrow:before, .ExpertSearchValueTree a.has-arrow.expandNode:before {
+    transform: rotate(90deg) translate(0, 10%);
+	cursor: pointer;
+}
+/* For ecb do not rotate */
+.Ecb-widget .ExpertSearchValueTree > a.has-arrow:before, .Ecb-widget .ExpertSearchValueTree a.has-arrow.expandNode:before {
+	transform: rotate(0deg) translate(0, 10%);
+	cursor: pointer;
+}
+
+/* Override because cursor:pointer doesn't work in :before in IE */
+.ExpertSearchValueTree a.has-arrow{
+    cursor: pointer;
+}
+.ExpertSearchValueTree a.has-arrow:before{
+    cursor: pointer;
+}
+.ExpertSearchValueTree a.has-arrow:hover{
+    text-decoration:none;
+}
+.ExpertSearchValueTree label div, .ExpertSearchValueTree label div + div{
+	display: inline;
+}
+/* EURLEXNEW-4374 Grey bullets at ECB/Browse by topic */
+#EcbMenuBlock1 .ExpertSearchValueTree li.leaf i.fa-circle {
+	font-family: FontAwesome;
+	width: 20px;
+	color: #CCC;
+	font-size: 6px;
+	position: absolute;
+    left: -10px;
+    top: 5px;
+}
+.ExpertSearchTreeDisplayItem{
+    display: list-item;
+}
+/* EURLEXNEW-3967 */
+.backdrop {
+  z-index: 1;
+  background-color: #fff;
+  overflow: auto;
+  pointer-events: none;
+  height:  112px;
+}
+.highlights {
+	border: 0;
+	-webkit-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    height: auto;
+    padding: 6px 12px;
+    color: transparent;
+    overflow: auto;
+}
+.ExpertSearch .ExpertSearchQuery .textareaContainer {
+	z-index: 2;
+	background-color: transparent;
+	margin-top: -112px;
+}
+.ExpertSearch .ExpertSearchQuery textarea {
+	height: 112px;
+	background-color: transparent;
+}
+.ExpertSearchOperators .btn-primary {
+	border: 1px solid transparent;
+}
+@media (min-width: 768px) {
+	#nbZoomTerms{
+		width: auto;
+	}
+}
+/* Expert Search form (end)*/
+
+/* ECB tree */
+/*
+.Ecb-ExpertSearchValueTree > a.has-arrow:before, .ExpertSearchValueTree a.has-arrow.expandNode:before {
+	transform: rotate(90deg) translate(0, 10%);
+	cursor: pointer;
+}
+!* Override because cursor:pointer doesn't work in :before in IE *!
+.Ecb-ExpertSearchValueTree a.has-arrow{
+	cursor: pointer;
+}
+.Ecb-ExpertSearchValueTree a.has-arrow:before{
+	cursor: pointer;
+}
+.Ecb-ExpertSearchValueTree a.has-arrow:hover{
+	text-decoration:none;
+}
+.Ecb-ExpertSearchValueTree label div, .ExpertSearchValueTree label div + div{
+	display: inline;
+}
+.Ecb-ExpertSearchValueTree li.leaf:before{
+	content: "\f111";
+	font-family: FontAwesome;
+	width: 20px;
+	color: #CCC;
+	font-size: 6px;
+	position: absolute;
+	left: -10px;
+	top: 5px;
+}
+*/
+
+
+
+
+
+
+a.treeLabelLink{
+	display: block;
+    position: relative;
+    left: 0;
+    width: auto;
+    text-align: left;
+}
+.ExpertSearchFieldPanel em, .metadataGroupTree em {
+	color: #0CC;
+    font-style: italic;
+    display: inline;
+}
+.ExpertSearchFieldPanel a {
+    font-weight: normal;
+    color: #444;
+}
+.ExpertSearchValuePanel #searchResult{
+	list-style-type: none;
+}
+.ExpertSearchValuePanel #searchResult a{
+	cursor: pointer
+}
+.expertSearchAcronym{
+	color: #0e47cb;
+	font-style: normal;
+}
+/*Expert Search form (end)*/
+/*Switch to desktop*/
+.switchToDesktop{
+	background-color: transparent;
+	border-top: none;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+/*Switch to desktop (end)*/
+/*Remove - from li in tables (eg Notice MS-MD mobile)*/
+.NMetadata dd table li:before{
+	display: none;
+}
+/*Remove - from li in tables(end)*/
+
+/* Specifies the additional styling for the full page spinner in */
+.spinner-font {color: silver;}
+
+/* Search Results (start) */
+.SearchResult h2 a {
+    color:#0e47cb;
+}
+.SearchResult > h2 > a > em{
+	color:#333333;
+	font-style:italic;
+	display: inline;
+	background-color: #FFFD38;
+}
+.forceIndicatorBullet{
+	margin-right:10px;
+	vertical-align: inherit;
+}
+.multiLink a {
+	color: #097eaa;
+    margin: 5px;
+}
+/*paragraphs*/
+.textUnderTitle {
+	margin-bottom: 2px;
+}
+/* EURLEX-6055  */
+.internalNum{
+	margin-top: 4px;
+}
+.SearchResult:not(:has(.internalNum)) .textUnderTitle {
+	margin-top: 10px;
+}
+/* Search Results (end) */
+
+/* Highlighting in CELLAR text*/
+span.highlight {
+	background-color: yellow;
+}
+table tr.highlight td, table tr.highlight:hover td {
+	background-color:#f9f9f9;
+	font-weight: 600;
+}
+/* Highlighting in CELLAR text (end)*/
+
+/* Tabs */
+.tabContainer{
+	position:relative; zoom:1;
+}
+.nav-tabs{
+	overflow:hidden;
+	zoom:1;
+	margin-left:0;
+	margin-top:0px;
+	background-color:#BBB;
+}
+.nav-tabs li{
+	list-style:none;
+	float:left;
+	position: relative; white-space: nowrap;
+	background:none;
+	padding:0;
+	border-right:1px solid #FFF;
+}
+.nav-tabs li a{
+	padding:5px 15px;
+	background-color:#BBB;
+	display:block;
+	text-decoration:none;
+	color:#444;
+	font-size:1em;
+}
+.nav-tabs li.active a{
+	background:none;
+	background-color:#EEE;
+	color:#444;
+	margin-bottom:0;
+}
+.nav-tabs li:hover a{
+	color:#FFF;
+	background-color:#59F;
+}
+.nav-tabs li.active:hover a{
+	background-color:#EEE;
+	color:#444;
+}
+.tab-content{
+    padding: 5px;
+}
+/* In case the tabs are in a Form */
+.EurlexForm .tab-content{
+    background-color:#FFF;
+}
+/* In case the tabs are in a modal */
+.modal-body .tab-content{
+    background-color:#EEE;
+}
+/* In case of modals if the EurlexForm class is used */
+.white-back{
+	background-color:#FFF;
+}
+/* In case of a modal with a EurlexForm class is used inorder for form field to be correctly displayed */
+.modal-body .EurlexForm .row{
+	margin-bottom:15px;
+}
+.tab-content .overflowedAllTabs{
+	height:300px;
+	overflow:auto;
+	zoom:1;
+	display:block;
+	position:relative;
+	background-color:#FFF;
+}
+/* In case the tabs are in a modal */
+.modal-body .tab-pane{
+	padding: 5px;
+    background-color:#FFF;
+}
+.spacer{
+	padding-top: 15px;
+}
+.ModalActions{
+	margin-top: 15px;
+	text-align: right;
+	padding-bottom: 10px;
+}
+.fixedModalFilterForm{
+	margin-bottom: 2px;
+}
+/* Tabs (end) */
+/* browserNotSupported*/
+.browserNotSupported{
+	background-color: #fcf8e3 !important;
+	border-color: #faebcc !important;
+	color: #8a6d3b !important;
+    font-size: 0.9em;
+    margin: 0 0 5px;
+    padding: 2px 0 2px 20px;
+    text-align: center !important;
+}
+/* browserNotSupported (end) */
+
+.noDisplay{
+	display:none;
+}
+
+/* Expert zoom (start)*/
+tr.zoomHidden, a.zoomHidden {
+	display:none;
+}
+tr.zoom {
+	text-align:center;
+}
+tr.zoom td {
+	padding-bottom: 2em;
+}
+.zoomed {
+	width: 100%;
+	padding-bottom: 2em;
+}
+.zoomed ul {
+	background-color: #eee;
+	padding: 5px;
+	list-style-type: none;
+}
+.zoomed ul > li {
+	margin: 3px 0px 3px 0px;
+	word-break: break-word;
+}
+.zoomed ul > li > em{
+	color: #333333;
+	font-style: italic;
+	display: inline;
+	background-color: #FFFD38;
+}
+.zoom-metadata {
+	font-weight: bold;
+}
+/* Expert zoom (end)*/
+
+/* My saved documents (start) */
+	/*print icon fix */
+.SearchResult > label > a > .fa-print {
+	margin-top: 10px;
+}
+/* My saved documents (end) */
+/* Other stuff */
+.PageTitle > .row > .hidden-xs a{
+	text-decoration: none;
+}
+/* Other stuff (end) */
+/* add margin right (start) */
+.buttonFixRight{
+	margin-right: 2px;
+}
+/* add margin right (end) */
+
+/* ------------------------------------------------  2.1 ------------------------------------------------------------*/
+/* Notice Page for mobile */
+#PP4Contents #loadingImg{
+	color: #087faa;
+	font-size: 4em;
+	margin: 10px;
+}
+#textLoadBtn, #btn-generate-pdf{
+	height: 40px;
+    margin: 10px 0 10px 0;
+	font-weight: bold;
+	font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;
+}
+#ojTabContent.ojDisabled{
+	border-left: none;
+	padding-left: 0;
+}
+.documentSeparator{
+	background: #EEE;
+}
+/* Notice Page for mobile (end)*/
+/* Splashscreen */
+#splash {
+	background: #039 url(../../images/SplashLaw.gif) left top no-repeat;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#splash .globan {
+	width: 100% !important;
+}
+#splash .cck-container{
+	margin: auto ;
+	max-width:none !important;
+	width: 100% !important;
+}
+#splashLogo {
+	margin-left: 163px;
+}
+#splashMenu {
+	margin-left: 249px;
+	width: 600px;
+}
+#splash h1 {
+	margin: 0 0 6px 0;
+	font-size: 27px;
+	line-height: normal;
+	color: #9CF;
+}
+#splash h1 .siteName {
+	font-weight: bold;
+	color: #09C;
+}
+#splash ul {
+	list-style: none;
+	line-height: 17px;
+	font-size: 12.8px;
+	padding: 0;
+}
+#splash ul li a {
+	color: #9CF;
+}
+#splash span.countryCode {
+	float: left;
+	width: 2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #10B3EE;
+}
+
+#splash .Wrapper {
+	background: inherit;
+	max-width: none;
+}
+@media (max-width: 767px){
+	#splash{
+		background: #039 url(../../images/SplashLaw.gif) left -150px top no-repeat;
+	}
+ 	#splashLogo {
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-top: 10px;
+	}
+	#splashMenu {
+		position: relative;
+		left: auto;
+		top: auto;
+		width: auto;
+		margin-left:10px;
+	}
+}
+/* Splashscreen (end)*/
+/* override white-space not to wrap (start)*/
+.normalTextWrap li{
+    white-space: normal !important;
+}
+/* override white-space not to wrap (end)*/
+/* Revamp of procedures */
+.procStatus{
+	background-color: inherit;
+	border-color: inherit;
+}
+.procStatus i{
+	font-size: 18px;
+}
+.procStatus.procWithdrawn{
+	color: #da3531;
+}
+.procStatus.procPending{
+	color: #c2923e;
+}
+.procStatus.procAdopted{
+	color: #29a82b;
+}
+#procedureHeading .col-xs-12{
+	margin-top: 10px;
+}
+#procedureHeading .col-xs-12, #procedureHeading .col-xs-6{
+	padding: 0;
+}
+#procedureHeading .col-sm-8 {
+	padding-right: 30px;
+}
+#procedureHeading .procStatus {
+    margin-right: 6px;
+}
+.procDetailsLink, .procInfoLink {
+    color: #444;
+	text-transform: none;
+	text-align: left;
+	margin-left: 2px;
+	background-color: transparent;
+	border: none;
+}
+.procDetailsLink > i.fa::before {
+    top: 0;
+}
+@media (max-width: 991px) {
+    .procDetailsLink {
+        padding-left: 21px;
+    }
+}
+@media (max-width: 576px) {
+    .procDetailsLink {
+        padding-right: 0;
+    }
+}
+@media (min-width: 991px) {
+    .procDetailsLink {
+        margin-left: -8px;
+    }
+}
+.procInfoLink {
+	display: inline-block;
+	color: #0e47cb;
+	margin-left: 1px;
+}
+.procDetailsLink:after {
+	/*content:"\f106";*/
+	font-family:FontAwesome;
+	font-size:14px;
+	font-weight:normal;
+	position:absolute;
+	width:15px;
+	text-align:center;
+	color:#097eaa;
+	margin-left: 10px;
+	transition:all .1s ease-out;
+}
+/*.procDetailsLink.collapsed:after				{content:"\f107";} Deprecated per EURLEXNEW-4374 */
+.procDetailsLink:hover:after,
+.procDetailsLink:focus:after					{text-decoration:underline;}
+.procDetailsLink:hover:after,
+.procDetailsLink:focus:after					{text-decoration:none;}
+.procDetailsLink .VMIMore,
+.procDetailsLink.collapsed .VMILess			{display:none;}
+.procDetailsLink .VMILess,
+.procDetailsLink.collapsed .VMIMore			{display:inherit;}
+.procDetailsLink:focus                      {outline:3px solid #ffd617; outline-offset:2px;}
+
+#procedureDetails .GridDL dt, #procedureDetails .GridDL dd {
+    font-size: 14px;
+    border-top: 1px solid #d8d8d8;
+}
+#procedureDetails .GridDL dt {
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 6px;
+}
+#procedureDetails .GridDL dd {
+    float: right;
+}
+#procedureHeading .GridDL dt {
+	background: inherit;
+}
+#pubOjHeading .GridDL {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+	margin: 20px;
+	background-color: white;
+	border: 1px solid #d8d8d8;
+	border-radius: 4px;
+}
+#pubOjHeading .GridDL dt, #pubOjHeading .GridDL dd {
+    background-color: white;
+    border-top: none;
+}
+#pubOjHeading .GridDL dt:not(:first-of-type),
+#pubOjHeading .GridDL dd:not(:first-of-type) {
+    border-top: 1px solid #d8d8d8;
+}
+#pubOjHeading .GridDL dt {
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 4px;
+    background-color: #f5f5f5;
+}
+#pubOjHeading .GridDL dd {
+    float: right;
+}
+#procedureHeading ul {
+	margin-top: 40px;
+	list-style:none;
+	padding-left: 10px;
+
+}
+@media (max-width : 767px){
+	#pubOjHeading .GridDL {
+	    width: 100%;
+		margin: 10px 0px;
+	}
+	#procedureHeading ul {
+		margin-top: 20px;
+	}
+}
+#procedureHeading ul a{
+	color: #0e47cb;
+}
+#pubOjHeading {
+    font-size: 14px;
+	color: #333;
+	margin-bottom: 0;
+	background: url(../images/bg_oj.png) white no-repeat 100% 100%;
+    background-size: 116px auto;
+    border: 1px solid #d8d8d8;
+    overflow: auto;
+}
+#pubOjHeading h3 {
+    font-weight: bold;
+    color: inherit;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+@media (max-width : 767px) {
+    #pubOjHeading {
+        padding-bottom: 5px;
+        background: white;
+    }
+    #pubOjHeading h3 {
+        margin-top: 10px;
+    }
+}
+div#pubOjHeading a{
+	text-decoration: underline;
+}
+div#pubOjHeading a:hover ,
+div#pubOjHeading a:focus{
+	text-decoration: none !important;
+}
+.timelineProcedure a{
+	text-decoration: underline;
+}
+.timelineProcedure a:hover,
+.timelineProcedure  a:focus {
+	text-decoration: none;
+}
+.timelineProcedure a:has(i) {
+	text-decoration: none;
+}
+.timelineProcedure a:has(i):hover, .timelineProcedure a:has(i):focus {
+	text-decoration: underline !important;
+}
+.procSortOrderButton {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.procSortOrderButton a.btn {
+    color: #333;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.procSortOrderButton a.btn > i.fa, .procSortOrderButton a.btn > span {
+    vertical-align: text-top;
+}
+.procSortOrderButton a.btn > i.fa {
+    font-size: 22px;
+    margin-right: 10px;
+}
+.procExpandCollapse {
+    position: relative;
+    height: 10px;
+}
+.procExpandCollapse,.caseExpandCollapse, .bolExpandCollapse  {
+	background: #FFF;
+	margin: 0;
+	z-index: 1;
+}
+.procExpandCollapse .btn-group-xs {
+    position: absolute;
+    right: 0;
+    top: -34px;
+}
+.caseExpandCollapse .btn-group-xs, .bolExpandCollapse .btn-group-right {
+	float: right;
+}
+#pubOjHeading > span {
+	color: #444;
+	font-size: 16px;
+	font-weight: bold;
+}
+#procedureDetails > dl .ViewMoreInfo {
+	display:none;
+}
+/* Revamp of procedures (end) */
+
+/*noJS buttons (start)*/
+.openQuestionNoJS, .advancedSearchNoJS, .daByYear, .preActsNoJS, .searcResultsNoJS, .facetsNoJS{
+	margin-top:10px;
+}
+.reportAbuseNoJS{
+    margin-left: 10px;
+}
+.daFormNoJs{
+	margin-bottom:10px;
+}
+select#languageSelect, select#languageSelectNoJs{
+	display: inline-block;
+	width: auto;
+}
+.ExpertSearchValueTree input.hideInJs{
+    position: absolute;
+    top: 6px;
+    left: -10px;
+}
+.input-group-sm .input-group-btn .clearFormNoJS{
+	margin-left: 5px;
+}
+.displayMtDtNoJS {
+	margin-left: 101%;
+    margin-top: -57px;
+}
+.browseTree .ViewMoreInfo {
+	display: inline-block;
+}
+.no-js .QuickSearchOptions{
+	padding: 20px 10px 20px 40px
+}
+@media (max-width: 767px){
+	.no-js .QuickSearchOptions {
+	    padding: 15px;
+	}
+}
+/*noJS buttons (end)*/
+/*EURLEXNEW-3409 - Appearance of procedure tab when document belongs to several procedures*/
+.initiatingDocument{
+	margin-top: 10px;
+}
+#linkedProcedureTable.GridDL.GridDL4060 .linkedProcsHeading{
+	font-weight: bold;
+	background-color: #FFF;
+}
+#linkedProcedureTable {
+	margin-top: 30px;
+}
+
+/*Fix on notice display for small screens. When the Languages, Formats and link to OJ table is transformed into drop down menus,
+  they don't overlap with button groups below them*/
+.PubFormat:nth-child(2) > .btn-group{
+	z-index: 1010;
+}
+.PubFormat:nth-child(3) > .btn-group{
+	z-index: 1009;
+}
+.PubFormat:nth-child(4) > .btn-group{
+	z-index: 1008;
+}
+.PubFormat:nth-child(5) > .btn-group{
+	z-index: 1007;
+}
+.PubFormat:nth-child(6) > .btn-group{
+	z-index: 1006;
+}
+.PubFormat:nth-child(7) > .btn-group{
+	z-index: 1005;
+}
+/*Fix on notice display for small screens. When the Languages, Formats and link to OJ table is transformed into drop down menus,
+  they don't overlap with button groups below them (end)*/
+/*search/direct access widgets (start)*/
+.WidgetSearchBtn {
+	margin-bottom: 13px;
+}
+.inputNoLabel{
+	margin-top: 25px;
+}
+@media(max-width: 767px){
+	.WidgetSearchBtn {
+		float: right;
+	}
+}
+.panel-group .PanelA .panel-title.panel-title-widget{
+	font-size: 1.1em;
+}
+#WDGPanels{
+	margin-top: 20px;
+}
+/*search/direct access widgets (end)*/
+/*	Horizontal overflow fix for long notixe texts
+	Allow long words to be able to break and wrap onto the next line*/
+#PP4Contents, #PP4ContentsPdf{
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+/*usage statistics vertical alignment (start)*/
+table[id^="visitTable"] th:first-child,
+table[id^="visitorTable"] th:first-child,
+table[id^="pageViewsTable"] th:first-child,
+table[id^="documentConsultedTable"] th {
+	white-space: normal;
+	width: 180px;
+}
+table[id^="visitTable"] td,
+table[id^="visitorTable"] td,
+table[id^="pageViewsTable"] td,
+table[id^="documentConsultedTable"] td {
+	width: 180px;
+}
+/* Medium Devices, Desktops */
+@media (max-width : 991px){
+	table[id^="visitTable"] th:first-child,
+	table[id^="visitorTable"] th:first-child,
+	table[id^="pageViewsTable"] th:first-child,
+	table[id^="documentConsultedTable"] th,
+	table[id^="visitTable"] td,
+	table[id^="visitorTable"] td,
+	table[id^="pageViewsTable"] td,
+	table[id^="documentConsultedTable"] td {
+		min-width: 150px;
+	}
+}
+/* Small Devices, Tablets */
+@media (max-width : 767px){
+	table[id^="visitTable"] th:first-child,
+	table[id^="visitorTable"] th:first-child,
+	table[id^="pageViewsTable"] th:first-child,
+	table[id^="documentConsultedTable"] th,
+	table[id^="visitTable"] td,
+	table[id^="visitorTable"] td,
+	table[id^="pageViewsTable"] td,
+	table[id^="documentConsultedTable"] td {
+		min-width: 66px;
+	}
+}
+/*usage statistics vertical alignment (end)*/
+/* Notice search buttons layout fix -- EURLEXNEW-3486 */
+.noticeSearchLinks{
+	display: inline-block;
+}
+@media(min-width: 992px){
+	.noticeSearchLinksBtnGroup{
+		margin-left: -20px;
+	}
+}
+@media(max-width: 991px){
+	.noticeSearchLinksBtnGroup{
+		text-align: right;
+	}
+}
+/* Notice search buttons layout fix -- EURLEXNEW-3486 (end)*/
+/*disable transition for help toggle menu - EURLEXNEW-3479 (start)*/
+.notransition {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+}
+/*disable transition for help toggle menu - EURLEXNEW-3479 (end)*/
+/*remove extra padding - EURLEXNEW-3497, EURLEXNEW-3525 (start)*/
+@media (max-width : 991px) {
+	.AdvancedSearchPanel .panel-body{
+		padding-bottom: 0px;
+		margin-bottom: -5px;
+	}
+	.AdvancedSearchPanel .FormFieldset:last-child{
+		padding-bottom: 0px;
+	}
+	#documentReference_EU_CASE_LAW .panel-body,
+	#procedureReferenceBox_LEGAL_PROCEDURE .panel-body{
+		padding-bottom: 10px
+	}
+	#partiesBox_EU_CASE_LAW .CheckRadioGroup{
+		margin-bottom: 0px;
+		padding-bottom: 10px;
+	}
+}
+@media (max-width : 767px){
+    .AdvancedSearchCondition .form-group,
+    .panel.panel-default.AdvancedSearchPanel .form-group.noMarginBottom {
+        margin-bottom: 0px !important;
+    }
+}
+.modal-body .EurlexForm{
+	margin: 1px 0 1px 0;
+	padding-bottom: 1px;
+}
+/*remove extra padding - EURLEXNEW-3497 (end)*/
+/*remove line break in menu when we hide li element in mobile (start)*/
+@media (max-width : 991px){
+	.MenuList .removeBorderBottom{
+		border-bottom: none;
+	}
+}
+/*remove line break in menu when we hide li element in mobile (end)*/
+/*wrap elements in div and add this class to float together (start)*/
+.floatTogether{
+	display: inline-block;
+}
+/*wrap elements in div and add this class to float together (end)*/
+/* Styling for error messages (start)*/
+span.errorMessage{
+	color: red !important;
+	font-weight: bolder  !important;
+}
+/* Styling for error messages (end)*/
+
+/* Remove the 'X' icon from all input tags on IE (start)*/
+input[type="text"]::-ms-clear {
+    display: none;
+}
+/*  Remove the 'X' icon from all input tags on IE (end)*/
+
+/* EURLEXNEW-3554 - PublicAccess Phase 3 Adaptations (start)*/
+/* Tree structure styling for events under workflows */
+.tree li {
+  	list-style-type:none;
+  	margin:0;
+   	padding:10px 5px 0 5px;
+   	position:relative
+}
+.tree ul:nth-child(1) {padding-left: 0px}
+.tree li::before, .tree li::after {
+	content:'';
+   	left:-20px;
+   	position:absolute;
+   	right:auto
+}
+.tree li::before {
+   	border-left:2px solid #c9c9c9;
+  	bottom:50px;
+   	height:100%;
+   	top:0;
+   	width:2px
+}
+.tree li::after {
+   	border-top:2px solid #c9c9c9;
+   	height:20px;
+   	top:25px;
+   	width:25px
+}
+.tree li span {
+     /*-moz-border-radius:5px;
+   	-webkit-border-radius:5px;
+   	border:1px solid #999;
+   	border-radius:5px;
+   	display:inline-block;
+   	padding:3px 8px;
+   	text-decoration:none*/
+}
+.tree li.parent_li>span {
+   	cursor:pointer
+}
+.tree>ul>li::before, .tree>ul>li::after {
+   	border:0
+}
+.tree li:last-child::before {
+   	height:27px
+}
+.tree li.parent_li>span:hover, .tree li.parent_li>span:hover+ul li span {
+   	background:#eee;
+   	border:1px solid #94a0b4;
+   	color:#000
+}
+/* EURLEXNEW-3554 - PublicAccess Phase 3 Adaptations (end)*/
+
+/* In multilingual page, make the search menu more compact and not waste too much space. */
+.row.well.multilingualToolsSpacing {
+  padding: 0px;
+}
+.multilingualActionLinks {
+  padding-left: 5px;
+}
+
+/* EURLEXNEW-3597 (start) */
+/* General */
+.toc-sidenav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.toc-sidebar .nav > li > a {
+    padding: 4px 10px;
+	color: #333333;
+}
+.toc-sidenav  + .toc-sidenav {
+	border-top: 5px solid #CCC;
+}
+.toc-sidebar ul.nav.collapse {
+	margin-left: -5px;
+}
+.toc-sidebar .nav > .active > a {
+    background-color: #eeeeee;
+    border-left: 4px solid	#1971a1;
+	color: #1971a1;
+	font-weight: 500;
+	margin-left: -4px;
+}
+.toc-sidebar .nav .nav {
+    display: none;
+}
+.toc-sidebar .nav > .active > ul {
+    display: block;
+}
+.toc-sidebar .nav .nav > li > a {
+    padding-left: 22px;
+}
+.toc-sidebar .nav .nav .nav > li > a{
+	padding-left: 22px;
+}
+.toc-sidebar .nav .nav > .active > a {
+    padding-left: 10px;
+    margin-left: 10px;
+    border: none;
+    border-left: 4px solid	#1971a1;
+}
+.toc-sidebar .nav li + li, .toc-sidebar .nav ul > li, .toc-sidebar .nav li{
+	border-top: 1px solid #dee8ec;
+	margin-left: -5px;
+}
+.tocWrapper .toc-sidenav:first-of-type {
+	padding-top: 0;
+	padding-left: 4px;
+}
+.tocWrapper .btn-primary:focus {
+	border: none;
+}
+/* Notice Page */
+#tocBtn, #tocHideBtn, #tocBtnMbl, #tocHideBtnMbl{
+    font-size: 15px;
+    font-weight: 500;
+	color: #ffffff;
+	background: #1971a1;
+	border: none;
+}
+#tocBtn:hover, #tocHideBtn:hover, #tocBtnMbl:hover, #tocHideBtnMbl:hover{
+	font-size: 15px;
+	font-weight: 500;
+	color: #ffffff;
+	background:#176793;
+	border:none;
+}
+#tocBtn, #tocHideBtn {
+	position: absolute;
+	width: 100%;
+}
+#tocHideBtn {
+	border-bottom: 1px solid #cad7dc;
+}
+.affix-top #tocSidebar {
+	top: 98%;
+}
+.affix #tocSidebar {
+	margin-top: 10px;
+}
+#tocSidebar {
+	position: absolute;
+	width: inherit;
+}
+#tocSidebar .tocWrapper .toc-sidebar {
+    overflow-y: auto;
+    margin: 0;
+	position: absolute;
+    top: 33px;
+	border: 1px solid #cad7dc;
+	width: 100%;
+}
+#tocSidebar .tocWrapper .toc-sidebar .nav > li:not([class="topLink"]) {
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 500;
+}
+#tocSidebar .tocWrapper .alert {
+	position: absolute;
+    width: 100%;
+    padding: 3px;
+	top: 35px;
+	z-index: 1000; /* 1 more than topBar */
+}
+/* Standalone HTML view */
+@media (min-width: 992px) {
+    #TOC {
+        margin-top: 5px;
+    }
+}
+#TOCSidebarSA {
+	border: 1px solid #cad7dc;
+}
+@media (max-width: 991px) {
+	#TOCSidebarSA {
+		position: fixed;
+		z-index: 2;
+		background-color: #FFF;
+		max-height: 30%;
+		overflow-y: scroll;
+		bottom: 0;
+	}
+}
+@media print {
+	#TOCSidebarSA {
+		display: none !important;
+	}
+}
+/* Mobile */
+#tocBtnMbl, #tocHideBtnMbl {
+	position: fixed;
+    bottom: 4px;
+	width: 250px;
+	padding: 5px 20px 5px 20px;
+	right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+	z-index: 9999;
+	border-radius: 6px;
+}
+aside#TOC-off-canvas {
+	height: auto;
+	max-height: 60%;
+}
+aside#TOC-off-canvas .toc-sidebar {
+	overflow: auto;
+}
+aside#TOC-off-canvas .topBar {
+	position: relative;
+	width: 100%;
+    top: 0;
+}
+/* EURLEXNEW-3725 */
+.toc-sidenav .topLink {
+    font-size: 12px;
+	background: #EEE;
+}
+.toc-sidenav .topLink a:hover {
+	text-decoration: underline;
+}
+aside#TOC-off-canvas .toc-sidenav .topLink {
+	height: 0;
+}
+.toc-sidenav:not(:first-child) .topLink {
+	display: none;
+}
+.toc-sidenav:not(:first-child) .topLink + li {
+	border-top: none;
+}
+.topBar {
+    position: absolute;
+    top: 34px;
+    z-index: 999;
+    left: 0%;
+	background: #eee;
+	border: 1px solid #dee8ec;
+	padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 1px;
+	height: 29px;
+	width:100%
+}
+#TOCSidebarSA .topBar {
+	top: 0;
+	left: auto;
+}
+
+#tocHideBtnStandalone {
+    margin-left: calc(100% - 70px);
+    margin-top: 5px;
+    position: fixed;
+    border: #cad7dc;
+    color: gray;
+    z-index: 1000;
+}
+@media (max-width: 991px) {
+	#TOCSidebarSA .topBar {
+		position: fixed;
+		top: auto;
+		border-top: 1px solid #cad7dc;
+	}
+}
+.topBar > a + a {
+    margin-left: 3px;
+    padding-left: 2px;
+    border-left: 1px solid #087faa;
+}
+.topBar > a {
+	padding: 0px 0px;
+    float: left;
+    background: #eeeeee;
+}
+.topBar a.active {
+	border-bottom: 2px solid #AE0062;
+}
+.innerNav li.active a {
+	font-weight: 500;
+}
+.innerNav li a .artSuffix {
+	font-weight: 500;
+}
+
+/* Expert Search Alert box will now break long invalid metadata overflowing strings in a new line. */
+.alert.alert-danger.fitContent {
+    overflow-wrap: break-word;
+}
+
+/* vertical gradient classes */
+.bottomGradient {
+	background-image: -webkit-linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -moz-linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -ms-linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -o-linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	background-size: 100% 5%;
+	padding: 0px 10px;
+}
+.topGradient {
+	background-image: -webkit-linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -moz-linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -ms-linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -o-linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0));
+
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	background-size: 100% 5%;
+	padding: 0px 10px;
+}
+.bottomTopGradient {
+	background-image: -webkit-linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0)), -webkit-linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -moz-linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0)), -moz-linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -ms-linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0)), -ms-linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: -o-linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0)), -o-linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+	background-image: linear-gradient(top, #c3c3c5, rgba(195, 195, 197, 0)), linear-gradient(bottom, #c3c3c5, rgba(195, 195, 197, 0));
+
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	background-size: 100% 5%;
+}
+#TOC_docHtml li:not([class="topLink"]){
+	padding: 0px 15px;
+}
+ul.nav.toc-sidenav > li:not([class="topLink"]) {
+	padding: 0px 15px;
+}
+@media (max-width: 991px) {
+	/* Offset only for SA mobile TOC */
+	#TOCSidebarSA.topGradient {
+		background-position: 0% 29px;
+	}
+	#TOCSidebarSA.bottomTopGradient {
+		background-position: 0 29px, 0 100%;
+	}
+}
+/* EURLEXNEW-3597 (end) */
+
+/* EURLEXNEW-3693 - only supported by mobile safari */
+@supports (-webkit-overflow-scrolling: touch) {
+	select[readonly="readonly"], select:disabled {
+		background: #555555 !important;
+	}
+}
+
+/* EURLEX-6058 Online learning section improvement ticket 2*/
+@media (min-width: 992px){
+    .body-online-learning{
+        padding-top:30px
+    }
+}
+.duration-online-learning{
+    margin-top:30px
+}
+
+
+@media (min-width: 992px){
+    .description-box{
+        margin: 30px 0px;
+        padding: 30px;
+        border: solid;
+        border-width: 1px;
+        border-color: #C2C2C2;
+
+    }
+}
+@media (max-width: 992px){
+    .description-box{
+        margin:30px 0px;
+
+    }
+}
+.description-heading{
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+
+}
+
+.description-text{
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.transcript-button{
+    background-color: #ffffff;
+    border: 1px solid #666666;
+    margin: 30px 0;
+}
+
+.transcript-button:hover{
+    border: solid;
+    margin: 30px 0;
+    border-width: 1px;
+    border-color: #666666;
+    background: #eeeeee;
+}
+
+.transcript-button:active{
+    background-color: #666666;    
+    border: 1px solid #666666;
+    outline: 1px solid #666666 !important;
+    outline-offset: 2px !important;
+    margin: 30px 0;
+}
+
+
+.transcript-text{
+    padding-left: 10px;
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 14px;
+    color: #666666;
+}
+
+.transcript-button:active .transcript-text{
+    padding-left: 10px;
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+
+.useful-links-text{
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+}
+
+
+.ls-embed-video-iframe-video  {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    z-index:1;
+}
+
+
+.useful-links-text-black {
+    color: #333333;
+}
+.useful-links-text-blue {
+    color: #0e47cb;
+    text-decoration: underline;
+    text-underline-offset: 0.15rem;
+}
+
+
+/* EURLEXNEW-3745: Consolidated texts (start) */
+.consLegLinks div, .consLegLinks p {
+	display: inline-block;
+}
+.consLegLinks a {
+	font-weight: bold;
+	text-decoration: underline;
+    text-underline-offset: 0.15rem;
+}
+.basicActIf {
+	margin-left: 5px;
+}
+.consLegLinks .accessCurrent {
+	float: right;
+}
+@media (max-width: 991px) {
+	.consLegLinks .accessCurrent {
+		display: inherit;
+		float: none;
+	}
+}
+/* ConsLeg Versions */
+#consLegVersions {
+	position: absolute;
+	width: inherit;
+	margin-top: 20px;
+}
+#consLegVersions button {
+    font-size: 15px;
+    font-weight: 500;
+	position: absolute;
+    width: 100%;
+}
+#showConsLegVersions, #hideConsLegVersions{
+	color: #ffffff;
+	background: #1971a1;
+	border: none;
+}
+#showConsLegVersions:hover, #hideConsLegVersions:hover{
+	color: #ffffff;
+	background: #176793;
+	border: none;
+}
+#consLegVersions .consLegNav {
+    border: 1px solid #cad7dc;
+    text-align: center;
+    overflow-y: auto;
+    max-height: 320px;
+    top: 33px;
+    position: absolute;
+    width: 100%;
+}
+#consLegVersions .consLegNav ul {
+	list-style: none;
+	padding: 15px 0 0 0;
+}
+#consLegVersions .consLegNav .current {
+	font-weight: 500;
+	color:#1971a1;
+}
+#consLegVersions .consLegNav .active {
+	 color: #1971a1;
+	 font-weight: 500;
+	 background: #EEEEEE;
+	 border-left: 4px solid #1971a1;
+	 margin-right: 4px;
+}
+#consLegVersions .consLegNav ul li a{
+	border-bottom: 1px solid #f5f5f5;
+	width: 80%;
+	display: inline-block;
+	padding: 3px;
+	color: #333333;
+}
+.conslegFutureBullet {
+	margin-left: -12px;
+	vertical-align: inherit;
+}
+#consLinkWarn{
+    color: skyblue;
+    margin-right: -6%;
+}
+#consLegVersions .alert {
+	position: absolute;
+    width: 100%;
+    padding: 3px;
+	top: 35px;
+	z-index: 1000;
+}
+.textItalics {
+    font-style:italic;
+}
+/* EURLEXNEW-3745: Consolidated texts  (end) */
+
+/* EURLEXNEW-3749: Consolidated texts  TOC */
+.affix-top #consLegVersions {
+	top: 97%;
+}
+.toc-sidenav .nav .nest-2 > li > a {
+	padding-left: 50px;
+}
+.toc-sidenav .nav .nest-2 > .active > a {
+	margin-left: 38px;
+}
+.affix-top #tocSidebar ~ #consLegVersions {
+	margin-top: 50px;
+}
+.affix #tocSidebar ~ #consLegVersions {
+	margin-top: 50px;
+}
+/* EURLEXNEW-3749: Consolidated texts  TOC (end) */
+
+/* EURLEXNEW-3756: Download statistics (start) */
+#statisticsExport, #statisticsExportNoJs	{float: right;}
+#statisticsExport .btn						{font-size:14px;}
+#statisticsExport .btn .fa					{margin-right:8px;}
+#statisticsExport .btn .fa.fa-angle-down		{margin-right:0; margin-left:5px;}
+#statisticsExport .dropdown-menu				{z-index: 1001;}
+/* EURLEXNEW-3756: Download statistics (end) */
+/* EURLEXNEW-3791: Advanced search - Text search (start) */
+.textOperatorSelect {
+	margin-bottom: 5px;
+}
+.textOperatorSelect .radio  label {
+	color: #333333;
+    font-weight: 500;
+	background: #EEEEEE;
+    border: 5px solid #EEEEEE;
+	width: 70px;
+}
+.textOperatorSelect .col-sm-6 > label {
+	margin-top: 5px;
+}
+/* EURLEXNEW-3791: Advanced search - Text search (end) */
+/* EURLEXNEW-3787: Advanced search - add a language selector (start) */
+.select2-container--default .select2-selection--multiple {
+    border: 1px solid grey;
+	border-radius: 0px;
+}
+.select2-results__options {
+	border: 1px solid black;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: none;
+    outline: 3px solid #ffd617;
+}
+/* EURLEXNEW-3787: Advanced search - add a language selector (end) */
+
+/* EURLEXNEW-3916: IMPROVING MACHINE TRANSLATION TOOL IN NTMs (start) */
+#translatedTitle {
+	border-color: #EEE;
+    border-style: solid;
+    border-width: 2px;
+    margin: 0px 0px 10px 0px;
+    padding: 5px 10px 5px 10px;
+}
+
+#translationPlaceholder {
+	margin: 0px;
+	padding: 5px 10px 5px 10px;
+}
+
+#translationPlaceholderWrapper {
+	border-color: #EEE;
+    border-style: solid;
+    border-width: 2px 3px 10px 0px;
+}
+/* EURLEXNEW-3916: IMPROVING MACHINE TRANSLATION TOOL IN NTMs (end) */
+
+/*Fix CCK banner so as to be aligned with the rest of the site*/
+/*Fix CCK banner to be on top of the stack order from 100 to 1050. Needs to be above PubFormat:nth-child (lang table icons) which is 1010*/
+/*EURLEXNEW-4468: CCK banner should have full width of the screen*/
+.cck-container {
+	margin: auto;
+	max-width:none !important;
+  border: none !important;
+  z-index: 1050 !important;
+    width: 100% !important;
+}
+
+/* ECB recently published (start) */
+ul#ecb_recently_published {
+	margin-left:0px;
+	padding:0;
+	list-style:none;
+}
+ul#ecb_recently_published > li {
+	padding-left: 16px;
+	position:relative;
+}
+ul#ecb_recently_published > li:not(:last-child) {
+	padding-bottom: 1.4em;
+}
+ul#ecb_recently_published.ebsRecent > li:not(:last-child) {
+	padding-bottom: 1.1em;
+}
+ul#ecb_recently_published > li + li	{
+	margin:0px;
+}
+ul#ecb_recently_published > li:before {
+	content:"";
+	display:block;
+	position:absolute;
+	top:6px;
+	left:3px;
+	width:5px;
+	height:5px;
+	background:#097eaa;
+	border-radius: 50%
+}
+.multiline-ellipsis {
+  /* required, as-is */
+  overflow: hidden;
+  position: relative;
+  text-align: justify;
+
+  /* required, adjustable */
+  line-height: 1.4em; /* should approximate styleguide rule or as desired */
+  max-height: 4.2em;  /* max-height = line-height * max number of lines */
+  margin-right: -1em;
+  padding-right: 2em;
+}
+/* Adds the "..." */
+.multiline-ellipsis:before {
+  /* required, as-is */
+  content: '...';
+  position: absolute;
+
+  /* required, adjustable */
+  /* position is set to right bottom corner of block */
+  right: 15px;
+  bottom: 1px;
+}
+/* Hides the "..." if text is less than max number of lines */
+.multiline-ellipsis:after {
+  /* required, as-is */
+  content: '';
+  position: absolute;
+
+  /* required, adjustable */
+  /* position is set to right bottom corner of text */
+  right: 15px;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+  padding-right: 2em; /* should match same rule in '.multiline-ellipsis' rule-set */
+}
+/* ECB recently published (end) */
+
+/* ECB statistics (start)*/
+.statGraph {
+	padding-bottom: 50px;
+}
+h2.statGraphHeader {
+	 background:#31708f;
+	 font-size: 14px;
+	 color:white;
+	 text-align:center;
+	 padding:10px;
+	 margin-top: 0px;
+	 margin-bottom: 5px;
+}
+.statGraphSubtitle, .statGraphLegend {
+	font-size: 13px;
+	height: 50px;
+}
+.statGraphLegend ul {
+	list-style: none;
+}
+.statGraphLegend li span {
+	display: inline-block;
+	height: 10px;
+	margin-right: 10px;
+	width: 10px;
+}
+.statGraph p {
+	font-size: 10px;
+	font-weight: bold;
+}
+.statGraph .table-responsive{
+	border-style: none;
+}
+#ecbStatisticsTable thead th {
+	background-color:#FFF;
+}
+#ecbStatisticsTable thead td {
+	color: white;
+}
+#ecbStatisticsTable tbody th, #ecbStatisticsTable td {
+	vertical-align:middle;
+	text-align:center;
+	border-collapse: collapse;
+    border: 1px solid #DDD;
+    font-size: 10px;
+    font-weight: normal;
+}
+#ecbStatisticsTable th, #ecbStatisticsTable .totals td {
+	background-color: rgba(245,245,245,1);
+}
+/* ECB statistics (end)*/
+/* ECB statistics widget */
+#statisticsCarousel img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    background-color: white;
+}
+#statisticsCarousel .carousel-indicators li {
+	border: 1px solid #868686 ;
+    border-radius: 100%;
+    padding: 0px !important;
+}
+#statisticsCarousel .carousel-indicators li.active {
+	background-color: #868686 ;
+}
+#statisticsCarousel .carousel-indicators {
+	height: 18px;
+    top: 10px;
+/*    width: 25%;
+    margin-left: -13%;*/
+
+}
+#statisticsCarousel .carousel-inner {
+	padding: 0 10px 0 10px;
+	cursor: pointer;
+}
+.carousel-multi .carousel-inner .cloneditem{
+    display: block;
+}
+/* Bootstrap 3 defaults' overrides */
+.carousel-control.left,
+.carousel-control.right,
+.carousel-control.right-arrow {
+	width: 30px;
+    background: none !important;
+    filter: progid:none !important;
+}
+#statisticsCarousel .carousel-control .icon-prev,
+#statisticsCarousel .carousel-control .icon-next {
+    color: black;
+}
+#statisticsCarousel .carousel-control .icon-prev {
+	margin-left: -20px;
+}
+#statisticsCarousel .carousel-control .icon-next {
+	margin-right: -20px;
+}
+
+#homepageCarousel .carousel-indicators {
+    bottom: -10px;
+}
+#homepageCarousel .carousel-indicators li {
+	background-color: #ffffff;
+	border-color: #868686;
+	margin : 4px;
+}
+#homepageCarousel .carousel-indicators li.active {
+	background-color: #868686;
+}
+#homepageCarousel .carousel-control {
+	opacity: 1;
+	visibility: hidden;
+	bottom: 7%;
+	height: 115px;
+}
+@media screen and (max-width: 767px) {
+    #homepageCarousel .carousel-control {
+        visibility: visible;
+        height: 100%;
+    }
+}
+#homepageCarousel:hover .carousel-control{
+	visibility: visible;
+}
+
+.carouselPlayButton{
+	position: relative;
+	left: 39%;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.carouselArrow{
+	top: 20%;
+	position: relative;
+}
+
+/* .experimental-feature-tag styles regarding the experimental feature button+checkbox and the floating box*/
+.experimental-feature-tag .experimental-feature-wrapper {
+	/* background-color: #004494; */
+}
+.experimental-feature-tag .experimental-feature-wrapper, .experimental-feature-tag .exp-feature-float-box {
+	font-size:13px;
+}
+.experimental-feature-tag .exp-feature-float-box label {
+	margin-bottom:0px;
+}
+.experimental-feature-tag .experimental-feature-div-position {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #1971A1;
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .experimental-feature-div-position {
+        padding-left: 10px;
+    }
+}
+
+.experimental-feature-tag .experimental-feature-wrapper input[type="checkbox"].experimental-feature-checkbox {
+	margin: 4px 7px 2px 0px;
+}
+.experimental-feature-tag .experimental-feature-wrapper {
+	padding: 0px;
+	max-width: 192px;
+	float: right;
+}
+.experimental-feature-tag .experimental-feature-wrapper .GroupCheckLabel {
+	background:#004494;
+}
+.experimental-feature-tag .homepageMessage.experimental-feature-disclaimer,
+	.experimental-feature-tag .experimental-feature-list > fieldset > ul {
+	padding:0px;
+}
+.experimental-feature-tag .experimental-feature-btn .fa.fa-flask {
+	font-size:17px;
+}
+.experimental-feature-tag .exp-feature-float-box {
+	padding: 10px;
+	min-width: 530px;
+	top: 36px;
+	left: -385px;
+	margin: auto;
+	border-radius: 7px;
+	border-color: #004494;
+}
+.experimental-feature-tag #exp-feature-btn-apply {
+	margin-top: 10px;
+	float: right;
+}
+.experimental-feature-tag .radius5p {
+	border-radius: 5px;
+}
+.experimental-feature-tag #exp-feature-btn:hover, .experimental-feature-tag{
+	background-color: #002F67;
+}
+.experimental-feature-tag #exp-feature-btn:active, .experimental-feature-tag  #exp-feature-btn-apply:active {
+	background-color: #011A38;
+}
+.experimental-feature-tag .exp-feature-alert-danger {
+	padding:10px;
+	margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    border-color: #ebccd1;
+}
+.experimental-feature-tag .browseTree.browseTree-no-pad-left {
+	padding-left:0px;
+}
+#experimental-feature-close:focus, #experimental-feature-close:hover {
+	color:#c30;
+}
+#experimental-feature-close:focus {
+	outline: 3px solid #ffd617;
+}
+#experimental-feature-close {
+	color: #444;
+    opacity: .67;
+    font-weight: normal;
+    font-size: 20px;
+}
+@media only screen and (max-width: 767px){
+	.experimental-feature-tag .experimental-feature-wrapper {
+		width:100px;
+		top:6px;
+	}
+	.experimental-feature-tag .experimental-feature-btn {
+		display: flex;
+		align-items: center;
+	}
+	.experimental-feature-tag .exp-feature-float-box {
+		left:-455px;
+	}
+	.experimental-feature-tag .experimental-feature-div-position {
+        position:relative;
+    }
+
+	.experimental-feature-btn span {padding-right: 4px;}
+}
+@media (min-width: 767px) {
+    .experimental-feature-tag .experimental-feature-div-position + div {
+        height: 30px;
+}
+}
+@media only screen and (max-width: 585px) {
+	.experimental-feature-tag .exp-feature-float-box {
+		min-width: 320px;
+		padding:10px;
+		left: -245px;
+	}
+	.experimental-feature-tag .exp-feature-float-box hr {
+		margin:10px;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.experimental-feature-tag .exp-feature-float-box {
+		top:38px;
+	}
+	.experimental-feature-tag .exp-feature-float-box hr {
+		margin:5px;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.experimental-feature-tag .exp-feature-float-box {
+		min-width: 280px;
+		padding:5px;
+		left: -197px;
+	}
+	.experimental-feature-tag #exp-feature-btn-apply {
+		margin-top:0px;
+	}
+	.experimental-feature-tag .text-center {
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+}
+
+/* Common CAPTCHA rules */
+div.wt-captcha__inner {
+	width: auto;
+	border-radius: 3px;
+}
+div.wt-captcha {
+	font-family: inherit;
+	font-size: 12px;
+}
+
+
+
+/* 4202 custom impl */
+#custom_timeline {
+	height: 300px;
+}
+#custom_timeline ul {
+	width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    top: 30px;
+    position: absolute;
+}
+#custom_timeline > ul > li.custom-timeline-event.removed {
+	display:none;
+}
+#custom_timeline > ul > li.custom-timeline-event {
+	display: inline-block;
+    position: absolute;
+    top: 300px;
+}
+#custom_timeline > ul > li  span, #custom_timeline .tlSummary {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+	vertical-align: middle;
+	z-index: 99;
+}
+#custom_timeline .tlSummary span:after {
+	content: url(../images/consleg_icons.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#custom_timeline > ul > li  label {
+	position: absolute;
+	top: 100%;
+	left: -20px;
+	color: #087faa;
+}
+#custom_timeline > ul > li.today  label {
+	position: absolute;
+	top: -50%;
+	left: 0px;
+}
+#custom_timeline > ul > li.basicAct  label, #custom_timeline > ul > li.removed  label {
+	display:none;
+}
+#custom_timeline > ul > li  span:after {
+    content: url(../images/consleg_icons.png);
+    position: absolute;
+    left: 0;
+}
+#custom_timeline > ul > li.basicAct {
+    left: 10px;
+}
+#custom_timeline > ul > li.basicAct  span:after {
+	top: -53px;
+}
+#custom_timeline > ul span.break-arrow:after {
+	position: relative;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-right: 0px solid white;
+    border-top: 0px solid white;
+    transform: rotate(45deg);
+    margin-left: 46px;
+    margin-bottom: 6px;
+    border-width: 4px;
+}
+#custom_timeline > ul > li.futureDate {
+    left: 100px;
+}
+#custom_timeline > ul > li.futureDate  span:after {
+	top: -378px;
+}
+#custom_timeline > ul > li.normal  span:after {
+	top: -209px;
+}
+#custom_timeline > ul > li.dateSelected  span:after {
+	top: -261px;
+}
+#custom_timeline > ul > li.dateCurrent  span:after {
+	top: -320px;
+}
+#custom_timeline > ul > li.summary {
+	margin-top:-60px;
+	margin-left:50px;
+}
+#custom_timeline > ul > li.today  span:after {
+	content: " ";
+	top: -8px;
+    /* border-radius: 50%; */
+    width: 8px;
+    background: #087faa;
+    height: 35px;
+    left: 50%;
+    border: 3px solid white;
+    position: absolute;
+}
+#custom_timeline > ul > li.dateSelected  span {
+	height: 45px;
+}
+#custom_timeline > ul > li .line {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    content: "";
+    display: block;
+	top: -30px;
+    z-index: 1;
+    height: 10px;
+	background-color: #087faa;
+    position: relative;
+    margin-left: 5px;
+    z-index: 1;
+}
+#custom_timeline > ul > li .breakline {
+	background: repeating-linear-gradient(
+	90deg, #aaa , #087faa00 5px, #0895aa00 5px, #aaa 0px);
+}
+#custom_timeline > ul > li .selLine {
+	top: -34px;
+	outline: 2px solid #ffd617;
+	outline-offset:-5px;
+}
+
+
+
+/* EF CAPTCHA rules */
+.ef-captcha {
+	padding-top: 28px;
+}
+/* HelpDesk CAPTCHA rules */
+div#helpDeskCaptcha .wt-captcha{
+	margin-top: 18px;
+	margin-bottom: 20px;
+}
+div#helpDeskCaptcha .wt-captcha__inner{
+	background-color: #ffffff;
+}
+div#helpDeskSubmitBtn{
+	float: right;
+}
+/* EURLEXNEW-4193 */
+.SearchResult a.not-linkable-portion {
+    cursor:default;
+	text-decoration:none;
+	pointer-events: none;
+	font-size:13px;
+	color: #444444;
+}
+/* EURLEXNEW-3928 */
+.fa-check-circle.selected-facet {
+	color: #5cb85c;
+}
+/* EURLEXNEW-4134 */
+.MTDocTranslate {
+	margin-top: 15px;
+}
+.MTDocTranslate .MT_panel .panel-body {
+	background: #FFF;
+}
+.ECB-corner-description {
+	padding:10px;
+}
+/* EURLEXNEW-4285 */
+.EBS-description {
+    padding:10px;
+}
+
+/*EURLEXNEW-4283 */
+.Thematic-groups {
+    padding-top:30px;
+}
+
+
+.hide-border {
+    border: none;
+}
+
+.title-bold {
+    font-weight: bold;
+}
+/* EURLEXNEW-4374 */
+/* results, notices */
+.panel .panel-heading a                     {color: black; text-decoration : none;}
+.panel .panel-heading a:hover               {color: black; text-decoration : underline;}
+.panel .panel-heading button                     {border: none; text-align: left; color: black; text-decoration : none; background-color: transparent; padding: 0 0 0 0}
+.panel .panel-heading button:hover               {color: black; text-decoration : underline;}
+.panel .panel-heading a:before, .panel .panel-heading button:before				{/*content:"\f107"; */font-family:FontAwesome; font-size:14px; font-weight:normal; position:relative; display: inline-block; width:15px; text-align:center; transition:all .1s ease-out; transform: rotate(0deg);}
+.panel .panel-heading a.collapsed:before	{transform: rotate(-90deg);}
+.panel .panel-heading button.collapsed:before	{transform: rotate(-90deg);}
+.form-control.TextBorders					{border: 1px solid gray; box-shadow:none;}
+.outline-fix {
+    padding: 5px 10px 8px 5px;
+    margin-left: -10px;
+}
+
+.indent {
+    margin-left: 15px;
+}
+
+.section-level-1{
+    margin-left: 0px;
+}
+
+.section-level-2{
+    margin-left: 15px;
+}
+
+.section-level-3{
+    margin-left: 30px;
+}
+
+.section-level-4{
+    margin-left: 45px;
+}
+
+button[name="searchNav"],
+a[name="searchNav"] {
+    margin-bottom: 10px;
+	color: #ffffff;
+	background: #1971a1;
+	border:  none;
+}
+
+
+
+button[name="searchNav"]:hover,
+a[name="searchNav"]:hover {
+	color:#ffffff;
+	background: #176793;
+	border:  none;
+}
+
+button[name="searchNav"]:focus,
+a[name="searchNav"]:focus {
+	/* border:  2px solid #176793;*/
+}
+
+button[name="searchNav"].has-arrow:before,
+a[name="searchNav"].has-arrow:before {
+        /*content: "\f105";*/
+        position: absolute;
+        left: 10px;
+        font-family: FontAwesome;
+        font-size: 14px;
+        color:white;
+        transition: all .1s ease-out;
+}
+
+button[name="emptySearchNav"],
+a[name="emptySearchNav"] {
+    margin-bottom: 10px;
+	color: #c2c2c2;
+	background: #f5f5f5;
+	border: #d8d8d8;
+}
+
+
+button[name="searchNav"],
+button[name="emptySearchNav"] {
+    width: 100%;
+    text-align: left;
+}
+
+button[name="searchNav"]:focus,
+button[name="emptySearchNav"]:focus
+{outline:3px solid #ffd617; outline-offset:-1px;}
+
+
+button[name="emptySearchNav"].has-arrow:before,
+a[name="emptySearchNav"].has-arrow:before {
+        /*content: "\f105";*/
+        position: absolute;
+        left: 10px;
+        font-family: FontAwesome;
+        font-size: 14px;
+        color:white;
+        transition: all .1s ease-out;
+}
+
+.heading-margins{
+    margin-top: 15px;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.disabled-link {
+    pointer-events: none;
+}
+
+.EcliLink:after {
+    /*content: "\f08e";*/
+    font-family: FontAwesome;
+    font-size: 16px;
+    font-weight: normal;
+    position: relative;
+    margin-left: 5px;
+    top: -5px;
+    color: #666;
+}
+
+.eJusticePortal {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+#thematic-list{
+    margin-top:40px;
+}
+
+#thematic-list > li {
+    margin-top:10px;
+}
+
+#thematic-list > li::marker {
+    color: #868686;
+}
+
+#thematic-list > li > span:nth-child(1){
+    font-weight: 500;
+}
+
+#thematic-list > li > span:not(:first-child) > div {
+    margin-top: 2px;
+    margin-left:15px;
+}
+
+#footnote_EPH {
+    font-weight: bold;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
+.daily-view-row-spacing {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    /*EURLEXNEW-4660 Fix alignment right*/
+    margin-right: 15px;
+}
+
+/*EURLEXNEW-4565*/
+.sessionRowContainer{
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.sessionRowContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sessionColumn{
+    float: left;
+    padding: 10px;
+}
+
+.sessionColumnTitle{
+   width:70%;
+}
+
+.sessionColumnDate{
+    width:30%;
+}
+
+.sessionLabelDate{
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+}
+
+/* EURLEXNEW-4454: Relocate 'Search criteria' widget at the top of the 'Search results' page, using CSS only. */
+.col-md-9 .EurlexContent.RelocateFilteringWidget {
+    display: flex;
+    flex-direction: column;
+}
+#EurlexContent{
+	display: flex;
+	flex-direction: column;
+}
+
+.expand-label     { cursor: pointer; }
+
+.searchNavButton {
+	color: #ffffff !important;
+    margin-bottom: 10px;
+    font-weight: 500;
+	background: #1971a1;
+	border:  none;
+}
+
+.searchNavButton:hover {
+	color: #ffffff;
+	background: #176793 !important;
+	border:  none;
+}
+.searchNavButton:focus {
+	color: #ffffff !important;
+	background: #176793 !important;
+	/* border: 2px solid #176793; */
+}
+
+/* EURLEXNEW-4374 colored arrows at Browse Official Journal */
+.MenuList.CompactMenuList.NoAccordionTreeMenu li a[name="searchNav"].has-arrow i,
+.MenuList.CompactMenuList.NoAccordionTreeMenu li a[name="emptySearchNav"].has-arrow i {
+    color:#FFFFFF;
+}
+/* EURLEXNEW-4374 colored arrows at developmentLatest and commission-proposals-statistics */
+.MenuList li:not(.Selected) a.has-arrow i,
+nav.Sidebar div.EurlexEditorial .TreeMenu li:not(.Selected) a.has-arrow i {
+	color: #0e47cb;
+}
+
+/* rules  related with case-file page */
+.caseSteps{
+	background: #097eaa;
+	padding: 0;
+}
+.caseSteps .col-sm-3{
+	padding: 2px 2px 2px 0;
+}
+.caseSteps .col-sm-9{
+	padding: 0;
+}
+.caseSteps .col-sm-3{
+	padding: 2px 2px 2px 0;
+}
+.caseSteps .fa-2x {
+	margin: -3px;
+}
+.caseSteps .col-sm-3 .input-group-addon{
+	width: 0;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 3px;
+}
+.caseSteps .col-sm-3 .input-group-btn a{
+	color: #444;
+}
+.caseSteps h2{
+	color: #FFF;
+	padding: 8px 0 5px 10px;
+	margin: 0;
+	font-size: 16px;
+}
+
+.encrypted-display{
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-wrap: anywhere;
+}
+
+/*EURLEXNEW-4552 toc with eli subdivisions*/
+
+.toc-eli-subdivisions li{
+  border-top: 1px solid #dee8ec;
+	margin-left: -5px;
+}
+
+.toc-eli-subdivisions li a.active {
+    background-color: #EEEEEE;
+    border-left: 4px solid #1971a1;
+	color: #1971a1;
+	font-weight: 500;
+	margin-left: -4px;
+}
+
+.toc-eli-subdivisions .fa {
+    margin-right: 5px;
+    color: #333333;
+}
+
+.toc-eli-subdivisions li ul{
+  padding-left: 15px;
+}
+
+.toc-eli-label {
+  font-weight:200;
+}
+
+.toc-eli-subdivisions li a.active .toc-eli-label{
+	font-weight:500;
+}
+/* Generic TABLE-based Content Tooltips */
+
+.TableContentTooltip {
+    position: relative;
+}
+
+.TableContentTooltip > .TableContentTooltipTrigger {
+    display: inline-block;
+}
+
+.TableContentTooltip > .TableContentTooltipTrigger > .TableContentTooltipDefaultTrigger {
+    color: #087faa;
+}
+
+.TableContentTooltip > .TableContentTooltipContent {
+    /* Prevent JQuery from animating some properties when toggling the tooltip's visibility. */
+    width: auto !important;
+    height: auto !important;
+    margin: 0px !important;
+
+    /* Include margins and shadow offset of the tooltip for positioning purposes. */
+    padding: 4px 18px 18px 4px !important;
+
+    z-index: 1070; /* Default Bootstrap 'Z-INDEX' CSS property value for tooltips. */
+}
+
+.TableContentTooltip > .TableContentTooltipContent > .panel {
+    min-width: 100px;
+    max-width: 300px; /* Make sure the tooltip fits in smaller screen sizes. */
+    font-size: 0.75em;
+    border-color: #aaa;
+    margin: 0px;
+    box-shadow: 8px 8px 10px 2px #b8b8b8;
+}
+
+.TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body > .container-fluid:empty {
+    /* Make the tooltip a bit pretty if it doesn't have any content. */
+    min-width: 100px;
+    min-height: 25px;
+}
+
+.TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body .row:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body .row > .col {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body .row > .col:first-child {
+    font-weight: bold;
+    color: #0c7ea9;
+    background-color: #e2e2e2;
+}
+
+@media (min-width: 768px) {
+    .TableContentTooltip > .TableContentTooltipContent > .panel {
+        /* Make the tooltip a bit pretty for bigger screen sizes. */
+        min-width: 265px;
+        max-width: 430px;
+    }
+
+    .TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body .row,
+    .TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body .row > .col {
+        display: flex;
+        display: -webkit-flex;
+    }
+
+    .TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body .row {
+        align-items: stretch;
+    }
+
+    .TableContentTooltip > .TableContentTooltipContent > .panel > .panel-body .row > .col {
+        align-items: center;
+    }
+}
+
+/*
+ *  OPEC-840: Fix misalignment in 'Access to the Official Journal'
+ *  search form, 'By OJ reference' column.
+ */
+
+#daily-oj-search > .row:first-child > .radio.GroupRadioMargin {
+    margin-left: -6px;
+}
+
+.col.OJAccessReferenceSearchColumn > .row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#daily-oj-search > .row:first-child,
+.col.OJAccessReferenceSearchColumn > .row:last-child {
+    padding-left: 6px;
+}
+
+@media (min-width: 768px) {
+    .col.OJAccessReferenceSearchColumn > .row:last-child {
+        /* Apply custom alignment only for bigger screen sizes. */
+        display: flex;
+        display: -webkit-flex;
+        align-items: flex-end;
+    }
+}
+
+/*
+ *  EURLEXNEW-4623: Merge old case law content page (directory tree) with
+ *  new case law content page.
+ */
+
+.OldCaseLawTreeWidget {
+    margin-left: 3px;
+    margin-top: 35px;
+}
+
+.OldCaseLawTreeWidget > .normalTreeLink.ViewMoreInfo {
+    color: #444;
+}
+
+.OldCaseLawTreeWidget > .normalTreeLink.ViewMoreInfo > i.fa {
+    /* Fix the appearance of the tree link icon. ('plus/minus' icon) */
+    margin-left: 0px;
+    margin-top: 2px;
+}
+
+.OldCaseLawTreeWidget > #OldCaseLawTreeWidgetPanel {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+
+
+/*
+ *  EURLEXNEW-4474:  3.2.5 Other Linked Documents
+ */
+.EurlexContent .GridDL div[name^="caseSummary_"] > dt {
+	background: #8795A2;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+	width: 90%;
+	text-align: left;
+}
+
+a[class="linked_docs_text"]{
+	color: #fff;
+}
+
+.btn.btn-link.btnAlignment {
+	display: inline;
+	padding-top: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.row.rowCasePaddingBottom {
+	padding-bottom: 10px;
+	display:flex;
+}
+.rowCasePaddingBottom .btn.btn-link.btnAlignment:not(.collapsed) i::before { transform: rotate(90deg);}
+.rowCasePaddingBottom .btn.btn-link.btnAlignment > i::before {  font-family: FontAwesome; font-size: 16px; font-weight: bold; display: block; transition: all .1s ease-out; line-height: 20px !important; color: #0e47cb;}
+.BolSectionButton.ViewMoreInfo:not(.collapsed) i:before 		{ transform: rotate(0deg);}
+
+a.btn.btn-link.embeddedAppealBtn {
+	font-size: 16px;
+	font-weight: bold;
+	color: #0e47cb;
+}
+.linked_docs_background {
+	padding-left: 15px;
+}
+.fa.fa-calendar-minus-o.calendarInline {
+	padding-right: 10px;
+	display: inline;
+}
+/*
+ *  OPEC-863:  Fix misalignment of Search Button in 'eu-case-law, eu-case-law/reports + pre-acts'
+ */
+.col-sm-1.caseLawSearchBtnAlignment {
+	padding-left: 0px;
+	margin-top: 23px;
+}
+.preActsSearchBtnAlignment {
+	margin-top: 23px;
+}
+
+/* IENI Start */
+.IENI-widget {
+	padding: 5px;
+}
+
+.IENI-widget-grey {
+	background: #eee;
+}
+
+.IENI-widget .MenuBlock {
+	padding-top: 8px;
+}
+
+/* Applied only on the div directly in form row  and not in any div in form.*/
+.IENI-widget-form .row > div {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.IENI-widget h1, .IENI-widget h2  {
+	padding-bottom: 10px;
+	margin: 0 0 10px 0;
+	font-weight: 500;
+	font-size: 16px;
+	color: #0c7ea9;
+	border-bottom: 1px solid #cad7dc;
+}
+
+.IENI-searchbox-button {
+	padding-left: 5px !important;
+}
+
+/* IENI - Navigation tree */
+/* Expanded */
+.Ieni-widget .ExpertSearchValueTree a.has-arrow>i::before {
+	font-family:FontAwesome; font-size:16px; font-weight:bold; position:absolute; display:block; width:15px; transition:all .1s ease-out;
+	text-align:center; left:6px; top:-1px; color:#0e47cb; line-height:20px !important;
+}
+/* Collapsed */
+.Ieni-widget .ExpertSearchValueTree a.has-arrow.expandNode>i::before {
+	transform: rotate(90deg);
+	font-family:FontAwesome;  font-size:16px;  font-weight:bold; position:absolute; display:block; width:15px; text-align:center; left:6px; top:-1px; color:#0e47cb; }
+
+.Ieni-widget .MenuBlock {
+	padding-left: 8px ;
+	padding-top: 9px;
+}
+
+.Ieni-widget .ExpertSearchValueTree li label {
+	display: block;
+}
+
+.Ieni-widget .ExpertSearchValueTree li {
+	margin-left: 20px;
+	/*margin-top: 0px;*/
+	padding: 2px;
+	position: relative;
+}
+
+.Ieni-widget input[type='checkbox'] {
+	display: none;
+}
+
+.Ieni-widget h1, .Ieni-widget h2 {
+	padding-bottom: 20px;
+	margin:  0 10px 0;
+	font-size: 22px;
+	font-weight: 400;
+	color: #0c7ea9;
+	margin-left: 2px;
+}
+
+.Ieni-widget h2.SearchBox {
+	font-size: 16px;
+}
+
+.Ieni-widget {
+	padding: 5px;
+}
+
+#IeniMenuBlock1 .ExpertSearchValueTree li.leaf i.fa-circle {
+	font-family: FontAwesome;
+	width: 20px;
+	color: #CCC;
+	font-size: 6px;
+	position: absolute;
+	left: -25px;
+	top: 5px;
+}
+
+.Ieni-labelValue {
+	width: 90%;
+	position: relative;
+	text-align: left;
+	font-weight: bold;
+	color: #333333;
+	display: inline-block;
+	text-transform: none;
+	font-size: 14px;
+}
+
+.ExpertSearchValueTree a.Ieni-treeLink {
+	width: 90%;
+	position: relative;
+	text-align: left;
+	font-weight: bold;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0 0px 0 9px;
+	text-transform: none;
+	font-size: 14px;
+}
+.ExpertSearchValueTree a.Ieni-treeLink:hover, .ExpertSearchValueTree a.Ieni-treeLink:focus {
+	color: #333333;
+	text-decoration: underline;
+}
+
+span.Ieni-labelValue {
+	margin-left: -6px;
+}
+
+.Ieni-labelValue > i {
+	padding-left: 6px;
+}
+
+#IeniMenuBlock1.MenuBlock ,#IeniMenuBlock2.MenuBlock{
+	border: none !important;
+	padding-top: 5px;
+	margin-bottom: 5px;
+}
+
+.IeniSearch {
+	margin-top: 10px;
+	margin-bottom: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #D6E4E5;
+	border-top: 1px solid #D6E4E5;
+	border-width: 1px;
+	text-align: center;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#IeniMenuBlock1 .ExpertSearchValueTree li label,
+#IeniMenuBlock1 .ExpertSearchValueTree li label .Ieni-labelValue {
+	width: fit-content;
+}
+
+#IeniMenuBlock1 .ExpertSearchValueTree li.leaf label a {
+	margin-left: 15px;
+}
+/* Changed Navigation Tree from Unordered to Ordered */
+.Ieni-widget .ExpertSearchValueTree ol > li[class="leaf"] > label{
+	padding-left: 35px;
+}
+
+.Ieni-widget ol[id="tree"] {
+	counter-reset: inherit;
+}
+
+.Ieni-widget ol[id="tree"] > li::before {
+	display: none;
+}
+
+/* IENI Navigation Tree cosmetic adjustment for focus rectangle */
+.IeniFocusRectangle {
+	padding-left: 25px;
+}
+/* IENI End */
+
+/* EURLEXNEW-4646: SPARQL-based Automatic Link to Recent OJs. */
+.RecentOJDocumentsLink > .RecentOJDocumentsLinkSpacer {
+    /*
+     *  Allow the background image of the 'Official Journal' widget
+     *  to be clearly visible.
+     */
+    height: 80px;
+}
+
+@media (max-width: 991px) {
+    .RecentOJDocumentsLink {
+        /*
+         *  Move the 'Recent OJ Documents' link a bit more away from
+         *  the rest of the OJ links for smaller screen sizes, to
+         *  match the display style used for bigger screen sizes.
+         */
+        margin-top: 30px !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    /*
+     *  Squeeze the contents of the 'Official Journal' widget a bit
+     *  more, for its content to better fit in smaller screen sizes.
+     */
+
+    .HomeOJ > #ojBoxBottom {
+        margin-top: 5px;
+		padding-right: 12px;
+    }
+
+    .RecentOJDocumentsLink > .RecentOJDocumentsLinkSpacer {
+        display: none;
+    }
+}
+@media (max-width: 443px) {
+
+    .HomeOJ > #ojBoxBottom {
+        margin-top: 5px;
+		padding-right: 120px;
+    }
+
+    .RecentOJDocumentsLink > .RecentOJDocumentsLinkSpacer {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .RecentOJDocumentsLink:not(.HomeOJError) {
+        /*
+         *  Move the 'Recent OJ Documents' link near the bottom of
+         *  the 'Official Journal' widget for bigger screen sizes.
+         *  Do not apply if the OJ widget displays an error message.
+         */
+        position: relative;
+        bottom: 0px;
+    }
+}
+@media (max-width: 940px) {
+	.RecentOJDocumentsLink:not(.HomeOJError) {
+
+		position: relative;
+		bottom: 0px;
+		padding-right:125px;
+	}
+}
+@media (max-width: 610px) {
+	.RecentOJDocumentsLink:not(.HomeOJError) {
+
+		position: relative;
+		bottom: 0px;
+		padding-right:12px;
+	}
+	#ojBoxBottom > .HomeOJMore{
+		word-break: break-word;
+
+	}
+}
+.RecentOJDocumentsTable > table.table > thead th:first-child {
+    /* Make sure the first column of the table is not too narrow. */
+    width: 175px;
+}
+/* EURLEXNEW-4646 End */
+
+@media (min-width: 992px){
+    .DailyDocWidth {
+       width: 56.3%;
+    }
+}
+
+@media (max-width: 991px){
+    .DailyDocWidth {
+       width: 98%;
+    }
+}
+
+
+.removePadding {
+    padding: 0;
+}
+.row.removePadding a {
+	color: #333333;
+}
+.ecbCarouselPlayPause {
+    left : 0%;
+    float: right;
+}
+
+/* EURLEXNEW-4434 */
+.EurlexEditorial ul > li > ul[class="dispCont"] > li {
+	display: contents;
+}
+.EurlexEditorial ul > li > ul[class="dispCont"] {
+	margin-left: 0px;
+}
+
+/* EURLEXNEW-4435 - Accessibility - wrong elements inside <ul> or <ol> - P2 */
+.EurlexContent .EurlexEditorial .NoMarker li:before {
+    content: none;
+}
+
+.EurlexContent .EurlexEditorial .NoLeftPadding li {
+    padding-left: 0px;
+}
+
+.EurlexContent .EurlexEditorial li.NoMarkerLi:before {
+    content: none;
+}
+
+.EurlexContent .EurlexEditorial li.NoLeftPaddingLi {
+    padding-left: 0px;
+}
+
+.EurlexContent .EurlexEditorial ul.LiInsideUlInsideLiSameMarkerAsLiInsideUl{
+    margin-top: 0px;
+}
+
+.EurlexContent .EurlexEditorial ul.LiInsideUlInsideLiSameMarkerAsLiInsideUl li {
+    padding:0 0 0 0px; position:relative;
+}
+
+.EurlexContent .EurlexEditorial ul.LiInsideUlInsideLiSameMarkerAsLiInsideUl li:before {
+    content:""; display:block; position:absolute; left:-22px; top:6px; width:5px; height:5px; background:#097eaa;
+}
+
+/* EURLEXNEW-4592 - CONSLEG. Indicate modifications possibly not yet included in the latest consolidated version */
+.modificationTablePanel .modificationTable thead tr th {
+    font-weight: bold;
+}
+.modificationTablePanel .modificationTableCollapse a {
+    text-decoration: none; cursor: pointer;
+}
+.modificationTablePanel .modificationTableCollapse a.collapsed i {
+    margin-right: 3px;
+}
+.modificationTablePanel .modificationTableCollapse a:not(.collapsed) i {
+    transform: rotate(90deg);margin-right: 3px;
+}
+
+/* EURLEXNEW-4659 - Improve left menu on Document page */
+a.eurlexModal.grayLink {
+	color: #697188;
+}
+
+
+/* General Banner specifications */
+.SideBanner {
+    background: #1971A1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:83px;
+}
+
+/* Styling for the font of the letters inside the banner */
+.BannerText {
+    color: white;
+    font-family: Roboto;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+@media (max-width:992px){
+    .SideBanner {
+        margin-top: 40px;
+    }
+}
+/* This will override the top margin for the second banner if we also have the first */
+.SideBanner + .SideBanner {
+    margin-top: 6px !important;
+}
+
+.SidebannerIcon {
+    flex: 1;
+    margin-top:10px;
+}
+
+.SidebannerIcon + .SidebannerIcon {
+    padding-left:29px;
+}
+
+.SidebannerIcon + .SidebannerIcon .SidebannerRow,
+.SidebannerIcon + .SidebannerIcon .SidebannerRow .XImage {
+    float: right;
+}
+
+.SidebannerRow {
+    background: #F4F4F4;
+    height: 82px;
+    max-width: 138px;
+}
+
+.SidebannerColumn {
+    height:100%;
+    align-content:center;
+}
+
+.SidebannerFrameText {
+    line-height: 100%;
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: #444444;
+}
+
+.XImage {
+    padding-left: 0px;
+}
+
+.globan-background {
+    background-color: #444;
+}
+
+/* // BUDGET ONLINE */
+.BolContent{
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom: 60px;
+	@media only screen and (max-width: 992px) {
+	    padding-left: 20px;
+        padding-right: 20px;
+	}
+	@media only screen and (max-width: 767px) {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+}
+.financialYear{
+	background: #097eaa;
+	border-radius: 3px;
+}
+.financialYear div {
+	padding: 0;
+
+}
+.financialYear fieldset div {margin-bottom: 0}
+.labelFinYear {
+	color: #FFF;
+	padding: 5px 0 5px 10px;
+	margin: 0;
+	font-size: 20px;
+	font-weight: 600 !important;
+}
+#yearSelect {
+    vertical-align: middle;
+    margin-top: -5px;
+}
+span.labelFinYear > label {
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
+div.bolExpandCollapse > div.btn-group-right > button {
+	font-size: 14px;
+}
+/* EURLEX-4891 BOL */
+.cd-bol__container {
+    position: relative;
+    width: auto;
+    max-width: 1170px;
+    margin: 0 6px;
+    padding: 33px  0 0 0;
+    margin-bottom: 20px;
+}
+
+.cd-bol-group {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: 1px solid #EEE;
+    outline-offset: 5px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+    .cd-bol__block .cd-bol__content {
+        left: 15%;
+    }
+    .cd-bol__content {
+        margin-left: 0;
+        width: 65%;
+    }
+}
+
+.cd-bol__content {
+    margin-left: 0;
+    width: 65%;
+    position: relative;
+    margin-left: 60px;
+    border-radius: 0.25em;
+    padding: 0;
+    background: #FFF;
+    z-index: 2;
+}
+
+.cd-bol-group > .col-md-3 {
+    float: none;
+    padding: 0;
+}
+
+.cd-bol-group > .col-md-3 > h2 {
+    text-transform: uppercase;
+    color: #444;
+    font-weight: bold;
+    margin: 0 0 20px 70px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin: 20px 0 0 10px;
+    padding-right: 20px;
+}
+
+section.cd-bol.js-cd-bol.col-xs-12 {
+   .ViewMoreInfo>i:before {
+       margin-left: 0;
+   }
+   @media only screen and (max-width: 992px) {
+   		padding-left: 5px;
+   		padding-right: 5px;
+   }
+   @media only screen and (max-width: 767px) {
+        padding-left: 0;
+        padding-right: 0;
+   }
+}
+@media only screen and (max-width: 767px) {
+    .bolBody {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.BolSectionButton + div {
+    margin-left: 35px;
+}
+
+.DraftLetters {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.BolSection {
+    margin-top: 20px;
+    margin-left: -7px;
+}
+
+div.BolSection div.DraftGeneralDatabudget  i.exi,
+div.BolSection div.GeneralDatabudget i.exi,
+div.BolSection div.GeneralDatalineByLine i.exi {
+	height: 17px;
+    width: 17px;
+    margin-left: 13px;
+}
+
+.bolExpandCollapse .btn-group-left {
+	float: left;
+}
+
+.bolExpandCollapse .btn-group-left a {
+    display: block;
+    float: left;
+    font-size: 14px;
+}
+
+.bolExpandCollapse .btn-group-left a i {
+    margin-right: 6px;
+}
+
+@media only screen and (min-width: 261px){
+    .bolExpandCollapse .btn-group-left a:nth-child(2) {
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 379px) {
+    div.bolExpandCollapse {
+        margin-top: 20px;
+    }
+}
+
+.two-docs-column-size{
+    width:48%;
+}
+
+.three-docs-column-size{
+    width:31%;
+}
+
+.margin-right{
+    margin-right: 1%;
+}
+
+.ecb-boosted-buttons {
+    margin-bottom: 5%;
+}
+
+.ecb-boosted {
+    text-align:center;
+    background-color:#337ab7;
+    border-radius:4px;
+    margin-left:5%;
+    width:100%;
+    height:3em;
+}
+
+.ecb-boosted a {
+    text-decoration:none;
+    line-height:3em;
+    color:white;
+    height:100%;
+    width:100%;
+    display: block;
+}
+
+.ecb-boosted-supervision {
+    text-align:center;
+    background-color:#337ab7;
+    border-radius:4px;
+    margin-right:20%;
+    width:100%;
+    height:3em;
+}
+
+.ecb-boosted-supervision a {
+    text-decoration:none;
+    color:white;
+    height:100%;
+    width:100%;
+    font-size:min(1vw, 1em);
+    display:block;
+}
+
+.ecb-boosted-buttons {
+    margin-bottom:5%;
+}
+
+.EcbButtonStyle {
+  font-size:min(1vw, 1em);
+}
+
+.EcbSupervisionBack {
+  font-size:min(0.8vw, 0.78em) !important;
+  padding-left:2%;
+}
+
+div:has(a):has(.EcbSupervisionBack) {
+    padding-left: 3px;
+}
+
+.EbsTreeLink {
+    display:inline !important;
+    position:relative !important;
+}
+
+/* TAS-2228 - OPEC-3122 - INTERNAL -  Notice procedures dropdowns issue on right side.*/
+.centeredInfoIcon {
+    text-align:center !important;
+}
+
+.angleDownRight {
+    position: absolute;
+    top: 1px;
+    right: 54px;
+}
+
+.rightPadding20px {
+    padding-right: 20px;
+}
+
+.rightPadding25px {
+    padding-right: 25px;
+}
+
+.displayDocTitleInline {
+	@media (max-width:576px) {
+		word-break: break-all;
+	}
+}
+
+.displayDocTitleInlinePageShare {
+    float: right;
+}
+
+/* 'Editorial Content'-style list */
+ul.editorial-content-list {
+    padding: 0px;
+    list-style: none;
+}
+
+ul.editorial-content-list > li {
+    position: relative;
+    padding: 0 0 0 25px;
+}
+
+ul.editorial-content-list > li:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 8px;
+    left: 3px;
+    background: #097eaa;
+}
+
+/* EURLEX-6055: Accessibility - Links - P1 - Directories PDF 'Chapter' List */
+
+
+ul.directories-pdf-chapter-list > li:before {
+    top: 11px;
+}
+
+.directories-pdf-download-all {
+    margin-right: 6px;
+    color: #0e47cb;
+}
+ul.directories-pdf-chapter-list > li > a >img{
+	 margin-left: 3px;
+	 vertical-align: text-top;
+ }
+.column-order {
+	--count: 2;
+	column-count: var(--count);
+	column-gap: 0;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 300px;
+
+}
+
+.column-order>li {
+	width: 100%;
+	line-height: 2em;
+}
+
+@media screen and (max-width: 992px) {
+	.column-order {
+		--count: 2;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.column-order {
+		--count: 1;
+	}
+}
+/* EURLEX-6055: Accessibility - Links - P1 - Links in NTM Table */
+#ntmTable ol > li:before {
+    color: #333;
+}
+
+/* EURLEX-6055: Accessibility - Links - P1 - Entries in 'My RSS' & 'My E-Mail Alerts' Tables */
+#rssTable span.entry-spacer {
+    display: inline-block;
+    width: 18px;
+}
+#createRSSFeed > i {padding-right:5px}
+
+/* EURLEX-6055 - Accessibility - Links - Procedure tab */
+.EurlexContent .initiatingDocument a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1px;
+}
+
+/* EURLEX-6055 - Accessibility - Links - Icon margin */
+.EurlexEditorial a i.fa-file-text-o {
+	margin-right: 5px;
+}
+
+/*TAS-2254 - EURLEX-6055 - Accessibility - Links - P1*/
+.QSMore a:hover, .QSMore a:focus {
+    text-decoration:none;
+}
+
+.QSMore a:has(i.fa){
+    text-decoration: none;
+}
+
+.QSMore a:has(i.fa):hover, .QSMore a:has(i.fa):focus{
+    text-decoration:underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1px;
+}
+
+ul#institutionTree.browseTree li a:hover,
+ul#institutionTree.browseTree li a:focus {
+	text-decoration: none !important;
+}
+
+ul#institutionTree.browseTree li ul li a:hover,
+ul#institutionTree.browseTree li ul li a:focus {
+	text-decoration:underline !important;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1px;
+}
+
+/*TAS-2340 - OPEC-3259 - INTERNAL - Direct access to the Official Journal - Search results links don't change colour after you open them.*/
+.OJTable a:visited {
+    color:#76017a;
+}
+
+/* EURLEX-6059: 'Online Learning' - QUIZ */
+.OnlineLearningQuiz .alert {
+    margin-top: 30px;
+}
+
+.OnlineLearningQuiz noscript .alert.alert-warning > span.fa {
+    margin-right: 5px;
+}
+
+.OnlineLearningQuiz .quiz-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    white-space: pre-line; /* Allow text to contain new lines & render them. */
+    overflow-wrap: anywhere; /* Use soft word wrapping but break long words. */
+}
+
+.OnlineLearningQuiz *[tabindex="0"]:active,
+.OnlineLearningQuiz *[tabindex="0"]:focus,
+.OnlineLearningQuiz *[tabindex="0"]:focus-visible,
+.OnlineLearningQuiz input[type="checkbox"] + label[tabindex="0"]:active:before,
+.OnlineLearningQuiz input[type="checkbox"] + label[tabindex="0"]:focus:before,
+.OnlineLearningQuiz
+    input[type="checkbox"] + label[tabindex="0"]:focus-visible:before {
+    outline: 3px solid #ffd617;
+    outline-offset: 4px;
+}
+
+.OnlineLearningQuiz input[type="checkbox"] + label[tabindex="0"]:active,
+.OnlineLearningQuiz input[type="checkbox"] + label[tabindex="0"]:focus,
+.OnlineLearningQuiz input[type="checkbox"] + label[tabindex="0"]:focus-visible {
+    outline: none; /* Outline the 'checkbox' part instead of the label itself. */
+}
+
+.OnlineLearningQuiz .ecl-tabs {
+    margin-top: 40px;
+    margin-bottom: 0;
+    overflow-x: hidden;
+}
+
+.OnlineLearningQuiz.hide-quiz .ecl-tabs {
+    display: none;
+}
+
+.OnlineLearningQuiz .ecl-tabs > .ecl-tabs__container {
+    position: relative;
+}
+
+.OnlineLearningQuiz .ecl-tabs > .ecl-tabs__container .ecl-tabs__list-container {
+    overflow: hidden; /* Scroll the tab strip without altering any calculations. */
+}
+
+.OnlineLearningQuiz
+    .ecl-tabs > .ecl-tabs__container .ecl-tabs__list-container.has-left-arrow {
+    scroll-padding-left: 46px;
+}
+
+.OnlineLearningQuiz
+    .ecl-tabs > .ecl-tabs__container .ecl-tabs__list-container.has-right-arrow {
+    scroll-padding-right: 46px;
+}
+
+.OnlineLearningQuiz .ecl-tabs > .ecl-tabs__container > .ecl-tabs__arrows {
+    display: flex;
+    position: absolute;
+    width: 45px;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    color: #1971a1;
+    background-color: white;
+    border-bottom: 1px solid var(--c-d-20); /* Fill border gap caused by margins. */
+    cursor: pointer;
+}
+
+.OnlineLearningQuiz .ecl-tabs > .ecl-tabs__container > .ecl-tabs__arrows:last-child {
+    right: 0;
+}
+
+.OnlineLearningQuiz .ecl-tabs > .ecl-tabs__container > .ecl-tabs__arrows::before {
+    content: '';
+    position: absolute;
+    right: -1px;
+    bottom: -0.5px; /* Rendering hack for perfect alignment of tab arrow borders. */
+    width: 1px;
+    border-bottom: 1px solid var(--c-d-20); /* Fill border gap caused by margins. */
+}
+
+.OnlineLearningQuiz
+    .ecl-tabs > .ecl-tabs__container > .ecl-tabs__arrows:last-child:before {
+    left: -1px;
+    right: unset;
+}
+
+.OnlineLearningQuiz .ecl-tabs > .ecl-tabs__container > .ecl-tabs__arrows.hide-arrow {
+    visibility: hidden; /* Hide the button from view without breaking the layout. */
+    pointer-events: none;
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__list {
+    width: 100%;
+    min-width: fit-content; /* Prevent tab strip from shrinking too much. */
+    flex-wrap: nowrap;
+    border-bottom: none;
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item {
+    flex: 1; /* Distribute the tabs of the quiz evenly in the available space. */
+    min-width: 170px;
+    max-width: 300px; /* Prevent fill-up if there are only a few tabs present. */
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link {
+    height: 100%;
+    text-align: center;
+    margin-bottom: 0.5px; /* Align the container and the tab strip perfectly. */
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: calc(var(--s-m) + 2px);
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link:active,
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link:focus,
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link:focus-visible {
+    outline-offset: -3px; /* Fix the outline of all tabs of the tab strip. */
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link:active,
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link:hover,
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link:visited {
+    color: inherit !important;
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link:active,
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link:hover {
+    border-bottom-color: #1971a1;
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item:first-child > .ecl-tabs__link {
+    margin-left: 15px;
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item:last-child > .ecl-tabs__link {
+    margin-right: 15px;
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link > .ecl-link__text {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    min-width: 110px; /* Prevent quiz tabs from shrinking too much on the X-axis. */
+    min-height: 40px; /* Prevent quiz tabs from shrinking too much on the Y-axis. */
+    justify-content: center;
+    align-items: center;
+    line-height: 1.1em;
+}
+
+.OnlineLearningQuiz .ecl-tabs .ecl-tabs__item > .ecl-tabs__link.ecl-tabs__link--active {
+    font-weight: bold;
+    color: #1971a1 !important;
+    padding-top: calc(var(--s-m) - 2px);
+    border-top: 6px solid #1971a1;
+    pointer-events: none; /* The 'active' tab of the quiz should not be selectable. */
+}
+
+.OnlineLearningQuiz .quiz-tab-container {
+    margin-top: -1px; /* Align the quiz tab container with the tab strip perfectly. */
+    padding: 40px 20px 20px 20px;
+    border: 1px solid var(--c-d-20);
+}
+
+.OnlineLearningQuiz .quiz-tab-container.no-content {
+    min-height: 300px; /* Give the container a minimum height in case it is empty. */
+}
+
+.OnlineLearningQuiz.hide-quiz .quiz-tab-container {
+    display: none;
+}
+
+.OnlineLearningQuiz .quiz-tab-container > *.hide-page {
+    display: none;
+}
+
+.OnlineLearningQuiz .quiz-question:not(.active-question) {
+    display: none; /* All quiz questions must be hidden, except for the active one. */
+}
+
+.OnlineLearningQuiz .quiz-instructions {
+    display: block;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 60px;
+    line-height: 2em; /* Add some space in-between the lines of the displayed text. */
+}
+
+.OnlineLearningQuiz .quiz-top-header,
+.OnlineLearningQuiz .quiz-main-header {
+    display: block;
+    font-weight: bold;
+}
+
+.OnlineLearningQuiz .quiz-main-header {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.OnlineLearningQuiz .quiz-content-container {
+    margin-top: 30px;
+    padding: 30px 40px 30px 40px;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option:not(:first-child) {
+    margin-top: 30px;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option.wrong-answer > label
+    > .quiz-text-strikethrough {
+    position: relative;
+    color: red;
+    text-decoration: line-through;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option.wrong-answer:not(
+    .empty-option) > label > .quiz-text-strikethrough::before,
+.OnlineLearningQuiz .quiz-content-container .quiz-option.wrong-answer:not(
+    .empty-option) > label > .quiz-text-strikethrough::after {
+    content: '\00a0'; /* Rendering hack for text strikethrough offset. */
+    position: absolute;
+    width: 5px;
+    text-decoration: inherit;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option.wrong-answer:not(
+    .empty-option) > label > .quiz-text-strikethrough::before {
+    left: -3px;
+    top: 0;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option.wrong-answer:not(
+    .empty-option) > label > .quiz-text-strikethrough::after {
+    bottom: -3px;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option > input[type=checkbox] {
+    display: none; /* Using a custom style for checkboxes. */
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option > label {
+    position: relative;
+    font-size: 15px;
+    margin: 0; /* Align labels of quiz options perfectly. */
+    margin-left: 60px;
+    pointer-events: none;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option > label::before,
+.OnlineLearningQuiz .quiz-content-container .quiz-option > label::after,
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > div::after {
+    content: '';
+    position: absolute;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option > label::before {
+    left: -60px;
+    top: calc(50% - 11px); /* Apply a 'centered' vertical alignment on mobile. */
+    width: 20px;
+    height: 20px;
+    border: 1px solid #1971a1;
+    border-radius: 4px;
+    pointer-events: initial; /* Only the 'checkbox' part should be clickable. */
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option > label::after,
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > div::after {
+    right: -34px;
+    top: calc(50% - 12px); /* Apply a 'centered' vertical alignment on mobile. */
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option.correct-answer > label::after,
+.OnlineLearningQuiz
+    .quiz-results-container ol.quiz-results-list > li > div.correct-answer::after {
+    background-image: url('../../images/online-learning/quiz-answer-correct.png');
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option.wrong-answer > label::after,
+.OnlineLearningQuiz
+    .quiz-results-container ol.quiz-results-list > li > div.wrong-answer::after {
+    background-image: url('../../images/online-learning/quiz-answer-wrong.png');
+}
+
+.OnlineLearningQuiz .quiz-content-container
+    .quiz-option:not(.correct-answer):not(.wrong-answer) > label::after {
+    display: none; /* Initially hide the 'correctness' indicator of a quiz option. */
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option > label .quiz-text {
+    font-size: inherit;
+}
+
+.OnlineLearningQuiz .quiz-content-container .quiz-option > input[type=checkbox]:checked
+    + label::before {
+    background-color: #1971a1;
+}
+
+.OnlineLearningQuiz .quiz-results-container > .quiz-content-container {
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list {
+    margin-left: 20px;
+    /* Reset EUR-Lex default 'editorial content' list styles. */
+    list-style: decimal;
+    counter-reset: none;
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li {
+    font-weight: bold;
+    padding: 0; /* Reset EUR-Lex default 'editorial content' list styles. */
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li::before {
+    display: none; /* Reset EUR-Lex default 'editorial content' list styles. */
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li + li {
+    margin-top: 30px;
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > span,
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > div {
+    min-height: 24px; /* Make sure the layout is not broken with empty elements. */
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > span {
+    display: block;
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > div {
+    position: relative;
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > div::after {
+    right: unset;
+    top: 50%;
+    width: 44px;
+    background-position-x: 20px; /* Apply margin via image position offset. */
+}
+
+.OnlineLearningQuiz
+    .quiz-results-container ol.quiz-results-list > li > div.no-multiline:after {
+    top: unset; /* Fix vertical alignment of the 'correctness' indicators. */
+}
+
+.OnlineLearningQuiz
+    .quiz-results-container ol.quiz-results-list > li > div.correct-answer {
+    color: green;
+}
+
+.OnlineLearningQuiz
+    .quiz-results-container ol.quiz-results-list > li > div.wrong-answer {
+    color: red;
+}
+
+.OnlineLearningQuiz .quiz-results-container
+    ol.quiz-results-list > li > div.wrong-answer + div.correct-answer::after {
+    display: none; /* Hide 'correctness' indicator when revealing the correct answer. */
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > div > ul {
+    display: inline-block;
+    margin: 0; /* Reset EUR-Lex default 'editorial content' list styles. */
+    padding: 0; /* Reset EUR-Lex default 'editorial content' list styles. */
+    padding-left: 20px;
+}
+
+.OnlineLearningQuiz .quiz-results-container ol.quiz-results-list > li > div > ul
+    > li::marker {
+    content: '\2012\00a0\00a0';
+}
+
+.OnlineLearningQuiz .quiz-results-container span.quiz-end-message {
+    display: block;
+    font-weight: bold;
+    margin: 20px 0 60px 10px;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons {
+    margin-top: 5px;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons.row,
+.OnlineLearningQuiz .quiz-tab-buttons.row > .col {
+    display: flex; /* Make sure the tab buttons fill all (available) vertical space. */
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons .col:last-child {
+    justify-content: flex-end;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button {
+    display: flex; /* 'Center'-align the text of button labels. */
+    width: 120px;
+    min-height: 45px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.hide-button {
+    visibility: hidden; /* Hide the button from view without breaking the layout. */
+    pointer-events: none;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button .quiz-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--primary {
+    background-color: #1971a1;
+    border: none;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--primary:active,
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--primary:focus,
+.OnlineLearningQuiz
+    .quiz-tab-buttons button.ecl-button.ecl-button--primary:focus-visible,
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--primary:hover {
+    background-color: #176793;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--primary
+    > .quiz-text {
+    color: white;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--secondary {
+    border: 1px solid #858585;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--secondary:active,
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--secondary:focus,
+.OnlineLearningQuiz
+    .quiz-tab-buttons button.ecl-button.ecl-button--secondary:focus-visible,
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--secondary:hover {
+    background-color: #eee;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.0755);
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button.ecl-button--secondary
+    > .quiz-text {
+    color: #858585;
+}
+
+.OnlineLearningQuiz .quiz-tab-buttons button.ecl-button + button.ecl-button {
+    margin-left: 20px;
+}
+
+.OnlineLearningQuiz
+    .quiz-question.last-question .quiz-tab-buttons button.ecl-button.hide-button {
+    display: none;
+}
+
+.OnlineLearningQuiz .quiz-results-container .quiz-tab-buttons .quiz-feedback-button {
+    position: relative;
+    width: 206px;
+    padding-left: 46px; /* Create space for the icon of the button. */
+}
+
+.OnlineLearningQuiz
+    .quiz-results-container .quiz-tab-buttons .quiz-feedback-button::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    width: 24px;
+    height: 27px;
+    background-image: url('../../images/online-learning/quiz-feedback.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.OnlineLearningQuiz
+    .quiz-results-container .quiz-tab-buttons .quiz-feedback-button:active:before,
+.OnlineLearningQuiz
+    .quiz-results-container .quiz-tab-buttons .quiz-feedback-button:focus:before,
+.OnlineLearningQuiz .quiz-results-container .quiz-tab-buttons
+    .quiz-feedback-button:focus-visible:before,
+.OnlineLearningQuiz
+    .quiz-results-container .quiz-tab-buttons .quiz-feedback-button:hover:before {
+    background-color: white;
+    box-shadow: inset 0 0 0 30px rgba(0, 0, 0, 0.0655); /* Create overlay effect. */
+}
+
+@media (max-width: 959px) {
+    .OnlineLearningQuiz .ecl-tabs {
+        margin-top: 30px;
+    }
+
+    .OnlineLearningQuiz .quiz-content-container {
+        margin-top: 15px;
+        padding-left: 20px;
+    }
+
+    .OnlineLearningQuiz .quiz-content-container .quiz-option > label {
+        margin-left: 40px;
+    }
+
+    .OnlineLearningQuiz .quiz-content-container .quiz-option > label::before {
+        left: -40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .OnlineLearningQuiz .ecl-tabs .ecl-tabs__item {
+        max-width: 200px; /* Shrink the tabs a bit more for the mobile layout. */
+    }
+
+    .OnlineLearningQuiz .ecl-tabs .ecl-tabs__item:first-child > .ecl-tabs__link {
+        margin-left: 0;
+    }
+
+    .OnlineLearningQuiz .ecl-tabs .ecl-tabs__item:last-child > .ecl-tabs__link {
+        margin-right: -0.5px; /* Align the container and the tab strip perfectly. */
+    }
+
+    .OnlineLearningQuiz .quiz-tab-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    @-moz-document url-prefix() {
+        .OnlineLearningQuiz .quiz-tab-container {
+            /* Correct container and tab strip misalignment for the Gecko engine. */
+            margin-right: unset;
+        }
+    }
+
+    .OnlineLearningQuiz .quiz-results-container > .quiz-content-container {
+        padding-bottom: 30px;
+    }
+
+    .OnlineLearningQuiz .quiz-results-container .quiz-tab-buttons .col:last-child {
+        justify-content: center; /* Use a better 'tab button' layout for mobile. */
+    }
+
+    .OnlineLearningQuiz .quiz-tab-buttons button.ecl-button {
+        width: 95px;
+    }
+
+    .OnlineLearningQuiz .quiz-tab-buttons button.ecl-button + button.ecl-button {
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 992px){
+    .body-online-learning{
+        padding-top:30px
+    }
+}
+.duration-online-learning{
+    margin-top:30px
+}
+
+
+@media (min-width: 992px){
+    .description-box{
+        margin: 30px 0px;
+        padding: 30px;
+        border: solid;
+        border-width: 1px;
+        border-color: #C2C2C2;
+
+    }
+}
+@media (max-width: 992px){
+    .description-box{
+        margin:30px 0px;
+
+    }
+}
+.description-heading{
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+
+}
+
+.description-text{
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+.useful-links-text{
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+}
+
+
+.ls-embed-video-iframe-video  {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    z-index:1;
+}
+
+
+.useful-links-text-black {
+    color: #333333;
+}
+.useful-links-text-blue {
+    color: #0e47cb;
+    text-decoration: underline;
+    text-underline-offset: 0.15rem;
+}
+
+body.modal-open{
+  padding-right: 0px !important;
+}
+
+.LearningBanner {
+    width:100%;
+}
+
+.LearningBannerImage {
+    background-image:url('../../images/online-learning/lexiImage.png');
+    background-size:cover;
+    height:270px;
+    background-position-x:-215px;
+    border-radius:5px;
+}
+
+@media(min-width:700px){
+    .LearningBannerImage {
+        background-position-x:0;
+    }
+}
+
+.LearningBannerContent {
+    padding:20px;
+    background-color:#EEEEEE;
+}
+
+.LearningBannerContent > h2 {
+    font-family:arial;
+    color:#333333;
+    font-size:26px;
+    font-weight:700;
+    margin-top:0;
+}
+
+.LearningBannerContent > div {
+    font-family:arial;
+    font-weight:400;
+    color:#333333;
+    font-size:16px;
+    line-height:16px;
+}
+
+.LearningTourButton {
+    background-color:#1971A1;
+    height:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0px 5px 5px 0px #aaa;
+    margin-right:40px;
+    float:right;
+}
+
+@media(max-width:991px) {
+    .LearningTourButton {
+        margin-right:20px;
+        margin-top:20px;
+    }
+}
+
+.LearningTourButton:active {
+    box-shadow:0px 5px 5px 0px #aaa;
+}
+
+.LearningTourButtonActive {
+    color: #333333; 
+    background: #ffffff; 
+    border: 2px solid #176793;
+}
+
+.LearningTourButton:focus {
+    color: #333333; 
+    background: #ffffff; 
+    border: 2px solid #176793;
+}
+
+.LearningTourButton:visited {
+    color:white !important;
+}
+
+.LearningTourButton > img {
+    margin-right:5%;
+    height: 100%;
+}
+
+#online-learning-modal-transcript > img {
+	margin-left: 0;
+	margin-right: 0;
+	height: 16px;
+}
+
+.transcript-button:active > img {
+ 	filter: invert(100%) contrast(2);
+}
+
+.LearningMenuBlock {
+    border-radius:5px;
+    border: 1px solid #cad7dc;
+}
+
+@media (min-width: 1261px) {
+    .LearningMenuBlock {
+        margin-top:40px !important;
+        margin-right:50px;
+        padding-top:0 !important;
+        padding-left:15px !important;
+        padding-right:15px;
+        width:48%
+    }
+}
+
+@media (max-width: 1260px){
+    .LearningMenuBlock {
+        margin-right:50px;
+        padding-top:0 !important;
+        padding-left:15px !important;
+        padding-right:15px;
+        width:100%
+    }
+}
+
+.LearningMenuBlock + .LearningMenuBlock {
+    margin-right:0 !important;
+}
+
+.BlockHeader{
+    display:flex;
+    min-height:136px
+}
+
+.EurlexContentBorder {
+    border-bottom:2px solid #1971A1;
+}
+
+.FindingDocumentsBorder {
+    border-bottom:2px solid #CB310F;
+}
+
+.DocumentsContextBorder {
+    border-bottom:2px solid #2C862D;
+}
+
+.PersonalizeBorder {
+    border-bottom:2px solid #76017A;
+}
+
+.LearningContent {
+    min-width:60px;
+    max-width:60px;
+    height:inherit;
+    display:flex;
+    justify-content:center;
+    padding-top:10px;
+    padding-left:0;
+    padding-right:0;
+    border-top-left-radius:4px;
+}
+
+.LearningEurlexContent {
+    background-color:#1971A1;
+}
+
+.LearningSearch {
+    background-color:#CB310F;
+}
+
+.LearningDocuments {
+    background-color:#2C862D;
+}
+
+.LearningPersonalize {
+    background-color:#76017A;
+}
+
+.menu-image-container {
+    height:40px;
+    width:40px;
+    border:1px solid #FFF;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.BlockHeaderContent {
+    padding: 20px 0px 20px 25px;
+}
+
+.BlockHeaderContent > h2 {
+    font-family:arial;
+    font-weight:700;
+    color:black;
+    font-size:26px;
+    line-height:28px;
+    margin-top: 0;
+}
+
+.BlockHeaderContent > span {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+@media(min-width:992px) {
+    .LearningNavLeft {
+        padding-left: 60px !important;
+        padding-right: 10px !important;
+    }
+}
+
+
+
+.LearningNav {
+    border: none;
+    margin-top: 0 !important;
+}
+
+.LearningNav a:visited {
+    color:#333333 !important;
+}
+
+.LearningMenu > li {
+    font-weight:bold;
+    border-top: 1px #d8d8d8 solid;
+    border-bottom: 0 !important;
+    margin-top:0 !important;
+    padding-top: 0px !important;
+    padding-left: 0 !important;
+}
+
+
+.LearningMenu > li:first-child {
+    border-top:none !important;
+}
+
+@media(max-width:991px) {
+    .LearningNav +  .LearningNav > .LearningMenu > li:first-child {
+        border-top: 1px #d8d8d8 solid !important;
+    }
+
+    .LearningNav +  .LearningNav > .LearningMenu > li:has(a.has-arrow) {
+        border-top: none !important;
+    }
+
+    .LearningMenu > li > a.has-arrow {
+        border-top: 1px #d8d8d8 solid !important;
+    }
+
+    .LearningMenu > li:has(a.has-arrow) {
+        padding-left:25px !important;
+    }
+
+    .BlockHeaderContent {
+        padding-right:20px;
+    }
+}
+
+.LearningMenu > li:before, .LearningSubMenu > li:before {
+    display:none !important;
+}
+
+.LearningSubMenu > li {
+    padding-left: 0 !important;
+    border-top:none !important;
+    border-bottom:none !important;
+    font-weight: 400;
+    font-family: arial;
+}
+
+.LearningSubMenu > li + li {
+    margin-top: 0 !important;
+}
+
+.LearningItem {
+    padding-left:25px !important;
+    padding-top:5px !important;
+    text-decoration: none !important;
+}
+
+.LearningItem > span {
+    margin-left: 25px;
+}
+
+.LearningList {
+    text-decoration: none !important;
+}
+
+.LearningLinkBlock {
+    margin-top:40px;
+    border-top: 1px solid #858585;
+}
+
+.LearningLinkHeader {
+    padding-top:20px;
+    padding-bottom:15px;
+    border-bottom:1px solid #858585;
+}
+
+.LearningLinkHeader > h2 {
+    font-family:arial;
+    font-size:26px;
+    font-weight:700;
+    color:#333333;
+    margin-top: 0 !important;
+}
+
+.LearningLinkMenu {
+    padding-top: 20px;
+    margin-top:25px;
+    font-family:arial;
+    font-size:14px;
+    line-height:1.5rem
+}
+
+.LearningLinkMenu > p {
+    color:#333333;
+}
+
+.LearningLinkMenu > p > a {
+    text-decoration:underline;
+    text-underline-offset:0.15em;
+    text-decoration-thickness:1px;
+}
+
+.LearningLinkMenu > p > a:hover, .LearningLinkMenu > p > a:focus  {
+    text-decoration:none;
+}
+
+.LearningLinkMenu > p > a:has(i.fa) {
+    text-decoration:none;
+}
+
+.LearningLinkMenu > p > a:has(i.fa):hover, .LearningLinkMenu > p > a:has(i.fa):focus  {
+    text-decoration:underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1px;
+}
+
+.LearningLinkMenu > p > a:visited {
+    color:#76017a;
+}
+
+@media(max-width:1089px){
+    .LearningBannerContent > div > p:last-child {
+        margin-bottom: 0px;
+    }
+
+    .LearningBannerImage{
+        border-top-left-radius:0 !important;
+        border-top-right-radius:0 !important;
+    }
+
+    .LearningBannerContent{
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+    }
+}
+
+@media(min-width:1090px) {
+    .LearningBannerContent{
+        background-color:transparent;
+        float:right;
+        width:50%;
+    }
+
+    .LearningTourButton {
+        clear:both;
+    }
+}
+
+.OnlineLearningBanner {
+    background: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:85px;
+}
+
+.OnlineLearningBannerText {
+    color: #333333;
+    font-family: Roboto;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.OnlineLearningBannerImage {
+    width: 33%;
+    max-width: 90px;
+}
+
+@media (max-width:992px){
+    .OnlineLearningBanner {
+        margin-top: 40px;
+    }
+}
+
+.SideBanner + .OnlineLearningBanner {
+    margin-top: 6px !important;
+}
+
+.OnlineLearningBanner > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LearningTourBody {
+    padding: 0 !important;
+}
+
+.LearningTourModalFooter > a {
+    margin:0 !important;
+}
+
+.LearningTourCloseBtn {
+    font-size: large;
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left:90%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    white-space:nowrap;
+}
+
+.LearningTourCloseBtn img {
+    margin-left: 10px;
+}
+
+@media(max-width:992px){
+    .LearningTourCloseBtn {
+        width:14%;
+        margin-left:87%;
+    }
+
+    .LearningNav {
+        padding: 20px 20px 20px 60px !important;
+    }
+
+    .LearningNavLeft {
+        padding-bottom: 5px !important;
+    }
+
+    .LearningNav + .LearningNav {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .LearningNav:has(.LearningSubMenu) {
+        padding-left:40px !important;
+    }
+
+    .LearningNav:has(.LearningSubMenu) > .LearningMenu{
+            margin-left: 5px;
+        }
+}
+
+.LearningTourCloseBtn > span, .LearningTourCloseBtn > i {
+    color: white !important;
+}
+@media(min-width:991px){
+    .useful-separator{
+        width: 30%;
+        border: none;
+        height: 1px;
+        background-color: #858585;
+        margin: 0px 0px 14px 0px;
+    }
+}
+
+@media(max-width:991px){
+    .useful-separator{
+        width: 12rem;
+        border: none;
+        height: 1px;
+        background-color: #858585;
+        margin: 0px 0px 14px 0px;
+    }
+}
+
+/* EURLEX-6075 - Accessibility - Help pages revamp - P1 */
+.HelpContent {
+    min-width:60px;
+    max-width:60px;
+    height:82px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding-left:0;
+    padding-right:0;
+    border-top-left-radius:4px;
+}
+
+.HelpMenuBlock {
+    border-radius:5px;
+    border: 1px solid #cad7dc;
+    padding: 0; 
+    flex: 0 0 33%; 
+    max-width: 300px;
+}
+
+.HelpMenuBlock nav {
+    padding: 20px;
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+    .HelpMenuBlock {
+        flex: 0 0 48%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .HelpMenuBlock {
+        max-width: 100%;
+        width: 100%;
+        flex: 0 0 48.5%;
+    }
+}
+
+.HelpBlockHeader {
+    min-height: fit-content;
+}
+
+.HelpBlockHeaderContent {
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+.HelpBlockHeaderContent > h2 {
+	font-family:arial;
+    font-weight:bold;
+    color:#333333;
+    font-size:21px;
+
+	margin: 0;
+	padding: 10px 35px 10px 10px;
+}
+
+#helpContent {
+    display: flex;
+    flex-direction: column;
+}
+
+#helpContent > div:first-child {
+	margin-bottom: 20px;
+}
+
+#helpContent > div:last-child {
+	margin-top: 20px;
+}
+
