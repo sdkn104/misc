@@ -1,0 +1,30 @@
+--- Page 0 ---
+Metadata: {'producer': 'PyPDF', 'creator': 'Microsoft Word', 'creationdate': '2021-03-18T03:10:01+00:00', 'author': 'Microsoft Office User', 'moddate': '2021-03-18T03:10:01+00:00', 'source': 'pdf_test.pdf', 'total_pages': 2, 'page': 0, 'page_label': '1'}
+Content:
+PDF のアップロードテスト用に作成しました 
+テスト用 PDF 
+作成者 
+ 
+見出し 1 
+(このテキストのような) プレースホルダー テキストをタップして入力するだけで、すぐに作成を
+開始できます。 
+• PC、タブレット、スマートフォンから Word を使ってこの文書を表示、編集できます。 
+• テキストの編集が可能で、画像、図形、表などのコンテンツの挿入も簡単です。
+Windows、Mac、Android、iOS デバイスから Word を使ってクラウドにシームレスに文
+書を保存できます。 
+• ２ページ目も用意してあります。
+
+--- Page 1 ---
+Metadata: {'producer': 'PyPDF', 'creator': 'Microsoft Word', 'creationdate': '2021-03-18T03:10:01+00:00', 'author': 'Microsoft Office User', 'moddate': '2021-03-18T03:10:01+00:00', 'source': 'pdf_test.pdf', 'total_pages': 2, 'page': 1, 'page_label': '2'}
+Content:
+2 
+見出し 2 
+ファイルから画像を挿入したり、または図形、テキスト ボックス、表を追加をしたいとします。そ
+の場合は、リボンの [挿入] タブで、必要なオプションをタップするだけです。 
+「引用文」 
+このページに表示されている文字列の書式は、リボンの [ホーム] タブ上にある [スタイル] か
+ら 1 タップで簡単に設定できます。 
+ 列見出し 列見出し 
+行見出し テキスト 123.45 
+行見出し テキスト 123.45
+
