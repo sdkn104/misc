@@ -18,785 +18,784 @@
   17: text: MITSUBISHI
   18: text: ELECTRIC
  19: text: ChangesfortheBetter
- 20: text: 一
- 21: section_header: 中期経営計画の進捗と更なる成長に向けて
- 22: page_footer: Mitsubishi Electric Corporation
- 23: page_footer: 2
- 24: section_header: イノベーティブカンパニーへの変革
- 25: text: 更なる事業発展と社会・環境貢献に向け、リスクを恐れず新たな発想で価値を創出するイノベーティブカンパニーへ変革
- 26: section_header: 事業の発展と社会・環境への貢献
- 27: section_header: 25 年度～ 『イノベーティブカンパニー』 への変革
- 28: section_header: 新たな価値の創出に向けて
- 29: list with name=list
-  30: list_item:  コンポーネント × デジタル両輪の成長への集中投資
-  31: list_item:  Serendie によるビジネスモデルの変革
- 32: section_header: 経営体質の強靭化
- 33: list with name=list
-  34: list_item:  事業保有意義の見極めと間接費用適正化
-  35: list_item:  財務レバレッジの活用含めた資本適正化
- 36: section_header: サステナビリティの推進・風土改革
- 37: list with name=list
-  38: list_item:  「トレード・オン」を実現する新事業の創出・強化
-  39: list_item:  環境変化へ柔軟に対応するグローバル体制整備
-  40: list_item:  風土改革の自走化
- 41: section_header: 21 年度～ これまでの取組み
- 42: section_header: 成長戦略の推進
- 43: list with name=list
-  44: list_item:  重点成長事業の強化
-  45: list_item:  循環型 デジタル・エンジニアリング企業への変革 （ Serendie 構築等）
- 46: section_header: 経営基盤の変革
- 47: list with name=list
-  48: list_item:  ビジネスエリア経営体制の整備
-  49: list_item:  BS 経営の推進
- 50: section_header: サステナビリティ推進体制の整備
- 51: list with name=list
-  52: list_item:  サステナビリティ・イノベーション本部の新設
-  53: list_item: -「トレード・オン *1 」の取組み （ GIST *2 等）
-  54: list_item: -環境ビジョン 2050 *3 に向けた取組み （温室効果ガス排出ゼロへの取組み等）
- 55: section_header: 3 つの改革 （ 品質風土 ・ 組織風土 ・ ガバナンス ）
- 56: footnote: *1 社会・環境を豊かにしながら事業を発展させること *2 GIST: Global Initiative for Sustainable Technology *3 環境ビジョン 2050 http
- 57: picture
- 58: page_footer: 1. 中期経営計画の進捗と更なる成長に向けて
- 59: page_footer: 3
- 60: section_header: 中期経営計画の進捗
- 61: text: 25 年度は、売上高、営業利益率の目標値の達成を見込み、営業利益率は過去最高の見通し
- 62: table
- 63: text: *1 24 年 5 月発表 *2 営業キャッシュフローに研究開発費加算等の調整後
+ 20: section_header: 中期経営計画の進捗と更なる成長に向けて
+ 21: page_footer: Mitsubishi Electric Corporation
+ 22: page_footer: 2
+ 23: section_header: イノベーティブカンパニーへの変革
+ 24: text: 更なる事業発展と社会・環境貢献に向け、リスクを恐れず新たな発想で価値を創出するイノベーティブカンパニーへ変革
+ 25: section_header: 事業の発展と社会・環境への貢献
+ 26: section_header: 25 年度～ 『イノベーティブカンパニー』 への変革
+ 27: section_header: 新たな価値の創出に向けて
+ 28: list with name=list
+  29: list_item:  コンポーネント × デジタル両輪の成長への集中投資
+  30: list_item:  Serendie によるビジネスモデルの変革
+ 31: section_header: 経営体質の強靭化
+ 32: list with name=list
+  33: list_item:  事業保有意義の見極めと間接費用適正化
+  34: list_item:  財務レバレッジの活用含めた資本適正化
+ 35: section_header: サステナビリティの推進・風土改革
+ 36: list with name=list
+  37: list_item:  「トレード・オン」を実現する新事業の創出・強化
+  38: list_item:  環境変化へ柔軟に対応するグローバル体制整備
+  39: list_item:  風土改革の自走化
+ 40: section_header: 21 年度～ これまでの取組み
+ 41: section_header: 成長戦略の推進
+ 42: list with name=list
+  43: list_item:  重点成長事業の強化
+  44: list_item:  循環型 デジタル・エンジニアリング企業への変革 （ Serendie 構築等）
+ 45: section_header: 経営基盤の変革
+ 46: list with name=list
+  47: list_item:  ビジネスエリア経営体制の整備
+  48: list_item:  BS 経営の推進
+ 49: section_header: サステナビリティ推進体制の整備
+ 50: list with name=list
+  51: list_item:  サステナビリティ・イノベーション本部の新設
+  52: list_item: -「トレード・オン *1 」の取組み （ GIST *2 等）
+  53: list_item: -環境ビジョン 2050 *3 に向けた取組み （温室効果ガス排出ゼロへの取組み等）
+ 54: section_header: 3 つの改革 （ 品質風土 ・ 組織風土 ・ ガバナンス ）
+ 55: footnote: *1 社会・環境を豊かにしながら事業を発展させること *2 GIST: Global Initiative for Sustainable Technology *3 環境ビジョン 2050 http
+ 56: picture
+ 57: page_footer: 1. 中期経営計画の進捗と更なる成長に向けて
+ 58: page_footer: 3
+ 59: section_header: 中期経営計画の進捗
+ 60: text: 25 年度は、売上高、営業利益率の目標値の達成を見込み、営業利益率は過去最高の見通し
+ 61: table
+ 62: text: *1 24 年 5 月発表 *2 営業キャッシュフローに研究開発費加算等の調整後
+ 63: picture
  64: picture
- 65: picture
-  66: text: 4
-  67: text: .
+  65: text: 4
+  66: text: .
+  67: text: 5
   68: text: 5
-  69: text: 5
-  70: text: .
-  71: text: 0
-  72: text: 5
-  73: text: .
-  74: text: 3
-  75: text: 5
-  76: text: .
+  69: text: .
+  70: text: 0
+  71: text: 5
+  72: text: .
+  73: text: 3
+  74: text: 5
+  75: text: .
+  76: text: 5
   77: text: 5
-  78: text: 5
-  79: text: .
-  80: text: 4
-  81: text: 兆円
-  82: text: 8
-  83: text: .
-  84: text: 0%
-  85: text: 21
-  86: text: 年度
-  87: text: 22
-  88: text: 年度
-  89: text: 23
-  90: text: 年度
-  91: text: 24
-  92: text: 年度
-  93: text: 2
-  94: text: ５年度
-  95: text: 見通し
-  96: text: 7
-  97: text: .
-  98: text: 1
-  99: text: 6
-  100: text: .
-  101: text: 2
-  102: text: 5
-  103: text: .
-  104: text: 2
-  105: text: 5
-  106: text: .
-  107: text: 6
-  108: text: 営業利益率
-  109: text: 売上高
-  110: text: 営業利益率と売上高の推移
- 111: page_footer: 1.
- 112: page_footer: 中期経営計画の進捗と更なる成長に向けて
- 113: page_footer: 4
- 114: section_header: キャピタル・アロケーション
- 115: text: 株主還元も含めた資本効率の継続的改善と将来の成長に向けた最適なキャピタル・アロケーションを実行
- 116: text: キャピタル・アロケーション / キャッシュ・ジェネレーション
- 117: picture
-  118: footnote: *1 調整後 DOE( 株主資本配当率 ) ： 支払配当 ÷ 株主資本（除く、その他の包括利益（△損失）累計額）
-  119: text: ＦＡシステム事業の停滞等で 3.1 兆円に留まる
-  120: section_header: キャッシュ・ジェネレーション 3 . 1 兆円
-  121: text: キャピタル・アロケーション
-  122: text: 前中計期間
-  123: text: （
-  124: text: 16-20
-  125: text: 年度）
-  126: text: 現中計期間
-  127: text: （
-  128: text: 21-25
-  129: text: 年度）
-  130: text: 3
-  131: text: .
-  132: text: ４兆円
-  133: text: 2.7
-  134: text: 兆円
-  135: text: 3.1
-  136: text: 兆円
-  137: text: 2.0
-  138: text: 兆円
-  139: text: 2.
-  140: text: ７兆円
-  141: text: 0.4
-  142: text: 兆円
-  143: text: 0.7
-  144: text: 兆円
-  145: text: 株主還元
-  146: text: 成長投資
-  147: text: 株主還元を拡大し
-  148: text: 総額は計画通り
- 149: picture
-  150: footnote: 1. 中期経営計画の進捗と更なる成長に向けて
- 151: section_header: 株主還元
- 152: picture
-  153: text: 調整後ＤＯＥ３％目安
-  154: text: *1
-  155: text: ２５年度は５５円
-  156: text: /
-  157: text: 年予定
-  158: text: （前年度比５円増配）
-  159: text: 前中計期間
-  160: text: （
-  161: text: 16-20
-  162: text: 年度）
-  163: text: 現中計期間
-  164: text: （
-  165: text: 21-25
-  166: text: 年度）
-  167: text: 0.5
-  168: text: 兆円
-  169: text: 0.4
-  170: text: 兆円
-  171: text: 0.2
-  172: text: 兆円
-  173: text: 自己株式
-  174: text: 取得
-  175: text: 配当
-  176: text: 34%
-  177: text: 総還元性向
-  178: text: 株主還元
-  179: text: 0
-  180: text: .
-  181: text: 7
-  182: text: 兆円
-  183: text: 52%
-  184: text: 資本効率改善に向け
-  185: text: 適切に実行
-  186: text: 前中計期間比 約
-  187: text: 1.9
-  188: text: 倍
- 189: page_footer: 5
- 190: section_header: これまでの事業運営の振り返り
- 191: section_header: 成果
- 192: list with name=list
-  193: list_item:  安定収益基盤の確立
-  194: list_item: -ビルシステム事業の一体運営体制構築
-  195: list_item: -レジリエント事業の収益性改善
-  196: list_item:  防衛システム事業の受注拡大・増産体制構築
-  197: list_item:  課題事業の見極め
-  198: list_item:  パートナー戦略の推進
-  199: list_item:  ノンコアアセットの圧縮
- 200: text: *1 ATW: Air To Water
- 201: picture
- 202: section_header: 課題と対応
- 203: list with name=list
-  204: list_item:  自動車機器事業の構造改革
-  205: list_item: -スピーディーな事業運営体制の構築 （ 分社化 ）
-  206: list_item: -経営効率の向上と事業ポートフォリオ戦略の推進
-  207: list_item:  空調事業における欧州 ATW *1 市場の成長鈍化
-  208: list_item: -投資時期の見直し
-  209: list_item: -IT Cooling 事業の強化
-  210: list_item:  FA システム事業の市況低迷・競争の激化
-  211: list_item: -構造改革の推進
- 212: page_footer: 1.
- 213: page_footer: 中期経営計画の進捗と更なる成長に向けて
- 214: page_footer: 6
- 215: section_header: 各事業の状況
- 216: section_header: 重点成長事業
- 217: section_header: 全体では重点投資を実行し、着実に成長
- 218: picture
- 219: key_value_area with name=group
-  220: text: 売上高
-  221: text: 2.5 兆円
-  222: text: 営業利益率
-  223: text: 9.3%
-  224: text: 売上高
-  225: text: 2.1 兆円
-  226: section_header: 21 年度実績
-  227: section_header: 25 年度見通し
-  228: text: 営業利益率 6.6%
-  229: text: 25 年度見通しの 21 年度実績との対比
-  230: text: 空調冷熱
-  231: text: システム
-  232: text: ビル
-  233: text: システム
-  234: text: パワー
-  235: text: デバイス
-  236: text: FA 制御
-  237: text: システム
-  238: text: 売上高
-  239: text: 営業利益率
-  240: text: 7
- 241: footnote: *1 各事業の撤退 / 売却を意思決定した年度の売上高合計
- 242: picture
- 243: section_header: レジリエント事業
- 244: section_header: 効率化、リソースシフトにより収益力強化
+  78: text: .
+  79: text: 4
+  80: text: 兆円
+  81: text: 8
+  82: text: .
+  83: text: 0%
+  84: text: 21
+  85: text: 年度
+  86: text: 22
+  87: text: 年度
+  88: text: 23
+  89: text: 年度
+  90: text: 24
+  91: text: 年度
+  92: text: 2
+  93: text: ５年度
+  94: text: 見通し
+  95: text: 7
+  96: text: .
+  97: text: 1
+  98: text: 6
+  99: text: .
+  100: text: 2
+  101: text: 5
+  102: text: .
+  103: text: 2
+  104: text: 5
+  105: text: .
+  106: text: 6
+  107: text: 営業利益率
+  108: text: 売上高
+  109: text: 営業利益率と売上高の推移
+ 110: page_footer: 1.
+ 111: page_footer: 中期経営計画の進捗と更なる成長に向けて
+ 112: page_footer: 4
+ 113: section_header: キャピタル・アロケーション
+ 114: text: 株主還元も含めた資本効率の継続的改善と将来の成長に向けた最適なキャピタル・アロケーションを実行
+ 115: text: キャピタル・アロケーション / キャッシュ・ジェネレーション
+ 116: picture
+  117: footnote: *1 調整後 DOE( 株主資本配当率 ) ： 支払配当 ÷ 株主資本（除く、その他の包括利益（△損失）累計額）
+  118: text: ＦＡシステム事業の停滞等で 3.1 兆円に留まる
+  119: section_header: キャッシュ・ジェネレーション 3 . 1 兆円
+  120: text: キャピタル・アロケーション
+  121: text: 前中計期間
+  122: text: （
+  123: text: 16-20
+  124: text: 年度）
+  125: text: 現中計期間
+  126: text: （
+  127: text: 21-25
+  128: text: 年度）
+  129: text: 3
+  130: text: .
+  131: text: ４兆円
+  132: text: 2.7
+  133: text: 兆円
+  134: text: 3.1
+  135: text: 兆円
+  136: text: 2.0
+  137: text: 兆円
+  138: text: 2.
+  139: text: ７兆円
+  140: text: 0.4
+  141: text: 兆円
+  142: text: 0.7
+  143: text: 兆円
+  144: text: 株主還元
+  145: text: 成長投資
+  146: text: 株主還元を拡大し
+  147: text: 総額は計画通り
+ 148: picture
+  149: footnote: 1. 中期経営計画の進捗と更なる成長に向けて
+ 150: section_header: 株主還元
+ 151: picture
+  152: text: 調整後ＤＯＥ３％目安
+  153: text: *1
+  154: text: ２５年度は５５円
+  155: text: /
+  156: text: 年予定
+  157: text: （前年度比５円増配）
+  158: text: 前中計期間
+  159: text: （
+  160: text: 16-20
+  161: text: 年度）
+  162: text: 現中計期間
+  163: text: （
+  164: text: 21-25
+  165: text: 年度）
+  166: text: 0.5
+  167: text: 兆円
+  168: text: 0.4
+  169: text: 兆円
+  170: text: 0.2
+  171: text: 兆円
+  172: text: 自己株式
+  173: text: 取得
+  174: text: 配当
+  175: text: 34%
+  176: text: 総還元性向
+  177: text: 株主還元
+  178: text: 0
+  179: text: .
+  180: text: 7
+  181: text: 兆円
+  182: text: 52%
+  183: text: 資本効率改善に向け
+  184: text: 適切に実行
+  185: text: 前中計期間比 約
+  186: text: 1.9
+  187: text: 倍
+ 188: page_footer: 5
+ 189: section_header: これまでの事業運営の振り返り
+ 190: section_header: 成果
+ 191: list with name=list
+  192: list_item:  安定収益基盤の確立
+  193: list_item: -ビルシステム事業の一体運営体制構築
+  194: list_item: -レジリエント事業の収益性改善
+  195: list_item:  防衛システム事業の受注拡大・増産体制構築
+  196: list_item:  課題事業の見極め
+  197: list_item:  パートナー戦略の推進
+  198: list_item:  ノンコアアセットの圧縮
+ 199: text: *1 ATW: Air To Water
+ 200: picture
+ 201: section_header: 課題と対応
+ 202: list with name=list
+  203: list_item:  自動車機器事業の構造改革
+  204: list_item: -スピーディーな事業運営体制の構築 （ 分社化 ）
+  205: list_item: -経営効率の向上と事業ポートフォリオ戦略の推進
+  206: list_item:  空調事業における欧州 ATW *1 市場の成長鈍化
+  207: list_item: -投資時期の見直し
+  208: list_item: -IT Cooling 事業の強化
+  209: list_item:  FA システム事業の市況低迷・競争の激化
+  210: list_item: -構造改革の推進
+ 211: page_footer: 1.
+ 212: page_footer: 中期経営計画の進捗と更なる成長に向けて
+ 213: page_footer: 6
+ 214: section_header: 各事業の状況
+ 215: section_header: 重点成長事業
+ 216: section_header: 全体では重点投資を実行し、着実に成長
+ 217: picture
+ 218: key_value_area with name=group
+  219: text: 売上高
+  220: text: 2.5 兆円
+  221: text: 営業利益率
+  222: text: 9.3%
+  223: text: 売上高
+  224: text: 2.1 兆円
+  225: section_header: 21 年度実績
+  226: section_header: 25 年度見通し
+  227: text: 営業利益率 6.6%
+  228: text: 25 年度見通しの 21 年度実績との対比
+  229: text: 空調冷熱
+  230: text: システム
+  231: text: ビル
+  232: text: システム
+  233: text: パワー
+  234: text: デバイス
+  235: text: FA 制御
+  236: text: システム
+  237: text: 売上高
+  238: text: 営業利益率
+  239: text: 7
+ 240: footnote: *1 各事業の撤退 / 売却を意思決定した年度の売上高合計
+ 241: picture
+ 242: section_header: レジリエント事業
+ 243: section_header: 効率化、リソースシフトにより収益力強化
+ 244: picture
  245: picture
- 246: picture
- 247: key_value_area with name=group
-  248: list with name=group
-   249: list_item:  ～ 24 年度 ：
-  250: text: 0.5 兆円 規模の終息を意思決定 *1 （内 0.2 兆円は終息・縮減済）
-  251: section_header: 価値再獲得事業
-  252: section_header: 事業見極めと収益性改善を継続
-  253: section_header: 事業見極め
-  254: text: 売上高
-  255: text: 1.2 兆円
-  256: text: 営業利益率
-  257: text: 9.8%
-  258: text: 売上高 1.1 兆円
-  259: section_header: 21 年度実績
-  260: section_header: 25 年度見通し
-  261: text: 営業利益率 8.9%
-  262: text: 売上高
-  263: text: 1.9 兆円
-  264: text: 営業利益率
-  265: text: 3.0%
-  266: text: 売上高 1.3 兆円
-  267: section_header: 21 年度実績
-  268: section_header: 25 年度見通し
-  269: text: 営業利益率
-  270: text: 0.7%
-  271: list with name=group
-   272: list_item:  25 年度中 ：
-  273: text: 0.8 兆円 規模の終息 / 継続を判断
-  274: text: 残り 0.3 兆円は 原則 27 年度中 に終息
- 275: page_footer: 1.
- 276: page_footer: 中期経営計画の進捗と更なる成長に向けて
- 277: page_footer: 7
- 278: section_header: ＦＡシステム事業の構造改革
- 279: section_header: 事業落ち込み
- 280: list with name=list
-  281: list_item:  市況低迷の長期化
-  282: list_item:  市場の競争激化と 中国ローカルメーカーの台頭
- 283: picture
- 284: text: 筋肉質な 経営体質
- 285: text: 事業ポート フォリオ変革
- 286: section_header: 成長軌道への早期回復
- 287: list with name=list
-  288: list_item:  固定費の削減
-  289: list_item:  営業改革による課題解決型組織への転換
-  290: list_item:  開発～販売まで行う統括新会社による 中国での自律経営体制構築
-  291: list_item:  デジタルソリューション、 重点成長事業への経営資源の集中投下
-  292: list_item:  その他事業の抜本的対策 （パートナー連携、譲渡含む）
- 293: section_header: 更なる成長
- 294: list with name=list
-  295: list_item:  コンポーネント × デジタルによる顧客 提供価値最大化
- 296: page_footer: 1. 中期経営計画の進捗と更なる成長に向けて
- 297: page_footer: 8
- 298: section_header: 今後の成長と資本適正化の方針
- 299: text: ROIC を活用した BS 経営を推進し、 ROE10% の早期達成を目指す
- 300: key_value_area with name=group
-  301: section_header: 成長投資 新たな M&A 投資枠 1 兆円 (3 年以内を目途
- 302: section_header: 既存事業強化 1
- 303: list with name=list
-  304: list_item: -グローバルで戦えるインダストリー、 HVAC *1 分野での M&A による非連続な成長
-  305: list_item: -成長が見込まれる防衛システム事業等への積極投資
- 306: section_header: 事業間シナジー創出 2
- 307: list with name=list
-  308: list_item: -デジタルを活用した事業間のシナジー創出 （エネルギーマネジメント分野等の M&A ）
-  309: list_item: AI ・デジタル領域の強化 3
-  310: list_item: -データ収集・分析・運用最適化・予知保全を強化する M&A
- 311: section_header: 目指す成長の方向性
- 312: text: コンポーネント × デジタル 両輪での成長
- 313: picture
-  314: text: コンポーネント成長
-  315: text: デジタル成長
-  316: text: 既存事業強化
-  317: text: AI
-  318: text: ・デジタル領域の強化
-  319: text: 事業間シナジー創出
-  320: text: 1
-  321: text: 2
-  322: text: 3
- 323: text: *1 HVAC: Heating, Ventilation, Air Conditioning *2 CoE: Center of Excellence
- 324: picture
- 325: text: )
- 326: key_value_area with name=group
-  327: section_header: 収益性改善 営業利益率 2pt
-  328: text: 改善
- 329: list with name=list
-  330: list_item:  事業の体質強化
-  331: list_item: -不採算事業の終息
-  332: list_item: -グローバルサプライチェーン強化と資材部品共通化・集中購買の推進
-  333: list_item:  間接費用の最適化
-  334: list_item: DX ・ AI 活用等による徹底的な業務削減
-  335: list_item: -関係会社数 3 分の 1 を削減 （社外とのパートナーシップ推進や統廃合）
-  336: list_item: -スタッフ機能の CoE *2 化
- 337: section_header: 資本適正化
- 338: key_value_area with name=group
-  339: list with name=group
-   340: list_item:  適切な自己株式取得・配当 ： 総還元性向 50%
-  341: text: 以上
-  342: list with name=group
-   343: list_item:  財務レバレッジの活用 : DE レシオ 0.3 倍 （ M&A
-  344: text: 投資枠として活用）
- 345: page_footer: 1. 中期経営計画の進捗と更なる成長に向けて
- 346: page_footer: 9
- 347: picture
-  348: text: 2
- 349: picture
-  350: text: MITSUBISHI
-  351: text: ELECTRIC
- 352: text: ChangesfortheBetter
- 353: text: デジタルによるイノベーティブカンパニーへの変革
- 354: page_footer: Mitsubishi Electric Corporation
- 355: page_footer: 10
- 356: section_header: イノベーティブカンパニーに向けた 3 つの取組み
+ 246: key_value_area with name=group
+  247: list with name=group
+   248: list_item:  ～ 24 年度 ：
+  249: text: 0.5 兆円 規模の終息を意思決定 *1 （内 0.2 兆円は終息・縮減済）
+  250: section_header: 価値再獲得事業
+  251: section_header: 事業見極めと収益性改善を継続
+  252: section_header: 事業見極め
+  253: text: 売上高
+  254: text: 1.2 兆円
+  255: text: 営業利益率
+  256: text: 9.8%
+  257: text: 売上高 1.1 兆円
+  258: section_header: 21 年度実績
+  259: section_header: 25 年度見通し
+  260: text: 営業利益率 8.9%
+  261: text: 売上高
+  262: text: 1.9 兆円
+  263: text: 営業利益率
+  264: text: 3.0%
+  265: text: 売上高 1.3 兆円
+  266: section_header: 21 年度実績
+  267: section_header: 25 年度見通し
+  268: text: 営業利益率
+  269: text: 0.7%
+  270: list with name=group
+   271: list_item:  25 年度中 ：
+  272: text: 0.8 兆円 規模の終息 / 継続を判断
+  273: text: 残り 0.3 兆円は 原則 27 年度中 に終息
+ 274: page_footer: 1.
+ 275: page_footer: 中期経営計画の進捗と更なる成長に向けて
+ 276: page_footer: 7
+ 277: section_header: ＦＡシステム事業の構造改革
+ 278: section_header: 事業落ち込み
+ 279: list with name=list
+  280: list_item:  市況低迷の長期化
+  281: list_item:  市場の競争激化と 中国ローカルメーカーの台頭
+ 282: picture
+ 283: text: 筋肉質な 経営体質
+ 284: text: 事業ポート フォリオ変革
+ 285: section_header: 成長軌道への早期回復
+ 286: list with name=list
+  287: list_item:  固定費の削減
+  288: list_item:  営業改革による課題解決型組織への転換
+  289: list_item:  開発～販売まで行う統括新会社による 中国での自律経営体制構築
+  290: list_item:  デジタルソリューション、 重点成長事業への経営資源の集中投下
+  291: list_item:  その他事業の抜本的対策 （パートナー連携、譲渡含む）
+ 292: section_header: 更なる成長
+ 293: list with name=list
+  294: list_item:  コンポーネント × デジタルによる顧客 提供価値最大化
+ 295: page_footer: 1. 中期経営計画の進捗と更なる成長に向けて
+ 296: page_footer: 8
+ 297: section_header: 今後の成長と資本適正化の方針
+ 298: text: ROIC を活用した BS 経営を推進し、 ROE10% の早期達成を目指す
+ 299: key_value_area with name=group
+  300: section_header: 成長投資 新たな M&A 投資枠 1 兆円 (3 年以内を目途
+ 301: section_header: 既存事業強化 1
+ 302: list with name=list
+  303: list_item: -グローバルで戦えるインダストリー、 HVAC *1 分野での M&A による非連続な成長
+  304: list_item: -成長が見込まれる防衛システム事業等への積極投資
+ 305: section_header: 事業間シナジー創出 2
+ 306: list with name=list
+  307: list_item: -デジタルを活用した事業間のシナジー創出 （エネルギーマネジメント分野等の M&A ）
+  308: list_item: AI ・デジタル領域の強化 3
+  309: list_item: -データ収集・分析・運用最適化・予知保全を強化する M&A
+ 310: section_header: 目指す成長の方向性
+ 311: text: コンポーネント × デジタル 両輪での成長
+ 312: picture
+  313: text: コンポーネント成長
+  314: text: デジタル成長
+  315: text: 既存事業強化
+  316: text: AI
+  317: text: ・デジタル領域の強化
+  318: text: 事業間シナジー創出
+  319: text: 1
+  320: text: 2
+  321: text: 3
+ 322: text: *1 HVAC: Heating, Ventilation, Air Conditioning *2 CoE: Center of Excellence
+ 323: picture
+ 324: text: )
+ 325: key_value_area with name=group
+  326: section_header: 収益性改善 営業利益率 2pt
+  327: text: 改善
+ 328: list with name=list
+  329: list_item:  事業の体質強化
+  330: list_item: -不採算事業の終息
+  331: list_item: -グローバルサプライチェーン強化と資材部品共通化・集中購買の推進
+  332: list_item:  間接費用の最適化
+  333: list_item: DX ・ AI 活用等による徹底的な業務削減
+  334: list_item: -関係会社数 3 分の 1 を削減 （社外とのパートナーシップ推進や統廃合）
+  335: list_item: -スタッフ機能の CoE *2 化
+ 336: section_header: 資本適正化
+ 337: key_value_area with name=group
+  338: list with name=group
+   339: list_item:  適切な自己株式取得・配当 ： 総還元性向 50%
+  340: text: 以上
+  341: list with name=group
+   342: list_item:  財務レバレッジの活用 : DE レシオ 0.3 倍 （ M&A
+  343: text: 投資枠として活用）
+ 344: page_footer: 1. 中期経営計画の進捗と更なる成長に向けて
+ 345: page_footer: 9
+ 346: picture
+  347: text: 2
+ 348: picture
+  349: text: MITSUBISHI
+  350: text: ELECTRIC
+ 351: text: ChangesfortheBetter
+ 352: text: デジタルによるイノベーティブカンパニーへの変革
+ 353: page_footer: Mitsubishi Electric Corporation
+ 354: page_footer: 10
+ 355: section_header: イノベーティブカンパニーに向けた 3 つの取組み
+ 356: picture
  357: picture
  358: picture
- 359: picture
- 360: text: ビジネスモデル変革
- 361: text: デジタル基盤強化
- 362: text: マインドセット変革
- 363: text: 顧客へのコンポーネント提供を起点に、そこから得られるデータを活用し サービスの創出、価値提供先の拡大、コンポーネントの強化を実現
- 364: text: グローバルな視点で社外パートナーと連携し クラウド、生成 AI などの最新技術を活用
- 365: text: 課題をクイックに解決するアジャイル開発の加速に向け 技術とマインドセットを備えた DX 人財の獲得と育成
- 366: picture
- 367: page_footer: 2.
- 368: page_footer: デジタルによるイノベーティブカンパニーへの変革
- 369: page_footer: 11
- 370: section_header: Serendie によるビジネスモデルの変革
- 371: text: コンポーネントを利用することで生まれるデータを起点にビジネスモデルの変革を推進
- 372: picture
-  373: text: コンポーネント強化
-  374: text: 既存の顧客
-  375: text: 価値提供先
-  376: text: Serendie ®
-  377: text: デジタルサービス
-  378: text: 新たな顧客
-  379: text: サービス創出
-  380: text: 利用者・管理者等
-  381: text: 価値提供先拡大
-  382: text: データ
-  383: text: パートナー企業との共創
-  384: text: ｜
-  385: text: 事業間シナジー
-  386: text: コンポーネント
- 387: picture
- 388: section_header: サービス創出
- 389: text: データを分析し、課題解決に向けたサービスを新たに創出
- 390: section_header: 価値提供先拡大
- 391: text: 既存の顧客から、その先の利用者や管理者へ 価値の提供先を拡大
- 392: section_header: コンポーネント強化
- 393: text: 設計・製造の知見に現場の使用データを組み合わせ コンポーネントをさらに強化
- 394: list with name=list
-  395: list_item: Serendie 関連事業 1 . 1 兆円 (30 年度売上高 )
- 396: page_footer: 2. デジタルによるイノベーティブカンパニーへの変革
- 397: page_footer: 12
- 398: section_header: ビジネスモデルの変革｜熱関連トータルソリューション
- 399: section_header: これまで
- 400: text: ビルオーナーや製造業に対して必要なコンポーネントを 組み合わせて提供
- 401: picture
-  402: text: 価値提供先
-  403: text: 管理・運用者
-  404: text: 顧客
-  405: text: 製造業
-  406: text: ビルオーナー
-  407: text: データセンター
-  408: text: 他社熱源設備
-  409: text: ボイラー
-  410: text: ターボ冷凍機など
-  411: text: 空調・給湯機器
-  412: text: コンポーネント
- 413: picture
- 414: section_header: これから
- 415: text: コンポーネントに加え、電力・熱の最適運用サービスを提供。エネルギー需要の高精度予測と 予測値に基づいた電力と熱のシステム全体の最適運転を実現、顧客の脱炭素化に貢献
- 416: picture
-  417: text: 顧客
-  418: text: 管理・運用者
-  419: text: エネルギー管理・運用者
-  420: text: 省エネ性向上
-  421: text: 価値提供先
-  422: text: 他社熱源設備
-  423: text: コンポーネント
-  424: text: エネルギー
-  425: text: 運用データ
-  426: text: データ
-  427: list with name=group
-   428: list_item: 複数の顧客と ソリューションの効果を検証中
-  429: text: 需要予測
-  430: text: 最適運転支援
-  431: text: 脱炭素経営支援
-  432: text: 電力・熱の最適運用
-  433: text: 空調冷熱
-  434: text: ×
-  435: text: 電力
-  436: text: ×
-  437: text: ビル
-  438: text: 空調冷熱
-  439: text: ×
-  440: text: 電力
-  441: text: ×
-  442: text: 工場
-  443: text: サービス提供先拡大
-  444: text: Serendie ®
- 445: page_footer: 2. デジタルによるイノベーティブカンパニーへの変革
- 446: page_footer: 13
- 447: section_header: ビジネスモデルの変革｜鉄道事業に関わるエネルギーの最適利用
- 448: section_header: これまで
- 449: text: 鉄道事業者に対して様々なコンポーネントやシステムを提供
- 450: picture
-  451: footnote: *1 TIMA: Train Information Monitoring and Analysis system
-  452: text: 顧客
-  453: text: 価値提供先
-  454: text: 沿線地域
-  455: text: 鉄道
-  456: text: コンポーネント
-  457: text: システム
-  458: text: 車上機器
-  459: text: 受変電設備
-  460: text: TIMA *1
-  461: text: 運行管理システム
- 462: picture
- 463: section_header: これから
- 464: text: 車両や変電所、駅設備のデータから、回生エネルギーなどの鉄道事業に関わる エネルギーを最適利用。安全・安定な列車運行と、カーボンニュートラルに貢献
- 465: picture
-  466: text: 東京地下鉄有楽町線にて変電所電圧変更等により
-  467: text: 年間
-  468: text: 87
-  469: text: 万
-  470: text: kWh
-  471: text: の電力削減を実現
-  472: text: 顧客
-  473: text: Serendie ®
-  474: text: 沿線地域
-  475: text: システム
-  476: text: 価値提供先
-  477: text: コンポーネント
-  478: text: 車両・変電所・
-  479: text: 駅設備・電力需給
+ 359: text: ビジネスモデル変革
+ 360: text: デジタル基盤強化
+ 361: text: マインドセット変革
+ 362: text: 顧客へのコンポーネント提供を起点に、そこから得られるデータを活用し サービスの創出、価値提供先の拡大、コンポーネントの強化を実現
+ 363: text: グローバルな視点で社外パートナーと連携し クラウド、生成 AI などの最新技術を活用
+ 364: text: 課題をクイックに解決するアジャイル開発の加速に向け 技術とマインドセットを備えた DX 人財の獲得と育成
+ 365: picture
+ 366: page_footer: 2.
+ 367: page_footer: デジタルによるイノベーティブカンパニーへの変革
+ 368: page_footer: 11
+ 369: section_header: Serendie によるビジネスモデルの変革
+ 370: text: コンポーネントを利用することで生まれるデータを起点にビジネスモデルの変革を推進
+ 371: picture
+  372: text: コンポーネント強化
+  373: text: 既存の顧客
+  374: text: 価値提供先
+  375: text: Serendie ®
+  376: text: デジタルサービス
+  377: text: 新たな顧客
+  378: text: サービス創出
+  379: text: 利用者・管理者等
+  380: text: 価値提供先拡大
+  381: text: データ
+  382: text: パートナー企業との共創
+  383: text: ｜
+  384: text: 事業間シナジー
+  385: text: コンポーネント
+ 386: picture
+ 387: section_header: サービス創出
+ 388: text: データを分析し、課題解決に向けたサービスを新たに創出
+ 389: section_header: 価値提供先拡大
+ 390: text: 既存の顧客から、その先の利用者や管理者へ 価値の提供先を拡大
+ 391: section_header: コンポーネント強化
+ 392: text: 設計・製造の知見に現場の使用データを組み合わせ コンポーネントをさらに強化
+ 393: list with name=list
+  394: list_item: Serendie 関連事業 1 . 1 兆円 (30 年度売上高 )
+ 395: page_footer: 2. デジタルによるイノベーティブカンパニーへの変革
+ 396: page_footer: 12
+ 397: section_header: ビジネスモデルの変革｜熱関連トータルソリューション
+ 398: section_header: これまで
+ 399: text: ビルオーナーや製造業に対して必要なコンポーネントを 組み合わせて提供
+ 400: picture
+  401: text: 価値提供先
+  402: text: 管理・運用者
+  403: text: 顧客
+  404: text: 製造業
+  405: text: ビルオーナー
+  406: text: データセンター
+  407: text: 他社熱源設備
+  408: text: ボイラー
+  409: text: ターボ冷凍機など
+  410: text: 空調・給湯機器
+  411: text: コンポーネント
+ 412: picture
+ 413: section_header: これから
+ 414: text: コンポーネントに加え、電力・熱の最適運用サービスを提供。エネルギー需要の高精度予測と 予測値に基づいた電力と熱のシステム全体の最適運転を実現、顧客の脱炭素化に貢献
+ 415: picture
+  416: text: 顧客
+  417: text: 管理・運用者
+  418: text: エネルギー管理・運用者
+  419: text: 省エネ性向上
+  420: text: 価値提供先
+  421: text: 他社熱源設備
+  422: text: コンポーネント
+  423: text: エネルギー
+  424: text: 運用データ
+  425: text: データ
+  426: list with name=group
+   427: list_item: 複数の顧客と ソリューションの効果を検証中
+  428: text: 需要予測
+  429: text: 最適運転支援
+  430: text: 脱炭素経営支援
+  431: text: 電力・熱の最適運用
+  432: text: 空調冷熱
+  433: text: ×
+  434: text: 電力
+  435: text: ×
+  436: text: ビル
+  437: text: 空調冷熱
+  438: text: ×
+  439: text: 電力
+  440: text: ×
+  441: text: 工場
+  442: text: サービス提供先拡大
+  443: text: Serendie ®
+ 444: page_footer: 2. デジタルによるイノベーティブカンパニーへの変革
+ 445: page_footer: 13
+ 446: section_header: ビジネスモデルの変革｜鉄道事業に関わるエネルギーの最適利用
+ 447: section_header: これまで
+ 448: text: 鉄道事業者に対して様々なコンポーネントやシステムを提供
+ 449: picture
+  450: footnote: *1 TIMA: Train Information Monitoring and Analysis system
+  451: text: 顧客
+  452: text: 価値提供先
+  453: text: 沿線地域
+  454: text: 鉄道
+  455: text: コンポーネント
+  456: text: システム
+  457: text: 車上機器
+  458: text: 受変電設備
+  459: text: TIMA *1
+  460: text: 運行管理システム
+ 461: picture
+ 462: section_header: これから
+ 463: text: 車両や変電所、駅設備のデータから、回生エネルギーなどの鉄道事業に関わる エネルギーを最適利用。安全・安定な列車運行と、カーボンニュートラルに貢献
+ 464: picture
+  465: text: 東京地下鉄有楽町線にて変電所電圧変更等により
+  466: text: 年間
+  467: text: 87
+  468: text: 万
+  469: text: kWh
+  470: text: の電力削減を実現
+  471: text: 顧客
+  472: text: Serendie ®
+  473: text: 沿線地域
+  474: text: システム
+  475: text: 価値提供先
+  476: text: コンポーネント
+  477: text: 車両・変電所・
+  478: text: 駅設備・電力需給
+  479: text: データ
   480: text: データ
-  481: text: データ
-  482: text: 省エネ支援ソリューション
-  483: text: 交通
-  484: text: ×
-  485: text: 電力
-  486: text: ｜
-  487: text: 交通事業者との共創
-  488: text: 駅ビル
-  489: text: 街区
-  490: text: 沿線地域のエネルギー最適化
-  491: text: 設備導入
-  492: text: 省エネ運用支援
-  493: text: 省エネ性向上
- 494: page_footer: 2.
- 495: page_footer: デジタルによるイノベーティブカンパニーへの変革
- 496: page_footer: 14
- 497: section_header: デジタル基盤の強化｜ IT ・ DX ・ AI
- 498: text: IT ・ DX ・ AI に関わる部門が一体となった組織運営により、 Serendie 関連事業の対応力強化と業務プロセス改革を推進
- 499: section_header: IT ・ DX ・ AI の統合組織を設立
- 500: list with name=list
-  501: list_item:  新設したデジタルイノベーション事業本部に、 DX ・ AI 活用の推進部門と、 グループ会社の情報システム・サービス事業会社 (3 社 ) を統合した三菱電 機デジタルイノベーション㈱を集約
-  502: list_item:  分散していた DX 人財 4,000 人を集約し、 Serendie 関連事業の 対応力強化と、業務プロセス改革を効率的に推進
- 503: picture
-  504: section_header: デジタルイノベーション事業本部
-  505: text: 業務効率化 人財活用
-  506: text: DX
-  507: text: ・ AI 活用 推進部門
-  508: text: 情報システム・ サービス事業会社
- 509: section_header: IT ・ DX の活用による社内業務プロセス改革
- 510: list with name=list
-  511: list_item:  1 , 300 億円 を投資し、 1 , 900 億円 の費用削減効果を見込む *1
- 512: section_header: 主な効果
- 513: list with name=list
-  514: list_item: -業務プロセス標準化やデータの一元化などによる業務量削減
-  515: list_item: -レガシー IT システムの刷新、廃止による保守費用削減
-  516: list_item:  得られた効果を製造業における DX ノウハウとして蓄積し、事業として展開
- 517: section_header: AI ・生成 AI の活用に向けた各種改革の推進
- 518: list with name=list
-  519: list_item:  業務効率 2 倍 に向け、 1,000 以上のアイデアに基づく 60 の業務改革プロジェクトを開始
-  520: list_item:  データの価値最大化を目指す「データ活用宣言 *2 」を制定・公開 新たなルールと体制を施行
- 521: footnote: *1 投資額及び効果は 23-30 年度の累計 *2 データ活用宣言全文 https://www.mitsubishielectric.co.jp/ja/sustainability/governan
- 522: picture
- 523: page_footer: 2.
- 524: page_footer: デジタルによるイノベーティブカンパニーへの変革
- 525: page_footer: 15
- 526: section_header: デジタル基盤の強化｜生成 AI 活用プロジェクト
- 527: text: 生成 AI を積極的に活用した改革を推進、そのノウハウを蓄積するとともに、事業展開も狙う
- 528: text: 社内業務への適用
- 529: section_header: 業務効率を 2 倍に向上
- 530: section_header: 業務プロセス改革
- 531: key_value_area with name=group
-  532: list with name=group
-   533: list_item:  戦略・企画
-  534: list with name=group
-   535: list_item:  人事・総務
-  536: list with name=group
-   537: list_item:  経理・財務
-  538: list with name=group
-   539: list_item: 事業環境分析資料の自動生成、戦略提案
-  540: list with name=group
-   541: list_item: 問合せ対応の自動化
-  542: list with name=group
-   543: list_item: 伝票処理におけるエラー、不正兆候の検知
- 544: section_header: 設計・製造プロセス改革
- 545: key_value_area with name=group
-  546: list with name=group
-   547: list_item:  ハードウエア設計
-  548: list with name=group
-   549: list_item:  ソフトウエア設計
-  550: list with name=group
-   551: list_item:  品質保証
-  552: text: 仕様の照合、コスト見積り
-  553: text: コード生成、テストケース生成
-  554: text: DR *1 支援、購入品メーカーの監査支援
- 555: text: *1 DR: Design Review
- 556: picture
- 557: text: 生産現場への展開
- 558: section_header: 変種変量生産への自律的かつ迅速な対応
- 559: text: 図面番号 ×× の○○個生産を優先して
+  481: text: 省エネ支援ソリューション
+  482: text: 交通
+  483: text: ×
+  484: text: 電力
+  485: text: ｜
+  486: text: 交通事業者との共創
+  487: text: 駅ビル
+  488: text: 街区
+  489: text: 沿線地域のエネルギー最適化
+  490: text: 設備導入
+  491: text: 省エネ運用支援
+  492: text: 省エネ性向上
+ 493: page_footer: 2.
+ 494: page_footer: デジタルによるイノベーティブカンパニーへの変革
+ 495: page_footer: 14
+ 496: section_header: デジタル基盤の強化｜ IT ・ DX ・ AI
+ 497: text: IT ・ DX ・ AI に関わる部門が一体となった組織運営により、 Serendie 関連事業の対応力強化と業務プロセス改革を推進
+ 498: section_header: IT ・ DX ・ AI の統合組織を設立
+ 499: list with name=list
+  500: list_item:  新設したデジタルイノベーション事業本部に、 DX ・ AI 活用の推進部門と、 グループ会社の情報システム・サービス事業会社 (3 社 ) を統合した三菱電 機デジタルイノベーション㈱を集約
+  501: list_item:  分散していた DX 人財 4,000 人を集約し、 Serendie 関連事業の 対応力強化と、業務プロセス改革を効率的に推進
+ 502: picture
+  503: section_header: デジタルイノベーション事業本部
+  504: text: 業務効率化 人財活用
+  505: text: DX
+  506: text: ・ AI 活用 推進部門
+  507: text: 情報システム・ サービス事業会社
+ 508: section_header: IT ・ DX の活用による社内業務プロセス改革
+ 509: list with name=list
+  510: list_item:  1 , 300 億円 を投資し、 1 , 900 億円 の費用削減効果を見込む *1
+ 511: section_header: 主な効果
+ 512: list with name=list
+  513: list_item: -業務プロセス標準化やデータの一元化などによる業務量削減
+  514: list_item: -レガシー IT システムの刷新、廃止による保守費用削減
+  515: list_item:  得られた効果を製造業における DX ノウハウとして蓄積し、事業として展開
+ 516: section_header: AI ・生成 AI の活用に向けた各種改革の推進
+ 517: list with name=list
+  518: list_item:  業務効率 2 倍 に向け、 1,000 以上のアイデアに基づく 60 の業務改革プロジェクトを開始
+  519: list_item:  データの価値最大化を目指す「データ活用宣言 *2 」を制定・公開 新たなルールと体制を施行
+ 520: footnote: *1 投資額及び効果は 23-30 年度の累計 *2 データ活用宣言全文 https://www.mitsubishielectric.co.jp/ja/sustainability/governan
+ 521: picture
+ 522: page_footer: 2.
+ 523: page_footer: デジタルによるイノベーティブカンパニーへの変革
+ 524: page_footer: 15
+ 525: section_header: デジタル基盤の強化｜生成 AI 活用プロジェクト
+ 526: text: 生成 AI を積極的に活用した改革を推進、そのノウハウを蓄積するとともに、事業展開も狙う
+ 527: text: 社内業務への適用
+ 528: section_header: 業務効率を 2 倍に向上
+ 529: section_header: 業務プロセス改革
+ 530: key_value_area with name=group
+  531: list with name=group
+   532: list_item:  戦略・企画
+  533: list with name=group
+   534: list_item:  人事・総務
+  535: list with name=group
+   536: list_item:  経理・財務
+  537: list with name=group
+   538: list_item: 事業環境分析資料の自動生成、戦略提案
+  539: list with name=group
+   540: list_item: 問合せ対応の自動化
+  541: list with name=group
+   542: list_item: 伝票処理におけるエラー、不正兆候の検知
+ 543: section_header: 設計・製造プロセス改革
+ 544: key_value_area with name=group
+  545: list with name=group
+   546: list_item:  ハードウエア設計
+  547: list with name=group
+   548: list_item:  ソフトウエア設計
+  549: list with name=group
+   550: list_item:  品質保証
+  551: text: 仕様の照合、コスト見積り
+  552: text: コード生成、テストケース生成
+  553: text: DR *1 支援、購入品メーカーの監査支援
+ 554: text: *1 DR: Design Review
+ 555: picture
+ 556: text: 生産現場への展開
+ 557: section_header: 変種変量生産への自律的かつ迅速な対応
+ 558: text: 図面番号 ×× の○○個生産を優先して
+ 559: picture
  560: picture
- 561: picture
-  562: text: 指示
- 563: text: 解決策
- 564: picture
-  565: caption: 生産管理者
-  566: text: AI
- 567: caption: 生産管理 AI
+  561: text: 指示
+ 562: text: 解決策
+ 563: picture
+  564: caption: 生産管理者
+  565: text: AI
+ 566: caption: 生産管理 AI
+ 567: text: AI
  568: text: AI
  569: text: AI
- 570: text: AI
- 571: section_header: 生産計画
- 572: text: 指示に応じた柔軟な計画策定
- 573: text: 機器制御
- 574: text: 自律的な機器制御
- 575: text: 保全
- 576: text: 想定外な事象への解決策指示
- 577: text: 複数の AI エージェント が協調し、バーチャル生産管理者を実現
- 578: text: 社内工場での実証試験を行ったのち社外へサービス展開予定
- 579: page_footer: 2. デジタルによるイノベーティブカンパニーへの変革
- 580: page_footer: 16
- 581: section_header: デジタル基盤の強化｜グローバル展開と協業
- 582: text: DX ・オープンイノベーション拠点をグローバルに展開。 最新技術の獲得と、新たなサービスの創出を推進
- 583: section_header: Serendie Street のグローバル展開
- 584: picture
-  585: caption: Serendie Street Yokohama
-  586: text: 戦略拠点
-  587: text: 最新技術の獲得
-  588: text: ボストン
-  589: text: 横浜
-  590: text: 大阪
-  591: text: (
-  592: text: 予定
-  593: text: )
-  594: text: Serendie Street Global
-  595: text: cerendie
- 596: text: Serendie 関連活動実績 *1
- 597: caption: Serendie Street Boston
- 598: key_value_area with name=group
-  599: text: 65
-  600: text: 24
-  601: list with name=group
-   602: list_item: スクラムプロジェクト数 ：
-  603: list with name=group
-   604: list_item: 共創パートナー数 ：
- 605: text: *1 25 年 5 月現在 *2 AWS: Amazon Web Services *3 Microsoft 社のソフトウエアエンジニアとソリューションをアジャイル開発する共創活動 *4 VC: Ve
- 606: picture
- 607: section_header: ハイパースケーラーとの協業
- 608: section_header: 協業による AI 適用技術の強化
- 609: list with name=list
-  610: list_item:  AWS *2 : 同社の生成 AI インフラを活用し AI 適用技術の研鑽とノウハウを蓄積
-  611: list_item:  Microsoft : 同社が提供する Co-Engineering *3 の仕組みを活用し 製造業向けアプリをアジャイル手法で短期間に開発
- 612: section_header: スタートアップ・大学連携
- 613: section_header: 最新技術の獲得と事業創出力を強化
- 614: list with name=list
-  615: list_item:  VC *4 ファンド : 投資枠を１５０億円に拡大、ソーシング機能を強化
-  616: list_item:  拠点強化 ： ソーシング体制を強化し最新技術の獲得を加速
-  617: list_item:  インキュベーション : MIT *5 と連携し、新事業アイデアの創出と検証を実施
- 618: page_footer: 2.
- 619: page_footer: デジタルによるイノベーティブカンパニーへの変革
- 620: page_footer: 17
- 621: section_header: マインドセット変革
- 622: text: 制度の整備、風土の醸成により、アジャイルなマインドセットを有する DX 人財を拡充
- 623: section_header: DX 人財拡充に向けた取組み
- 624: list with name=list
-  625: list_item:  育成： 職種やレベルに適した育成プログラムによるリスキリングやスキル向上
-  626: list_item: 育成機関 「 DX イノベーションアカデミー」 を設立 認定制度や、 7 つのスキルセットと学習コースを整備 -
-  627: list_item: 早稲田大学の教育プログラムの活用 DX 人財育成に関し互いに支援・協力 -
-  628: list_item:  獲得 ・ 配置： 採用強化に加え、 AI やデジタル領域における M ＆ A を活用した グローバルでの計画的な人財獲得・配置
-  629: list_item:  処遇 : 高度な技術や専門性を持つ人財に対する処遇を整備
- 630: picture
-  631: text: 24
-  632: text: 年度
-  633: text: 10
-  634: text: ,
-  635: text: 000
-  636: text: 人
-  637: text: 20,000
-  638: text: 人
-  639: text: 30
-  640: text: 年度目標
-  641: text: 育成
-  642: text: 獲得
-  643: text: (
-  644: text: 採用・
-  645: text: M&A
-  646: text: 等
-  647: text: )
-  648: text: DX
-  649: text: 人財
- 650: caption: *1 PoC: Proof of Concept
- 651: picture
- 652: section_header: カルチャーの醸成
- 653: list with name=list
-  654: list_item:  アジャイル人財育成研修 : ビジネスモデル変革や社内の業務改革をスクラム で進めるためにアジャイル研修を実施
-  655: list_item:  生成 AI の試作開発環境整備 : 実践型 AI 人材育成のための開発環境を整備 開設 10 ヶ月の時点で 178 の PoC *1 が進行中
- 656: picture
-  657: caption: アジャイル研修ワークショップ
- 658: picture
-  659: caption: 生成 AI の PoC 成果報告会
-  660: text: C
- 661: page_footer: 2.
- 662: page_footer: デジタルによるイノベーティブカンパニーへの変革
- 663: page_footer: 18
- 664: section_header: Appendix
- 665: picture
- 666: page_footer: 19
- 667: section_header: 業績見通し｜全社
- 668: table
-  669: footnote: 1 当期純利益は「親会社株主に帰属する当期純利益」を表す 2 調整後株主資本配当率： 支払配当 ÷ 株主資本（除く、その他の包括利益（△損失）累計額）
- 670: picture
- 671: page_footer: Appendix
- 672: page_footer: 20
- 673: section_header: 業績見通し｜セグメント・サブセグメント別
- 674: text: ( 単位：億円 )
- 675: table
- 676: text: ( 単位：億円 )
- 677: table
-  678: footnote: 1 各セグメントの売上高には、セグメント間の内部売上高 ( 振替高 ) を含む 2 25 年度より、従来の「電力システム」を「エネルギーシステム」に、「ビジネス・プラットフォーム」を「デジタルイノベー
-  679: footnote: 3 ROIC( 三菱電機版 ROIC): 各事業部門での把握・改善が容易となるように、「資本」「負債」ではなく、資産項目（固定資産・運転資本等）に基づいて算出
- 680: picture
- 681: page_footer: Appendix
- 682: page_footer: 21
- 683: section_header: イニシアティブ、外部評価
- 684: section_header: イニシアティブへの参画
- 685: section_header: WESUPPORT
- 686: picture
-  687: text: COMPA
-  688: text: CT
- 689: picture
-  690: text: SCIENCE
-  691: text: BASED
-  692: text: TARGETS
-  693: text: DRIVING AMB/TIOUS CORPORATE CLIMATE ACTION
- 694: picture
-  695: text: TCFD
-  696: text: TASKFORCE ON
-  697: text: CLIMATE-RELATED
-  698: text: FINANCIAL
-  699: text: DISCLOSURES
- 700: picture
-  701: text: Weare
-  702: text: TNFD
-  703: text: Adopters
- 704: picture
-  705: text: G
-  706: text: Lcaguc
- 707: picture
-  708: text: CLean Ocean Materiall Alliance
- 709: text: 国際的な規範に基づいたサステナビリティ活動を推進するため、 「国連グローバル・コンパクト（ UNGC ） 」に署名（ 18 年 5 月）
- 710: text: SBT （ Science Based Targets ）イニシアティブ *1 1.5 度目標の認定取得（ 24 年 2 月）
- 711: text: 「気候関連財務情報開示タスクフォース (TCFD) 」の 提言への賛同を表明 (19 年 5 月 )
- 712: text: 「自然関連財務情報開示タスクフォース (TNFD) 」の 開示提言を採用する「 TNFD Adopter *2 」に登録 (24 年 9 月 )
- 713: text: 経済産業省「 GX リーグ」へ参画（ 23 年 5 月）
- 714: text: 海洋プラスチックごみ問題の解決に向けて、 「クリーン・オーシャン・マテリアル・アライアンス（ CLOMA ）」に加入（ 23 年 4 月）
- 715: text: 健全なサプライチェーン構築に向け、 RBA *3 に加盟 (22 年 2 月 )
- 716: text: *1
- 717: text: 国連グローバル・コンパクト、世界自然保護基金
- 718: text: CDP
- 719: text: 、世界資源研究所
- 720: text: *3 RBA: Responsible Business Alliance(
- 721: picture
- 722: text: (WWF)
- 723: text: 、
- 724: text: (WRI)
- 725: text: による国際的イニシアティブ
- 726: text: グローバルサプライチェーンにおいて社会的責任を推進する企業同盟
- 727: section_header: 社外からの評価
- 728: picture
-  729: text: Climate Water
-  730: text: aCDP
-  731: text: AList
-  732: text: 2024
- 733: picture
-  734: text: DX銘柄2025
-  735: text: Digital Transformation
- 736: picture
-  737: text: Top100
-  738: text: Global
-  739: text: Innovator
-  740: text: 2025
-  741: text: Clarivate
- 742: picture
-  743: text: 2025
-  744: text: 健康释當優良法人
-  745: text: KENkOlnvestmentforHealth
-  746: text: 大规楼法人路门
- 747: key_value_area with name=group
-  748: text: CDP *4
-  749: text: Clarivate Top 100 グローバル・イノベーター 2025
-  750: text: 「気候変動」「水セキュリティ」の 2 分野において 最高評価の「 A リスト企業」に、通算 7 回目の選定
-  751: text: 知的財産が優れた世界の革新的企業 トップ 100 社として、通算 13 回目の受賞
-  752: text: DX 銘柄 2025
-  753: text: デジタル基盤「 Serendie ® 」を活用した DX への取組みが評価され選定
-  754: text: 健康経営優良法人 2025 （大規模法人部門）
-  755: text: 心身ともに健康でいきいきと働ける 職場環境に向けた活動が評価され認定
-  756: text: Climate Water
-  757: text: aCDP
-  758: text: AList
-  759: text: 2024
-  760: text: DX銘柄2025
-  761: text: Digital Transformation
-  762: text: Top100
-  763: text: Global
-  764: text: Innovator
-  765: text: 2025
-  766: text: Clarivate
-  767: text: 2025
-  768: text: 健康释當優良法人
-  769: text: KENkOlnvestmentforHealth
-  770: text: 大规楼法人路门
- 771: section_header: 25 年 5 月現在、以下のインデックス等の構成銘柄に選定
- 772: list with name=list
-  773: list_item:  FTSE Blossom Japan Index
-  774: list_item:  FTSE Blossom Japan Sector Relative Index
-  775: list_item:  S&P/JPX カーボン・エフィシエント指数
- 776: text: *2 TNFD
- 777: text: 提言に沿った開示を行う意思を表明した企業・組織
- 778: text: )
- 779: footnote: *4 CDP: Carbon Disclosure Project( 企業や都市の環境への取組みを調査・評価・開示する国際 NGO)
- 780: page_footer: Appendix
- 781: page_footer: 22
- 782: text: 本資料に記載されている三菱電機グループの業績見通し等の将来に関する記述は、 当社が現時点において合理的と判断する一定の前提に基づいており、実際の業績等は見通しと大きく異なることがあり得ます。 なお、業
- 783: list with name=list
-  784: list_item: ① 世界の経済状況・社会情勢及び規制や税制等各種法規の動向
-  785: list_item: ② 為替相場
-  786: list_item: ③ 株式相場
-  787: list_item: ④ 資金調達環境
-  788: list_item: ⑤ 製品需給状況及び部材調達環境
-  789: list_item: ⑥ 重要な特許の成立及び実施許諾並びに特許関連の係争等
-  790: list_item: ➆ 訴訟その他の法的手続き
-  791: list_item: ⑧ 製品やサービスの品質・欠陥や瑕疵等に関する問題
-  792: list_item: ⑨ 地球環境（気候関連対応等）等に関連する法規・規制や問題
-  793: list_item: ⑩ 人権に関連する法規・規制や問題
-  794: list_item: ⑪ 急激な技術革新や、新技術を用いた製品の開発、製造及び市場投入時期
-  795: list_item: ⑫ 事業構造改革
-  796: list_item: ⑬ 情報セキュリティ
-  797: list_item: ⑭ 地震・津波・台風・火山噴火・火災等の大規模災害
-  798: list_item: ⑮ 地政学的リスクの高まり、戦争・紛争・テロ等による社会・経済・政治的混乱
-  799: list_item: ⑯ 感染症の流行等による社会・経済・政治的混乱
-  800: list_item: ⑰ 当社役員・大株主・関係会社等に関する重要事項
- 801: picture
+ 570: section_header: 生産計画
+ 571: text: 指示に応じた柔軟な計画策定
+ 572: text: 機器制御
+ 573: text: 自律的な機器制御
+ 574: text: 保全
+ 575: text: 想定外な事象への解決策指示
+ 576: text: 複数の AI エージェント が協調し、バーチャル生産管理者を実現
+ 577: text: 社内工場での実証試験を行ったのち社外へサービス展開予定
+ 578: page_footer: 2. デジタルによるイノベーティブカンパニーへの変革
+ 579: page_footer: 16
+ 580: section_header: デジタル基盤の強化｜グローバル展開と協業
+ 581: text: DX ・オープンイノベーション拠点をグローバルに展開。 最新技術の獲得と、新たなサービスの創出を推進
+ 582: section_header: Serendie Street のグローバル展開
+ 583: picture
+  584: caption: Serendie Street Yokohama
+  585: text: 戦略拠点
+  586: text: 最新技術の獲得
+  587: text: ボストン
+  588: text: 横浜
+  589: text: 大阪
+  590: text: (
+  591: text: 予定
+  592: text: )
+  593: text: Serendie Street Global
+  594: text: cerendie
+ 595: text: Serendie 関連活動実績 *1
+ 596: caption: Serendie Street Boston
+ 597: key_value_area with name=group
+  598: text: 65
+  599: text: 24
+  600: list with name=group
+   601: list_item: スクラムプロジェクト数 ：
+  602: list with name=group
+   603: list_item: 共創パートナー数 ：
+ 604: text: *1 25 年 5 月現在 *2 AWS: Amazon Web Services *3 Microsoft 社のソフトウエアエンジニアとソリューションをアジャイル開発する共創活動 *4 VC: Ve
+ 605: picture
+ 606: section_header: ハイパースケーラーとの協業
+ 607: section_header: 協業による AI 適用技術の強化
+ 608: list with name=list
+  609: list_item:  AWS *2 : 同社の生成 AI インフラを活用し AI 適用技術の研鑽とノウハウを蓄積
+  610: list_item:  Microsoft : 同社が提供する Co-Engineering *3 の仕組みを活用し 製造業向けアプリをアジャイル手法で短期間に開発
+ 611: section_header: スタートアップ・大学連携
+ 612: section_header: 最新技術の獲得と事業創出力を強化
+ 613: list with name=list
+  614: list_item:  VC *4 ファンド : 投資枠を１５０億円に拡大、ソーシング機能を強化
+  615: list_item:  拠点強化 ： ソーシング体制を強化し最新技術の獲得を加速
+  616: list_item:  インキュベーション : MIT *5 と連携し、新事業アイデアの創出と検証を実施
+ 617: page_footer: 2.
+ 618: page_footer: デジタルによるイノベーティブカンパニーへの変革
+ 619: page_footer: 17
+ 620: section_header: マインドセット変革
+ 621: text: 制度の整備、風土の醸成により、アジャイルなマインドセットを有する DX 人財を拡充
+ 622: section_header: DX 人財拡充に向けた取組み
+ 623: list with name=list
+  624: list_item:  育成： 職種やレベルに適した育成プログラムによるリスキリングやスキル向上
+  625: list_item: 育成機関 「 DX イノベーションアカデミー」 を設立 認定制度や、 7 つのスキルセットと学習コースを整備 -
+  626: list_item: 早稲田大学の教育プログラムの活用 DX 人財育成に関し互いに支援・協力 -
+  627: list_item:  獲得 ・ 配置： 採用強化に加え、 AI やデジタル領域における M ＆ A を活用した グローバルでの計画的な人財獲得・配置
+  628: list_item:  処遇 : 高度な技術や専門性を持つ人財に対する処遇を整備
+ 629: picture
+  630: text: 24
+  631: text: 年度
+  632: text: 10
+  633: text: ,
+  634: text: 000
+  635: text: 人
+  636: text: 20,000
+  637: text: 人
+  638: text: 30
+  639: text: 年度目標
+  640: text: 育成
+  641: text: 獲得
+  642: text: (
+  643: text: 採用・
+  644: text: M&A
+  645: text: 等
+  646: text: )
+  647: text: DX
+  648: text: 人財
+ 649: caption: *1 PoC: Proof of Concept
+ 650: picture
+ 651: section_header: カルチャーの醸成
+ 652: list with name=list
+  653: list_item:  アジャイル人財育成研修 : ビジネスモデル変革や社内の業務改革をスクラム で進めるためにアジャイル研修を実施
+  654: list_item:  生成 AI の試作開発環境整備 : 実践型 AI 人材育成のための開発環境を整備 開設 10 ヶ月の時点で 178 の PoC *1 が進行中
+ 655: picture
+  656: caption: アジャイル研修ワークショップ
+ 657: picture
+  658: caption: 生成 AI の PoC 成果報告会
+  659: text: C
+ 660: page_footer: 2.
+ 661: page_footer: デジタルによるイノベーティブカンパニーへの変革
+ 662: page_footer: 18
+ 663: section_header: Appendix
+ 664: picture
+ 665: page_footer: 19
+ 666: section_header: 業績見通し｜全社
+ 667: table
+  668: footnote: 1 当期純利益は「親会社株主に帰属する当期純利益」を表す 2 調整後株主資本配当率： 支払配当 ÷ 株主資本（除く、その他の包括利益（△損失）累計額）
+ 669: picture
+ 670: page_footer: Appendix
+ 671: page_footer: 20
+ 672: section_header: 業績見通し｜セグメント・サブセグメント別
+ 673: text: ( 単位：億円 )
+ 674: table
+ 675: text: ( 単位：億円 )
+ 676: table
+  677: footnote: 1 各セグメントの売上高には、セグメント間の内部売上高 ( 振替高 ) を含む 2 25 年度より、従来の「電力システム」を「エネルギーシステム」に、「ビジネス・プラットフォーム」を「デジタルイノベー
+  678: footnote: 3 ROIC( 三菱電機版 ROIC): 各事業部門での把握・改善が容易となるように、「資本」「負債」ではなく、資産項目（固定資産・運転資本等）に基づいて算出
+ 679: picture
+ 680: page_footer: Appendix
+ 681: page_footer: 21
+ 682: section_header: イニシアティブ、外部評価
+ 683: section_header: イニシアティブへの参画
+ 684: section_header: WESUPPORT
+ 685: picture
+  686: text: COMPA
+  687: text: CT
+ 688: picture
+  689: text: SCIENCE
+  690: text: BASED
+  691: text: TARGETS
+  692: text: DRIVING AMB/TIOUS CORPORATE CLIMATE ACTION
+ 693: picture
+  694: text: TCFD
+  695: text: TASKFORCE ON
+  696: text: CLIMATE-RELATED
+  697: text: FINANCIAL
+  698: text: DISCLOSURES
+ 699: picture
+  700: text: Weare
+  701: text: TNFD
+  702: text: Adopters
+ 703: picture
+  704: text: G
+  705: text: Lcaguc
+ 706: picture
+  707: text: CLean Ocean Materiall Alliance
+ 708: text: 国際的な規範に基づいたサステナビリティ活動を推進するため、 「国連グローバル・コンパクト（ UNGC ） 」に署名（ 18 年 5 月）
+ 709: text: SBT （ Science Based Targets ）イニシアティブ *1 1.5 度目標の認定取得（ 24 年 2 月）
+ 710: text: 「気候関連財務情報開示タスクフォース (TCFD) 」の 提言への賛同を表明 (19 年 5 月 )
+ 711: text: 「自然関連財務情報開示タスクフォース (TNFD) 」の 開示提言を採用する「 TNFD Adopter *2 」に登録 (24 年 9 月 )
+ 712: text: 経済産業省「 GX リーグ」へ参画（ 23 年 5 月）
+ 713: text: 海洋プラスチックごみ問題の解決に向けて、 「クリーン・オーシャン・マテリアル・アライアンス（ CLOMA ）」に加入（ 23 年 4 月）
+ 714: text: 健全なサプライチェーン構築に向け、 RBA *3 に加盟 (22 年 2 月 )
+ 715: text: *1
+ 716: text: 国連グローバル・コンパクト、世界自然保護基金
+ 717: text: CDP
+ 718: text: 、世界資源研究所
+ 719: text: *3 RBA: Responsible Business Alliance(
+ 720: picture
+ 721: text: (WWF)
+ 722: text: 、
+ 723: text: (WRI)
+ 724: text: による国際的イニシアティブ
+ 725: text: グローバルサプライチェーンにおいて社会的責任を推進する企業同盟
+ 726: section_header: 社外からの評価
+ 727: picture
+  728: text: Climate Water
+  729: text: aCDP
+  730: text: AList
+  731: text: 2024
+ 732: picture
+  733: text: DX銘柄2025
+  734: text: Digital Transformation
+ 735: picture
+  736: text: Top100
+  737: text: Global
+  738: text: Innovator
+  739: text: 2025
+  740: text: Clarivate
+ 741: picture
+  742: text: 2025
+  743: text: 健康释當優良法人
+  744: text: KENkOlnvestmentforHealth
+  745: text: 大规楼法人路门
+ 746: key_value_area with name=group
+  747: text: CDP *4
+  748: text: Clarivate Top 100 グローバル・イノベーター 2025
+  749: text: 「気候変動」「水セキュリティ」の 2 分野において 最高評価の「 A リスト企業」に、通算 7 回目の選定
+  750: text: 知的財産が優れた世界の革新的企業 トップ 100 社として、通算 13 回目の受賞
+  751: text: DX 銘柄 2025
+  752: text: デジタル基盤「 Serendie ® 」を活用した DX への取組みが評価され選定
+  753: text: 健康経営優良法人 2025 （大規模法人部門）
+  754: text: 心身ともに健康でいきいきと働ける 職場環境に向けた活動が評価され認定
+  755: text: Climate Water
+  756: text: aCDP
+  757: text: AList
+  758: text: 2024
+  759: text: DX銘柄2025
+  760: text: Digital Transformation
+  761: text: Top100
+  762: text: Global
+  763: text: Innovator
+  764: text: 2025
+  765: text: Clarivate
+  766: text: 2025
+  767: text: 健康释當優良法人
+  768: text: KENkOlnvestmentforHealth
+  769: text: 大规楼法人路门
+ 770: section_header: 25 年 5 月現在、以下のインデックス等の構成銘柄に選定
+ 771: list with name=list
+  772: list_item:  FTSE Blossom Japan Index
+  773: list_item:  FTSE Blossom Japan Sector Relative Index
+  774: list_item:  S&P/JPX カーボン・エフィシエント指数
+ 775: text: *2 TNFD
+ 776: text: 提言に沿った開示を行う意思を表明した企業・組織
+ 777: text: )
+ 778: footnote: *4 CDP: Carbon Disclosure Project( 企業や都市の環境への取組みを調査・評価・開示する国際 NGO)
+ 779: page_footer: Appendix
+ 780: page_footer: 22
+ 781: text: 本資料に記載されている三菱電機グループの業績見通し等の将来に関する記述は、 当社が現時点において合理的と判断する一定の前提に基づいており、実際の業績等は見通しと大きく異なることがあり得ます。 なお、業
+ 782: list with name=list
+  783: list_item: ① 世界の経済状況・社会情勢及び規制や税制等各種法規の動向
+  784: list_item: ② 為替相場
+  785: list_item: ③ 株式相場
+  786: list_item: ④ 資金調達環境
+  787: list_item: ⑤ 製品需給状況及び部材調達環境
+  788: list_item: ⑥ 重要な特許の成立及び実施許諾並びに特許関連の係争等
+  789: list_item: ➆ 訴訟その他の法的手続き
+  790: list_item: ⑧ 製品やサービスの品質・欠陥や瑕疵等に関する問題
+  791: list_item: ⑨ 地球環境（気候関連対応等）等に関連する法規・規制や問題
+  792: list_item: ⑩ 人権に関連する法規・規制や問題
+  793: list_item: ⑪ 急激な技術革新や、新技術を用いた製品の開発、製造及び市場投入時期
+  794: list_item: ⑫ 事業構造改革
+  795: list_item: ⑬ 情報セキュリティ
+  796: list_item: ⑭ 地震・津波・台風・火山噴火・火災等の大規模災害
+  797: list_item: ⑮ 地政学的リスクの高まり、戦争・紛争・テロ等による社会・経済・政治的混乱
+  798: list_item: ⑯ 感染症の流行等による社会・経済・政治的混乱
+  799: list_item: ⑰ 当社役員・大株主・関係会社等に関する重要事項
+ 800: picture

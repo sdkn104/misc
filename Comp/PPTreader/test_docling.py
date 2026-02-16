@@ -71,7 +71,12 @@ def main():
         _log.debug(res.document._export_to_indented_text(max_text_len=16))
         # Export Docling document to Markdown:
         with (out_path / f"{res.input.file}.docling.md").open("w", encoding="utf-8") as fp:
-            fp.write(res.document.export_to_markdown().encode("utf-8", errors="replace").decode("utf-8"))
+            markdown_pages = []
+            for i, page in enumerate(res.document.pages):
+                page_md = page.export_to_markdown().encode("utf-8", errors="replace").decode("utf-8")
+                markdown_pages.append(f"\n\n---\n\n/* Page {i+1} */\n\n{page_md}")
+            final_markdown = "".join(markdown_pages)
+            fp.write(final_markdown)
 
         with (out_path / f"{res.input.file}.docling.json").open("w", encoding="utf-8") as fp:
             fp.write(json.dumps(res.document.export_to_dict()))
