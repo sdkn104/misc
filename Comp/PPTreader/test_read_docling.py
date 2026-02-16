@@ -10,7 +10,7 @@ from docling.document_converter import (
     PdfFormatOption,
 )
 #from docling.pipeline.simple_pipeline import SimplePipeline
-#from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
+from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
 
 #_log = logging.getLogger(__name__)
 
@@ -29,7 +29,8 @@ def sequential_replace(text, target):
 def read_document_docling(input_file: Path) -> str:
     pipeline_options = PdfPipelineOptions()
     pipeline_options.do_ocr = False
-
+    pipeline_options.ocr_options = None
+    
     doc_converter = DocumentConverter(
         #allowed_formats=[
         #    InputFormat.PDF,
@@ -41,20 +42,40 @@ def read_document_docling(input_file: Path) -> str:
                 #PdfPipelineOptions(
                 #    do_ocr=False,
                 #),
-                #pipeline_cls=StandardPdfPipeline, 
+                pipeline_cls=StandardPdfPipeline, 
                 #backend=PyPdfiumDocumentBackend,
             ),
         },
     )
     doc_converter = DocumentConverter()
     conv_result = doc_converter.convert(input_file)
+
     final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n").encode("utf-8", errors="replace").decode("utf-8")
+    final_markdown = sequential_replace(final_markdown, "\n----------\n")
+    
+    #markdown_lines = []
+
+    #current_page = None
+    # for element in conv_result.document.elements:
+    #     if not element.provenance:
+    #         continue
+    #     page_no = element.provenance[0].page_no
+    #     if page_no != current_page:
+    #         markdown_lines.append(f"\n\n---\n\n# Page {page_no}\n\n")
+    #         current_page = page_no
+    #     markdown_lines.append(element.text.strip() + "\n")
+
+    # for i, page in enumerate(conv_result.document.pages):
+    #     page_md = page.text.strip() + "\n"
+    #     markdown_lines.append(f"\n\n---\n\n## Page {i+1}\n\n{page_md}")
+
+    # final_markdown = ''.join(markdown_lines)
 
     #out_path = Path(".")
     #with (out_path / f"{conv_result.input.file}.docling.tree").open("w", encoding="utf-8") as fp:
     #    fp.write(conv_result.document.export_to_element_tree())
 
-    return sequential_replace(final_markdown, "\n----------\n")
+    return final_markdown
 
 if __name__ == "__main__":
     import sys
