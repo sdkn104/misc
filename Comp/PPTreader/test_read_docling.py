@@ -2,7 +2,7 @@
 #import yaml
 import logging
 from pathlib import Path
-#from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
+from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.document_converter import (
@@ -11,6 +11,7 @@ from docling.document_converter import (
 )
 #from docling.pipeline.simple_pipeline import SimplePipeline
 from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
+from docling_core.types.doc.labels import DocItemLabel
 
 #_log = logging.getLogger(__name__)
 
@@ -29,8 +30,13 @@ def sequential_replace(text, target):
 def read_document_docling(input_file: Path) -> str:
     pipeline_options = PdfPipelineOptions()
     pipeline_options.do_ocr = False
-    pipeline_options.ocr_options = None
-    
+    pipeline_options.do_picture_classification = False
+    pipeline_options.do_picture_description = False
+    pipeline_options.do_table_structure = True
+    pipeline_options.do_chart_extraction = False
+    pipeline_options.do_code_enrichment = False
+    pipeline_options.do_formula_enrichment = False
+
     doc_converter = DocumentConverter(
         #allowed_formats=[
         #    InputFormat.PDF,
@@ -43,14 +49,35 @@ def read_document_docling(input_file: Path) -> str:
                 #    do_ocr=False,
                 #),
                 pipeline_cls=StandardPdfPipeline, 
-                #backend=PyPdfiumDocumentBackend,
+                backend=PyPdfiumDocumentBackend,
+                layout_batch_size=10,
+                table_batch_size=10,
             ),
         },
     )
     doc_converter = DocumentConverter()
     conv_result = doc_converter.convert(input_file)
-
-    final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n").encode("utf-8", errors="replace").decode("utf-8")
+    labels = [
+        DocItemLabel.SECTION_HEADER,
+        DocItemLabel.PAGE_FOOTER, 
+        DocItemLabel.PAGE_HEADER,
+        DocItemLabel.PICTURE,
+        DocItemLabel.TEXT,
+        DocItemLabel.TABLE,
+        DocItemLabel.PARAGRAPH,
+        DocItemLabel.LIST_ITEM,
+        DocItemLabel.TITLE,
+        DocItemLabel.REFERENCE,
+        DocItemLabel.CAPTION,
+        DocItemLabel.CODE,
+        DocItemLabel.DOCUMENT_INDEX,
+        DocItemLabel.FOOTNOTE,
+        DocItemLabel.KEY_VALUE_REGION,
+        DocItemLabel.CHART,
+        DocItemLabel.FORMULA,
+        DocItemLabel.FORM,
+    ]
+    final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n", labels=labels).encode("utf-8", errors="replace").decode("utf-8")
     final_markdown = sequential_replace(final_markdown, "\n----------\n")
     
     #markdown_lines = []
