@@ -1,3 +1,5 @@
+from datetime import datetime
+print("start", datetime.now())
 #import json
 #import yaml
 import logging
@@ -11,6 +13,8 @@ from docling.document_converter import (
 )
 #from docling.pipeline.simple_pipeline import SimplePipeline
 from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
+
+print("library loaded.", datetime.now())
 
 #_log = logging.getLogger(__name__)
 
@@ -27,6 +31,7 @@ def sequential_replace(text, target):
     return ''.join(result)
 
 def read_document_docling(input_file: Path) -> str:
+    print("reading ", input_file)
     pipeline_options = PdfPipelineOptions()
     pipeline_options.do_ocr = False
     pipeline_options.ocr_options = None
@@ -49,6 +54,7 @@ def read_document_docling(input_file: Path) -> str:
     )
     doc_converter = DocumentConverter()
     conv_result = doc_converter.convert(input_file)
+    print("converted.", datetime.now())
 
     final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n").encode("utf-8", errors="replace").decode("utf-8")
     final_markdown = sequential_replace(final_markdown, "\n----------\n")
@@ -74,6 +80,9 @@ def read_document_docling(input_file: Path) -> str:
     #out_path = Path(".")
     #with (out_path / f"{conv_result.input.file}.docling.tree").open("w", encoding="utf-8") as fp:
     #    fp.write(conv_result.document.export_to_element_tree())
+    
+    print("markdown created.", datetime.now())
+    print("markdown length", len(final_markdown))
 
     return final_markdown
 
