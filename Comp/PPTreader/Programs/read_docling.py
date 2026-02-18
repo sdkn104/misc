@@ -1,6 +1,7 @@
 from datetime import datetime
 print("start", datetime.now())
-import os
+#import os
+from io import BytesIO
 from typing import Union
 from typing import BinaryIO
 from pathlib import Path
@@ -29,7 +30,8 @@ def sequential_replace(text, target):
     result.append(parts[-1])
     return ''.join(result)
 
-def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
+#def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
+def read_document_docling(source) -> str:
     print("reading document...", type(source), datetime.now())
 
     pipeline_options = PdfPipelineOptions()
@@ -57,8 +59,11 @@ def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
         },
     )
     doc_converter = DocumentConverter()
-    conv_result = doc_converter.convert(source)
-
+    if isinstance(source, (str, Path)):
+        conv_result = doc_converter.convert(source)
+    else:
+        ds = DocumentStream(name="uploaded_file.pdf", stream=BytesIO(source.read()))
+        conv_result = doc_converter.convert(ds)
     labels = [
         DocItemLabel.SECTION_HEADER,
         DocItemLabel.PAGE_FOOTER, 
