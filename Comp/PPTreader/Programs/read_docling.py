@@ -1,5 +1,7 @@
 from datetime import datetime
-print("start", datetime.now())
+import time
+start = time.time()
+print("loading libraries...", datetime.now())
 #import os
 from io import BytesIO
 from typing import Union
@@ -14,7 +16,7 @@ from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
 from docling_core.types.doc.labels import DocItemLabel
 
-print("library loaded.", datetime.now())
+print("loaded libraries", datetime.now(), f"{time.time() - start:.1f}")
 
 #_log = logging.getLogger(__name__)
 
@@ -32,7 +34,7 @@ def sequential_replace(text, target):
 
 #def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
 def read_document_docling(source) -> str:
-    print("reading document...", type(source), datetime.now())
+    print("reading document...", type(source), datetime.now(), f"{time.time() - start:.1f}")
 
     pipeline_options = PdfPipelineOptions()
     pipeline_options.do_ocr = False
@@ -42,6 +44,11 @@ def read_document_docling(source) -> str:
     pipeline_options.do_chart_extraction = False
     pipeline_options.do_code_enrichment = False
     pipeline_options.do_formula_enrichment = False
+    
+    # パイプライン設定
+    pipeline_options = PdfPipelineOptions(
+        xenable_layout=False  # ← ここが 2.73 の正解
+    )
 
     doc_converter = DocumentConverter(
         #allowed_formats=[
@@ -58,7 +65,7 @@ def read_document_docling(source) -> str:
             ),
         },
     )
-    doc_converter = DocumentConverter()
+    #doc_converter = DocumentConverter()
     if isinstance(source, (str, Path)):
         conv_result = doc_converter.convert(source)
     else:
@@ -86,7 +93,7 @@ def read_document_docling(source) -> str:
     ]
     #final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n", labels=labels).encode("utf-8", errors="replace").decode("utf-8")
     final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n").encode("utf-8", errors="replace").decode("utf-8")
-    print("converted.", datetime.now())
+    print("converted.", datetime.now(), f"{time.time() - start:.1f}")
     final_markdown = sequential_replace(final_markdown, "\n----------\n")
     
     #markdown_lines = []
@@ -111,7 +118,7 @@ def read_document_docling(source) -> str:
     #with (out_path / f"{conv_result.input.file}.docling.tree").open("w", encoding="utf-8") as fp:
     #    fp.write(conv_result.document.export_to_element_tree())
     
-    print("markdown created.", datetime.now())
+    print("markdown created.", datetime.now(), f"{time.time() - start:.1f}")
     print("markdown length", len(final_markdown))
 
     return final_markdown

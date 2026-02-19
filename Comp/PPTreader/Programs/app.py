@@ -9,13 +9,13 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024  # 500MB max upload
 
 
-@app.route('/')
+@app.route('/read')
 def index():
     """HTML フロントエンドを返す"""
     return render_template('index.html')
 
 
-@app.route('/api/convert', methods=['POST'])
+@app.route('/read/api/convert', methods=['POST'])
 def convert_documents():
     """
     複数のドキュメントを受け取り、markdown に変換して返す
