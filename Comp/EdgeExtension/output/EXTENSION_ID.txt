@@ -1,0 +1,4 @@
+Extension Name: SampleExtension
+Extension ID: idmemnoedlilhlncjjihlpcpajpfdaem
+Version: 1.0.0
+Note: The actual extension ID will be generated when you sign the extension.
