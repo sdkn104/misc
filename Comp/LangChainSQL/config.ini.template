@@ -1,0 +1,10 @@
+[mysql]
+# MySQL connection settings
+host = 127.0.0.1
+port = 3306
+user = your_user
+password = your_password
+database = your_database
+charset = utf8mb4
+# optional table prefix (empty by default)
+table_prefix =

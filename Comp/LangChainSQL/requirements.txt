@@ -1,0 +1,5 @@
+pandas
+mysql-connector-python
+langchain
+openai
+SQLAlchemy
