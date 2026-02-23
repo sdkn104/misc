@@ -3,12 +3,34 @@ import os
 from lida import Manager, TextGenerationConfig, llm
 from pprint import pprint
 
+# === Azure OpenAI Service の設定よみこみ ===
 api_key=os.environ["AZURE_OPENAI_API_KEY"]
 azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"] # "https://xxxxx.openai.azure.com/openai/deployments/gpt-4.1-azure/chat/completions?api-version=2025-01-01-preview"
 deployment_name=os.environ["AZURE_OPENAI_DEPLOYMENT_NAME"]
 api_version=os.environ["AZURE_OPENAI_API_VERSION"]
 
-text_gen = llm(
+
+# === 日本語化 ===
+class CustomLLM:
+    def __init__(self, *args, **kwargs):
+        self._base = llm(*args, **kwargs)
+    def generate(self, *args, **kwargs):
+        print("=== custom generate start ===")
+        kwargs["messages"] = kwargs["messages"] + [
+            {
+                "role": "system",
+                #"content": "You must output everything in Japanese, except for code snippets and data labels which must be in original language.",    
+                "content": "You must output everything in Japanese.",    
+            }
+        ]
+        response = self._base.generate(*args, **kwargs)
+        print("=== custom generate end ===")
+        return response
+    def __getattr__(self, name):
+        return getattr(self._base, name)
+
+#text_gen = llm(
+text_gen = CustomLLM(
     provider="openai",
     api_type="azure",
     azure_endpoint=azure_endpoint,
@@ -18,6 +40,7 @@ text_gen = llm(
 lida = Manager(text_gen=text_gen)
 textgen_config = TextGenerationConfig(n=1, temperature=0.5, use_cache=True)
 
+# === サマリーとゴールの生成 ===
 summary = lida.summarize(
     "holidays_events.csv", 
     summary_method="default", 
@@ -28,13 +51,14 @@ persona = (
     "only generate goals about time-series trend analysis."
 )
 goals = lida.goals(summary, n=2, textgen_config=textgen_config,
-    persona=persona,
+    #persona=persona,
 )
-
 pprint(summary)
 pprint(goals)
 
-# generate charts (generate and execute visualization code)
+# === 可視化 ===
+import matplotlib
+matplotlib.rcParams['font.family'] = 'MS Gothic'  # または 'Yu Gothic'
 charts = lida.visualize(summary=summary, goal=goals[0], textgen_config=textgen_config, library="matplotlib")
 print(charts[0].code)
 
