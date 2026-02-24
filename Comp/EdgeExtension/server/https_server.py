@@ -9,9 +9,9 @@ from pathlib import Path
 
 # Configuration
 PORT = 8443
-CERT_FILE = r'D:\NoSync\misc\Comp\EdgeExtension\certificates\localhost.pfx'
+CERT_FILE = r'C:\Users\QP48568\NoSync\misc\Comp\EdgeExtension\certificates\localhost.pfx'
 CERT_PASSWORD = 'Extension@123'
-SERVE_DIR = r'D:\NoSync\misc\Comp\EdgeExtension\output'
+SERVE_DIR = r'C:\Users\QP48568\NoSync\misc\Comp\EdgeExtension\output'
 
 os.chdir(SERVE_DIR)
 
