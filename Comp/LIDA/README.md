@@ -23,6 +23,7 @@ text_gen = llm(
     azure_endpoint=azure_endpoint, # ex. "https://xxxxx.openai.azure.com/openai/deployments/gpt-4.1-azure/chat/completions?api-version=2025-01-01-preview"
     api_key=api_key,
     api_version=api_version,
+    model=deployment_name,
 )
 lida = Manager(text_gen=text_gen)
 ```
@@ -41,6 +42,7 @@ lida = Manager(text_gen=text_gen)
         azure_endpoint=azure_endpoint,
         api_key=api_key,
         api_version=api_version,
+        model=deployment_name,
     )
     ```
 ## Japanize Vizual
@@ -49,6 +51,26 @@ import matplotlib
 matplotlib.rcParams['font.family'] = 'MS Gothic'  # または 'Yu Gothic'
 ```
 
+## for gpt-5-mini
+
+- D:\NoSync\misc\Comp\LIDA\myenv\Lib\site-packages\llmx\generators\text\openai_textgen.py
+
+```
+        model = "gpt-5-mini" #config.model or self.model_name
+```
+```
+        oai_config = {
+            "model": model,
+            "temperature": config.temperature,
+            #"max_tokens": max_tokens,
+            "max_completion_tokens": max_tokens,
+            "top_p": config.top_p,
+            "frequency_penalty": config.frequency_penalty,
+            "presence_penalty": config.presence_penalty,
+            "n": config.n,
+            "messages": messages,
+        }
+```
 ## Access log
 - add code to myenv/Lib/site-packages/lida/web/app.py
     ```python

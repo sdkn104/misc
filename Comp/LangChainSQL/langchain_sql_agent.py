@@ -29,7 +29,9 @@ from langchain_community.utilities import SQLDatabase
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
 from langchain_openai import ChatOpenAI
 from langchain_community.agent_toolkits.sql.base import create_sql_agent
-
+import pandas as pd
+from langchain_core.prompts import ChatPromptTemplate
+from sqlalchemy import create_engine
 
 def load_ps1_env(ps1_path: str):
     """Parse simple $env:VAR = "value" lines in a PowerShell .ps1 and set os.environ entries.
@@ -100,23 +102,57 @@ def main():
             verbose=True,        # 実行ログを出す
             agent_type="tool-calling",  # 最新推奨 agent_type
         )
+        agent2 = create_sql_agent(
+            llm=llm,
+            toolkit=toolkit,
+            verbose=True,        # 実行ログを出す
+            agent_type="tool-calling",  # 最新推奨 agent_type
+            return_intermediate_steps=True
+        )
 
         # Example: ask for tables in the database
-        question = "List the tables in the database and give a short description of each."
+        question = "データベース中のテーブルをリストアップし、それぞれを短く説明をしてください。"
         print("Question:", question)
         answer = agent.invoke(question)
-        pprint("Answer:\n")
-        pprint(answer)
+        print("Answer:\n")
+        print(answer["output"])
 
         question = "trainの年毎のsalesの平均値を教えてください。"
         print("Question:", question)
         answer = agent.invoke(question)
-        pprint("Answer:\n")
-        pprint(answer)
+        print("Answer:\n")
+        print(answer["output"])
+
+        question = "trainの年毎のsalesの平均値をJSON形式の表で返してください。"
+        print("Question:", question)
+        answer = agent2.invoke(question)
+        print(answer)
+        print("Answer with intermediate steps:\n")
+        for step in answer["intermediate_steps"]:
+            print(step)
+        intermediate_steps = answer["intermediate_steps"]
+        sql_query = None
+        for step in intermediate_steps:
+            action = step[0]
+            if action.tool == "sql_db_query":
+                sql_query = action.tool_input
+
+        print("生成SQL:")
+        print(sql_query)
+
+
+        data = answer["output"]
+        df = pd.DataFrame(data)
+        print(df)
+
+        import matplotlib.pyplot as plt
+
+        df.plot(x="month", y="sales", kind="bar")
+        plt.show()
+
 
     except Exception as e:
         print("Failed to create LangChain agent or run query:", e)
-        print("Ensure `langchain`, `openai`, and `SQLAlchemy` are installed and your env/config are set.")
 
 if __name__ == "__main__":
     main()

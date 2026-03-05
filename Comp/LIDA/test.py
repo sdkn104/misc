@@ -14,9 +14,14 @@ print(api_key, azure_endpoint, deployment_name, api_version)
 # === 日本語化 ===
 class CustomLLM:
     def __init__(self, *args, **kwargs):
+        print("=== custom LLM init ===")
+        pprint(args)
+        pprint(kwargs)
         self._base = llm(*args, **kwargs)
     def generate(self, *args, **kwargs):
         print("=== custom generate start ===")
+        pprint(args)
+        pprint(kwargs)
         kwargs["messages"] = kwargs["messages"] + [
             {
                 "role": "system",
@@ -37,15 +42,10 @@ text_gen = CustomLLM(
     azure_endpoint=azure_endpoint,
     api_key=api_key,
     api_version=api_version,
+    model=deployment_name,
 )
 lida = Manager(text_gen=text_gen)
 textgen_config = TextGenerationConfig(n=1, temperature=0.5, use_cache=True)
-#textgen_config = TextGenerationConfig()
-#textgen_config.n = 2
-#textgen_config.provider = None
-#textgen_config = vars(textgen_config)
-print("textgen config:", textgen_config)
-
 
 # === サマリーとゴールの生成 ===
 summary = lida.summarize(
