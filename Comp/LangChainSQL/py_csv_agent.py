@@ -70,8 +70,8 @@ def main():
             continue
 
         # Visual
-        vega_lite = results[0]["refined_goal"]["vega_lite"]
-        derived_table = results[0]["content"]
+        vega_lite = results[0].get("refined_goal",{}).get("vega_lite")
+        derived_table = results[0].get("content")
         if not isinstance(vega_lite, dict) or not isinstance(derived_table, dict):
             print("===== error in result from derive_data")
             continue
