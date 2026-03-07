@@ -9,6 +9,7 @@ azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"] # "https://xxxxx.openai.azure
 deployment_name=os.environ["AZURE_OPENAI_DEPLOYMENT_NAME"]
 api_version=os.environ["AZURE_OPENAI_API_VERSION"]
 
+print(api_key, azure_endpoint, deployment_name, api_version)
 
 # === 日本語化 ===
 class CustomLLM:
@@ -44,7 +45,7 @@ text_gen = CustomLLM(
     model=deployment_name,
 )
 lida = Manager(text_gen=text_gen)
-textgen_config = TextGenerationConfig(n=1, temperature=1, use_cache=False)
+textgen_config = TextGenerationConfig(n=1, temperature=0.5, use_cache=True)
 
 # === サマリーとゴールの生成 ===
 summary = lida.summarize(

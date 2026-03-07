@@ -92,3 +92,20 @@ matplotlib.rcParams['font.family'] = 'MS Gothic'  # または 'Yu Gothic'
         custom_logger.info(f"{request.client.host}:{request.client.port} {request.method} {request.url.path} status={response.status_code} time={process_time:.3f}s")
         return response
     ```
+
+llmx - datamodel.py
+@dataclass
+class TextGenerationConfig:
+    n: int = 1
+    temperature: float = 0.1
+    #max_tokens: Union[int, None] = None
+    max_completion_tokens: Union[int, None] = None
+    top_p: float = 1.0
+
+llmx generator text/openai_textgen.py
+oai_config = {
+            "model": model,
+            "temperature": config.temperature,
+            #"max_tokens": max_tokens,
+            "max_completion_tokens": max_tokens,
+            "top_p": config.top_p,

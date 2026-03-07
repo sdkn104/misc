@@ -14,13 +14,14 @@ print(subscription_key)
 stream = False
 
 url = endpoint + "/openai/v1/chat/completions"
+#url = endpoint
 print(url)
 headers = {
     "Content-Type": "application/json",
     "Authorization": f"Bearer {subscription_key}",
 }
 data = {
-    "model": "gpt-4.1-azure",
+    "model": deployment,
     "messages": [
         {"role": "system", "content": "あなたは親切なアシスタントです。"},
         {"role": "user", "content": "世界一高い山の名前を教えてください。単語１つで答えてください。"},
