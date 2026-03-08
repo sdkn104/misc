@@ -34,7 +34,9 @@ Python Web App (Flask / FastAPI)
 Programs
 Windows機能の有効・無効
 ↓
-Web Server (IIS)
+IISにチェックを入れる
+以下の「追加する機能」にチェックを入れる
+OKを押す
 ```
 
 **Server Manager** for Windows server
@@ -44,6 +46,7 @@ Programs
 Add Roles and Features
 ↓
 Web Server (IIS)
+・・・
 ```
 
 追加する機能
@@ -63,9 +66,12 @@ Web Server
 
 # 2 ARRをインストール
 
+https://learn.microsoft.com/ja-jp/iis/extensions/configuring-application-request-routing-arr/creating-a-forward-proxy-using-application-request-routing
+
 公式モジュール
 
 Application Request Routing
+https://www.microsoft.com/en-us/download/details.aspx?id=47333
 
 インストールすると
 
@@ -75,6 +81,11 @@ ARR
 ```
 
 がIISに追加されます。
+
+URL Rewriteを別途インストールする必要ある場合あり。
+以下からインストール。
+https://learn.microsoft.com/ja-jp/iis/extensions/url-rewrite-module/using-the-url-rewrite-module
+https://prod-iis-landing.azurewebsites.net/downloads/microsoft/url-rewrite
 
 ---
 
@@ -89,7 +100,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    user = request.headers.get("X-Forwarded-User")
+    user = request.headers.get("X-Auth-User")
     return f"Hello {user}"
 
 if __name__ == "__main__":
@@ -102,7 +113,7 @@ if __name__ == "__main__":
 python app.py
 ```
 
-アクセス
+アクセステスト
 
 ```
 http://localhost:8000
@@ -119,12 +130,13 @@ Sites
 ↓
 Add Website
 ```
+```
 
 例
 
 ```
 Site name : python_app
-Port : 80
+Port : 8080
 Physical path : C:\inetpub\python_app
 ```
 
@@ -138,6 +150,8 @@ IIS Manager
 
 ```
 Site
+↓
+python_app
 ↓
 Authentication
 ```
@@ -177,9 +191,13 @@ Enable proxy ✔
 
 # 7 URL Rewrite設定
 
-サイトの
+IIS Manager
 
 ```
+Site
+↓
+python_app
+↓
 URL Rewrite
 ↓
 Add Rule
@@ -187,11 +205,25 @@ Add Rule
 Reverse Proxy
 ```
 
-設定
+「URLの書き換え」
 
 ```
 http://localhost:8000
 ```
+
+「サーバ変数」
+
+```
+変数名：HTTP_X_AUTH_USER
+値：{REMOTE_USER}
+```
+
+site -> python_app -> URL Rewrite　-> View Server Variables -> Add
+
+```
+HTTP_X_AUTH_USER
+```
+
 
 すると自動でルールが生成されます。
 
@@ -206,7 +238,13 @@ http://localhost:8000
 
 ---
 
-# 8 WindowsユーザーをPythonに渡す
+# 8 テスト
+
+以下を開くとユーザ名が表示されます。
+
+http://localhost:8000
+
+---
 
 IISはユーザー名を
 
@@ -238,7 +276,7 @@ X-Forwarded-User: DOMAIN\username
 
 ---
 
-# 9 Pythonでユーザー取得
+Pythonでユーザー取得
 
 ```python
 user = request.headers.get("X-Forwarded-User")
@@ -316,21 +354,13 @@ Waitressは
 
 # よくあるトラブル
 
-### Chromeで自動ログインしない
+### アクセス権でエラー
 
-ブラウザ設定
+logsフォルダに編集権を追加
+　　IIS IUSERS など
 
-```
-AuthServerAllowlist
-```
+### useKernelMode = false設定がいるか。
 
-例
-
-```
-*.company.local
-```
-
----
 
 ### localhostで認証されない
 
