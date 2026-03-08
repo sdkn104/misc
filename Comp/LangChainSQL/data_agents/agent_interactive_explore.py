@@ -149,12 +149,13 @@ class InteractiveExploreAgent(object):
 
         accumulated_content = ""
         
-        print("@@@ response of InteractiveExploreAgent.run:")
+        print("generating goals...")
         for part in stream:
             if hasattr(part, 'choices') and len(part.choices) > 0:
                 delta = part.choices[0].delta
                 if hasattr(delta, 'content') and delta.content:
                     accumulated_content += delta.content
-                    print(part.choices[0].delta.content, end='')
+                    print(".", end="", flush=True)
                     # Stream each character for real-time display as JSON
                     yield delta.content
+        print("")

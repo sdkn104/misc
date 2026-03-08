@@ -4,7 +4,7 @@
 import os
 import pandas as pd
 from pathlib import Path
-from data_agents.agent_routes import derive_data, get_recommendation_questions
+from data_agents.agent_routes import derive_data, get_recommendation_questions, request_code_expl
 import logging
 from data_agents.visual_engine import show_vega_lite_chart
 from pprint import pprint, pformat
@@ -37,10 +37,17 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python py_csv_agent.py <csv_file_path>")
         return
-    csv_file = sys.argv[1]
+    input_file = sys.argv[1]
 
-    # read CSV
-    table = read_csv(csv_file)
+    # read data file
+    ext = Path(input_file).suffix.lower()
+    if ext == '.csv':
+        table = read_csv(input_file)
+    elif ext == '.json':
+        table = read_json(input_file)
+    else:
+        print(f"Unsupported file extension: {ext}")
+        return
     print(f"Loaded table {table['name']} with {len(table['rows'])} rows")
 
     # Model
@@ -77,7 +84,12 @@ def main():
             continue
 
         vega_lite["data"] = {"values": derived_table["rows"]}
-        show_vega_lite_chart(vega_lite, goal["goal"] + '<br>' + goal["instruction"])
+        #show_vega_lite_chart(vega_lite, "", goal["goal"] + '<br>' + goal["instruction"])
+
+        # code explanation
+        result = request_code_expl(input_tables=[table], model_config=model_config, code=results[0]["code"])
+        code_expl = pformat(result["concepts"], width=120) + "\n\n" + result["code"]
+        show_vega_lite_chart(vega_lite, code_expl=code_expl, message=goal["goal"] + '<br>' + goal["instruction"])
 
 
 def read_csv(file_path, name=None, attached_metadata=""):
@@ -89,6 +101,14 @@ def read_csv(file_path, name=None, attached_metadata=""):
         "rows": df.to_dict(orient="records")
     }
 
+def read_json(file_path, name=None, attached_metadata=""):
+    df = pd.read_json(file_path)
+    tname = Path(file_path).stem if name is None else name
+    return {
+        "attached_metadata": attached_metadata,
+        "name": tname,
+        "rows": df.to_dict(orient="records")
+    }
 
 if __name__ == "__main__":
     main()

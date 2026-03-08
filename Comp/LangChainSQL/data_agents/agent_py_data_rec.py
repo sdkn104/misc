@@ -246,8 +246,6 @@ class PythonDataRecAgent(object):
             json_blocks = extract_json_objects(choice.message.content + "\n")
             if len(json_blocks) > 0:
                 refined_goal = json_blocks[0]
-                print("@@@ Recommendation json block:")
-                pprint(json_blocks)
             else:
                 refined_goal = { 'mode': "", 'recommendation': "", 'input_tables': [], 'output_fields': [],  'vega_lite': "" }
 

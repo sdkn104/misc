@@ -23,6 +23,7 @@ from pprint import pprint, pformat
 
 from data_agents.agent_py_data_rec import PythonDataRecAgent
 from data_agents.agent_interactive_explore import InteractiveExploreAgent
+from data_agents.agent_code_explanation import CodeExplanationAgent
 
 #from data_agents.agent_report_gen import ReportGenAgent
 from data_agents.client_utils import Client
@@ -46,6 +47,7 @@ def get_client(model_config):
 
 def derive_data(input_tables, model_config, instruction, prev_messages=[], max_repair_attempts=1, agent_coding_rules=""):
 
+    print("=== derive_data start")
     logger.info("# request data: ")
 
     client = get_client(model_config)
@@ -61,15 +63,14 @@ def derive_data(input_tables, model_config, instruction, prev_messages=[], max_r
 
     agent = PythonDataRecAgent(client=client, exec_python_in_subprocess=False, agent_coding_rules=agent_coding_rules)
 
-    print("=== run start")
     print(instruction, prev_messages)
     results = agent.run(input_tables, instruction, n=1, prev_messages=prev_messages)
     custom_logger.info("@@@ result of agent.run():")
     custom_logger.info(pformat(results, width=120))
-    print("=== run results")
+    print("=== derive_data run results")
     print(results[0]["status"])
     #print(results[0]["code"])
-    print(results[0]["refined_goal"])
+    pprint(results[0]["refined_goal"], width=120)
 
     repair_attempts = 0
     while results[0]['status'] == 'error' and repair_attempts < max_repair_attempts: # try up to n times
@@ -77,10 +78,10 @@ def derive_data(input_tables, model_config, instruction, prev_messages=[], max_r
         new_instruction = f"We run into the following problem executing the code, please fix it:\n\n{error_message}\n\nPlease think step by step, reflect why the error happens and fix the code so that no more errors would occur."
 
         prev_dialog = results[0]['dialog']
-        print("=== followup start")
+        print("=== derive_data followup start")
         print(new_instruction)
         results = agent.followup(input_tables, prev_dialog, [], new_instruction, n=1)
-        print("=== followup results")
+        print("=== derive_data followup results")
         print(results[0]["status"])
         #print(results[0]["code"])
         print(results[0]["refined_goal"])
@@ -109,18 +110,39 @@ def get_recommendation_questions(input_tables, model_config, prev_messages=[], m
             }
             yield 'error: ' + json.dumps(error_data) + '\n'
 
-    print("@@ get_recommendation_questions")
+    print("=== get_recommendation_questions start")
     response = generate()
     a = [res for res in response]
     b = "".join(a)
     results = re.split(r'\r?\ndata: ', re.sub(r"^data: ", "", b))
     results = [json.loads(r) for r in results]
-    #print("\n=== run results")
+    print("\n=== get_recommendation_questions results")
     #pprint(results)
     return results
 
 
-import pandas as pd
+def request_code_expl(input_tables, model_config, code):
+    logger.info("# request data: ")
+    print("=== request_code_expl start")
+    client = get_client(model_config)
+
+    # each table is a dict with {"name": xxx, "rows": [...]}
+
+    code_expl_agent = CodeExplanationAgent(client=client)
+    candidates = code_expl_agent.run(input_tables, code)
+    
+    # Return the first candidate's content as JSON
+    if candidates and len(candidates) > 0:
+        result = candidates[0]
+    else:
+        result = {'error': 'No explanation generated'}
+    print("=== request_code_expl results")
+    print(result["status"])
+    print(result["code"])
+    print(result["concepts"])
+    return result
+    
+
 
 def read_csv(file_path, name="average-price-data", attached_metadata=""):
     df = pd.read_csv(file_path)

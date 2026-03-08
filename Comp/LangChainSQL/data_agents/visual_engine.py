@@ -4,7 +4,7 @@ import tempfile
 import webbrowser
 
 
-def show_vega_lite_chart(vega_lite_dict, message=""):
+def show_vega_lite_chart(vega_lite_dict, code_expl=None, message=""):
 		"""
 		Vega-Lite形式(dict)を受け取り、ブラウザでグラフを表示する。
 		編集用のテキストエリアを画面に追加し、編集・再描画できるようにする。
@@ -23,7 +23,10 @@ def show_vega_lite_chart(vega_lite_dict, message=""):
 		</head>
 		<body>
 			<div>{message}</div>
-			<textarea id="spec-editor" style="width: 500px; height:30px">{json.dumps(vega_lite_dict, indent=2, ensure_ascii=False)}</textarea><br>
+			<div class="container" style="display: flex;">
+				<textarea id="spec-editor" style="width: 500px; height:30px; display: inline-block;">{json.dumps(vega_lite_dict, indent=2, ensure_ascii=False)}</textarea><br>
+				<textarea id="code_expl" style="width: 300px; height:30px; display: inline-block;">{code_expl}</textarea><br>
+			</div>
 			<button onclick="updateChart()">グラフを再描画</button>
 			<div id="vis"></div>
 			<script type="text/javascript">

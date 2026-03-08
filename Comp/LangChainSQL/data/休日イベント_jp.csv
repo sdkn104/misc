@@ -1,0 +1,351 @@
+日付,タイプ,地域,地域名,説明,移転
+2012-03-02,Holiday,県,Manta,Fundacion de Manta,False
+2012-04-01,Holiday,地方,Cotopaxi,Provincializacion de Cotopaxi,False
+2012-04-12,Holiday,県,Cuenca,Fundacion de Cuenca,False
+2012-04-14,Holiday,県,Libertad,Cantonizacion de Libertad,False
+2012-04-21,Holiday,県,Riobamba,Cantonizacion de Riobamba,False
+2012-05-12,Holiday,県,Puyo,Cantonizacion del Puyo,False
+2012-06-23,Holiday,県,Guaranda,Cantonizacion de Guaranda,False
+2012-06-25,Holiday,地方,Imbabura,Provincializacion de Imbabura,False
+2012-06-25,Holiday,県,Latacunga,Cantonizacion de Latacunga,False
+2012-06-25,Holiday,県,Machala,Fundacion de Machala,False
+2012-07-03,Holiday,県,Santo Domingo,Fundacion de Santo Domingo,False
+2012-07-03,Holiday,県,El Carmen,Cantonizacion de El Carmen,False
+2012-07-23,Holiday,県,Cayambe,Cantonizacion de Cayambe,False
+2012-08-05,Holiday,県,Esmeraldas,Fundacion de Esmeraldas,False
+2012-08-10,Holiday,国,Ecuador,Primer Grito de Independencia,False
+2012-08-15,Holiday,県,Riobamba,Fundacion de Riobamba,False
+2012-08-24,Holiday,県,Ambato,Fundacion de Ambato,False
+2012-09-28,Holiday,県,Ibarra,Fundacion de Ibarra,False
+2012-10-07,Holiday,県,Quevedo,Cantonizacion de Quevedo,False
+2012-10-09,Holiday,国,Ecuador,Independencia de Guayaquil,True
+2012-10-12,Transfer,国,Ecuador,Traslado Independencia de Guayaquil,False
+2012-11-02,Holiday,国,Ecuador,Dia de Difuntos,False
+2012-11-03,Holiday,国,Ecuador,Independencia de Cuenca,False
+2012-11-06,Holiday,地方,Santo Domingo de los Tsachilas,Provincializacion de Santo Domingo,False
+2012-11-07,Holiday,地方,Santa Elena,Provincializacion Santa Elena,False
+2012-11-10,Holiday,県,Guaranda,Independencia de Guaranda,False
+2012-11-11,Holiday,県,Latacunga,Independencia de Latacunga,False
+2012-11-12,Holiday,県,Ambato,Independencia de Ambato,False
+2012-12-05,Additional,県,Quito,Fundacion de Quito-1,False
+2012-12-06,Holiday,県,Quito,Fundacion de Quito,False
+2012-12-08,Holiday,県,Loja,Fundacion de Loja,False
+2012-12-21,Additional,国,Ecuador,Navidad-4,False
+2012-12-22,Holiday,県,Salinas,Cantonizacion de Salinas,False
+2012-12-22,Additional,国,Ecuador,Navidad-3,False
+2012-12-23,Additional,国,Ecuador,Navidad-2,False
+2012-12-24,Bridge,国,Ecuador,Puente Navidad,False
+2012-12-24,Additional,国,Ecuador,Navidad-1,False
+2012-12-25,Holiday,国,Ecuador,Navidad,False
+2012-12-26,Additional,国,Ecuador,Navidad+1,False
+2012-12-31,Bridge,国,Ecuador,Puente Primer dia del ano,False
+2012-12-31,Additional,国,Ecuador,Primer dia del ano-1,False
+2013-01-01,Holiday,国,Ecuador,Primer dia del ano,False
+2013-01-05,Work Day,国,Ecuador,Recupero puente Navidad,False
+2013-01-12,Work Day,国,Ecuador,Recupero puente primer dia del ano,False
+2013-02-11,Holiday,国,Ecuador,Carnaval,False
+2013-02-12,Holiday,国,Ecuador,Carnaval,False
+2013-03-02,Holiday,県,Manta,Fundacion de Manta,False
+2013-04-01,Holiday,地方,Cotopaxi,Provincializacion de Cotopaxi,False
+2013-04-12,Holiday,県,Cuenca,Fundacion de Cuenca,False
+2013-04-14,Holiday,県,Libertad,Cantonizacion de Libertad,False
+2013-04-21,Holiday,県,Riobamba,Cantonizacion de Riobamba,False
+2013-04-29,Holiday,国,Ecuador,Viernes Santo,False
+2013-05-01,Holiday,国,Ecuador,Dia del Trabajo,False
+2013-05-11,Additional,国,Ecuador,Dia de la Madre-1,False
+2013-05-12,Holiday,県,Puyo,Cantonizacion del Puyo,False
+2013-05-12,Event,国,Ecuador,Dia de la Madre,False
+2013-05-24,Holiday,国,Ecuador,Batalla de Pichincha,False
+2013-06-23,Holiday,県,Guaranda,Cantonizacion de Guaranda,False
+2013-06-25,Holiday,地方,Imbabura,Provincializacion de Imbabura,False
+2013-06-25,Holiday,県,Machala,Fundacion de Machala,False
+2013-06-25,Holiday,県,Latacunga,Cantonizacion de Latacunga,False
+2013-07-03,Holiday,県,El Carmen,Cantonizacion de El Carmen,False
+2013-07-03,Holiday,県,Santo Domingo,Fundacion de Santo Domingo,False
+2013-07-23,Holiday,県,Cayambe,Cantonizacion de Cayambe,False
+2013-07-24,Additional,県,Guayaquil,Fundacion de Guayaquil-1,False
+2013-07-25,Holiday,県,Guayaquil,Fundacion de Guayaquil,False
+2013-08-05,Holiday,県,Esmeraldas,Fundacion de Esmeraldas,False
+2013-08-10,Holiday,国,Ecuador,Primer Grito de Independencia,False
+2013-08-15,Holiday,県,Riobamba,Fundacion de Riobamba,False
+2013-08-24,Holiday,県,Ambato,Fundacion de Ambato,False
+2013-09-28,Holiday,県,Ibarra,Fundacion de Ibarra,False
+2013-10-07,Holiday,県,Quevedo,Cantonizacion de Quevedo,False
+2013-10-09,Holiday,国,Ecuador,Independencia de Guayaquil,True
+2013-10-11,Transfer,国,Ecuador,Traslado Independencia de Guayaquil,False
+2013-11-02,Holiday,国,Ecuador,Dia de Difuntos,False
+2013-11-03,Holiday,国,Ecuador,Independencia de Cuenca,False
+2013-11-06,Holiday,地方,Santo Domingo de los Tsachilas,Provincializacion de Santo Domingo,False
+2013-11-07,Holiday,地方,Santa Elena,Provincializacion Santa Elena,False
+2013-11-10,Holiday,県,Guaranda,Independencia de Guaranda,False
+2013-11-11,Holiday,県,Latacunga,Independencia de Latacunga,False
+2013-11-12,Holiday,県,Ambato,Independencia de Ambato,False
+2013-12-05,Additional,県,Quito,Fundacion de Quito-1,False
+2013-12-06,Holiday,県,Quito,Fundacion de Quito,False
+2013-12-08,Holiday,県,Loja,Fundacion de Loja,False
+2013-12-21,Additional,国,Ecuador,Navidad-4,False
+2013-12-22,Additional,国,Ecuador,Navidad-3,False
+2013-12-22,Holiday,県,Salinas,Cantonizacion de Salinas,False
+2013-12-23,Additional,国,Ecuador,Navidad-2,False
+2013-12-24,Additional,国,Ecuador,Navidad-1,False
+2013-12-25,Holiday,国,Ecuador,Navidad,False
+2013-12-26,Additional,国,Ecuador,Navidad+1,False
+2013-12-31,Additional,国,Ecuador,Primer dia del ano-1,False
+2014-01-01,Holiday,国,Ecuador,Primer dia del ano,False
+2014-03-02,Holiday,県,Manta,Fundacion de Manta,False
+2014-03-03,Holiday,国,Ecuador,Carnaval,False
+2014-03-04,Holiday,国,Ecuador,Carnaval,False
+2014-04-01,Holiday,地方,Cotopaxi,Provincializacion de Cotopaxi,False
+2014-04-12,Holiday,県,Cuenca,Fundacion de Cuenca,False
+2014-04-14,Holiday,県,Libertad,Cantonizacion de Libertad,False
+2014-04-18,Holiday,国,Ecuador,Viernes Santo,False
+2014-04-21,Holiday,県,Riobamba,Cantonizacion de Riobamba,False
+2014-05-01,Holiday,国,Ecuador,Dia del Trabajo,False
+2014-05-10,Additional,国,Ecuador,Dia de la Madre-1,False
+2014-05-11,Event,国,Ecuador,Dia de la Madre,False
+2014-05-12,Holiday,県,Puyo,Cantonizacion del Puyo,False
+2014-05-24,Holiday,国,Ecuador,Batalla de Pichincha,False
+2014-06-12,Event,国,Ecuador,Inauguracion Mundial de futbol Brasil,False
+2014-06-15,Event,国,Ecuador,Mundial de futbol Brasil: Ecuador-Suiza,False
+2014-06-20,Event,国,Ecuador,Mundial de futbol Brasil: Ecuador-Honduras,False
+2014-06-23,Holiday,県,Guaranda,Cantonizacion de Guaranda,False
+2014-06-25,Holiday,県,Latacunga,Cantonizacion de Latacunga,False
+2014-06-25,Holiday,県,Machala,Fundacion de Machala,False
+2014-06-25,Holiday,地方,Imbabura,Provincializacion de Imbabura,False
+2014-06-25,Event,国,Ecuador,Mundial de futbol Brasil: Ecuador-Francia,False
+2014-06-28,Event,国,Ecuador,Mundial de futbol Brasil: Octavos de Final,False
+2014-06-29,Event,国,Ecuador,Mundial de futbol Brasil: Octavos de Final,False
+2014-06-30,Event,国,Ecuador,Mundial de futbol Brasil: Octavos de Final,False
+2014-07-01,Event,国,Ecuador,Mundial de futbol Brasil: Octavos de Final,False
+2014-07-03,Holiday,県,El Carmen,Cantonizacion de El Carmen,False
+2014-07-03,Holiday,県,Santo Domingo,Fundacion de Santo Domingo,False
+2014-07-04,Event,国,Ecuador,Mundial de futbol Brasil: Cuartos de Final,False
+2014-07-05,Event,国,Ecuador,Mundial de futbol Brasil: Cuartos de Final,False
+2014-07-08,Event,国,Ecuador,Mundial de futbol Brasil: Semifinales,False
+2014-07-09,Event,国,Ecuador,Mundial de futbol Brasil: Semifinales,False
+2014-07-12,Event,国,Ecuador,Mundial de futbol Brasil: Tercer y cuarto lugar,False
+2014-07-13,Event,国,Ecuador,Mundial de futbol Brasil: Final,False
+2014-07-23,Holiday,県,Cayambe,Cantonizacion de Cayambe,False
+2014-07-24,Additional,県,Guayaquil,Fundacion de Guayaquil-1,False
+2014-07-25,Holiday,県,Guayaquil,Fundacion de Guayaquil,False
+2014-08-05,Holiday,県,Esmeraldas,Fundacion de Esmeraldas,False
+2014-08-10,Holiday,国,Ecuador,Primer Grito de Independencia,False
+2014-08-15,Holiday,県,Riobamba,Fundacion de Riobamba,False
+2014-08-24,Holiday,県,Ambato,Fundacion de Ambato,False
+2014-09-28,Holiday,県,Ibarra,Fundacion de Ibarra,False
+2014-10-07,Holiday,県,Quevedo,Cantonizacion de Quevedo,False
+2014-10-09,Holiday,国,Ecuador,Independencia de Guayaquil,True
+2014-10-10,Transfer,国,Ecuador,Traslado Independencia de Guayaquil,False
+2014-11-02,Holiday,国,Ecuador,Dia de Difuntos,False
+2014-11-03,Holiday,国,Ecuador,Independencia de Cuenca,False
+2014-11-06,Holiday,地方,Santo Domingo de los Tsachilas,Provincializacion de Santo Domingo,False
+2014-11-07,Holiday,地方,Santa Elena,Provincializacion Santa Elena,False
+2014-11-10,Holiday,県,Guaranda,Independencia de Guaranda,False
+2014-11-11,Holiday,県,Latacunga,Independencia de Latacunga,False
+2014-11-12,Holiday,県,Ambato,Independencia de Ambato,False
+2014-11-28,Event,国,Ecuador,Black Friday,False
+2014-12-01,Event,国,Ecuador,Cyber Monday,False
+2014-12-05,Additional,県,Quito,Fundacion de Quito-1,False
+2014-12-06,Holiday,県,Quito,Fundacion de Quito,False
+2014-12-08,Holiday,県,Loja,Fundacion de Loja,False
+2014-12-20,Work Day,国,Ecuador,Recupero Puente Navidad,False
+2014-12-21,Additional,国,Ecuador,Navidad-4,False
+2014-12-22,Holiday,県,Salinas,Cantonizacion de Salinas,False
+2014-12-22,Additional,国,Ecuador,Navidad-3,False
+2014-12-23,Additional,国,Ecuador,Navidad-2,False
+2014-12-24,Additional,国,Ecuador,Navidad-1,False
+2014-12-25,Holiday,国,Ecuador,Navidad,False
+2014-12-26,Bridge,国,Ecuador,Puente Navidad,False
+2014-12-26,Additional,国,Ecuador,Navidad+1,False
+2014-12-31,Additional,国,Ecuador,Primer dia del ano-1,False
+2015-01-01,Holiday,国,Ecuador,Primer dia del ano,False
+2015-01-02,Bridge,国,Ecuador,Puente Primer dia del ano,False
+2015-01-10,Work Day,国,Ecuador,Recupero Puente Primer dia del ano,False
+2015-02-16,Holiday,国,Ecuador,Carnaval,False
+2015-02-17,Holiday,国,Ecuador,Carnaval,False
+2015-03-02,Holiday,県,Manta,Fundacion de Manta,False
+2015-04-01,Holiday,地方,Cotopaxi,Provincializacion de Cotopaxi,False
+2015-04-03,Holiday,国,Ecuador,Viernes Santo,False
+2015-04-12,Holiday,県,Cuenca,Fundacion de Cuenca,False
+2015-04-14,Holiday,県,Libertad,Cantonizacion de Libertad,False
+2015-04-21,Holiday,県,Riobamba,Cantonizacion de Riobamba,False
+2015-05-01,Holiday,国,Ecuador,Dia del Trabajo,False
+2015-05-09,Additional,国,Ecuador,Dia de la Madre-1,False
+2015-05-10,Event,国,Ecuador,Dia de la Madre,False
+2015-05-12,Holiday,県,Puyo,Cantonizacion del Puyo,False
+2015-05-24,Holiday,国,Ecuador,Batalla de Pichincha,False
+2015-06-23,Holiday,県,Guaranda,Cantonizacion de Guaranda,False
+2015-06-25,Holiday,県,Machala,Fundacion de Machala,False
+2015-06-25,Holiday,地方,Imbabura,Provincializacion de Imbabura,False
+2015-06-25,Holiday,県,Latacunga,Cantonizacion de Latacunga,False
+2015-07-03,Holiday,県,El Carmen,Cantonizacion de El Carmen,False
+2015-07-03,Holiday,県,Santo Domingo,Fundacion de Santo Domingo,False
+2015-07-23,Holiday,県,Cayambe,Cantonizacion de Cayambe,False
+2015-07-24,Holiday,県,Guayaquil,Fundacion de Guayaquil-1,False
+2015-07-25,Holiday,県,Guayaquil,Fundacion de Guayaquil,False
+2015-08-05,Holiday,県,Esmeraldas,Fundacion de Esmeraldas,False
+2015-08-10,Holiday,国,Ecuador,Primer Grito de Independencia,False
+2015-08-15,Holiday,県,Riobamba,Fundacion de Riobamba,False
+2015-08-24,Holiday,県,Ambato,Fundacion de Ambato,False
+2015-09-28,Holiday,県,Ibarra,Fundacion de Ibarra,False
+2015-10-07,Holiday,県,Quevedo,Cantonizacion de Quevedo,False
+2015-10-09,Holiday,国,Ecuador,Independencia de Guayaquil,False
+2015-11-02,Holiday,国,Ecuador,Dia de Difuntos,False
+2015-11-03,Holiday,国,Ecuador,Independencia de Cuenca,False
+2015-11-06,Holiday,地方,Santo Domingo de los Tsachilas,Provincializacion de Santo Domingo,False
+2015-11-07,Holiday,地方,Santa Elena,Provincializacion Santa Elena,False
+2015-11-10,Holiday,県,Guaranda,Independencia de Guaranda,False
+2015-11-11,Holiday,県,Latacunga,Independencia de Latacunga,False
+2015-11-12,Holiday,県,Ambato,Independencia de Ambato,False
+2015-11-27,Event,国,Ecuador,Black Friday,False
+2015-11-30,Event,国,Ecuador,Cyber Monday,False
+2015-12-05,Additional,県,Quito,Fundacion de Quito-1,False
+2015-12-06,Holiday,県,Quito,Fundacion de Quito,False
+2015-12-08,Holiday,県,Loja,Fundacion de Loja,False
+2015-12-21,Additional,国,Ecuador,Navidad-4,False
+2015-12-22,Additional,国,Ecuador,Navidad-3,False
+2015-12-22,Holiday,県,Salinas,Cantonizacion de Salinas,False
+2015-12-23,Additional,国,Ecuador,Navidad-2,False
+2015-12-24,Additional,国,Ecuador,Navidad-1,False
+2015-12-25,Holiday,国,Ecuador,Navidad,False
+2015-12-26,Additional,国,Ecuador,Navidad+1,False
+2015-12-31,Additional,国,Ecuador,Primer dia del ano-1,False
+2016-01-01,Holiday,国,Ecuador,Primer dia del ano,False
+2016-02-08,Holiday,国,Ecuador,Carnaval,False
+2016-02-09,Holiday,国,Ecuador,Carnaval,False
+2016-03-02,Holiday,県,Manta,Fundacion de Manta,False
+2016-03-25,Holiday,国,Ecuador,Viernes Santo,False
+2016-04-01,Holiday,地方,Cotopaxi,Provincializacion de Cotopaxi,False
+2016-04-12,Holiday,県,Cuenca,Fundacion de Cuenca,False
+2016-04-14,Holiday,県,Libertad,Cantonizacion de Libertad,False
+2016-04-16,Event,国,Ecuador,Terremoto Manabi,False
+2016-04-17,Event,国,Ecuador,Terremoto Manabi+1,False
+2016-04-18,Event,国,Ecuador,Terremoto Manabi+2,False
+2016-04-19,Event,国,Ecuador,Terremoto Manabi+3,False
+2016-04-20,Event,国,Ecuador,Terremoto Manabi+4,False
+2016-04-21,Holiday,県,Riobamba,Cantonizacion de Riobamba,False
+2016-04-21,Event,国,Ecuador,Terremoto Manabi+5,False
+2016-04-22,Event,国,Ecuador,Terremoto Manabi+6,False
+2016-04-23,Event,国,Ecuador,Terremoto Manabi+7,False
+2016-04-24,Event,国,Ecuador,Terremoto Manabi+8,False
+2016-04-25,Event,国,Ecuador,Terremoto Manabi+9,False
+2016-04-26,Event,国,Ecuador,Terremoto Manabi+10,False
+2016-04-27,Event,国,Ecuador,Terremoto Manabi+11,False
+2016-04-28,Event,国,Ecuador,Terremoto Manabi+12,False
+2016-04-29,Event,国,Ecuador,Terremoto Manabi+13,False
+2016-04-30,Event,国,Ecuador,Terremoto Manabi+14,False
+2016-05-01,Holiday,国,Ecuador,Dia del Trabajo,False
+2016-05-01,Event,国,Ecuador,Terremoto Manabi+15,False
+2016-05-02,Event,国,Ecuador,Terremoto Manabi+16,False
+2016-05-03,Event,国,Ecuador,Terremoto Manabi+17,False
+2016-05-04,Event,国,Ecuador,Terremoto Manabi+18,False
+2016-05-05,Event,国,Ecuador,Terremoto Manabi+19,False
+2016-05-06,Event,国,Ecuador,Terremoto Manabi+20,False
+2016-05-07,Additional,国,Ecuador,Dia de la Madre-1,False
+2016-05-07,Event,国,Ecuador,Terremoto Manabi+21,False
+2016-05-08,Event,国,Ecuador,Terremoto Manabi+22,False
+2016-05-08,Event,国,Ecuador,Dia de la Madre,False
+2016-05-09,Event,国,Ecuador,Terremoto Manabi+23,False
+2016-05-10,Event,国,Ecuador,Terremoto Manabi+24,False
+2016-05-11,Event,国,Ecuador,Terremoto Manabi+25,False
+2016-05-12,Holiday,県,Puyo,Cantonizacion del Puyo,False
+2016-05-12,Event,国,Ecuador,Terremoto Manabi+26,False
+2016-05-13,Event,国,Ecuador,Terremoto Manabi+27,False
+2016-05-14,Event,国,Ecuador,Terremoto Manabi+28,False
+2016-05-15,Event,国,Ecuador,Terremoto Manabi+29,False
+2016-05-16,Event,国,Ecuador,Terremoto Manabi+30,False
+2016-05-24,Holiday,国,Ecuador,Batalla de Pichincha,True
+2016-05-27,Transfer,国,Ecuador,Traslado Batalla de Pichincha,False
+2016-06-23,Holiday,県,Guaranda,Cantonizacion de Guaranda,False
+2016-06-25,Holiday,県,Machala,Fundacion de Machala,False
+2016-06-25,Holiday,地方,Imbabura,Provincializacion de Imbabura,False
+2016-06-25,Holiday,県,Latacunga,Cantonizacion de Latacunga,False
+2016-07-03,Holiday,県,El Carmen,Cantonizacion de El Carmen,False
+2016-07-03,Holiday,県,Santo Domingo,Fundacion de Santo Domingo,False
+2016-07-23,Holiday,県,Cayambe,Cantonizacion de Cayambe,False
+2016-07-24,Additional,県,Guayaquil,Fundacion de Guayaquil-1,False
+2016-07-24,Transfer,県,Guayaquil,Traslado Fundacion de Guayaquil,False
+2016-07-25,Holiday,県,Guayaquil,Fundacion de Guayaquil,True
+2016-08-05,Holiday,県,Esmeraldas,Fundacion de Esmeraldas,False
+2016-08-10,Holiday,国,Ecuador,Primer Grito de Independencia,True
+2016-08-12,Transfer,国,Ecuador,Traslado Primer Grito de Independencia,False
+2016-08-15,Holiday,県,Riobamba,Fundacion de Riobamba,False
+2016-08-24,Holiday,県,Ambato,Fundacion de Ambato,False
+2016-09-28,Holiday,県,Ibarra,Fundacion de Ibarra,False
+2016-10-07,Holiday,県,Quevedo,Cantonizacion de Quevedo,False
+2016-10-09,Holiday,国,Ecuador,Independencia de Guayaquil,False
+2016-11-02,Holiday,国,Ecuador,Dia de Difuntos,False
+2016-11-03,Holiday,国,Ecuador,Independencia de Cuenca,False
+2016-11-04,Bridge,国,Ecuador,Puente Dia de Difuntos,False
+2016-11-06,Holiday,地方,Santo Domingo de los Tsachilas,Provincializacion de Santo Domingo,False
+2016-11-07,Holiday,地方,Santa Elena,Provincializacion Santa Elena,False
+2016-11-10,Holiday,県,Guaranda,Independencia de Guaranda,False
+2016-11-11,Holiday,県,Latacunga,Independencia de Latacunga,False
+2016-11-12,Holiday,県,Ambato,Independencia de Ambato,False
+2016-11-12,Work Day,国,Ecuador,Recupero Puente Dia de Difuntos,False
+2016-11-25,Event,国,Ecuador,Black Friday,False
+2016-11-28,Event,国,Ecuador,Cyber Monday,False
+2016-12-05,Additional,県,Quito,Fundacion de Quito-1,False
+2016-12-06,Holiday,県,Quito,Fundacion de Quito,False
+2016-12-08,Holiday,県,Loja,Fundacion de Loja,False
+2016-12-21,Additional,国,Ecuador,Navidad-4,False
+2016-12-22,Additional,国,Ecuador,Navidad-3,False
+2016-12-22,Holiday,県,Salinas,Cantonizacion de Salinas,False
+2016-12-23,Additional,国,Ecuador,Navidad-2,False
+2016-12-24,Additional,国,Ecuador,Navidad-1,False
+2016-12-25,Holiday,国,Ecuador,Navidad,False
+2016-12-26,Additional,国,Ecuador,Navidad+1,False
+2016-12-31,Additional,国,Ecuador,Primer dia del ano-1,False
+2017-01-01,Holiday,国,Ecuador,Primer dia del ano,True
+2017-01-02,Transfer,国,Ecuador,Traslado Primer dia del ano,False
+2017-02-27,Holiday,国,Ecuador,Carnaval,False
+2017-02-28,Holiday,国,Ecuador,Carnaval,False
+2017-03-02,Holiday,県,Manta,Fundacion de Manta,False
+2017-04-01,Holiday,地方,Cotopaxi,Provincializacion de Cotopaxi,False
+2017-04-12,Holiday,県,Cuenca,Fundacion de Cuenca,True
+2017-04-13,Transfer,県,Cuenca,Fundacion de Cuenca,False
+2017-04-14,Holiday,県,Libertad,Cantonizacion de Libertad,False
+2017-04-14,Holiday,国,Ecuador,Viernes Santo,False
+2017-04-21,Holiday,県,Riobamba,Cantonizacion de Riobamba,False
+2017-05-01,Holiday,国,Ecuador,Dia del Trabajo,False
+2017-05-12,Holiday,県,Puyo,Cantonizacion del Puyo,False
+2017-05-13,Additional,国,Ecuador,Dia de la Madre-1,False
+2017-05-14,Event,国,Ecuador,Dia de la Madre,False
+2017-05-24,Holiday,国,Ecuador,Batalla de Pichincha,True
+2017-05-26,Transfer,国,Ecuador,Traslado Batalla de Pichincha,False
+2017-06-23,Holiday,県,Guaranda,Cantonizacion de Guaranda,False
+2017-06-25,Holiday,地方,Imbabura,Provincializacion de Imbabura,False
+2017-06-25,Holiday,県,Latacunga,Cantonizacion de Latacunga,False
+2017-06-25,Holiday,県,Machala,Fundacion de Machala,False
+2017-07-03,Holiday,県,El Carmen,Cantonizacion de El Carmen,False
+2017-07-03,Holiday,県,Santo Domingo,Fundacion de Santo Domingo,False
+2017-07-23,Holiday,県,Cayambe,Cantonizacion de Cayambe,False
+2017-07-24,Additional,県,Guayaquil,Fundacion de Guayaquil-1,False
+2017-07-25,Additional,県,Guayaquil,Fundacion de Guayaquil,False
+2017-08-05,Holiday,県,Esmeraldas,Fundacion de Esmeraldas,False
+2017-08-10,Holiday,国,Ecuador,Primer Grito de Independencia,True
+2017-08-11,Transfer,国,Ecuador,Traslado Primer Grito de Independencia,False
+2017-08-15,Holiday,県,Riobamba,Fundacion de Riobamba,False
+2017-08-24,Holiday,県,Ambato,Fundacion de Ambato,False
+2017-09-28,Holiday,県,Ibarra,Fundacion de Ibarra,True
+2017-09-29,Transfer,県,Ibarra,Fundacion de Ibarra,False
+2017-10-07,Holiday,県,Quevedo,Cantonizacion de Quevedo,False
+2017-10-09,Holiday,国,Ecuador,Independencia de Guayaquil,False
+2017-11-02,Holiday,国,Ecuador,Dia de Difuntos,False
+2017-11-03,Holiday,国,Ecuador,Independencia de Cuenca,False
+2017-11-06,Holiday,地方,Santo Domingo de los Tsachilas,Provincializacion de Santo Domingo,False
+2017-11-07,Holiday,地方,Santa Elena,Provincializacion Santa Elena,False
+2017-11-10,Holiday,県,Guaranda,Independencia de Guaranda,False
+2017-11-11,Holiday,県,Latacunga,Independencia de Latacunga,False
+2017-11-12,Holiday,県,Ambato,Independencia de Ambato,False
+2017-12-05,Additional,県,Quito,Fundacion de Quito-1,False
+2017-12-06,Holiday,県,Quito,Fundacion de Quito,True
+2017-12-08,Holiday,県,Loja,Fundacion de Loja,False
+2017-12-08,Transfer,県,Quito,Traslado Fundacion de Quito,False
+2017-12-21,Additional,国,Ecuador,Navidad-4,False
+2017-12-22,Holiday,県,Salinas,Cantonizacion de Salinas,False
+2017-12-22,Additional,国,Ecuador,Navidad-3,False
+2017-12-23,Additional,国,Ecuador,Navidad-2,False
+2017-12-24,Additional,国,Ecuador,Navidad-1,False
+2017-12-25,Holiday,国,Ecuador,Navidad,False
+2017-12-26,Additional,国,Ecuador,Navidad+1,False
