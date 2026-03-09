@@ -3,6 +3,20 @@
 ## VS Code MCP setting
 https://code.visualstudio.com/docs/copilot/chat/mcp-servers
 
+- add mcp server (in usr mcp.json)
+    1. View → Command Palette…
+    2. >MCP: add server
+    2. ..input server type, address, etc
+    3. select Global
+- edit mcp server (in usr mcp.json)
+    1. View → Command Palette…
+    1. MCP: Open User Configuration
+    1. * you can start/stop mcp server in the editor 
+- usr mcp server
+    1. open Chat in Agent mode
+    2. click Configure Tools...
+    3. check mcp server/toos name to turn on
+
 # MCP servers
 
 ## Supergateway (stdio <-> SSE, streamable HTTP)

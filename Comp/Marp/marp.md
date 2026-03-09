@@ -28,6 +28,7 @@ theme: my-theme
 
 ### VS Code Extension
 - Marp for VS Code
+  - User setting に theme css ファイル名を指定し、workspaceフォルダに置く
 
 ### テンプレート・サンプル
 - https://qiita.com/tomo_makes/items/aafae4021986553ae1d8

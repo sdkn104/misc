@@ -1,0 +1,73 @@
+0: unspecified with name=_root_
+ 1: page_header: 預貯金と投資
+ 2: section_header: 金融資産の運用には、「預貯金」と「投資」がある
+ 3: text: 預貯金
+ 4: picture
+ 5: list with name=list
+  6: list_item: ●貯めることを重視
+  7: list_item: ●元本保証など確実性を重視
+  8: list_item: ●運用成果（結果）は 商品選択時に決まっている
+ 9: text: 普通預金
+ 10: text: 定期預金
+ 11: text: 投資
+ 12: list with name=list
+  13: list_item: ●ふやすことを重視
+  14: list_item: ●元本保証はない
+  15: list_item: ●運用成果（結果）は 期待できるが、予測できない
+ 16: text: 主な金融商品
+ 17: text: 積立定期預金
+ 18: text: 債　券 （国債・地方債など）
+ 19: text: 株　式
+ 20: text: 投資信託
+ 21: picture
+ 22: picture
+  23: text: P水EA
+  24: text: MONEYXVITAMIN
+ 25: page_header: 金融商品の比較例
+ 26: picture
+  27: text: 収益性も少しありつつ 安全性も高い
+  28: section_header: 安全性
+  29: text: 収益性
+  30: text: 流動性
+  31: section_header: 普通預金
+  32: text: 国内株式
+  33: text: 国内債券
+  34: text: 収益性は高くはないが 安全性、流動性は高い
+  35: text: 安全性は低くても大きな 収益性が期待できる
+ 36: table
+ 37: list with name=list
+  38: list_item: ＊金融機関が破綻した場合＊
+ 39: section_header: ３つとも　　　の金融商品はない ◎
+ 40: list with name=list
+  41: list_item:  普通預金は 預金保険制度 により元本1,000万円（1金融機関ごとに預金者１人当た り）までとその利息等が保護
+  42: list_item:  株式・債券は 分別管理 と投資者保護基金による補償の二重の制度によって保護
+ 43: section_header: ?金融释济教育推進会
+ 44: picture
+  45: text: MONEYXVITAMIN
+ 46: page_header: 投資信託とは？
+ 47: section_header: 株式や債券などを組み合わせた パッケージ商品
+ 48: picture
+  49: text: 株式
+  50: text: 债券
+  51: text: 株式
+  52: text: 债券
+ 53: picture
+ 54: picture
+  55: text: 1
+  56: text: 卷万网
+ 57: text: パッケージ商品なので、 分散投資でリスクを軽減
+ 58: section_header: 専門家に運用はお任せ
+ 59: text: 少額で投資可能 積立投資なら、500円や1,000円程度 からの場合も。
+ 60: picture
+  61: text: MONEYXVITAMIN
+ 62: page_footer: @金融释济教育推進会
+ 63: page_header: まとめ（資産運用）
+ 64: list with name=list
+  65: list_item:  金融資産の運用の手段には 貯めることを重視する預貯金と ふやすことを重視する投資がある
+  66: list_item:  金融は経済成長や生活を豊かにするには 欠かせないもの
+  67: list_item:  投資のための商品には株式、債券と それをパッケージにした投資信託がある
+  68: list_item:  ローリスク・ハイリターンの金融商品は 存在しない
+ 69: picture
+  70: text: 叉水EA
+  71: text: MONEYXVITAMIN
+ 72: page_footer: @金融释济教育推進会

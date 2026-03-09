@@ -1,0 +1,4 @@
+root: D:\NoSync\misc\Comp\LIDA 
+path: C:\Program Files\nodejs 
+arch: 64 
+proxy: none

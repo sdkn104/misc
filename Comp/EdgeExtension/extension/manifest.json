@@ -1,0 +1,14 @@
+﻿{
+    "version":  "1.0.0",
+    "manifest_version":  3,
+    "description":  "Sample extension for internal distribution",
+    "action":  {
+                   "default_title":  "SampleExtension",
+                   "default_popup":  "popup.html"
+               },
+    "permissions":  [
+                        "tabs",
+                        "activeTab"
+                    ],
+    "name":  "SampleExtension"
+}

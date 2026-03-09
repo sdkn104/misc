@@ -7,10 +7,9 @@ app = Flask(__name__)
 #CORS(app)
 
 
-#部評システムへのリクエストを転送 (http://localhost:5000/WEBUSER/OWA/... -> http://www2.hin.mei.melco.co.jp/WEBUSER/OWA/...)
 @app.route('/WEBUSER/OWA/<path:path>') 
 def transfer_to_buhyo_system(path): 
-    url = "http://www2.hin.mei.melco.co.jp" + request.script_root + request.full_path 
+    url = "http://www.xxx.cm" + request.script_root + request.full_path 
     print("redirecting to "+url) 
     r = requests.get(url) 
     #print(r.encoding)

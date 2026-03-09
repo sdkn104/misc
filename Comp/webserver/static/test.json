@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "exported": "2026-02-21T10:45:19.325Z",
+  "webConfigUrl": "",
+  "embedBaseUrl": "https://www.google.com?q=",
+  "scripts": {
+    "script_1771669243885": {
+      "code": "alert(999);\n",
+      "createdAt": "2026-02-21T10:20:43.885Z",
+      "disabled": false,
+      "executionContext": "Isolated",
+      "executionMode": "both",
+      "name": "google",
+      "updatedAt": "2026-02-21T10:40:57.176Z",
+      "urlPattern": "https://www.google.com/*"
+    },
+    "script_1771669343028": {
+      "code": "",
+      "createdAt": "2026-02-21T10:22:23.028Z",
+      "disabled": false,
+      "executionContext": "MAIN",
+      "executionMode": "manual",
+      "name": "New Script2",
+      "updatedAt": "2026-02-21T10:22:29.688Z",
+      "urlPattern": ""
+    }
+  }
+}
