@@ -110,7 +110,7 @@ if __name__ == "__main__":
 起動
 
 ```
-python app.py
+python test.py
 ```
 
 アクセステスト
@@ -130,14 +130,13 @@ Sites
 ↓
 Add Website
 ```
-```
 
 例
 
 ```
-Site name : python_app
+Site name : AuthProxy
 Port : 8080
-Physical path : C:\inetpub\python_app
+Physical path : C:\inetpub\AuthProxy
 ```
 
 フォルダは空でOKです。
@@ -151,7 +150,7 @@ IIS Manager
 ```
 Site
 ↓
-python_app
+AuthProxy
 ↓
 Authentication
 ```
@@ -196,7 +195,7 @@ IIS Manager
 ```
 Site
 ↓
-python_app
+AuthProxy
 ↓
 URL Rewrite
 ↓
@@ -208,7 +207,7 @@ Reverse Proxy
 「URLの書き換え」
 
 ```
-http://localhost:8000
+localhost:8000  # http://はいらない。重複してしまう。
 ```
 
 「サーバ変数」
@@ -218,7 +217,7 @@ http://localhost:8000
 値：{REMOTE_USER}
 ```
 
-site -> python_app -> URL Rewrite　-> View Server Variables -> Add
+site -> AuthProxy -> URL Rewrite　-> View Server Variables -> Add
 
 ```
 HTTP_X_AUTH_USER
@@ -242,7 +241,7 @@ HTTP_X_AUTH_USER
 
 以下を開くとユーザ名が表示されます。
 
-http://localhost:8000
+http://localhost:8080
 
 ---
 
@@ -257,7 +256,7 @@ IISはユーザー名を
 URL Rewriteの **Server Variables** を追加します。
 
 ```
-HTTP_X_FORWARDED_USER
+HTTP_X_AUTH_USER
 ```
 
 値
@@ -269,7 +268,7 @@ HTTP_X_FORWARDED_USER
 結果
 
 ```
-X-Forwarded-User: DOMAIN\username
+X-Auth-User: DOMAIN\username
 ```
 
 がPythonに送られます。
@@ -279,7 +278,7 @@ X-Forwarded-User: DOMAIN\username
 Pythonでユーザー取得
 
 ```python
-user = request.headers.get("X-Forwarded-User")
+user = request.headers.get("X-Auth-User")
 ```
 
 結果
