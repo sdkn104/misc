@@ -1,0 +1,33 @@
+{
+
+    "mcp": {
+        "inputs": [
+            {
+                "id": "db-password",
+                "type": "promptString",
+                "description": "Oracle DB Password",
+                "password": true,
+            }
+        ],
+        "servers": {
+            "oracle": {
+                "command": "/path/to/your/.local/bin/uv",
+                "args": [
+                "--directory",
+                "/path/to/your/oracle-mcp-server",
+                "run",
+                "main.py"
+                ],
+                "env": {
+                    "ORACLE_CONNECTION_STRING":"<db-username>/${input:db-password}@<host>:1521/<service-name>",
+                    "TARGET_SCHEMA":"",
+                    "CACHE_DIR":".cache",
+                    "THICK_MODE":"",  // Optional: set to "1" to enable thick mode
+                    "ORACLE_CLIENT_LIB_DIR":"", // Optional: in case you use thick mode and if you want to set a non-default directory for client libraries
+                    "READ_ONLY_MODE":"1"  // Optional: set to "0" to allow write operations (default: "1" for read-only)
+                }
+            }
+        }
+    }
+    
+}
