@@ -18,177 +18,173 @@ body:
   - $ref: '#/groups/6'
   - $ref: '#/texts/18'
   - $ref: '#/pictures/1'
-  - $ref: '#/texts/21'
+  - $ref: '#/texts/19'
   - $ref: '#/groups/7'
-  - $ref: '#/texts/24'
+  - $ref: '#/texts/22'
   - $ref: '#/groups/8'
-  - $ref: '#/texts/25'
+  - $ref: '#/texts/23'
   - $ref: '#/pictures/2'
   - $ref: '#/groups/9'
   - $ref: '#/groups/10'
+  - $ref: '#/texts/28'
+  - $ref: '#/texts/29'
+  - $ref: '#/texts/30'
   - $ref: '#/texts/31'
-  - $ref: '#/texts/32'
-  - $ref: '#/texts/33'
-  - $ref: '#/texts/34'
   - $ref: '#/pictures/3'
-  - $ref: '#/texts/77'
+  - $ref: '#/texts/39'
   - $ref: '#/groups/11'
   - $ref: '#/pictures/4'
   - $ref: '#/pictures/5'
-  - $ref: '#/texts/81'
-  - $ref: '#/texts/82'
+  - $ref: '#/texts/43'
+  - $ref: '#/texts/44'
   - $ref: '#/groups/12'
-  - $ref: '#/texts/83'
-  - $ref: '#/texts/84'
-  - $ref: '#/texts/85'
-  - $ref: '#/texts/86'
+  - $ref: '#/texts/45'
+  - $ref: '#/texts/46'
+  - $ref: '#/texts/47'
+  - $ref: '#/texts/48'
   - $ref: '#/pictures/6'
   - $ref: '#/groups/13'
-  - $ref: '#/texts/88'
+  - $ref: '#/texts/50'
   - $ref: '#/pictures/7'
   - $ref: '#/groups/14'
-  - $ref: '#/texts/89'
-  - $ref: '#/texts/90'
-  - $ref: '#/texts/91'
+  - $ref: '#/texts/51'
+  - $ref: '#/texts/52'
+  - $ref: '#/texts/53'
   - $ref: '#/groups/15'
+  - $ref: '#/texts/54'
+  - $ref: '#/texts/55'
+  - $ref: '#/texts/56'
+  - $ref: '#/groups/16'
+  - $ref: '#/groups/17'
+  - $ref: '#/texts/62'
+  - $ref: '#/texts/63'
+  - $ref: '#/pictures/8'
+  - $ref: '#/groups/18'
+  - $ref: '#/texts/70'
+  - $ref: '#/groups/19'
+  - $ref: '#/texts/71'
+  - $ref: '#/texts/72'
+  - $ref: '#/texts/73'
+  - $ref: '#/pictures/9'
+  - $ref: '#/groups/20'
+  - $ref: '#/texts/79'
+  - $ref: '#/texts/80'
+  - $ref: '#/texts/81'
+  - $ref: '#/texts/82'
+  - $ref: '#/texts/83'
+  - $ref: '#/texts/84'
+  - $ref: '#/groups/21'
+  - $ref: '#/texts/91'
+  - $ref: '#/groups/22'
   - $ref: '#/texts/92'
   - $ref: '#/texts/93'
   - $ref: '#/texts/94'
-  - $ref: '#/groups/16'
-  - $ref: '#/groups/17'
+  - $ref: '#/texts/95'
+  - $ref: '#/groups/23'
+  - $ref: '#/texts/97'
+  - $ref: '#/groups/24'
   - $ref: '#/texts/100'
-  - $ref: '#/texts/101'
-  - $ref: '#/pictures/8'
-  - $ref: '#/groups/18'
+  - $ref: '#/groups/25'
+  - $ref: '#/texts/102'
+  - $ref: '#/texts/103'
+  - $ref: '#/texts/104'
+  - $ref: '#/groups/26'
+  - $ref: '#/texts/105'
+  - $ref: '#/texts/106'
+  - $ref: '#/texts/107'
+  - $ref: '#/groups/27'
   - $ref: '#/texts/108'
-  - $ref: '#/groups/19'
   - $ref: '#/texts/109'
-  - $ref: '#/texts/110'
-  - $ref: '#/texts/111'
-  - $ref: '#/pictures/9'
-  - $ref: '#/groups/20'
+  - $ref: '#/groups/28'
+  - $ref: '#/texts/112'
+  - $ref: '#/pictures/10'
+  - $ref: '#/texts/113'
+  - $ref: '#/pictures/11'
+  - $ref: '#/texts/114'
+  - $ref: '#/groups/29'
+  - $ref: '#/texts/115'
+  - $ref: '#/pictures/12'
+  - $ref: '#/texts/116'
   - $ref: '#/texts/117'
   - $ref: '#/texts/118'
   - $ref: '#/texts/119'
-  - $ref: '#/texts/120'
-  - $ref: '#/texts/121'
+  - $ref: '#/groups/30'
   - $ref: '#/texts/122'
-  - $ref: '#/groups/21'
-  - $ref: '#/texts/129'
-  - $ref: '#/groups/22'
-  - $ref: '#/texts/130'
-  - $ref: '#/texts/131'
-  - $ref: '#/texts/132'
-  - $ref: '#/texts/133'
-  - $ref: '#/groups/23'
+  - $ref: '#/groups/31'
+  - $ref: '#/pictures/13'
+  - $ref: '#/groups/32'
+  - $ref: '#/texts/125'
+  - $ref: '#/texts/126'
+  - $ref: '#/texts/127'
+  - $ref: '#/groups/33'
+  - $ref: '#/pictures/14'
+  - $ref: '#/groups/34'
+  - $ref: '#/texts/134'
   - $ref: '#/texts/135'
-  - $ref: '#/groups/24'
+  - $ref: '#/groups/35'
   - $ref: '#/texts/138'
-  - $ref: '#/groups/25'
+  - $ref: '#/groups/36'
   - $ref: '#/texts/140'
   - $ref: '#/texts/141'
-  - $ref: '#/texts/142'
-  - $ref: '#/groups/26'
-  - $ref: '#/texts/143'
-  - $ref: '#/texts/144'
-  - $ref: '#/texts/145'
-  - $ref: '#/groups/27'
-  - $ref: '#/texts/146'
+  - $ref: '#/pictures/15'
+  - $ref: '#/groups/37'
   - $ref: '#/texts/147'
-  - $ref: '#/groups/28'
-  - $ref: '#/texts/150'
-  - $ref: '#/pictures/10'
-  - $ref: '#/texts/151'
-  - $ref: '#/pictures/11'
-  - $ref: '#/texts/160'
-  - $ref: '#/groups/29'
+  - $ref: '#/groups/38'
+  - $ref: '#/texts/148'
+  - $ref: '#/texts/149'
+  - $ref: '#/groups/39'
+  - $ref: '#/texts/156'
+  - $ref: '#/groups/40'
+  - $ref: '#/pictures/16'
   - $ref: '#/texts/161'
-  - $ref: '#/pictures/12'
+  - $ref: '#/texts/162'
   - $ref: '#/texts/163'
   - $ref: '#/texts/164'
   - $ref: '#/texts/165'
   - $ref: '#/texts/166'
-  - $ref: '#/groups/30'
-  - $ref: '#/texts/169'
-  - $ref: '#/groups/31'
-  - $ref: '#/pictures/13'
-  - $ref: '#/groups/32'
+  - $ref: '#/groups/41'
   - $ref: '#/texts/172'
+  - $ref: '#/groups/42'
   - $ref: '#/texts/173'
-  - $ref: '#/texts/174'
-  - $ref: '#/groups/33'
-  - $ref: '#/pictures/14'
-  - $ref: '#/groups/34'
+  - $ref: '#/groups/43'
+  - $ref: '#/pictures/17'
+  - $ref: '#/texts/177'
+  - $ref: '#/texts/178'
+  - $ref: '#/groups/44'
+  - $ref: '#/texts/180'
+  - $ref: '#/groups/45'
+  - $ref: '#/texts/184'
   - $ref: '#/texts/185'
-  - $ref: '#/texts/186'
-  - $ref: '#/groups/35'
+  - $ref: '#/groups/49'
+  - $ref: '#/groups/50'
+  - $ref: '#/texts/187'
+  - $ref: '#/texts/188'
   - $ref: '#/texts/189'
-  - $ref: '#/groups/36'
-  - $ref: '#/texts/191'
-  - $ref: '#/texts/192'
-  - $ref: '#/pictures/15'
-  - $ref: '#/groups/37'
-  - $ref: '#/texts/198'
-  - $ref: '#/groups/38'
+  - $ref: '#/texts/190'
+  - $ref: '#/groups/51'
+  - $ref: '#/texts/193'
+  - $ref: '#/groups/52'
+  - $ref: '#/pictures/18'
+  - $ref: '#/texts/197'
+  - $ref: '#/groups/53'
   - $ref: '#/texts/199'
   - $ref: '#/texts/200'
-  - $ref: '#/groups/39'
-  - $ref: '#/texts/207'
-  - $ref: '#/groups/40'
-  - $ref: '#/pictures/16'
+  - $ref: '#/groups/54'
+  - $ref: '#/texts/205'
+  - $ref: '#/groups/55'
+  - $ref: '#/pictures/19'
+  - $ref: '#/groups/56'
   - $ref: '#/texts/212'
   - $ref: '#/texts/213'
   - $ref: '#/texts/214'
   - $ref: '#/texts/215'
-  - $ref: '#/texts/216'
-  - $ref: '#/texts/217'
-  - $ref: '#/groups/41'
-  - $ref: '#/texts/223'
-  - $ref: '#/groups/42'
-  - $ref: '#/texts/224'
-  - $ref: '#/groups/43'
-  - $ref: '#/pictures/17'
-  - $ref: '#/texts/228'
-  - $ref: '#/texts/229'
-  - $ref: '#/groups/44'
-  - $ref: '#/texts/231'
-  - $ref: '#/groups/45'
-  - $ref: '#/texts/235'
-  - $ref: '#/texts/236'
-  - $ref: '#/groups/49'
-  - $ref: '#/groups/50'
-  - $ref: '#/texts/238'
-  - $ref: '#/texts/239'
-  - $ref: '#/texts/240'
-  - $ref: '#/texts/241'
-  - $ref: '#/groups/51'
-  - $ref: '#/texts/244'
-  - $ref: '#/groups/52'
-  - $ref: '#/pictures/18'
-  - $ref: '#/texts/262'
-  - $ref: '#/groups/53'
-  - $ref: '#/texts/264'
-  - $ref: '#/texts/265'
-  - $ref: '#/groups/54'
-  - $ref: '#/texts/270'
-  - $ref: '#/groups/55'
-  - $ref: '#/texts/277'
-  - $ref: '#/groups/56'
-  - $ref: '#/texts/280'
   - $ref: '#/groups/57'
+  - $ref: '#/texts/217'
   - $ref: '#/groups/58'
-  - $ref: '#/texts/283'
-  - $ref: '#/pictures/19'
-  - $ref: '#/texts/284'
-  - $ref: '#/texts/285'
-  - $ref: '#/texts/286'
-  - $ref: '#/groups/59'
-  - $ref: '#/texts/288'
-  - $ref: '#/groups/60'
   - $ref: '#/pictures/20'
-  - $ref: '#/groups/61'
-  - $ref: '#/texts/294'
-  - $ref: '#/texts/295'
+  - $ref: '#/groups/59'
+  - $ref: '#/texts/223'
+  - $ref: '#/texts/224'
   content_layer: body
   label: unspecified
   name: _root_
@@ -261,8 +257,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/6'
 - children:
-  - $ref: '#/texts/22'
-  - $ref: '#/texts/23'
+  - $ref: '#/texts/20'
+  - $ref: '#/texts/21'
   content_layer: body
   label: list
   name: list
@@ -277,10 +273,10 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/8'
 - children:
+  - $ref: '#/texts/24'
+  - $ref: '#/texts/25'
+  - $ref: '#/texts/26'
   - $ref: '#/texts/27'
-  - $ref: '#/texts/28'
-  - $ref: '#/texts/29'
-  - $ref: '#/texts/30'
   content_layer: body
   label: list
   name: list
@@ -295,7 +291,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/10'
 - children:
-  - $ref: '#/texts/78'
+  - $ref: '#/texts/40'
   content_layer: body
   label: list
   name: list
@@ -310,7 +306,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/12'
 - children:
-  - $ref: '#/texts/87'
+  - $ref: '#/texts/49'
   content_layer: body
   label: list
   name: list
@@ -332,11 +328,11 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/15'
 - children:
-  - $ref: '#/texts/95'
-  - $ref: '#/texts/96'
-  - $ref: '#/texts/97'
-  - $ref: '#/texts/98'
-  - $ref: '#/texts/99'
+  - $ref: '#/texts/57'
+  - $ref: '#/texts/58'
+  - $ref: '#/texts/59'
+  - $ref: '#/texts/60'
+  - $ref: '#/texts/61'
   content_layer: body
   label: list
   name: list
@@ -351,10 +347,10 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/17'
 - children:
-  - $ref: '#/texts/104'
-  - $ref: '#/texts/105'
-  - $ref: '#/texts/106'
-  - $ref: '#/texts/107'
+  - $ref: '#/texts/66'
+  - $ref: '#/texts/67'
+  - $ref: '#/texts/68'
+  - $ref: '#/texts/69'
   content_layer: body
   label: key_value_area
   name: group
@@ -376,12 +372,12 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/20'
 - children:
-  - $ref: '#/texts/123'
-  - $ref: '#/texts/124'
-  - $ref: '#/texts/125'
-  - $ref: '#/texts/126'
-  - $ref: '#/texts/127'
-  - $ref: '#/texts/128'
+  - $ref: '#/texts/85'
+  - $ref: '#/texts/86'
+  - $ref: '#/texts/87'
+  - $ref: '#/texts/88'
+  - $ref: '#/texts/89'
+  - $ref: '#/texts/90'
   content_layer: body
   label: list
   name: list
@@ -396,7 +392,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/22'
 - children:
-  - $ref: '#/texts/134'
+  - $ref: '#/texts/96'
   content_layer: body
   label: list
   name: list
@@ -404,8 +400,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/23'
 - children:
-  - $ref: '#/texts/136'
-  - $ref: '#/texts/137'
+  - $ref: '#/texts/98'
+  - $ref: '#/texts/99'
   content_layer: body
   label: list
   name: list
@@ -413,7 +409,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/24'
 - children:
-  - $ref: '#/texts/139'
+  - $ref: '#/texts/101'
   content_layer: body
   label: list
   name: list
@@ -435,8 +431,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/27'
 - children:
-  - $ref: '#/texts/148'
-  - $ref: '#/texts/149'
+  - $ref: '#/texts/110'
+  - $ref: '#/texts/111'
   content_layer: body
   label: list
   name: list
@@ -451,8 +447,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/29'
 - children:
-  - $ref: '#/texts/167'
-  - $ref: '#/texts/168'
+  - $ref: '#/texts/120'
+  - $ref: '#/texts/121'
   content_layer: body
   label: list
   name: list
@@ -460,8 +456,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/30'
 - children:
-  - $ref: '#/texts/170'
-  - $ref: '#/texts/171'
+  - $ref: '#/texts/123'
+  - $ref: '#/texts/124'
   content_layer: body
   label: list
   name: list
@@ -476,8 +472,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/32'
 - children:
-  - $ref: '#/texts/175'
-  - $ref: '#/texts/176'
+  - $ref: '#/texts/128'
+  - $ref: '#/texts/129'
   content_layer: body
   label: list
   name: list
@@ -492,8 +488,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/34'
 - children:
-  - $ref: '#/texts/187'
-  - $ref: '#/texts/188'
+  - $ref: '#/texts/136'
+  - $ref: '#/texts/137'
   content_layer: body
   label: list
   name: list
@@ -501,7 +497,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/35'
 - children:
-  - $ref: '#/texts/190'
+  - $ref: '#/texts/139'
   content_layer: body
   label: list
   name: list
@@ -509,11 +505,11 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/36'
 - children:
-  - $ref: '#/texts/193'
-  - $ref: '#/texts/194'
-  - $ref: '#/texts/195'
-  - $ref: '#/texts/196'
-  - $ref: '#/texts/197'
+  - $ref: '#/texts/142'
+  - $ref: '#/texts/143'
+  - $ref: '#/texts/144'
+  - $ref: '#/texts/145'
+  - $ref: '#/texts/146'
   content_layer: body
   label: list
   name: list
@@ -528,12 +524,12 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/38'
 - children:
-  - $ref: '#/texts/201'
-  - $ref: '#/texts/202'
-  - $ref: '#/texts/203'
-  - $ref: '#/texts/204'
-  - $ref: '#/texts/205'
-  - $ref: '#/texts/206'
+  - $ref: '#/texts/150'
+  - $ref: '#/texts/151'
+  - $ref: '#/texts/152'
+  - $ref: '#/texts/153'
+  - $ref: '#/texts/154'
+  - $ref: '#/texts/155'
   content_layer: body
   label: list
   name: list
@@ -541,8 +537,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/39'
 - children:
-  - $ref: '#/texts/208'
-  - $ref: '#/texts/211'
+  - $ref: '#/texts/157'
+  - $ref: '#/texts/160'
   content_layer: body
   label: list
   name: list
@@ -550,11 +546,11 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/40'
 - children:
-  - $ref: '#/texts/218'
-  - $ref: '#/texts/219'
-  - $ref: '#/texts/220'
-  - $ref: '#/texts/221'
-  - $ref: '#/texts/222'
+  - $ref: '#/texts/167'
+  - $ref: '#/texts/168'
+  - $ref: '#/texts/169'
+  - $ref: '#/texts/170'
+  - $ref: '#/texts/171'
   content_layer: body
   label: list
   name: list
@@ -569,9 +565,9 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/42'
 - children:
-  - $ref: '#/texts/225'
-  - $ref: '#/texts/226'
-  - $ref: '#/texts/227'
+  - $ref: '#/texts/174'
+  - $ref: '#/texts/175'
+  - $ref: '#/texts/176'
   content_layer: body
   label: list
   name: list
@@ -579,7 +575,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/43'
 - children:
-  - $ref: '#/texts/230'
+  - $ref: '#/texts/179'
   content_layer: body
   label: list
   name: list
@@ -597,7 +593,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/45'
 - children:
-  - $ref: '#/texts/232'
+  - $ref: '#/texts/181'
   content_layer: body
   label: list
   name: group
@@ -605,7 +601,7 @@ groups:
     $ref: '#/groups/45'
   self_ref: '#/groups/46'
 - children:
-  - $ref: '#/texts/233'
+  - $ref: '#/texts/182'
   content_layer: body
   label: list
   name: group
@@ -613,7 +609,7 @@ groups:
     $ref: '#/groups/45'
   self_ref: '#/groups/47'
 - children:
-  - $ref: '#/texts/234'
+  - $ref: '#/texts/183'
   content_layer: body
   label: list
   name: group
@@ -621,7 +617,7 @@ groups:
     $ref: '#/groups/45'
   self_ref: '#/groups/48'
 - children:
-  - $ref: '#/texts/237'
+  - $ref: '#/texts/186'
   content_layer: body
   label: list
   name: list
@@ -636,8 +632,8 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/50'
 - children:
-  - $ref: '#/texts/242'
-  - $ref: '#/texts/243'
+  - $ref: '#/texts/191'
+  - $ref: '#/texts/192'
   content_layer: body
   label: list
   name: list
@@ -645,7 +641,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/51'
 - children:
-  - $ref: '#/texts/245'
+  - $ref: '#/texts/194'
   content_layer: body
   label: list
   name: list
@@ -653,7 +649,7 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/52'
 - children:
-  - $ref: '#/texts/263'
+  - $ref: '#/texts/198'
   content_layer: body
   label: key_value_area
   name: group
@@ -661,10 +657,10 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/53'
 - children:
-  - $ref: '#/texts/266'
-  - $ref: '#/texts/267'
-  - $ref: '#/texts/268'
-  - $ref: '#/texts/269'
+  - $ref: '#/texts/201'
+  - $ref: '#/texts/202'
+  - $ref: '#/texts/203'
+  - $ref: '#/texts/204'
   content_layer: body
   label: list
   name: list
@@ -672,70 +668,52 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/54'
 - children:
-  - $ref: '#/texts/271'
-  - $ref: '#/texts/272'
-  - $ref: '#/texts/273'
-  - $ref: '#/texts/274'
-  - $ref: '#/texts/275'
-  - $ref: '#/texts/276'
+  - $ref: '#/texts/206'
+  - $ref: '#/texts/207'
+  - $ref: '#/texts/208'
+  - $ref: '#/texts/209'
+  - $ref: '#/texts/210'
+  - $ref: '#/texts/211'
   content_layer: body
   label: list
   name: list
   parent:
     $ref: '#/body'
   self_ref: '#/groups/55'
-- children:
-  - $ref: '#/texts/278'
-  - $ref: '#/texts/279'
+- children: []
   content_layer: body
-  label: list
-  name: list
+  label: key_value_area
+  name: group
   parent:
     $ref: '#/body'
   self_ref: '#/groups/56'
 - children:
-  - $ref: '#/texts/281'
-  - $ref: '#/texts/282'
+  - $ref: '#/texts/216'
   content_layer: body
   label: list
   name: list
   parent:
     $ref: '#/body'
   self_ref: '#/groups/57'
-- children: []
+- children:
+  - $ref: '#/texts/218'
+  - $ref: '#/texts/219'
+  - $ref: '#/texts/220'
+  - $ref: '#/texts/221'
+  - $ref: '#/texts/222'
   content_layer: body
-  label: key_value_area
-  name: group
+  label: list
+  name: list
   parent:
     $ref: '#/body'
   self_ref: '#/groups/58'
-- children:
-  - $ref: '#/texts/287'
-  content_layer: body
-  label: list
-  name: list
-  parent:
-    $ref: '#/body'
-  self_ref: '#/groups/59'
-- children:
-  - $ref: '#/texts/289'
-  - $ref: '#/texts/290'
-  - $ref: '#/texts/291'
-  - $ref: '#/texts/292'
-  - $ref: '#/texts/293'
-  content_layer: body
-  label: list
-  name: list
-  parent:
-    $ref: '#/body'
-  self_ref: '#/groups/60'
 - children: []
   content_layer: body
   label: key_value_area
   name: group
   parent:
     $ref: '#/body'
-  self_ref: '#/groups/61'
+  self_ref: '#/groups/59'
 key_value_items: []
 name: sinnkyouzai
 origin:
@@ -886,8 +864,8 @@ pictures:
   - bbox:
       b: 16.81988525390625
       coord_origin: BOTTOMLEFT
-      l: 1.4389944076538086
-      r: 59.922630310058594
+      l: 1.4389961957931519
+      r: 59.922645568847656
       t: 75.37567138671875
     charspan:
     - 0
@@ -897,9 +875,7 @@ pictures:
   self_ref: '#/pictures/0'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/19'
-  - $ref: '#/texts/20'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -920,8 +896,7 @@ pictures:
   self_ref: '#/pictures/1'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/26'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -929,11 +904,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 177.71322631835938
+      b: 177.71331787109375
       coord_origin: BOTTOMLEFT
-      l: 57.79688262939453
-      r: 417.1643371582031
-      t: 386.2228088378906
+      l: 57.79692840576172
+      r: 417.16436767578125
+      t: 386.22271728515625
     charspan:
     - 0
     - 0
@@ -943,48 +918,13 @@ pictures:
 - annotations: []
   captions: []
   children:
+  - $ref: '#/texts/32'
+  - $ref: '#/texts/33'
+  - $ref: '#/texts/34'
   - $ref: '#/texts/35'
   - $ref: '#/texts/36'
   - $ref: '#/texts/37'
   - $ref: '#/texts/38'
-  - $ref: '#/texts/39'
-  - $ref: '#/texts/40'
-  - $ref: '#/texts/41'
-  - $ref: '#/texts/42'
-  - $ref: '#/texts/43'
-  - $ref: '#/texts/44'
-  - $ref: '#/texts/45'
-  - $ref: '#/texts/46'
-  - $ref: '#/texts/47'
-  - $ref: '#/texts/48'
-  - $ref: '#/texts/49'
-  - $ref: '#/texts/50'
-  - $ref: '#/texts/51'
-  - $ref: '#/texts/52'
-  - $ref: '#/texts/53'
-  - $ref: '#/texts/54'
-  - $ref: '#/texts/55'
-  - $ref: '#/texts/56'
-  - $ref: '#/texts/57'
-  - $ref: '#/texts/58'
-  - $ref: '#/texts/59'
-  - $ref: '#/texts/60'
-  - $ref: '#/texts/61'
-  - $ref: '#/texts/62'
-  - $ref: '#/texts/63'
-  - $ref: '#/texts/64'
-  - $ref: '#/texts/65'
-  - $ref: '#/texts/66'
-  - $ref: '#/texts/67'
-  - $ref: '#/texts/68'
-  - $ref: '#/texts/69'
-  - $ref: '#/texts/70'
-  - $ref: '#/texts/71'
-  - $ref: '#/texts/72'
-  - $ref: '#/texts/73'
-  - $ref: '#/texts/74'
-  - $ref: '#/texts/75'
-  - $ref: '#/texts/76'
   content_layer: body
   footnotes: []
   label: picture
@@ -1006,8 +946,8 @@ pictures:
 - annotations: []
   captions: []
   children:
-  - $ref: '#/texts/79'
-  - $ref: '#/texts/80'
+  - $ref: '#/texts/41'
+  - $ref: '#/texts/42'
   content_layer: body
   footnotes: []
   label: picture
@@ -1015,11 +955,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 210.79388427734375
+      b: 210.79391479492188
       coord_origin: BOTTOMLEFT
       l: 185.69464111328125
-      r: 702.5559692382812
-      t: 360.5122985839844
+      r: 702.5560302734375
+      t: 360.51239013671875
     charspan:
     - 0
     - 0
@@ -1039,7 +979,7 @@ pictures:
       b: 106.64093017578125
       coord_origin: BOTTOMLEFT
       l: 111.28105926513672
-      r: 205.96206665039062
+      r: 205.9620361328125
       t: 161.1209716796875
     charspan:
     - 0
@@ -1092,8 +1032,8 @@ pictures:
 - annotations: []
   captions: []
   children:
-  - $ref: '#/texts/102'
-  - $ref: '#/texts/103'
+  - $ref: '#/texts/64'
+  - $ref: '#/texts/65'
   content_layer: body
   footnotes: []
   label: picture
@@ -1101,11 +1041,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 187.1671142578125
+      b: 187.16708374023438
       coord_origin: BOTTOMLEFT
-      l: 66.53948211669922
-      r: 322.5647277832031
-      t: 415.6706237792969
+      l: 66.53949737548828
+      r: 322.56500244140625
+      t: 415.6707534790039
     charspan:
     - 0
     - 0
@@ -1115,11 +1055,11 @@ pictures:
 - annotations: []
   captions: []
   children:
-  - $ref: '#/texts/112'
-  - $ref: '#/texts/113'
-  - $ref: '#/texts/114'
-  - $ref: '#/texts/115'
-  - $ref: '#/texts/116'
+  - $ref: '#/texts/74'
+  - $ref: '#/texts/75'
+  - $ref: '#/texts/76'
+  - $ref: '#/texts/77'
+  - $ref: '#/texts/78'
   content_layer: body
   footnotes: []
   label: picture
@@ -1127,11 +1067,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 65.10745239257812
+      b: 65.10479736328125
       coord_origin: BOTTOMLEFT
-      l: 108.93673706054688
-      r: 806.0206298828125
-      t: 368.3583068847656
+      l: 108.93853759765625
+      r: 806.0243530273438
+      t: 368.358154296875
     charspan:
     - 0
     - 0
@@ -1150,9 +1090,9 @@ pictures:
   - bbox:
       b: 52.715576171875
       coord_origin: BOTTOMLEFT
-      l: 187.07232666015625
-      r: 244.1970977783203
-      t: 94.11798095703125
+      l: 187.07241821289062
+      r: 244.19700622558594
+      t: 94.11810302734375
     charspan:
     - 0
     - 0
@@ -1161,15 +1101,7 @@ pictures:
   self_ref: '#/pictures/10'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/152'
-  - $ref: '#/texts/153'
-  - $ref: '#/texts/154'
-  - $ref: '#/texts/155'
-  - $ref: '#/texts/156'
-  - $ref: '#/texts/157'
-  - $ref: '#/texts/158'
-  - $ref: '#/texts/159'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -1177,11 +1109,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 131.24697875976562
+      b: 131.24685668945312
       coord_origin: BOTTOMLEFT
-      l: 591.5928344726562
-      r: 906.7632446289062
-      t: 342.14149475097656
+      l: 591.5925903320312
+      r: 906.763427734375
+      t: 342.1415557861328
     charspan:
     - 0
     - 0
@@ -1190,8 +1122,7 @@ pictures:
   self_ref: '#/pictures/11'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/162'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -1199,11 +1130,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 23.64910888671875
+      b: 23.6490478515625
       coord_origin: BOTTOMLEFT
-      l: 29.697540283203125
-      r: 130.8072509765625
-      t: 120.61798095703125
+      l: 29.697521209716797
+      r: 130.80712890625
+      t: 120.6180419921875
     charspan:
     - 0
     - 0
@@ -1222,9 +1153,9 @@ pictures:
   - bbox:
       b: 399.1715850830078
       coord_origin: BOTTOMLEFT
-      l: 733.5333251953125
-      r: 816.61376953125
-      t: 506.1226921081543
+      l: 733.5332641601562
+      r: 816.6138305664062
+      t: 506.12273025512695
     charspan:
     - 0
     - 0
@@ -1234,14 +1165,10 @@ pictures:
 - annotations: []
   captions: []
   children:
-  - $ref: '#/texts/177'
-  - $ref: '#/texts/178'
-  - $ref: '#/texts/179'
-  - $ref: '#/texts/180'
-  - $ref: '#/texts/181'
-  - $ref: '#/texts/182'
-  - $ref: '#/texts/183'
-  - $ref: '#/texts/184'
+  - $ref: '#/texts/130'
+  - $ref: '#/texts/131'
+  - $ref: '#/texts/132'
+  - $ref: '#/texts/133'
   content_layer: body
   footnotes: []
   label: picture
@@ -1249,11 +1176,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 48.35888671875
+      b: 48.421112060546875
       coord_origin: BOTTOMLEFT
-      l: 53.909080505371094
-      r: 904.0789184570312
-      t: 261.3876647949219
+      l: 53.81950378417969
+      r: 903.6859130859375
+      t: 261.2829895019531
     charspan:
     - 0
     - 0
@@ -1270,11 +1197,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 30.2559814453125
+      b: 30.255950927734375
       coord_origin: BOTTOMLEFT
       l: 71.32730865478516
-      r: 115.04780578613281
-      t: 76.46539306640625
+      r: 115.04767608642578
+      t: 76.46542358398438
     charspan:
     - 0
     - 0
@@ -1284,8 +1211,8 @@ pictures:
 - annotations: []
   captions: []
   children:
-  - $ref: '#/texts/209'
-  - $ref: '#/texts/210'
+  - $ref: '#/texts/158'
+  - $ref: '#/texts/159'
   content_layer: body
   footnotes: []
   label: picture
@@ -1293,11 +1220,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 0.341552734375
+      b: 0.3414306640625
       coord_origin: BOTTOMLEFT
       l: 516.2942504882812
-      r: 945.1694946289062
-      t: 117.04156494140625
+      r: 945.1697998046875
+      t: 117.04281616210938
     charspan:
     - 0
     - 0
@@ -1314,11 +1241,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 17.2269287109375
+      b: 17.22686767578125
       coord_origin: BOTTOMLEFT
-      l: 71.61690521240234
-      r: 114.68196868896484
-      t: 63.500762939453125
+      l: 71.61688995361328
+      r: 114.68216705322266
+      t: 63.50079345703125
     charspan:
     - 0
     - 0
@@ -1328,22 +1255,8 @@ pictures:
 - annotations: []
   captions: []
   children:
-  - $ref: '#/texts/246'
-  - $ref: '#/texts/247'
-  - $ref: '#/texts/248'
-  - $ref: '#/texts/249'
-  - $ref: '#/texts/250'
-  - $ref: '#/texts/251'
-  - $ref: '#/texts/252'
-  - $ref: '#/texts/253'
-  - $ref: '#/texts/254'
-  - $ref: '#/texts/255'
-  - $ref: '#/texts/256'
-  - $ref: '#/texts/257'
-  - $ref: '#/texts/258'
-  - $ref: '#/texts/259'
-  - $ref: '#/texts/260'
-  - $ref: '#/texts/261'
+  - $ref: '#/texts/195'
+  - $ref: '#/texts/196'
   content_layer: body
   footnotes: []
   label: picture
@@ -1351,10 +1264,10 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 17.63775634765625
+      b: 17.636474609375
       coord_origin: BOTTOMLEFT
-      l: 18.54257583618164
-      r: 921.5850219726562
+      l: 18.54180335998535
+      r: 921.58447265625
       t: 236.76132202148438
     charspan:
     - 0
@@ -1372,11 +1285,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 48.7840576171875
+      b: 48.78399658203125
       coord_origin: BOTTOMLEFT
-      l: 420.8426208496094
-      r: 575.0469360351562
-      t: 151.028564453125
+      l: 420.84295654296875
+      r: 575.046875
+      t: 151.02862548828125
     charspan:
     - 0
     - 0
@@ -1393,11 +1306,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 92.49444580078125
+      b: 92.49435424804688
       coord_origin: BOTTOMLEFT
       l: 95.46723175048828
       r: 175.63726806640625
-      t: 134.34698486328125
+      t: 134.346923828125
     charspan:
     - 0
     - 0
@@ -1843,44 +1756,6 @@ texts:
     \u91CD\u8981\u8996"
 - children: []
   content_layer: body
-  label: text
-  orig: '?'
-  parent:
-    $ref: '#/pictures/1'
-  prov:
-  - bbox:
-      b: 344.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 111.66666666666667
-      r: 186.33333333333334
-      t: 437.6666666666667
-    charspan:
-    - 0
-    - 1
-    page_no: 4
-  self_ref: '#/texts/19'
-  text: '?'
-- children: []
-  content_layer: body
-  label: text
-  orig: '?'
-  parent:
-    $ref: '#/pictures/1'
-  prov:
-  - bbox:
-      b: 348.0
-      coord_origin: BOTTOMLEFT
-      l: 332.3333333333333
-      r: 411.3333333333333
-      t: 435.0
-    charspan:
-    - 0
-    - 1
-    page_no: 4
-  self_ref: '#/texts/20'
-  text: '?'
-- children: []
-  content_layer: body
   label: section_header
   level: 1
   orig: "\u306A\u305C\u8A8D\u77E5\u75C7\u3092\u5B66\u3076\u306E\u304B"
@@ -1897,7 +1772,7 @@ texts:
     - 0
     - 10
     page_no: 4
-  self_ref: '#/texts/21'
+  self_ref: '#/texts/19'
   text: "\u306A\u305C\u8A8D\u77E5\u75C7\u3092\u5B66\u3076\u306E\u304B"
 - children: []
   content_layer: body
@@ -1919,7 +1794,7 @@ texts:
     - 0
     - 18
     page_no: 4
-  self_ref: '#/texts/22'
+  self_ref: '#/texts/20'
   text: "\u30FB\u8A8D\u77E5\u75C7\u306B\u306A\u3063\u305F\u3089\u4F55\u3082\u308F\u304B\
     \u3089\u306A\u304F\u306A\u308B"
 - children: []
@@ -1941,7 +1816,7 @@ texts:
     - 0
     - 13
     page_no: 4
-  self_ref: '#/texts/23'
+  self_ref: '#/texts/21'
   text: "\u30FB\u666E\u901A\u306E\u751F\u6D3B\u3092\u9001\u308C\u306A\u304F\u306A\u308B"
 - children: []
   content_layer: body
@@ -1961,7 +1836,7 @@ texts:
     - 0
     - 18
     page_no: 4
-  self_ref: '#/texts/24'
+  self_ref: '#/texts/22'
   text: "\u3068\u3044\u3046\u30A4\u30E1\u30FC\u30B8\u3092\u6301\u3063\u3066\u3044\u307E\
     \u305B\u3093\u304B\uFF1F\uFF1F"
 - children: []
@@ -1981,27 +1856,8 @@ texts:
     - 0
     - 9
     page_no: 4
-  self_ref: '#/texts/25'
+  self_ref: '#/texts/23'
   text: "\u6559\u6750\uFF1A 2 \u30DA\u30FC\u30B8"
-- children: []
-  content_layer: body
-  label: text
-  orig: V
-  parent:
-    $ref: '#/pictures/2'
-  prov:
-  - bbox:
-      b: 171.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 134.66666666666669
-      r: 135.66666666666669
-      t: 235.0
-    charspan:
-    - 0
-    - 1
-    page_no: 5
-  self_ref: '#/texts/26'
-  text: V
 - children: []
   content_layer: body
   enumerated: false
@@ -2024,7 +1880,7 @@ texts:
     - 0
     - 49
     page_no: 5
-  self_ref: '#/texts/27'
+  self_ref: '#/texts/24'
   text: "\u30FB\u8A8D\u77E5\u75C7\u304C\u3042\u3063\u3066\u3082\u6D3B\u8E8D\u3057\u3066\
     \u3044\u308B\u4EBA\u306F\u5897\u3048\u3066\u304A\u308A\u3001 \u8A8D\u77E5\u75C7\
     \u306B\u5BFE\u3059\u308B\u6349\u3048\u65B9\u3082 \u5927\u304D\u304F\u5909\u308F\
@@ -2050,7 +1906,7 @@ texts:
     - 0
     - 39
     page_no: 5
-  self_ref: '#/texts/28'
+  self_ref: '#/texts/25'
   text: "\u30FB\u8A8D\u77E5\u75C7\u3068\u3044\u3046\u751F\u6D3B\u306E\u56F0\u96E3\u3092\
     \u62B1\u3048\u3066\u3082\u3001 \u524D\u5411\u304D\u306B\u66AE\u3089\u3057\u3066\
     \u3044\u308B\u4EBA\u304C\u305F\u304F\u3055\u3093\u3044\u307E\u3059\u3002"
@@ -2074,7 +1930,7 @@ texts:
     - 0
     - 25
     page_no: 5
-  self_ref: '#/texts/29'
+  self_ref: '#/texts/26'
   text: "\u30FB\u8B1B\u5EA7\u3067\u8A8D\u77E5\u75C7 \u672C\u4EBA\u3084\u5BB6\u65CF\
     \u306E\u58F0 \u3092\u5B66\u3073\u307E\u3057\u3087\u3046\uFF01\uFF01"
 - children: []
@@ -2098,7 +1954,7 @@ texts:
     - 0
     - 41
     page_no: 5
-  self_ref: '#/texts/30'
+  self_ref: '#/texts/27'
   text: "\u30FB\u8A8D\u77E5\u75C7\u304C\u3042\u3063\u3066\u3082\u306A\u304F\u3066\u3082\
     \u5730\u57DF\u306E\u4E2D\u3067 \u5B89\u5FC3\u3057\u3066\u66AE\u3089\u305B\u308B\
     \u793E\u4F1A \u3092\u8003\u3048\u3066\u307F\u307E\u3057\u3087\u3046\uFF01\uFF01"
@@ -2119,7 +1975,7 @@ texts:
     - 0
     - 9
     page_no: 5
-  self_ref: '#/texts/31'
+  self_ref: '#/texts/28'
   text: "\u6559\u6750\uFF1A 2 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -2140,7 +1996,7 @@ texts:
     - 0
     - 15
     page_no: 6
-  self_ref: '#/texts/32'
+  self_ref: '#/texts/29'
   text: "\uFF11\u3001\u308F\u304C\u3054\u3068\u3068\u3057\u3066\u8003\u3048\u3066\u307F\
     \u3088\u3046"
 - children: []
@@ -2160,7 +2016,7 @@ texts:
     - 0
     - 7
     page_no: 6
-  self_ref: '#/texts/33'
+  self_ref: '#/texts/30'
   text: "\u6559\u6750\uFF1A\uFF14\u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -2182,7 +2038,7 @@ texts:
     - 0
     - 38
     page_no: 7
-  self_ref: '#/texts/34'
+  self_ref: '#/texts/31'
   text: "\u25CF\u8A8D\u77E5\u75C7\u3068\u306F \uFF1A\u8133\u306E\u75BE\u60A3\u306B\
     \u3088\u308A\u3001\u8A8D\u77E5\u6A5F\u80FD\u304C\u4F4E\u4E0B\u3057\u65E5\u5E38\
     \u751F\u6D3B\u306B\u4E0D\u5177\u5408\u304C\u751F\u3058\u308B\u72B6\u614B"
@@ -2203,7 +2059,7 @@ texts:
     - 0
     - 6
     page_no: 7
-  self_ref: '#/texts/35'
+  self_ref: '#/texts/32'
   text: "\u5E74\u9F62\u304C\u9AD8\u304F\u306A"
 - children: []
   content_layer: body
@@ -2222,7 +2078,7 @@ texts:
     - 0
     - 6
     page_no: 7
-  self_ref: '#/texts/36'
+  self_ref: '#/texts/33'
   text: "\u8EAB\u8FD1\u306A\u4EBA\u304C\u8A8D"
 - children: []
   content_layer: body
@@ -2241,7 +2097,7 @@ texts:
     - 0
     - 12
     page_no: 7
-  self_ref: '#/texts/37'
+  self_ref: '#/texts/34'
   text: "\u5E74\u9F62\u968E\u7D1A\u5225\u306E\u8A8D\u77E5\u75C7\u6709\u75C5\u7387"
 - children: []
   content_layer: body
@@ -2260,7 +2116,7 @@ texts:
     - 0
     - 8
     page_no: 7
-  self_ref: '#/texts/38'
+  self_ref: '#/texts/35'
   text: GLYPH<1>
 - children: []
   content_layer: body
@@ -2279,7 +2135,7 @@ texts:
     - 0
     - 2
     page_no: 7
-  self_ref: '#/texts/39'
+  self_ref: '#/texts/36'
   text: "\u26AB\uFE0E"
 - children: []
   content_layer: body
@@ -2298,7 +2154,7 @@ texts:
     - 0
     - 8
     page_no: 7
-  self_ref: '#/texts/40'
+  self_ref: '#/texts/37'
   text: GLYPH<3>
 - children: []
   content_layer: body
@@ -2317,673 +2173,8 @@ texts:
     - 0
     - 2
     page_no: 7
-  self_ref: '#/texts/41'
+  self_ref: '#/texts/38'
   text: "\u81EA\u5206"
-- children: []
-  content_layer: body
-  label: text
-  orig: '71.8'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 320.7291666666667
-      coord_origin: BOTTOMLEFT
-      l: 820.49951171875
-      r: 852.477294921875
-      t: 334.8611145019531
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/42'
-  text: '71.8'
-- children: []
-  content_layer: body
-  label: text
-  orig: 70%
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 310.36574300130206
-      coord_origin: BOTTOMLEFT
-      l: 298.97882080078125
-      r: 329.5458577473958
-      t: 325.91087849934894
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/43'
-  text: 70%
-- children: []
-  content_layer: body
-  label: text
-  orig: '48.5'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 290.5810241699219
-      coord_origin: BOTTOMLEFT
-      l: 704.8150227864584
-      r: 736.7928059895834
-      t: 307.5393575032552
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/44'
-  text: '48.5'
-- children: []
-  content_layer: body
-  label: text
-  orig: '64.2'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 286.8125
-      coord_origin: BOTTOMLEFT
-      l: 820.9697265625
-      r: 853.4178059895834
-      t: 302.35764567057294
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/45'
-  text: '64.2'
-- children: []
-  content_layer: body
-  label: text
-  orig: 60%
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 269.38310750325525
-      coord_origin: BOTTOMLEFT
-      l: 298.97882080078125
-      r: 329.0756022135417
-      t: 286.34144083658856
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/46'
-  text: 60%
-- children: []
-  content_layer: body
-  label: text
-  orig: '44.3'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 267.96990966796875
-      coord_origin: BOTTOMLEFT
-      l: 705.7555338541666
-      r: 735.852294921875
-      t: 283.5150451660156
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/47'
-  text: '44.3'
-- children: []
-  content_layer: body
-  label: text
-  orig: '35.6'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 244.41666666666663
-      coord_origin: BOTTOMLEFT
-      l: 705.7555338541666
-      r: 735.382080078125
-      t: 260.432871500651
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/48'
-  text: '35.6'
-- children: []
-  content_layer: body
-  label: text
-  orig: 50%
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 229.34259033203125
-      coord_origin: BOTTOMLEFT
-      l: 299.9193522135417
-      r: 329.5458577473958
-      t: 244.88773600260413
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/49'
-  text: 50%
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5168\u4F53"
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 207.67362467447913
-      coord_origin: BOTTOMLEFT
-      l: 886.336181640625
-      r: 940.4163411458334
-      t: 225.57407633463538
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/50'
-  text: "\u5168\u4F53"
-- children: []
-  content_layer: body
-  label: text
-  orig: '24.0'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 198.723388671875
-      coord_origin: BOTTOMLEFT
-      l: 623.4596761067709
-      r: 653.5564371744791
-      t: 214.73958333333337
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/51'
-  text: '24.0'
-- children: []
-  content_layer: body
-  label: text
-  orig: '42.4'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 199.66550699869788
-      coord_origin: BOTTOMLEFT
-      l: 823.7913411458334
-      r: 851.5367838541666
-      t: 213.79746500651038
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/52'
-  text: '42.4'
-- children: []
-  content_layer: body
-  label: text
-  orig: 40%
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 188.83101399739587
-      coord_origin: BOTTOMLEFT
-      l: 299.9193522135417
-      r: 329.0756022135417
-      t: 204.37615966796875
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/53'
-  text: 40%
-- children: []
-  content_layer: body
-  label: text
-  orig: "+\u7537\u6027"
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 183.17824300130212
-      coord_origin: BOTTOMLEFT
-      l: 884.4551595052084
-      r: 939.0055338541666
-      t: 201.07871500651038
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/54'
-  text: "+\u7537\u6027"
-- children: []
-  content_layer: body
-  label: text
-  orig: '22.4'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 174.22800699869788
-      coord_origin: BOTTOMLEFT
-      l: 623.929931640625
-      r: 653.5564371744791
-      t: 190.24422200520837
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/55'
-  text: '22.4'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5973\u6027"
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 160.567138671875
-      coord_origin: BOTTOMLEFT
-      l: 899.9737955729166
-      r: 939.475830078125
-      t: 177.52547200520837
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/56'
-  text: "\u5973\u6027"
-- children: []
-  content_layer: body
-  label: text
-  orig: 30%
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 148.79050699869794
-      coord_origin: BOTTOMLEFT
-      l: 299.4490966796875
-      r: 329.0756022135417
-      t: 164.33565266927087
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/57'
-  text: 30%
-- children: []
-  content_layer: body
-  label: text
-  orig: '20.0'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 150.67476399739581
-      coord_origin: BOTTOMLEFT
-      l: 623.929931640625
-      r: 653.5564371744791
-      t: 166.69097900390625
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/58'
-  text: '20.0'
-- children: []
-  content_layer: body
-  label: text
-  orig: '11.0'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 137.01389567057294
-      coord_origin: BOTTOMLEFT
-      l: 538.3422444661459
-      r: 566.0876871744791
-      t: 153.03009033203125
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/59'
-  text: '11.0'
-- children: []
-  content_layer: body
-  label: text
-  orig: '10.4'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 112.04746500651044
-      coord_origin: BOTTOMLEFT
-      l: 538.3422444661459
-      r: 567.96875
-      t: 129.47684733072919
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/60'
-  text: '10.4'
-- children: []
-  content_layer: body
-  label: text
-  orig: 20%
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 108.27895100911456
-      coord_origin: BOTTOMLEFT
-      l: 299.9193522135417
-      r: 329.5458577473958
-      t: 124.29514567057294
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/61'
-  text: 20%
-- children: []
-  content_layer: body
-  label: text
-  orig: '3.8'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 107.33681233723956
-      coord_origin: BOTTOMLEFT
-      l: 456.5166422526042
-      r: 480.0297444661458
-      t: 123.82407633463544
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/62'
-  text: '3.8'
-- children: []
-  content_layer: body
-  label: text
-  orig: '1.6'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 98.38657633463544
-      coord_origin: BOTTOMLEFT
-      l: 375.6315511067708
-      r: 397.2635904947917
-      t: 115.34490966796875
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/63'
-  text: '1.6'
-- children: []
-  content_layer: body
-  label: text
-  orig: '3.6'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 85.19675699869794
-      coord_origin: BOTTOMLEFT
-      l: 456.9868977864583
-      r: 480.0297444661458
-      t: 101.68404134114581
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/64'
-  text: '3.6'
-- children: []
-  content_layer: body
-  label: text
-  orig: '9.6'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 88.02315266927081
-      coord_origin: BOTTOMLEFT
-      l: 538.3422444661459
-      r: 560.4445393880209
-      t: 104.51041666666669
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/65'
-  text: '9.6'
-- children: []
-  content_layer: body
-  label: text
-  orig: '1.5'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 75.77547200520831
-      coord_origin: BOTTOMLEFT
-      l: 376.5720621744792
-      r: 396.7933349609375
-      t: 91.32061767578125
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/66'
-  text: '1.5'
-- children: []
-  content_layer: body
-  label: text
-  orig: 10%
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 68.23844401041669
-      coord_origin: BOTTOMLEFT
-      l: 299.9193522135417
-      r: 329.5458577473958
-      t: 83.7835693359375
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/67'
-  text: 10%
-- children: []
-  content_layer: body
-  label: text
-  orig: '3.4'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 60.701375325520814
-      coord_origin: BOTTOMLEFT
-      l: 456.9868977864583
-      r: 480.0297444661458
-      t: 77.18865966796875
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/68'
-  text: '3.4'
-- children: []
-  content_layer: body
-  label: text
-  orig: '1.5'
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 50.337972005208314
-      coord_origin: BOTTOMLEFT
-      l: 375.1612955729167
-      r: 397.2635904947917
-      t: 66.82523600260419
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/69'
-  text: '1.5'
-- children: []
-  content_layer: body
-  label: text
-  orig: 0%
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 27.726847330729242
-      coord_origin: BOTTOMLEFT
-      l: 305.5625
-      r: 330.01613362630206
-      t: 43.743082682291686
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/70'
-  text: 0%
-- children: []
-  content_layer: body
-  label: text
-  orig: 65-69
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 13.594930013020758
-      coord_origin: BOTTOMLEFT
-      l: 359.17236328125
-      r: 396.3230794270833
-      t: 28.668986002604186
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/71'
-  text: 65-69
-- children: []
-  content_layer: body
-  label: text
-  orig: 70-74
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 12.652791341145758
-      coord_origin: BOTTOMLEFT
-      l: 446.64111328125
-      r: 485.2025960286458
-      t: 29.140055338541686
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/72'
-  text: 70-74
-- children: []
-  content_layer: body
-  label: text
-  orig: 75-79
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 12.652791341145758
-      coord_origin: BOTTOMLEFT
-      l: 533.1693522135416
-      r: 571.7308349609375
-      t: 29.140055338541686
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/73'
-  text: 75-79
-- children: []
-  content_layer: body
-  label: text
-  orig: 80-84
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 13.594930013020758
-      coord_origin: BOTTOMLEFT
-      l: 621.1083577473959
-      r: 659.1995849609375
-      t: 28.668986002604186
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/74'
-  text: 80-84
-- children: []
-  content_layer: body
-  label: text
-  orig: 85-89
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 12.652791341145758
-      coord_origin: BOTTOMLEFT
-      l: 708.1068522135416
-      r: 746.1980794270834
-      t: 29.140055338541686
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/75'
-  text: 85-89
-- children: []
-  content_layer: body
-  label: text
-  orig: 90+
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 10.768513997395758
-      coord_origin: BOTTOMLEFT
-      l: 800.7484537760416
-      r: 836.0181477864584
-      t: 30.553263346354186
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/76'
-  text: 90+
 - children: []
   content_layer: body
   label: text
@@ -3001,7 +2192,7 @@ texts:
     - 0
     - 6
     page_no: 7
-  self_ref: '#/texts/77'
+  self_ref: '#/texts/39'
   text: "\u6559\u6750\uFF1A\uFF14\u30DA\u30FC"
 - children: []
   content_layer: body
@@ -3026,7 +2217,7 @@ texts:
     - 0
     - 59
     page_no: 8
-  self_ref: '#/texts/78'
+  self_ref: '#/texts/40'
   text: "\u25CF\u8A8D\u77E5\u75C7\u30B5\u30DD\u30FC\u30BF\u30FC\u3068\u306F \uFF1A\
     \u8A8D\u77E5\u75C7\u306B\u3064\u3044\u3066\u6B63\u3057\u304F\u7406\u89E3\u3057\
     \u3001\u504F\u898B\u3092\u6301\u305F\u305A\u3001 \u8A8D\u77E5\u75C7\u306E\u4EBA\
@@ -3049,7 +2240,7 @@ texts:
     - 0
     - 2
     page_no: 8
-  self_ref: '#/texts/79'
+  self_ref: '#/texts/41'
   text: "\u504F\u898B"
 - children: []
   content_layer: body
@@ -3068,7 +2259,7 @@ texts:
     - 0
     - 2
     page_no: 8
-  self_ref: '#/texts/80'
+  self_ref: '#/texts/42'
   text: "\u5FDC\u63F4"
 - children: []
   content_layer: body
@@ -3087,7 +2278,7 @@ texts:
     - 0
     - 3
     page_no: 8
-  self_ref: '#/texts/81'
+  self_ref: '#/texts/43'
   text: "\u3067\u3059\u3002"
 - children: []
   content_layer: body
@@ -3106,7 +2297,7 @@ texts:
     - 0
     - 13
     page_no: 8
-  self_ref: '#/texts/82'
+  self_ref: '#/texts/44'
   text: "\u4F55\u304B\u7279\u5225\u306A\u3053 \u7121\u95A2\u5FC3\u3067\u306F\u306A"
 - children: []
   content_layer: body
@@ -3125,7 +2316,7 @@ texts:
     - 0
     - 7
     page_no: 8
-  self_ref: '#/texts/83'
+  self_ref: '#/texts/45'
   text: "\u6559\u6750\uFF1A\uFF15\u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -3146,7 +2337,7 @@ texts:
     - 0
     - 23
     page_no: 9
-  self_ref: '#/texts/84'
+  self_ref: '#/texts/46'
   text: "\u25CF\u8A8D\u77E5\u75C7\u30B5\u30DD\u30FC\u30BF\u30FC\u306F\u3069\u3093\u306A\
     \u3053\u3068\u3092\u3057\u3066\u3044\u308B\u306E \uFF1A"
 - children: []
@@ -3171,7 +2362,7 @@ texts:
     - 0
     - 75
     page_no: 9
-  self_ref: '#/texts/85'
+  self_ref: '#/texts/47'
   text: "\u8FD1\u6240\u306E\u8A8D\u77E5\u75C7\u306E\u65B9\u3092 \u3055\u308A\u3052\
     \u306A\u304F\u6C17\u306B\u304B\u3051\u308B \u3002 \u89AA\u8EAB\u306B \u8A71\u3092\
     \u805E\u3044\u305F\u308A\u3001\u76F8\u8AC7\u306B\u4E57\u308B \u3002 \u5730\u57DF\
@@ -3197,7 +2388,7 @@ texts:
     - 0
     - 31
     page_no: 9
-  self_ref: '#/texts/86'
+  self_ref: '#/texts/48'
   text: "\u4ED6\u3001 \u8A8D\u77E5\u75C7\u30AB\u30D5\u30A7 \u3084 \u30B5\u30ED\u30F3\
     \ \u306A\u3069\u4E00\u6B69\u9032\u3093\u3060\u6D3B\u52D5\u3082\u3042\u308A\u307E\
     \u3059\u3002"
@@ -3225,7 +2416,7 @@ texts:
     - 0
     - 72
     page_no: 9
-  self_ref: '#/texts/87'
+  self_ref: '#/texts/49'
   text: "\u25CF\u30C1\u30FC\u30E0\u30AA\u30EC\u30F3\u30B8 \uFF1A\u5730\u57DF\u3067\
     \u66AE\u3089\u3059\u8A8D\u77E5\u75C7\u306E\u4EBA\u3084\u5BB6\u65CF\u306E\u56F0\
     \u308A\u3054\u3068\u306E\u652F\u63F4\u30CB\u30FC\u30BA\u3068 \u8A8D\u77E5\u75C7\
@@ -3250,7 +2441,7 @@ texts:
     - 0
     - 19
     page_no: 9
-  self_ref: '#/texts/88'
+  self_ref: '#/texts/50'
   text: "\u4E09\u90F7\u5E02\u306B\u304A\u3044\u3066\u3082\u73FE\u5728\uFF16\u56E3\u4F53\
     \u304C\u3042\u308A\u307E\u3059\u3002"
 - children: []
@@ -3270,7 +2461,7 @@ texts:
     - 0
     - 9
     page_no: 9
-  self_ref: '#/texts/89'
+  self_ref: '#/texts/51'
   text: "\u6559\u6750\uFF1A\uFF15\u3001\uFF16\u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -3290,7 +2481,7 @@ texts:
     - 0
     - 9
     page_no: 10
-  self_ref: '#/texts/90'
+  self_ref: '#/texts/52'
   text: "\uFF12\u3001\u8A8D\u77E5\u75C7\u3068\u3068\u3082\u306B"
 - children: []
   content_layer: body
@@ -3311,7 +2502,7 @@ texts:
     - 0
     - 30
     page_no: 10
-  self_ref: '#/texts/91'
+  self_ref: '#/texts/53'
   text: "\u5F53\u4E8B\u8005\u304B\u3089\u8A8D\u77E5\u75C7\u30B5\u30DD\u30FC\u30BF\u30FC\
     \u306E\u7686\u69D8 \u3078\u3000\u3000\u3000\u3000\u3000\u4ECA\u4F1D\u3048\u305F\
     \u3044\u3053\u3068"
@@ -3332,7 +2523,7 @@ texts:
     - 0
     - 7
     page_no: 10
-  self_ref: '#/texts/92'
+  self_ref: '#/texts/54'
   text: "\u6559\u6750\uFF1A\uFF17\u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -3353,7 +2544,7 @@ texts:
     - 0
     - 16
     page_no: 11
-  self_ref: '#/texts/93'
+  self_ref: '#/texts/55'
   text: "\u300C\u8A8D\u77E5\u75C7\u3068\u3068\u3082\u306B\u751F\u304D\u308B\u5E0C\u671B\
     \u5BA3\u8A00\u300D"
 - children: []
@@ -3375,7 +2566,7 @@ texts:
     - 0
     - 24
     page_no: 11
-  self_ref: '#/texts/94'
+  self_ref: '#/texts/56'
   text: "\u3072\u3068\u8DB3\u5148\u306B\u8A8D\u77E5\u75C7\u306B\u306A\u3063\u305F\u79C1\
     \u305F\u3061\u304B\u3089\u5168\u3066\u306E\u4EBA\u305F\u3061\u3078"
 - children: []
@@ -3399,7 +2590,7 @@ texts:
     - 0
     - 34
     page_no: 11
-  self_ref: '#/texts/95'
+  self_ref: '#/texts/57'
   text: "\uFF11\u3001\u81EA\u5206\u81EA\u8EAB\u304C\u3068\u3089\u308F\u308C\u3066\u3044\
     \u308B\u5E38\u8B58\u306E\u6BBB\u3092\u7834\u308A\u3001\u524D\u3092\u5411\u3044\
     \u3066\u751F\u304D\u3066\u3044\u304D\u307E\u3059"
@@ -3425,7 +2616,7 @@ texts:
     - 0
     - 53
     page_no: 11
-  self_ref: '#/texts/96'
+  self_ref: '#/texts/58'
   text: "\uFF12\u3001\u81EA\u5206\u306E\u529B\u3092\u6D3B\u304B\u3057\u3066\u3001\u5927\
     \u5207\u306B\u3057\u305F\u3044\u66AE\u3089\u3057\u3092\u7D9A\u3051\u3001\u793E\
     \u4F1A\u306E\u4E00\u54E1\u3068\u3057\u3066\u3001 \u697D\u3057\u307F\u306A\u304C\
@@ -3452,7 +2643,7 @@ texts:
     - 0
     - 44
     page_no: 11
-  self_ref: '#/texts/97'
+  self_ref: '#/texts/59'
   text: "\uFF13\u3001\u79C1\u305F\u3061\u672C\u4EBA\u540C\u58EB\u304C\u3001\u51FA\u4F1A\
     \u3044\u3001\u3064\u306A\u304C\u308A\u3001\u751F\u304D\u308B\u529B\u3092\u308F\
     \u304D\u7ACB\u305F\u305B\u3001\u5143\u6C17\u306B \u66AE\u3089\u3057\u3066\u3044\
@@ -3479,7 +2670,7 @@ texts:
     - 0
     - 51
     page_no: 11
-  self_ref: '#/texts/98'
+  self_ref: '#/texts/60'
   text: "\uFF14\u3001\u81EA\u5206\u306E\u601D\u3044\u3084\u5E0C\u671B\u3092\u4F1D\u3048\
     \u306A\u304C\u3089\u3001\u5473\u65B9\u306B\u306A\u3063\u3066\u304F\u308C\u308B\
     \u4EBA\u305F\u3061\u3092\u8EAB\u8FD1\u306A \u307E\u3061\u3067\u898B\u3064\u3051\
@@ -3506,7 +2697,7 @@ texts:
     - 0
     - 45
     page_no: 11
-  self_ref: '#/texts/99'
+  self_ref: '#/texts/61'
   text: "\uFF15\u3001\u8A8D\u77E5\u75C7\u3068\u3068\u3082\u306B\u751F\u304D\u3066\u308B\
     \u4F53\u9A13\u3084\u5DE5\u592B\u3092\u6D3B\u304B\u3057\u3001\u66AE\u3089\u3057\
     \u3084\u3059\u3044\u308F\u304C\u307E\u3061 \u3092\u4E00\u7DD2\u306B\u4F5C\u3063\
@@ -3528,7 +2719,7 @@ texts:
     - 0
     - 7
     page_no: 11
-  self_ref: '#/texts/100'
+  self_ref: '#/texts/62'
   text: "\u6559\u6750\uFF1A\uFF17\u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -3549,7 +2740,7 @@ texts:
     - 0
     - 26
     page_no: 12
-  self_ref: '#/texts/101'
+  self_ref: '#/texts/63'
   text: "\u3044\u3044\u65E5\u3005\u3001\u3044\u3044\u4EBA\u751F\u3092\u3001\u5730\u57DF\
     \u306E\u4E2D\u3067\u5148\u8F29\u304B\u3089\u306E\u30A2\u30C9\u30D0\u30A4\u30B9"
 - children: []
@@ -3569,7 +2760,7 @@ texts:
     - 0
     - 11
     page_no: 12
-  self_ref: '#/texts/102'
+  self_ref: '#/texts/64'
   text: "\u2460\u5909\u5316\u306B\u6C17\u3065\u304D\u59CB\u3081\u305F\u9803"
 - children: []
   content_layer: body
@@ -3588,7 +2779,7 @@ texts:
     - 0
     - 12
     page_no: 12
-  self_ref: '#/texts/103'
+  self_ref: '#/texts/65'
   text: "\u2461\u5143\u6C17\u306B\u81EA\u5206\u3089\u3057\u304F\u66AE\u3089\u3059"
 - children: []
   content_layer: body
@@ -3609,7 +2800,7 @@ texts:
     - 0
     - 28
     page_no: 12
-  self_ref: '#/texts/104'
+  self_ref: '#/texts/66'
   text: "\u5FC3\u60C5\u3000\u3000\uFF1A\u4E0D\u5B89\u3001\u5FC3\u914D\u3001\u5916\u306B\
     \u51FA\u305F\u304F\u306A\u3044\u3001\u55A7\u5629\u3057\u3066\u3057\u307E\u3046\
     \u306A\u3069"
@@ -3632,7 +2823,7 @@ texts:
     - 0
     - 35
     page_no: 12
-  self_ref: '#/texts/105'
+  self_ref: '#/texts/67'
   text: "\u5B9F\u969B\u306E\u58F0\uFF1A\u300C\u81EA\u5206\u306F\u3053\u308C\u304B\u3089\
     \u3069\u3046\u306A\u3063\u3066\u3057\u307E\u3046\u306E\u304B\u300D \u300C\u4EBA\
     \u306B\u4F1A\u3044\u305F\u304F\u306A\u3044\u300D"
@@ -3654,7 +2845,7 @@ texts:
     - 0
     - 17
     page_no: 12
-  self_ref: '#/texts/106'
+  self_ref: '#/texts/68'
   text: "\u30DD\u30A4\u30F3\u30C8\u2460\uFF1A\u81EA\u5206\u306A\u308A\u306E\u751F\u6D3B\
     \u3092\u7D9A\u3051\u308B"
 - children: []
@@ -3675,7 +2866,7 @@ texts:
     - 0
     - 17
     page_no: 12
-  self_ref: '#/texts/107'
+  self_ref: '#/texts/69'
   text: "\u30DD\u30A4\u30F3\u30C8\u2461\uFF1A\u5730\u57DF\u306B\u3044\u308B\u4EF2\u9593\
     \u3068\u51FA\u4F1A\u3046"
 - children: []
@@ -3697,7 +2888,7 @@ texts:
     - 0
     - 39
     page_no: 12
-  self_ref: '#/texts/108'
+  self_ref: '#/texts/70'
   text: "\u672C\u4EBA\u306F\u3069\u306E\u3088\u3046\u306A\u6C17\u6301\u3061\u306A\u306E\
     \u304B \u3068\u3082\u306B\u751F\u304D\u308B\u5BB6\u65CF\u3078\u306E\u30E1\u30C3\
     \u30BB\u30FC\u30B8 \u306B\u3064\u307E\u3063\u3066\u3044\u307E\u3059"
@@ -3718,7 +2909,7 @@ texts:
     - 0
     - 9
     page_no: 12
-  self_ref: '#/texts/109'
+  self_ref: '#/texts/71'
   text: "\u6559\u6750\uFF1A\uFF18\u3001\uFF19\u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -3739,7 +2930,7 @@ texts:
     - 0
     - 14
     page_no: 13
-  self_ref: '#/texts/110'
+  self_ref: '#/texts/72'
   text: "\u8A8D\u77E5\u75C7\u306E\u4EBA\u3068\u3068\u3082\u306B\u751F\u304D\u308B\u5BB6\
     \u65CF"
 - children: []
@@ -3760,7 +2951,7 @@ texts:
     - 0
     - 24
     page_no: 13
-  self_ref: '#/texts/111'
+  self_ref: '#/texts/73'
   text: "\u5BB6\u65CF\u306E\u5FC3\u60C5\u306E\u5909\u5316\u306F\u3069\u306E\u3088\u3046\
     \u306B\u8D77\u3053\u308B\u306E\u3067\u3057\u3087\u3046\u304B\uFF1F"
 - children: []
@@ -3781,7 +2972,7 @@ texts:
     - 0
     - 14
     page_no: 13
-  self_ref: '#/texts/112'
+  self_ref: '#/texts/74'
   text: "\u7B2C\uFF11\u30B9\u30C6\u30C3\u30D7 \u3068\u307E\u3069\u3044\u30FB\u5426\
     \u5B9A"
 - children: []
@@ -3802,7 +2993,7 @@ texts:
     - 0
     - 15
     page_no: 13
-  self_ref: '#/texts/113'
+  self_ref: '#/texts/75'
   text: "\u7B2C\uFF12\u30B9\u30C6\u30C3\u30D7 \u6DF7\u4E71\u30FB\u6012\u308A\u30FB\
     \u62D2\u7D76"
 - children: []
@@ -3822,7 +3013,7 @@ texts:
     - 0
     - 11
     page_no: 13
-  self_ref: '#/texts/114'
+  self_ref: '#/texts/76'
   text: "\u7B2C\uFF13\u30B9\u30C6\u30C3\u30D7 \u5272\u308A\u5207\u308A"
 - children: []
   content_layer: body
@@ -3841,7 +3032,7 @@ texts:
     - 0
     - 9
     page_no: 13
-  self_ref: '#/texts/115'
+  self_ref: '#/texts/77'
   text: "\u7B2C\uFF14\u30B9\u30C6\u30C3\u30D7 \u53D7\u5BB9"
 - children: []
   content_layer: body
@@ -3860,7 +3051,7 @@ texts:
     - 0
     - 6
     page_no: 13
-  self_ref: '#/texts/116'
+  self_ref: '#/texts/78'
   text: "\u884C\u304D\u3064\u623B\u308A\u3064"
 - children: []
   content_layer: furniture
@@ -3879,7 +3070,7 @@ texts:
     - 0
     - 10
     page_no: 13
-  self_ref: '#/texts/117'
+  self_ref: '#/texts/79'
   text: "\u6559\u6750\uFF1A 10 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -3900,7 +3091,7 @@ texts:
     - 0
     - 21
     page_no: 14
-  self_ref: '#/texts/118'
+  self_ref: '#/texts/80'
   text: "\u5468\u308A\u306E\u4EBA\u306F\u3069\u306E\u3088\u3046\u306A\u5FC3\u304C\u3051\
     \u304C\u5FC5\u8981\u3067\u3057\u3087\u3046\u304B"
 - children: []
@@ -3921,7 +3112,7 @@ texts:
     - 0
     - 17
     page_no: 14
-  self_ref: '#/texts/119'
+  self_ref: '#/texts/81'
   text: "\u3055\u308C\u305F\u3089\u5ACC\u306A\u601D\u3044\u3092\u3059\u308B\u3053\u3068\
     \u306F\u3001\u3001\u3001"
 - children: []
@@ -3942,7 +3133,7 @@ texts:
     - 0
     - 16
     page_no: 14
-  self_ref: '#/texts/120'
+  self_ref: '#/texts/82'
   text: "\u5931\u6557\u3084\u3067\u304D\u306A\u3044\u3053\u3068\u3092 \u6307\u6458\
     \u3055\u308C\u308B"
 - children: []
@@ -3964,7 +3155,7 @@ texts:
     - 0
     - 32
     page_no: 14
-  self_ref: '#/texts/121'
+  self_ref: '#/texts/83'
   text: "\u4F55\u3082\u3057\u306A\u3044\u3046\u3061\u304B\u3089\u3001 \u3044\u308D\
     \u3044\u308D\u3067\u304D\u306A\u3044\u304B\u306E \u3088\u3046\u306A\u614B\u5EA6\
     \u3092\u53D6\u3089\u308C\u308B"
@@ -3987,7 +3178,7 @@ texts:
     - 0
     - 32
     page_no: 14
-  self_ref: '#/texts/122'
+  self_ref: '#/texts/84'
   text: "\u3067\u306F\u5468\u308A\u306E\u4EBA\u306F\u3001\u3069\u306E\u3088\u3046\u306A\
     \u3053\u3068\u3092\u6C17\u306B \u7559 \u3081\u305F\u3089 \u826F \u3044\u306E\u304B\
     \uFF1F\uFF1F"
@@ -4011,7 +3202,7 @@ texts:
     - 0
     - 41
     page_no: 14
-  self_ref: '#/texts/123'
+  self_ref: '#/texts/85'
   text: "\u300C\u8A8D\u77E5\u75C7\u3060\u304B\u3089\u300D\u306E\u524D \u63D0 \u3092\
     \u53D6\u308A \u6255 \u3046 GLYPH<1> \u26AB\uFE0E GLYPH<3>"
 - children: []
@@ -4035,7 +3226,7 @@ texts:
     - 0
     - 40
     page_no: 14
-  self_ref: '#/texts/124'
+  self_ref: '#/texts/86'
   text: "\u2192\u305D \u3053\u306B\u3044\u308B\u306E\u306F \u300C\u8A8D\u77E5\u75C7\
     \u306E\u4EBA\u300D\u3067\u306F\u306A\u304F\u3001\u3007\u3007\u3055\u3093\u304C\
     \u8A8D\u77E5\u75C7\u306B\u306A\u3063\u305F\u3060\u3051 \u306E\u3053\u3068"
@@ -4059,7 +3250,7 @@ texts:
     - 0
     - 37
     page_no: 14
-  self_ref: '#/texts/125'
+  self_ref: '#/texts/87'
   text: "\u5F97\u610F \u306A\u3053\u3068\u3092 \u983C \u308A\u306B\u3057\u3001\u529B\
     \u3092 \u767A\u63EE \u3057\u3066\u3082\u3089\u3046 \u26AB\uFE0E GLYPH<3>"
 - children: []
@@ -4082,7 +3273,7 @@ texts:
     - 0
     - 23
     page_no: 14
-  self_ref: '#/texts/126'
+  self_ref: '#/texts/88'
   text: "\u2192 \u300C\u671F\u5F85\u3055\u308C\u308B\u300D\u5B58\u5728\u3067\u3042\
     \u308B\u3053\u3068\u306F\u8AB0\u3067\u3082\u5B09\u3057\u3044"
 - children: []
@@ -4105,7 +3296,7 @@ texts:
     - 0
     - 35
     page_no: 14
-  self_ref: '#/texts/127'
+  self_ref: '#/texts/89'
   text: "\u91CD\u8981 \u306A\u3053\u3068\u307B\u3069\u3001\u3058\u3063\u304F\u308A\
     \u8A71\u3057\u5408\u3063\u3066 \u6C7A \u3081\u308B \u26AB\uFE0E GLYPH<3>"
 - children: []
@@ -4129,7 +3320,7 @@ texts:
     - 0
     - 37
     page_no: 14
-  self_ref: '#/texts/128'
+  self_ref: '#/texts/90'
   text: "\u2192\u76F8\u624B \u306E\u81EA \u5C0A \u5FC3\u3084 \u610F\u5FD7 \u3092 \u8511\
     \ \u308D\u306B\u3057\u3066\u306F \u9006\u52B9\u679C \u3068\u306A\u308B\u3053\u3068\
     \u3082\u3042\u308B"
@@ -4151,7 +3342,7 @@ texts:
     - 0
     - 25
     page_no: 14
-  self_ref: '#/texts/129'
+  self_ref: '#/texts/91'
   text: "\u4E00\u65B9\u7684\u306B\u5468 \u56F2 \u304B\u3089\u4F55\u304B \u3057\u3066\
     \u3082\u3089\u3046\u7ACB \u5834 \u306B\u306A\u308B"
 - children: []
@@ -4171,7 +3362,7 @@ texts:
     - 0
     - 10
     page_no: 14
-  self_ref: '#/texts/130'
+  self_ref: '#/texts/92'
   text: "\u6559\u6750\uFF1A 12 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -4190,7 +3381,7 @@ texts:
     - 0
     - 7
     page_no: 15
-  self_ref: '#/texts/131'
+  self_ref: '#/texts/93'
   text: "1 \u9A5A\u304B\u305B\u306A\u3044"
 - children: []
   content_layer: body
@@ -4211,7 +3402,7 @@ texts:
     - 0
     - 17
     page_no: 15
-  self_ref: '#/texts/132'
+  self_ref: '#/texts/94'
   text: "\u25CE\u8A8D\u77E5\u75C7\u306E\u4EBA\u306B\u63A5\u3059\u308B\u969B\u306E\uFF13\
     \u3064\u306E\u306A\u3044"
 - children: []
@@ -4231,7 +3422,7 @@ texts:
     - 0
     - 7
     page_no: 15
-  self_ref: '#/texts/133'
+  self_ref: '#/texts/95'
   text: "2 \u6025\u304C\u305B\u306A\u3044"
 - children: []
   content_layer: body
@@ -4252,7 +3443,7 @@ texts:
     - 0
     - 11
     page_no: 15
-  self_ref: '#/texts/134'
+  self_ref: '#/texts/96'
   text: "3 \u81EA\u5C0A\u5FC3\u3092\u50B7\u3064\u3051\u306A\u3044"
 - children: []
   content_layer: body
@@ -4273,7 +3464,7 @@ texts:
     - 0
     - 23
     page_no: 15
-  self_ref: '#/texts/135'
+  self_ref: '#/texts/97'
   text: "\u25CE\u8A8D\u77E5\u75C7\u306E\u4EBA\u306B\u63A5\u3059\u308B\u969B\u306E\u5177\
     \u4F53\u7684\u306A\uFF17\u3064\u306E\u30DD\u30A4\u30F3\u30C8"
 - children: []
@@ -4295,7 +3486,7 @@ texts:
     - 0
     - 8
     page_no: 15
-  self_ref: '#/texts/136'
+  self_ref: '#/texts/98'
   text: "\uFF11 \u307E\u305A\u306F\u898B\u5B88\u308B"
 - children: []
   content_layer: body
@@ -4316,7 +3507,7 @@ texts:
     - 0
     - 15
     page_no: 15
-  self_ref: '#/texts/137'
+  self_ref: '#/texts/99'
   text: "\uFF13 \u58F0\u3092\u304B\u3051\u308B\u3068\u304D\u306F 1 \u4EBA\u3067"
 - children: []
   content_layer: body
@@ -4335,7 +3526,7 @@ texts:
     - 0
     - 12
     page_no: 15
-  self_ref: '#/texts/138'
+  self_ref: '#/texts/100'
   text: "\uFF12 \u4F59\u88D5\u3092\u3082\u3063\u3066\u5BFE\u5FDC\u3059\u308B"
 - children: []
   content_layer: body
@@ -4356,7 +3547,7 @@ texts:
     - 0
     - 12
     page_no: 15
-  self_ref: '#/texts/139'
+  self_ref: '#/texts/101'
   text: "\uFF14 \u5F8C\u308D\u304B\u3089\u58F0\u3092\u304B\u3051\u306A\u3044"
 - children: []
   content_layer: body
@@ -4376,7 +3567,7 @@ texts:
     - 0
     - 19
     page_no: 15
-  self_ref: '#/texts/140'
+  self_ref: '#/texts/102'
   text: "\uFF15 \u76F8\u624B\u306B\u76EE\u7DDA\u3092\u5408\u308F\u305B\u3066\u3000\
     \u512A\u3057\u3044\u53E3\u8ABF\u3067"
 - children: []
@@ -4397,7 +3588,7 @@ texts:
     - 0
     - 17
     page_no: 15
-  self_ref: '#/texts/141'
+  self_ref: '#/texts/103'
   text: "\uFF16 \u304A\u3060\u3084\u304B\u306B\u3001\u306F\u3063\u304D\u308A\u3057\
     \u305F\u53E3\u8ABF\u3067"
 - children: []
@@ -4418,7 +3609,7 @@ texts:
     - 0
     - 22
     page_no: 15
-  self_ref: '#/texts/142'
+  self_ref: '#/texts/104'
   text: "\uFF17 \u76F8\u624B\u306E\u8A00\u8449\u306B\u8033\u3092\u50BE\u3051\u3066\
     \u3000\u3086\u3063\u304F\u308A\u5BFE\u5FDC\u3059\u308B"
 - children: []
@@ -4438,7 +3629,7 @@ texts:
     - 0
     - 3
     page_no: 15
-  self_ref: '#/texts/143'
+  self_ref: '#/texts/105'
   text: "\u6559\u6750\uFF1A"
 - children: []
   content_layer: furniture
@@ -4457,7 +3648,7 @@ texts:
     - 0
     - 6
     page_no: 15
-  self_ref: '#/texts/144'
+  self_ref: '#/texts/106'
   text: "13 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -4477,7 +3668,7 @@ texts:
     - 0
     - 10
     page_no: 16
-  self_ref: '#/texts/145'
+  self_ref: '#/texts/107'
   text: "\uFF13\u3001\u8A8D\u77E5\u75C7\u3092\u7406\u89E3\u3059\u308B"
 - children: []
   content_layer: furniture
@@ -4496,7 +3687,7 @@ texts:
     - 0
     - 10
     page_no: 16
-  self_ref: '#/texts/146'
+  self_ref: '#/texts/108'
   text: "\u6559\u6750\uFF1A 14 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -4516,7 +3707,7 @@ texts:
     - 0
     - 7
     page_no: 17
-  self_ref: '#/texts/147'
+  self_ref: '#/texts/109'
   text: "\u8A8D\u77E5\u75C7\u3068\u306F\uFF1F\uFF1F"
 - children: []
   content_layer: body
@@ -4541,7 +3732,7 @@ texts:
     - 0
     - 61
     page_no: 17
-  self_ref: '#/texts/148'
+  self_ref: '#/texts/110'
   text: "\u25CF\u8A8D\u77E5\u75C7\u3068\u306F \u69D8\u3005\u306A\u539F\u56E0\u306B\
     \u3088\u308A\u8133\u306B\u5909\u5316\u304C\u8D77\u3053\u308A \u3001\u3053\u308C\
     \u307E\u3067\u3067\u304D\u305F\u3053\u3068\u304C\u3067\u304D\u306A\u304F\u306A\
@@ -4566,7 +3757,7 @@ texts:
     - 0
     - 13
     page_no: 17
-  self_ref: '#/texts/149'
+  self_ref: '#/texts/111'
   text: "\u25CB\u539F\u56E0\u3068\u306A\u308B\u75BE\u60A3\u306F\u3055\u307E\u3056\u307E"
 - children: []
   content_layer: body
@@ -4588,7 +3779,7 @@ texts:
     - 0
     - 48
     page_no: 17
-  self_ref: '#/texts/150'
+  self_ref: '#/texts/112'
   text: "\u300C\u30A2\u30EB\u30C4\u30CF\u30A4\u30DE\u30FC\u578B\u8A8D\u77E5\u75C7\u300D\
     \ \u300C\u30EC\u30D3\u30FC\u5C0F\u4F53\u578B\u8A8D\u77E5\u75C7\u300D \u300C \u524D\
     \u982D\u5074\u982D\u578B\u8A8D\u77E5\u75C7\u300D \u300C \u8133\u8840\u7BA1\u6027\
@@ -4611,161 +3802,9 @@ texts:
     - 0
     - 14
     page_no: 17
-  self_ref: '#/texts/151'
+  self_ref: '#/texts/113'
   text: "\u8133\u306E\u50CD\u304D\u306F\u90E8\u4F4D\u306B\u3088\u3063\u3066\u69D8\u3005\
     \u3002"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u904B\u52D5"
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 300.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 662.6666666666666
-      r: 701.3333333333334
-      t: 312.33333333333337
-    charspan:
-    - 0
-    - 2
-    page_no: 17
-  self_ref: '#/texts/152'
-  text: "\u904B\u52D5"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u77E5\u89C9\u611F"
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 303.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 727.0
-      r: 783.6666666666666
-      t: 315.33333333333337
-    charspan:
-    - 0
-    - 3
-    page_no: 17
-  self_ref: '#/texts/153'
-  text: "\u77E5\u89C9\u611F"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u65B0"
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 262.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 593.3333333333334
-      r: 648.3333333333334
-      t: 273.3333333333333
-    charspan:
-    - 0
-    - 1
-    page_no: 17
-  self_ref: '#/texts/154'
-  text: "\u65B0"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u8003\u51FA"
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 251.33333333333331
-      coord_origin: BOTTOMLEFT
-      l: 593.3333333333334
-      r: 630.3333333333334
-      t: 262.0
-    charspan:
-    - 0
-    - 2
-    page_no: 17
-  self_ref: '#/texts/155'
-  text: "\u8003\u51FA"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u8003"
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 243.66666666666669
-      coord_origin: BOTTOMLEFT
-      l: 866.6666666666667
-      r: 895.3333333333333
-      t: 255.66666666666669
-    charspan:
-    - 0
-    - 1
-    page_no: 17
-  self_ref: '#/texts/156'
-  text: "\u8003"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5224\u65AD"
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 232.66666666666669
-      coord_origin: BOTTOMLEFT
-      l: 866.6666666666667
-      r: 905.3333333333333
-      t: 243.33333333333331
-    charspan:
-    - 0
-    - 2
-    page_no: 17
-  self_ref: '#/texts/157'
-  text: "\u5224\u65AD"
-- children: []
-  content_layer: body
-  label: text
-  orig: mo
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 169.0
-      coord_origin: BOTTOMLEFT
-      l: 777.6666666666666
-      r: 805.0
-      t: 179.66666666666663
-    charspan:
-    - 0
-    - 2
-    page_no: 17
-  self_ref: '#/texts/158'
-  text: mo
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u805E<"
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 143.0
-      coord_origin: BOTTOMLEFT
-      l: 678.6666666666666
-      r: 697.0
-      t: 154.0
-    charspan:
-    - 0
-    - 2
-    page_no: 17
-  self_ref: '#/texts/159'
-  text: "\u805E<"
 - children: []
   content_layer: body
   label: text
@@ -4784,7 +3823,7 @@ texts:
     - 0
     - 23
     page_no: 17
-  self_ref: '#/texts/160'
+  self_ref: '#/texts/114'
   text: "\u539F\u56E0\u75BE\u60A3\u306B\u3088\u3063\u3066\u3001\u73FE\u308C\u308B\u75C7\
     \u72B6\u306B\u3082\u5DEE\u7570\u304C\u751F\u3058\u308B\u3002"
 - children: []
@@ -4804,27 +3843,8 @@ texts:
     - 0
     - 10
     page_no: 17
-  self_ref: '#/texts/161'
+  self_ref: '#/texts/115'
   text: "\u6559\u6750\uFF1A 14 \u30DA\u30FC\u30B8"
-- children: []
-  content_layer: body
-  label: text
-  orig: '?'
-  parent:
-    $ref: '#/pictures/12'
-  prov:
-  - bbox:
-      b: 88.0
-      coord_origin: BOTTOMLEFT
-      l: 116.66666666666667
-      r: 131.0
-      t: 108.66666666666669
-    charspan:
-    - 0
-    - 1
-    page_no: 18
-  self_ref: '#/texts/162'
-  text: '?'
 - children: []
   content_layer: body
   label: section_header
@@ -4843,7 +3863,7 @@ texts:
     - 0
     - 12
     page_no: 18
-  self_ref: '#/texts/163'
+  self_ref: '#/texts/116'
   text: "\u8A8D\u77E5\u75C7\u306B\u306A\u308B\u3068\u304A\u3053\u308B\u3053\u3068"
 - children: []
   content_layer: body
@@ -4863,7 +3883,7 @@ texts:
     - 0
     - 29
     page_no: 18
-  self_ref: '#/texts/164'
+  self_ref: '#/texts/117'
   text: "\u8A8D\u77E5\u6A5F\u80FD\u969C\u5BB3 \u3010\u4E2D\u6838\u75C7\u72B6\u3011\
     \ ( \u6CBB\u3059\u3053\u3068\u304C\u3067\u304D\u306A\u3044\u3053\u3068 )"
 - children: []
@@ -4885,7 +3905,7 @@ texts:
     - 0
     - 39
     page_no: 18
-  self_ref: '#/texts/165'
+  self_ref: '#/texts/118'
   text: "\u884C\u52D5\u30FB\u5FC3\u7406\u75C7\u72B6 \u3010 BPSD \u3011 ( \u5468\u308A\
     \u306E\u4EBA\u306E\u52A9\u3051\u3067 \u3088\u304F\u306A\u308B\u3053\u3068\u304C\
     \u3042\u308B )"
@@ -4907,7 +3927,7 @@ texts:
     - 0
     - 17
     page_no: 18
-  self_ref: '#/texts/166'
+  self_ref: '#/texts/119'
   text: "\u8133\u306E\u7D30\u80DE\u304C\u6B7B\u3093\u3067\u3057\u307E\u3046\u3053\u3068\
     \u3067\u304A\u304D\u308B"
 - children: []
@@ -4930,7 +3950,7 @@ texts:
     - 0
     - 15
     page_no: 18
-  self_ref: '#/texts/167'
+  self_ref: '#/texts/120'
   text: "\u30FB\u899A\u3048\u3089\u308C\u306A\u3044\u3000\u30FB\u5FD8\u308C\u3066\u3057\
     \u307E\u3046"
 - children: []
@@ -4952,7 +3972,7 @@ texts:
     - 0
     - 13
     page_no: 18
-  self_ref: '#/texts/168'
+  self_ref: '#/texts/121'
   text: "\u30FB\u8003\u3048\u308B\u30B9\u30D4\u30FC\u30C9\u304C\u9045\u304F\u306A\u308B"
 - children: []
   content_layer: body
@@ -4972,7 +3992,7 @@ texts:
     - 0
     - 15
     page_no: 18
-  self_ref: '#/texts/169'
+  self_ref: '#/texts/122'
   text: "\u6027\u683C\u3084\u74B0\u5883\u3067\u8868\u51FA\u306E\u6709\u7121\u304C\u3042\
     \u308B\u3002"
 - children: []
@@ -4995,7 +4015,7 @@ texts:
     - 0
     - 14
     page_no: 18
-  self_ref: '#/texts/170'
+  self_ref: '#/texts/123'
   text: "\u30FB\u5143\u6C17\u304C\u306A\u304F\u306A\u308B\u3000\u30FB\u9053\u306B\u8FF7\
     \u3046"
 - children: []
@@ -5018,7 +4038,7 @@ texts:
     - 0
     - 14
     page_no: 18
-  self_ref: '#/texts/171'
+  self_ref: '#/texts/124'
   text: "\u30FB\u300C\u7269\u3092\u53D6\u3089\u308C\u305F\u300D\u3068\u601D\u3044\u8FBC\
     \u3080"
 - children: []
@@ -5038,7 +4058,7 @@ texts:
     - 0
     - 13
     page_no: 18
-  self_ref: '#/texts/172'
+  self_ref: '#/texts/125'
   text: "18 \u6559\u6750\uFF1A 14 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -5058,7 +4078,7 @@ texts:
     - 0
     - 10
     page_no: 19
-  self_ref: '#/texts/173'
+  self_ref: '#/texts/126'
   text: "\u8A8D\u77E5\u6A5F\u80FD\u969C\u5BB3\u306B\u3064\u3044\u3066"
 - children: []
   content_layer: body
@@ -5079,7 +4099,7 @@ texts:
     - 0
     - 26
     page_no: 19
-  self_ref: '#/texts/174'
+  self_ref: '#/texts/127'
   text: "\u25CF\u300C\u305D\u3093\u306A\u3053\u3068\u805E\u3044\u3066\u306A\u3044\u300D\
     \u30FB\u30FB\u30FB\u3082\u306E\u5FD8\u308C\u3010\u8A18\u61B6\u969C\u5BB3\u3011"
 - children: []
@@ -5103,7 +4123,7 @@ texts:
     - 0
     - 45
     page_no: 19
-  self_ref: '#/texts/175'
+  self_ref: '#/texts/128'
   text: "\u30FB\u81EA\u8EAB\u306E \u7D4C\u9A13\u3092\u3059\u3063\u307D\u308A\u3068\
     \u5FD8\u308C\u3066\u3057\u307E\u3046 \u3002 \u4F8B \uFF1A \u5915\u98DF \u3092\
     \ \u98DF\u3079 \u305F\u3053\u3068\u3092 \u5FD8 \u308C\u308B\u306A\u3069"
@@ -5128,7 +4148,7 @@ texts:
     - 0
     - 41
     page_no: 19
-  self_ref: '#/texts/176'
+  self_ref: '#/texts/129'
   text: "\u30FB\u51FA \u6765\u4E8B\u305D \u306E\u3082\u306E\u3092 \u5FD8 \u308C\u3066\
     \u3057\u307E\u3046\u3053\u3068\u304B\u3089\u3001 \u30D2\u30F3\u30C8\u304C\u3042\
     \u3063\u3066\u3082\u601D\u3044\u51FA\u305B\u306A\u3044 \u3002"
@@ -5149,7 +4169,7 @@ texts:
     - 0
     - 4
     page_no: 19
-  self_ref: '#/texts/177'
+  self_ref: '#/texts/130'
   text: "\u82E5\u3044\u3068\u304D"
 - children: []
   content_layer: body
@@ -5168,7 +4188,7 @@ texts:
     - 0
     - 6
     page_no: 19
-  self_ref: '#/texts/178'
+  self_ref: '#/texts/131'
   text: "\u8001\u5316\u306E \u5834\u5408"
 - children: []
   content_layer: body
@@ -5187,7 +4207,7 @@ texts:
     - 0
     - 8
     page_no: 19
-  self_ref: '#/texts/179'
+  self_ref: '#/texts/132'
   text: "\u8A8D\u77E5\u75C7\u306B \u306A\u308B\u3068"
 - children: []
   content_layer: body
@@ -5206,84 +4226,8 @@ texts:
     - 0
     - 7
     page_no: 19
-  self_ref: '#/texts/180'
+  self_ref: '#/texts/133'
   text: "\u8A8D\u77E5\u75C7 \u304C\u9032\u884C"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5927\u5207\u60C5\u5831"
-  parent:
-    $ref: '#/pictures/14'
-  prov:
-  - bbox:
-      b: 247.33929443359375
-      coord_origin: BOTTOMLEFT
-      l: 701.6129557291666
-      r: 748.0645345052084
-      t: 259.3928629557292
-    charspan:
-    - 0
-    - 4
-    page_no: 19
-  self_ref: '#/texts/181'
-  text: "\u5927\u5207\u60C5\u5831"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5FC3\u306E\u60C5\u5831"
-  parent:
-    $ref: '#/pictures/14'
-  prov:
-  - bbox:
-      b: 247.82143147786456
-      coord_origin: BOTTOMLEFT
-      l: 772.258056640625
-      r: 836.1290690104166
-      t: 259.3928629557292
-    charspan:
-    - 0
-    - 4
-    page_no: 19
-  self_ref: '#/texts/182'
-  text: "\u5FC3\u306E\u60C5\u5831"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u7121\u9ED8\u60C5\u5831"
-  parent:
-    $ref: '#/pictures/14'
-  prov:
-  - bbox:
-      b: 248.30356852213544
-      coord_origin: BOTTOMLEFT
-      l: 860.8064778645834
-      r: 907.258056640625
-      t: 259.875
-    charspan:
-    - 0
-    - 4
-    page_no: 19
-  self_ref: '#/texts/183'
-  text: "\u7121\u9ED8\u60C5\u5831"
-- children: []
-  content_layer: body
-  label: text
-  orig: '"0'
-  parent:
-    $ref: '#/pictures/14'
-  prov:
-  - bbox:
-      b: 124.875
-      coord_origin: BOTTOMLEFT
-      l: 843.8710123697916
-      r: 872.9032389322916
-      t: 137.89286295572919
-    charspan:
-    - 0
-    - 2
-    page_no: 19
-  self_ref: '#/texts/184'
-  text: '"0'
 - children: []
   content_layer: furniture
   label: page_footer
@@ -5301,7 +4245,7 @@ texts:
     - 0
     - 10
     page_no: 19
-  self_ref: '#/texts/185'
+  self_ref: '#/texts/134'
   text: "\u6559\u6750\uFF1A 15 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -5322,7 +4266,7 @@ texts:
     - 0
     - 17
     page_no: 20
-  self_ref: '#/texts/186'
+  self_ref: '#/texts/135'
   text: "\u25CF\u300C\u304D\u3087\u3046\u306F\u4F55\u65E5\uFF1F\u300D\u30FB\u30FB\u30FB\
     \u5931\u898B\u5F53\u8B58"
 - children: []
@@ -5346,7 +4290,7 @@ texts:
     - 0
     - 45
     page_no: 20
-  self_ref: '#/texts/187'
+  self_ref: '#/texts/136'
   text: "\u30FB \u4ECA \u4F55\u5E74\u306E\u4F55 \u6708 \u4F55\u65E5\u306A\u306E\u304B\
     \u3001\u6642 \u523B \u306F\u3044\u3064\u304B\u3001\u3069\u3053\u306B\u3044\u308B\
     \u306E\u304B \u5168 \u304F\u5206\u304B\u3089\u306A\u3044\u72B6\u614B\u3002"
@@ -5371,7 +4315,7 @@ texts:
     - 0
     - 36
     page_no: 20
-  self_ref: '#/texts/188'
+  self_ref: '#/texts/137'
   text: "\u30FB\u8A8D\u77E5\u75C7\u306E\u9032\u884C\u3068 \u5171 \u306B\u3001\u81EA\
     \u5206\u306E \u7F6E \u304B\u308C\u305F\u72B6\u614B\u306F\u308F\u304B\u308A\u306B\
     \u304F\u304F\u306A\u308A\u307E\u3059\u3002"
@@ -5393,7 +4337,7 @@ texts:
     - 0
     - 6
     page_no: 20
-  self_ref: '#/texts/189'
+  self_ref: '#/texts/138'
   text: "\u6642\u9593\u306E\u898B\u5F53\u8B58"
 - children: []
   content_layer: body
@@ -5416,7 +4360,7 @@ texts:
     - 0
     - 28
     page_no: 20
-  self_ref: '#/texts/190'
+  self_ref: '#/texts/139'
   text: "\u30FB\u9032\u884C\u3059\u308B\u3068 \u5B63\u7BC0\u611F \u3084\u5E74\u9F62\
     \u304C\u308F\u304B\u3089\u306A\u304F\u306A\u3063\u3066\u3044\u304D\u307E\u3059\
     \u3002"
@@ -5438,7 +4382,7 @@ texts:
     - 0
     - 6
     page_no: 20
-  self_ref: '#/texts/191'
+  self_ref: '#/texts/140'
   text: "\u5834\u6240\u306E\u898B\u5F53\u8B58"
 - children: []
   content_layer: body
@@ -5458,7 +4402,7 @@ texts:
     - 0
     - 5
     page_no: 20
-  self_ref: '#/texts/192'
+  self_ref: '#/texts/141'
   text: "\u4EBA\u306E\u898B\u5F53\u8B58"
 - children: []
   content_layer: body
@@ -5480,7 +4424,7 @@ texts:
     - 0
     - 30
     page_no: 20
-  self_ref: '#/texts/193'
+  self_ref: '#/texts/142'
   text: "\u30FB\u6642 \u523B \u3084 \u4E88 \u5B9A\u3092\u5408\u308F\u305B\u3066 \u6E96\
     \u5099 \u3059\u308B\u3053\u3068\u304C \u82E6\u624B \u306B\u3002"
 - children: []
@@ -5503,7 +4447,7 @@ texts:
     - 0
     - 22
     page_no: 20
-  self_ref: '#/texts/194'
+  self_ref: '#/texts/143'
   text: "\u30FB\u81EA\u5206\u304C \u4ECA \u3069\u3053\u306B\u3044\u308B\u306E\u304B\
     \u308F\u304B\u3089\u306A\u304F\u306A\u308B\u3002"
 - children: []
@@ -5526,7 +4470,7 @@ texts:
     - 0
     - 20
     page_no: 20
-  self_ref: '#/texts/195'
+  self_ref: '#/texts/144'
   text: "\u30FB\u300C\u3053\u3053\u306F\u3069\u3053\u3060\u300D\u3068\u6DF7\u4E71\u3057\
     \u3066\u3057\u307E\u3046\u3053\u3068\u3082"
 - children: []
@@ -5550,7 +4494,7 @@ texts:
     - 0
     - 35
     page_no: 20
-  self_ref: '#/texts/196'
+  self_ref: '#/texts/145'
   text: "\u30FB \u6700 \u8FD1\u306E \u8A18\u61B6 \u304C \u8584 \u308C\u3001\u81EA\u8EAB\
     \u3084\u5BB6\u65CF\u306E\u300C\u3044\u307E\u300D\u304C\u3042\u3044\u307E\u3044\
     \u306B\u306A\u308B\u3002"
@@ -5574,7 +4518,7 @@ texts:
     - 0
     - 22
     page_no: 20
-  self_ref: '#/texts/197'
+  self_ref: '#/texts/146'
   text: "\u30FB\u81EA\u5206\u304C\u82E5\u3044\u3053\u308D\u306E\u5BB6\u65CF\u3092\u30A4\
     \u30E1\u30FC\u30B8\u3057\u3066\u3057\u307E\u3046\u3002"
 - children: []
@@ -5597,7 +4541,7 @@ texts:
     - 0
     - 46
     page_no: 20
-  self_ref: '#/texts/198'
+  self_ref: '#/texts/147'
   text: "\u30B9\u30DE\u30FC\u30C8\u30D5\u30A9\u30F3\u306E\u30EA\u30DE\u30A4\u30F3\u30C0\
     \u30FC\u6A5F\u80FD\u3084\u5BB6\u65CF\u306E\u58F0\u304B\u3051\u306A\u3069\u3001\
     \ \u82E6\u624B\u306A\u3053\u3068\u3092\u88DC\u3046\u65B9\u6CD5\u306F\u305F\u304F\
@@ -5619,7 +4563,7 @@ texts:
     - 0
     - 10
     page_no: 20
-  self_ref: '#/texts/199'
+  self_ref: '#/texts/148'
   text: "\u6559\u6750\uFF1A 16 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -5639,7 +4583,7 @@ texts:
     - 0
     - 11
     page_no: 21
-  self_ref: '#/texts/200'
+  self_ref: '#/texts/149'
   text: "\u25CF\u7406\u89E3\u30FB\u5224\u65AD\u529B\u306B\u3064\u3044\u3066"
 - children: []
   content_layer: body
@@ -5662,7 +4606,7 @@ texts:
     - 0
     - 37
     page_no: 21
-  self_ref: '#/texts/201'
+  self_ref: '#/texts/150'
   text: "\u30FB\u5468 \u56F2 \u304B\u3089\u53D7\u3051\u53D6\u308B\u60C5 \u5831 \u3092\
     \ \u9078\u629E \u3057\u3066 \u884C\u52D5\u306B\u79FB\u3059\u3053\u3068\u304C\u9045\
     \u304F\u306A\u308B \u3002"
@@ -5686,7 +4630,7 @@ texts:
     - 0
     - 22
     page_no: 21
-  self_ref: '#/texts/202'
+  self_ref: '#/texts/151'
   text: "\u30FB \u4E88\u671F\u305B\u306C\u3053\u3068\u3078\u306E\u5BFE\u5FDC\u304C\
     \u82E6\u624B \u306B\u306A\u308A\u307E\u3059\u3002"
 - children: []
@@ -5709,7 +4653,7 @@ texts:
     - 0
     - 20
     page_no: 21
-  self_ref: '#/texts/203'
+  self_ref: '#/texts/152'
   text: "\uFF11\uFF0E\u8003\u3048\u308B\u30B9\u30D4\u30FC\u30C9\u304C\u3086\u3063\u304F\
     \u308A\u306B\u306A\u308A\u307E\u3059\u3002"
 - children: []
@@ -5733,7 +4677,7 @@ texts:
     - 0
     - 28
     page_no: 21
-  self_ref: '#/texts/204'
+  self_ref: '#/texts/153'
   text: "\uFF13\uFF0E\u3044\u3064\u3082\u3068\u9055\u3046\u3067\u304D\u3054\u3068\u304C\
     \u8D77\u3053\u308B\u3068\u6DF7\u4E71\u3057\u3084\u3059\u304F\u306A\u308A\u307E\
     \u3059\u3002"
@@ -5758,7 +4702,7 @@ texts:
     - 0
     - 28
     page_no: 21
-  self_ref: '#/texts/205'
+  self_ref: '#/texts/154'
   text: "\uFF12\uFF0E\u540C\u6642\u306B\u4E8C\u3064\u4EE5\u4E0A\u306E\u3053\u3068\u3092\
     \u51E6\u7406\u3059\u308B\u3053\u3068\u304C\u96E3\u3057\u304F\u306A\u308A\u307E\
     \u3059\u3002"
@@ -5782,7 +4726,7 @@ texts:
     - 0
     - 23
     page_no: 21
-  self_ref: '#/texts/206'
+  self_ref: '#/texts/155'
   text: "\uFF14\uFF0E\u76EE\u306B\u898B\u3048\u306A\u3044\u4ED5\u7D44\u307F\u304C\u7406\
     \u89E3\u3057\u305A\u3089\u304F\u306A\u308A\u307E\u3059\u3002"
 - children: []
@@ -5803,7 +4747,7 @@ texts:
     - 0
     - 17
     page_no: 21
-  self_ref: '#/texts/207'
+  self_ref: '#/texts/156'
   text: "\u25CF\u5B9F\u884C ( \u9042\u884C ) \u6A5F\u80FD\u306B\u3064\u3044\u3066"
 - children: []
   content_layer: body
@@ -5827,7 +4771,7 @@ texts:
     - 0
     - 57
     page_no: 21
-  self_ref: '#/texts/208'
+  self_ref: '#/texts/157'
   text: "\u30FB \u76EE \u7684\u306B \u6CBF \u3063\u3066\u3001 \u8A08\u753B \u3092\u7ACB\
     \u3066\u3066\u5B9F\u884C\u3057\u3001\u7D50 \u679C \u3092 \u632F \u308A \u8FD4\
     \ \u308B\u3053\u3068 \u3010\u5B9F\u884C\u6A5F\u80FD\u3011\u306E\u9042\u884C\u304C\
@@ -5850,7 +4794,7 @@ texts:
     - 0
     - 20
     page_no: 21
-  self_ref: '#/texts/209'
+  self_ref: '#/texts/158'
   text: "\u30B5\u30DD\u30FC\u30C8\u3067\u304D\u308B\u4F53\u5236\u3092 \u69CB\u7BC9\
     \u3059\u308B\u3053\u3068\u304C\u5FC5\u8981"
 - children: []
@@ -5870,7 +4814,7 @@ texts:
     - 0
     - 10
     page_no: 21
-  self_ref: '#/texts/210'
+  self_ref: '#/texts/159'
   text: "\u6559\u6750\uFF1A 17 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -5894,7 +4838,7 @@ texts:
     - 0
     - 43
     page_no: 21
-  self_ref: '#/texts/211'
+  self_ref: '#/texts/160'
   text: "\u30FB \u6BB5 \u53D6\u308A\u3088\u304F\u9032\u3081\u308B\u306E\u304C\u96E3\
     \u3057\u304F\u306A\u3063\u3066\u3082\u3001 \u500B\u3005\u306E\u52D5\u4F5C\u306F\
     \u4FDD\u305F\u308C\u3066\u308B\u3053\u3068\u306F\u5C11\u306A\u304F\u306A\u3044\
@@ -5917,7 +4861,7 @@ texts:
     - 0
     - 17
     page_no: 21
-  self_ref: '#/texts/212'
+  self_ref: '#/texts/161'
   text: "\u30BB\u30EB\u30D5\u30EC\u30B8 \u81EA\u52D5\u6539\u672D\u30FB\u767A\u5238\
     \u6A5F \u306A\u3069"
 - children: []
@@ -5939,7 +4883,7 @@ texts:
     - 0
     - 20
     page_no: 22
-  self_ref: '#/texts/213'
+  self_ref: '#/texts/162'
   text: "\u884C\u52D5\u30FB\u5FC3\u7406\u75C7\u72B6 (BPSD) \u3092\u7406\u89E3\u3059\
     \u308B"
 - children: []
@@ -5960,7 +4904,7 @@ texts:
     - 0
     - 5
     page_no: 22
-  self_ref: '#/texts/214'
+  self_ref: '#/texts/163'
   text: "\u4E0D\u5B89\u3084\u3046\u3064"
 - children: []
   content_layer: body
@@ -5980,7 +4924,7 @@ texts:
     - 0
     - 7
     page_no: 22
-  self_ref: '#/texts/215'
+  self_ref: '#/texts/164'
   text: "\u30A4\u30E9\u30A4\u30E9\u3068\u8208\u596E"
 - children: []
   content_layer: body
@@ -6000,7 +4944,7 @@ texts:
     - 0
     - 5
     page_no: 22
-  self_ref: '#/texts/216'
+  self_ref: '#/texts/165'
   text: "\u5E7B\u899A\u30FB\u5984\u60F3"
 - children: []
   content_layer: body
@@ -6020,7 +4964,7 @@ texts:
     - 0
     - 9
     page_no: 22
-  self_ref: '#/texts/217'
+  self_ref: '#/texts/166'
   text: "\u6B69\u304D\u56DE\u308B \u9053\u306B\u8FF7\u3046"
 - children: []
   content_layer: body
@@ -6044,7 +4988,7 @@ texts:
     - 0
     - 50
     page_no: 22
-  self_ref: '#/texts/218'
+  self_ref: '#/texts/167'
   text: "\u30FB\u8A8D\u77E5\u75C7 \u521D\u671F \u306B\u306F \u4ECA\u5F8C \u81EA\u5206\
     \u306F\u3069\u3046\u306A\u3063\u3066\u3044\u304F\u306E\u304B\u3068\u4E0D\u5B89\
     \u306B\u3002 \u30FB\u3046\u3064\u75C7\u72B6\u3092 \u4F34 \u3046 \u5834 \u5408\u3082\
@@ -6070,7 +5014,7 @@ texts:
     - 0
     - 30
     page_no: 22
-  self_ref: '#/texts/219'
+  self_ref: '#/texts/168'
   text: "\u30FB\u3053\u308C\u307E\u3067\u3067\u304D\u3066\u3044\u305F\u3053\u3068\u304C\
     \u3046\u307E\u304F\u3044\u304B\u305A\u3001 \u82DB \u7ACB\u3063\u3066\u3057\u307E\
     \u3046\u3002"
@@ -6094,7 +5038,7 @@ texts:
     - 0
     - 35
     page_no: 22
-  self_ref: '#/texts/220'
+  self_ref: '#/texts/169'
   text: "\u30FB \u611F \u60C5\u306E \u30B3 \u30F3 \u30C8\u30ED \u30FC \u30EB \u304C\
     \ \u52B9 \u304B\u305A\u3001 \u8208\u596E \u3057\u3066\u3057\u307E\u3046\u3002"
 - children: []
@@ -6118,7 +5062,7 @@ texts:
     - 0
     - 38
     page_no: 22
-  self_ref: '#/texts/221'
+  self_ref: '#/texts/170'
   text: "\u30FB \u7269 \u3068\u3089\u308C \u5984\u60F3 \u300C\u81EA\u5206\u306F \u5FD8\
     \ \u308C\u306F\u3057\u306A\u3044\u300D\u3068\u3044\u3046 \u610F \u8B58\u304B\u3089\
     \ \u30FB \u5E7B\u8996"
@@ -6143,7 +5087,7 @@ texts:
     - 0
     - 32
     page_no: 22
-  self_ref: '#/texts/222'
+  self_ref: '#/texts/171'
   text: "\u30FB \u9053 \u306B \u8FF7 \u3063\u3066\u3057\u307E\u3044\u3001\u6B69\u304D\
     \ \u56DE \u3063\u3066\u3057\u307E\u3046\u3053\u3068\u304C\u3042\u308A\u307E\u3059\
     \u3002"
@@ -6169,7 +5113,7 @@ texts:
     - 0
     - 75
     page_no: 22
-  self_ref: '#/texts/223'
+  self_ref: '#/texts/172'
   text: "\u672C\u4EBA\u304C\u30DD\u30B8\u30C6\u30A3\u30D6\u306A\u6C17\u6301\u3061\u3067\
     \u3044\u3089\u308C\u308B\u74B0\u5883\u306F\u305D\u308C\u81EA\u4F53\u304C\u884C\
     \u52D5\u30FB\u5FC3\u7406\u75C7\u72B6\u306E\u4E88\u9632\u3068\u306A\u308A\u307E\
@@ -6193,7 +5137,7 @@ texts:
     - 0
     - 3
     page_no: 22
-  self_ref: '#/texts/224'
+  self_ref: '#/texts/173'
   text: "\u6559\u6750\uFF1A"
 - children: []
   content_layer: body
@@ -6214,7 +5158,7 @@ texts:
     - 0
     - 3
     page_no: 22
-  self_ref: '#/texts/225'
+  self_ref: '#/texts/174'
   text: "\u30FB\u74B0\u5883"
 - children: []
   content_layer: body
@@ -6235,7 +5179,7 @@ texts:
     - 0
     - 13
     page_no: 22
-  self_ref: '#/texts/226'
+  self_ref: '#/texts/175'
   text: "\u30FB\u539F\u56E0\u75BE\u60A3 \u306B\u3088\u3063\u3066\u306F\u767A\u73FE"
 - children: []
   content_layer: body
@@ -6256,7 +5200,7 @@ texts:
     - 0
     - 3
     page_no: 22
-  self_ref: '#/texts/227'
+  self_ref: '#/texts/176'
   text: "\u30FB\u6027\u683C"
 - children: []
   content_layer: furniture
@@ -6275,7 +5219,7 @@ texts:
     - 0
     - 5
     page_no: 22
-  self_ref: '#/texts/228'
+  self_ref: '#/texts/177'
   text: "18 \u30DA\u30FC"
 - children: []
   content_layer: body
@@ -6295,7 +5239,7 @@ texts:
     - 0
     - 11
     page_no: 23
-  self_ref: '#/texts/229'
+  self_ref: '#/texts/178'
   text: "\u3042\u3089\u308F\u308C\u304B\u305F\u306F\u5341\u4EBA\u5341\u8272"
 - children: []
   content_layer: body
@@ -6318,7 +5262,7 @@ texts:
     - 0
     - 37
     page_no: 23
-  self_ref: '#/texts/230'
+  self_ref: '#/texts/179'
   text: "\u30FB\u8A8D\u77E5\u75C7\u306E\u9032\u884C\u3084\u73FE\u308C\u308B\u75C7\u72B6\
     \u306F\u4EBA\u3084 \u539F\u56E0 \u75BE\u60A3\u306B\u3088\u3063\u3066\u5927\u304D\
     \u304F \u7570 \u306A\u308A\u307E\u3059\u3002"
@@ -6340,7 +5284,7 @@ texts:
     - 0
     - 6
     page_no: 23
-  self_ref: '#/texts/231'
+  self_ref: '#/texts/180'
   text: "\u795E\u7D4C\u5909\u6027\u75BE\u60A3"
 - children: []
   content_layer: body
@@ -6365,7 +5309,7 @@ texts:
     - 0
     - 73
     page_no: 23
-  self_ref: '#/texts/232'
+  self_ref: '#/texts/181'
   text: "\u30FB\u30A2\u30EB\u30C4\u30CF\u30A4\u30DE\u30FC\u578B\u8A8D\u77E5\u75C7\
     \ \uFF1A \u5168\u4F53\u306E 50 \uFF5E 60 \uFF05 \u3092\u5360\u3081\u308B\u3002\
     \u9032\u884C\u306F\u6BD4\u8F03\u7684\u7DE9\u3084\u304B\u3002 \u30A2\u30DF\u30ED\
@@ -6394,7 +5338,7 @@ texts:
     - 0
     - 59
     page_no: 23
-  self_ref: '#/texts/233'
+  self_ref: '#/texts/182'
   text: "\u30FB\u30EC\u30D3\u30FC\u5C0F\u4F53\u578B\u8A8D\u77E5\u75C7 \uFF1A\u5168\
     \u4F53\u306E 15 \uFF05\u3002 \u9032\u884C\u306F\u6025\u6FC0 \u306B\u5909\u52D5\
     \u3002 \u8133\u306B\u30EC\u30D3\u30FC\u5C0F\u4F53\u304C\u84C4\u7A4D\u3057\u3001\
@@ -6424,7 +5368,7 @@ texts:
     - 0
     - 78
     page_no: 23
-  self_ref: '#/texts/234'
+  self_ref: '#/texts/183'
   text: "\u30FB\u524D\u982D\u5074\u982D\u578B\u8A8D\u77E5\u75C7 \uFF1A\u540C\u3058\
     \u884C\u52D5\u3092\u7E70\u308A\u8FD4\u3059\u3001\u6211\u6162\u304C\u82E6\u624B\
     \u306B\u306A\u308B\u306A\u3069\u306E\u30BF\u30A4\u30D7 ( \u524D\u982D\u8449\u306E\
@@ -6449,7 +5393,7 @@ texts:
     - 0
     - 3
     page_no: 23
-  self_ref: '#/texts/235'
+  self_ref: '#/texts/184'
   text: "\u60A3 )"
 - children: []
   content_layer: body
@@ -6469,7 +5413,7 @@ texts:
     - 0
     - 4
     page_no: 23
-  self_ref: '#/texts/236'
+  self_ref: '#/texts/185'
   text: "\u8840\u7BA1\u969C\u5BB3"
 - children: []
   content_layer: body
@@ -6495,7 +5439,7 @@ texts:
     - 0
     - 67
     page_no: 23
-  self_ref: '#/texts/237'
+  self_ref: '#/texts/186'
   text: "\u30FB\u8840\u7BA1\u6027\u8A8D\u77E5\u75C7 \uFF1A\u8133\u6897\u585E\u30FB\
     \u8133\u51FA\u8840\u306A\u3069\u3067\u8133\u306E\u8840\u7BA1\u306B\u640D\u50B7\
     \u3092\u8D77\u3053\u3057\u3001\u8133\u306B\u6804\u990A\u3084\u9178\u7D20\u304C\
@@ -6519,7 +5463,7 @@ texts:
     - 0
     - 3
     page_no: 23
-  self_ref: '#/texts/238'
+  self_ref: '#/texts/187'
   text: "\u6559\u6750\uFF1A"
 - children: []
   content_layer: furniture
@@ -6538,7 +5482,7 @@ texts:
     - 0
     - 6
     page_no: 23
-  self_ref: '#/texts/239'
+  self_ref: '#/texts/188'
   text: "20 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -6558,7 +5502,7 @@ texts:
     - 0
     - 6
     page_no: 24
-  self_ref: '#/texts/240'
+  self_ref: '#/texts/189'
   text: "\u8A8D\u77E5\u75C7\u306E\u7D4C\u904E"
 - children: []
   content_layer: body
@@ -6579,7 +5523,7 @@ texts:
     - 0
     - 14
     page_no: 24
-  self_ref: '#/texts/241'
+  self_ref: '#/texts/190'
   text: "\u25CF\u9032\u884C\u30FB\u7D4C\u904E\u306F\u500B\u4EBA\u5DEE\u304C\u5927\u304D\
     \u3044"
 - children: []
@@ -6602,7 +5546,7 @@ texts:
     - 0
     - 25
     page_no: 24
-  self_ref: '#/texts/242'
+  self_ref: '#/texts/191'
   text: "\u30FB\u539F\u56E0\u3068\u306A\u308B\u75BE\u60A3\u306B\u3088\u308A\u3001\u6CBB\
     \u7642\u6CD5\u3084\u30B1\u30A2\u65B9\u6CD5\u3082\u7570\u306A\u308B\u3002"
 - children: []
@@ -6627,7 +5571,7 @@ texts:
     - 0
     - 53
     page_no: 24
-  self_ref: '#/texts/243'
+  self_ref: '#/texts/192'
   text: "\u30FB\u56FA\u5B9A\u89B3\u5FF5\u306B\u57FA\u3065\u3044\u305F\u4E0D\u9069\u5207\
     \u306A\u5BFE\u5FDC\u306F\u884C\u52D5\u30FB\u5FC3\u7406\u75C7\u72B6\u3092\u62DB\
     \u3044\u3066\u3057\u307E\u3044\u304B\u306D\u306A\u3044\u3002 \u21D2\u500B\u4EBA\
@@ -6650,7 +5594,7 @@ texts:
     - 0
     - 13
     page_no: 24
-  self_ref: '#/texts/244'
+  self_ref: '#/texts/193'
   text: "\u25CF\u521D\u671F\u306E\u3046\u3061\u306B\u5C06\u6765\u3092\u8003\u3048\u308B"
 - children: []
   content_layer: body
@@ -6675,7 +5619,7 @@ texts:
     - 0
     - 62
     page_no: 24
-  self_ref: '#/texts/245'
+  self_ref: '#/texts/194'
   text: "\u30FB\u65E5\u3054\u308D\u304B\u3089\u5468\u56F2\u306E\u4EBA\u306B\u81EA\u8EAB\
     \u306E\u751F\u304D\u65B9\u3084\u8003\u3048\u65B9\u3092\u7406\u89E3\u3057\u3066\
     \u3082\u3089\u3046\u3088\u3046\u5FC3\u639B\u3051\u308B\u5FC5\u8981\u304C\u3042\
@@ -6700,7 +5644,7 @@ texts:
     - 0
     - 45
     page_no: 24
-  self_ref: '#/texts/246'
+  self_ref: '#/texts/195'
   text: "MCI( \u8EFD\u5EA6\u8A8D\u77E5\u969C\u5BB3 ) \u8A8D\u77E5\u75C7\u3068\u306F\
     \u8A3A\u65AD\u3055\u308C\u306A\u3044\u3082\u306E\u306E\u3001 \u6B63\u5E38\u3068\
     \u306F\u8A00\u3044\u5207\u308C\u306A\u3044\u4E2D\u9593\u6BB5\u968E\u3002"
@@ -6722,276 +5666,9 @@ texts:
     - 0
     - 15
     page_no: 24
-  self_ref: '#/texts/247'
+  self_ref: '#/texts/196'
   text: "\u8133\u306E\u6D3B\u6027\u5316\u306B\u53D6\u308A\u7D44\u3080\u3053\u3068\u304C\
     \u91CD\u8981"
-- children: []
-  content_layer: body
-  label: section_header
-  level: 1
-  orig: "\u77E5\u75C7\u306E\u91CA\u904E"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 179.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 494.3333333333333
-      r: 574.6666666666666
-      t: 195.33333333333337
-    charspan:
-    - 0
-    - 5
-    page_no: 24
-  self_ref: '#/texts/248'
-  text: "\u77E5\u75C7\u306E\u91CA\u904E"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u77E5\u75C7\u4E0D\u4F11"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 149.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 538.3333333333334
-      r: 622.6666666666666
-      t: 161.66666666666663
-    charspan:
-    - 0
-    - 4
-    page_no: 24
-  self_ref: '#/texts/249'
-  text: "\u77E5\u75C7\u4E0D\u4F11"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u77E5\u75C7"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 148.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 770.6666666666667
-      r: 812.0
-      t: 163.66666666666663
-    charspan:
-    - 0
-    - 2
-    page_no: 24
-  self_ref: '#/texts/250'
-  text: "\u77E5\u75C7"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5065\u5E38"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 104.66666666666669
-      coord_origin: BOTTOMLEFT
-      l: 520.3333333333334
-      r: 547.0
-      t: 121.33333333333331
-    charspan:
-    - 0
-    - 2
-    page_no: 24
-  self_ref: '#/texts/251'
-  text: "\u5065\u5E38"
-- children: []
-  content_layer: body
-  label: text
-  orig: MCI
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 104.66666666666669
-      coord_origin: BOTTOMLEFT
-      l: 607.0
-      r: 637.3333333333333
-      t: 119.66666666666669
-    charspan:
-    - 0
-    - 3
-    page_no: 24
-  self_ref: '#/texts/252'
-  text: MCI
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u8EFD\u5EA6\u77E5\u75C7"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 104.66666666666669
-      coord_origin: BOTTOMLEFT
-      l: 677.0
-      r: 737.3333333333333
-      t: 118.66666666666669
-    charspan:
-    - 0
-    - 4
-    page_no: 24
-  self_ref: '#/texts/253'
-  text: "\u8EFD\u5EA6\u77E5\u75C7"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u4E2D\u5EA6\u77E5\u75C7"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 104.66666666666669
-      coord_origin: BOTTOMLEFT
-      l: 761.0
-      r: 821.6666666666667
-      t: 118.66666666666669
-    charspan:
-    - 0
-    - 4
-    page_no: 24
-  self_ref: '#/texts/254'
-  text: "\u4E2D\u5EA6\u77E5\u75C7"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u91CD\u5EA6\u77E5\u75C7"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 105.0
-      coord_origin: BOTTOMLEFT
-      l: 845.6666666666667
-      r: 907.6666666666666
-      t: 119.0
-    charspan:
-    - 0
-    - 4
-    page_no: 24
-  self_ref: '#/texts/255'
-  text: "\u91CD\u5EA6\u77E5\u75C7"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\uFF08\u8EFD\u5EA6\u77E5\u969C\u5BB3\uFF09"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 77.0
-      coord_origin: BOTTOMLEFT
-      l: 587.0
-      r: 656.3333333333333
-      t: 89.66666666666669
-    charspan:
-    - 0
-    - 7
-    page_no: 24
-  self_ref: '#/texts/256'
-  text: "\uFF08\u8EFD\u5EA6\u77E5\u969C\u5BB3\uFF09"
-- children: []
-  content_layer: body
-  label: text
-  orig: "1\u5E74\u98DE"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 61.333333333333314
-      coord_origin: BOTTOMLEFT
-      l: 521.6666666666666
-      r: 550.6666666666666
-      t: 74.66666666666669
-    charspan:
-    - 0
-    - 3
-    page_no: 24
-  self_ref: '#/texts/257'
-  text: "1\u5E74\u98DE"
-- children: []
-  content_layer: body
-  label: text
-  orig: 16~41%
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 49.666666666666686
-      coord_origin: BOTTOMLEFT
-      l: 510.33333333333337
-      r: 562.6666666666666
-      t: 62.0
-    charspan:
-    - 0
-    - 6
-    page_no: 24
-  self_ref: '#/texts/258'
-  text: 16~41%
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u56DE\u5FA9"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 37.333333333333314
-      coord_origin: BOTTOMLEFT
-      l: 526.0
-      r: 547.0
-      t: 50.0
-    charspan:
-    - 0
-    - 2
-    page_no: 24
-  self_ref: '#/texts/259'
-  text: "\u56DE\u5FA9"
-- children: []
-  content_layer: body
-  label: text
-  orig: "1\u5E745~15%"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 37.0
-      coord_origin: BOTTOMLEFT
-      l: 633.3333333333333
-      r: 698.0
-      t: 47.333333333333314
-    charspan:
-    - 0
-    - 7
-    page_no: 24
-  self_ref: '#/texts/260'
-  text: "1\u5E745~15%"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u52A0\u77E5\u75C7\u4EC1\u79FB\u884C"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 23.666666666666742
-      coord_origin: BOTTOMLEFT
-      l: 633.3333333333333
-      r: 698.3333333333333
-      t: 34.666666666666686
-    charspan:
-    - 0
-    - 6
-    page_no: 24
-  self_ref: '#/texts/261'
-  text: "\u52A0\u77E5\u75C7\u4EC1\u79FB\u884C"
 - children: []
   content_layer: body
   label: text
@@ -7009,7 +5686,7 @@ texts:
     - 0
     - 3
     page_no: 24
-  self_ref: '#/texts/262'
+  self_ref: '#/texts/197'
   text: "\u6559\u6750\uFF1A"
 - children: []
   content_layer: body
@@ -7028,7 +5705,7 @@ texts:
     - 0
     - 2
     page_no: 24
-  self_ref: '#/texts/263'
+  self_ref: '#/texts/198'
   text: '21'
 - children: []
   content_layer: body
@@ -7047,7 +5724,7 @@ texts:
     - 0
     - 3
     page_no: 24
-  self_ref: '#/texts/264'
+  self_ref: '#/texts/199'
   text: "\u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -7067,7 +5744,7 @@ texts:
     - 0
     - 8
     page_no: 25
-  self_ref: '#/texts/265'
+  self_ref: '#/texts/200'
   text: "\u82E5\u5E74\u6027\u8A8D\u77E5\u75C7\u3068\u306F"
 - children: []
   content_layer: body
@@ -7089,7 +5766,7 @@ texts:
     - 0
     - 17
     page_no: 25
-  self_ref: '#/texts/266'
+  self_ref: '#/texts/201'
   text: "\u25CF\uFF16\uFF15\u6B73\u672A\u6E80\u3067\u767A\u75C7\u3059\u308B\u8A8D\u77E5\
     \u75C7\u306E\u547C\u79F0"
 - children: []
@@ -7114,7 +5791,7 @@ texts:
     - 0
     - 50
     page_no: 25
-  self_ref: '#/texts/267'
+  self_ref: '#/texts/202'
   text: "\u30FB\u73FE\u5F79\u4E16\u4EE3\u306E\u82E5 \u5E74\u5C64 \u304C\u767A\u75C7\
     \u3059\u308B\u5834\u5408\u3001\u4E16 \u5E2F \u3068\u3057\u3066\u306E \u7D4C\u6E08\
     \u7684\u56F0\u96E3 \u306B \u9665 \u3063\u3066\u3057\u307E\u3046 \u6050 \u308C\u3042\
@@ -7140,7 +5817,7 @@ texts:
     - 0
     - 34
     page_no: 25
-  self_ref: '#/texts/268'
+  self_ref: '#/texts/203'
   text: "\u21D2 \u9AD8\u9F62\u8005 \u3068\u306F\u7570\u306A\u3063\u305F\u30EA\u30B9\
     \ \u30AF \u306E\u767A\u751F\u304C\u3042\u308B\u3002 \u65E9\u671F\u767A\u898B\u304C\
     \u91CD\u8981 \u3002"
@@ -7165,7 +5842,7 @@ texts:
     - 0
     - 43
     page_no: 25
-  self_ref: '#/texts/269'
+  self_ref: '#/texts/204'
   text: "\u30FB\u672C\u4EBA \u542B \u3081\u3001 \u8077 \u5834\u3084\u5BB6\u65CF\u304C\
     \ \u8A8D\u77E5\u75C7\u306E\u53D7\u3051\u5165\u308C\u306B\u6642\u9593\u304C\u304B\
     \u304B\u3063\u3066\u3057\u307E\u3046 \u3053\u3068\u304C\u591A\u3044\u3002"
@@ -7187,7 +5864,7 @@ texts:
     - 0
     - 10
     page_no: 25
-  self_ref: '#/texts/270'
+  self_ref: '#/texts/205'
   text: "\u8A8D\u77E5\u75C7\u306F\u4E88\u9632\u3067\u304D\u308B\uFF1F"
 - children: []
   content_layer: body
@@ -7209,7 +5886,7 @@ texts:
     - 0
     - 22
     page_no: 25
-  self_ref: '#/texts/271'
+  self_ref: '#/texts/206'
   text: "\u30FB\u300C\u8A8D\u77E5\u75C7\u306B\u306A\u3089\u306A\u3044\u300D\u3068\u3044\
     \u3046\u4E88\u9632\u6CD5\u306F\u306A\u3044 \u3002"
 - children: []
@@ -7232,7 +5909,7 @@ texts:
     - 0
     - 27
     page_no: 25
-  self_ref: '#/texts/272'
+  self_ref: '#/texts/207'
   text: "\u30FB\u3057\u304B\u3057\u3001\u8A8D\u77E5\u75C7\u767A\u75C7 \u30EA\u30B9\
     \u30AF\u3092\u6E1B\u3089\u3059\u3053\u3068 \u306F \u53EF \u80FD\u3002"
 - children: []
@@ -7254,7 +5931,7 @@ texts:
     - 0
     - 11
     page_no: 25
-  self_ref: '#/texts/273'
+  self_ref: '#/texts/208'
   text: "\u25CF\u4E88\u9632\u306E\u305F\u3081\u306E\u30DD\u30A4\u30F3\u30C8"
 - children: []
   content_layer: body
@@ -7275,7 +5952,7 @@ texts:
     - 0
     - 12
     page_no: 25
-  self_ref: '#/texts/274'
+  self_ref: '#/texts/209'
   text: "\u30FB\u8840\u7BA1\u6027\u8A8D\u77E5\u75C7\u3092\u4E88\u9632\u3059\u308B"
 - children: []
   content_layer: body
@@ -7297,7 +5974,7 @@ texts:
     - 0
     - 17
     page_no: 25
-  self_ref: '#/texts/275'
+  self_ref: '#/texts/210'
   text: "\u30FB\u30A2\u30EB\u30C4\u30CF\u30A4\u30DE\u30FC\u578B\u8A8D\u77E5\u75C7\u3092\
     \u4E88\u9632\u3059\u308B"
 - children: []
@@ -7319,139 +5996,8 @@ texts:
     - 0
     - 13
     page_no: 25
-  self_ref: '#/texts/276'
+  self_ref: '#/texts/211'
   text: "\u30FB\u8133\u306E\u75C5\u6C17\u306E\u52A0\u901F\u56E0\u5B50\u3092\u9632\u3050"
-- children: []
-  content_layer: body
-  label: section_header
-  level: 1
-  orig: "\u8111\u6D3B\u6027\u5316\u306E4\u539F\u5219"
-  parent:
-    $ref: '#/body'
-  prov:
-  - bbox:
-      b: 290.0
-      coord_origin: BOTTOMLEFT
-      l: 714.3333333333333
-      r: 822.0
-      t: 304.6666666666667
-    charspan:
-    - 0
-    - 8
-    page_no: 25
-  self_ref: '#/texts/277'
-  text: "\u8111\u6D3B\u6027\u5316\u306E4\u539F\u5219"
-- children: []
-  content_layer: body
-  enumerated: false
-  label: list_item
-  marker: ''
-  orig: "\u5FEB\u523A\u6FC0\u7B11\u989C \u5FC3\u5730\u523A\u6FC0\u3001\u7B11\u3001\
-    \u610F\u6B32\u8111\u5185\u7269 \u8CEA\uFF08\uFF09<\u653E\u51FA\u3002"
-  parent:
-    $ref: '#/groups/56'
-  prov:
-  - bbox:
-      b: 222.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 648.6666666666666
-      r: 902.6666666666667
-      t: 271.3333333333333
-    charspan:
-    - 0
-    - 26
-    page_no: 25
-  self_ref: '#/texts/278'
-  text: "\u5FEB\u523A\u6FC0\u7B11\u989C \u5FC3\u5730\u523A\u6FC0\u3001\u7B11\u3001\
-    \u610F\u6B32\u8111\u5185\u7269 \u8CEA\uFF08\uFF09<\u653E\u51FA\u3002"
-- children: []
-  content_layer: body
-  enumerated: false
-  label: list_item
-  marker: ''
-  orig: "\u5B89"
-  parent:
-    $ref: '#/groups/56'
-  prov:
-  - bbox:
-      b: 195.0
-      coord_origin: BOTTOMLEFT
-      l: 649.6666666666666
-      r: 789.3333333333333
-      t: 208.66666666666663
-    charspan:
-    - 0
-    - 1
-    page_no: 25
-  self_ref: '#/texts/279'
-  text: "\u5B89"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u793E\u4F1A\u306E\u63A5\u89E6\u5931\u3001\u77E5\u6A5F\u80FD\u306E\u4F4E\u4E0B\
-    \u4FC3\u9032 \u3002\u4EBA\u5BB6\u65CF\u6642\u9593\u5207\u3002"
-  parent:
-    $ref: '#/body'
-  prov:
-  - bbox:
-      b: 159.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 648.6666666666666
-      r: 902.3333333333333
-      t: 189.33333333333337
-    charspan:
-    - 0
-    - 24
-    page_no: 25
-  self_ref: '#/texts/280'
-  text: "\u793E\u4F1A\u306E\u63A5\u89E6\u5931\u3001\u77E5\u6A5F\u80FD\u306E\u4F4E\u4E0B\
-    \u4FC3\u9032 \u3002\u4EBA\u5BB6\u65CF\u6642\u9593\u5207\u3002"
-- children: []
-  content_layer: body
-  enumerated: false
-  label: list_item
-  marker: ''
-  orig: "\u5F79\u5272\xB7\u65E5\u8AB2 \u306E\u5F79\u8AB2\u53D6\u3001\u751F\u6D3B\u5145\
-    \ \u3001\u77E5\u6A5F\u80FD\u306E\u7DAD\u6301\u5F79\u7ACB\u3002"
-  parent:
-    $ref: '#/groups/57'
-  prov:
-  - bbox:
-      b: 97.0
-      coord_origin: BOTTOMLEFT
-      l: 648.0
-      r: 902.0
-      t: 146.33333333333337
-    charspan:
-    - 0
-    - 25
-    page_no: 25
-  self_ref: '#/texts/281'
-  text: "\u5F79\u5272\xB7\u65E5\u8AB2 \u306E\u5F79\u8AB2\u53D6\u3001\u751F\u6D3B\u5145\
-    \ \u3001\u77E5\u6A5F\u80FD\u306E\u7DAD\u6301\u5F79\u7ACB\u3002"
-- children: []
-  content_layer: body
-  enumerated: false
-  label: list_item
-  marker: ''
-  orig: "\u4F4E\u5E7C\xB7\u4F4E\u5E7C5\u673A \u653E\u51FA \u6D3B\u52D5\u610F\u6B32\
-    \u9AD8\u3002"
-  parent:
-    $ref: '#/groups/57'
-  prov:
-  - bbox:
-      b: 33.0
-      coord_origin: BOTTOMLEFT
-      l: 648.3333333333334
-      r: 901.0
-      t: 81.66666666666669
-    charspan:
-    - 0
-    - 17
-    page_no: 25
-  self_ref: '#/texts/282'
-  text: "\u4F4E\u5E7C\xB7\u4F4E\u5E7C5\u673A \u653E\u51FA \u6D3B\u52D5\u610F\u6B32\
-    \u9AD8\u3002"
 - children: []
   content_layer: body
   label: text
@@ -7469,7 +6015,7 @@ texts:
     - 0
     - 3
     page_no: 25
-  self_ref: '#/texts/283'
+  self_ref: '#/texts/212'
   text: "\u6559\u6750\uFF1A"
 - children: []
   content_layer: furniture
@@ -7488,7 +6034,7 @@ texts:
     - 0
     - 11
     page_no: 25
-  self_ref: '#/texts/284'
+  self_ref: '#/texts/213'
   text: "22 \uFF0C 23 \u30DA\u30FC\u30B8"
 - children: []
   content_layer: body
@@ -7509,7 +6055,7 @@ texts:
     - 0
     - 14
     page_no: 26
-  self_ref: '#/texts/285'
+  self_ref: '#/texts/214'
   text: "\u65E9\u671F\u306E\u53D7\u8A3A\u304B\u3089\u524D\u5411\u304D\u306A\u751F\u6D3B\
     \u3078"
 - children: []
@@ -7531,7 +6077,7 @@ texts:
     - 0
     - 15
     page_no: 26
-  self_ref: '#/texts/286'
+  self_ref: '#/texts/215'
   text: "\u25CF\u8A3A\u65AD\u306F\u8A8D\u77E5\u75C7\u5C02\u9580\u306E\u533B\u7642\u6A5F\
     \u95A2\u3078"
 - children: []
@@ -7546,7 +6092,7 @@ texts:
     \ \u3092 \u6709 \u3059\u308B \u5C02\u9580\u306E\u533B\u7642\u6A5F\u95A2\u3078\u306E\
     \u53D7\u8A3A\u304C\u91CD\u8981 \u3002"
   parent:
-    $ref: '#/groups/59'
+    $ref: '#/groups/57'
   prov:
   - bbox:
       b: 344.555
@@ -7558,7 +6104,7 @@ texts:
     - 0
     - 86
     page_no: 26
-  self_ref: '#/texts/287'
+  self_ref: '#/texts/216'
   text: "\u30FB \u521D\u671F\u72B6\u614B\u3067\u306E\u8A3A\u65AD\u306F\u96E3\u3057\
     \u304F\u3001\u3046\u3064\u72B6\u614B\u306A\u3069\u3068\u533A\u5225\u304C\u3064\
     \u304D\u306B\u304F\u3044 \u3053\u3068\u304C\u3042\u308B\u3002 \u21D2 \u719F\u7DF4\
@@ -7584,7 +6130,7 @@ texts:
     - 0
     - 15
     page_no: 26
-  self_ref: '#/texts/288'
+  self_ref: '#/texts/217'
   text: "\u25CF\u65E9\u671F\u306B\u53D7\u8A3A\u3059\u308B\u3053\u3068\u306E\u30E1\u30EA\
     \u30C3\u30C8"
 - children: []
@@ -7596,7 +6142,7 @@ texts:
     \u308B\u3053\u3068\u3067\u8A8D\u77E5\u75C7\u72B6\u306E\u9032\u884C\u3092 \u9045\
     \ \u3089 \u305B \u308B\u3053\u3068\u304C \u53EF \u80FD"
   parent:
-    $ref: '#/groups/60'
+    $ref: '#/groups/58'
   prov:
   - bbox:
       b: 242.67700000000002
@@ -7608,7 +6154,7 @@ texts:
     - 0
     - 41
     page_no: 26
-  self_ref: '#/texts/289'
+  self_ref: '#/texts/218'
   text: "\u30FB\u539F\u56E0\u75BE\u60A3\u3092 \u521D\u671F \u306B\u6CBB\u7642\u3059\
     \u308B\u3053\u3068\u3067\u8A8D\u77E5\u75C7\u72B6\u306E\u9032\u884C\u3092 \u9045\
     \ \u3089 \u305B \u308B\u3053\u3068\u304C \u53EF \u80FD"
@@ -7621,7 +6167,7 @@ texts:
     \ \u3069\u3001\u5468\u56F2\u304B\u3089 \u53D7 \u3051 \u5165 \u308C\u3089\u308C\
     \u3084\u3059\u3044"
   parent:
-    $ref: '#/groups/60'
+    $ref: '#/groups/58'
   prov:
   - bbox:
       b: 221.077
@@ -7633,7 +6179,7 @@ texts:
     - 0
     - 37
     page_no: 26
-  self_ref: '#/texts/290'
+  self_ref: '#/texts/219'
   text: "\u30FB \u521D\u671F \u6BB5\u968E\u3067\u3042\u308C \u3070 \u3042\u308B \u307B\
     \ \u3069\u3001\u5468\u56F2\u304B\u3089 \u53D7 \u3051 \u5165 \u308C\u3089\u308C\
     \u3084\u3059\u3044"
@@ -7645,7 +6191,7 @@ texts:
   orig: "\u30FB \u5927 \u5207\u306A\u306E\u306F\u8A8D\u77E5\u75C7\u306B\u8A3A\u65AD\
     \u3055\u308C\u305F\u3001\u305D\u306E \u5148 \u306E \u66AE \u3089\u3057\u3002"
   parent:
-    $ref: '#/groups/60'
+    $ref: '#/groups/58'
   prov:
   - bbox:
       b: 133.09000000000003
@@ -7657,7 +6203,7 @@ texts:
     - 0
     - 30
     page_no: 26
-  self_ref: '#/texts/291'
+  self_ref: '#/texts/220'
   text: "\u30FB \u5927 \u5207\u306A\u306E\u306F\u8A8D\u77E5\u75C7\u306B\u8A3A\u65AD\
     \u3055\u308C\u305F\u3001\u305D\u306E \u5148 \u306E \u66AE \u3089\u3057\u3002"
 - children: []
@@ -7669,7 +6215,7 @@ texts:
     \u30FC\u3068\u3057\u3066\u3001\u81EA \u5DF1 \u767A \u4FE1 \u3092 \u652F\u63F4\
     \ \u3057\u3066\u3044\u304D\u307E\u3057 \u3087 \u3046\u3002"
   parent:
-    $ref: '#/groups/60'
+    $ref: '#/groups/58'
   prov:
   - bbox:
       b: 68.29000000000002
@@ -7681,7 +6227,7 @@ texts:
     - 0
     - 43
     page_no: 26
-  self_ref: '#/texts/292'
+  self_ref: '#/texts/221'
   text: "\u30FB \u7686 \u3055\u3093\u3082\u8A8D\u77E5\u75C7\u30B5\u30DD\u30FC\u30BF\
     \u30FC\u3068\u3057\u3066\u3001\u81EA \u5DF1 \u767A \u4FE1 \u3092 \u652F\u63F4\
     \ \u3057\u3066\u3044\u304D\u307E\u3057 \u3087 \u3046\u3002"
@@ -7695,7 +6241,7 @@ texts:
     \ \u5206 \u306E\u3053\u3068\u306B\u3064\u3044\u3066 \u8A71 \u3057\u5408\u3046\u3053\
     \u3068\u304C\u91CD\u8981\u3067\u3059\u3002"
   parent:
-    $ref: '#/groups/60'
+    $ref: '#/groups/58'
   prov:
   - bbox:
       b: 89.88999999999999
@@ -7707,7 +6253,7 @@ texts:
     - 0
     - 58
     page_no: 26
-  self_ref: '#/texts/293'
+  self_ref: '#/texts/222'
   text: "\u30FB \u5E0C\u671B \u3092 \u5B9F \u73FE\u3055 \u305B \u308B\u305F\u3081\u306B\
     \u3001 \u5C11 \u3057\u3065\u3064\u3067\u3082\u5468\u308A\u306E\u4EBA\u306B \u81EA\
     \ \u5206 \u306E\u3053\u3068\u306B\u3064\u3044\u3066 \u8A71 \u3057\u5408\u3046\u3053\
@@ -7729,7 +6275,7 @@ texts:
     - 0
     - 3
     page_no: 26
-  self_ref: '#/texts/294'
+  self_ref: '#/texts/223'
   text: "\u6559\u6750\uFF1A"
 - children: []
   content_layer: furniture
@@ -7748,6 +6294,6 @@ texts:
     - 0
     - 6
     page_no: 26
-  self_ref: '#/texts/295'
+  self_ref: '#/texts/224'
   text: "24 \u30DA\u30FC\u30B8"
-version: 1.7.0
+version: 1.9.0

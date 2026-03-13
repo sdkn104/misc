@@ -22,904 +22,934 @@
   21: paragraph: ２．高齢者ケアにおけるシーティングの意義
  22: chapter with name=slide-4
   23: title: 2.1　高齢者とシーティング
-  24: paragraph: 高齢者ケアにおけるシーティングとは？
-  25: paragraph: 　「高齢者の適切なケアとシーティングに関する手引き」では、以下のように定義をしました。
-  26: paragraph: 
-  27: paragraph: 
-  28: paragraph: 高齢者ケアにおけるシーティングとは、「体幹機能や座位保持機能が低下した高齢者が、個々の望む活動や参加を実現し、自立を促すために、椅子や車椅子等に快適に座るための支援であり、その支援を通して、高齢者の尊
-  29: paragraph: 高齢者ケアにおけるシーティングの定義　
-  30: paragraph: 「快適に座るための支援」とは、高齢者の一般的な特徴や個別性を踏まえて、本人にとって快適な座位姿勢が保持でき、本人の有する能力を最大限活かせるような椅子や車椅子、付属品等を選定・適合する個別ケアや専門的
-  31: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
-  32: picture
- 33: chapter with name=slide-5
-  34: title: 2.2　なぜシーティングを実施するのか
-  35: paragraph: ベッド上で過ごす時間が増えることにより、
-  36: paragraph: 筋萎縮、関節拘縮、骨萎縮、心肺機能の低下、意識障害 といった廃用症候群のリスクが高まる
-  37: paragraph: シーティングを実施し、
-  38: paragraph: 本人にとって快適な座位姿勢がとれるよう支援することで、
-  39: paragraph: 「廃用症候群の予防」、 「意欲の向上」 、「生活の質(QOL)の向上」が実現し、「その人らしい自立した生活の確立」に寄与することが期待できる
-  40: paragraph: QOL向上
-  41: paragraph: その人らしい
-  42: paragraph: 自立した生活の確立
-  43: paragraph: 意欲の向上
-  44: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
-  45: paragraph: シーティングを実施することによってどのような効果が期待されるのでしょうか？
-  46: picture
-  47: picture
-  48: paragraph: 廃用症候群
-  49: paragraph: の予防
- 50: chapter with name=slide-6
-  51: title: 2.3　高齢者ケアにおけるシーティングの目的
-  52: paragraph: 出所：木之瀬隆.これからのシーティング技術の展開.日本義肢装具学会誌2019及び廣瀬秀行,木之瀬隆.『高齢者のシーティング第二版』（三輪書店）P63-65を基に、ICFに準拠する形で整理
-  53: list with name=list
-   54: list_item: シーティングの目的は、心身機能・構造の維持・改善が挙げられます。
-  55: table
-  56: picture
-  57: picture
- 58: chapter with name=slide-7
-  59: title: 2.3　高齢者ケアにおけるシーティングの目的
-  60: list with name=list
-   61: list_item: シーティングの目的は、活動・参加の促進や環境因子・個人因子の改善が挙げられます。
-  62: table
-  63: picture
-  64: picture
-  65: picture
+  24: list with name=list
+   25: list_item: 高齢者ケアにおけるシーティングとは？
+  26: paragraph: 　「高齢者の適切なケアとシーティングに関する手引き」では、以下のように定義をしました。
+  27: list with name=list
+   28: list_item: 
+   29: list_item: 
+  30: paragraph: 高齢者ケアにおけるシーティングとは、「体幹機能や座位保持機能が低下した高齢者が、個々の望む活動や参加を実現し、自立を促すために、椅子や車椅子等に快適に座るための支援であり、その支援を通して、高齢者の尊
+  31: paragraph: 高齢者ケアにおけるシーティングの定義　
+  32: paragraph: 「快適に座るための支援」とは、高齢者の一般的な特徴や個別性を踏まえて、本人にとって快適な座位姿勢が保持でき、本人の有する能力を最大限活かせるような椅子や車椅子、付属品等を選定・適合する個別ケアや専門的
+  33: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+  34: picture
+ 35: chapter with name=slide-5
+  36: title: 2.2　なぜシーティングを実施するのか
+  37: paragraph: ベッド上で過ごす時間が増えることにより、
+  38: paragraph: 筋萎縮、関節拘縮、骨萎縮、心肺機能の低下、意識障害 といった廃用症候群のリスクが高まる
+  39: paragraph: シーティングを実施し、
+  40: paragraph: 本人にとって快適な座位姿勢がとれるよう支援することで、
+  41: paragraph: 「廃用症候群の予防」、 「意欲の向上」 、「生活の質(QOL)の向上」が実現し、「その人らしい自立した生活の確立」に寄与することが期待できる
+  42: paragraph: QOL向上
+  43: paragraph: その人らしい
+  44: paragraph: 自立した生活の確立
+  45: paragraph: 意欲の向上
+  46: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+  47: list with name=list
+   48: list_item: シーティングを実施することによってどのような効果が期待されるのでしょうか？
+  49: picture
+  50: picture
+  51: paragraph: 廃用症候群
+  52: paragraph: の予防
+ 53: chapter with name=slide-6
+  54: title: 2.3　高齢者ケアにおけるシーティングの目的
+  55: paragraph: 出所：木之瀬隆.これからのシーティング技術の展開.日本義肢装具学会誌2019及び廣瀬秀行,木之瀬隆.『高齢者のシーティング第二版』（三輪書店）P63-65を基に、ICFに準拠する形で整理
+  56: list with name=list
+   57: list_item: シーティングの目的は、心身機能・構造の維持・改善が挙げられます。
+  58: table
+  59: picture
+  60: picture
+ 61: chapter with name=slide-7
+  62: title: 2.3　高齢者ケアにおけるシーティングの目的
+  63: list with name=list
+   64: list_item: シーティングの目的は、活動・参加の促進や環境因子・個人因子の改善が挙げられます。
+  65: table
   66: picture
   67: picture
-  68: paragraph: 出所：木之瀬隆.これからのシーティング技術の展開.日本義肢装具学会誌2019及び廣瀬秀行,木之瀬隆.『高齢者のシーティング第二版』（三輪書店）P63-65を基に、ICFに準拠する形で整理
- 69: chapter with name=slide-8
-  70: paragraph: 体幹機能が保たれている場合、
-  71: paragraph: 食事や作業時、休息時には椅子に座って生活するのが人間の本来の暮らしである。
-  72: list with name=list
-   73: list_item: 
-   74: list_item: 車椅子は本来、移動のための手段に用いられ、「座る」ための用具として十分な機能を備えていないことが多い
-   75: list_item: 車椅子に座り続けることは苦痛であるだけでなく、高齢者のADLを低下させ、生活の質を下げることになりかねない
-  76: title: 2.4　「椅子に座る」という暮らしの保障
-  77: paragraph: シーティングの考え方を通して
-  78: paragraph: 「椅子に座る」という生活について
-  79: paragraph: 考えてみましょう。
-  80: list with name=list
-   81: list_item: 介護の現場で、椅子に座ることができるにもかかわらず、歩行能力低下や認知症であることを理由に、安易に車椅子を使用している高齢者はいませんか？
-  82: picture
-  83: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 84: chapter with name=slide-9
-  85: title: 　体格に応じた椅子やダイニングテーブルを使用した事例
-  86: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  87: list with name=list
-   88: list_item: 円背が強く、身長が130cmほどであり、他の入居者と共通して使用している ダイニングテーブルでは高さが合っておらず、うまく食事をとることができない。
-   89: list_item: 時折、座っているときに左側に傾いていってしまう様子もみられる。
-  90: paragraph: シーティングの
-  91: paragraph: 必要性検討
-  92: list with name=list
-   93: list_item: 標準的な高さのダイニングテーブルでは高さが合っておらず、食事の際に肩があがっており、食べにくそう だった。
-   94: list_item: 麻痺のある左側に姿勢が崩れ、自力で食事を食べることが難しい状況。
-  95: paragraph: シーティング
-  96: paragraph: 実施に向けた
-  97: paragraph: アセスメント
-  98: list with name=list
-   99: list_item: 介護職員Aさんは、機能訓練指導員と連携し、本人にとって最も食べやすいテーブルの高さについて 検討。
-   100: list_item: 座っているときに左側に傾いてしまうことを防ぐため、パッドを肘の下に置くことを試した。
-  101: paragraph: シーティング
-  102: paragraph: 実施
-  103: list with name=list
-   104: list_item: 高さ調節が可能なサイドテーブルを導入し、本人にとって最も食べやすい高さに合わせ、食事時に使用 してもらうことにした。
-   105: list_item: 肘の下にパッドを使用することで左への傾きが少なくなったため、継続して使用することにした。機能訓練指導員が中心となり、介護職員とともにシーティング前後の姿勢変化を写真を基に都度状態をチェック した。
-  106: paragraph: 効果検証
-  107: paragraph: 継続的な観察
-  108: list with name=list
-   109: list_item: テーブルの高さを合わせることで、食事の際に肩があがらなくなり、右上肢で自力でスムーズに食事をとることができるようになった。
-   110: list_item: 肘の下にパッドを使用することで傾きは少なくなり、食事に集中することができるようになった。
-  111: paragraph: 　 　事例紹介　
-  112: list with name=list
-   113: list_item: 90代女性
-   114: list_item: 要介護4
-   115: list_item: 左片麻痺、円背
-  116: picture
- 117: chapter with name=slide-10
-  118: paragraph: ３．シーティングの対象となる高齢者像
- 119: chapter with name=slide-11
-  120: title: 3.1　シーティングの対象となる高齢者像
-  121: paragraph: 高齢者の特徴や疾患によって、原因は個々によって異なります。
-  122: list with name=list
-   123: list_item: 複数の疾患を有している場合が多く､ その症状も多彩
-   124: list_item: 高齢者によくみられる座位姿勢の特徴として、「骨盤が後傾している」、「体幹が傾いている」、「頭部が傾いている」　ことが多い　　
-  125: list with name=list
-   126: list_item: 疾患や障害像によってシーティングの実施内容や留意点が異なる
-   127: list_item: アセスメントを通して原因を探り、個別ケアとして快適なシーティングを実施することが重要
-  128: paragraph: 高齢者の特徴
-  129: paragraph: シーティングの必要性・留意点
-  130: picture
-  131: picture
-  132: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 133: chapter with name=slide-12
-  134: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点 ①
-  135: paragraph: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
-  136: paragraph: 認知症
-  137: paragraph: シーティングによって離床を促し、本人の慣れ親しんだ環境を整えることで、 認知症の症状の緩和が期待できる場合がある
-  138: list with name=list
-   139: list_item: 自分の置かれている状況の判断が困難であるために、椅子や車椅子に違和感があると 急に立ち上がろうとして転倒する場合があるため注意
-   140: list_item: 意思の伝達が難しい場合は、急な立ち上がりや転倒につながらないよう、 本人の意図や原因を確認する対応が必要
-  141: table
-  142: table
-  143: picture
-  144: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 145: chapter with name=slide-13
-  146: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点②
-  147: paragraph: 　廃用症候群
-  148: paragraph: シーティングにより離床時間を増やすことで、心身に生じる様々な好ましくない状態を 予防、改善することが期待できる
-  149: list with name=list
-   150: list_item: 四肢に拘縮がある場合は、車椅子のフットプレート等が合っていないと体幹が左右非対称になり、体幹変形を引き起こす可能性があるため、車椅子やクッション等の選定に注意が必要
-   151: list_item: 呼吸不全がある場合や、摂食・嚥下状態が悪い場合には、ポジショニング評価を丁寧に行い機能的な改善の目的を明確にする
-  152: table
-  153: picture
-  154: table
-  155: paragraph: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
-  156: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 157: chapter with name=slide-14
-  158: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点③
-  159: paragraph: 　脳血管障害　
-  160: paragraph: シーティングを実施することによって、麻痺側への注意が改善したり、 ADLが改善したりすることが期待できる
-  161: list with name=list
-   162: list_item: 非麻痺側の片手片足で車椅子を操作する場合が多いので、操作しやすい座面の高さや 傾斜角等に調整する
-   163: list_item: 障害が固定化された状態では、機能障害に配慮しながら、廃用性症候群の予防にも 留意する
-  164: table
-  165: picture
-  166: table
-  167: paragraph: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
-  168: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 169: chapter with name=slide-15
-  170: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点④
-  171: paragraph: 　神経筋疾患
-  172: paragraph: シーティングにより姿勢を整えることで、視界が広がり、活動や参加の意欲が高まることが期待される
+  68: picture
+  69: picture
+  70: picture
+  71: paragraph: 出所：木之瀬隆.これからのシーティング技術の展開.日本義肢装具学会誌2019及び廣瀬秀行,木之瀬隆.『高齢者のシーティング第二版』（三輪書店）P63-65を基に、ICFに準拠する形で整理
+ 72: chapter with name=slide-8
+  73: paragraph: 体幹機能が保たれている場合、
+  74: paragraph: 食事や作業時、休息時には椅子に座って生活するのが人間の本来の暮らしである。
+  75: list with name=list
+   76: list_item: 
+   77: list_item: 車椅子は本来、移動のための手段に用いられ、「座る」ための用具として十分な機能を備えていないことが多い
+   78: list_item: 車椅子に座り続けることは苦痛であるだけでなく、高齢者のADLを低下させ、生活の質を下げることになりかねない
+  79: title: 2.4　「椅子に座る」という暮らしの保障
+  80: paragraph: シーティングの考え方を通して
+  81: paragraph: 「椅子に座る」という生活について
+  82: paragraph: 考えてみましょう。
+  83: list with name=list
+   84: list_item: 介護の現場で、椅子に座ることができるにもかかわらず、歩行能力低下や認知症であることを理由に、安易に車椅子を使用している高齢者はいませんか？
+  85: picture
+  86: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 87: chapter with name=slide-9
+  88: title: 　体格に応じた椅子やダイニングテーブルを使用した事例
+  89: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+  90: list with name=list
+   91: list_item: 円背が強く、身長が130cmほどであり、他の入居者と共通して使用している ダイニングテーブルでは高さが合っておらず、うまく食事をとることができない。
+   92: list_item: 時折、座っているときに左側に傾いていってしまう様子もみられる。
+  93: paragraph: シーティングの
+  94: paragraph: 必要性検討
+  95: list with name=list
+   96: list_item: 標準的な高さのダイニングテーブルでは高さが合っておらず、食事の際に肩があがっており、食べにくそう だった。
+   97: list_item: 麻痺のある左側に姿勢が崩れ、自力で食事を食べることが難しい状況。
+  98: paragraph: シーティング
+  99: paragraph: 実施に向けた
+  100: paragraph: アセスメント
+  101: list with name=list
+   102: list_item: 介護職員Aさんは、機能訓練指導員と連携し、本人にとって最も食べやすいテーブルの高さについて 検討。
+   103: list_item: 座っているときに左側に傾いてしまうことを防ぐため、パッドを肘の下に置くことを試した。
+  104: paragraph: シーティング
+  105: paragraph: 実施
+  106: list with name=list
+   107: list_item: 高さ調節が可能なサイドテーブルを導入し、本人にとって最も食べやすい高さに合わせ、食事時に使用 してもらうことにした。
+   108: list_item: 肘の下にパッドを使用することで左への傾きが少なくなったため、継続して使用することにした。機能訓練指導員が中心となり、介護職員とともにシーティング前後の姿勢変化を写真を基に都度状態をチェック した。
+  109: paragraph: 効果検証
+  110: paragraph: 継続的な観察
+  111: list with name=list
+   112: list_item: テーブルの高さを合わせることで、食事の際に肩があがらなくなり、右上肢で自力でスムーズに食事をとることができるようになった。
+   113: list_item: 肘の下にパッドを使用することで傾きは少なくなり、食事に集中することができるようになった。
+  114: paragraph: 　 　事例紹介　
+  115: list with name=list
+   116: list_item: 90代女性
+   117: list_item: 要介護4
+   118: list_item: 左片麻痺、円背
+  119: picture
+ 120: chapter with name=slide-10
+  121: paragraph: ３．シーティングの対象となる高齢者像
+ 122: chapter with name=slide-11
+  123: title: 3.1　シーティングの対象となる高齢者像
+  124: list with name=list
+   125: list_item: 高齢者の特徴や疾患によって、原因は個々によって異なります。
+  126: list with name=list
+   127: list_item: 複数の疾患を有している場合が多く､ その症状も多彩
+   128: list_item: 高齢者によくみられる座位姿勢の特徴として、「骨盤が後傾している」、「体幹が傾いている」、「頭部が傾いている」　ことが多い　　
+  129: list with name=list
+   130: list_item: 疾患や障害像によってシーティングの実施内容や留意点が異なる
+   131: list_item: アセスメントを通して原因を探り、個別ケアとして快適なシーティングを実施することが重要
+  132: paragraph: 高齢者の特徴
+  133: paragraph: シーティングの必要性・留意点
+  134: picture
+  135: picture
+  136: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 137: chapter with name=slide-12
+  138: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点 ①
+  139: list with name=list
+   140: list_item: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
+  141: paragraph: 認知症
+  142: paragraph: シーティングによって離床を促し、本人の慣れ親しんだ環境を整えることで、 認知症の症状の緩和が期待できる場合がある
+  143: list with name=list
+   144: list_item: 自分の置かれている状況の判断が困難であるために、椅子や車椅子に違和感があると 急に立ち上がろうとして転倒する場合があるため注意
+   145: list_item: 意思の伝達が難しい場合は、急な立ち上がりや転倒につながらないよう、 本人の意図や原因を確認する対応が必要
+  146: table
+  147: table
+  148: picture
+  149: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 150: chapter with name=slide-13
+  151: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点②
+  152: paragraph: 　廃用症候群
+  153: paragraph: シーティングにより離床時間を増やすことで、心身に生じる様々な好ましくない状態を 予防、改善することが期待できる
+  154: list with name=list
+   155: list_item: 四肢に拘縮がある場合は、車椅子のフットプレート等が合っていないと体幹が左右非対称になり、体幹変形を引き起こす可能性があるため、車椅子やクッション等の選定に注意が必要
+   156: list_item: 呼吸不全がある場合や、摂食・嚥下状態が悪い場合には、ポジショニング評価を丁寧に行い機能的な改善の目的を明確にする
+  157: table
+  158: picture
+  159: table
+  160: list with name=list
+   161: list_item: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
+  162: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 163: chapter with name=slide-14
+  164: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点③
+  165: paragraph: 　脳血管障害　
+  166: paragraph: シーティングを実施することによって、麻痺側への注意が改善したり、 ADLが改善したりすることが期待できる
+  167: list with name=list
+   168: list_item: 非麻痺側の片手片足で車椅子を操作する場合が多いので、操作しやすい座面の高さや 傾斜角等に調整する
+   169: list_item: 障害が固定化された状態では、機能障害に配慮しながら、廃用性症候群の予防にも 留意する
+  170: table
+  171: picture
+  172: table
   173: list with name=list
-   174: list_item: 姿勢の障害により、体幹が片側に傾きやすく、また、前屈しやすいので、体幹部をしっかりと支え、視線が前方を向くように調整する
-   175: list_item: 本人が作業しやすいように周囲の環境を整え、活動や参加を促す
-  176: table
-  177: picture
-  178: table
-  179: paragraph: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
-  180: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 181: chapter with name=slide-16
-  182: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点⑤
-  183: paragraph: 　　起立性低血圧
-  184: paragraph: シーティングにより離床時間を増やすことで、起立性低血圧を予防、改善することが期待できる
-  185: list with name=list
-   186: list_item: 起立性低血圧の原因としては主に脊髄損傷や変性疾患等が考えられ、それぞれによって留意すべき事項が異なるため、疾患や症状の原因等を医師から十分に聞き取った上でシーティングを実施する必要がある
-   187: list_item: 1日にどの程度離床すべきか担当医と相談し、徐々に離床時間を増やしていく
-  188: table
-  189: picture
-  190: table
-  191: paragraph: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
-  192: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 193: chapter with name=slide-17
-  194: paragraph: ４．高齢者ケアにおけるシーティングの進め方
- 195: chapter with name=slide-18
-  196: title: 4.1　基本的な座位姿勢の理解
-  197: paragraph: 基本的な座位姿勢
-  198: paragraph: 　基本的な座位姿勢を理解した上で、
-  199: paragraph: 　それぞれの高齢者の身体の状態に応じて柔軟に対応する必要がある
-  200: list with name=list
-   201: list_item: 骨盤はまっすぐまたはわずかに前傾している
-   202: list_item: 脊柱は、緩やかなS字カーブとなっており、体幹全体を外から見渡すとまっすぐになっている
-   203: list_item: 膝関節、足関節は曲がっており、踵が床にしっかりついている
-   204: list_item: 正面から見て頭がまっすぐで、肩、肘、膝の高さが左右対称である
-  205: picture
-  206: paragraph: 基本的な座位姿勢とは、どのようなものなのでしょうか？
-  207: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 208: chapter with name=slide-19
-  209: paragraph: 車椅子の各部位名称
-  210: paragraph: 椅子の各部位名称
-  211: title: 4.2　椅子や車椅子の各部名称の理解
-  212: paragraph: 椅子や車椅子等の各部の名称を理解しておくことも重要です。
-  213: picture
-  214: paragraph: 1
-  215: paragraph: 2
-  216: paragraph: 3
-  217: paragraph: 5
-  218: paragraph: 4
-  219: picture
-  220: paragraph: 1
-  221: paragraph: 2
-  222: paragraph: 3
-  223: paragraph: 5
-  224: paragraph: 4
-  225: paragraph: 6
-  226: paragraph: 7
-  227: table
-  228: table
-  229: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 230: chapter with name=slide-20
-  231: title: シーティングの実際の流れ
-  232: paragraph: シーティング実施の
-  233: paragraph: 必要性の検討
-  234: paragraph: 課題
-  235: paragraph: 発見
-  236: paragraph: シーティングの必要性検討
-  237: paragraph: アセス
-  238: paragraph: メント
-  239: paragraph: 目標
-  240: paragraph: 設定
-  241: paragraph: 
-  242: paragraph: 継続的な
-  243: paragraph: 観察
-  244: paragraph: 
-  245: paragraph: 
-  246: paragraph: 
-  247: paragraph: 
-  248: paragraph: シーティング実施に
-  249: paragraph: 向けたアセスメント
-  250: paragraph: 
-  251: paragraph: アセスメントに基づいた
-  252: paragraph: シーティングの実施
-  253: paragraph: 
-  254: paragraph: 
+   174: list_item: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
+  175: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 176: chapter with name=slide-15
+  177: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点④
+  178: paragraph: 　神経筋疾患
+  179: paragraph: シーティングにより姿勢を整えることで、視界が広がり、活動や参加の意欲が高まることが期待される
+  180: list with name=list
+   181: list_item: 姿勢の障害により、体幹が片側に傾きやすく、また、前屈しやすいので、体幹部をしっかりと支え、視線が前方を向くように調整する
+   182: list_item: 本人が作業しやすいように周囲の環境を整え、活動や参加を促す
+  183: table
+  184: picture
+  185: table
+  186: list with name=list
+   187: list_item: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
+  188: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 189: chapter with name=slide-16
+  190: title: 3.2　高齢者にみられる疾患や症状に対するシーティングの意義と留意点⑤
+  191: paragraph: 　　起立性低血圧
+  192: paragraph: シーティングにより離床時間を増やすことで、起立性低血圧を予防、改善することが期待できる
+  193: list with name=list
+   194: list_item: 起立性低血圧の原因としては主に脊髄損傷や変性疾患等が考えられ、それぞれによって留意すべき事項が異なるため、疾患や症状の原因等を医師から十分に聞き取った上でシーティングを実施する必要がある
+   195: list_item: 1日にどの程度離床すべきか担当医と相談し、徐々に離床時間を増やしていく
+  196: table
+  197: picture
+  198: table
+  199: list with name=list
+   200: list_item: 疾患・症状別に、シーティングの意義と留意点を考えてみましょう。
+  201: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 202: chapter with name=slide-17
+  203: paragraph: ４．高齢者ケアにおけるシーティングの進め方
+ 204: chapter with name=slide-18
+  205: title: 4.1　基本的な座位姿勢の理解
+  206: paragraph: 基本的な座位姿勢
+  207: paragraph: 　基本的な座位姿勢を理解した上で、
+  208: paragraph: 　それぞれの高齢者の身体の状態に応じて柔軟に対応する必要がある
+  209: list with name=list
+   210: list_item: 骨盤はまっすぐまたはわずかに前傾している
+   211: list_item: 脊柱は、緩やかなS字カーブとなっており、体幹全体を外から見渡すとまっすぐになっている
+   212: list_item: 膝関節、足関節は曲がっており、踵が床にしっかりついている
+   213: list_item: 正面から見て頭がまっすぐで、肩、肘、膝の高さが左右対称である
+  214: picture
+  215: list with name=list
+   216: list_item: 基本的な座位姿勢とは、どのようなものなのでしょうか？
+  217: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 218: chapter with name=slide-19
+  219: paragraph: 車椅子の各部位名称
+  220: paragraph: 椅子の各部位名称
+  221: title: 4.2　椅子や車椅子の各部名称の理解
+  222: list with name=list
+   223: list_item: 椅子や車椅子等の各部の名称を理解しておくことも重要です。
+  224: picture
+  225: paragraph: 1
+  226: paragraph: 2
+  227: paragraph: 3
+  228: paragraph: 5
+  229: paragraph: 4
+  230: picture
+  231: paragraph: 1
+  232: paragraph: 2
+  233: paragraph: 3
+  234: paragraph: 5
+  235: paragraph: 4
+  236: paragraph: 6
+  237: paragraph: 7
+  238: table
+  239: table
+  240: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 241: chapter with name=slide-20
+  242: title: シーティングの実際の流れ
+  243: paragraph: シーティング実施の
+  244: paragraph: 必要性の検討
+  245: paragraph: 課題
+  246: paragraph: 発見
+  247: paragraph: シーティングの必要性検討
+  248: paragraph: アセス
+  249: paragraph: メント
+  250: paragraph: 目標
+  251: paragraph: 設定
+  252: paragraph: 
+  253: paragraph: 継続的な
+  254: paragraph: 観察
   255: paragraph: 
   256: paragraph: 
-  257: paragraph: 手順②
-  258: paragraph: 手順③
-  259: paragraph: 手順①
-  260: paragraph: 手順④
-  261: paragraph: Check
-  262: paragraph: Action
-  263: paragraph: Do
-  264: paragraph: 計画の
-  265: paragraph: 見直し
-  266: paragraph: Plan
-  267: paragraph: 定期的な
-  268: paragraph: 評価
-  269: paragraph: シーティングを実施するにあたっては、まずはその必要性を検討し、アセスメントを実施した上で、計画を立案することが必要
-  270: paragraph: また、高齢者の身体症状は刻々と変化するため、定期的に評価し、必要に応じて見直すことが重要
-  271: paragraph: シーティングは、実際にはどのような流れで実施されるのでしょうか？
-  272: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 273: chapter with name=slide-21
-  274: title: 4.3 　手順①シーティング実施の必要性の検討
-  275: paragraph: 高齢者の
-  276: paragraph: 変化に気づく
-  277: paragraph: ケアの工夫を
-  278: paragraph: 検討
-  279: list with name=list
-   280: list_item: 高齢者の日常生活をよく観察し、いつもと異なる様子がないか、
-   281: list_item: 特に介護職員は「課題の第一発見者」としての役割が期待される
-  282: paragraph: 　　高齢者が困っていることを見つけ出す
-  283: paragraph: 普段と異なる様子に気づいた場合は、ケアの工夫によって課題を解決することができないかを検討
-  284: paragraph: その他の
-  285: paragraph: 専門職に相談
-  286: paragraph: 必要に応じて医師や看護師、リハビリテーション専門職等に相談し、解決策を探る
-  287: paragraph: ④
-  288: paragraph: 観察
-  289: paragraph: ③
-  290: paragraph: 実施
-  291: paragraph: ②
-  292: paragraph: アセスメント
-  293: paragraph: ①
-  294: paragraph: 必要性検討
-  295: paragraph: 手順①には、「課題発見」と「シーティングの必要性検討」のプロセスがあります。
-  296: paragraph: 　　　　　　　　　介護職員には重要な役割があります。
-  297: paragraph: 　　「課題発見」のポイント
-  298: paragraph: 　　「シーティングの必要性検討」のポイント
-  299: picture
-  300: picture
-  301: picture
-  302: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 303: chapter with name=slide-22
-  304: title: 高齢者の課題とシーティングが必要と考えられる例
-  305: paragraph: 殿部の痛みのため長時間座位をとることができず、食事を最後まで自分で食べることができない
-  306: paragraph: 車椅子を自分で駆動できず、
-  307: paragraph: 活動範囲が狭小化している
-  308: paragraph: シーティングを実施することにより痛みを取り除き、食事を終えるまで椅子に座ることができる可能性がある
-  309: paragraph: シーティングを実施することにより車椅子自走の自立度が向上し、活動範囲が拡大する可能性がある
-  310: paragraph: ④
-  311: paragraph: 観察
-  312: paragraph: ③
-  313: paragraph: 実施
-  314: paragraph: ②
-  315: paragraph: アセスメント
-  316: paragraph: ①
-  317: paragraph: 必要性検討
-  318: picture
-  319: picture
-  320: paragraph: 明らかとなった課題を解決する手段の一つとしてシーティングを実施する必要性があれば、シーティング実施を検討します。
-  321: paragraph: ※課題を解決するためにはシーティング以外のアプローチも必要となるケースがあるため、シーティング以外
-  322: paragraph: 　の課題解決手段も検討する必要がある
-  323: table
-  324: table
-  325: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 326: chapter with name=slide-23
-  327: title: 4.4　手順②アセスメント
-  328: list with name=list
-   329: list_item: 臥床の姿勢（仰向きはできるか、横向き寝をしているか）
-   330: list_item: 普段どれくらいの時間座っているか、離床時間といった高齢者の生活
-   331: list_item: どんな時そわそわしたり､立ちあがったりするのか
-   332: list_item: 車椅子に移乗するとき､どの程度の手助けが必要か、自分で操作できるか
-   333: list_item: 椅子や車いす､幅、テーブルの高さは本人に合っているか
-  334: paragraph: ④
-  335: paragraph: 観察
-  336: paragraph: ③
-  337: paragraph: 実施
-  338: paragraph: ②
-  339: paragraph: アセスメント
-  340: paragraph: ①
-  341: paragraph: 必要性検討
-  342: paragraph: 手順②アセスメントにおける介護職員の視点です。
-  343: paragraph: ケアにおけるアセスメントの視点（例）
-  344: paragraph: 日常生活の中で現状について情報を収集し、
-  345: paragraph: 課題とその原因を探ることが重要
-  346: picture
-  347: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 348: chapter with name=slide-24
-  349: title: 4.4　手順②アセスメント
-  350: paragraph: 情報収集と
-  351: paragraph: 背景の探索
-  352: paragraph: 期待する効果 を見据えた
-  353: paragraph: 目標設定
-  354: list with name=list
-   355: list_item: 高齢者が有する課題の背景になる原因を探り、シーティングの実施プランを立てるために必要なアセスメントを実施する
-   356: list_item: アセスメントでは、高齢者の現状について情報を収集し、その背景にある原因を探る
-  357: list with name=list
-   358: list_item: アセスメントを実施し課題とその原因を探ったうえで、シーティングの目標を設定する
-   359: list_item: 目標は、シーティングによって期待できる効果を見据え、活動や参加のレベルで設定される
-  360: paragraph: 手順②には「アセスメント」と「目標設定」のプロセスがあります。
-  361: paragraph: このプロセスは、リハビリテーション専門職等も含め多職種で実施する必要があります。
-  362: paragraph: 　　「アセスメント」のポイント
-  363: paragraph: 　　「目標設定」のポイント
-  364: picture
-  365: picture
-  366: paragraph: ④
-  367: paragraph: 観察
-  368: paragraph: ③
-  369: paragraph: 実施
-  370: paragraph: ②
-  371: paragraph: アセスメント
-  372: paragraph: ①
-  373: paragraph: 必要性検討
-  374: picture
-  375: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 376: chapter with name=slide-25
-  377: title: 「活動」におけるシーティングの目標（例）
-  378: paragraph: シーティングにより座位で過ごす時間が増えることで、
-  379: list with name=list
-   380: list_item: 椅子に座る時間が向上し、生活リズムが改善する
-   381: list_item: 椅子に座って櫛で髪をとかすことができる
-   382: list_item: 椅子に座って電動ひげ剃りによるひげ剃り動作が可能となる
-   383: list_item: 嚥下しやすいポジションとなり、食事の形態がアップする
-   384: list_item: 頸部の前屈が改善し前を向けるようになり、会話が円滑となる
-   385: list_item: トイレでの排泄が可能となる　　等
-  386: paragraph: ④
-  387: paragraph: 観察
-  388: paragraph: ③
-  389: paragraph: 実施
-  390: paragraph: ②
-  391: paragraph: アセスメント
-  392: paragraph: ①
-  393: paragraph: 必要性検討
-  394: paragraph: 「活動」におけるシーティングの目標設定の例は以下の通りです。
-  395: picture
-  396: picture
-  397: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 398: chapter with name=slide-26
-  399: title: 4.5　手順③シーティングの実施
-  400: list with name=list
-   401: list_item: 手順②「アセスメント」に基づき、シーティングの実施プランを立て、実際にシーティングを実施
-   402: list_item: 実施にあたっては、日々の観察を通して状況を把握し、シーティング実施内容を変更していくというPDCAサイクル（Plan、Do、Check、Action）を回すことが必要不可欠となる
-  403: paragraph: ④
-  404: paragraph: 観察
-  405: paragraph: ③
-  406: paragraph: 実施
-  407: paragraph: ②
-  408: paragraph: アセスメント
-  409: paragraph: ①
-  410: paragraph: 必要性検討
-  411: paragraph: 「アセスメントに基づいたシーティングの実施」の基本的な考え方
-  412: picture
-  413: paragraph: シーティングは、PDCAサイクルを回しながら実施していくことが重要です。
-  414: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 415: chapter with name=slide-27
-  416: title: 4.5　手順③シーティングの実施
-  417: paragraph: ④
-  418: paragraph: 観察
-  419: paragraph: ③
-  420: paragraph: 実施
-  421: paragraph: ②
-  422: paragraph: アセスメント
-  423: paragraph: ①
-  424: paragraph: 必要性検討
-  425: list with name=list
-   426: list_item: シーティングの実施計画を日々のスケジュールに落とし込む際に、高齢者の日々の様子を看護師やリハビリテーション専門職等に情報共有する役割を担う
-  427: paragraph: Plan
-  428: paragraph: 介護職員の役割とポイント
-  429: paragraph: プロセス
-  430: paragraph: Do
-  431: paragraph: Check
-  432: paragraph: Action
-  433: list with name=list
-   434: list_item: リハビリテーション専門職等とともに、日々の生活でシーティングを実施
-   435: list_item: シーティングの実施方法等を介護職員間で共有
-   436: list_item: 日々の様子を観察し、変化に気づいた場合は、必要に応じてリハビリテーション専門職に情報を共有
-  437: list with name=list
-   438: list_item: シーティング実施後の変化を観察し、日常生活場面での目標達成度を確認し、その結果をリハビリテーション専門職等に共有する
-   439: list_item: シーティング実施内容が変更された場合は、介護職員同士で情報共有する
-   440: list_item: 目標が達成したことが確認された場合は、継続的な観察に移行
-   441: list_item: 目標が未達成であった場合や、シーティング実施内容に修正が必要である場合は、再びアセスメントを行い、シーティング実施の具体的な方法について再度検討する
-  442: picture
-  443: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 444: chapter with name=slide-28
-  445: paragraph: 椅子と車椅子を、日常生活の場面に応じて使い分けていますか？
-  446: title: 利用者の状態にあった椅子や車椅子等の選定・適応
-  447: list with name=list
-   448: list_item: 施設備品としての車椅子は移動のための用具であり、「座る」ための用具としては十分な機能を備えていない場合がある
-   449: list_item: 高齢者それぞれのニーズに応じて適切な椅子や車椅子等を考えることがシーティングを実施する上で重要なポイントの一つ
-  450: paragraph: 利用者の状態にあった椅子や車椅子等の選定・適応のポイント
-  451: paragraph: ＜例＞
-  452: list with name=list
-   453: list_item: 立位や歩行が可能な場合、食事場面やテレビを見てくつろぐ場合は椅子に座る
-   454: list_item: 歩行が困難な利用者等は、車椅子で自走したり、介助により移動する場合がある
-  455: paragraph: ④
-  456: paragraph: 観察
-  457: paragraph: ③
-  458: paragraph: 実施
-  459: paragraph: ②
-  460: paragraph: アセスメント
-  461: paragraph: ①
-  462: paragraph: 必要性検討
-  463: picture
-  464: picture
-  465: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 466: chapter with name=slide-29
-  467: list with name=list
-   468: list_item: PDCAサイクルを通して当初の目標を達成できた場合、その状態が継続できるよう支援する
-   469: list_item: 
-  470: paragraph: 
-  471: title: 4.6　手順④「継続的な観察」のポイント
-  472: paragraph: 目標を達成できた場合は継続的な観察を行い、その状態が継続できるよう支援します。
-  473: paragraph: 高齢者の状態は絶えず変化するため、
-  474: paragraph: 新たな課題やニーズが生じる場合がある
-  475: paragraph: ④
-  476: paragraph: 観察
-  477: paragraph: ③
-  478: paragraph: 実施
-  479: paragraph: ②
-  480: paragraph: アセスメント
-  481: paragraph: ①
-  482: paragraph: 必要性検討
-  483: paragraph: 　　「継続的な観察」のポイント
+  257: paragraph: 
+  258: paragraph: 
+  259: paragraph: シーティング実施に
+  260: paragraph: 向けたアセスメント
+  261: paragraph: 
+  262: paragraph: アセスメントに基づいた
+  263: paragraph: シーティングの実施
+  264: paragraph: 
+  265: paragraph: 
+  266: paragraph: 
+  267: paragraph: 
+  268: paragraph: 手順②
+  269: paragraph: 手順③
+  270: paragraph: 手順①
+  271: paragraph: 手順④
+  272: paragraph: Check
+  273: paragraph: Action
+  274: paragraph: Do
+  275: paragraph: 計画の
+  276: paragraph: 見直し
+  277: paragraph: Plan
+  278: paragraph: 定期的な
+  279: paragraph: 評価
+  280: list with name=list
+   281: list_item: シーティングを実施するにあたっては、まずはその必要性を検討し、アセスメントを実施した上で、計画を立案することが必要
+   282: list_item: また、高齢者の身体症状は刻々と変化するため、定期的に評価し、必要に応じて見直すことが重要
+  283: list with name=list
+   284: list_item: シーティングは、実際にはどのような流れで実施されるのでしょうか？
+  285: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 286: chapter with name=slide-21
+  287: title: 4.3 　手順①シーティング実施の必要性の検討
+  288: paragraph: 高齢者の
+  289: paragraph: 変化に気づく
+  290: paragraph: ケアの工夫を
+  291: paragraph: 検討
+  292: list with name=list
+   293: list_item: 高齢者の日常生活をよく観察し、いつもと異なる様子がないか、
+  294: paragraph: 　　高齢者が困っていることを見つけ出す
+  295: list with name=list
+   296: list_item: 特に介護職員は「課題の第一発見者」としての役割が期待される
+  297: paragraph: 普段と異なる様子に気づいた場合は、ケアの工夫によって課題を解決することができないかを検討
+  298: paragraph: その他の
+  299: paragraph: 専門職に相談
+  300: paragraph: 必要に応じて医師や看護師、リハビリテーション専門職等に相談し、解決策を探る
+  301: paragraph: ④
+  302: paragraph: 観察
+  303: paragraph: ③
+  304: paragraph: 実施
+  305: paragraph: ②
+  306: paragraph: アセスメント
+  307: paragraph: ①
+  308: paragraph: 必要性検討
+  309: list with name=list
+   310: list_item: 手順①には、「課題発見」と「シーティングの必要性検討」のプロセスがあります。
+  311: paragraph: 　　　　　　　　　介護職員には重要な役割があります。
+  312: paragraph: 　　「課題発見」のポイント
+  313: paragraph: 　　「シーティングの必要性検討」のポイント
+  314: picture
+  315: picture
+  316: picture
+  317: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 318: chapter with name=slide-22
+  319: title: 高齢者の課題とシーティングが必要と考えられる例
+  320: paragraph: 殿部の痛みのため長時間座位をとることができず、食事を最後まで自分で食べることができない
+  321: paragraph: 車椅子を自分で駆動できず、
+  322: paragraph: 活動範囲が狭小化している
+  323: paragraph: シーティングを実施することにより痛みを取り除き、食事を終えるまで椅子に座ることができる可能性がある
+  324: paragraph: シーティングを実施することにより車椅子自走の自立度が向上し、活動範囲が拡大する可能性がある
+  325: paragraph: ④
+  326: paragraph: 観察
+  327: paragraph: ③
+  328: paragraph: 実施
+  329: paragraph: ②
+  330: paragraph: アセスメント
+  331: paragraph: ①
+  332: paragraph: 必要性検討
+  333: picture
+  334: picture
+  335: list with name=list
+   336: list_item: 明らかとなった課題を解決する手段の一つとしてシーティングを実施する必要性があれば、シーティング実施を検討します。
+  337: paragraph: ※課題を解決するためにはシーティング以外のアプローチも必要となるケースがあるため、シーティング以外
+  338: paragraph: 　の課題解決手段も検討する必要がある
+  339: table
+  340: table
+  341: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 342: chapter with name=slide-23
+  343: title: 4.4　手順②アセスメント
+  344: list with name=list
+   345: list_item: 臥床の姿勢（仰向きはできるか、横向き寝をしているか）
+   346: list_item: 普段どれくらいの時間座っているか、離床時間といった高齢者の生活
+   347: list_item: どんな時そわそわしたり､立ちあがったりするのか
+   348: list_item: 車椅子に移乗するとき､どの程度の手助けが必要か、自分で操作できるか
+   349: list_item: 椅子や車いす､幅、テーブルの高さは本人に合っているか
+  350: paragraph: ④
+  351: paragraph: 観察
+  352: paragraph: ③
+  353: paragraph: 実施
+  354: paragraph: ②
+  355: paragraph: アセスメント
+  356: paragraph: ①
+  357: paragraph: 必要性検討
+  358: list with name=list
+   359: list_item: 手順②アセスメントにおける介護職員の視点です。
+  360: paragraph: ケアにおけるアセスメントの視点（例）
+  361: paragraph: 日常生活の中で現状について情報を収集し、
+  362: paragraph: 課題とその原因を探ることが重要
+  363: picture
+  364: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 365: chapter with name=slide-24
+  366: title: 4.4　手順②アセスメント
+  367: paragraph: 情報収集と
+  368: paragraph: 背景の探索
+  369: paragraph: 期待する効果 を見据えた
+  370: paragraph: 目標設定
+  371: list with name=list
+   372: list_item: 高齢者が有する課題の背景になる原因を探り、シーティングの実施プランを立てるために必要なアセスメントを実施する
+   373: list_item: アセスメントでは、高齢者の現状について情報を収集し、その背景にある原因を探る
+  374: list with name=list
+   375: list_item: アセスメントを実施し課題とその原因を探ったうえで、シーティングの目標を設定する
+   376: list_item: 目標は、シーティングによって期待できる効果を見据え、活動や参加のレベルで設定される
+  377: list with name=list
+   378: list_item: 手順②には「アセスメント」と「目標設定」のプロセスがあります。
+   379: list_item: このプロセスは、リハビリテーション専門職等も含め多職種で実施する必要があります。
+  380: paragraph: 　　「アセスメント」のポイント
+  381: paragraph: 　　「目標設定」のポイント
+  382: picture
+  383: picture
+  384: paragraph: ④
+  385: paragraph: 観察
+  386: paragraph: ③
+  387: paragraph: 実施
+  388: paragraph: ②
+  389: paragraph: アセスメント
+  390: paragraph: ①
+  391: paragraph: 必要性検討
+  392: picture
+  393: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 394: chapter with name=slide-25
+  395: title: 「活動」におけるシーティングの目標（例）
+  396: paragraph: シーティングにより座位で過ごす時間が増えることで、
+  397: list with name=list
+   398: list_item: 椅子に座る時間が向上し、生活リズムが改善する
+   399: list_item: 椅子に座って櫛で髪をとかすことができる
+   400: list_item: 椅子に座って電動ひげ剃りによるひげ剃り動作が可能となる
+   401: list_item: 嚥下しやすいポジションとなり、食事の形態がアップする
+   402: list_item: 頸部の前屈が改善し前を向けるようになり、会話が円滑となる
+   403: list_item: トイレでの排泄が可能となる　　等
+  404: paragraph: ④
+  405: paragraph: 観察
+  406: paragraph: ③
+  407: paragraph: 実施
+  408: paragraph: ②
+  409: paragraph: アセスメント
+  410: paragraph: ①
+  411: paragraph: 必要性検討
+  412: list with name=list
+   413: list_item: 「活動」におけるシーティングの目標設定の例は以下の通りです。
+  414: picture
+  415: picture
+  416: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 417: chapter with name=slide-26
+  418: title: 4.5　手順③シーティングの実施
+  419: list with name=list
+   420: list_item: 手順②「アセスメント」に基づき、シーティングの実施プランを立て、実際にシーティングを実施
+   421: list_item: 実施にあたっては、日々の観察を通して状況を把握し、シーティング実施内容を変更していくというPDCAサイクル（Plan、Do、Check、Action）を回すことが必要不可欠となる
+  422: paragraph: ④
+  423: paragraph: 観察
+  424: paragraph: ③
+  425: paragraph: 実施
+  426: paragraph: ②
+  427: paragraph: アセスメント
+  428: paragraph: ①
+  429: paragraph: 必要性検討
+  430: paragraph: 「アセスメントに基づいたシーティングの実施」の基本的な考え方
+  431: picture
+  432: list with name=list
+   433: list_item: シーティングは、PDCAサイクルを回しながら実施していくことが重要です。
+  434: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 435: chapter with name=slide-27
+  436: title: 4.5　手順③シーティングの実施
+  437: paragraph: ④
+  438: paragraph: 観察
+  439: paragraph: ③
+  440: paragraph: 実施
+  441: paragraph: ②
+  442: paragraph: アセスメント
+  443: paragraph: ①
+  444: paragraph: 必要性検討
+  445: list with name=list
+   446: list_item: シーティングの実施計画を日々のスケジュールに落とし込む際に、高齢者の日々の様子を看護師やリハビリテーション専門職等に情報共有する役割を担う
+  447: paragraph: Plan
+  448: paragraph: 介護職員の役割とポイント
+  449: paragraph: プロセス
+  450: paragraph: Do
+  451: paragraph: Check
+  452: paragraph: Action
+  453: list with name=list
+   454: list_item: リハビリテーション専門職等とともに、日々の生活でシーティングを実施
+   455: list_item: シーティングの実施方法等を介護職員間で共有
+   456: list_item: 日々の様子を観察し、変化に気づいた場合は、必要に応じてリハビリテーション専門職に情報を共有
+  457: list with name=list
+   458: list_item: シーティング実施後の変化を観察し、日常生活場面での目標達成度を確認し、その結果をリハビリテーション専門職等に共有する
+   459: list_item: シーティング実施内容が変更された場合は、介護職員同士で情報共有する
+   460: list_item: 目標が達成したことが確認された場合は、継続的な観察に移行
+   461: list_item: 目標が未達成であった場合や、シーティング実施内容に修正が必要である場合は、再びアセスメントを行い、シーティング実施の具体的な方法について再度検討する
+  462: picture
+  463: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 464: chapter with name=slide-28
+  465: list with name=list
+   466: list_item: 椅子と車椅子を、日常生活の場面に応じて使い分けていますか？
+  467: title: 利用者の状態にあった椅子や車椅子等の選定・適応
+  468: list with name=list
+   469: list_item: 施設備品としての車椅子は移動のための用具であり、「座る」ための用具としては十分な機能を備えていない場合がある
+   470: list_item: 高齢者それぞれのニーズに応じて適切な椅子や車椅子等を考えることがシーティングを実施する上で重要なポイントの一つ
+  471: paragraph: 利用者の状態にあった椅子や車椅子等の選定・適応のポイント
+  472: paragraph: ＜例＞
+  473: list with name=list
+   474: list_item: 立位や歩行が可能な場合、食事場面やテレビを見てくつろぐ場合は椅子に座る
+   475: list_item: 歩行が困難な利用者等は、車椅子で自走したり、介助により移動する場合がある
+  476: paragraph: ④
+  477: paragraph: 観察
+  478: paragraph: ③
+  479: paragraph: 実施
+  480: paragraph: ②
+  481: paragraph: アセスメント
+  482: paragraph: ①
+  483: paragraph: 必要性検討
   484: picture
-  485: paragraph: 目標達成した
-  486: paragraph: 状態を維持
-  487: list with name=list
-   488: list_item: 機能を補うために一時的に用具等を使用していた場合、継続的に必要かどうかを評価する必要がある
-  489: paragraph: 用具等の
-  490: paragraph: 必要性を評価
-  491: list with name=list
-   492: list_item: 常に「心身機能・構造」「活動」「参加」の向上及び尊厳ある自立した生活の保障を目指し、再度手順①に戻り、新たなシーティングの実施を検討する
-  493: paragraph: 再び必要性を
-  494: paragraph: 検討
-  495: picture
-  496: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 497: chapter with name=slide-30
-  498: title: 4.7　シーティングの「記録」についてのポイント
-  499: paragraph: シーティングについて記録する際、複数の職員や多職種の視点で記載することや、日々の記録にシーティングの情報を付記することが重要です
-  500: list with name=list
-   501: list_item: 複数の職員や多職種の視点で記載することで
-   502: list_item: 観察の視点が補強される
-   503: list_item: 複数の専門的な視点から、本人のニーズに沿ったシーティングが行えているかの確認が可能
-   504: list_item: 必要な情報の抜け漏れを防止できる
-  505: paragraph: 　　「記録」のポイント
+  485: picture
+  486: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 487: chapter with name=slide-29
+  488: list with name=list
+   489: list_item: PDCAサイクルを通して当初の目標を達成できた場合、その状態が継続できるよう支援する
+   490: list_item: 
+  491: paragraph: 
+  492: title: 4.6　手順④「継続的な観察」のポイント
+  493: list with name=list
+   494: list_item: 目標を達成できた場合は継続的な観察を行い、その状態が継続できるよう支援します。
+  495: paragraph: 高齢者の状態は絶えず変化するため、
+  496: paragraph: 新たな課題やニーズが生じる場合がある
+  497: paragraph: ④
+  498: paragraph: 観察
+  499: paragraph: ③
+  500: paragraph: 実施
+  501: paragraph: ②
+  502: paragraph: アセスメント
+  503: paragraph: ①
+  504: paragraph: 必要性検討
+  505: paragraph: 　　「継続的な観察」のポイント
   506: picture
-  507: paragraph: 複数の視点 で記載
-  508: list with name=list
-   509: list_item: シーティングのための様式を準備するよりは、日々使用している記録用紙にシーティングに必要な情報を付記する方が現場の負担を最小限にしてシーティングを導入できる可能性がある
-  510: paragraph: 日々の記録に
-  511: paragraph: 情報を付記
-  512: picture
-  513: picture
-  514: picture
-  515: picture
-  516: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 517: chapter with name=slide-31
-  518: title: 　椅子に座っている際に体が大きく傾いてしまっている軽度認知症の事例
-  519: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  520: list with name=list
-   521: list_item: 施設内はシルバーカーを使って自力で歩いて移動している。
-   522: list_item: ホールで椅子に座って休憩していても、体が右に大きく傾いてしまい、1時間ごとに介護職員による座り直し介助が必要な状況。
-   523: list_item: 塗り絵等のレクリエーションの際も、体が傾いてしまい、15分経たずに集中力が切れてしまっていた。 
-  524: paragraph: シーティングの
-  525: paragraph: 必要性検討
-  526: list with name=list
-   527: list_item: ホールで椅子に座っている際、体が左右に大きく傾いており姿勢の崩れが目立っていることに 介護職員Aさんが気づいた。
-   528: list_item: Aさんは、足台の活用や座り直しによって対応していたが、対策に限界があり、作業療法士に相談した。
-  529: paragraph: シーティング
-  530: paragraph: 実施に向けた
-  531: paragraph: アセスメント
-  532: list with name=list
-   533: list_item: 作業療法士が中心となり、ケアマネージャーおよび介護職員Aさんとともにアセスメントを実施。
-   534: list_item: 円背のため椅子への適合が悪く、座り直しだけでは改善できないと作業療法士が判断した。
-  535: paragraph: シーティング
-  536: paragraph: 実施
-  537: list with name=list
-   538: list_item: 作業療法士が既製品のクッションをつなぎ合わせて、円背の形にあったクッションを作成。
-   539: list_item: 介護職員Aさんは、クッションを使った様子を3日間記録してフィードバックするよう、作業療法士から依頼を受けた。
-   540: list_item: まだ右方向への傾きが残っていることに介護職員Aさんが気づいたため、作業療法士に共有し、作業療法士が右側のクッションを調整した。
-  541: paragraph: 効果検証
-  542: paragraph: 継続的な観察
+  507: paragraph: 目標達成した
+  508: paragraph: 状態を維持
+  509: list with name=list
+   510: list_item: 機能を補うために一時的に用具等を使用していた場合、継続的に必要かどうかを評価する必要がある
+  511: paragraph: 用具等の
+  512: paragraph: 必要性を評価
+  513: list with name=list
+   514: list_item: 常に「心身機能・構造」「活動」「参加」の向上及び尊厳ある自立した生活の保障を目指し、再度手順①に戻り、新たなシーティングの実施を検討する
+  515: paragraph: 再び必要性を
+  516: paragraph: 検討
+  517: picture
+  518: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 519: chapter with name=slide-30
+  520: title: 4.7　シーティングの「記録」についてのポイント
+  521: list with name=list
+   522: list_item: シーティングについて記録する際、複数の職員や多職種の視点で記載することや、日々の記録にシーティングの情報を付記することが重要です
+  523: list with name=list
+   524: list_item: 複数の職員や多職種の視点で記載することで
+   525: list_item: 観察の視点が補強される
+   526: list_item: 複数の専門的な視点から、本人のニーズに沿ったシーティングが行えているかの確認が可能
+   527: list_item: 必要な情報の抜け漏れを防止できる
+  528: paragraph: 　　「記録」のポイント
+  529: picture
+  530: paragraph: 複数の視点 で記載
+  531: list with name=list
+   532: list_item: シーティングのための様式を準備するよりは、日々使用している記録用紙にシーティングに必要な情報を付記する方が現場の負担を最小限にしてシーティングを導入できる可能性がある
+  533: paragraph: 日々の記録に
+  534: paragraph: 情報を付記
+  535: picture
+  536: picture
+  537: picture
+  538: picture
+  539: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 540: chapter with name=slide-31
+  541: title: 　椅子に座っている際に体が大きく傾いてしまっている軽度認知症の事例
+  542: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
   543: list with name=list
-   544: list_item: 体の左右の傾きが改善し、座位姿勢が安定し、レクリエーションの塗り絵等に集中して取り組めるようになった。 
-   545: list_item: 起床から朝食までのおよそ１時間半のあいだ、座り直すことなく、椅子で問題なく過ごせるようになった。
-  546: paragraph: 　 　事例紹介　
-  547: picture
-  548: list with name=list
-   549: list_item: 90代女性
-   550: list_item: 要介護２
-   551: list_item: 軽度右片麻痺、円背
-   552: list_item: 軽度認知症
- 553: chapter with name=slide-32
-  554: paragraph: 5．シーティングと身体拘束の違い
- 555: chapter with name=slide-33
-  556: title: シーティングを実施したつもりが身体拘束となってしまう例
-  557: paragraph: シーティングの検討が不十分である場合、身体拘束に該当してしまう可能性があります。
-  558: paragraph: 
-  559: list with name=list
-   560: list_item: 車椅子と身体の間にクッションをつめこみすぎているため、車椅子上で身動きがとれない
-   561: list_item: 高齢者が望んでいないにもかかわらず、車椅子のリクライニング角度をつけすぎているため、車椅子上の活動が制限されている
-   562: list_item: 極端に柔らかいクッションを敷いている椅子や座面が低いソファーから立ち上がれず、ずっと座っている
-   563: list_item: 
-  564: paragraph: 身体拘束となりうるケース（例）
-  565: paragraph: 　　　　　次のページから、身体拘束について学びましょう　
-  566: picture
- 567: chapter with name=slide-34
-  568: title: 5.1　身体的拘束等の適性化について
-  569: paragraph: ○　身体拘束廃止未実施減算について、平成30年度介護報酬改定において、身体的拘束等のさらなる適正化を図る観点から、 身体的拘束等の適正化のための対策を検討する委員会の開催等を義務づけ、その未実施の場合
-  570: paragraph: 
-  571: paragraph: 　　　　　　　　　　　　　　　　　　　	＜改定前＞　　　　　　　＜改定後（現行）＞（※居住系サービスは「新設」）
-  572: paragraph: 　　　　身体拘束廃止未実施減算　　５単位／日減算　　　　　　10％／日減算
-  573: paragraph: 　【見直し後の基準（追加する基準は下線部）】
-  574: paragraph: 　　　身体的拘束等の適正化を図るため、次の各号に掲げる措置を講じなければならない。
-  575: paragraph: 　　１．身体的拘束等を行う場合には、その態様及び時間、その際の入所者の心身の状況並びに緊急やむを得ない理由を記録すること。
-  576: paragraph: 　　２．身体的拘束等の適正化のための対策を検討する委員会を３月に１回以上開催するとともに、その結果について、介護職員その他従業者に周知徹底を図ること。
-  577: paragraph: 　　３．身体的拘束等の適正化のための指針を整備すること。
-  578: paragraph: 　　４．介護職員その他の従業者に対し、身体的拘束等の適正化のための研修を定期的に実施すること。
-  579: paragraph: 
-  580: paragraph: 　　※　地域密着型介護老人福祉施設入所者生活介護、認知症対応型共同生活介護、地域密着型特定施設入居者生活介護における上記の委員会については、運営推進会議を活用することができる。
-  581: paragraph: 各種の施設系サービス、居住系サービス
-  582: paragraph: ○指定介護老人福祉施設の人員、設備及び運営に関する基準（平成１１年３月３１日厚生省令第３９号）
-  583: paragraph: （指定介護福祉施設サービスの取扱方針）
-  584: paragraph: 　第１１条　第４項
-  585: paragraph: 　指定介護老人福祉施設は、指定介護福祉施設サービスの提供に当たっては、当該入所者又は他の入所者等の生命又は身体を保護するため緊急やむを得ない場合を除き、身体的拘束その他入所者の行動を制限する行為（以下
-  586: paragraph: 身体的拘束等の適正化を図るため、居住系サービス及び施設系サービスについて、身体的拘束等の適正化のための指針の整備や、身体的拘束等の適正化のための対策を検討する委員会の定期的な開催などを義務づけるととも
- 587: chapter with name=slide-35
-  588: title: （参考）身体拘束ゼロへの取組
-  589: paragraph: ■身体拘束ゼロ作戦推進会議の開催（平成１２年６月、平成１３年３月・１２月）
-  590: paragraph: ■「身体拘束ゼロへの手引き」の作成・普及（平成１３年度）
-  591: paragraph: 国
-  592: paragraph: ■身体拘束ゼロ作戦推進協議会の開催（平成１３年度～）※１
-  593: paragraph: ■身体拘束相談窓口の設置（平成１３年度～平成１７年度）※２
-  594: paragraph: ■相談員養成研修の実施（平成１３年度～平成１７年度）※２
-  595: paragraph: ■身体拘束の理解促進のための講習会・説明会の開催（平成１４年度～平成１７年度）※２
-  596: paragraph: ■権利擁護推進員養成研修・看護職員研修の実施（平成１７年度～）※１
-  597: paragraph: ■身体拘束廃止事例等報告検討会の開催（平成１８年度～）※１
-  598: paragraph: 都道府県
-  599: paragraph: ■介護保険指定基準上、原則身体拘束禁止を規定（平成１２年度）
-  600: paragraph: ■介護報酬上、身体拘束廃止未実施減算を新設（平成１８年度）
-  601: paragraph: ■身体的拘束適正化検討委員会の定期的開催・減算率の見直し等（平成３０年度）
-  602: paragraph: 施  設
-  603: paragraph: ■身体拘束相談窓口の設置（平成１８年度～）※３
-  604: paragraph: ■相談員養成研修の実施（平成１８年度～）※３
-  605: paragraph: ■身体拘束の理解促進のための講習会・説明会の開催（平成１８年度～）※３
-  606: paragraph: ※１　平成１９年度以降は「高齢者権利擁護等推進事業」に移行　　※２　平成１８年度以降は介護保険法上の「地域支援事業」に移行
-  607: paragraph: 市町村
-  608: paragraph: ※３　介護保険法上の「地域支援事業」として実施
- 609: chapter with name=slide-36
-  610: title: 5.2　「緊急やむを得ない場合」に該当する３要件
-  611: paragraph: 　１．切迫性
-  612: paragraph: 　　利用者本人または他の利用者の生命または身体が危険にさらされる可能性が著しく高い場合
-  613: paragraph: 
-  614: paragraph: 　２．非代替性
-  615: paragraph: 　　身体拘束以外に代替する介護方法がないこと
-  616: paragraph: 
-  617: paragraph: 　３．一時性
-  618: paragraph: 　　身体拘束が一時的なものであること
-  619: paragraph: ・「緊急やむを得ない場合」の判断は、担当の職員個人又はチームで行うのではなく、施設全体で判断する
-  620: paragraph: 　必要がある。
-  621: paragraph: ・身体拘束の内容、目的、時間、期間などを高齢者本人や家族に対して十分に説明し、理解を求めることが
-  622: paragraph: 　必要である。
-  623: paragraph: ・観察と再検討による定期的再評価を行い拘束が必要なくなれば速やかに解除することが必要（尊厳への
-  624: paragraph: 　配慮）。
-  625: paragraph: ・介護保険サービス提供者には、身体拘束に関する記録の作成等が義務づけられている（2年間保存）。
-  626: paragraph: ※適正な手続き
-  627: paragraph: ３つの要件を全て満たし、要件の確認等の手続きが極めて慎重に実施されていることが必要。
-  628: paragraph: 出所：「身体拘束ゼロへの手引き」（平成13年3月　厚生労働省「身体拘束ゼロ作戦推進会議」）より引用
- 629: chapter with name=slide-37
-  630: title: 5.3　身体拘束禁止の対象となる具体的な行為
-  631: paragraph: ①　徘徊しないように、車いすやいす、ベッドに体幹や四肢をひも等で縛る。
-  632: paragraph: ②　転落しないように、ベッドに体幹や四肢をひも等で縛る。
-  633: paragraph: ③　自分で降りられないように、ベッドを柵（サイドレール）で囲む。
-  634: paragraph: ④　点滴・経管栄養等のチューブを抜かないように、四肢をひも等で縛る。
-  635: paragraph: ⑤　点滴・経管栄養等のチューブを抜かないように、または皮膚をかきむしらないように、手指の機能を制限する
-  636: paragraph: 　　 ミトン型の手袋等をつける。
-  637: paragraph: ⑥　車いすやいすからずり落ちたり、立ち上がったりしないように、Ｙ字型拘束帯や腰ベルト、車いすテーブルをつける。
-  638: paragraph: ⑦　立ち上がる能力のある人の立ち上がりを妨げるようないすを使用する。
-  639: paragraph: ⑧　脱衣やおむつはずしを制限するために、介護衣（つなぎ服）を着せる。
-  640: paragraph: ⑨　他人への迷惑行為を防ぐために、ベッドなどに体幹や四肢をひも等で縛る。
-  641: paragraph: ⑩　行動を落ち着かせるために、向精神薬を過剰に服用させる。
-  642: paragraph: ⑪　自分の意思で開けることのできない居室等に隔離する。
-  643: paragraph: 介護保険指定基準において禁止の対象となっている行為は、「身体的拘束その他入所者（利用者）の行動を制限する行為」で、具体的には次のような行為を指す。
-  644: paragraph: これらの11項目は、あくまでも例示であり、他にも該当する行為があることに注意。
-  645: paragraph: ポイントは、行動の自由を制限しているかどうか。
-  646: paragraph: 出所：「身体拘束ゼロへの手引き」（平成13年3月　厚生労働省「身体拘束ゼロ作戦推進会議」）より引用
- 647: chapter with name=slide-38
-  648: title: 5.4　身体拘束がもたらす多くの弊害
-  649: paragraph: 身体的
-  650: paragraph: 弊害
-  651: paragraph: 精神的
-  652: paragraph: 弊害
-  653: paragraph: 社会的
-  654: paragraph: 弊害
-  655: list with name=list
-   656: list_item: 関節の拘縮、筋力の低下といった身体機能の低下や圧迫部位の褥瘡の発生などの外的弊害
-   657: list_item: 食欲の低下、心肺機能や感染症への抵抗力の低下などの内的弊害
-   658: list_item: 転倒や転落事故、窒息などの大事故を発生させる危険性
-  659: list with name=list
-   660: list_item: 本人は縛られる理由も分からず、生きる意欲を奪われる。
-   661: list_item: 不安、怒り、屈辱、あきらめなどの精神的苦痛、認知症の進行やせん妄の頻発
-   662: list_item: 家族に与える精神的苦痛、罪悪感や後悔 
-  663: list with name=list
-   664: list_item: 看護・介護スタッフ自身の士気の低下を招くこと。また、介護保険施設等に対する社会的な不信、偏見を引き起こすおそれがあること。
-   665: list_item: 身体拘束による高齢者の心身機能の低下は、その人のQOLを低下させるだけでなく、さらなる医療的処置を生じさせ、経済的にも影響をもたらす。
-  666: paragraph: 出所：「身体拘束ゼロへの手引き」（平成13年3月　厚生労働省「身体拘束ゼロ作戦推進会議」）を基に作成
- 667: chapter with name=slide-39
-  668: title:  補装具費支給制度によるオーダーメイドの車椅子を使用している事例　　
-  669: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  670: list with name=list
-   671: list_item: もともと頸髄損傷があったため、身体障害者手帳を持っている。
-   672: list_item: 補装具費支給制度を活用し、更生相談所による判断または医師の意見書に基づいたオーダーメイドの車椅子（体幹ベルト付）を使用している。
-   673: list_item: 体幹の不安定性があり、ご自身の車椅子以外では座位がとれない。
-   674: list_item: 認知機能に問題はない。
-  675: paragraph: シーティングの
-  676: paragraph: 必要性検討
-  677: list with name=list
-   678: list_item: 介護職員のAさんは、補装具費支給制度によるオーダーメイドの車椅子（体幹ベルト付）のベルトの使用が身体拘束に該当するか不安があった。
-  679: paragraph: シーティング
-  680: paragraph: 実施に向けたアセスメント
-  681: list with name=list
-   682: list_item: 介護職員のAさんは、理学療法士に相談し、アセスメントを依頼。アセスメント結果は、「残存機能や筋力が不十分なため、体幹ベルトを外した状態では倒れてしまい座位がとれない」であった。
-   683: list_item: 本人に確認したところ、「ずっとベルトをして生活してきており、外すと怖くて車椅子に乗れない」とのことだった。
-  684: paragraph: シーティング
-  685: paragraph: 実施
+   544: list_item: 施設内はシルバーカーを使って自力で歩いて移動している。
+   545: list_item: ホールで椅子に座って休憩していても、体が右に大きく傾いてしまい、1時間ごとに介護職員による座り直し介助が必要な状況。
+   546: list_item: 塗り絵等のレクリエーションの際も、体が傾いてしまい、15分経たずに集中力が切れてしまっていた。 
+  547: paragraph: シーティングの
+  548: paragraph: 必要性検討
+  549: list with name=list
+   550: list_item: ホールで椅子に座っている際、体が左右に大きく傾いており姿勢の崩れが目立っていることに 介護職員Aさんが気づいた。
+   551: list_item: Aさんは、足台の活用や座り直しによって対応していたが、対策に限界があり、作業療法士に相談した。
+  552: paragraph: シーティング
+  553: paragraph: 実施に向けた
+  554: paragraph: アセスメント
+  555: list with name=list
+   556: list_item: 作業療法士が中心となり、ケアマネージャーおよび介護職員Aさんとともにアセスメントを実施。
+   557: list_item: 円背のため椅子への適合が悪く、座り直しだけでは改善できないと作業療法士が判断した。
+  558: paragraph: シーティング
+  559: paragraph: 実施
+  560: list with name=list
+   561: list_item: 作業療法士が既製品のクッションをつなぎ合わせて、円背の形にあったクッションを作成。
+   562: list_item: 介護職員Aさんは、クッションを使った様子を3日間記録してフィードバックするよう、作業療法士から依頼を受けた。
+   563: list_item: まだ右方向への傾きが残っていることに介護職員Aさんが気づいたため、作業療法士に共有し、作業療法士が右側のクッションを調整した。
+  564: paragraph: 効果検証
+  565: paragraph: 継続的な観察
+  566: list with name=list
+   567: list_item: 体の左右の傾きが改善し、座位姿勢が安定し、レクリエーションの塗り絵等に集中して取り組めるようになった。 
+   568: list_item: 起床から朝食までのおよそ１時間半のあいだ、座り直すことなく、椅子で問題なく過ごせるようになった。
+  569: paragraph: 　 　事例紹介　
+  570: picture
+  571: list with name=list
+   572: list_item: 90代女性
+   573: list_item: 要介護２
+   574: list_item: 軽度右片麻痺、円背
+   575: list_item: 軽度認知症
+ 576: chapter with name=slide-32
+  577: paragraph: 5．シーティングと身体拘束の違い
+ 578: chapter with name=slide-33
+  579: title: シーティングを実施したつもりが身体拘束となってしまう例
+  580: list with name=list
+   581: list_item: シーティングの検討が不十分である場合、身体拘束に該当してしまう可能性があります。
+  582: paragraph: 
+  583: list with name=list
+   584: list_item: 車椅子と身体の間にクッションをつめこみすぎているため、車椅子上で身動きがとれない
+   585: list_item: 高齢者が望んでいないにもかかわらず、車椅子のリクライニング角度をつけすぎているため、車椅子上の活動が制限されている
+   586: list_item: 極端に柔らかいクッションを敷いている椅子や座面が低いソファーから立ち上がれず、ずっと座っている
+   587: list_item: 
+  588: paragraph: 身体拘束となりうるケース（例）
+  589: paragraph: 　　　　　次のページから、身体拘束について学びましょう　
+  590: picture
+ 591: chapter with name=slide-34
+  592: title: 5.1　身体的拘束等の適性化について
+  593: paragraph: ○　身体拘束廃止未実施減算について、平成30年度介護報酬改定において、身体的拘束等のさらなる適正化を図る観点から、 身体的拘束等の適正化のための対策を検討する委員会の開催等を義務づけ、その未実施の場合
+  594: paragraph: 
+  595: paragraph: 　　　　　　　　　　　　　　　　　　　	＜改定前＞　　　　　　　＜改定後（現行）＞（※居住系サービスは「新設」）
+  596: paragraph: 　　　　身体拘束廃止未実施減算　　５単位／日減算　　　　　　10％／日減算
+  597: paragraph: 　【見直し後の基準（追加する基準は下線部）】
+  598: paragraph: 　　　身体的拘束等の適正化を図るため、次の各号に掲げる措置を講じなければならない。
+  599: paragraph: 　　１．身体的拘束等を行う場合には、その態様及び時間、その際の入所者の心身の状況並びに緊急やむを得ない理由を記録すること。
+  600: paragraph: 　　２．身体的拘束等の適正化のための対策を検討する委員会を３月に１回以上開催するとともに、その結果について、介護職員その他従業者に周知徹底を図ること。
+  601: paragraph: 　　３．身体的拘束等の適正化のための指針を整備すること。
+  602: paragraph: 　　４．介護職員その他の従業者に対し、身体的拘束等の適正化のための研修を定期的に実施すること。
+  603: paragraph: 
+  604: paragraph: 　　※　地域密着型介護老人福祉施設入所者生活介護、認知症対応型共同生活介護、地域密着型特定施設入居者生活介護における上記の委員会については、運営推進会議を活用することができる。
+  605: paragraph: 各種の施設系サービス、居住系サービス
+  606: paragraph: ○指定介護老人福祉施設の人員、設備及び運営に関する基準（平成１１年３月３１日厚生省令第３９号）
+  607: paragraph: （指定介護福祉施設サービスの取扱方針）
+  608: paragraph: 　第１１条　第４項
+  609: paragraph: 　指定介護老人福祉施設は、指定介護福祉施設サービスの提供に当たっては、当該入所者又は他の入所者等の生命又は身体を保護するため緊急やむを得ない場合を除き、身体的拘束その他入所者の行動を制限する行為（以下
+  610: list with name=list
+   611: list_item: 身体的拘束等の適正化を図るため、居住系サービス及び施設系サービスについて、身体的拘束等の適正化のための指針の整備や、身体的拘束等の適正化のための対策を検討する委員会の定期的な開催などを義務づけるととも
+ 612: chapter with name=slide-35
+  613: title: （参考）身体拘束ゼロへの取組
+  614: paragraph: ■身体拘束ゼロ作戦推進会議の開催（平成１２年６月、平成１３年３月・１２月）
+  615: paragraph: ■「身体拘束ゼロへの手引き」の作成・普及（平成１３年度）
+  616: paragraph: 国
+  617: paragraph: ■身体拘束ゼロ作戦推進協議会の開催（平成１３年度～）※１
+  618: paragraph: ■身体拘束相談窓口の設置（平成１３年度～平成１７年度）※２
+  619: paragraph: ■相談員養成研修の実施（平成１３年度～平成１７年度）※２
+  620: paragraph: ■身体拘束の理解促進のための講習会・説明会の開催（平成１４年度～平成１７年度）※２
+  621: paragraph: ■権利擁護推進員養成研修・看護職員研修の実施（平成１７年度～）※１
+  622: paragraph: ■身体拘束廃止事例等報告検討会の開催（平成１８年度～）※１
+  623: paragraph: 都道府県
+  624: paragraph: ■介護保険指定基準上、原則身体拘束禁止を規定（平成１２年度）
+  625: paragraph: ■介護報酬上、身体拘束廃止未実施減算を新設（平成１８年度）
+  626: paragraph: ■身体的拘束適正化検討委員会の定期的開催・減算率の見直し等（平成３０年度）
+  627: paragraph: 施  設
+  628: paragraph: ■身体拘束相談窓口の設置（平成１８年度～）※３
+  629: paragraph: ■相談員養成研修の実施（平成１８年度～）※３
+  630: paragraph: ■身体拘束の理解促進のための講習会・説明会の開催（平成１８年度～）※３
+  631: paragraph: ※１　平成１９年度以降は「高齢者権利擁護等推進事業」に移行　　※２　平成１８年度以降は介護保険法上の「地域支援事業」に移行
+  632: paragraph: 市町村
+  633: paragraph: ※３　介護保険法上の「地域支援事業」として実施
+ 634: chapter with name=slide-36
+  635: title: 5.2　「緊急やむを得ない場合」に該当する３要件
+  636: paragraph: 　１．切迫性
+  637: paragraph: 　　利用者本人または他の利用者の生命または身体が危険にさらされる可能性が著しく高い場合
+  638: paragraph: 
+  639: paragraph: 　２．非代替性
+  640: paragraph: 　　身体拘束以外に代替する介護方法がないこと
+  641: paragraph: 
+  642: paragraph: 　３．一時性
+  643: paragraph: 　　身体拘束が一時的なものであること
+  644: paragraph: ・「緊急やむを得ない場合」の判断は、担当の職員個人又はチームで行うのではなく、施設全体で判断する
+  645: paragraph: 　必要がある。
+  646: paragraph: ・身体拘束の内容、目的、時間、期間などを高齢者本人や家族に対して十分に説明し、理解を求めることが
+  647: paragraph: 　必要である。
+  648: paragraph: ・観察と再検討による定期的再評価を行い拘束が必要なくなれば速やかに解除することが必要（尊厳への
+  649: paragraph: 　配慮）。
+  650: paragraph: ・介護保険サービス提供者には、身体拘束に関する記録の作成等が義務づけられている（2年間保存）。
+  651: paragraph: ※適正な手続き
+  652: list with name=list
+   653: list_item: ３つの要件を全て満たし、要件の確認等の手続きが極めて慎重に実施されていることが必要。
+  654: paragraph: 出所：「身体拘束ゼロへの手引き」（平成13年3月　厚生労働省「身体拘束ゼロ作戦推進会議」）より引用
+ 655: chapter with name=slide-37
+  656: title: 5.3　身体拘束禁止の対象となる具体的な行為
+  657: paragraph: ①　徘徊しないように、車いすやいす、ベッドに体幹や四肢をひも等で縛る。
+  658: paragraph: ②　転落しないように、ベッドに体幹や四肢をひも等で縛る。
+  659: paragraph: ③　自分で降りられないように、ベッドを柵（サイドレール）で囲む。
+  660: paragraph: ④　点滴・経管栄養等のチューブを抜かないように、四肢をひも等で縛る。
+  661: paragraph: ⑤　点滴・経管栄養等のチューブを抜かないように、または皮膚をかきむしらないように、手指の機能を制限する
+  662: paragraph: 　　 ミトン型の手袋等をつける。
+  663: paragraph: ⑥　車いすやいすからずり落ちたり、立ち上がったりしないように、Ｙ字型拘束帯や腰ベルト、車いすテーブルをつける。
+  664: paragraph: ⑦　立ち上がる能力のある人の立ち上がりを妨げるようないすを使用する。
+  665: paragraph: ⑧　脱衣やおむつはずしを制限するために、介護衣（つなぎ服）を着せる。
+  666: paragraph: ⑨　他人への迷惑行為を防ぐために、ベッドなどに体幹や四肢をひも等で縛る。
+  667: paragraph: ⑩　行動を落ち着かせるために、向精神薬を過剰に服用させる。
+  668: paragraph: ⑪　自分の意思で開けることのできない居室等に隔離する。
+  669: list with name=list
+   670: list_item: 介護保険指定基準において禁止の対象となっている行為は、「身体的拘束その他入所者（利用者）の行動を制限する行為」で、具体的には次のような行為を指す。
+   671: list_item: これらの11項目は、あくまでも例示であり、他にも該当する行為があることに注意。
+   672: list_item: ポイントは、行動の自由を制限しているかどうか。
+  673: paragraph: 出所：「身体拘束ゼロへの手引き」（平成13年3月　厚生労働省「身体拘束ゼロ作戦推進会議」）より引用
+ 674: chapter with name=slide-38
+  675: title: 5.4　身体拘束がもたらす多くの弊害
+  676: paragraph: 身体的
+  677: paragraph: 弊害
+  678: paragraph: 精神的
+  679: paragraph: 弊害
+  680: paragraph: 社会的
+  681: paragraph: 弊害
+  682: list with name=list
+   683: list_item: 関節の拘縮、筋力の低下といった身体機能の低下や圧迫部位の褥瘡の発生などの外的弊害
+   684: list_item: 食欲の低下、心肺機能や感染症への抵抗力の低下などの内的弊害
+   685: list_item: 転倒や転落事故、窒息などの大事故を発生させる危険性
   686: list with name=list
-   687: list_item: 理学療法士および介護職員Aさんは、他の看護職員や看護師に対して、体幹ベルトを使ったシーティングが必要な理由を共有した。
-   688: list_item: 施設内の事故発生防止委員会でも、この場合におけるベルト使用は身体拘束に該当しないことを確認。　　　　　　　　　　　　　　　　　　　　　　　
-   689: list_item: ベルトを使ったシーティング実施の理由は、ケアプランにも記載した。
-  690: paragraph: 効果検証
-  691: paragraph: 継続的な観察
-  692: list with name=list
-   693: list_item: 車椅子座位での食事が継続して自立できており、またリハビリテーションの実施によって車での外出が 可能となった。
-   694: list_item: その後も、定期的にモニタリングを実施している。
-  695: paragraph: 　 　事例紹介　
-  696: picture
+   687: list_item: 本人は縛られる理由も分からず、生きる意欲を奪われる。
+   688: list_item: 不安、怒り、屈辱、あきらめなどの精神的苦痛、認知症の進行やせん妄の頻発
+   689: list_item: 家族に与える精神的苦痛、罪悪感や後悔 
+  690: list with name=list
+   691: list_item: 看護・介護スタッフ自身の士気の低下を招くこと。また、介護保険施設等に対する社会的な不信、偏見を引き起こすおそれがあること。
+   692: list_item: 身体拘束による高齢者の心身機能の低下は、その人のQOLを低下させるだけでなく、さらなる医療的処置を生じさせ、経済的にも影響をもたらす。
+  693: paragraph: 出所：「身体拘束ゼロへの手引き」（平成13年3月　厚生労働省「身体拘束ゼロ作戦推進会議」）を基に作成
+ 694: chapter with name=slide-39
+  695: title:  補装具費支給制度によるオーダーメイドの車椅子を使用している事例　　
+  696: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
   697: list with name=list
-   698: list_item: 70代男性
-   699: list_item: 頸髄損傷
-   700: list_item: 認知機能問題なし
-   701: list_item: 身体障害者手帳あり
-  702: paragraph: 　　（下肢不全麻痺）
- 703: chapter with name=slide-40
-  704: title: （参考）障害者総合支援法における補装具費支給制度
-  705: paragraph: 補装具とは、障害者が日常生活を送る上で必要な移動等の確保や、就労場面における能率の向上を図ること及び障害児が将来、社会人として独立自活するための素地を育成助長することを目的として、身体の欠損又は損なわ
-  706: paragraph: 障害者又は障害児の保護者が市町村長に申請し、身体障害者更生相談所等の判定又は意見に基づく市町村長の決定により、補装具費の支給を受けます。
-  707: picture
-  708: paragraph: 出所：厚生労働省HPより引用
- 709: chapter with name=slide-41
-  710: paragraph: 6．シーティングにおける多職種連携
- 711: chapter with name=slide-42
-  712: title: 6.1　日常生活におけるケアとしてのシーティング
-  713: paragraph: シーティングは、医師・リハビリテーション専門職等により、リハビリテーションの一環として実施されることがある。
-  714: paragraph: リハビリテーションの場面のみで実施されるものではなく、日常生活のケアとしても実施される。
-  715: picture
-  716: paragraph: 医師やリハビリテーション専門職等はもちろんのこと、
-  717: paragraph: 高齢者のケアに関わるそれぞれの職種がシーティングの基礎知識を身に付けることが重要
-  718: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 719: chapter with name=slide-43
-  720: title: 6.2　多職種でシーティングを実施する際の役割分担
-  721: paragraph: ※施設外の専門家や専門業者に参加してもらう場合や、一人の職員が役割を兼務する場合もある
-  722: paragraph: 評価
-  723: paragraph: 用具
-  724: paragraph: 実践
-  725: paragraph: 観察
-  726: paragraph: 対象の高齢者
-  727: paragraph: 日常生活のケアとして質の高いシーティングを実施するためには、高齢者ケアに関わる様々な職種がそれぞれの視点でアセスメントを行い、会議等で話し合い、目標を共有し、意思を統一して進めていくことが重要です。
-  728: paragraph: 評価担当、用具担当、実践・観察担当の３つの役割を担う職員が連携し、シーティングを実施していきます。
-  729: picture
-  730: picture
-  731: picture
-  732: picture
-  733: picture
-  734: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
- 735: chapter with name=slide-44
-  736: title: 　リハビリテーション専門職と連携してシーティングを実施した事例
-  737: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  738: list with name=list
-   739: list_item: 下肢筋力が低下しており、施設内は普通型車椅子介助によって移動している。
-   740: list_item: パーキンソン病により円背が強くなってきている。
-   741: list_item: 最近、食事摂取量が減ってきている。
-  742: paragraph: シーティングの
-  743: paragraph: 必要性検討
-  744: list with name=list
-   745: list_item: 円背が強く、普通型車椅子だと顔をあげられず食事が難しい状態であったことに介護職員のAさんが気づいた。
-  746: paragraph: シーティング
-  747: paragraph: 実施に向けた
-  748: paragraph: アセスメント
-  749: list with name=list
-   750: list_item: 介護職員Aさんは、施設内に設置しているシーティング委員会で本事例について相談。その後、理学療法士が中心となってアセスメントを実施した。
-   751: list_item: 理学療法士は、アセスメント評価シート、圧分布計測を実施し、現状の姿勢を把握。
-   752: list_item: アセスメントの結果、通常の車椅子ではバックサポートに骨突出部が当たり顔をあげるのが難しいことを確認。
-  753: paragraph: シーティング
-  754: paragraph: 実施
-  755: list with name=list
-   756: list_item: アセスメントを踏まえ、普通型車椅子からモジュール型車椅子への変更、バッグサポートの調整を実施。加えて、ジェルクッションなどの備品を活用した。
-   757: list_item: シーティング実施にあたり、理学療法士はアセスメント、車椅子選定、日常観察は介護職員・看護師と、役割分担と連携を行った。
-  758: paragraph: 効果検証
-  759: paragraph: 継続的な観察
-  760: list with name=list
-   761: list_item: 上記のようなシーティングの工夫によって、食事中に顔を上げることができるような姿勢となり、結果的に食事摂取量が増加した。
-  762: paragraph: 　 　事例紹介　
+   698: list_item: もともと頸髄損傷があったため、身体障害者手帳を持っている。
+   699: list_item: 補装具費支給制度を活用し、更生相談所による判断または医師の意見書に基づいたオーダーメイドの車椅子（体幹ベルト付）を使用している。
+   700: list_item: 体幹の不安定性があり、ご自身の車椅子以外では座位がとれない。
+   701: list_item: 認知機能に問題はない。
+  702: paragraph: シーティングの
+  703: paragraph: 必要性検討
+  704: list with name=list
+   705: list_item: 介護職員のAさんは、補装具費支給制度によるオーダーメイドの車椅子（体幹ベルト付）のベルトの使用が身体拘束に該当するか不安があった。
+  706: paragraph: シーティング
+  707: paragraph: 実施に向けたアセスメント
+  708: list with name=list
+   709: list_item: 介護職員のAさんは、理学療法士に相談し、アセスメントを依頼。アセスメント結果は、「残存機能や筋力が不十分なため、体幹ベルトを外した状態では倒れてしまい座位がとれない」であった。
+   710: list_item: 本人に確認したところ、「ずっとベルトをして生活してきており、外すと怖くて車椅子に乗れない」とのことだった。
+  711: paragraph: シーティング
+  712: paragraph: 実施
+  713: list with name=list
+   714: list_item: 理学療法士および介護職員Aさんは、他の看護職員や看護師に対して、体幹ベルトを使ったシーティングが必要な理由を共有した。
+   715: list_item: 施設内の事故発生防止委員会でも、この場合におけるベルト使用は身体拘束に該当しないことを確認。　　　　　　　　　　　　　　　　　　　　　　　
+   716: list_item: ベルトを使ったシーティング実施の理由は、ケアプランにも記載した。
+  717: paragraph: 効果検証
+  718: paragraph: 継続的な観察
+  719: list with name=list
+   720: list_item: 車椅子座位での食事が継続して自立できており、またリハビリテーションの実施によって車での外出が 可能となった。
+   721: list_item: その後も、定期的にモニタリングを実施している。
+  722: paragraph: 　 　事例紹介　
+  723: picture
+  724: list with name=list
+   725: list_item: 70代男性
+   726: list_item: 頸髄損傷
+  727: paragraph: 　　（下肢不全麻痺）
+  728: list with name=list
+   729: list_item: 認知機能問題なし
+   730: list_item: 身体障害者手帳あり
+ 731: chapter with name=slide-40
+  732: title: （参考）障害者総合支援法における補装具費支給制度
+  733: list with name=list
+   734: list_item: 補装具とは、障害者が日常生活を送る上で必要な移動等の確保や、就労場面における能率の向上を図ること及び障害児が将来、社会人として独立自活するための素地を育成助長することを目的として、身体の欠損又は損なわ
+   735: list_item: 障害者又は障害児の保護者が市町村長に申請し、身体障害者更生相談所等の判定又は意見に基づく市町村長の決定により、補装具費の支給を受けます。
+  736: picture
+  737: paragraph: 出所：厚生労働省HPより引用
+ 738: chapter with name=slide-41
+  739: paragraph: 6．シーティングにおける多職種連携
+ 740: chapter with name=slide-42
+  741: title: 6.1　日常生活におけるケアとしてのシーティング
+  742: paragraph: シーティングは、医師・リハビリテーション専門職等により、リハビリテーションの一環として実施されることがある。
+  743: paragraph: リハビリテーションの場面のみで実施されるものではなく、日常生活のケアとしても実施される。
+  744: picture
+  745: paragraph: 医師やリハビリテーション専門職等はもちろんのこと、
+  746: paragraph: 高齢者のケアに関わるそれぞれの職種がシーティングの基礎知識を身に付けることが重要
+  747: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 748: chapter with name=slide-43
+  749: title: 6.2　多職種でシーティングを実施する際の役割分担
+  750: paragraph: ※施設外の専門家や専門業者に参加してもらう場合や、一人の職員が役割を兼務する場合もある
+  751: paragraph: 評価
+  752: paragraph: 用具
+  753: paragraph: 実践
+  754: paragraph: 観察
+  755: paragraph: 対象の高齢者
+  756: list with name=list
+   757: list_item: 日常生活のケアとして質の高いシーティングを実施するためには、高齢者ケアに関わる様々な職種がそれぞれの視点でアセスメントを行い、会議等で話し合い、目標を共有し、意思を統一して進めていくことが重要です。
+   758: list_item: 評価担当、用具担当、実践・観察担当の３つの役割を担う職員が連携し、シーティングを実施していきます。
+  759: picture
+  760: picture
+  761: picture
+  762: picture
   763: picture
-  764: list with name=list
-   765: list_item: 90代女性
-   766: list_item: 要介護5
-   767: list_item: パーキンソン病、円背
- 768: chapter with name=slide-45
-  769: paragraph: 7．事例を踏まえて考えてみよう
- 770: chapter with name=slide-46
-  771: title: 　事例ワークⅠ　車椅子上での体動がみられる事例　　
-  772: list with name=list
-   773: list_item: あなたの施設にこのような方がいらっしゃった場合、あなたはどう行動しますか？
-  774: paragraph: 【考える観点】
-  775: list with name=list
-   776: list_item: この事例のように、椅子や車椅子、備品等が古くなったり、壊れていたりしている場合はありますか？
-   777: list_item: 椅子や車椅子に座りにくそうにしている入居者はあなたの施設にいますか？
-   778: list_item: 椅子や車椅子上での体動や急な立ち上がりに気づいたとき、あなたならどのように行動しますか？また、誰に相談しますか？
+  764: paragraph: 出所：令和２年度厚生労働省老人保健健康増進等事業「高齢者の適切なケアとシーティングに関する手引き」を基に作成
+ 765: chapter with name=slide-44
+  766: title: 　リハビリテーション専門職と連携してシーティングを実施した事例
+  767: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+  768: list with name=list
+   769: list_item: 下肢筋力が低下しており、施設内は普通型車椅子介助によって移動している。
+   770: list_item: パーキンソン病により円背が強くなってきている。
+   771: list_item: 最近、食事摂取量が減ってきている。
+  772: paragraph: シーティングの
+  773: paragraph: 必要性検討
+  774: list with name=list
+   775: list_item: 円背が強く、普通型車椅子だと顔をあげられず食事が難しい状態であったことに介護職員のAさんが気づいた。
+  776: paragraph: シーティング
+  777: paragraph: 実施に向けた
+  778: paragraph: アセスメント
   779: list with name=list
-   780: list_item: 90代男性（要介護3）。5年前から施設に入居している軽度の認知症を合併する高齢者。
-   781: list_item: 骨折を契機に足の筋力が低下し、現在車椅子を使用している。転倒・骨折リスクが高い。
-   782: list_item: 食事の際に普通型車椅子に座っているとき、体動や急な立ち上がりが多く、ヒヤリハットが多発していた。
-   783: list_item: 車椅子を見てみると、座面部分が古くなっており、たわんでいた。
-   784: list_item: 車椅子に座っている様子を観察すると、浅く座っており、非常に座りにくそうだった。
-  785: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  786: picture
-  787: paragraph: 　検討タイム（5分）
-  788: picture
- 789: chapter with name=slide-47
-  790: title: 　事例ワークⅠの解説①　施設で実施されたシーティング
-  791: paragraph: 車椅子の座面（シート）部分がたわんでいることに気づいた介護職員Aさんと機能訓練指導員は、 たわんだシートに座ることによって体が不安定になっているのではないか、と考えました。
-  792: paragraph: シーティング実施の
-  793: paragraph: 必要性検討
-  794: paragraph: シーティング実施に
-  795: paragraph: 向けたアセスメント
-  796: paragraph: 車椅子に座って食事をとっているとき、体動が多いことに、介護職員Aさんが気づいた。
-  797: paragraph: 介護職員Aさんは、その状況を機能訓練指導員に相談。
-  798: paragraph: Aさんは、車椅子が古く、座面のシートがたわんでいることに気づいた。機能訓練指導員は、たわんだシートによって体が不安定になっているのではないか、と考えた。
-  799: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  800: paragraph: Aさんは、一部介助であれば椅子に移乗することが可能と機能訓練指導員よりアドバイスを受けた。
-  801: picture
-  802: picture
-  803: paragraph: Aさんは、機能訓練指導員とともになぜ車椅子に座っているときになぜ体動が多いのか考えた。
-  804: paragraph: 椅子に座ってもらったところ、座位姿勢が安定していた。
-  805: picture
- 806: chapter with name=slide-48
-  807: title: 　事例ワークⅠの解説①　施設で実施されたシーティング　続き
-  808: paragraph: 座面がたわんだ古い車椅子から椅子に座り変えることによって、食事中に立ち上がる場面が少なくなりました。また、移乗動作を継続することで筋力向上しました。
-  809: paragraph: 効果検証
-  810: paragraph: 継続的な観察
-  811: paragraph: アセスメントに基づいた
-  812: paragraph: シーティングの実施
-  813: paragraph: 椅子での食事の様子を観察するよう、ユニット内で共有した。
-  814: paragraph: ユニット会議で相談し、試しに1週間食事中に椅子へ移乗してもらうことにした。
-  815: paragraph: その結果、食事中の体動や急な立ち上がりが少なくなったことに介護職員Aさんが気づいた。
-  816: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  817: paragraph: 座面がたわんだ古い車椅子ではなく、椅子に座ったほうが体が安定していることがわかったため、椅子に座って食事をとった方がよいと考えた。
-  818: paragraph: 椅子への毎日の移乗動作が生活リハビリとして作用し、下肢筋力が向上した。全体的な介護量も減っている。
-  819: paragraph: その結果をユニット会議で報告し、継続して車椅子から椅子へ移乗してもらうことを決めた。
-  820: picture
- 821: chapter with name=slide-49
-  822: title: 　事例ワークⅠの解説②　この事例におけるポイント
-  823: paragraph: この事例のポイントは、介護職員の気づき、アセスメントを通した原因の探索、職員間での情報共有、日々の観察を通したシーティングの効果検証・改善です。
-  824: paragraph: シーティング実施の
-  825: paragraph: 必要性検討
-  826: paragraph: シーティング実施に
-  827: paragraph: 向けたアセスメント
-  828: paragraph: 効果検証
-  829: paragraph: 継続的な観察
-  830: paragraph: アセスメントに
-  831: paragraph: 基づいた
-  832: paragraph: シーティングの実施
-  833: paragraph: 介護職員の気づき
-  834: paragraph: 　日々の観察の中で、食事中に車椅子での体動が多いことに介護職員が気づいた
-  835: paragraph: アセスメントを通した原因の探索
-  836: paragraph: 　車椅子のチェックを通して、シートのたわみが座位不安定の原因であることに気づいた
-  837: paragraph: 　車椅子から椅子の移乗が一部介助で可能であり、座位も安定していることを確認した
-  838: paragraph: 職員間での情報共有
-  839: paragraph: 　ユニット会議で相談し、今後の対応方針を共有した
-  840: paragraph: 日々の観察を通したシーティングの効果検証・改善
-  841: paragraph: 　椅子を継続的に使用することで食事中の体動が減ったことに介護職員が気づいた
-  842: paragraph: 　移乗動作を通して下肢筋力が向上し自立度が向上。全体的な介護量も減っている。
-  843: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
- 844: chapter with name=slide-50
-  845: title: 　事例ワークⅡ　不随意運動により食事を取りにくそうにしている事例　　
-  846: paragraph: 【考える観点】
-  847: list with name=list
-   848: list_item: この事例のような、進行性疾患のために症状が変化していく高齢者はあなたの施設にいますか？
-   849: list_item: 座っているときの体の震えや手の震えによって食事がとりづらそうな入居者を見つけたとき、あなたならどのように行動しますか？また、誰に相談しますか？
-  850: list with name=list
-   851: list_item: 60代男性（要介護5）。
-   852: list_item: 脊髄小脳変性症による不随意運動が強く、姿勢保持困難。
-   853: list_item: 日常生活は全介助であり、 車椅子で生活。
-   854: list_item: 認知機能は比較的保たれている。
-   855: list_item: 昨年より脊髄小脳変性症の症状が進行し、座位保持が難しくなっている。
-  856: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  857: list with name=list
-   858: list_item: あなたの施設にこのような方がいらっしゃった場合、あなたはどう行動しますか？
-  859: paragraph: 　　 脊髄小脳変性症とは?
-  860: paragraph: 筋肉をバランスよく動かすことができないため、起立時、歩行時のふらつきや、手の震え、舌のもつれといった症状とする進行性の疾患。体幹バランスも悪いため座位保持困難となる。
-  861: picture
-  862: picture
-  863: paragraph: 　検討タイム（5分）
-  864: picture
- 865: chapter with name=slide-51
-  866: title: 事例ワークⅡの解説①　施設で実施されたシーティング
-  867: paragraph: 理学療法士によるアセスメント結果と介護職員、看護師の日常観察結果を踏まえてカンファレンスを実施。
-  868: paragraph: シーティング実施の
-  869: paragraph: 必要性検討
-  870: paragraph: シーティング実施に
-  871: paragraph: 向けたアセスメント
-  872: paragraph: 姿勢保持が徐々に難しくなり、食事摂取が難しくなっていることに介護職員Aさんが気づいた。
-  873: paragraph: 介護職員Aさんは、その状況を理学療法士に相談。
-  874: paragraph: 理学療法士が、動作時にどのような揺れが起こるか、という観点でアセスメントを実施。
-  875: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  876: paragraph: 理学療法士によるアセスメント結果を踏まえ、Aさんと理学療法士は様々な背あてクッションを試してみた。
-  877: picture
-  878: picture
-  879: paragraph: Aさんは、理学療法士とともに今後の対応方針について考えた。
-  880: paragraph: そのうち、側部にパッドのついた背あてクッションを試してみたところ、最も姿勢が安定した。
-  881: picture
- 882: chapter with name=slide-52
-  883: title: 事例ワークⅡの解説①　施設で実施されたシーティング　続き
-  884: paragraph: 理学療法士によるアセスメント結果と、介護職員、看護師の日常観察結果を踏まえてシーティングを実施しました。その結果、座位姿勢保持が可能になり、食事の自己摂取量が増加しました。
-  885: paragraph: 効果検証
-  886: paragraph: 継続的な観察
-  887: paragraph: アセスメントに基づいた
-  888: paragraph: シーティングの実施
-  889: paragraph: 座位姿勢保持が可能になり、食事の自己摂取量が増加し、食事介助に伴う職員の負担が軽減した。
-  890: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
-  891: paragraph: シーティングを実施して2週間程度経過し、食事動作や日常観察でも効果がみられていることを確認してケアプランに落とし込んだ。
-  892: paragraph: 側部にパッドのついた背あてクッションを食事中に使用することに決定。
-  893: paragraph: 日によって体調が異なる可能性があるため、食事の際の座位の様子を観察するよう、ユニット内で共有した。
-  894: paragraph: 多職種でのカンファレンスを実施し、クッションの位置を職員間で共有した。
-  895: picture
- 896: chapter with name=slide-53
-  897: title: 事例ワークⅡの解説②　この事例におけるポイント
-  898: paragraph: この事例のポイントは、介護職員の気づき、多職種でのアセスメントを通した原因の探索、多職種での情報共有、ケアプランへの反映です。
-  899: paragraph: シーティング実施の
-  900: paragraph: 必要性検討
-  901: paragraph: シーティング実施に
-  902: paragraph: 向けたアセスメント
-  903: paragraph: 効果検証
-  904: paragraph: 継続的な観察
-  905: paragraph: アセスメントに
-  906: paragraph: 基づいた
-  907: paragraph: シーティングの実施
-  908: paragraph: 介護職員の気づき
-  909: paragraph: 　姿勢保持が徐々に難しくなり、食事摂取が難しくなっていることに介護職員が気づいた
-  910: paragraph: 多職種でのアセスメントを通した原因の探索
-  911: paragraph: 　理学療法士や介護職員のアセスメントを踏まえてシーティング実施内容を検討した
-  912: paragraph: 多職種での情報共有
-  913: paragraph: 　多職種でのカンファレンスを実施し、シーティング実施内容を共有した
-  914: paragraph: ケアプランへの反映
-  915: paragraph: 　食事動作や日常観察でも効果がみられていることを確認してケアプランに落とし込んだ
-  916: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
- 917: chapter with name=slide-54
-  918: picture
-  919: paragraph: お疲れ様でした。
-  920: paragraph: 以上で講義の内容は終了です。
-  921: paragraph: ご清聴ありがとうございました。
-  922: paragraph: 　令和３年度　厚生労働省　老人保健健康増進等事業
-  923: paragraph: 「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」
-  924: paragraph: 
+   780: list_item: 介護職員Aさんは、施設内に設置しているシーティング委員会で本事例について相談。その後、理学療法士が中心となってアセスメントを実施した。
+   781: list_item: 理学療法士は、アセスメント評価シート、圧分布計測を実施し、現状の姿勢を把握。
+   782: list_item: アセスメントの結果、通常の車椅子ではバックサポートに骨突出部が当たり顔をあげるのが難しいことを確認。
+  783: paragraph: シーティング
+  784: paragraph: 実施
+  785: list with name=list
+   786: list_item: アセスメントを踏まえ、普通型車椅子からモジュール型車椅子への変更、バッグサポートの調整を実施。加えて、ジェルクッションなどの備品を活用した。
+   787: list_item: シーティング実施にあたり、理学療法士はアセスメント、車椅子選定、日常観察は介護職員・看護師と、役割分担と連携を行った。
+  788: paragraph: 効果検証
+  789: paragraph: 継続的な観察
+  790: list with name=list
+   791: list_item: 上記のようなシーティングの工夫によって、食事中に顔を上げることができるような姿勢となり、結果的に食事摂取量が増加した。
+  792: paragraph: 　 　事例紹介　
+  793: picture
+  794: list with name=list
+   795: list_item: 90代女性
+   796: list_item: 要介護5
+   797: list_item: パーキンソン病、円背
+ 798: chapter with name=slide-45
+  799: paragraph: 7．事例を踏まえて考えてみよう
+ 800: chapter with name=slide-46
+  801: title: 　事例ワークⅠ　車椅子上での体動がみられる事例　　
+  802: list with name=list
+   803: list_item: あなたの施設にこのような方がいらっしゃった場合、あなたはどう行動しますか？
+  804: paragraph: 【考える観点】
+  805: list with name=list
+   806: list_item: この事例のように、椅子や車椅子、備品等が古くなったり、壊れていたりしている場合はありますか？
+   807: list_item: 椅子や車椅子に座りにくそうにしている入居者はあなたの施設にいますか？
+   808: list_item: 椅子や車椅子上での体動や急な立ち上がりに気づいたとき、あなたならどのように行動しますか？また、誰に相談しますか？
+  809: list with name=list
+   810: list_item: 90代男性（要介護3）。5年前から施設に入居している軽度の認知症を合併する高齢者。
+   811: list_item: 骨折を契機に足の筋力が低下し、現在車椅子を使用している。転倒・骨折リスクが高い。
+   812: list_item: 食事の際に普通型車椅子に座っているとき、体動や急な立ち上がりが多く、ヒヤリハットが多発していた。
+   813: list_item: 車椅子を見てみると、座面部分が古くなっており、たわんでいた。
+   814: list_item: 車椅子に座っている様子を観察すると、浅く座っており、非常に座りにくそうだった。
+  815: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+  816: picture
+  817: paragraph: 　検討タイム（5分）
+  818: picture
+ 819: chapter with name=slide-47
+  820: title: 　事例ワークⅠの解説①　施設で実施されたシーティング
+  821: paragraph: 車椅子の座面（シート）部分がたわんでいることに気づいた介護職員Aさんと機能訓練指導員は、 たわんだシートに座ることによって体が不安定になっているのではないか、と考えました。
+  822: paragraph: シーティング実施の
+  823: paragraph: 必要性検討
+  824: paragraph: シーティング実施に
+  825: paragraph: 向けたアセスメント
+  826: paragraph: 車椅子に座って食事をとっているとき、体動が多いことに、介護職員Aさんが気づいた。
+  827: paragraph: 介護職員Aさんは、その状況を機能訓練指導員に相談。
+  828: paragraph: Aさんは、車椅子が古く、座面のシートがたわんでいることに気づいた。機能訓練指導員は、たわんだシートによって体が不安定になっているのではないか、と考えた。
+  829: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+  830: paragraph: Aさんは、一部介助であれば椅子に移乗することが可能と機能訓練指導員よりアドバイスを受けた。
+  831: picture
+  832: picture
+  833: paragraph: Aさんは、機能訓練指導員とともになぜ車椅子に座っているときになぜ体動が多いのか考えた。
+  834: paragraph: 椅子に座ってもらったところ、座位姿勢が安定していた。
+  835: picture
+ 836: chapter with name=slide-48
+  837: title: 　事例ワークⅠの解説①　施設で実施されたシーティング　続き
+  838: paragraph: 座面がたわんだ古い車椅子から椅子に座り変えることによって、食事中に立ち上がる場面が少なくなりました。また、移乗動作を継続することで筋力向上しました。
+  839: paragraph: 効果検証
+  840: paragraph: 継続的な観察
+  841: paragraph: アセスメントに基づいた
+  842: paragraph: シーティングの実施
+  843: paragraph: 椅子での食事の様子を観察するよう、ユニット内で共有した。
+  844: paragraph: ユニット会議で相談し、試しに1週間食事中に椅子へ移乗してもらうことにした。
+  845: paragraph: その結果、食事中の体動や急な立ち上がりが少なくなったことに介護職員Aさんが気づいた。
+  846: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+  847: paragraph: 座面がたわんだ古い車椅子ではなく、椅子に座ったほうが体が安定していることがわかったため、椅子に座って食事をとった方がよいと考えた。
+  848: paragraph: 椅子への毎日の移乗動作が生活リハビリとして作用し、下肢筋力が向上した。全体的な介護量も減っている。
+  849: paragraph: その結果をユニット会議で報告し、継続して車椅子から椅子へ移乗してもらうことを決めた。
+  850: picture
+ 851: chapter with name=slide-49
+  852: title: 　事例ワークⅠの解説②　この事例におけるポイント
+  853: paragraph: この事例のポイントは、介護職員の気づき、アセスメントを通した原因の探索、職員間での情報共有、日々の観察を通したシーティングの効果検証・改善です。
+  854: paragraph: シーティング実施の
+  855: paragraph: 必要性検討
+  856: paragraph: シーティング実施に
+  857: paragraph: 向けたアセスメント
+  858: paragraph: 効果検証
+  859: paragraph: 継続的な観察
+  860: paragraph: アセスメントに
+  861: paragraph: 基づいた
+  862: paragraph: シーティングの実施
+  863: paragraph: 介護職員の気づき
+  864: paragraph: 　日々の観察の中で、食事中に車椅子での体動が多いことに介護職員が気づいた
+  865: paragraph: アセスメントを通した原因の探索
+  866: paragraph: 　車椅子のチェックを通して、シートのたわみが座位不安定の原因であることに気づいた
+  867: paragraph: 　車椅子から椅子の移乗が一部介助で可能であり、座位も安定していることを確認した
+  868: paragraph: 職員間での情報共有
+  869: paragraph: 　ユニット会議で相談し、今後の対応方針を共有した
+  870: paragraph: 日々の観察を通したシーティングの効果検証・改善
+  871: paragraph: 　椅子を継続的に使用することで食事中の体動が減ったことに介護職員が気づいた
+  872: paragraph: 　移乗動作を通して下肢筋力が向上し自立度が向上。全体的な介護量も減っている。
+  873: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+ 874: chapter with name=slide-50
+  875: title: 　事例ワークⅡ　不随意運動により食事を取りにくそうにしている事例　　
+  876: paragraph: 【考える観点】
+  877: list with name=list
+   878: list_item: この事例のような、進行性疾患のために症状が変化していく高齢者はあなたの施設にいますか？
+   879: list_item: 座っているときの体の震えや手の震えによって食事がとりづらそうな入居者を見つけたとき、あなたならどのように行動しますか？また、誰に相談しますか？
+  880: list with name=list
+   881: list_item: 60代男性（要介護5）。
+   882: list_item: 脊髄小脳変性症による不随意運動が強く、姿勢保持困難。
+   883: list_item: 日常生活は全介助であり、 車椅子で生活。
+   884: list_item: 認知機能は比較的保たれている。
+   885: list_item: 昨年より脊髄小脳変性症の症状が進行し、座位保持が難しくなっている。
+  886: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+  887: list with name=list
+   888: list_item: あなたの施設にこのような方がいらっしゃった場合、あなたはどう行動しますか？
+  889: paragraph: 　　 脊髄小脳変性症とは?
+  890: paragraph: 筋肉をバランスよく動かすことができないため、起立時、歩行時のふらつきや、手の震え、舌のもつれといった症状とする進行性の疾患。体幹バランスも悪いため座位保持困難となる。
+  891: picture
+  892: picture
+  893: paragraph: 　検討タイム（5分）
+  894: picture
+ 895: chapter with name=slide-51
+  896: title: 事例ワークⅡの解説①　施設で実施されたシーティング
+  897: paragraph: 理学療法士によるアセスメント結果と介護職員、看護師の日常観察結果を踏まえてカンファレンスを実施。
+  898: paragraph: シーティング実施の
+  899: paragraph: 必要性検討
+  900: paragraph: シーティング実施に
+  901: paragraph: 向けたアセスメント
+  902: paragraph: 姿勢保持が徐々に難しくなり、食事摂取が難しくなっていることに介護職員Aさんが気づいた。
+  903: paragraph: 介護職員Aさんは、その状況を理学療法士に相談。
+  904: paragraph: 理学療法士が、動作時にどのような揺れが起こるか、という観点でアセスメントを実施。
+  905: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+  906: paragraph: 理学療法士によるアセスメント結果を踏まえ、Aさんと理学療法士は様々な背あてクッションを試してみた。
+  907: picture
+  908: picture
+  909: paragraph: Aさんは、理学療法士とともに今後の対応方針について考えた。
+  910: paragraph: そのうち、側部にパッドのついた背あてクッションを試してみたところ、最も姿勢が安定した。
+  911: picture
+ 912: chapter with name=slide-52
+  913: title: 事例ワークⅡの解説①　施設で実施されたシーティング　続き
+  914: paragraph: 理学療法士によるアセスメント結果と、介護職員、看護師の日常観察結果を踏まえてシーティングを実施しました。その結果、座位姿勢保持が可能になり、食事の自己摂取量が増加しました。
+  915: paragraph: 効果検証
+  916: paragraph: 継続的な観察
+  917: paragraph: アセスメントに基づいた
+  918: paragraph: シーティングの実施
+  919: paragraph: 座位姿勢保持が可能になり、食事の自己摂取量が増加し、食事介助に伴う職員の負担が軽減した。
+  920: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+  921: paragraph: シーティングを実施して2週間程度経過し、食事動作や日常観察でも効果がみられていることを確認してケアプランに落とし込んだ。
+  922: paragraph: 側部にパッドのついた背あてクッションを食事中に使用することに決定。
+  923: paragraph: 日によって体調が異なる可能性があるため、食事の際の座位の様子を観察するよう、ユニット内で共有した。
+  924: paragraph: 多職種でのカンファレンスを実施し、クッションの位置を職員間で共有した。
+  925: picture
+ 926: chapter with name=slide-53
+  927: title: 事例ワークⅡの解説②　この事例におけるポイント
+  928: paragraph: この事例のポイントは、介護職員の気づき、多職種でのアセスメントを通した原因の探索、多職種での情報共有、ケアプランへの反映です。
+  929: paragraph: シーティング実施の
+  930: paragraph: 必要性検討
+  931: paragraph: シーティング実施に
+  932: paragraph: 向けたアセスメント
+  933: paragraph: 効果検証
+  934: paragraph: 継続的な観察
+  935: paragraph: アセスメントに
+  936: paragraph: 基づいた
+  937: paragraph: シーティングの実施
+  938: paragraph: 介護職員の気づき
+  939: paragraph: 　姿勢保持が徐々に難しくなり、食事摂取が難しくなっていることに介護職員が気づいた
+  940: paragraph: 多職種でのアセスメントを通した原因の探索
+  941: paragraph: 　理学療法士や介護職員のアセスメントを踏まえてシーティング実施内容を検討した
+  942: paragraph: 多職種での情報共有
+  943: paragraph: 　多職種でのカンファレンスを実施し、シーティング実施内容を共有した
+  944: paragraph: ケアプランへの反映
+  945: paragraph: 　食事動作や日常観察でも効果がみられていることを確認してケアプランに落とし込んだ
+  946: paragraph: 出所：令和3年度厚生労働省老健事業「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」ヒアリング結果に基づき作成
+ 947: chapter with name=slide-54
+  948: picture
+  949: paragraph: お疲れ様でした。
+  950: paragraph: 以上で講義の内容は終了です。
+  951: paragraph: ご清聴ありがとうございました。
+  952: paragraph: 　令和３年度　厚生労働省　老人保健健康増進等事業
+  953: paragraph: 「介護現場における適切なシーティングの実施に係る事例及び研修に関する調査研究事業」
+  954: paragraph: 

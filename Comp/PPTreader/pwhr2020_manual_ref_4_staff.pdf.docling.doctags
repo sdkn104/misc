@@ -33,7 +33,7 @@
 <unordered_list><list_item><loc_290><loc_65><loc_463><loc_112> パワーハラスメントを受けて （被害者の行動）</list_item>
 </unordered_list>
 <text><loc_303><loc_111><loc_459><loc_172>そのパワハラを受けた後 どうしましたか？（複数回答）</text>
-<picture><loc_283><loc_206><loc_484><loc_403><caption><loc_294><loc_184><loc_328><loc_203>40.9%</caption></picture>
+<picture><loc_283><loc_206><loc_484><loc_403></picture>
 <text><loc_265><loc_417><loc_354><loc_432>（平成 28 年度 厚生労働省</text>
 <text><loc_269><loc_430><loc_493><loc_458>「職場のパワーハラスメントに関する実態調査」従業員調査より） （回答： 3,250 人（過去３年間にパワハラを受けたと回答した者））</text>
 <text><loc_285><loc_488><loc_496><loc_498>Copyright © Ministry of Health, Labour and Welfare, All Right reserved.</text>
@@ -83,12 +83,8 @@
 </unordered_list>
 <section_header_level_1><loc_25><loc_95><loc_45><loc_109>まる。</section_header_level_1>
 <unordered_list><list_item><loc_59><loc_83><loc_256><loc_97>・ セクハラの相談件数は約７千件（Ｈ 29 年度）と高水準にとど</list_item>
-<list_item><loc_34><loc_110><loc_276><loc_123>（1）国の施策八卜对策明記 (劳動施策合推進法)</list_item>
 <list_item><loc_30><loc_126><loc_458><loc_156>国の施策に 「職場における労働者の就業環境を害する言動に起因する問題の解決の促進」（ハラスメント対策）を明 記 する。</list_item>
 <list_item><loc_28><loc_168><loc_275><loc_179>（２）パワーハラスメント防止対策の法制化（労働施策総合推進法）</list_item>
-<list_item><loc_32><loc_188><loc_437><loc_214>O 一、「①優越的関背景、「②業務上必要相当超言動 「③就業環境害(身体的若<精神的苦痛与)明記。</list_item>
-<list_item><loc_44><loc_222><loc_434><loc_234>事業主、一防止の、相谈体制の整等の履用管理上の措置講義務付。</list_item>
-<list_item><loc_31><loc_242><loc_409><loc_268>八一八の具体的定義事業主講雇用管理上の措置の具体的内容定、 厚生大臣指針策定寸二上寸。</list_item>
 </unordered_list>
 <picture><loc_270><loc_48><loc_475><loc_95></picture>
 <section_header_level_1><loc_43><loc_278><loc_117><loc_292>〔指針で規定する内容〕</section_header_level_1>
@@ -115,16 +111,6 @@
 </unordered_list>
 <text><loc_48><loc_122><loc_461><loc_154>セク シュアル ハラスメント等は行ってはならないこと等に対する関 心 と 理 解を 深 めることや、 他 の労働者に対する言 動に</text>
 <text><loc_48><loc_176><loc_323><loc_190>※ ②④ パワーハラスメント、いわゆるマタ ニティ ハラスメントについても 同様 （ も 同 じ）</text>
-<unordered_list><list_item><loc_45><loc_201><loc_253><loc_212>事業主仁相谈等儿大者二对寸不利益取极\の禁止</list_item>
-</unordered_list>
-<text><loc_40><loc_218><loc_464><loc_243>者相等行歸、者等事主相 等理由不利益取极禁止。</text>
-<unordered_list><list_item><loc_33><loc_264><loc_341><loc_275>③自社の動者等他社の動者八行場合の協力对応</list_item>
-</unordered_list>
-<text><loc_40><loc_284><loc_461><loc_309>事業主对、他社雇用管理上の措置の寒施（事寒確等)関必要協力求場合、二応 努力義務設付。</text>
-<unordered_list><list_item><loc_52><loc_316><loc_466><loc_339>※、自社の動者他社の者等受場合、相応等の措義務の对象 上指針飞明確化寸。</list_item>
-</unordered_list>
-<section_header_level_1><loc_34><loc_367><loc_182><loc_378>4 調停の出頭·意見取の对象者の大</section_header_level_1>
-<text><loc_40><loc_387><loc_462><loc_412>等の調停制度、争調整委会必要場合、当事者の同意の有無 、職場の同僚等参考人出頭の求意見取行、对象者大。</text>
 <page_footer><loc_8><loc_473><loc_13><loc_490>7</page_footer>
 <page_break>
 <text><loc_25><loc_57><loc_37><loc_80>容</text>
@@ -136,7 +122,6 @@
 <list_item><loc_25><loc_136><loc_456><loc_155>→　客観的にみて、業務上必要かつ相当な範囲で行われる適正な業務指示や指導については、該当しない。</list_item>
 </unordered_list>
 <otsl><loc_21><loc_159><loc_479><loc_458><fcel>職場におけるパワハラの ３要素<fcel>具体的な内容<nl><fcel>① 優越 的な関 係 を 背景 とし た言動<fcel>○ 当該 事 業 主 の業務を 遂 行するに当たって、当該言動を受ける労働者が行為者に 対して 抵抗又 は 拒絶 することができない 蓋然性 が高い関 係 を 背景 として行わ れ る もの （例） ・ 職務上の 地位 が上 位 の者による言動 ・ 同僚又 は部 下 による言動で、当該言動を行う者が業務上 必 要な 知識 や 豊富 な 経験 を 有 してお り、当該者の 協力 を 得 なけ れば 業務の 円滑 な 遂 行を行うことが 困難 であるもの ・ 同僚又 は部 下 からの 集団 による行為で、こ れ に 抵抗又 は 拒絶 することが 困難 であるもの 等<nl><fcel>② 業務上 必 要かつ相当な範 囲を超えた言動<fcel>○ 社会 通念 に 照 らし、当該言動が明らかに当該 事 業 主 の業務上 必 要 性 がない、 又 は そ の態 様 が相当でないもの<nl><fcel>③ 労働者の 就 業 環境 が害さ れ る<fcel>○ 当該言動により労働者が 身 体的 又 は 精神 的に 苦痛 を 与 えら れ 、労働者の 就 業 環 境 が 不快 なものとなったため、 能力 の 発揮 に 重大 な 悪 影 響 が生じる等当該労働者 が 就 業する上で 看 過できない 程 度の 支障 が生じること ○ この 判断 に当たっては、「平 均 的な労働者の 感 じ 方 」、すなわ ち 、 同様 の状 況 で 当該言動を受けた場合に、社会 一般 の労働者が、 就 業する上で 看 過できない 程 度 の 支障 が生じたと 感 じるような言動であるかどうかを 基 準とすることが適当<nl></otsl>
-<footnote><loc_24><loc_456><loc_471><loc_489>○　個別の事案の判断に際しては、相談窓口の担当者等が相談者の心身の状況や当該言動が行われた際の受け止めな どその認識にも配慮しながら、相談者及び行 為 者の 双 方から 丁寧 に事 実確 認等を行うことも 重 要。</footnote>
 <section_header_level_1><loc_78><loc_4><loc_420><loc_43>事業主が職場における優越的な関係を背景とした言動に起因する問題に関して 雇用管理上講ずべき措置等についての指針 概要 事業主が職場における優越的な関係を背景とした言動に起因する問題に関して 雇用管理上講ずべき措置等についての指針 概要</section_header_level_1>
 <text><loc_349><loc_45><loc_477><loc_59>令和 ２年１ 月 １ ５日 厚生労働省告示 第５号</text>
 <page_footer><loc_8><loc_473><loc_13><loc_490>8</page_footer>
@@ -278,22 +263,9 @@
 <page_footer><loc_283><loc_477><loc_495><loc_488>Copyright © Ministry of Health, Labour and Welfare, All Right reserved.</page_footer>
 <page_break>
 <section_header_level_1><loc_36><loc_25><loc_394><loc_54>51.　職場のパワーハラスメントを 予 防するためには（1）</section_header_level_1>
-<unordered_list><list_item><loc_48><loc_87><loc_347><loc_103>起の考</list_item>
-<list_item><loc_47><loc_118><loc_287><loc_134>上司部下二少</list_item>
-<list_item><loc_75><loc_145><loc_356><loc_160>上司自分報告連絡心</list_item>
-</unordered_list>
-<text><loc_374><loc_86><loc_486><loc_163>左記は一つの例であり、パ ワーハラスメントが起きる原 因のすべてを網羅するもので はないことに留意する必要が あります。</text>
-<unordered_list><list_item><loc_75><loc_170><loc_358><loc_213>上司相、困点自分の意見 具体的整理<</list_item>
-</unordered_list>
 <section_header_level_1><loc_374><loc_72><loc_437><loc_91>研修担当者様：</section_header_level_1>
 <text><loc_374><loc_160><loc_486><loc_192>会社の実態に合わせて、適宜 修正し、御活用ください。</text>
-<unordered_list><list_item><loc_76><loc_223><loc_386><loc_240>上司同僚八受感</list_item>
-<list_item><loc_79><loc_249><loc_421><loc_266>一人、周の人相谈口相谈</list_item>
-<list_item><loc_57><loc_302><loc_399><loc_345>正社員正社員以外の樣立場の一動 一八の行為者可能性</list_item>
-<list_item><loc_77><loc_356><loc_398><loc_371>自分の感情識 (怒、怖、悲、焦、柘)</list_item>
-<list_item><loc_76><loc_382><loc_234><loc_398>相手見接方工夫</list_item>
-<list_item><loc_75><loc_410><loc_369><loc_424>不要解招二一心挂</list_item>
-</unordered_list>
+<text><loc_374><loc_86><loc_486><loc_163>左記は一つの例であり、パ ワーハラスメントが起きる原 因のすべてを網羅するもので はないことに留意する必要が あります。</text>
 <text><loc_285><loc_488><loc_496><loc_498>Copyright © Ministry of Health, Labour and Welfare, All Right reserved.</text>
 <page_footer><loc_8><loc_473><loc_17><loc_490>16</page_footer>
 <page_footer><loc_283><loc_477><loc_495><loc_488>Copyright © Ministry of Health, Labour and Welfare, All Right reserved.</page_footer>
@@ -497,8 +469,6 @@
 <picture><loc_19><loc_278><loc_124><loc_489></picture>
 <picture><loc_136><loc_276><loc_240><loc_489></picture>
 <picture><loc_260><loc_274><loc_296><loc_327></picture>
-<section_header_level_1><loc_300><loc_287><loc_461><loc_309>加職場応援过</section_header_level_1>
-<text><loc_261><loc_364><loc_417><loc_374>利用</text>
 <picture><loc_422><loc_335><loc_460><loc_390></picture>
 <text><loc_261><loc_410><loc_469><loc_471>企業の取 組 事 例や、 裁 判 例等を 紹介 する ハラスメント対策の 総 合 情 報 サ イトです。 是非 ご 活 用ください ！</text>
 <page_footer><loc_8><loc_473><loc_17><loc_490>24</page_footer>
