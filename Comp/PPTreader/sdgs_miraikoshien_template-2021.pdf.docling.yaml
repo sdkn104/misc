@@ -7,27 +7,27 @@ body:
   - $ref: '#/texts/5'
   - $ref: '#/pictures/1'
   - $ref: '#/pictures/2'
-  - $ref: '#/texts/18'
-  - $ref: '#/texts/19'
-  - $ref: '#/texts/20'
+  - $ref: '#/texts/8'
+  - $ref: '#/texts/9'
+  - $ref: '#/texts/10'
   - $ref: '#/pictures/3'
-  - $ref: '#/texts/24'
-  - $ref: '#/texts/25'
+  - $ref: '#/texts/11'
+  - $ref: '#/texts/12'
   - $ref: '#/pictures/4'
-  - $ref: '#/texts/29'
-  - $ref: '#/texts/30'
+  - $ref: '#/texts/13'
+  - $ref: '#/texts/14'
   - $ref: '#/pictures/5'
-  - $ref: '#/texts/34'
-  - $ref: '#/texts/35'
-  - $ref: '#/texts/36'
-  - $ref: '#/texts/37'
+  - $ref: '#/texts/15'
+  - $ref: '#/texts/16'
+  - $ref: '#/texts/17'
+  - $ref: '#/texts/18'
   - $ref: '#/groups/1'
-  - $ref: '#/texts/43'
+  - $ref: '#/texts/24'
   - $ref: '#/groups/2'
-  - $ref: '#/texts/48'
+  - $ref: '#/texts/29'
   - $ref: '#/groups/3'
   - $ref: '#/pictures/6'
-  - $ref: '#/texts/53'
+  - $ref: '#/texts/34'
   - $ref: '#/pictures/7'
   - $ref: '#/pictures/8'
   - $ref: '#/pictures/9'
@@ -70,11 +70,11 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/0'
 - children:
-  - $ref: '#/texts/38'
-  - $ref: '#/texts/39'
-  - $ref: '#/texts/40'
-  - $ref: '#/texts/41'
-  - $ref: '#/texts/42'
+  - $ref: '#/texts/19'
+  - $ref: '#/texts/20'
+  - $ref: '#/texts/21'
+  - $ref: '#/texts/22'
+  - $ref: '#/texts/23'
   content_layer: body
   label: list
   name: list
@@ -82,10 +82,10 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/1'
 - children:
-  - $ref: '#/texts/44'
-  - $ref: '#/texts/45'
-  - $ref: '#/texts/46'
-  - $ref: '#/texts/47'
+  - $ref: '#/texts/25'
+  - $ref: '#/texts/26'
+  - $ref: '#/texts/27'
+  - $ref: '#/texts/28'
   content_layer: body
   label: list
   name: list
@@ -93,10 +93,10 @@ groups:
     $ref: '#/body'
   self_ref: '#/groups/2'
 - children:
-  - $ref: '#/texts/49'
-  - $ref: '#/texts/50'
-  - $ref: '#/texts/51'
-  - $ref: '#/texts/52'
+  - $ref: '#/texts/30'
+  - $ref: '#/texts/31'
+  - $ref: '#/texts/32'
+  - $ref: '#/texts/33'
   content_layer: body
   label: list
   name: list
@@ -159,8 +159,8 @@ pictures:
       b: 402.0303192138672
       coord_origin: BOTTOMLEFT
       l: 578.0888061523438
-      r: 691.4899291992188
-      t: 515.629358291626
+      r: 691.4898681640625
+      t: 515.629301071167
     charspan:
     - 0
     - 0
@@ -169,10 +169,7 @@ pictures:
   self_ref: '#/pictures/0'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/6'
-  - $ref: '#/texts/7'
-  - $ref: '#/texts/8'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -180,11 +177,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 480.8326759338379
+      b: 480.8327827453613
       coord_origin: BOTTOMLEFT
-      l: 659.02734375
-      r: 713.0056762695312
-      t: 536.1028938293457
+      l: 659.0276489257812
+      r: 713.0052490234375
+      t: 536.102777004242
     charspan:
     - 0
     - 0
@@ -194,15 +191,8 @@ pictures:
 - annotations: []
   captions: []
   children:
-  - $ref: '#/texts/9'
-  - $ref: '#/texts/10'
-  - $ref: '#/texts/11'
-  - $ref: '#/texts/12'
-  - $ref: '#/texts/13'
-  - $ref: '#/texts/14'
-  - $ref: '#/texts/15'
-  - $ref: '#/texts/16'
-  - $ref: '#/texts/17'
+  - $ref: '#/texts/6'
+  - $ref: '#/texts/7'
   content_layer: body
   footnotes: []
   label: picture
@@ -210,11 +200,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 211.23834228515625
+      b: 211.24566650390625
       coord_origin: BOTTOMLEFT
-      l: 13.829919815063477
-      r: 701.3627319335938
-      t: 466.2839889526367
+      l: 13.829706192016602
+      r: 701.3644409179688
+      t: 466.28521728515625
     charspan:
     - 0
     - 0
@@ -223,10 +213,7 @@ pictures:
   self_ref: '#/pictures/2'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/21'
-  - $ref: '#/texts/22'
-  - $ref: '#/texts/23'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -234,11 +221,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 480.88772201538086
+      b: 480.887752532959
       coord_origin: BOTTOMLEFT
-      l: 659.086181640625
-      r: 712.837890625
-      t: 535.8066492080688
+      l: 659.0862426757812
+      r: 712.8378295898438
+      t: 535.8066091537476
     charspan:
     - 0
     - 0
@@ -247,10 +234,7 @@ pictures:
   self_ref: '#/pictures/3'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/26'
-  - $ref: '#/texts/27'
-  - $ref: '#/texts/28'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -258,11 +242,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 480.86457443237305
+      b: 480.86454010009766
       coord_origin: BOTTOMLEFT
       l: 658.9569702148438
       r: 712.9188842773438
-      t: 535.8532409667969
+      t: 535.853289604187
     charspan:
     - 0
     - 0
@@ -271,10 +255,7 @@ pictures:
   self_ref: '#/pictures/4'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/31'
-  - $ref: '#/texts/32'
-  - $ref: '#/texts/33'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -282,11 +263,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 480.8476905822754
+      b: 480.84771728515625
       coord_origin: BOTTOMLEFT
       l: 658.8394165039062
       r: 712.8829345703125
-      t: 535.984272480011
+      t: 535.9842524528503
     charspan:
     - 0
     - 0
@@ -305,8 +286,8 @@ pictures:
   - bbox:
       b: 499.2673149108887
       coord_origin: BOTTOMLEFT
-      l: 14.906853675842285
-      r: 107.26129913330078
+      l: 14.906832695007324
+      r: 107.26132202148438
       t: 523.0656414031982
     charspan:
     - 0
@@ -316,9 +297,7 @@ pictures:
   self_ref: '#/pictures/6'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/54'
-  - $ref: '#/texts/55'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -326,11 +305,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 385.9470520019531
+      b: 385.94700622558594
       coord_origin: BOTTOMLEFT
-      l: 20.299650192260742
+      l: 20.299638748168945
       r: 101.52639770507812
-      t: 466.8106155395508
+      t: 466.81058502197266
     charspan:
     - 0
     - 0
@@ -347,11 +326,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 299.6539001464844
+      b: 299.65391540527344
       coord_origin: BOTTOMLEFT
-      l: 20.258760452270508
+      l: 20.258724212646484
       r: 101.59622955322266
-      t: 380.9540557861328
+      t: 380.9540710449219
     charspan:
     - 0
     - 0
@@ -360,11 +339,7 @@ pictures:
   self_ref: '#/pictures/8'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/56'
-  - $ref: '#/texts/57'
-  - $ref: '#/texts/58'
-  - $ref: '#/texts/59'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -372,11 +347,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 385.84423828125
+      b: 385.84422302246094
       coord_origin: BOTTOMLEFT
       l: 139.24615478515625
       r: 220.23890686035156
-      t: 466.5051956176758
+      t: 466.50521087646484
     charspan:
     - 0
     - 0
@@ -385,10 +360,7 @@ pictures:
   self_ref: '#/pictures/9'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/60'
-  - $ref: '#/texts/61'
-  - $ref: '#/texts/62'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -398,9 +370,9 @@ pictures:
   - bbox:
       b: 299.7974395751953
       coord_origin: BOTTOMLEFT
-      l: 139.0258026123047
+      l: 139.02578735351562
       r: 220.25059509277344
-      t: 380.74334716796875
+      t: 380.7433776855469
     charspan:
     - 0
     - 0
@@ -409,8 +381,7 @@ pictures:
   self_ref: '#/pictures/10'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/63'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -420,9 +391,9 @@ pictures:
   - bbox:
       b: 213.86679077148438
       coord_origin: BOTTOMLEFT
-      l: 20.17007827758789
+      l: 20.170066833496094
       r: 101.94821166992188
-      t: 294.8811798095703
+      t: 294.8811950683594
     charspan:
     - 0
     - 0
@@ -431,10 +402,7 @@ pictures:
   self_ref: '#/pictures/11'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/64'
-  - $ref: '#/texts/65'
-  - $ref: '#/texts/66'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -444,9 +412,9 @@ pictures:
   - bbox:
       b: 212.994140625
       coord_origin: BOTTOMLEFT
-      l: 139.14019775390625
-      r: 221.0139617919922
-      t: 294.2773132324219
+      l: 139.14016723632812
+      r: 221.01397705078125
+      t: 294.27732849121094
     charspan:
     - 0
     - 0
@@ -476,10 +444,7 @@ pictures:
   self_ref: '#/pictures/13'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/67'
-  - $ref: '#/texts/68'
-  - $ref: '#/texts/69'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -487,11 +452,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 386.08912658691406
+      b: 386.089111328125
       coord_origin: BOTTOMLEFT
       l: 257.6730041503906
       r: 339.54150390625
-      t: 466.6853790283203
+      t: 466.6853942871094
     charspan:
     - 0
     - 0
@@ -500,10 +465,7 @@ pictures:
   self_ref: '#/pictures/14'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/70'
-  - $ref: '#/texts/71'
-  - $ref: '#/texts/72'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -524,10 +486,7 @@ pictures:
   self_ref: '#/pictures/15'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/73'
-  - $ref: '#/texts/74'
-  - $ref: '#/texts/75'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -548,9 +507,7 @@ pictures:
   self_ref: '#/pictures/16'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/76'
-  - $ref: '#/texts/77'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -558,11 +515,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 385.88275146484375
+      b: 385.88279724121094
       coord_origin: BOTTOMLEFT
       l: 377.4775390625
       r: 458.17718505859375
-      t: 466.61795806884766
+      t: 466.6179885864258
     charspan:
     - 0
     - 0
@@ -571,8 +528,7 @@ pictures:
   self_ref: '#/pictures/17'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/78'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -580,11 +536,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 299.9799041748047
+      b: 299.9798889160156
       coord_origin: BOTTOMLEFT
       l: 376.5289306640625
       r: 457.9205322265625
-      t: 380.8583221435547
+      t: 380.85833740234375
     charspan:
     - 0
     - 0
@@ -593,9 +549,7 @@ pictures:
   self_ref: '#/pictures/18'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/79'
-  - $ref: '#/texts/80'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -603,11 +557,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 213.14569091796875
+      b: 213.14572143554688
       coord_origin: BOTTOMLEFT
       l: 376.9906921386719
       r: 458.14105224609375
-      t: 294.23167419433594
+      t: 294.23170471191406
     charspan:
     - 0
     - 0
@@ -616,10 +570,7 @@ pictures:
   self_ref: '#/pictures/19'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/81'
-  - $ref: '#/texts/82'
-  - $ref: '#/texts/83'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -627,11 +578,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 386.1150665283203
+      b: 386.1150817871094
       coord_origin: BOTTOMLEFT
-      l: 495.8927307128906
-      r: 577.198486328125
-      t: 466.8392105102539
+      l: 495.8926696777344
+      r: 577.1985473632812
+      t: 466.8392639160156
     charspan:
     - 0
     - 0
@@ -640,9 +591,7 @@ pictures:
   self_ref: '#/pictures/20'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/84'
-  - $ref: '#/texts/85'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -650,11 +599,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 299.6983184814453
+      b: 299.69830322265625
       coord_origin: BOTTOMLEFT
-      l: 495.9344482421875
+      l: 495.93450927734375
       r: 576.8648681640625
-      t: 380.9095764160156
+      t: 380.9095916748047
     charspan:
     - 0
     - 0
@@ -663,8 +612,7 @@ pictures:
   self_ref: '#/pictures/21'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/86'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -676,7 +624,7 @@ pictures:
       coord_origin: BOTTOMLEFT
       l: 495.7993469238281
       r: 577.021240234375
-      t: 294.9428405761719
+      t: 294.94285583496094
     charspan:
     - 0
     - 0
@@ -685,10 +633,7 @@ pictures:
   self_ref: '#/pictures/22'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/87'
-  - $ref: '#/texts/88'
-  - $ref: '#/texts/89'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -700,7 +645,7 @@ pictures:
       coord_origin: BOTTOMLEFT
       l: 614.41162109375
       r: 696.21484375
-      t: 466.70157623291016
+      t: 466.7015838623047
     charspan:
     - 0
     - 0
@@ -709,11 +654,7 @@ pictures:
   self_ref: '#/pictures/23'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/90'
-  - $ref: '#/texts/91'
-  - $ref: '#/texts/92'
-  - $ref: '#/texts/93'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -721,11 +662,11 @@ pictures:
     $ref: '#/body'
   prov:
   - bbox:
-      b: 291.447265625
+      b: 291.44696044921875
       coord_origin: BOTTOMLEFT
-      l: 607.3494262695312
-      r: 703.010498046875
-      t: 383.45472717285156
+      l: 607.3532104492188
+      r: 703.0062255859375
+      t: 383.45228576660156
     charspan:
     - 0
     - 0
@@ -734,10 +675,7 @@ pictures:
   self_ref: '#/pictures/24'
 - annotations: []
   captions: []
-  children:
-  - $ref: '#/texts/94'
-  - $ref: '#/texts/95'
-  - $ref: '#/texts/96'
+  children: []
   content_layer: body
   footnotes: []
   label: picture
@@ -901,63 +839,6 @@ texts:
     \u3060\u7406\u7531"
 - children: []
   content_layer: body
-  label: text
-  orig: SDGs
-  parent:
-    $ref: '#/pictures/1'
-  prov:
-  - bbox:
-      b: 511.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 666.7520345052084
-      r: 707.90625
-      t: 527.6041666666666
-    charspan:
-    - 0
-    - 4
-    page_no: 2
-  self_ref: '#/texts/6'
-  text: SDGs
-- children: []
-  content_layer: body
-  label: text
-  orig: QUEST
-  parent:
-    $ref: '#/pictures/1'
-  prov:
-  - bbox:
-      b: 500.6875
-      coord_origin: BOTTOMLEFT
-      l: 667.4677734375
-      r: 707.5484212239584
-      t: 512.375
-    charspan:
-    - 0
-    - 5
-    page_no: 2
-  self_ref: '#/texts/7'
-  text: QUEST
-- children: []
-  content_layer: body
-  label: text
-  orig: "5\u7532\u5B50"
-  parent:
-    $ref: '#/pictures/1'
-  prov:
-  - bbox:
-      b: 493.6041666666667
-      coord_origin: BOTTOMLEFT
-      l: 672.1199544270834
-      r: 701.8225911458334
-      t: 499.9791666666667
-    charspan:
-    - 0
-    - 3
-    page_no: 2
-  self_ref: '#/texts/8'
-  text: "5\u7532\u5B50"
-- children: []
-  content_layer: body
   label: section_header
   level: 1
   orig: "\uFF1C\u63A2\u7A76\u30C6\u30FC\u30DE\uFF1E"
@@ -974,7 +855,7 @@ texts:
     - 0
     - 7
     page_no: 2
-  self_ref: '#/texts/9'
+  self_ref: '#/texts/6'
   text: "\uFF1C\u63A2\u7A76\u30C6\u30FC\u30DE\uFF1E"
 - children: []
   content_layer: body
@@ -994,141 +875,8 @@ texts:
     - 0
     - 7
     page_no: 2
-  self_ref: '#/texts/10'
+  self_ref: '#/texts/7'
   text: "\u3010\u5BFE\u8C61\u30B4\u30FC\u30EB\u3011"
-- children: []
-  content_layer: body
-  label: text
-  orig: '3'
-  parent:
-    $ref: '#/pictures/2'
-  prov:
-  - bbox:
-      b: 292.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 649.6666666666666
-      r: 654.3333333333334
-      t: 300.66666666666663
-    charspan:
-    - 0
-    - 1
-    page_no: 2
-  self_ref: '#/texts/11'
-  text: '3'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5E73\u7B49"
-  parent:
-    $ref: '#/pictures/2'
-  prov:
-  - bbox:
-      b: 289.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 581.6666666666666
-      r: 633.0
-      t: 297.0
-    charspan:
-    - 0
-    - 2
-    page_no: 2
-  self_ref: '#/texts/12'
-  text: "\u5E73\u7B49"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5065\u5EB7\u4E0A\u798F\u793E"
-  parent:
-    $ref: '#/pictures/2'
-  prov:
-  - bbox:
-      b: 291.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 657.0
-      r: 677.3333333333334
-      t: 296.66666666666663
-    charspan:
-    - 0
-    - 5
-    page_no: 2
-  self_ref: '#/texts/13'
-  text: "\u5065\u5EB7\u4E0A\u798F\u793E"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5B9E\u73FEL"
-  parent:
-    $ref: '#/pictures/2'
-  prov:
-  - bbox:
-      b: 279.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 581.3333333333334
-      r: 613.3333333333334
-      t: 287.33333333333337
-    charspan:
-    - 0
-    - 3
-    page_no: 2
-  self_ref: '#/texts/14'
-  text: "\u5B9E\u73FEL"
-- children: []
-  content_layer: body
-  label: text
-  orig: W
-  parent:
-    $ref: '#/pictures/2'
-  prov:
-  - bbox:
-      b: 274.3333333333333
-      coord_origin: BOTTOMLEFT
-      l: 658.0
-      r: 667.6666666666666
-      t: 282.3333333333333
-    charspan:
-    - 0
-    - 1
-    page_no: 2
-  self_ref: '#/texts/15'
-  text: W
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u8D3A\u306E\u9AD8\u6559\u80B2"
-  parent:
-    $ref: '#/pictures/2'
-  prov:
-  - bbox:
-      b: 253.66666666666669
-      coord_origin: BOTTOMLEFT
-      l: 657.0
-      r: 679.0
-      t: 258.3333333333333
-    charspan:
-    - 0
-    - 5
-    page_no: 2
-  self_ref: '#/texts/16'
-  text: "\u8D3A\u306E\u9AD8\u6559\u80B2"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5B59\u4EBA"
-  parent:
-    $ref: '#/pictures/2'
-  prov:
-  - bbox:
-      b: 249.0
-      coord_origin: BOTTOMLEFT
-      l: 657.0
-      r: 670.0
-      t: 253.66666666666669
-    charspan:
-    - 0
-    - 2
-    page_no: 2
-  self_ref: '#/texts/17'
-  text: "\u5B59\u4EBA"
 - children: []
   content_layer: body
   label: text
@@ -1146,7 +894,7 @@ texts:
     - 0
     - 13
     page_no: 2
-  self_ref: '#/texts/18'
+  self_ref: '#/texts/8'
   text: "\uFF1C\u305D\u306E\u30C6\u30FC\u30DE\u3092\u9078\u3093\u3060\u7406\u7531\uFF1E"
 - children: []
   content_layer: body
@@ -1177,7 +925,7 @@ texts:
     - 0
     - 170
     page_no: 2
-  self_ref: '#/texts/19'
+  self_ref: '#/texts/9'
   text: "\uFF0A\u89E3\u6C7A\u3057\u305F\u3044\u793E\u4F1A\u8AB2\u984C\u306B\u76F8\u5F53\
     \u3059\u308B\u63A2\u7A76\u30C6\u30FC\u30DE\u3068\u3001\u305D\u306E\u63A2\u7A76\
     \u30C6\u30FC\u30DE\u3092\u9078\u3093\u3060\u7406\u7531\u3092\u7C21\u6F54\u306B\
@@ -1210,66 +958,9 @@ texts:
     - 0
     - 24
     page_no: 3
-  self_ref: '#/texts/20'
+  self_ref: '#/texts/10'
   text: "\uFF12\uFF0E\u300C SDGs \u30A2\u30AF\u30B7\u30E7\u30F3\u300D\u30A2\u30A4\u30C7\
     \u30A2\u3068\u300C\u76EE\u6A19\u300D"
-- children: []
-  content_layer: body
-  label: text
-  orig: SDGs
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 511.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 666.7520345052084
-      r: 707.90625
-      t: 527.9583333333334
-    charspan:
-    - 0
-    - 4
-    page_no: 3
-  self_ref: '#/texts/21'
-  text: SDGs
-- children: []
-  content_layer: body
-  label: text
-  orig: QUEST
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 500.6875
-      coord_origin: BOTTOMLEFT
-      l: 667.4677734375
-      r: 707.90625
-      t: 512.375
-    charspan:
-    - 0
-    - 5
-    page_no: 3
-  self_ref: '#/texts/22'
-  text: QUEST
-- children: []
-  content_layer: body
-  label: text
-  orig: "5\u7532\u5B50"
-  parent:
-    $ref: '#/pictures/3'
-  prov:
-  - bbox:
-      b: 493.6041666666667
-      coord_origin: BOTTOMLEFT
-      l: 672.1199544270834
-      r: 701.8225911458334
-      t: 499.9791666666667
-    charspan:
-    - 0
-    - 3
-    page_no: 3
-  self_ref: '#/texts/23'
-  text: "5\u7532\u5B50"
 - children: []
   content_layer: body
   label: text
@@ -1298,7 +989,7 @@ texts:
     - 0
     - 165
     page_no: 3
-  self_ref: '#/texts/24'
+  self_ref: '#/texts/11'
   text: "\uFF0A\u300C\uFF11\uFF0E\u63A2\u7A76\u30C6\u30FC\u30DE\u300D\u306B\u304A\u3051\
     \u308B\u5177\u4F53\u7684\u306A\u300C SDGs \u30A2\u30AF\u30B7\u30E7\u30F3\u300D\
     \u306E\u30A2\u30A4\u30C7\u30A2\u3092\u8A18\u8F09\u3057\u3066\u304F\u3060\u3055\
@@ -1330,66 +1021,9 @@ texts:
     - 0
     - 21
     page_no: 4
-  self_ref: '#/texts/25'
+  self_ref: '#/texts/12'
   text: "\uFF13\uFF0E\u300C SDGs \u30A2\u30AF\u30B7\u30E7\u30F3\u300D\u3092\u5E83\u3081\
     \u308B\u65B9\u6CD5"
-- children: []
-  content_layer: body
-  label: text
-  orig: SDGs
-  parent:
-    $ref: '#/pictures/4'
-  prov:
-  - bbox:
-      b: 511.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 666.7520345052084
-      r: 707.90625
-      t: 527.9583333333334
-    charspan:
-    - 0
-    - 4
-    page_no: 4
-  self_ref: '#/texts/26'
-  text: SDGs
-- children: []
-  content_layer: body
-  label: text
-  orig: QUEST
-  parent:
-    $ref: '#/pictures/4'
-  prov:
-  - bbox:
-      b: 500.6875
-      coord_origin: BOTTOMLEFT
-      l: 667.4677734375
-      r: 707.90625
-      t: 512.375
-    charspan:
-    - 0
-    - 5
-    page_no: 4
-  self_ref: '#/texts/27'
-  text: QUEST
-- children: []
-  content_layer: body
-  label: text
-  orig: "5\u7532\u5B50"
-  parent:
-    $ref: '#/pictures/4'
-  prov:
-  - bbox:
-      b: 493.6041666666667
-      coord_origin: BOTTOMLEFT
-      l: 672.1199544270834
-      r: 701.8225911458334
-      t: 499.9791666666667
-    charspan:
-    - 0
-    - 3
-    page_no: 4
-  self_ref: '#/texts/28'
-  text: "5\u7532\u5B50"
 - children: []
   content_layer: body
   label: text
@@ -1416,7 +1050,7 @@ texts:
     - 0
     - 135
     page_no: 4
-  self_ref: '#/texts/29'
+  self_ref: '#/texts/13'
   text: "\uFF0A\u300C\uFF12\uFF0E SDGs \u30A2\u30AF\u30B7\u30E7\u30F3\uFF08\u884C\u52D5\
     \u3084\u30D1\u30FC\u30C8\u30CA\u30FC\u30B7\u30C3\u30D7\uFF09\u300D\u306F\u3001\
     \u3069\u3046\u3057\u305F\u3089\u3082\u3063\u3068\u5927\u52E2\u306E\u4EBA\u304C\
@@ -1446,66 +1080,9 @@ texts:
     - 0
     - 27
     page_no: 5
-  self_ref: '#/texts/30'
+  self_ref: '#/texts/14'
   text: "\uFF14\uFF0E\u300C SDGs \u30A2\u30AF\u30B7\u30E7\u30F3\u300D\u304C\u5E83\u304C\
     \u308B\u3068\u3069\u3046\u5909\u308F\u308B\u306E\u304B"
-- children: []
-  content_layer: body
-  label: text
-  orig: SDGs
-  parent:
-    $ref: '#/pictures/5'
-  prov:
-  - bbox:
-      b: 511.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 666.7520345052084
-      r: 707.90625
-      t: 527.9583333333334
-    charspan:
-    - 0
-    - 4
-    page_no: 5
-  self_ref: '#/texts/31'
-  text: SDGs
-- children: []
-  content_layer: body
-  label: text
-  orig: QUEST
-  parent:
-    $ref: '#/pictures/5'
-  prov:
-  - bbox:
-      b: 500.6875
-      coord_origin: BOTTOMLEFT
-      l: 667.4677734375
-      r: 707.90625
-      t: 512.375
-    charspan:
-    - 0
-    - 5
-    page_no: 5
-  self_ref: '#/texts/32'
-  text: QUEST
-- children: []
-  content_layer: body
-  label: text
-  orig: "5\u7532\u5B50"
-  parent:
-    $ref: '#/pictures/5'
-  prov:
-  - bbox:
-      b: 493.6041666666667
-      coord_origin: BOTTOMLEFT
-      l: 672.1199544270834
-      r: 701.8225911458334
-      t: 499.9791666666667
-    charspan:
-    - 0
-    - 3
-    page_no: 5
-  self_ref: '#/texts/33'
-  text: "5\u7532\u5B50"
 - children: []
   content_layer: body
   label: text
@@ -1532,7 +1109,7 @@ texts:
     - 0
     - 128
     page_no: 5
-  self_ref: '#/texts/34'
+  self_ref: '#/texts/15'
   text: "\uFF0A\u300C\uFF13\uFF0E SDGs \u30A2\u30AF\u30B7\u30E7\u30F3\u3092\u5E83\u3081\
     \u308B\u65B9\u6CD5\u300D\u3067\u3001\u305D\u306E\u30A2\u30AF\u30B7\u30E7\u30F3\
     \u304C\u591A\u304F\u306E\u3072\u3068\u306B\u5E83\u304C\u308B\u3068\u4E16\u754C\
@@ -1563,7 +1140,7 @@ texts:
     - 0
     - 27
     page_no: 6
-  self_ref: '#/texts/35'
+  self_ref: '#/texts/16'
   text: "\uFF1C\u63D0\u51FA\u65B9\u6CD5\uFF1E\u3000\u203B\u63D0\u51FA\u6642\u306B\u306F\
     \u3053\u306E\u30DA\u30FC\u30B8\u306F\u524A\u9664\u3057\u3066\u304F\u3060\u3055\
     \u3044"
@@ -1587,7 +1164,7 @@ texts:
     - 0
     - 58
     page_no: 6
-  self_ref: '#/texts/36'
+  self_ref: '#/texts/17'
   text: "\u3010\u63D0\u51FA\u3057\u3066\u3044\u305F\u3060\u304F\u30A2\u30A4\u30C7\u30A2\
     \u30D7\u30E9\u30F3\u8CC7\u6599\u3011 \u3053\u306E\u69D8\u5F0F\uFF08 1 \uFF5E 5\
     \ \u30DA\u30FC\u30B8\uFF09\u306B\u30D7\u30E9\u30F3\u3092\u6574\u7406\u3057\u3001\
@@ -1611,7 +1188,7 @@ texts:
     - 0
     - 35
     page_no: 6
-  self_ref: '#/texts/37'
+  self_ref: '#/texts/18'
   text: "PDF \u2606 \u3067\u4FDD\u5B58 ( \u30A8\u30AF\u30B9\u30DD\u30FC\u30C8 ) \u3057\
     \u305F\u3082\u306E\u3092\u63D0\u51FA\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
 - children: []
@@ -1635,7 +1212,7 @@ texts:
     - 0
     - 38
     page_no: 6
-  self_ref: '#/texts/38'
+  self_ref: '#/texts/19'
   text: "\u30FB\u63D0\u51FA\u30D5\u30A1\u30A4\u30EB\u304C\u6B63\u3057\u304F\u78BA\u8A8D\
     \u3067\u304D\u306A\u3044\u5834\u5408\u3001\u4FEE\u6B63\u30FB\u518D\u63D0\u51FA\
     \u3092\u6C42\u3081\u308B\u5834\u5408\u304C\u3042\u308A\u307E\u3059\u3002"
@@ -1660,7 +1237,7 @@ texts:
     - 0
     - 37
     page_no: 6
-  self_ref: '#/texts/39'
+  self_ref: '#/texts/20'
   text: "\u30FB\u52D5\u4F5C\u74B0\u5883\u306B\u3088\u308B\u4F53\u88C1\u5D29\u308C\u7B49\
     \u3092\u9632\u3050\u305F\u3081\u306B\u3001 PDF \u3067\u306E\u63D0\u51FA\u3092\u304A\
     \u9858\u3044\u3057\u307E\u3059\u3002"
@@ -1688,7 +1265,7 @@ texts:
     - 0
     - 69
     page_no: 6
-  self_ref: '#/texts/40'
+  self_ref: '#/texts/21'
   text: "\u30FB\u3006\u5207\u65E5\u3092\u8D85\u3048\u3066\u518D\u63D0\u51FA\u304C\u306A\
     \u304B\u3063\u305F\u5834\u5408\u3001\u30A8\u30F3\u30C8\u30EA\u30FC\u304C\u53D7\
     \u4ED8\u3051\u3089\u308C\u306A\u3044\u5834\u5408\u304C\u3042\u308A\u307E\u3059\
@@ -1716,7 +1293,7 @@ texts:
     - 0
     - 37
     page_no: 6
-  self_ref: '#/texts/41'
+  self_ref: '#/texts/22'
   text: "\u30FB 5 \u5206\u9593\u3067\u30D7\u30EC\u30BC\u30F3\u30C6\u30FC\u30B7\u30E7\
     \u30F3\u304C\u5B8C\u7D50\u3059\u308B\u3088\u3046\u306B\u30DD\u30A4\u30F3\u30C8\
     \u3092\u7D5E\u3063\u3066\u304F\u3060\u3055\u3044\u3002"
@@ -1740,7 +1317,7 @@ texts:
     - 0
     - 19
     page_no: 6
-  self_ref: '#/texts/42'
+  self_ref: '#/texts/23'
   text: "\u30FB\u6587\u5B57\u3084\u5199\u771F\u3001\u56F3\u8868\u306A\u3069\u8868\u73FE\
     \u65B9\u6CD5\u306F\u81EA\u7531\u3002"
 - children: []
@@ -1761,7 +1338,7 @@ texts:
     - 0
     - 4
     page_no: 6
-  self_ref: '#/texts/43'
+  self_ref: '#/texts/24'
   text: "\u3010\u91CD\u8981\u3011"
 - children: []
   content_layer: body
@@ -1783,7 +1360,7 @@ texts:
     - 0
     - 23
     page_no: 6
-  self_ref: '#/texts/44'
+  self_ref: '#/texts/25'
   text: "\u30FB\u679A\u6570\u306F\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\u306E\u5185\u5BB9\
     \u3092\u53B3\u5B88\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
 - children: []
@@ -1807,7 +1384,7 @@ texts:
     - 0
     - 47
     page_no: 6
-  self_ref: '#/texts/45'
+  self_ref: '#/texts/26'
   text: "\u30FB\u30D5\u30A1\u30A4\u30EB\u540D\u306F\u300C\u30A8\u30F3\u30C8\u30EA\u30FC\
     \u30CA\u30F3\u30D0\u30FC + \u9AD8\u6821\u540D + \u30C1\u30FC\u30E0\u540D .pdf\
     \ \u300D\u3067\u63D0\u51FA\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
@@ -1831,7 +1408,7 @@ texts:
     - 0
     - 26
     page_no: 6
-  self_ref: '#/texts/46'
+  self_ref: '#/texts/27'
   text: "\u30FB\u30B9\u30E9\u30A4\u30C9\u306E\u52A0\u9664\u306F\u5BE9\u67FB\u5BFE\u8C61\
     \u5916\u306B\u306A\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002"
 - children: []
@@ -1856,7 +1433,7 @@ texts:
     - 0
     - 40
     page_no: 6
-  self_ref: '#/texts/47'
+  self_ref: '#/texts/28'
   text: "\u203B\u9759\u6B62\u753B\u72B6\u614B\u3067\u5BE9\u67FB\u3057\u307E\u3059\u306E\
     \u3067\u3001\u30A2\u30CB\u30E1\u30FC\u30B7\u30E7\u30F3\u3084\u52D5\u753B\u57CB\
     \u8FBC\u306F\u5BE9\u67FB\u5BFE\u8C61\u306B\u306F\u306A\u308A\u307E\u305B\u3093\
@@ -1879,7 +1456,7 @@ texts:
     - 0
     - 30
     page_no: 6
-  self_ref: '#/texts/48'
+  self_ref: '#/texts/29'
   text: "<PowerPoint \u30C7\u30FC\u30BF\u3092 PDF \u306B\u5909\u63DB\u3059\u308B\u65B9\
     \u6CD5 >"
 - children: []
@@ -1903,7 +1480,7 @@ texts:
     - 0
     - 60
     page_no: 6
-  self_ref: '#/texts/49'
+  self_ref: '#/texts/30'
   text: "[PDF/XPS \u30C9 \u30AD\u30E5 \u30E1\u30F3\u30C8\u306E\u4F5C \u6210 ] \u3092\
     \u30AF\u30EA\u30C3\u30AF\u3057\u3001 [PDF/XPS \u306E\u4F5C \u6210 ] \u3092\u30AF\
     \u30EA\u30C3\u30AF\u3057\u307E\u3059\u3002"
@@ -1927,7 +1504,7 @@ texts:
     - 0
     - 34
     page_no: 6
-  self_ref: '#/texts/50'
+  self_ref: '#/texts/31'
   text: "[ \u30D5\u30A1\u30A4\u30EB ]>[ \u30A8\u30AF\u30B9\u30DD\u30FC\u30C8 ] \u306E\
     \u9806\u306B\u9078 \u629E \u3057\u307E\u3059\u3002"
 - children: []
@@ -1951,7 +1528,7 @@ texts:
     - 0
     - 60
     page_no: 6
-  self_ref: '#/texts/51'
+  self_ref: '#/texts/32'
   text: "[PDF \u307E\u305F\u306F XPS \u5F62\u5F0F \u3067 \u767A \u884C ] \u30C0 \u30A4\
     \u30A2 \u30ED\u30B0\u30DC \u30C3\u30AF\u30B9\u3067\u3001\u30D5\u30A1\u30A4\u30EB\
     \u306E \u4FDD\u5B58 \u5834 \u6240 \u3092\u9078\u3073\u307E\u3059\u3002"
@@ -1976,7 +1553,7 @@ texts:
     - 0
     - 51
     page_no: 6
-  self_ref: '#/texts/52'
+  self_ref: '#/texts/33'
   text: "4.[ \u30D5\u30A1\u30A4\u30EB\u540D ] \u30DC \u30C3\u30AF\u30B9\u306B \u30A8\
     \u30F3\u30C8\u30EA\u30FC\u30CA\u30F3\u30D0\u30FC + \u9AD8\u6821\u540D + \u30C1\
     \u30FC\u30E0\u540D \u3092 \u5165\u529B \u3057\u307E\u3059\u3002"
@@ -1999,824 +1576,7 @@ texts:
     - 0
     - 25
     page_no: 7
-  self_ref: '#/texts/53'
+  self_ref: '#/texts/34'
   text: "\uFF1C\u7D20\u6750\uFF1E\u3000\u203B\u63D0\u51FA\u6642\u306B\u306F\u3053\u306E\
     \u30DA\u30FC\u30B8\u306F\u524A\u9664\u3057\u3066\u304F\u3060\u3055\u3044"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u56F0"
-  parent:
-    $ref: '#/pictures/7'
-  prov:
-  - bbox:
-      b: 452.0
-      coord_origin: BOTTOMLEFT
-      l: 43.333333333333336
-      r: 63.666666666666664
-      t: 460.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/54'
-  text: "\u56F0"
-- children: []
-  content_layer: body
-  label: text
-  orig: '1'
-  parent:
-    $ref: '#/pictures/7'
-  prov:
-  - bbox:
-      b: 444.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 31.333333333333332
-      r: 36.33333333333333
-      t: 456.3333333333333
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/55'
-  text: '1'
-- children: []
-  content_layer: body
-  label: text
-  orig: 7G
-  parent:
-    $ref: '#/pictures/9'
-  prov:
-  - bbox:
-      b: 442.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 147.33333333333334
-      r: 156.66666666666666
-      t: 460.0
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/56'
-  text: 7G
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u9965"
-  parent:
-    $ref: '#/pictures/9'
-  prov:
-  - bbox:
-      b: 451.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 162.33333333333334
-      r: 182.66666666666666
-      t: 460.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/57'
-  text: "\u9965"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u53E3"
-  parent:
-    $ref: '#/pictures/9'
-  prov:
-  - bbox:
-      b: 442.0
-      coord_origin: BOTTOMLEFT
-      l: 162.33333333333334
-      r: 183.0
-      t: 450.6666666666667
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/58'
-  text: "\u53E3"
-- children: []
-  content_layer: body
-  label: text
-  orig: SSS
-  parent:
-    $ref: '#/pictures/9'
-  prov:
-  - bbox:
-      b: 414.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 168.33333333333334
-      r: 192.0
-      t: 433.66666666666663
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/59'
-  text: SSS
-- children: []
-  content_layer: body
-  label: text
-  orig: '8'
-  parent:
-    $ref: '#/pictures/10'
-  prov:
-  - bbox:
-      b: 356.0
-      coord_origin: BOTTOMLEFT
-      l: 147.0
-      r: 157.0
-      t: 374.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/60'
-  text: '8'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u52D5"
-  parent:
-    $ref: '#/pictures/10'
-  prov:
-  - bbox:
-      b: 366.0
-      coord_origin: BOTTOMLEFT
-      l: 162.66666666666666
-      r: 195.33333333333331
-      t: 373.6666666666667
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/61'
-  text: "\u52D5"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u7ECF\u6D4E\u6210\u9577\u5FC5"
-  parent:
-    $ref: '#/pictures/10'
-  prov:
-  - bbox:
-      b: 356.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 162.66666666666666
-      r: 195.0
-      t: 364.3333333333333
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/62'
-  text: "\u7ECF\u6D4E\u6210\u9577\u5FC5"
-- children: []
-  content_layer: body
-  label: text
-  orig: '13'
-  parent:
-    $ref: '#/pictures/11'
-  prov:
-  - bbox:
-      b: 269.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 27.333333333333332
-      r: 43.333333333333336
-      t: 288.33333333333337
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/63'
-  text: '13'
-- children: []
-  content_layer: body
-  label: text
-  orig: '14'
-  parent:
-    $ref: '#/pictures/12'
-  prov:
-  - bbox:
-      b: 268.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 145.66666666666666
-      r: 162.33333333333334
-      t: 287.66666666666663
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/64'
-  text: '14'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u6D77\u306E"
-  parent:
-    $ref: '#/pictures/12'
-  prov:
-  - bbox:
-      b: 278.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 166.0
-      r: 203.33333333333331
-      t: 287.0
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/65'
-  text: "\u6D77\u306E"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5B88"
-  parent:
-    $ref: '#/pictures/12'
-  prov:
-  - bbox:
-      b: 269.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 166.0
-      r: 184.33333333333334
-      t: 278.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/66'
-  text: "\u5B88"
-- children: []
-  content_layer: body
-  label: text
-  orig: '3'
-  parent:
-    $ref: '#/pictures/14'
-  prov:
-  - bbox:
-      b: 442.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 265.6666666666667
-      r: 275.3333333333333
-      t: 460.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/67'
-  text: '3'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5065\u5EB7\u4E0A\u798F\u793E"
-  parent:
-    $ref: '#/pictures/14'
-  prov:
-  - bbox:
-      b: 442.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 281.6666666666667
-      r: 321.3333333333333
-      t: 450.3333333333333
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/68'
-  text: "\u5065\u5EB7\u4E0A\u798F\u793E"
-- children: []
-  content_layer: body
-  label: text
-  orig: LW
-  parent:
-    $ref: '#/pictures/14'
-  prov:
-  - bbox:
-      b: 398.0
-      coord_origin: BOTTOMLEFT
-      l: 274.0
-      r: 305.0
-      t: 429.0
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/69'
-  text: LW
-- children: []
-  content_layer: body
-  label: text
-  orig: '9'
-  parent:
-    $ref: '#/pictures/15'
-  prov:
-  - bbox:
-      b: 356.0
-      coord_origin: BOTTOMLEFT
-      l: 265.6666666666667
-      r: 276.0
-      t: 374.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/70'
-  text: '9'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u7523\u696D\u6280\u8853\u9769\u65B0\u306E"
-  parent:
-    $ref: '#/pictures/15'
-  prov:
-  - bbox:
-      b: 366.0
-      coord_origin: BOTTOMLEFT
-      l: 281.6666666666667
-      r: 332.6666666666667
-      t: 373.0
-    charspan:
-    - 0
-    - 7
-    page_no: 7
-  self_ref: '#/texts/71'
-  text: "\u7523\u696D\u6280\u8853\u9769\u65B0\u306E"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u57FA\u76E4"
-  parent:
-    $ref: '#/pictures/15'
-  prov:
-  - bbox:
-      b: 356.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 281.6666666666667
-      r: 323.6666666666667
-      t: 364.0
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/72'
-  text: "\u57FA\u76E4"
-- children: []
-  content_layer: body
-  label: text
-  orig: '15'
-  parent:
-    $ref: '#/pictures/16'
-  prov:
-  - bbox:
-      b: 268.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 264.6666666666667
-      r: 281.0
-      t: 287.66666666666663
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/73'
-  text: '15'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u306E"
-  parent:
-    $ref: '#/pictures/16'
-  prov:
-  - bbox:
-      b: 279.0
-      coord_origin: BOTTOMLEFT
-      l: 285.0
-      r: 322.0
-      t: 286.66666666666663
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/74'
-  text: "\u306E"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5B88\u4E07"
-  parent:
-    $ref: '#/pictures/16'
-  prov:
-  - bbox:
-      b: 269.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 285.0
-      r: 302.6666666666667
-      t: 278.0
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/75'
-  text: "\u5B88\u4E07"
-- children: []
-  content_layer: body
-  label: text
-  orig: '4'
-  parent:
-    $ref: '#/pictures/17'
-  prov:
-  - bbox:
-      b: 442.0
-      coord_origin: BOTTOMLEFT
-      l: 387.0
-      r: 394.6666666666667
-      t: 460.3333333333333
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/76'
-  text: '4'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u8CEA\u306E\u9AD8\u6559\u80B2"
-  parent:
-    $ref: '#/pictures/17'
-  prov:
-  - bbox:
-      b: 452.0
-      coord_origin: BOTTOMLEFT
-      l: 400.3333333333333
-      r: 445.0
-      t: 459.6666666666667
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/77'
-  text: "\u8CEA\u306E\u9AD8\u6559\u80B2"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u4EBA\u4E2D\u56FD\u306E\u4E0D\u5E73\u7B49"
-  parent:
-    $ref: '#/pictures/18'
-  prov:
-  - bbox:
-      b: 366.0
-      coord_origin: BOTTOMLEFT
-      l: 404.0
-      r: 450.6666666666667
-      t: 373.0
-    charspan:
-    - 0
-    - 7
-    page_no: 7
-  self_ref: '#/texts/78'
-  text: "\u4EBA\u4E2D\u56FD\u306E\u4E0D\u5E73\u7B49"
-- children: []
-  content_layer: body
-  label: text
-  orig: '16'
-  parent:
-    $ref: '#/pictures/19'
-  prov:
-  - bbox:
-      b: 268.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 382.6666666666667
-      r: 400.6666666666667
-      t: 287.66666666666663
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/79'
-  text: '16'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u306E"
-  parent:
-    $ref: '#/pictures/19'
-  prov:
-  - bbox:
-      b: 269.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 404.0
-      r: 441.3333333333333
-      t: 277.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/80'
-  text: "\u306E"
-- children: []
-  content_layer: body
-  label: text
-  orig: '5'
-  parent:
-    $ref: '#/pictures/20'
-  prov:
-  - bbox:
-      b: 442.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 503.6666666666667
-      r: 513.0
-      t: 460.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/81'
-  text: '5'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5E73\u7B49"
-  parent:
-    $ref: '#/pictures/20'
-  prov:
-  - bbox:
-      b: 452.0
-      coord_origin: BOTTOMLEFT
-      l: 519.3333333333334
-      r: 569.0
-      t: 459.3333333333333
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/82'
-  text: "\u5E73\u7B49"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5B9E\u73FEL"
-  parent:
-    $ref: '#/pictures/20'
-  prov:
-  - bbox:
-      b: 442.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 519.3333333333334
-      r: 550.0
-      t: 450.0
-    charspan:
-    - 0
-    - 3
-    page_no: 7
-  self_ref: '#/texts/83'
-  text: "\u5B9E\u73FEL"
-- children: []
-  content_layer: body
-  label: text
-  orig: '11'
-  parent:
-    $ref: '#/pictures/21'
-  prov:
-  - bbox:
-      b: 356.0
-      coord_origin: BOTTOMLEFT
-      l: 503.0
-      r: 518.0
-      t: 374.0
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/84'
-  text: '11'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u4F4F"
-  parent:
-    $ref: '#/pictures/21'
-  prov:
-  - bbox:
-      b: 366.3333333333333
-      coord_origin: BOTTOMLEFT
-      l: 523.0
-      r: 566.3333333333334
-      t: 373.0
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/85'
-  text: "\u4F4F"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u76EE\u6A19\u9054\u6210"
-  parent:
-    $ref: '#/pictures/22'
-  prov:
-  - bbox:
-      b: 271.0
-      coord_origin: BOTTOMLEFT
-      l: 523.3333333333334
-      r: 568.3333333333334
-      t: 278.0
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/86'
-  text: "\u76EE\u6A19\u9054\u6210"
-- children: []
-  content_layer: body
-  label: text
-  orig: '6'
-  parent:
-    $ref: '#/pictures/23'
-  prov:
-  - bbox:
-      b: 442.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 623.0
-      r: 632.0
-      t: 459.6666666666667
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/87'
-  text: '6'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u5B89\u5168"
-  parent:
-    $ref: '#/pictures/23'
-  prov:
-  - bbox:
-      b: 452.0
-      coord_origin: BOTTOMLEFT
-      l: 638.6666666666666
-      r: 688.0
-      t: 459.3333333333333
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/88'
-  text: "\u5B89\u5168"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u4E16\u754C\u4E2D\u8BB0"
-  parent:
-    $ref: '#/pictures/23'
-  prov:
-  - bbox:
-      b: 442.66666666666663
-      coord_origin: BOTTOMLEFT
-      l: 639.0
-      r: 672.0
-      t: 449.6666666666667
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/89'
-  text: "\u4E16\u754C\u4E2D\u8BB0"
-- children: []
-  content_layer: body
-  label: text
-  orig: '12'
-  parent:
-    $ref: '#/pictures/24'
-  prov:
-  - bbox:
-      b: 355.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 620.6666666666666
-      r: 636.3333333333334
-      t: 374.3333333333333
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/90'
-  text: '12'
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u4EFB"
-  parent:
-    $ref: '#/pictures/24'
-  prov:
-  - bbox:
-      b: 365.6666666666667
-      coord_origin: BOTTOMLEFT
-      l: 640.6666666666666
-      r: 673.0
-      t: 373.3333333333333
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/91'
-  text: "\u4EFB"
-- children: []
-  content_layer: body
-  label: text
-  orig: "\u4EFB"
-  parent:
-    $ref: '#/pictures/24'
-  prov:
-  - bbox:
-      b: 356.3333333333333
-      coord_origin: BOTTOMLEFT
-      l: 640.6666666666666
-      r: 672.6666666666666
-      t: 364.3333333333333
-    charspan:
-    - 0
-    - 1
-    page_no: 7
-  self_ref: '#/texts/92'
-  text: "\u4EFB"
-- children: []
-  content_layer: body
-  label: text
-  orig: QO
-  parent:
-    $ref: '#/pictures/24'
-  prov:
-  - bbox:
-      b: 313.0
-      coord_origin: BOTTOMLEFT
-      l: 625.3333333333334
-      r: 683.3333333333334
-      t: 345.33333333333337
-    charspan:
-    - 0
-    - 2
-    page_no: 7
-  self_ref: '#/texts/93'
-  text: QO
-- children: []
-  content_layer: body
-  label: text
-  orig: SDGs
-  parent:
-    $ref: '#/pictures/25'
-  prov:
-  - bbox:
-      b: 258.0
-      coord_origin: BOTTOMLEFT
-      l: 624.6666666666666
-      r: 686.3333333333334
-      t: 282.33333333333337
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/94'
-  text: SDGs
-- children: []
-  content_layer: body
-  label: text
-  orig: QUEST
-  parent:
-    $ref: '#/pictures/25'
-  prov:
-  - bbox:
-      b: 243.0
-      coord_origin: BOTTOMLEFT
-      l: 625.6666666666666
-      r: 684.6666666666666
-      t: 259.33333333333337
-    charspan:
-    - 0
-    - 5
-    page_no: 7
-  self_ref: '#/texts/95'
-  text: QUEST
-- children: []
-  content_layer: body
-  label: text
-  orig: "5\u7532\u5B50\u5712"
-  parent:
-    $ref: '#/pictures/25'
-  prov:
-  - bbox:
-      b: 233.33333333333337
-      coord_origin: BOTTOMLEFT
-      l: 633.6666666666666
-      r: 675.3333333333334
-      t: 240.66666666666663
-    charspan:
-    - 0
-    - 4
-    page_no: 7
-  self_ref: '#/texts/96'
-  text: "5\u7532\u5B50\u5712"
-version: 1.7.0
+version: 1.9.0

@@ -25,7 +25,8 @@
 <paragraph><loc_14><loc_50><loc_464><loc_407>人はストレス状況になると、それに反応して変化する。ストレス状況によって引き起こされる心と体の 反応を、ストレス反応という。</paragraph>
 <paragraph><loc_14><loc_50><loc_464><loc_407></paragraph>
 <paragraph><loc_14><loc_50><loc_464><loc_407></paragraph>
-<paragraph><loc_14><loc_50><loc_464><loc_407></paragraph>
+<unordered_list><list_item><loc_14><loc_50><loc_464><loc_407></list_item>
+</unordered_list>
 <paragraph><loc_30><loc_22><loc_202><loc_60>ストレスの無い状態</paragraph>
 <paragraph><loc_215><loc_19><loc_422><loc_57>ストレスが加わった状態</paragraph>
 <paragraph><loc_186><loc_84><loc_261><loc_153>ストレス状況</paragraph>
@@ -63,12 +64,14 @@
 <paragraph><loc_239><loc_339><loc_472><loc_418>意外なストレス状況</paragraph>
 <title><loc_25><loc_418><loc_475><loc_480>心理的ストレス状況</title>
 <unordered_list><list_item><loc_22><loc_74><loc_231><loc_404>喪失</list_item>
-<list_item><loc_22><loc_74><loc_231><loc_404>不自由</list_item>
-<list_item><loc_22><loc_74><loc_231><loc_404>不和</list_item>
 </unordered_list>
 <paragraph><loc_22><loc_74><loc_231><loc_404>大切な人との別れ・死別</paragraph>
+<unordered_list><list_item><loc_22><loc_74><loc_231><loc_404>不自由</list_item>
+</unordered_list>
 <paragraph><loc_22><loc_74><loc_231><loc_404>思い通りできない</paragraph>
 <paragraph><loc_22><loc_74><loc_231><loc_404>自分で決められない</paragraph>
+<unordered_list><list_item><loc_22><loc_74><loc_231><loc_404>不和</list_item>
+</unordered_list>
 <paragraph><loc_22><loc_74><loc_231><loc_404>人に責められる</paragraph>
 <paragraph><loc_22><loc_74><loc_231><loc_404>意見の対立</paragraph>
 <paragraph><loc_22><loc_74><loc_231><loc_404>周囲の人の無理解</paragraph>
@@ -162,13 +165,15 @@
 <page_break>
 <title><loc_25><loc_418><loc_475><loc_480>ストレスの良い面と悪い面</title>
 <paragraph><loc_18><loc_53><loc_468><loc_383>良い面は・・・</paragraph>
-<paragraph><loc_18><loc_53><loc_468><loc_383>適度なストレスは人を生き生きさせる。</paragraph>
-<paragraph><loc_18><loc_53><loc_468><loc_383>上手なストレス対処を増やし、不適切なストレス対処を減らすことでストレス耐性はあがり、成長できる。</paragraph>
+<unordered_list><list_item><loc_18><loc_53><loc_468><loc_383>適度なストレスは人を生き生きさせる。</list_item>
+<list_item><loc_18><loc_53><loc_468><loc_383>上手なストレス対処を増やし、不適切なストレス対処を減らすことでストレス耐性はあがり、成長できる。</list_item>
+</unordered_list>
 <paragraph><loc_18><loc_53><loc_468><loc_383></paragraph>
 <paragraph><loc_18><loc_53><loc_468><loc_383>悪い面は・・・</paragraph>
-<paragraph><loc_18><loc_53><loc_468><loc_383>長く続くと抑うつが出現する、身体的不調の原因となる。</paragraph>
-<paragraph><loc_18><loc_53><loc_468><loc_383>ストレス状況で不適切なストレス対処法をとってしまうと、大切なものを失ってしまう。</paragraph>
-<paragraph><loc_18><loc_53><loc_468><loc_383></paragraph>
+<unordered_list><list_item><loc_18><loc_53><loc_468><loc_383>長く続くと抑うつが出現する、身体的不調の原因となる。</list_item>
+<list_item><loc_18><loc_53><loc_468><loc_383>ストレス状況で不適切なストレス対処法をとってしまうと、大切なものを失ってしまう。</list_item>
+<list_item><loc_18><loc_53><loc_468><loc_383></list_item>
+</unordered_list>
 <paragraph><loc_358><loc_10><loc_475><loc_37>8</paragraph>
 <picture><loc_407><loc_308><loc_486><loc_413></picture>
 <picture><loc_368><loc_36><loc_447><loc_140></picture>
@@ -225,9 +230,10 @@
 <list_item><loc_49><loc_281><loc_297><loc_369>カラオケに行く</list_item>
 </unordered_list>
 <paragraph><loc_305><loc_221><loc_405><loc_260>気分転換</paragraph>
-<paragraph><loc_278><loc_119><loc_470><loc_224>映画を見に行く</paragraph>
-<paragraph><loc_278><loc_119><loc_470><loc_224>友達と話す</paragraph>
-<paragraph><loc_278><loc_119><loc_470><loc_224>おいしいものを食べる</paragraph>
+<unordered_list><list_item><loc_278><loc_119><loc_470><loc_224>映画を見に行く</list_item>
+<list_item><loc_278><loc_119><loc_470><loc_224>友達と話す</list_item>
+<list_item><loc_278><loc_119><loc_470><loc_224>おいしいものを食べる</list_item>
+</unordered_list>
 <paragraph><loc_153><loc_107><loc_340><loc_146>「今・ここ」に集中する</paragraph>
 <unordered_list><list_item><loc_153><loc_49><loc_344><loc_109>まわりの景色を見渡す</list_item>
 <list_item><loc_153><loc_49><loc_344><loc_109>まわりの音に聞き入る</list_item>
@@ -274,17 +280,18 @@
 突飛な対処法や、一見すると不適切に見える対処法（例えばギャンブルやリストカット）があっても、ここでは否定せず、「それをしてみてどうでしたか？」と尋ねておく。</text>
 <page_break>
 <title><loc_25><loc_418><loc_475><loc_480>過去に役立ったはげましの言葉</title>
-<paragraph><loc_25><loc_66><loc_427><loc_396>不安な時・悲しい時</paragraph>
-<unordered_list><list_item><loc_25><loc_66><loc_427><loc_396>例：「もっと大変だった時も乗り越えることができた」</list_item>
+<unordered_list><list_item><loc_25><loc_66><loc_427><loc_396>不安な時・悲しい時</list_item>
+<list_item><loc_25><loc_66><loc_427><loc_396>例：「もっと大変だった時も乗り越えることができた」</list_item>
 <list_item><loc_25><loc_66><loc_427><loc_396>「　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　」</list_item>
 <list_item><loc_25><loc_66><loc_427><loc_396>「　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　」</list_item>
-<list_item><loc_25><loc_66><loc_427><loc_396></list_item>
+</unordered_list>
+<paragraph><loc_25><loc_66><loc_427><loc_396></paragraph>
+<unordered_list><list_item><loc_25><loc_66><loc_427><loc_396>いらいらした時・腹が立った時</list_item>
 <list_item><loc_25><loc_66><loc_427><loc_396>「腹を立てて、好きでもない人のことばかり 考えるのは、ばかばかしい」</list_item>
 <list_item><loc_25><loc_66><loc_427><loc_396>「　　　　　　　　　　　　　　　　　　　　　　　　　　　　」</list_item>
 <list_item><loc_25><loc_66><loc_427><loc_396>「　　　　　　　　　　　　　　　　　　　　　　　　　　　　」</list_item>
-<list_item><loc_25><loc_66><loc_427><loc_396></list_item>
 </unordered_list>
-<paragraph><loc_25><loc_66><loc_427><loc_396>いらいらした時・腹が立った時</paragraph>
+<paragraph><loc_25><loc_66><loc_427><loc_396></paragraph>
 <paragraph><loc_358><loc_10><loc_475><loc_37>12</paragraph>
 <picture><loc_396><loc_31><loc_493><loc_203></picture>
 <paragraph><loc_18><loc_16><loc_413><loc_77>人にかけたり、人にかけてもらったり、自分に言い聞かせて有効だったはげましの言葉を教えてください。</paragraph>
@@ -302,16 +309,18 @@
 <page_break>
 <title><loc_25><loc_418><loc_475><loc_480>上手なストレス対処法</title>
 <paragraph><loc_25><loc_53><loc_475><loc_383>上手なストレス対処法</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383>自分や他人を傷つけない</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383>お金がかからない</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383>問題解決のさまたげにならない</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383></paragraph>
+<unordered_list><list_item><loc_25><loc_53><loc_475><loc_383>自分や他人を傷つけない</list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383>お金がかからない</list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383>問題解決のさまたげにならない</list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383></list_item>
+</unordered_list>
 <paragraph><loc_25><loc_53><loc_475><loc_383></paragraph>
 <paragraph><loc_25><loc_53><loc_475><loc_383>不適切なストレス対処法</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383>自分や他人を傷つけてしまう</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383>お金がかかりすぎる</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383>問題解決をさまたげてしまう</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383></paragraph>
+<unordered_list><list_item><loc_25><loc_53><loc_475><loc_383>自分や他人を傷つけてしまう</list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383>お金がかかりすぎる</list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383>問題解決をさまたげてしまう</list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383></list_item>
+</unordered_list>
 <picture><loc_310><loc_242><loc_415><loc_402></picture>
 <picture><loc_308><loc_55><loc_415><loc_213></picture>
 <paragraph><loc_358><loc_10><loc_475><loc_37>13</paragraph>
@@ -324,12 +333,13 @@
 <paragraph><loc_21><loc_56><loc_479><loc_407>悲しい時・不安な時</paragraph>
 <unordered_list><list_item><loc_21><loc_56><loc_479><loc_407></list_item>
 <list_item><loc_21><loc_56><loc_479><loc_407></list_item>
-<list_item><loc_21><loc_56><loc_479><loc_407></list_item>
-<list_item><loc_21><loc_56><loc_479><loc_407></list_item>
 </unordered_list>
 <paragraph><loc_21><loc_56><loc_479><loc_407>自分をはげます言葉</paragraph>
 <paragraph><loc_21><loc_56><loc_479><loc_407>「　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　」</paragraph>
 <paragraph><loc_21><loc_56><loc_479><loc_407>腹が立った時、いらいらした時</paragraph>
+<unordered_list><list_item><loc_21><loc_56><loc_479><loc_407></list_item>
+<list_item><loc_21><loc_56><loc_479><loc_407></list_item>
+</unordered_list>
 <paragraph><loc_21><loc_56><loc_479><loc_407>自分をはげます言葉「　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　」</paragraph>
 <paragraph><loc_14><loc_471><loc_478><loc_498>------------------------------------ ------------------------------------------------------------------------------</paragraph>
 <text><loc_0><loc_0><loc_0><loc_0>【進行】
@@ -342,10 +352,11 @@
 と尋ね何人かに聞いてみる。</text>
 <page_break>
 <title><loc_25><loc_423><loc_475><loc_480>感想を教えてください</title>
-<paragraph><loc_25><loc_53><loc_475><loc_383>分からなかったところ</paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383></paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383></paragraph>
-<paragraph><loc_25><loc_53><loc_475><loc_383>参考になったところ・役に立ちそうなところ</paragraph>
+<unordered_list><list_item><loc_25><loc_53><loc_475><loc_383>分からなかったところ</list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383></list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383></list_item>
+<list_item><loc_25><loc_53><loc_475><loc_383>参考になったところ・役に立ちそうなところ</list_item>
+</unordered_list>
 <paragraph><loc_358><loc_10><loc_475><loc_37>15</paragraph>
 <picture><loc_388><loc_274><loc_492><loc_413></picture>
 <text><loc_0><loc_0><loc_0><loc_0>【進行】

@@ -158,15 +158,15 @@
 　特許法２９条１項において規定されている、公然と知られた
  137: chapter with name=slide-9
   138: title: 新規性（新しさ）とは
-  139: paragraph: 公然知られた発明
-  140: list with name=list
+  139: list with name=list
+   140: list_item: 公然知られた発明
    141: list_item: 例：口頭発表、ＴＶ放送
-   142: list_item: 例：店で販売、不特定多数の客の前でのデモ
-   143: list_item: 例：特許公報、論文、書籍、パンフレット
-   144: list_item: 例：インターネット上のウェブで公開		
-  145: paragraph: 公然実施をされた発明
-  146: paragraph: 頒布された刊行物に記載された発明
-  147: paragraph: 電気通信回線を通じて公衆に利用可能となった発明
+   142: list_item: 公然実施をされた発明
+   143: list_item: 例：店で販売、不特定多数の客の前でのデモ
+   144: list_item: 頒布された刊行物に記載された発明
+   145: list_item: 例：特許公報、論文、書籍、パンフレット
+   146: list_item: 電気通信回線を通じて公衆に利用可能となった発明
+   147: list_item: 例：インターネット上のウェブで公開		
   148: paragraph: 「新規性」がない発明とは
   149: paragraph: →注意！！！
   150: paragraph: 守秘義務のない第三者に発明の内容を漏らさないように
@@ -331,397 +331,399 @@
  285: chapter with name=slide-16
   286: paragraph: ※当業者： その技術分野について通常の知識を持つ者
   287: paragraph: 　　　　　　　複数の技術分野の専門家からなる「チーム」
-  288: paragraph: 最適材料の選択・設計変更
-  289: paragraph: 単なる寄せ集め
-  290: paragraph: 作用、機能の共通性
-  291: paragraph: 技術分野の関連性
-  292: paragraph: 引用文献中の示唆
-  293: paragraph: 課題の共通性
-  294: picture
-  295: paragraph: 当業者（※）が先行技術から容易に考えだせる
-  296: paragraph: （＝進歩性を有していない）と判断される例
-  297: title: 進歩性とは
-  298: paragraph: ２－４
-  299: paragraph: 17
-  300: text: 〔狙い〕
+  288: list with name=list
+   289: list_item: 最適材料の選択・設計変更
+   290: list_item: 単なる寄せ集め
+   291: list_item: 作用、機能の共通性
+   292: list_item: 技術分野の関連性
+   293: list_item: 引用文献中の示唆
+   294: list_item: 課題の共通性
+  295: picture
+  296: paragraph: 当業者（※）が先行技術から容易に考えだせる
+  297: paragraph: （＝進歩性を有していない）と判断される例
+  298: title: 進歩性とは
+  299: paragraph: ２－４
+  300: paragraph: 17
+  301: text: 〔狙い〕
 進歩性の判断におけるいわゆる「論理づけ」の概念を簡単に説明する。
 
 〔説明〕
 本願発明と最も近い先行技術とを対比した結果存在する差異（差異があることが新規性があるということ）が存在する場合に
- 301: chapter with name=slide-17
-  302: paragraph: 一見容易とされる場合も…
-  303: paragraph: 　　先行技術と比べて
-  304: paragraph: 
-  305: paragraph: 　　・異質な効果
-  306: paragraph: 　　・同質であるが際立って優れた効果
-  307: paragraph: 
-  308: paragraph: 　があり、これらの効果を当業者が予測できない場合は
-  309: paragraph: 　進歩性の存在が推認される。
-  310: paragraph: 
-  311: paragraph: 18
-  312: title: 進歩性とは
-  313: paragraph: ２－４
-  314: paragraph: 18
-  315: text: 〔狙い〕
+ 302: chapter with name=slide-17
+  303: paragraph: 一見容易とされる場合も…
+  304: paragraph: 　　先行技術と比べて
+  305: paragraph: 
+  306: paragraph: 　　・異質な効果
+  307: paragraph: 　　・同質であるが際立って優れた効果
+  308: paragraph: 
+  309: paragraph: 　があり、これらの効果を当業者が予測できない場合は
+  310: paragraph: 　進歩性の存在が推認される。
+  311: paragraph: 
+  312: paragraph: 18
+  313: title: 進歩性とは
+  314: paragraph: ２－４
+  315: paragraph: 18
+  316: text: 〔狙い〕
 進歩性判断における効果の取扱いについて理解する。
 
 〔説明〕
 本願発明と本願発明と最も近い先行技術とを対比した結果存在する差異が一見容易に考え付くようなものであっても、本願発明の効果が優れて
- 316: chapter with name=slide-18
-  317: paragraph: 単なる寄せ集め
-  318: paragraph: 例：音声確認と指紋確認
-  319: paragraph: 作用・機能の共通性
-  320: paragraph: 例：光触媒材料を被覆
-  321: paragraph: 課題の共通性
-  322: paragraph: 例：ガイド機能付き
-  323: paragraph: 引用文献中の示唆
-  324: paragraph: 例：ディスプレイ
-  325: paragraph: 最適材料の選択・設計変更
-  326: paragraph: 例：ケースの材料
-  327: paragraph: 技術分野の関連性
-  328: paragraph: 例：雑音除去機能
-  329: paragraph: 進歩性判断の例（携帯電話に以下の工夫をした場合・・・？）
-  330: title: 進歩性とは
-  331: paragraph: ２－４
-  332: paragraph: 19
-  333: picture
-  334: text: 〔狙い〕
+ 317: chapter with name=slide-18
+  318: paragraph: 単なる寄せ集め
+  319: paragraph: 例：音声確認と指紋確認
+  320: paragraph: 作用・機能の共通性
+  321: paragraph: 例：光触媒材料を被覆
+  322: paragraph: 課題の共通性
+  323: paragraph: 例：ガイド機能付き
+  324: paragraph: 引用文献中の示唆
+  325: paragraph: 例：ディスプレイ
+  326: paragraph: 最適材料の選択・設計変更
+  327: paragraph: 例：ケースの材料
+  328: paragraph: 技術分野の関連性
+  329: paragraph: 例：雑音除去機能
+  330: paragraph: 進歩性判断の例（携帯電話に以下の工夫をした場合・・・？）
+  331: title: 進歩性とは
+  332: paragraph: ２－４
+  333: paragraph: 19
+  334: picture
+  335: text: 〔狙い〕
 進歩性の判断について具体的事例をもって説明する。
 
 〔説明〕
 　必要に応じて、以下の具体例を取捨選択して説明する。
 　各事例について、学生に検討させることにより、進歩性の判断のイメージを体感
- 335: chapter with name=slide-19
-  336: paragraph: 最適材料の選択、数値範囲の最適化、具体的適用に伴う設計変更
-  337: paragraph: 【本願効果】
-  338: paragraph: FRPを用いることにより、
-  339: paragraph: 強度を維持しつつ携帯電話の
-  340: paragraph: 小型化を図る
-  341: paragraph: 【文献２】
-  342: paragraph: ケースにFRPを用いた電子手帳
-  343: paragraph: FRPは強度が強いため、
-  344: paragraph: 厚さを0.9～1.2mmと
-  345: paragraph: 薄くすることができる
-  346: paragraph: 【文献１】
-  347: paragraph: 携帯電話のケースは
-  348: paragraph: 厚いほど強度が高いが、
-  349: paragraph: 全体の寸法を考慮すると
-  350: paragraph: 1.0～1.5mmの厚さが好ましい
-  351: paragraph: 公知の材料からの選択
-  352: paragraph: ＦＲＰを用いることにより
-  353: paragraph: ケースを薄くすることができる
-  354: paragraph: 数値範囲の最適化
-  355: paragraph: 強度と小型化の両立のための
-  356: paragraph: ケースの厚さを決定する
-  357: paragraph: －最適材料の選択・設計変更－
-  358: paragraph: 【本願発明】
-  359: paragraph: ケースを厚さ0.5～0.8mmの
-  360: paragraph: FRPとした携帯電話
-  361: paragraph: ※繊維強化プラスティック
-  362: title: 進歩性が否定される事例
-  363: paragraph: ２－４
-  364: paragraph: 20
-  365: text: 〔狙い〕
+ 336: chapter with name=slide-19
+  337: paragraph: 最適材料の選択、数値範囲の最適化、具体的適用に伴う設計変更
+  338: paragraph: 【本願効果】
+  339: paragraph: FRPを用いることにより、
+  340: paragraph: 強度を維持しつつ携帯電話の
+  341: paragraph: 小型化を図る
+  342: paragraph: 【文献２】
+  343: paragraph: ケースにFRPを用いた電子手帳
+  344: paragraph: FRPは強度が強いため、
+  345: paragraph: 厚さを0.9～1.2mmと
+  346: paragraph: 薄くすることができる
+  347: paragraph: 【文献１】
+  348: paragraph: 携帯電話のケースは
+  349: paragraph: 厚いほど強度が高いが、
+  350: paragraph: 全体の寸法を考慮すると
+  351: paragraph: 1.0～1.5mmの厚さが好ましい
+  352: paragraph: 公知の材料からの選択
+  353: paragraph: ＦＲＰを用いることにより
+  354: paragraph: ケースを薄くすることができる
+  355: paragraph: 数値範囲の最適化
+  356: paragraph: 強度と小型化の両立のための
+  357: paragraph: ケースの厚さを決定する
+  358: paragraph: －最適材料の選択・設計変更－
+  359: paragraph: 【本願発明】
+  360: paragraph: ケースを厚さ0.5～0.8mmの
+  361: paragraph: FRPとした携帯電話
+  362: paragraph: ※繊維強化プラスティック
+  363: title: 進歩性が否定される事例
+  364: paragraph: ２－４
+  365: paragraph: 20
+  366: text: 〔狙い〕
 進歩性の判断について具体的事例をもって説明する。
 
 〔説明〕
 文献２には、ＦＲＰを用いれば、ケースの厚さを薄くしても強度を維持できることが文献２に記載されているから、ＦＲＰを用いてケースを薄
- 366: chapter with name=slide-20
-  367: paragraph: 各々が機能的又は作用的に関連していない
-  368: paragraph: 【本願発明】
-  369: paragraph: 指紋で本人確認する指紋確認手段と
-  370: paragraph: 声紋で本人確認する音声確認手段と
-  371: paragraph: を備えた携帯電話
-  372: paragraph: 【本願効果】
-  373: paragraph: 指紋の他に声紋により本人
-  374: paragraph: 確認を行うことで一層厳密な
-  375: paragraph: 確認をすることができる
-  376: paragraph: 【文献１】
-  377: paragraph: 指紋で登録者を確認する
-  378: paragraph: 指紋確認手段を備えた携帯電話
-  379: paragraph: 【文献２】
-  380: paragraph: 声紋で登録者を確認する
-  381: paragraph: 音声確認手段を備えた携帯電話
-  382: paragraph: 指紋確認手段と音声確認手段に
-  383: paragraph: 機能的、作用的な関連がない
-  384: paragraph: －単なる寄せ集め－
-  385: title: 進歩性が否定される事例
-  386: paragraph: ２－４
-  387: paragraph: 21
-  388: text: 〔狙い〕
+ 367: chapter with name=slide-20
+  368: paragraph: 各々が機能的又は作用的に関連していない
+  369: paragraph: 【本願発明】
+  370: paragraph: 指紋で本人確認する指紋確認手段と
+  371: paragraph: 声紋で本人確認する音声確認手段と
+  372: paragraph: を備えた携帯電話
+  373: paragraph: 【本願効果】
+  374: paragraph: 指紋の他に声紋により本人
+  375: paragraph: 確認を行うことで一層厳密な
+  376: paragraph: 確認をすることができる
+  377: paragraph: 【文献１】
+  378: paragraph: 指紋で登録者を確認する
+  379: paragraph: 指紋確認手段を備えた携帯電話
+  380: paragraph: 【文献２】
+  381: paragraph: 声紋で登録者を確認する
+  382: paragraph: 音声確認手段を備えた携帯電話
+  383: paragraph: 指紋確認手段と音声確認手段に
+  384: paragraph: 機能的、作用的な関連がない
+  385: paragraph: －単なる寄せ集め－
+  386: title: 進歩性が否定される事例
+  387: paragraph: ２－４
+  388: paragraph: 21
+  389: text: 〔狙い〕
 進歩性の判断について具体的事例をもって説明する。
 
 〔説明〕
 文献１と文献２にそれぞれ記載されている指紋確認手段と音声確認手段には、共に登録者を確認するための目的を有するものであるが、指紋確
- 389: chapter with name=slide-21
-  390: paragraph: 分野が異なっても作用、機能が共通することは、有力な根拠となる
-  391: paragraph: 【本願発明】
-  392: paragraph: 本体表面を
-  393: paragraph: 光触媒材料で被覆した
-  394: paragraph: 携帯電話
-  395: paragraph: 【本願効果】
-  396: paragraph: 本体表面に抗菌性を
-  397: paragraph: 付与したため衛生的である。
-  398: paragraph: 【文献１】
-  399: paragraph: 本体表面に
-  400: paragraph: 銀イオンを担持させた
-  401: paragraph: 携帯電話
-  402: paragraph: 【文献２】
-  403: paragraph: 本体を
-  404: paragraph: 光触媒材料で被覆した筆記具
-  405: paragraph: 作用・機能が共通
-  406: paragraph: （抗菌性を付与）
-  407: paragraph: －作用・機能の共通性－
-  408: title: 進歩性が否定される事例
-  409: paragraph: ２－４
-  410: paragraph: 22
-  411: text: 〔狙い〕
+ 390: chapter with name=slide-21
+  391: paragraph: 分野が異なっても作用、機能が共通することは、有力な根拠となる
+  392: paragraph: 【本願発明】
+  393: paragraph: 本体表面を
+  394: paragraph: 光触媒材料で被覆した
+  395: paragraph: 携帯電話
+  396: paragraph: 【本願効果】
+  397: paragraph: 本体表面に抗菌性を
+  398: paragraph: 付与したため衛生的である。
+  399: paragraph: 【文献１】
+  400: paragraph: 本体表面に
+  401: paragraph: 銀イオンを担持させた
+  402: paragraph: 携帯電話
+  403: paragraph: 【文献２】
+  404: paragraph: 本体を
+  405: paragraph: 光触媒材料で被覆した筆記具
+  406: paragraph: 作用・機能が共通
+  407: paragraph: （抗菌性を付与）
+  408: paragraph: －作用・機能の共通性－
+  409: title: 進歩性が否定される事例
+  410: paragraph: ２－４
+  411: paragraph: 22
+  412: text: 〔狙い〕
 進歩性の判断について具体的事例をもって説明する。
 
 〔説明〕
 　文献１は携帯電話についての技術であり、文献２は、筆記具についての技術であるが、表面に抗菌性を付与するという作用・機能の共通性に
- 412: chapter with name=slide-22
-  413: paragraph: 課題解決のために、関連する技術分野の技術手段を適用したもの
-  414: paragraph: 【本願発明】
-  415: paragraph: 周辺の騒音と逆位相の音波を
-  416: paragraph: 発するノイズキャンセル機能を
-  417: paragraph: 備えた携帯電話
-  418: paragraph: 【本願効果】
-  419: paragraph: 周辺の騒音の影響を軽減できる
-  420: paragraph: 【文献１】
-  421: paragraph: 携帯電話
-  422: paragraph: 【文献２】
-  423: paragraph: 周辺の騒音と逆位相の音波を
-  424: paragraph: 発するノイズキャンセル機能を
-  425: paragraph: 備えたトランシーバー
-  426: paragraph: 関連する技術分野の技術を適用
-  427: paragraph: （音声を送受信する装置）
-  428: picture
-  429: paragraph: －技術分野の関連性－
-  430: title: 進歩性が否定される事例
-  431: paragraph: ２－４
-  432: paragraph: 23
-  433: text: 〔狙い〕
+ 413: chapter with name=slide-22
+  414: paragraph: 課題解決のために、関連する技術分野の技術手段を適用したもの
+  415: paragraph: 【本願発明】
+  416: paragraph: 周辺の騒音と逆位相の音波を
+  417: paragraph: 発するノイズキャンセル機能を
+  418: paragraph: 備えた携帯電話
+  419: paragraph: 【本願効果】
+  420: paragraph: 周辺の騒音の影響を軽減できる
+  421: paragraph: 【文献１】
+  422: paragraph: 携帯電話
+  423: paragraph: 【文献２】
+  424: paragraph: 周辺の騒音と逆位相の音波を
+  425: paragraph: 発するノイズキャンセル機能を
+  426: paragraph: 備えたトランシーバー
+  427: paragraph: 関連する技術分野の技術を適用
+  428: paragraph: （音声を送受信する装置）
+  429: picture
+  430: paragraph: －技術分野の関連性－
+  431: title: 進歩性が否定される事例
+  432: paragraph: ２－４
+  433: paragraph: 23
+  434: text: 〔狙い〕
 進歩性の判断について具体的事例をもって説明する。
 
 〔説明〕
 文献１は携帯電話、文献２はトランシーバの技術のものであるが、両者は共に音声を送受信する技術である点で共通するものであって、相互の
- 434: chapter with name=slide-23
-  435: paragraph: 引用発明の内容に示唆があれば、有力な根拠となる
-  436: paragraph: 【本願発明】
-  437: paragraph: ディスプレイに発光ダイオードを用いた
-  438: paragraph: 携帯電話
-  439: paragraph: 【本願効果】
-  440: paragraph: 省エネ性に優れた携帯電話
-  441: paragraph: 【文献１】
-  442: paragraph: ディスプレイに液晶を用いた携帯電話。
-  443: paragraph: なお、発光ダイオードを用いることにより、
-  444: paragraph: 更に省エネ性に優れたものとなるが
-  445: paragraph: 現在、青色は未開発である。
-  446: paragraph: 【文献２】
-  447: paragraph: 街頭のディスプレイには、
-  448: paragraph: 発光ダイオードが
-  449: paragraph: 用いられている。
-  450: paragraph: 引用文献中の示唆
-  451: picture
-  452: paragraph: －引用文献中の示唆－
-  453: title: 進歩性が否定される事例
-  454: paragraph: ２－４
-  455: paragraph: 24
-  456: text: 〔狙い〕
+ 435: chapter with name=slide-23
+  436: paragraph: 引用発明の内容に示唆があれば、有力な根拠となる
+  437: paragraph: 【本願発明】
+  438: paragraph: ディスプレイに発光ダイオードを用いた
+  439: paragraph: 携帯電話
+  440: paragraph: 【本願効果】
+  441: paragraph: 省エネ性に優れた携帯電話
+  442: paragraph: 【文献１】
+  443: paragraph: ディスプレイに液晶を用いた携帯電話。
+  444: paragraph: なお、発光ダイオードを用いることにより、
+  445: paragraph: 更に省エネ性に優れたものとなるが
+  446: paragraph: 現在、青色は未開発である。
+  447: paragraph: 【文献２】
+  448: paragraph: 街頭のディスプレイには、
+  449: paragraph: 発光ダイオードが
+  450: paragraph: 用いられている。
+  451: paragraph: 引用文献中の示唆
+  452: picture
+  453: paragraph: －引用文献中の示唆－
+  454: title: 進歩性が否定される事例
+  455: paragraph: ２－４
+  456: paragraph: 24
+  457: text: 〔狙い〕
 進歩性の判断について具体的事例をもって説明する。
 
 〔説明〕
 　文献１には、発光ダイオードを用いれば省エネ性が優れるものとなることは示唆されているが、青色発光ダイオードが未開発であるので、実
- 457: chapter with name=slide-24
-  458: picture
-  459: paragraph: 課題が共通することは、有力な根拠となる
-  460: paragraph: 【本願発明】
-  461: paragraph: 操作キーが操作された際に
-  462: paragraph: 操作内容を音声で教示する
-  463: paragraph: 携帯電話
-  464: paragraph: 【本願効果】
-  465: paragraph: 目の不自由な使用者の
-  466: paragraph: 操作を容易にする
-  467: paragraph: 【文献１】
-  468: paragraph: 操作キーに点字を付設した
-  469: paragraph: 携帯電話
-  470: paragraph: 【文献２】
-  471: paragraph: 操作キーが操作された際に
-  472: paragraph: 操作内容を音声で教示する
-  473: paragraph: エアコン用リモコン
-  474: paragraph: 技術分野は異なるが
-  475: paragraph: 課題が共通する
-  476: paragraph: GUIDE
-  477: paragraph: －課題の共通性－
-  478: title: 進歩性が否定される事例
-  479: paragraph: ２－４
-  480: paragraph: 25
-  481: text: 〔狙い〕
+ 458: chapter with name=slide-24
+  459: picture
+  460: paragraph: 課題が共通することは、有力な根拠となる
+  461: paragraph: 【本願発明】
+  462: paragraph: 操作キーが操作された際に
+  463: paragraph: 操作内容を音声で教示する
+  464: paragraph: 携帯電話
+  465: paragraph: 【本願効果】
+  466: paragraph: 目の不自由な使用者の
+  467: paragraph: 操作を容易にする
+  468: paragraph: 【文献１】
+  469: paragraph: 操作キーに点字を付設した
+  470: paragraph: 携帯電話
+  471: paragraph: 【文献２】
+  472: paragraph: 操作キーが操作された際に
+  473: paragraph: 操作内容を音声で教示する
+  474: paragraph: エアコン用リモコン
+  475: paragraph: 技術分野は異なるが
+  476: paragraph: 課題が共通する
+  477: paragraph: GUIDE
+  478: paragraph: －課題の共通性－
+  479: title: 進歩性が否定される事例
+  480: paragraph: ２－４
+  481: paragraph: 25
+  482: text: 〔狙い〕
 進歩性の判断について具体的事例をもって説明する。
 
 〔説明〕
 　文献１は携帯電話についての技術であり、文献２はエアコン用リモコンについての技術であるが、両者は目の不自由な使用者の操作を容易に
- 482: chapter with name=slide-25
-  483: paragraph: 臨界的意義とは・・・
-  484: paragraph: 
-  485: paragraph: 発明が先行技術の延長線上にあるときに、
-  486: paragraph: （課題が共通し、装置が数値限定の有無のみの場合）
-  487: paragraph: 効果がその数値限定の内と外で量的に顕著な差異があること
-  488: title: 数値限定を伴った発明の考え方
-  489: paragraph: 数値を限定した場合
-  490: paragraph: 数値範囲内の全ての部分で効果がある
-  491: paragraph: 臨界的意義（※）がある
-  492: paragraph: の両方を満たす必要がある
-  493: paragraph: 
-  494: paragraph: 進歩性の判断
-  495: paragraph: ２－４
-  496: paragraph: 26
-  497: text: 〔狙い〕
+ 483: chapter with name=slide-25
+  484: paragraph: 臨界的意義とは・・・
+  485: paragraph: 
+  486: paragraph: 発明が先行技術の延長線上にあるときに、
+  487: paragraph: （課題が共通し、装置が数値限定の有無のみの場合）
+  488: paragraph: 効果がその数値限定の内と外で量的に顕著な差異があること
+  489: title: 数値限定を伴った発明の考え方
+  490: paragraph: 数値を限定した場合
+  491: list with name=list
+   492: list_item: 数値範囲内の全ての部分で効果がある
+   493: list_item: 臨界的意義（※）がある
+  494: paragraph: の両方を満たす必要がある
+  495: paragraph: 
+  496: paragraph: 進歩性の判断
+  497: paragraph: ２－４
+  498: paragraph: 26
+  499: text: 〔狙い〕
 本願発明と本願発明に最も近い先行技術との差異が、数値限定の範囲や数値限定の有無のみである場合の進歩性の判断について説明する。
 
 〔説明〕
 本願発明と先行技術との差異が数値限定の範囲のみである
- 498: chapter with name=slide-26
-  499: title: 第２時限　目次
-  500: paragraph: ２－１　特許制度と研究・開発者
-  501: paragraph: ２－２　特許を受けることができる発明
-  502: paragraph: ２－３　新規性について
-  503: paragraph: ２－４　進歩性について
-  504: paragraph: ２－５　特許権の効力について
-  505: paragraph: ２－６　外国での特許権の取得について
-  506: paragraph: 27
- 507: chapter with name=slide-27
-  508: paragraph: 特許権の効力
-  509: paragraph: ２－５
-  510: paragraph: 積極的効力
-  511: paragraph: 特許権者が、特許発明を独占的に実施することができる効力。
-  512: paragraph:  
-  513: paragraph: 他人による実施を排除できる効力（排他性）。
-  514: paragraph: 　
-  515: paragraph: 消極的効力
-  516: paragraph: 「特許権者は、業として特許発明の実施をする権利を専有する」（６８条）
-  517: paragraph: 　特許権者自身による実施のみならず、実施許諾した者を通じて特許発明を実施することも積極的効力といえる。
-  518: paragraph: 独占的に実施
-  519: paragraph: 他者を排除
-  520: paragraph: 特許権の範囲
-  521: paragraph: ②特許権の保護期間および発生・消滅
-  522: paragraph: ①積極的効力と消極的効力
-  523: paragraph: 「産業の発展」に必要かつ適切な期間に限って保護される。→　出願から２０年
-  524: paragraph: 権利の発生は、設定登録の日　　　　　　　　　　　　　　　　　　　　（特許権の存続期間の延長制度利用の場合　
-  525: paragraph: 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　最大25年まで可能）
-  526: paragraph: 28
-  527: text: 〔狙い〕
+ 500: chapter with name=slide-26
+  501: title: 第２時限　目次
+  502: paragraph: ２－１　特許制度と研究・開発者
+  503: paragraph: ２－２　特許を受けることができる発明
+  504: paragraph: ２－３　新規性について
+  505: paragraph: ２－４　進歩性について
+  506: paragraph: ２－５　特許権の効力について
+  507: paragraph: ２－６　外国での特許権の取得について
+  508: paragraph: 27
+ 509: chapter with name=slide-27
+  510: paragraph: 特許権の効力
+  511: paragraph: ２－５
+  512: paragraph: 積極的効力
+  513: paragraph: 特許権者が、特許発明を独占的に実施することができる効力。
+  514: paragraph:  
+  515: paragraph: 他人による実施を排除できる効力（排他性）。
+  516: paragraph: 　
+  517: paragraph: 消極的効力
+  518: paragraph: 「特許権者は、業として特許発明の実施をする権利を専有する」（６８条）
+  519: paragraph: 　特許権者自身による実施のみならず、実施許諾した者を通じて特許発明を実施することも積極的効力といえる。
+  520: paragraph: 独占的に実施
+  521: paragraph: 他者を排除
+  522: paragraph: 特許権の範囲
+  523: paragraph: ②特許権の保護期間および発生・消滅
+  524: paragraph: ①積極的効力と消極的効力
+  525: paragraph: 「産業の発展」に必要かつ適切な期間に限って保護される。→　出願から２０年
+  526: paragraph: 権利の発生は、設定登録の日　　　　　　　　　　　　　　　　　　　　（特許権の存続期間の延長制度利用の場合　
+  527: paragraph: 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　最大25年まで可能）
+  528: paragraph: 28
+  529: text: 〔狙い〕
 特許権が発生した場合の効力について説明する。
 
 〔説明〕
 　特許権が成立した後、その権利にはどのような効力があるかを説明する。
 　権利が成立すると、その発明を業として（事業として特許発明を実
- 528: chapter with name=slide-28
-  529: title: 第２時限　目次
-  530: paragraph: ２－１　特許制度と研究・開発者
-  531: paragraph: ２－２　特許を受けることができる発明
-  532: paragraph: ２－３　新規性について
-  533: paragraph: ２－４　進歩性について
-  534: paragraph: ２－５　特許権の効力について
-  535: paragraph: ２－６　外国での特許権の取得について
-  536: paragraph: 29
- 537: chapter with name=slide-29
-  538: title: 外国での特許権の取得について
-  539: paragraph: Q.どうして外国で特許を取る必要があるのか？
-  540: paragraph: Q.外国出願するとき、どのような方法があるか？
-  541: paragraph: 特許権はそれを取得した国でしか効力がない（各国特許独立の原則）
-  542: paragraph: 特許権等の効力は権利を取得した国の中でしか及ばない（属地主義）。
-  543: paragraph: 特許に係る製品が外国で製造・販売等される場合は外国出願を検討する必要がある。
-  544: paragraph: ①直接各国に出願をするルート（パリ優先ルート）
-  545: paragraph: ②国際出願経由で各国へ移行するルート（ＰＣＴルート）
-  546: picture
-  547: picture
-  548: paragraph: ２－６
-  549: paragraph: 30
-  550: text: 〔狙い〕
+ 530: chapter with name=slide-28
+  531: title: 第２時限　目次
+  532: paragraph: ２－１　特許制度と研究・開発者
+  533: paragraph: ２－２　特許を受けることができる発明
+  534: paragraph: ２－３　新規性について
+  535: paragraph: ２－４　進歩性について
+  536: paragraph: ２－５　特許権の効力について
+  537: paragraph: ２－６　外国での特許権の取得について
+  538: paragraph: 29
+ 539: chapter with name=slide-29
+  540: title: 外国での特許権の取得について
+  541: paragraph: Q.どうして外国で特許を取る必要があるのか？
+  542: paragraph: Q.外国出願するとき、どのような方法があるか？
+  543: paragraph: 特許権はそれを取得した国でしか効力がない（各国特許独立の原則）
+  544: paragraph: 特許権等の効力は権利を取得した国の中でしか及ばない（属地主義）。
+  545: paragraph: 特許に係る製品が外国で製造・販売等される場合は外国出願を検討する必要がある。
+  546: paragraph: ①直接各国に出願をするルート（パリ優先ルート）
+  547: paragraph: ②国際出願経由で各国へ移行するルート（ＰＣＴルート）
+  548: picture
+  549: picture
+  550: paragraph: ２－６
+  551: paragraph: 30
+  552: text: 〔狙い〕
 特許制度は、属地主義であって日本の特許権は、海外には及ばないこと、外国で特許権を取得するためには、それぞれの国で特許権を取得することが必要であることを理解させる。
 
 〔説明〕
 属地主義の内容
- 551: chapter with name=slide-30
-  552: paragraph: ＰＣＴルート
-  553: paragraph: 受理官庁
-  554: paragraph: 国際調査
-  555: paragraph: 国際公開（１８月）
-  556: paragraph: 予備審査請求
-  557: paragraph: 各国の法令にしたがって権利が付与
-  558: paragraph: 米　国
-  559: paragraph: ＥＰＯ
-  560: paragraph: 各指定国に翻訳文を提出
-  561: paragraph: （出願から３０月）
-  562: paragraph: パリ条約ルート
-  563: paragraph: 各国の法令で定められた
-  564: paragraph: 様式、言語によりそれぞれ出願
-  565: paragraph: 米　国
-  566: paragraph: ＥＰＯ
-  567: paragraph: 各国の法令にしたがって権利を付与
-  568: paragraph: 優先権主張をし、　　　　　12月以内に外国出願
-  569: picture
-  570: paragraph: 基礎出願＝日本特許庁
-  571: paragraph: ２－６
-  572: paragraph: 外国での特許権の取得について
-  573: paragraph: 31
-  574: text: 〔狙い〕
+ 553: chapter with name=slide-30
+  554: paragraph: ＰＣＴルート
+  555: paragraph: 受理官庁
+  556: paragraph: 国際調査
+  557: paragraph: 国際公開（１８月）
+  558: paragraph: 予備審査請求
+  559: paragraph: 各国の法令にしたがって権利が付与
+  560: paragraph: 米　国
+  561: paragraph: ＥＰＯ
+  562: paragraph: 各指定国に翻訳文を提出
+  563: paragraph: （出願から３０月）
+  564: paragraph: パリ条約ルート
+  565: paragraph: 各国の法令で定められた
+  566: paragraph: 様式、言語によりそれぞれ出願
+  567: paragraph: 米　国
+  568: paragraph: ＥＰＯ
+  569: paragraph: 各国の法令にしたがって権利を付与
+  570: paragraph: 優先権主張をし、　　　　　12月以内に外国出願
+  571: picture
+  572: paragraph: 基礎出願＝日本特許庁
+  573: paragraph: ２－６
+  574: paragraph: 外国での特許権の取得について
+  575: paragraph: 31
+  576: text: 〔狙い〕
 パリ条約ルート、ＰＣＴルートについて説明する。
 
 〔説明〕
 　パリ条約ルートでは、各国の法令に規定された様式・言語で出願しなければならないことから、それぞれの国の言語への翻訳を１年以内に終え
- 575: chapter with name=slide-31
-  576: paragraph: 　パリ条約による優先権の主張を伴う出願である場合、第一国出願の明細書等と我が国への出願時の願書に最初に添付した明細書、特許請求の範囲又は図面（以下、「当初明細書等」という。）とに共通して記載されている
-  577: paragraph: 第１国出願
-  578: paragraph: 日本出願
-  579: paragraph: １年以内に日本へ出願
-  580: paragraph: 出願公開
-  581: paragraph: 第１国出願より１年６ヶ月で出願公開
-  582: paragraph: 発明
-  583: paragraph: 
-  584: paragraph: A、B、C
+ 577: chapter with name=slide-31
+  578: paragraph: 　パリ条約による優先権の主張を伴う出願である場合、第一国出願の明細書等と我が国への出願時の願書に最初に添付した明細書、特許請求の範囲又は図面（以下、「当初明細書等」という。）とに共通して記載されている
+  579: paragraph: 第１国出願
+  580: paragraph: 日本出願
+  581: paragraph: １年以内に日本へ出願
+  582: paragraph: 出願公開
+  583: paragraph: 第１国出願より１年６ヶ月で出願公開
+  584: paragraph: 発明
   585: paragraph: 
-  586: paragraph: 発明
+  586: paragraph: A、B、C
   587: paragraph: 
-  588: paragraph: A、B、D
+  588: paragraph: 発明
   589: paragraph: 
-  590: paragraph: A、Bは第１国出願日に日本出願、Dについては日本出願日に出願されたものと扱う。
-  591: paragraph: ２－６
-  592: title: 補論：パリ条約の優先権
-  593: paragraph: 32
-  594: text: 〔狙い〕
+  590: paragraph: A、B、D
+  591: paragraph: 
+  592: paragraph: A、Bは第１国出願日に日本出願、Dについては日本出願日に出願されたものと扱う。
+  593: paragraph: ２－６
+  594: title: 補論：パリ条約の優先権
+  595: paragraph: 32
+  596: text: 〔狙い〕
 パリ条約の優先権主張の内容について説明する。
 
 〔説明〕
 　外国での出願についての事務負担や翻訳文作成負担により、出願日が遅れるという不利益を防止するために優先権制度があること、これにより、
- 595: chapter with name=slide-32
-  596: title: 主要五か国の近年の出願件数の推移
-  597: paragraph: ※特許行政年次報告書＜統計・資料編＞２０１０年版、２０１１年版、２０１２年版を基に作成
-  598: paragraph: 33
-  599: paragraph: ２－６
-  600: text: 〔狙い〕　
+ 597: chapter with name=slide-32
+  598: title: 主要五か国の近年の出願件数の推移
+  599: paragraph: ※特許行政年次報告書＜統計・資料編＞２０１０年版、２０１１年版、２０１２年版を基に作成
+  600: paragraph: 33
+  601: paragraph: ２－６
+  602: text: 〔狙い〕　
 　出願件数の推移を説明することで、近年の中国の台頭を理解するとともに、我が国の発明件数が相対的に減少しつつある傾向を説明し、この状況がどのような意味を持つかを考察させる。
 
 〔説明〕
 　数
- 601: chapter with name=slide-33
-  602: title: 　海外から主要五か国への出願件数の推移　　　　（主要五か国への外国人出願）
-  603: paragraph: ※特許行政年次報告書２０１２年版、ＵＳＰＴＯ、ＥＰＯ、ＳＩＰＯ、ＫＩＰＯ各ホームページを基に作成
-  604: paragraph: 34
-  605: paragraph: ２－６
-  606: text: 〔狙い〕
+ 603: chapter with name=slide-33
+  604: title: 　海外から主要五か国への出願件数の推移　　　　（主要五か国への外国人出願）
+  605: paragraph: ※特許行政年次報告書２０１２年版、ＵＳＰＴＯ、ＥＰＯ、ＳＩＰＯ、ＫＩＰＯ各ホームページを基に作成
+  606: paragraph: 34
+  607: paragraph: ２－６
+  608: text: 〔狙い〕
 海外出願人がどの国に多く出願しているかを説明し、特許取得上重要である国がどこなのかということを、理解させる。
 
 〔説明〕
 　グラフの通り、米国は一貫して増大していることから、全世界の出願人が
- 607: chapter with name=slide-34
-  608: title: 　主要五か国各国への他の四か国からの出願件数　　　　　　　　　　　　　　　（２０１０年度）
-  609: paragraph: ※特許行政年次報告書２０１２年版を基に作成
-  610: paragraph: 35
-  611: paragraph: ２－６
-  612: text: 〔狙い〕
+ 609: chapter with name=slide-34
+  610: title: 　主要五か国各国への他の四か国からの出願件数　　　　　　　　　　　　　　　（２０１０年度）
+  611: paragraph: ※特許行政年次報告書２０１２年版を基に作成
+  612: paragraph: 35
+  613: paragraph: ２－６
+  614: text: 〔狙い〕
 海外からの出願数から、国際的に重視されている国を理解させる。
 
 〔説明〕
@@ -729,12 +731,12 @@
 2010年の統計では、日本への出願件数は五極の中では、
 欧州に次ぐ4番目。
 
- 613: chapter with name=slide-35
-  614: title: 　主要五か国（日本除く）から他の４か国への出願状況　　　　　　　　　　　　（２０１０年度）
-  615: paragraph: ※特許行政年次報告書２０１２年版を基に作成
-  616: paragraph: 36
-  617: paragraph: ２－６
-  618: text: 〔狙い〕
+ 615: chapter with name=slide-35
+  616: title: 　主要五か国（日本除く）から他の４か国への出願状況　　　　　　　　　　　　（２０１０年度）
+  617: paragraph: ※特許行政年次報告書２０１２年版を基に作成
+  618: paragraph: 36
+  619: paragraph: ２－６
+  620: text: 〔狙い〕
 前のスライドについて、各国別の出願先を示している。
 
 〔説明〕

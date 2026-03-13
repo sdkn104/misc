@@ -109,47 +109,47 @@
  108: picture
  109: picture
  110: page_footer: 8
- 111: text: 1
- 112: text: 2
- 113: section_header: ステップ①
- 114: section_header: か
- 115: text: ストレス状況 を避ける、解決する（＝ 問題解決 法）
- 116: key_value_area with name=group
-  117: text: 例：寒い時は上着を着る
-  118: text: 失敗が多い時は足りないスキルを身につける 相性の悪い人からは距離を取る
- 119: text: しかし、問題の解決に時間がかかる場合や、 ストレス状況がさけられない時は・・・
- 120: section_header: ステップ②
- 121: text: ストレス反応 を和らげる（＝ ストレス対処法） 行動や考えを変えることで心と体の反応を軽く
- 122: text: 9
- 123: section_header: ストレス対処法の一例
- 124: section_header: 体を動かす
- 125: list with name=list
-  126: list_item: 散歩をする
-  127: list_item: カラ オケ に行く
-  128: list_item: バッティングセンターに行く
- 129: section_header: 視野を広げる
- 130: list with name=list
-  131: list_item: 昔のことを思い出す
-  132: list_item: 他の人はどうかと見渡す
-  133: list_item: 相手の立場に立ってみる
- 134: section_header: リラックス法
- 135: list with name=list
-  136: list_item: アロマをたく
-  137: list_item: 好きな音楽をきく
-  138: list_item: お茶をする
-  139: list_item: 深呼吸をする
- 140: section_header: 気分転換
- 141: list with name=list
-  142: list_item: 友達 と話す
-  143: list_item: 映画 を見に行く
-  144: list_item: おいしいものを食 べ
- 145: text: する · ま わ りの 景色 を見渡 す
- 146: section_header: る 「今・ここ」に集中
- 147: list with name=list
-  148: list_item: ま わ りの音に 聞 き入
- 149: page_footer: 10
- 150: text: 法
- 151: text: 不安な時・ 悲 しい時 腹 立たしい時・イライラした時
+ 111: section_header: ステップ①
+ 112: section_header: か
+ 113: text: ストレス状況 を避ける、解決する（＝ 問題解決 法）
+ 114: key_value_area with name=group
+  115: text: 例：寒い時は上着を着る
+  116: text: 失敗が多い時は足りないスキルを身につける 相性の悪い人からは距離を取る
+ 117: text: しかし、問題の解決に時間がかかる場合や、 ストレス状況がさけられない時は・・・
+ 118: section_header: ステップ②
+ 119: text: ストレス反応 を和らげる（＝ ストレス対処法） 行動や考えを変えることで心と体の反応を軽く
+ 120: text: 9
+ 121: section_header: ストレス対処法の一例
+ 122: section_header: 体を動かす
+ 123: list with name=list
+  124: list_item: 散歩をする
+  125: list_item: カラ オケ に行く
+  126: list_item: バッティングセンターに行く
+ 127: section_header: 視野を広げる
+ 128: list with name=list
+  129: list_item: 昔のことを思い出す
+  130: list_item: 他の人はどうかと見渡す
+  131: list_item: 相手の立場に立ってみる
+ 132: section_header: リラックス法
+ 133: list with name=list
+  134: list_item: アロマをたく
+  135: list_item: 好きな音楽をきく
+  136: list_item: お茶をする
+  137: list_item: 深呼吸をする
+ 138: section_header: 気分転換
+ 139: list with name=list
+  140: list_item: 友達 と話す
+  141: list_item: 映画 を見に行く
+  142: list_item: おいしいものを食 べ
+ 143: text: する · ま わ りの 景色 を見渡 す
+ 144: section_header: る 「今・ここ」に集中
+ 145: list with name=list
+  146: list_item: ま わ りの音に 聞 き入
+ 147: page_footer: 10
+ 148: text: 法
+ 149: text: 不安な時・ 悲 しい時 腹 立たしい時・イライラした時
+ 150: text: ・
+ 151: text: ・
  152: text: ・
  153: text: ・
  154: text: ・
@@ -162,53 +162,50 @@
  161: text: ・
  162: text: ・
  163: text: ・
- 164: text: ・
- 165: text: ・
- 166: page_footer: 11
- 167: section_header: 過去 に役立ったはげましの 言葉
- 168: list with name=list
-  169: list_item: 不安な時・ 悲 しい時
-  170: list_item: 」 -
-  171: list_item: -例：「もっと大変 だ った時も 乗 り越えることができた」 -「
- 172: text: 「
- 173: text: 」
- 174: list with name=list
-  175: list_item: いらいらした時・ 腹 が立った時
-  176: list_item: -
- 177: text: 「
- 178: list with name=list
-  179: list_item: -「 腹 を立てて、好きでもない人のこと ば かり 考えるのは、 ば か ば かしい」
- 180: text: 」
- 181: text: 「
- 182: list with name=list
-  183: list_item: -」
- 184: text: 人にかけたり、人にかけてもらったり、自分に 言 い 聞 かせて 有効だ ったはげましの 言葉 を 教 えてく だ さ
- 185: picture
- 186: text: 12
- 187: section_header: 上手なストレス対処法
- 188: section_header: 上手なストレス対処法
- 189: list with name=list
-  190: list_item: お 金 がかからない
-  191: list_item: 自分や他人を 傷 つけない
-  192: list_item: 問題解決のさまたげにならない
- 193: section_header: 不適切なストレス対処法
- 194: list with name=list
-  195: list_item: お 金 がかかりす ぎ る
-  196: list_item: 自分や他人を 傷 つけてしまう
-  197: list_item: 問題解決をさまたげてしまう
- 198: picture
-  199: text: n
- 200: picture
- 201: page_footer: 13
- 202: text: ------------------------------------
- 203: section_header: 私 のストレス対処法カード
- 204: text: 
- 205: text: ------------------------------------------------------------------------------
- 206: code: 悲 しい時・不安な時   自分をはげます言葉 「 」
- 207: code: 腹 が立った時、いらいらした時   自分をはげます言葉 「
- 208: section_header: 感 想 を 教 えてく だ さい
- 209: list with name=list
-  210: list_item: 分からなかったとこ ろ
-  211: list_item: 参 考になったとこ ろ ・役に立ちそうなと こ ろ
- 212: picture
- 213: page_footer: 15
+ 164: page_footer: 11
+ 165: section_header: 過去 に役立ったはげましの 言葉
+ 166: list with name=list
+  167: list_item: 不安な時・ 悲 しい時
+  168: list_item: 」 -
+  169: list_item: -例：「もっと大変 だ った時も 乗 り越えることができた」 -「
+ 170: text: 「
+ 171: text: 」
+ 172: list with name=list
+  173: list_item: いらいらした時・ 腹 が立った時
+  174: list_item: -
+ 175: text: 「
+ 176: list with name=list
+  177: list_item: -「 腹 を立てて、好きでもない人のこと ば かり 考えるのは、 ば か ば かしい」
+ 178: text: 」
+ 179: text: 「
+ 180: list with name=list
+  181: list_item: -」
+ 182: text: 人にかけたり、人にかけてもらったり、自分に 言 い 聞 かせて 有効だ ったはげましの 言葉 を 教 えてく だ さ
+ 183: picture
+ 184: text: 12
+ 185: section_header: 上手なストレス対処法
+ 186: section_header: 上手なストレス対処法
+ 187: list with name=list
+  188: list_item: お 金 がかからない
+  189: list_item: 自分や他人を 傷 つけない
+  190: list_item: 問題解決のさまたげにならない
+ 191: section_header: 不適切なストレス対処法
+ 192: list with name=list
+  193: list_item: お 金 がかかりす ぎ る
+  194: list_item: 自分や他人を 傷 つけてしまう
+  195: list_item: 問題解決をさまたげてしまう
+ 196: picture
+ 197: picture
+ 198: page_footer: 13
+ 199: text: ------------------------------------
+ 200: section_header: 私 のストレス対処法カード
+ 201: text: 
+ 202: text: ------------------------------------------------------------------------------
+ 203: code: 悲 しい時・不安な時   自分をはげます言葉 「 」
+ 204: code: 腹 が立った時、いらいらした時   自分をはげます言葉 「
+ 205: section_header: 感 想 を 教 えてく だ さい
+ 206: list with name=list
+  207: list_item: 分からなかったとこ ろ
+  208: list_item: 参 考になったとこ ろ ・役に立ちそうなと こ ろ
+ 209: picture
+ 210: page_footer: 15
