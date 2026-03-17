@@ -15,7 +15,7 @@ def main():
         print("使い方: python outpptx.py <入力ファイル>")
         sys.exit(1)
     input_file = sys.argv[1]
-    pdoc_args = ['--reference-doc=template.pptx', '--verbose']
+    pdoc_args = ['--reference-doc=template.pptx', '--verbose', '--slide-level=2']
     output_file = input_file.rsplit('.', 1)[0] + '.pptx'
     output = pypandoc.convert_file(
         input_file,
