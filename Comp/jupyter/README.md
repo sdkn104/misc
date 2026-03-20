@@ -3,13 +3,15 @@
 - Jupyter AI: https://jupyter-ai.readthedocs.io/en/latest/index.html#
 
 ### Setup
-* use python 3.12
+https://github.com/jupyterlab/jupyterlab
+
+* use python 3.13 (due to jupyter ai, 2026.3)
     ```powershell
     # install
-    pip install jupyterlab~=4.0
+    pip install jupyterlab
     pip install "jupyter-ai[all]"
     #??pip install "jupyter-ai[azure-chat-openai]"
-    pip install langchain-openai
+    #pip install langchain-openai
     #pip install langchain-ollama
 
     # launch
