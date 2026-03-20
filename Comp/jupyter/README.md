@@ -7,9 +7,11 @@
     ```powershell
     # install
     pip install jupyterlab~=4.0
-    pip install jupyter-ai
+    pip install "jupyter-ai[all]"
+    #??pip install "jupyter-ai[azure-chat-openai]"
     pip install langchain-openai
-    pip install langchain-ollama
+    #pip install langchain-ollama
+
     # launch
     jupyter lab
     ```
@@ -23,7 +25,11 @@
 - https://jupyter-ai.readthedocs.io/en/latest/users/index.html#model-providers
 - To use Model, install its Python packages and 
     1. set its API key in your environment or 
-        * Set environment variable:  $env:OPENAI_KEY = "openAI API key"
+        * Set environment variable:  （Azure OpenAIは失敗）
+        ```
+        $env:OPENAI_KEY = "openAI API key"  
+        ```
+
     2. set it in the chat interface setting GUI
         1. open chat interface by clicking Chat icon in left bar,
         2. open setting panel
@@ -52,11 +58,14 @@
 - help of %%ai
     ```
     [1]: %ai help
+    [2]: %ai list
     ```
 - chat
     ```
     [1]: %%ai gpt4
          世界一高い山は
+    [1]: %%ai azure-chat-openai:gpt-4.1
+         世界一高い山は 　　→★エラー
     ```
     ```
     [1]: %%ai my_provider:model_a

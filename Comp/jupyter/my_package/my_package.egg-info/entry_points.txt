@@ -1,2 +1,0 @@
-[jupyter_ai.model_providers]
-my-provider = my_provider:MyProvider

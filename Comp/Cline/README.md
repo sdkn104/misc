@@ -19,7 +19,11 @@
     - Cline icon in left sidebar, Setting icon on top bar
     - To set Acure OpenAI, select OpenAI Compaible
     - To set cline service, select Cline
-    
+    - ex Azure OpenAI
+        - Provider: OpenAI Compatible
+        - BASE URL: https://bx22001zz-openai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview
+        - KEY: key
+        - Model ID: gpt4.1
 
 ## Usage
 

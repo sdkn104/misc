@@ -3,6 +3,11 @@ https://blog.tech-monex.com/entry/2025/05/09/111249
 
 ## VS Code
 
+https://code.visualstudio.com/docs/copilot/overview
+
+### install
+https://code.visualstudio.com/docs/copilot/setup
+
 ### LLM model
 - Change Model https://code.visualstudio.com/docs/intelligentapps/models
 - In Agent mode, predefined models only
