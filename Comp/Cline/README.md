@@ -21,12 +21,13 @@
     - To set cline service, select Cline
     - ex Azure OpenAI
         - Provider: OpenAI Compatible
-        - BASE URL: https://bx22001zz-openai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview
+        - BASE URL: https://xxxxx-openai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview
         - KEY: key
         - Model ID: gpt4o
         - for supported models, see https://docs.cline.bot/provider-config/openai-compatible#openai-compatible
+        * gpt-4.1, gpt-5-mini connected.
 
-## Setup using LiteLLM xxx -> failed...
+## Setup using LiteLLM xxx -> FAILED...
 - For using Azure OpenAI gpt-5, that is not suported by Cline, use LiteLLM proxy, that convert from Azure OpenAI gpt-4 to gpt-5, etc.
 
 ### installation
