@@ -23,7 +23,8 @@
         - Provider: OpenAI Compatible
         - BASE URL: https://xxxxx-openai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview
         - KEY: key
-        - Model ID: gpt4o
+        - Model ID: gpt4.1
+        - gpt-5xxx is not supported officially,  https://docs.cline.bot/provider-config/openai-compatible
         - for supported models, see https://docs.cline.bot/provider-config/openai-compatible#openai-compatible
         * gpt-4.1, gpt-5-mini connected.
 
