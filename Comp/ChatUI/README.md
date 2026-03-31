@@ -4,7 +4,7 @@
 
 ### install
 * python 3.11 is recommended
-  ```
+  ```python
   pip install open-webui
   # at install first time, not set offline, for downloading modules
   open-webui serve --port 3000
@@ -15,8 +15,8 @@
 * setting offline
   - https://docs.openwebui.com/tutorials/maintenance/offline-mode
   - answer from chatGPT
-    ```
-    # from official 
+    ```powershell
+    # from official page
     $env:OFFLINE_MODE = "true"
     $env:HF_HUB_OFFLINE="1"
     $env:RAG_EMBEDDING_MODEL_AUTO_UPDATE="false"
