@@ -43,3 +43,11 @@ https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/starti
     - API version: version
     - API type: Chat Completions
     - model ID:  deployment name (gpt-5-mini, etc.) -> click + mark
+
+- Azure OpenAI GPT-5 chat/completion
+    - install pipeline function: https://openwebui.com/posts/azure_ai_cc10d97f
+      - download json by push Get button in above URL
+      - 管理パネル⇒Functions⇒import
+    - setting function
+      - in functions pannel, push 歯車
+      - input API key, URL, deployment name
