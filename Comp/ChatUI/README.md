@@ -29,6 +29,24 @@
     $env:WEB_SEARCH_TRUST_ENV="false"
     $env:SAFE_MODE="true"
     ```
+* Setting No-Embedding in attaching document in prompt
+   - Admin Settings → Documents → General →「Bypass Embedding and Retrieval」をON
+   - or `$env:BYPASS_EMBEDDING_AND_RETRIEVAL="true"`
+
+* Audit log
+  ```powershell
+  $env:ENABLE_AUDIT_LOGS_FILE="true"
+  $env:AUDIT_LOG_LEVEL="METADATA"
+  $env:AUDIT_LOGS_FILE_PATH="logs/audit.log"
+  mkdir logs
+  ```
+* Custom Banner
+  ```
+  $env:WEBUI_BANNERS='[{"id":"notice1","type":"info","title":"Welcome","content":"社内AIチャットへようこそ","dismissible":true,"timestamp":1000}]'
+  ```
+
+* Remove Arena model 
+  - 管理パネル→設定→評価→Arena Modelのチェックを外す
 
 ### setting LLM
 https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/starting-with-openai-compatible
@@ -51,3 +69,6 @@ https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/starti
     - setting function
       - in functions pannel, push 歯車
       - input API key, URL, deployment name
+
+### invoke URL
+- specify MODEL: http://localhost:3000/?model=gpt-4.1
