@@ -1,7 +1,10 @@
 from datetime import datetime
 import time
 start = time.time()
-print("loading libraries...", datetime.now())
+def print_time(message):
+    print(datetime.now(), f"{time.time() - start:.1f}", message)
+
+print_time("loading libraries...")
 #import os
 from io import BytesIO
 from typing import Union
@@ -16,7 +19,7 @@ from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
 from docling_core.types.doc.labels import DocItemLabel
 
-print("loaded libraries", datetime.now(), f"{time.time() - start:.1f}")
+print_time("loaded libraries")
 
 #_log = logging.getLogger(__name__)
 
@@ -32,9 +35,10 @@ def sequential_replace(text, target):
     result.append(parts[-1])
     return ''.join(result)
 
-#def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
-def read_document_docling(source) -> str:
-    print("reading document...", type(source), datetime.now(), f"{time.time() - start:.1f}")
+
+
+def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
+    print_time("reading document... "+str(type(source)))
 
     pipeline_options = PdfPipelineOptions()
     pipeline_options.do_ocr = False
@@ -93,7 +97,7 @@ def read_document_docling(source) -> str:
     ]
     #final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n", labels=labels).encode("utf-8", errors="replace").decode("utf-8")
     final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n").encode("utf-8", errors="replace").decode("utf-8")
-    print("converted.", datetime.now(), f"{time.time() - start:.1f}")
+    print_time("converted.")
     final_markdown = sequential_replace(final_markdown, "\n----------\n")
     
     #markdown_lines = []
@@ -118,8 +122,7 @@ def read_document_docling(source) -> str:
     #with (out_path / f"{conv_result.input.file}.docling.tree").open("w", encoding="utf-8") as fp:
     #    fp.write(conv_result.document.export_to_element_tree())
     
-    print("markdown created.", datetime.now(), f"{time.time() - start:.1f}")
-    print("markdown length", len(final_markdown))
+    print_time(f"markdown created. length={len(final_markdown)}")
 
     return final_markdown
 
@@ -130,7 +133,11 @@ if __name__ == "__main__":
     else:
         input_file = Path("input.pdf")
     result = read_document_docling(input_file)
-    print("markdown length:", len(result))
-    out_path = Path(".")
-    with (out_path / f"{input_file}.docling.md").open("w", encoding="utf-8") as fp:
+    if len(sys.argv) > 2:
+        out_file = Path(sys.argv[2])
+    else:
+        out_file = input_file.parent / f"{input_file.name}.docling.md"
+
+    print_time(f"writing to: {out_file}")
+    with out_file.open("w", encoding="utf-8") as fp:
         fp.write(result)
