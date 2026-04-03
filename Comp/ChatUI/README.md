@@ -12,6 +12,9 @@
   ```
 * admin user: 会社メール、情シスパスワード(2026.3)
 
+* User manegement
+- to turn off user management (single user, no admin) :  `$env:WEBUI_AUTH="False"`
+
 * setting offline
   - https://docs.openwebui.com/tutorials/maintenance/offline-mode
   - answer from chatGPT

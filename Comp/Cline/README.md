@@ -26,7 +26,7 @@
         - Model ID: gpt4.1
         - gpt-5xxx is not supported officially,  https://docs.cline.bot/provider-config/openai-compatible
         - for supported models, see https://docs.cline.bot/provider-config/openai-compatible#openai-compatible
-        * gpt-4.1, gpt-5-mini connected.
+        * gpt-4.1, gpt-5-mini connected, gpt-5 not connected (due to endpoint path is different)
 
 ## Setup using LiteLLM xxx -> FAILED...
 - For using Azure OpenAI gpt-5, that is not suported by Cline, use LiteLLM proxy, that convert from Azure OpenAI gpt-4 to gpt-5, etc.
