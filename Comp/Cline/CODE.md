@@ -143,6 +143,7 @@ export class Task {
 
 
 ### LLM API CALL
+
 src/core/task/index.ts
 ```javascript
 export class Task {
@@ -184,6 +185,7 @@ export class PromptRegistry {
 	}
 ```
 ### MESSAGES
+
 ```typescript
 class Task {
 	public async startTask(task?: string, images?: string[], files?: string[]): Promise<void> {
@@ -244,6 +246,7 @@ class Task {
 
 
 ### TOOL CALL
+
 src\core\task\ToolExecutor.ts
 ```
 export class ToolExecutor {
