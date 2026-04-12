@@ -45,6 +45,11 @@
   $env:WEBUI_BANNERS='[{"id":"notice1","type":"info","title":"Welcome","content":"社内AIチャットへようこそ","dismissible":true,"timestamp":1000}]'
   ```
 
+* Single User mode (Admin user only)
+  ```powershell
+  $env:WEBUI_AUTH="false"
+  ```
+
 * Remove Arena model 
   - 管理パネル→設定→評価→Arena Modelのチェックを外す
 
