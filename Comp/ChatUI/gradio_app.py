@@ -2,14 +2,11 @@ from urllib import response
 
 import gradio as gr
 import PyPDF2
-#import openai
 from openai import AzureOpenAI
 from pprint import pprint
-#import tiktoken
-#import sys
 import os
-
-#openai.log = "debug"
+import datetime
+import logging
 
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "")  
 deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
@@ -19,19 +16,37 @@ print(endpoint)
 print(deployment)
 print(subscription_key)
 
+
+logging.basicConfig(
+    level=logging.INFO,
+    filename="logs/gradio.log",
+    encoding="utf-8",
+    format="%(asctime)s | %(levelname)s | %(message)s"
+)
+
+logging.info("Application started")
+
 stream = False
 
+models = [
+    {"deployment": deployment, "endpoint": endpoint, "subscription_key": subscription_key, "api_version": "2024-10-21"},
+    {"deployment": "gpt-5-mini", "endpoint": endpoint, "subscription_key": subscription_key, "api_version": "2024-10-21"},
+    {"deployment": "gpt-5.4", "endpoint": endpoint, "subscription_key": subscription_key, "api_version": "2024-10-21"},
+]
+
+for m in models:
+    client = AzureOpenAI(  
+        azure_endpoint=m["endpoint"],
+        api_key=m["subscription_key"],
+        api_version=m["api_version"],
+    )
+    m["client"] = client
 
 
-client = AzureOpenAI(  
-    azure_endpoint=endpoint,  
-    api_key=subscription_key,  
-    api_version="2024-10-21",  # Use the latest API version
-)  
-
-def createCompletion(prompt):
+def createCompletion(prompt, model):
+    client = next((m["client"] for m in models if m["deployment"] == model), None)
     response = client.chat.completions.create(
-        model=deployment, # model = "deployment_name".
+        model=model,
         messages=[
             #{"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt},
@@ -41,8 +56,15 @@ def createCompletion(prompt):
     return response.choices[0].message.content
 
 
-def chat(message, history=[], model=None, pdf=None):
-    #pprint({"message": message, "history": history, "model": model, "pdf": pdf})
+def chat(message, history, request: gr.Request, model, pdf=None):
+    #pprint({"message": message, "history": history, "request": request, "model": model, "pdf": pdf})
+
+    ip = request.client.host
+    ua = request.headers.get("user-agent", "")
+    msg = message[:70].replace('\n', ' ')
+    log = f"CHAT_LOG | IP={ip} | model={model} | msg={msg}"
+    logging.info(log)
+
     text = ""
     if pdf:
         reader = PyPDF2.PdfReader(pdf.name)
@@ -50,19 +72,21 @@ def chat(message, history=[], model=None, pdf=None):
         prompt = f"{message}\n\n======= PDF内容 =======:\n{text}\n"
     else:
         prompt = message
-    print("prompt:", prompt)
 
-    res = createCompletion(prompt)
-    print("response:", res)
+    #print("prompt:", prompt)
+    res = createCompletion(prompt, model)
+    #print("response:", res)
+
     return res
 
 
 gr.ChatInterface(
     fn=chat,
     additional_inputs=[
-        gr.Radio(choices=["GPT-5-mini", "GPT-5.4"], label="Model", value="GPT-5-mini"),
+        gr.Radio(choices=[m["deployment"] for m in models], label="Model", value=models[0]["deployment"]),
         gr.File(label="PDFを添付"), 
     ],
     title="AI Chat",
     description="PDFをアップロードして、内容に基づいて質問してください。",
+    analytics_enabled=False,
 ).launch()

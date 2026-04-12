@@ -83,6 +83,13 @@ https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/starti
 
 ```
 pip install gradio
+$env:GRADIO_TELEMETRY_ENABLED="false"
 python gradio_app.py
 ```
 
+* disable telemetry to cloud
+```
+gr.ChatInterface(
+    ...
+    analytics_enabled=False,
+```
