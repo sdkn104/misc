@@ -77,3 +77,12 @@ https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/starti
 
 ### invoke URL
 - specify MODEL: http://localhost:3000/?model=gpt-4.1
+
+
+# Gradio ChatInterface
+
+```
+pip install gradio
+python gradio_app.py
+```
+
