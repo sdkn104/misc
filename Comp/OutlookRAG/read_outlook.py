@@ -28,6 +28,11 @@ def get_emails_in_folder(folder, start_date, end_date):
     メールアイテム (Class 43) の情報を辞書形式でリストにして返す。
     """
     mails = []
+
+    if folder.Name in ["削除済みアイテム", "故障解析メール", "自動", "同期の問題", "重複", "ワークフロー", "転送済み"]:
+        print(f"スキップ: {folder.Name}")
+        return mails
+
     try:
         # Items の取得・ソート
         items = folder.Items
@@ -46,6 +51,7 @@ def get_emails_in_folder(folder, start_date, end_date):
             if mail.Class == 43:
                 try:
                     messageID = mail.entryID
+                    folderName  = folder.Name
                     subject = mail.Subject
                     sender  = mail.SenderName
                     to      = mail.To
@@ -63,6 +69,7 @@ def get_emails_in_folder(folder, start_date, end_date):
                             del att  # 添付オブジェクトは使い終わったら削除
                     mails.append({
                         "message-id": messageID,
+                        "folder": folderName,
                         "subject": subject,
                         "from":    sender,
                         "to":      to,
@@ -128,10 +135,13 @@ def get_all_emails(start_date, end_date):
         gc.collect()
     return all_emails
 
+
 if __name__ == '__main__':
     # 例: 2025年1月1日から2025年1月31日までのメールを取得
-    start_date = datetime.datetime(2025, 4, 1, 0, 0, 0)
-    end_date   = datetime.datetime(2025, 5, 31, 23, 59, 59)
+    start_date = datetime.datetime(2025, 11, 1, 0, 0, 0)
+    end_date   = datetime.datetime(2026, 5, 1, 23, 59, 59)
+    print("メール取得範囲:", start_date, "から", end_date)
+    print("開始:", datetime.datetime.now())
     emails = get_all_emails(start_date, end_date)    
     print("取得したメール数:", len(emails))
     #with open("emails.pkl", "wb") as f:
@@ -141,11 +151,13 @@ if __name__ == '__main__':
 
     with open("emails.json", "w", encoding="utf-8") as f:
         json.dump(emails, f, indent=4)
-    for mail in emails:
-        print("件名:", mail["subject"])
-        print("From:", mail["from"])
-        print("To:", mail["to"])
-        print("Cc:", mail["cc"])
-        print("Sent:", mail["sent"])
-        print("添付ファイル:", mail["attachments"])
-        print("-" * 40)
+    # for mail in emails:
+    #     print("件名:", mail["subject"])
+    #     print("From:", mail["from"])
+    #     print("To:", mail["to"])
+    #     print("Cc:", mail["cc"])
+    #     print("Sent:", mail["sent"])
+    #     print("添付ファイル:", mail["attachments"])
+    #     print("-" * 40)
+
+    print("終了:", datetime.datetime.now())
