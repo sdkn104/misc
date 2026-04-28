@@ -5,7 +5,8 @@ import json
 import pickle
 
 """
-pythonで、outlookのメールを取得し、リストに保存する。メモリ管理に気を付けて。取得するメールは指定日付範囲の全メール。すべてのフォルダ内のメールが対象。取得したメールの件名、From, To, Cc, Sent、添付ファイル名を保存する。
+pythonで、outlookのメールを取得し、リストに保存する。メモリ管理に気を付けて。
+取得するメールは指定日付範囲の全メール。すべてのフォルダ内のメールが対象。取得したメールの件名、From, To, Cc, Sent、添付ファイル名を保存する。
 """
 
 def get_all_subfolders(parent_folder):
