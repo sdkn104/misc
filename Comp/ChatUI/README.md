@@ -12,6 +12,9 @@
   ```
 * admin user: 会社メール、情シスパスワード(2026.3)
 
+* User manegement
+- to turn off user management (single user, no admin) :  `$env:WEBUI_AUTH="False"`
+
 * setting offline
   - https://docs.openwebui.com/tutorials/maintenance/offline-mode
   - answer from chatGPT
@@ -45,6 +48,11 @@
   $env:WEBUI_BANNERS='[{"id":"notice1","type":"info","title":"Welcome","content":"社内AIチャットへようこそ","dismissible":true,"timestamp":1000}]'
   ```
 
+* Single User mode (Admin user only)
+  ```powershell
+  $env:WEBUI_AUTH="false"
+  ```
+
 * Remove Arena model 
   - 管理パネル→設定→評価→Arena Modelのチェックを外す
 
@@ -72,3 +80,19 @@ https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/starti
 
 ### invoke URL
 - specify MODEL: http://localhost:3000/?model=gpt-4.1
+
+
+# Gradio ChatInterface
+
+```
+pip install gradio
+$env:GRADIO_TELEMETRY_ENABLED="false"
+python gradio_app.py
+```
+
+* disable telemetry to cloud
+```
+gr.ChatInterface(
+    ...
+    analytics_enabled=False,
+```
