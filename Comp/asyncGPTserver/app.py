@@ -2,6 +2,7 @@
 # 依存関係: fastapi==0.111.1, uvicorn==0.24.0, azure-openai==1.0.0, python-dotenv==1.0.0
 # 実行: python app_fastapi.py
 
+import asyncio
 import os
 import sqlite3
 import uuid
@@ -178,15 +179,13 @@ async def generate(request_data: GenerateRequest):
 
     save_request(request_id, request_data.prompt, request_data.model, request_data.max_tokens, request_data.temperature)
 
-    try:
-        result = await generate_text(request_id, request_data.prompt, request_data.model, request_data.max_tokens, request_data.temperature)
-        return {
-            'request_id': request_id,
-            'status': 'completed',
-            'result': result
-        }
-    except Exception as exc:
-        raise HTTPException(status_code=500, detail=str(exc))
+    # バックグラウンドタスクで非同期に実行
+    asyncio.create_task(generate_text(request_id, request_data.prompt, request_data.model, request_data.max_tokens, request_data.temperature))
+
+    return {
+        'request_id': request_id,
+        'status': 'processing'
+    }
 
 
 @app.get('/result/{request_id}')
@@ -211,4 +210,4 @@ async def get_result_endpoint(request_id: str):
 if __name__ == '__main__':
     import uvicorn
 
-    uvicorn.run('app_fastapi:app', host='0.0.0.0', port=8000, reload=False)
+    uvicorn.run('app:app', host='0.0.0.0', port=8000, reload=False)

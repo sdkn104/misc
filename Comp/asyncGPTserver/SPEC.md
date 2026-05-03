@@ -28,7 +28,7 @@
    - `request_id`をクライアントから指定可能。指定がない場合はサーバーが自動生成し、即時返却
 
 2. **非同期処理**
-   - Azure OpenAI APIを非同期で呼び出し
+   - Azure OpenAI APIを非同期で呼び出して即応答
    - 処理結果をSQLiteデータベースに保存
 
 3. **結果取得**
@@ -42,7 +42,7 @@
 - **リクエストボディ**:
   ```json
   {
-    "request_id": "uuid-string",  // オプション
+    "request_id": "id-string",  // オプション
     "prompt": "生成するテキストのプロンプト",
     "model": "gpt-3.5-turbo",  // オプション
     "max_tokens": 100,         // オプション
@@ -52,7 +52,7 @@
 - **レスポンス**:
   ```json
   {
-    "request_id": "uuid-string",
+    "request_id": "id-string",
     "status": "processing"
   }
   ```
