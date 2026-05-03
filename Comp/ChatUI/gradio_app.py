@@ -10,10 +10,8 @@ import logging
 import math
 
 from langchain_openai import AzureChatOpenAI
-from langchain.agents import AgentExecutor, create_openai_tools_agent
 from langchain_core.tools import tool
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.messages import HumanMessage, AIMessage
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage, SystemMessage
 
 # Azure OpenAI の接続情報を環境変数から取得
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "")
@@ -54,7 +52,9 @@ for m in models:
     m["client"] = client
 
 
-# --- エージェント用ツール定義 ---
+# --------------------------------------------------------------------------------
+# --- エージェント用ツール定義
+# --------------------------------------------------------------------------------
 
 @tool
 def get_current_datetime() -> str:
@@ -85,17 +85,11 @@ def count_words(text: str) -> str:
 # エージェントが使用するツール一覧
 AGENT_TOOLS = [get_current_datetime, calculate, count_words]
 
-# エージェント用プロンプトテンプレート（チャット履歴と中間思考ステップを含む）
-AGENT_PROMPT = ChatPromptTemplate.from_messages([
-    ("system", "あなたは役立つAIアシスタントです。必要に応じてツールを使って回答してください。"),
-    MessagesPlaceholder("chat_history"),
-    ("human", "{input}"),
-    MessagesPlaceholder("agent_scratchpad"),
-])
-
-
-def create_agent(model_name: str) -> AgentExecutor:
-    """指定モデルで LangChain エージェントを生成して返す"""
+# --------------------------------------------------------------------------------
+# -- エージェントモードの応答生成
+# --------------------------------------------------------------------------------
+def run_agent(model_name: str, prompt: str, history: list) -> str:
+    """指定モデルで LangChain エージェントを実行して応答を返す"""
     m = next((m for m in models if m["deployment"] == model_name), models[0])
     llm = AzureChatOpenAI(
         azure_endpoint=m["endpoint"],
@@ -104,19 +98,56 @@ def create_agent(model_name: str) -> AgentExecutor:
         azure_deployment=model_name,
         temperature=0,
     )
-    agent = create_openai_tools_agent(llm, AGENT_TOOLS, AGENT_PROMPT)
-    return AgentExecutor(agent=agent, tools=AGENT_TOOLS, verbose=True)
+    llm_with_tools = llm.bind_tools(AGENT_TOOLS)
+    tools_map = {t.name: t for t in AGENT_TOOLS}
 
+    chat_history = []
+    for entry in history:
+        if isinstance(entry, dict):
+            if entry["role"] == "user":
+                chat_history.append(HumanMessage(content=entry["content"]))
+            elif entry["role"] == "assistant":
+                chat_history.append(AIMessage(content=entry["content"]))
+        elif isinstance(entry, (list, tuple)) and len(entry) == 2:
+            chat_history.append(HumanMessage(content=entry[0]))
+            chat_history.append(AIMessage(content=entry[1]))
 
-def createCompletion(prompt, model):
-    """通常モード: Azure OpenAI に単一プロンプトを送り応答テキストを返す"""
+    messages = [
+        SystemMessage(content="あなたは役立つAIアシスタントです。必要に応じてツールを使って回答してください。"),
+        *chat_history,
+        HumanMessage(content=prompt),
+    ]
+
+    while True:
+        response = llm_with_tools.invoke(messages)
+        messages.append(response)
+        if not response.tool_calls:
+            return response.content
+        for tc in response.tool_calls:
+            print(f"Invoking tool: {tc['name']} with args: {tc['args']}")
+            result = tools_map[tc["name"]].invoke(tc["args"])
+            messages.append(ToolMessage(content=str(result), tool_call_id=tc["id"]))
+
+# --------------------------------------------------------------------------------
+# --- 通常モードの応答生成
+# --------------------------------------------------------------------------------
+def createCompletion(prompt, model, history):
+    """通常モード: Azure OpenAI にチャット履歴と新規プロンプトを送り応答テキストを返す"""
     client = next((m["client"] for m in models if m["deployment"] == model), None)
+    messages = []
+    for entry in history:
+        if isinstance(entry, dict):
+            if entry["role"] == "user":
+                messages.append({"role": "user", "content": entry["content"]})
+            elif entry["role"] == "assistant":
+                messages.append({"role": "assistant", "content": entry["content"]})
+        elif isinstance(entry, (list, tuple)) and len(entry) == 2:
+            messages.append({"role": "user", "content": entry[0]})
+            messages.append({"role": "assistant", "content": entry[1]})
+    messages.append({"role": "user", "content": prompt})
     response = client.chat.completions.create(
         model=model,
-        messages=[
-            #{"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": prompt},
-        ],
+        messages=messages,
         stream=stream,
     )
     return response.choices[0].message.content
@@ -138,22 +169,9 @@ def chat(message, history, request: gr.Request, mode, model, pdf=None):
         prompt = message
 
     if mode == "エージェント":
-        # Gradio の履歴形式（dict または tuple）を LangChain のメッセージ形式に変換
-        chat_history = []
-        for entry in history:
-            if isinstance(entry, dict):
-                if entry["role"] == "user":
-                    chat_history.append(HumanMessage(content=entry["content"]))
-                elif entry["role"] == "assistant":
-                    chat_history.append(AIMessage(content=entry["content"]))
-            elif isinstance(entry, (list, tuple)) and len(entry) == 2:
-                chat_history.append(HumanMessage(content=entry[0]))
-                chat_history.append(AIMessage(content=entry[1]))
-        agent_executor = create_agent(model)
-        result = agent_executor.invoke({"input": prompt, "chat_history": chat_history})
-        return result["output"]
+        return run_agent(model, prompt, history)
     else:
-        return createCompletion(prompt, model)
+        return createCompletion(prompt, model, history)
 
 
 # Gradio UI の構築と起動
