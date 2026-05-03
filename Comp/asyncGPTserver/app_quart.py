@@ -1,17 +1,15 @@
-# FastAPI Async GPT Server
-# 依存関係: fastapi==0.111.1, uvicorn==0.24.0, azure-openai==1.0.0, python-dotenv==1.0.0
-# 実行: python app_fastapi.py
+# Quart Async GPT Server
+# 依存関係: Quart==0.19.0, azure-openai==1.0.0, python-dotenv==1.0.0
+# インストール: pip install quart azure-openai python-dotenv
 
-import os
-import sqlite3
 import uuid
+import sqlite3
+import os
+import asyncio
 from datetime import datetime
-from typing import Optional
-
+from quart import Quart, request, jsonify
 from openai import AsyncAzureOpenAI
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 
 # 環境変数読み込み
 load_dotenv()
@@ -21,18 +19,17 @@ load_dotenv()
 # ----------------------------------------------------------------
 DATABASE_PATH = 'async_gpt.db'
 
-
 def get_db_connection():
     conn = sqlite3.connect(DATABASE_PATH)
-    conn.execute('PRAGMA journal_mode=WAL;')
+    conn.execute('PRAGMA journal_mode=WAL;')  # WALモード有効化
     conn.row_factory = sqlite3.Row
     return conn
-
 
 def init_db():
     conn = get_db_connection()
     cursor = conn.cursor()
 
+    # リクエストテーブル作成
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS requests (
             request_id TEXT PRIMARY KEY,
@@ -46,6 +43,7 @@ def init_db():
         )
     ''')
 
+    # 結果テーブル作成
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS results (
             request_id TEXT PRIMARY KEY,
@@ -58,8 +56,7 @@ def init_db():
     conn.commit()
     conn.close()
 
-
-def save_request(request_id: str, prompt: str, model: str, max_tokens: int, temperature: float):
+def save_request(request_id, prompt, model, max_tokens, temperature):
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('''
@@ -69,8 +66,7 @@ def save_request(request_id: str, prompt: str, model: str, max_tokens: int, temp
     conn.commit()
     conn.close()
 
-
-def update_request_status(request_id: str, status: str):
+def update_request_status(request_id, status):
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('''
@@ -79,8 +75,7 @@ def update_request_status(request_id: str, status: str):
     conn.commit()
     conn.close()
 
-
-def save_result(request_id: str, result: Optional[str] = None, error: Optional[str] = None):
+def save_result(request_id, result=None, error=None):
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('''
@@ -90,8 +85,7 @@ def save_result(request_id: str, result: Optional[str] = None, error: Optional[s
     conn.commit()
     conn.close()
 
-
-def get_request_status(request_id: str) -> Optional[str]:
+def get_request_status(request_id):
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('SELECT status FROM requests WHERE request_id = ?', (request_id,))
@@ -99,8 +93,7 @@ def get_request_status(request_id: str) -> Optional[str]:
     conn.close()
     return row['status'] if row else None
 
-
-def get_result(request_id: str):
+def get_result(request_id):
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('SELECT result, error FROM results WHERE request_id = ?', (request_id,))
@@ -108,94 +101,103 @@ def get_result(request_id: str):
     conn.close()
     return row
 
-
 # ----------------------------------------------------------------
 # Azure OpenAI クライアント初期化
 # ----------------------------------------------------------------
 client = AsyncAzureOpenAI(
     api_key=os.getenv('AZURE_OPENAI_API_KEY'),
-    api_version='2023-12-01-preview',
+    api_version="2023-12-01-preview",
     azure_endpoint=os.getenv('AZURE_OPENAI_ENDPOINT')
 )
 
+async def generate_text(request_id, prompt, model, max_tokens, temperature):
+    try:
+        # ステータスをprocessingに設定
+        update_request_status(request_id, 'processing')
 
-class GenerateRequest(BaseModel):
-    prompt: str
-    request_id: Optional[str] = None
-    model: Optional[str] = 'gpt-4.1'
-    max_tokens: Optional[int] = 100
-    temperature: Optional[float] = 0.7
+        # Azure OpenAI API呼び出し
+        response = await client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
+
+        # 結果取得
+        result = response.choices[0].message.content
+
+        # ステータスをcompletedに更新
+        update_request_status(request_id, 'completed')
+        save_result(request_id, result=result)
+
+    except Exception as e:
+        # エラー処理
+        update_request_status(request_id, 'failed')
+        save_result(request_id, error=str(e))
+
+def start_background_task(request_id, prompt, model, max_tokens, temperature):
+    # バックグラウンドで非同期タスクを開始
+    asyncio.create_task(generate_text(request_id, prompt, model, max_tokens, temperature))
 
 # ----------------------------------------------------------------
-# FastAPI 初期化
+# Quartアプリ初期化
 # ----------------------------------------------------------------
-app = FastAPI()
+app = Quart(__name__)
 
 # ----------------------------------------------------------------
 # データベース初期化
 # ----------------------------------------------------------------
 init_db()
 
-
-# ----------------------------------------------------------------
-# ----------------------------------------------------------------
-async def generate_text(request_id: str, prompt: str, model: str, max_tokens: int, temperature: float) -> str:
-    try:
-        update_request_status(request_id, 'processing')
-
-        response = await client.chat.completions.create(
-            model=model,
-            messages=[{'role': 'user', 'content': prompt}],
-            max_tokens=max_tokens,
-            temperature=temperature
-        )
-
-        result = response.choices[0].message.content
-        update_request_status(request_id, 'completed')
-        save_result(request_id, result=result)
-        return result
-
-    except Exception as exc:
-        update_request_status(request_id, 'failed')
-        save_result(request_id, error=str(exc))
-        raise
-
 # ----------------------------------------------------------------
 # APIエンドポイント
 # ----------------------------------------------------------------
-@app.post('/generate')
-async def generate(request_data: GenerateRequest):
-    if not request_data.prompt or not isinstance(request_data.prompt, str):
-        raise HTTPException(status_code=400, detail='Prompt is required')
+@app.route('/generate', methods=['POST'])
+async def generate():
+    data = request.get_json()
+    if not data or 'prompt' not in data:
+        return jsonify({'error': 'Prompt is required'}), 400
 
-    if len(request_data.prompt) > 1000000:
-        raise HTTPException(status_code=400, detail='Prompt too long')
+    prompt = data['prompt']
+    model = data.get('model', 'gpt-4.1')
+    max_tokens = data.get('max_tokens', 100)
+    temperature = data.get('temperature', 0.7)
+    request_id = data.get('request_id')
 
-    request_id = request_data.request_id or str(uuid.uuid4())
-    if request_data.request_id is not None:
+    # 入力バリデーション
+    if len(prompt) > 1000000:  # 例: プロンプト長さ制限
+        return jsonify({'error': 'Prompt too long'}), 400
+
+    if request_id is not None:
+        if not isinstance(request_id, str) or not request_id.strip():
+            return jsonify({'error': 'request_id must be a non-empty string'}), 400
         if get_request_status(request_id) is not None:
-            raise HTTPException(status_code=409, detail='Request ID already exists')
+            return jsonify({'error': 'Request ID already exists'}), 409
+    else:
+        request_id = str(uuid.uuid4())
 
-    save_request(request_id, request_data.prompt, request_data.model, request_data.max_tokens, request_data.temperature)
+    # データベースに保存
+    save_request(request_id, prompt, model, max_tokens, temperature)
 
-    try:
-        result = await generate_text(request_id, request_data.prompt, request_data.model, request_data.max_tokens, request_data.temperature)
-        return {
-            'request_id': request_id,
-            'status': 'completed',
-            'result': result
-        }
-    except Exception as exc:
-        raise HTTPException(status_code=500, detail=str(exc))
+    # バックグラウンドタスク開始
+    start_background_task(request_id, prompt, model, max_tokens, temperature)
 
+    return jsonify({
+        'request_id': request_id,
+        'status': 'processing'
+    })
 
-@app.get('/result/{request_id}')
-async def get_result_endpoint(request_id: str):
+@app.route('/result/<request_id>', methods=['GET'])
+async def get_result_endpoint(request_id):
     status = get_request_status(request_id)
     if not status:
-        raise HTTPException(status_code=404, detail='Request not found')
+        return jsonify({'error': 'Request not found'}), 404
 
-    response = {'request_id': request_id, 'status': status}
+    response = {
+        'request_id': request_id,
+        'status': status
+    }
+
     if status == 'completed':
         result_data = get_result(request_id)
         if result_data:
@@ -205,10 +207,9 @@ async def get_result_endpoint(request_id: str):
         if result_data and result_data['error']:
             response['error'] = result_data['error']
 
-    return response
+    return jsonify(response)
 
-
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
 if __name__ == '__main__':
-    import uvicorn
-
-    uvicorn.run('app_fastapi:app', host='0.0.0.0', port=8000, reload=False)
+    app.run(debug=True)

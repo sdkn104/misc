@@ -1,19 +1,19 @@
-# Async GPT Server 仕様書
+# FastAPI Async GPT Server 仕様書
 
 ## 1. 概要
 
-この仕様書は、REQ.mdに記載された要件に基づいて、Flaskフレームワークを使用したWeb APIの実装を定義します。
+この仕様書は、REQ.mdに記載された要件に基づいて、FastAPIフレームワークを使用したWeb APIの実装を定義します。
 本APIは、非同期でAzure OpenAI APIを呼び出し、その結果をSQLiteデータベースに保存し、クライアントからの問い合わせに対して結果を返却する機能を備えます。
 
 ## 2. システム概要
 
-- **フレームワーク**: Flask (Python)
+- **フレームワーク**: FastAPI (Python)
 - **データベース**: SQLite (WALモード)
 - **外部API**: Azure OpenAI API
 - **処理方式**: 非同期処理 (async/awaitを使用)
 
 システムは以下の主要コンポーネントから構成されます：
-- Web APIサーバー (Flask)
+- Web APIサーバー (FastAPI)
 - 非同期タスク処理モジュール
 - データベース管理モジュール
 - Azure OpenAI API連携モジュール
@@ -104,7 +104,8 @@
 
 ### 6.1 環境
 - Python 3.8+
-- Flask 2.0+
+- FastAPI 0.111+
+- Uvicorn 0.24+
 - azure-openai 1.0+
 - sqlite3 (標準ライブラリ)
 
@@ -135,5 +136,6 @@
 
 ## 9. 変更履歴
 
+- v1.2: FastAPIへの移行 (2026-05-03)
 - v1.1: 非同期処理の明確化 (async/await使用) (2026-05-02)
 - v1.0: 初回仕様書作成 (2026-05-02)
