@@ -7,6 +7,11 @@ Alice -> Bob: Hello, Kroki!
 @enduml
 ```
 
+```plantuml
+@startuml
+A --> B
+@enduml
+```
 
 ```blockdiag
 blockdiag {
@@ -204,7 +209,7 @@ digraph "unix" {
 }
 ```
 
-```plantuml
+```kroki-plantuml
 @startmindmap
 skinparam monochrome true
 + OS

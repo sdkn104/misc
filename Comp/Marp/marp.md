@@ -151,7 +151,7 @@ drawio.svg
   - https://www.mermaidchart.com/
 - VScode extensions
   - [Mermaid Chart](https://github.com/Mermaid-Chart/vscode-mermaid-chart)
-    - connecting to cloud marmaidchart.com
+    - connecting to **cloud marmaidchart.com**
   - [Mermaid Editor](https://marketplace.visualstudio.com/items?itemName=tomoyukim.vscode-mermaid-editor)
     - 100% local solution
     - work on .mmd file, export to svg
@@ -160,6 +160,29 @@ drawio.svg
     - offline
     - work on code block in .md file, cannot save
   - Mermaid Markdown Syntax Highlighting
+
+</div><div>
+
+mermaid.svg
+
+![w:600px](mermaid.svg)
+
+</div>
+
+---
+## PlantUML
+
+<div class="twocols"><div>
+
+- PlantUML
+  - https://plantuml.com/ja/
+  - 
+- VScode extensions
+  - [PlantUML](hhttps://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+    - default is local renderer, can choose server renderer
+    - must install java. (plantUML extension includes plantUML itself)
+    - should install graphviz (it is automatically installed???)
+    - Alt+D to preview for .puml, etc.
 
 </div><div>
 
