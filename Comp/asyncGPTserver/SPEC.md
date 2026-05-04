@@ -43,14 +43,15 @@
   ```json
   {
     "request_id": "id-string",          // オプション
-    "prompt": "生成するテキストのプロンプト",
-    "model": "gpt-4.1",                 // オプション
-    "max_completion_tokens": 500,       // オプション。省略時はAPIリクエストに含めない
-    "reasoning_effort": "high",         // オプション ("low"|"medium"|"high")。省略時はAPIリクエストに含めない
-    "verbosity": "auto"                 // オプション。省略時はAPIリクエストに含めない
+    "azure_openai_body": {
+      "model": "gpt-4.1",
+      "messages": [{"role": "user", "content": "..."}],
+      "max_completion_tokens": 500,     // オプション
+      "reasoning_effort": "high"        // オプション
+    }
   }
   ```
-- **備考**: `max_completion_tokens`, `reasoning_effort`, `verbosity` は `null` または省略した場合、Azure OpenAI API へのリクエストボディに該当フィールドを含めない
+- **備考**: `azure_openai_body` の内容は型チェックを行わず、そのまま Azure OpenAI API へ渡す
 - **レスポンス**:
   ```json
   {
@@ -59,15 +60,33 @@
   }
   ```
 
+#### GET /history
+- **説明**: 全リクエストの処理履歴を取得
+- **レスポンス**: 新しい順の配列
+  ```json
+  [
+    {
+      "request_id": "uuid-string",
+      "model": "gpt-4.1",
+      "status": "completed|processing|failed",
+      "created_at": "2026-05-04 12:34:56.789000",
+      "updated_at": "2026-05-04 12:35:01.123000",
+      "azure_response_status": 200,
+      "azure_openai_body": { ... }
+    }
+  ]
+  ```
+- **備考**: `azure_openai_body` は処理中（results未登録）の場合 `null`
+
 #### GET /result/{request_id}
 - **説明**: 生成結果を取得
+- **HTTPステータス**: processing時は200。completed/failed時はAzure OpenAI APIのレスポンスステータスと同じ値を返す
 - **レスポンス**:
   ```json
   {
     "request_id": "uuid-string",
     "status": "completed|processing|failed",
-    "result": "生成されたテキスト",  // statusがcompletedの場合
-    "error": "エラーメッセージ"       // statusがfailedの場合
+    "azure_openai_body": { ... }   // statusがcompleted/failedの場合。Azure OpenAI APIのレスポンスbodyをそのまま格納
   }
   ```
 
@@ -83,25 +102,21 @@
 
 ### 4.3 セキュリティ
 - APIキー管理: Azure OpenAI APIキーを環境変数で管理
-- 入力バリデーション: プロンプトの長さ制限、特殊文字チェック
 
 ## 5. データモデル
 
 ### 5.1 リクエストテーブル
 - request_id (TEXT, PRIMARY KEY): UUID形式
-- prompt (TEXT): 生成プロンプト
-- model (TEXT): 使用モデル
-- max_completion_tokens (INTEGER, nullable): 最大完了トークン数
-- reasoning_effort (TEXT, nullable): 推論努力度 ("low"|"medium"|"high")
-- verbosity (TEXT, nullable): 詳細度
+- prompt (TEXT): azure_openai_body の JSON 文字列
+- model (TEXT): azure_openai_body から抽出したモデル名
 - status (TEXT): processing|completed|failed
-- created_at (TIMESTAMP): 作成日時
-- updated_at (TIMESTAMP): 更新日時
+- created_at (TIMESTAMP): リクエスト受付時刻 (`datetime.now()` によるローカル時刻)
+- updated_at (TIMESTAMP): ステータス更新時刻 (`datetime.now()` によるローカル時刻)
 
 ### 5.2 結果テーブル
 - request_id (TEXT, PRIMARY KEY, FOREIGN KEY): リクエストID
-- result (TEXT): 生成結果
-- error (TEXT): エラーメッセージ (失敗時)
+- azure_response_status (INTEGER): Azure OpenAI APIのHTTPステータスコード
+- azure_response_body (TEXT): Azure OpenAI APIのレスポンスbody JSON文字列
 
 ## 6. 技術仕様
 
@@ -139,6 +154,9 @@
 
 ## 9. 変更履歴
 
+- v1.6: `/history` エンドポイント追加。`created_at`/`updated_at` を SQLite デフォルトから Python `datetime.now()` によるローカル時刻記録に変更 (2026-05-04)
+- v1.5: レスポンス形式変更 — `/result` のレスポンスボディを `{ request_id, status, azure_openai_body }` に変更。HTTPステータスをAzure OpenAI APIのステータスと一致させる。結果テーブルを `azure_response_status/azure_response_body` に変更 (2026-05-04)
+- v1.4: リクエスト形式変更 — `/generate` のリクエストボディを `{ request_id, azure_openai_body }` に変更。azure_openai_body は型チェックなしで Azure OpenAI API に直接渡す (2026-05-04)
 - v1.3: パラメータ変更 — `max_tokens`/`temperature` を廃止し `max_completion_tokens`/`reasoning_effort`/`verbosity` を追加。None 指定時は API リクエストに含めない (2026-05-04)
 - v1.2: FastAPIへの移行 (2026-05-03)
 - v1.1: 非同期処理の明確化 (async/await使用) (2026-05-02)

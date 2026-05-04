@@ -53,40 +53,76 @@ def use_test_db():
 class TestDbIntegration:
     def test_save_request_persists(self):
         rid = str(uuid.uuid4())
-        app_module.save_request(rid, 'integration test', 'gpt-4.1-azure', None, None, None)
+        app_module.save_request(rid, {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'integration test'}]})
         assert app_module.get_request_status(rid) == 'processing'
 
     def test_full_request_lifecycle(self):
         rid = str(uuid.uuid4())
-        app_module.save_request(rid, 'lifecycle test', 'gpt-4.1-azure', 500, 'high', None)
+        app_module.save_request(rid, {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'lifecycle test'}], 'max_completion_tokens': 500, 'reasoning_effort': 'high'})
 
         app_module.update_request_status(rid, 'completed')
-        app_module.save_result(rid, result='The answer is 42')
+        app_module.save_result(rid, azure_response_status=200, azure_response_body='{"choices":[{"message":{"content":"The answer is 42"}}]}')
 
         assert app_module.get_request_status(rid) == 'completed'
         row = app_module.get_result(rid)
-        assert row['result'] == 'The answer is 42'
-        assert row['error'] is None
+        assert row['azure_response_status'] == 200
+        assert row['azure_response_body'] is not None
 
     def test_full_request_lifecycle_failed(self):
         rid = str(uuid.uuid4())
-        app_module.save_request(rid, 'error test', 'gpt-4.1-azure', None, None, None)
+        app_module.save_request(rid, {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'error test'}]})
 
         app_module.update_request_status(rid, 'failed')
-        app_module.save_result(rid, error='timeout')
+        app_module.save_result(rid, azure_response_status=429, azure_response_body='{"error":{"message":"timeout"}}')
 
         assert app_module.get_request_status(rid) == 'failed'
         row = app_module.get_result(rid)
-        assert row['error'] == 'timeout'
-        assert row['result'] is None
+        assert row['azure_response_status'] == 429
+        assert row['azure_response_body'] is not None
 
     def test_result_upsert(self):
         """INSERT OR REPLACEで結果を上書きできること"""
         rid = str(uuid.uuid4())
-        app_module.save_request(rid, 'upsert test', 'gpt-4.1-azure', None, None, None)
-        app_module.save_result(rid, result='first')
-        app_module.save_result(rid, result='second')
-        assert app_module.get_result(rid)['result'] == 'second'
+        app_module.save_request(rid, {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'upsert test'}]})
+        app_module.save_result(rid, azure_response_status=200, azure_response_body='{"choices":[{"message":{"content":"first"}}]}')
+        app_module.save_result(rid, azure_response_status=200, azure_response_body='{"choices":[{"message":{"content":"second"}}]}')
+        assert 'second' in app_module.get_result(rid)['azure_response_body']
+
+    def test_save_request_sets_created_at(self):
+        """save_requestでcreated_atが記録されること"""
+        rid = str(uuid.uuid4())
+        app_module.save_request(rid, {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'datetime test'}]})
+        rows = app_module.get_history()
+        matched = next((r for r in rows if r['request_id'] == rid), None)
+        assert matched is not None
+        assert matched['created_at'] is not None
+
+    def test_update_request_status_sets_updated_at(self):
+        """update_request_statusでupdated_atが更新されること"""
+        rid = str(uuid.uuid4())
+        app_module.save_request(rid, {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'updated_at test'}]})
+        app_module.update_request_status(rid, 'completed')
+        rows = app_module.get_history()
+        matched = next((r for r in rows if r['request_id'] == rid), None)
+        assert matched['updated_at'] is not None
+        assert matched['updated_at'] >= matched['created_at']
+
+    def test_get_history_returns_records_newest_first(self):
+        """get_historyが新しい順で返すこと"""
+        rows = app_module.get_history()
+        assert len(rows) >= 2
+        assert rows[0]['created_at'] >= rows[1]['created_at']
+
+    def test_get_history_includes_result(self):
+        """get_historyにresultsテーブルの内容が含まれること"""
+        rid = str(uuid.uuid4())
+        app_module.save_request(rid, {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'history result test'}]})
+        app_module.update_request_status(rid, 'completed')
+        app_module.save_result(rid, azure_response_status=200, azure_response_body='{"choices":[]}')
+        rows = app_module.get_history()
+        matched = next((r for r in rows if r['request_id'] == rid), None)
+        assert matched['azure_response_status'] == 200
+        assert matched['azure_response_body'] is not None
 
 
 # ----------------------------------------------------------------
@@ -95,50 +131,54 @@ class TestDbIntegration:
 
 class TestGenerateTextIntegration:
     @pytest.mark.asyncio
-    async def test_generate_text_returns_string(self):
+    async def test_generate_text_saves_response(self):
         rid = str(uuid.uuid4())
-        app_module.save_request(rid, 'Say "hello" in one word.', 'gpt-4.1-azure', 20, None, None)
+        body = {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'Say "hello" in one word.'}], 'max_completion_tokens': 20}
+        app_module.save_request(rid, body)
 
-        result = await app_module.generate_text(rid, 'Say "hello" in one word.', 'gpt-4.1-azure', 20, None, None)
+        await app_module.generate_text(rid, body)
 
-        assert isinstance(result, str)
-        assert len(result) > 0
         assert app_module.get_request_status(rid) == 'completed'
-        assert app_module.get_result(rid)['result'] == result
+        row = app_module.get_result(rid)
+        assert row['azure_response_status'] == 200
+        assert row['azure_response_body'] is not None
 
     @pytest.mark.asyncio
     async def test_generate_text_result_saved_to_db(self):
         rid = str(uuid.uuid4())
-        prompt = 'Reply with only the number 1.'
-        app_module.save_request(rid, prompt, 'gpt-4.1-azure', None, None, None)
+        body = {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'Reply with only the number 1.'}]}
+        app_module.save_request(rid, body)
 
-        await app_module.generate_text(rid, prompt, 'gpt-4.1-azure', None, None, None)
+        await app_module.generate_text(rid, body)
 
         row = app_module.get_result(rid)
-        assert row['result'] is not None
-        assert row['error'] is None
+        assert row['azure_response_status'] == 200
+        assert row['azure_response_body'] is not None
 
     @pytest.mark.asyncio
     async def test_generate_text_with_max_completion_tokens(self):
         """max_completion_tokensを指定して生成できること"""
         rid = str(uuid.uuid4())
-        app_module.save_request(rid, 'Count from 1 to 3.', 'gpt-4.1-azure', 30, None, None)
+        body = {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'Count from 1 to 3.'}], 'max_completion_tokens': 30}
+        app_module.save_request(rid, body)
 
-        result = await app_module.generate_text(rid, 'Count from 1 to 3.', 'gpt-4.1-azure', 30, None, None)
+        await app_module.generate_text(rid, body)
 
-        assert isinstance(result, str)
         assert app_module.get_request_status(rid) == 'completed'
+        assert app_module.get_result(rid)['azure_response_status'] == 200
 
     @pytest.mark.asyncio
     async def test_generate_text_invalid_model_sets_failed(self):
         rid = str(uuid.uuid4())
-        app_module.save_request(rid, 'hello', 'nonexistent-model-xyz', None, None, None)
+        body = {'model': 'nonexistent-model-xyz', 'messages': [{'role': 'user', 'content': 'hello'}]}
+        app_module.save_request(rid, body)
 
-        with pytest.raises(Exception):
-            await app_module.generate_text(rid, 'hello', 'nonexistent-model-xyz', None, None, None)
+        await app_module.generate_text(rid, body)  # 例外はキャッチ済みでraiseしない
 
         assert app_module.get_request_status(rid) == 'failed'
-        assert app_module.get_result(rid)['error'] is not None
+        row = app_module.get_result(rid)
+        assert row['azure_response_status'] is not None
+        assert row['azure_response_body'] is not None
 
 
 # ----------------------------------------------------------------
@@ -151,11 +191,13 @@ class TestEndpointIntegration:
         """POST /generate → GET /result をポーリングして完了を確認"""
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url='http://test') as ac:
             resp = await ac.post('/generate', json={
-                'prompt': 'Reply with exactly one word: hello',
-                'model': 'gpt-5-mini',
-                'max_completion_tokens': 200,
-                'reasoning_effort': "medium",
-                'verbosity': "low",
+                'azure_openai_body': {
+                    'model': 'gpt-5-mini',
+                    'messages': [{'role': 'user', 'content': 'Reply with exactly one word: hello'}],
+                    'max_completion_tokens': 200,
+                    'reasoning_effort': 'medium',
+                    'verbosity': 'low',
+                },
             })
             assert resp.status_code == 200
             data = resp.json()
@@ -170,19 +212,22 @@ class TestEndpointIntegration:
                 if result_data['status'] in ('completed', 'failed'):
                     break
 
-        assert result_data['status'] == 'completed', f"failed with error: {result_data.get('error')}"
-        assert 'result' in result_data
-        assert len(result_data['result']) > 0
+        assert result_resp.status_code == 200
+        assert result_data['status'] == 'completed', f"failed: {result_data.get('azure_openai_body')}"
+        assert 'azure_openai_body' in result_data
+        assert result_data['azure_openai_body']['choices'][0]['message']['content']
 
     @pytest.mark.asyncio
     async def test_generate_with_custom_request_id(self):
         rid = str(uuid.uuid4())
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url='http://test') as ac:
             resp = await ac.post('/generate', json={
-                'prompt': 'Say yes.',
-                'model': 'gpt-4.1-azure',
                 'request_id': rid,
-                'max_completion_tokens': 10,
+                'azure_openai_body': {
+                    'model': 'gpt-4.1-azure',
+                    'messages': [{'role': 'user', 'content': 'Say yes.'}],
+                    'max_completion_tokens': 10,
+                },
             })
         assert resp.status_code == 200
         assert resp.json()['request_id'] == rid
@@ -190,9 +235,10 @@ class TestEndpointIntegration:
     @pytest.mark.asyncio
     async def test_duplicate_request_id_returns_409(self):
         rid = str(uuid.uuid4())
+        body = {'model': 'gpt-4.1-azure', 'messages': [{'role': 'user', 'content': 'hello'}]}
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url='http://test') as ac:
-            await ac.post('/generate', json={'prompt': 'hello', 'model': 'gpt-4.1-azure', 'request_id': rid})
-            resp = await ac.post('/generate', json={'prompt': 'hello', 'request_id': rid})
+            await ac.post('/generate', json={'request_id': rid, 'azure_openai_body': body})
+            resp = await ac.post('/generate', json={'request_id': rid, 'azure_openai_body': body})
         assert resp.status_code == 409
 
     @pytest.mark.asyncio
@@ -200,3 +246,25 @@ class TestEndpointIntegration:
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url='http://test') as ac:
             resp = await ac.get('/result/no-such-id-xyz')
         assert resp.status_code == 404
+
+    @pytest.mark.asyncio
+    async def test_history_returns_list_with_required_fields(self):
+        """GET /history がリスト形式で必須フィールドを含むこと"""
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url='http://test') as ac:
+            resp = await ac.get('/history')
+        assert resp.status_code == 200
+        data = resp.json()
+        assert isinstance(data, list)
+        assert len(data) > 0
+        entry = data[0]
+        for field in ('request_id', 'model', 'status', 'created_at', 'updated_at', 'azure_response_status', 'azure_openai_body'):
+            assert field in entry
+
+    @pytest.mark.asyncio
+    async def test_history_newest_first(self):
+        """GET /history が新しい順で返すこと"""
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url='http://test') as ac:
+            resp = await ac.get('/history')
+        data = resp.json()
+        assert len(data) >= 2
+        assert data[0]['created_at'] >= data[1]['created_at']

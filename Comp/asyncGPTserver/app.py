@@ -3,15 +3,17 @@
 # 実行: python app.py
 
 import asyncio
+import json
 import os
 import sqlite3
 import uuid
 from datetime import datetime
-from typing import Optional
+from typing import Any, Dict, Optional
 
-from openai import AsyncAzureOpenAI
+from openai import AsyncAzureOpenAI, APIStatusError
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
 # 環境変数読み込み
@@ -53,8 +55,8 @@ def init_db():
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS results (
             request_id TEXT PRIMARY KEY,
-            result TEXT,
-            error TEXT,
+            azure_response_status INTEGER,
+            azure_response_body TEXT,
             FOREIGN KEY (request_id) REFERENCES requests (request_id)
         )
     ''')
@@ -63,15 +65,15 @@ def init_db():
     conn.close()
 
 
-def save_request(request_id: str, prompt: str, model: str,
-                 max_completion_tokens: Optional[int], reasoning_effort: Optional[str], verbosity: Optional[str]):
+def save_request(request_id: str, azure_openai_body: Dict[str, Any]):
     """リクエスト情報をデータベースに保存"""
     conn = get_db_connection()
     cursor = conn.cursor()
+    model = azure_openai_body.get('model')
     cursor.execute('''
-        INSERT INTO requests (request_id, prompt, model, max_completion_tokens, reasoning_effort, verbosity)
-        VALUES (?, ?, ?, ?, ?, ?)
-    ''', (request_id, prompt, model, max_completion_tokens, reasoning_effort, verbosity))
+        INSERT INTO requests (request_id, prompt, model, created_at)
+        VALUES (?, ?, ?, ?)
+    ''', (request_id, json.dumps(azure_openai_body), model, datetime.now()))
     conn.commit()
     conn.close()
 
@@ -81,20 +83,20 @@ def update_request_status(request_id: str, status: str):
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('''
-        UPDATE requests SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE request_id = ?
-    ''', (status, request_id))
+        UPDATE requests SET status = ?, updated_at = ? WHERE request_id = ?
+    ''', (status, datetime.now(), request_id))
     conn.commit()
     conn.close()
 
 
-def save_result(request_id: str, result: Optional[str] = None, error: Optional[str] = None):
-    """生成結果またはエラーをデータベースに保存"""
+def save_result(request_id: str, azure_response_status: int, azure_response_body: str):
+    """Azure OpenAI APIのレスポンスをデータベースに保存"""
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('''
-        INSERT OR REPLACE INTO results (request_id, result, error)
+        INSERT OR REPLACE INTO results (request_id, azure_response_status, azure_response_body)
         VALUES (?, ?, ?)
-    ''', (request_id, result, error))
+    ''', (request_id, azure_response_status, azure_response_body))
     conn.commit()
     conn.close()
 
@@ -110,13 +112,30 @@ def get_request_status(request_id: str) -> Optional[str]:
 
 
 def get_result(request_id: str):
-    """リクエストの生成結果またはエラー情報を取得"""
+    """リクエストのAzure OpenAI APIレスポンスを取得"""
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT result, error FROM results WHERE request_id = ?', (request_id,))
+    cursor.execute('SELECT azure_response_status, azure_response_body FROM results WHERE request_id = ?', (request_id,))
     row = cursor.fetchone()
     conn.close()
     return row
+
+
+def get_history():
+    """全リクエストの履歴をrequests/resultsテーブルのJOINで取得"""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute('''
+        SELECT r.request_id, r.model, r.status,
+               r.created_at, r.updated_at,
+               res.azure_response_status, res.azure_response_body
+        FROM requests r
+        LEFT JOIN results res ON r.request_id = res.request_id
+        ORDER BY r.created_at DESC
+    ''')
+    rows = cursor.fetchall()
+    conn.close()
+    return rows
 
 
 # ----------------------------------------------------------------
@@ -130,12 +149,8 @@ client = AsyncAzureOpenAI(
 
 
 class GenerateRequest(BaseModel):
-    prompt: str
     request_id: Optional[str] = None
-    model: Optional[str] = 'gpt-4.1'
-    max_completion_tokens: Optional[int] = None
-    reasoning_effort: Optional[str] = None
-    verbosity: Optional[str] = None
+    azure_openai_body: Dict[str, Any]
 
 # ----------------------------------------------------------------
 # FastAPI 初期化
@@ -151,42 +166,44 @@ init_db()
 # ----------------------------------------------------------------
 # 非同期テキスト生成関数
 # ----------------------------------------------------------------
-async def generate_text(request_id: str, prompt: str, model: str,
-                        max_completion_tokens: Optional[int],
-                        reasoning_effort: Optional[str],
-                        verbosity: Optional[str]) -> str:
-    """Azure OpenAI APIを呼び出してテキストを生成し、結果をDBに保存"""
+async def generate_text(request_id: str, azure_openai_body: Dict[str, Any]):
+    """Azure OpenAI APIを呼び出し、レスポンス全体をDBに保存"""
     try:
-        # ステータスを処理中に設定
         update_request_status(request_id, 'processing')
 
-        # Noneのパラメータはリクエストに含めない
-        kwargs: dict = {
-            'model': model,
-            'messages': [{'role': 'user', 'content': prompt}],
-        }
-        if max_completion_tokens is not None:
-            kwargs['max_completion_tokens'] = max_completion_tokens
-        if reasoning_effort is not None:
-            kwargs['reasoning_effort'] = reasoning_effort
-        if verbosity is not None:
-            kwargs['verbosity'] = verbosity
+        response = await client.chat.completions.create(**azure_openai_body)
 
-        # Azure OpenAI APIを呼び出し
-        response = await client.chat.completions.create(**kwargs)
-
-        # 生成結果を取得
-        result = response.choices[0].message.content
-        # ステータスを完了に設定して結果を保存
         update_request_status(request_id, 'completed')
-        save_result(request_id, result=result)
-        return result
+        save_result(request_id, azure_response_status=200, azure_response_body=json.dumps(response.model_dump()))
+
+    except APIStatusError as exc:
+        try:
+            body = exc.response.json()
+        except Exception:
+            body = {'error': {'message': str(exc)}}
+        try:
+            update_request_status(request_id, 'failed')
+            save_result(request_id, azure_response_status=exc.status_code, azure_response_body=json.dumps(body))
+        except Exception:
+            pass
+
+    except asyncio.CancelledError:
+        # サーバー終了などによるキャンセル。DB更新後にre-raiseして正常なキャンセル伝播を維持する
+        try:
+            update_request_status(request_id, 'failed')
+            save_result(request_id, azure_response_status=500,
+                        azure_response_body=json.dumps({'error': {'message': 'Task cancelled'}}))
+        except Exception:
+            pass
+        raise
 
     except Exception as exc:
-        # エラー発生時はステータスを失敗に設定
-        update_request_status(request_id, 'failed')
-        save_result(request_id, error=str(exc))
-        raise
+        try:
+            update_request_status(request_id, 'failed')
+            save_result(request_id, azure_response_status=500,
+                        azure_response_body=json.dumps({'error': {'message': str(exc)}}))
+        except Exception:
+            pass
 
 # ----------------------------------------------------------------
 # APIエンドポイント
@@ -194,30 +211,15 @@ async def generate_text(request_id: str, prompt: str, model: str,
 @app.post('/generate')
 async def generate(request_data: GenerateRequest):
     """テキスト生成リクエストを受け付け、バックグラウンドで処理を開始"""
-    # プロンプト必須チェック
-    if not request_data.prompt or not isinstance(request_data.prompt, str):
-        raise HTTPException(status_code=400, detail='Prompt is required')
-
-    # プロンプト長さチェック
-    if len(request_data.prompt) > 1000000:
-        raise HTTPException(status_code=400, detail='Prompt too long')
-
-    # リクエストIDの生成または検証
     request_id = request_data.request_id or str(uuid.uuid4())
-    # リクエストIDが既に存在しないかチェック
     if request_data.request_id is not None:
         if get_request_status(request_id) is not None:
             raise HTTPException(status_code=409, detail='Request ID already exists')
 
-    # リクエスト情報をDBに保存
-    save_request(request_id, request_data.prompt, request_data.model,
-                 request_data.max_completion_tokens, request_data.reasoning_effort, request_data.verbosity)
+    save_request(request_id, request_data.azure_openai_body)
 
-    # 非同期処理をバックグラウンドで開始（即座に応答を返す）
-    asyncio.create_task(generate_text(request_id, request_data.prompt, request_data.model,
-                                      request_data.max_completion_tokens, request_data.reasoning_effort, request_data.verbosity))
+    asyncio.create_task(generate_text(request_id, request_data.azure_openai_body))
 
-    # 処理中ステータスで即座に応答
     return {
         'request_id': request_id,
         'status': 'processing'
@@ -227,25 +229,40 @@ async def generate(request_data: GenerateRequest):
 @app.get('/result/{request_id}')
 async def get_result_endpoint(request_id: str):
     """リクエストIDで処理結果をポーリング"""
-    # リクエストのステータスを取得
     status = get_request_status(request_id)
     if not status:
         raise HTTPException(status_code=404, detail='Request not found')
 
-    # 結果を構築
-    response = {'request_id': request_id, 'status': status}
-    # 完了時は生成結果を含める
-    if status == 'completed':
-        result_data = get_result(request_id)
-        if result_data:
-            response['result'] = result_data['result']
-    # 失敗時はエラーメッセージを含める
-    elif status == 'failed':
-        result_data = get_result(request_id)
-        if result_data and result_data['error']:
-            response['error'] = result_data['error']
+    if status == 'processing':
+        return JSONResponse(status_code=200, content={'request_id': request_id, 'status': 'processing'})
 
-    return response
+    result_data = get_result(request_id)
+    azure_status = result_data['azure_response_status'] if result_data else 500
+    azure_body = json.loads(result_data['azure_response_body']) if result_data and result_data['azure_response_body'] else {}
+
+    return JSONResponse(
+        status_code=azure_status,
+        content={'request_id': request_id, 'status': status, 'azure_openai_body': azure_body},
+    )
+
+
+@app.get('/history')
+async def get_history_endpoint():
+    """全リクエストの処理履歴を返す"""
+    rows = get_history()
+    result = []
+    for row in rows:
+        entry = {
+            'request_id': row['request_id'],
+            'model': row['model'],
+            'status': row['status'],
+            'created_at': row['created_at'],
+            'updated_at': row['updated_at'],
+            'azure_response_status': row['azure_response_status'],
+            'azure_openai_body': json.loads(row['azure_response_body']) if row['azure_response_body'] else None,
+        }
+        result.append(entry)
+    return result
 
 
 if __name__ == '__main__':
