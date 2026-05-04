@@ -59,6 +59,7 @@
     "status": "processing"
   }
   ```
+- **エラー**: 指定した `request_id` が既に存在する場合は `409 Conflict` を返す
 
 #### GET /history
 - **説明**: 全リクエストの処理履歴を取得
@@ -80,6 +81,7 @@
 
 #### GET /result/{request_id}
 - **説明**: 生成結果を取得
+- **エラー**: `request_id` が存在しない場合は `404 Not Found` を返す
 - **HTTPステータス**: processing時は200。completed/failed時はAzure OpenAI APIのレスポンスステータスと同じ値を返す
 - **レスポンス**:
   ```json
@@ -93,7 +95,6 @@
 ## 4. 非機能要件
 
 ### 4.1 パフォーマンス
-- 同時リクエスト数: 最大10件
 - 応答時間: 結果取得APIは即時返却、生成処理は非同期
 
 ### 4.2 信頼性
@@ -124,7 +125,8 @@
 - Python 3.8+
 - FastAPI 0.111+
 - Uvicorn 0.24+
-- azure-openai 1.0+
+- openai 1.0+
+- python-dotenv 1.0+
 - sqlite3 (標準ライブラリ)
 
 ### 6.2 データベース設定

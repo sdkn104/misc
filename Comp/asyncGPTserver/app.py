@@ -43,9 +43,6 @@ def init_db():
             request_id TEXT PRIMARY KEY,
             prompt TEXT NOT NULL,
             model TEXT DEFAULT 'gpt-4.1',
-            max_completion_tokens INTEGER,
-            reasoning_effort TEXT,
-            verbosity TEXT,
             status TEXT DEFAULT 'processing',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
