@@ -1,0 +1,71 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#A6E3A1', 'lineColor': '#6E7387'}}}%%
+gantt
+    dateFormat  YYYY-MM-DD
+    title       エージェント開発プロジェクト日程
+
+    classDef planning fill:#E0FFFF,stroke:#20B2AA,stroke-width:2px,color:#008B8B
+    classDef design fill:#F0FFF0,stroke:#3CB371,stroke-width:2px,color:#2E8B57
+    classDef development fill:#FFFACD,stroke:#FFD700,stroke-width:2px,color:#B8860B
+    classDef testing fill:#FFE4E1,stroke:#CD5C5C,stroke-width:2px,color:#A52A2A
+    classDef release_prep fill:#E6E6FA,stroke:#9370DB,stroke-width:2px,color:#6A5ACD
+    classDef release_op fill:#F5F5DC,stroke:#A0522D,stroke-width:2px,color:#8B4513
+    classDef milestone_style fill:#FFD700,stroke:#DAA520,stroke-width:2px,color:#8B4513
+
+    section 企画・要件定義フェーズ (2週間)
+    プロジェクトキックオフ :p1_kickoff, 2023-01-01, 3d
+    要件ヒアリング :p1_req_hear, after p1_kickoff, 4d
+    要件定義書作成 :p1_req_doc, after p1_req_hear, 5d
+    技術選定 :crit, p1_tech_sel, after p1_req_doc, 2d
+    フェーズ完了 :milestone, p1_end, after p1_tech_sel, 0d
+    class p1_kickoff,p1_req_hear,p1_req_doc,p1_tech_sel planning
+    class p1_end milestone_style
+
+    section 設計フェーズ (3週間)
+    システム設計 :p2_sys_design, after p1_end, 5d
+    API設計 :p2_api_design, after p2_sys_design, 4d
+    データベース設計 :p2_db_design, after p2_api_design, 4d
+    セキュリティ設計 :p2_sec_design, after p2_db_design, 3d
+    設計レビュー :crit, p2_design_rev, after p2_sec_design, 5d
+    フェーズ完了 :milestone, p2_end, after p2_design_rev, 0d
+    class p2_sys_design,p2_api_design,p2_db_design,p2_sec_design,p2_design_rev design
+    class p2_end milestone_style
+
+    section 開発フェーズ (6週間)
+    環境構築 :p3_env_setup, after p2_end, 3d
+    バックエンド開発 :p3_backend_dev, after p3_env_setup, 10d
+    フロントエンド開発 :p3_frontend_dev, after p3_backend_dev, 10d
+    エージェント機能実装 :p3_agent_impl, after p3_frontend_dev, 12d
+    単体テスト :p3_unit_test, after p3_agent_impl, 4d
+    結合テスト :crit, p3_integration_test, after p3_unit_test, 3d
+    フェーズ完了 :milestone, p3_end, after p3_integration_test, 0d
+    class p3_env_setup,p3_backend_dev,p3_frontend_dev,p3_agent_impl,p3_unit_test,p3_integration_test development
+    class p3_end milestone_style
+
+    section テスト・検証フェーズ (3週間)
+    システムテスト :p4_sys_test, after p3_end, 5d
+    性能テスト :p4_perf_test, after p4_sys_test, 4d
+    セキュリティテスト :p4_sec_test, after p4_perf_test, 4d
+    ユーザー受入テスト :p4_uat, after p4_sec_test, 5d
+    バグ修正 :crit, p4_bug_fix, after p4_uat, 3d
+    フェーズ完了 :milestone, p4_end, after p4_bug_fix, 0d
+    class p4_sys_test,p4_perf_test,p4_sec_test,p4_uat,p4_bug_fix testing
+    class p4_end milestone_style
+
+    section リリース準備フェーズ (2週間)
+    本番環境構築 :p5_prod_env, after p4_end, 4d
+    データ移行 :p5_data_mig, after p5_prod_env, 3d
+    ドキュメント整備 :p5_doc_prep, after p5_data_mig, 4d
+    リリース判定会議 :crit, p5_release_conf, after p5_doc_prep, 3d
+    フェーズ完了 :milestone, p5_end, after p5_release_conf, 0d
+    class p5_prod_env,p5_data_mig,p5_doc_prep,p5_release_conf release_prep
+    class p5_end milestone_style
+
+    section リリース・運用開始 (1週間)
+    本番リリース :p6_prod_release, after p5_end, 2d
+    監視体制確立 :p6_monitor_setup, after p6_prod_release, 2d
+    運用マニュアル配布 :p6_op_manual, after p6_monitor_setup, 1d
+    初期サポート :crit, p6_initial_support, after p6_op_manual, 2d
+    プロジェクト完了 :milestone, p6_project_complete, after p6_initial_support, 0d
+    class p6_prod_release,p6_monitor_setup,p6_op_manual,p6_initial_support release_op
+    class p6_project_complete milestone_style
+    
