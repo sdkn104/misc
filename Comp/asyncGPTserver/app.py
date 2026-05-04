@@ -239,7 +239,7 @@ async def get_result_endpoint(request_id: str):
 
     return JSONResponse(
         status_code=azure_status,
-        content={'request_id': request_id, 'status': status, 'azure_openai_body': azure_body},
+        content={'request_id': request_id, 'status': status, 'azure_openai_status': azure_status, 'azure_openai_body': azure_body},
     )
 
 

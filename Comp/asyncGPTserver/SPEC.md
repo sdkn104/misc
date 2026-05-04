@@ -88,6 +88,7 @@
   {
     "request_id": "uuid-string",
     "status": "completed|processing|failed",
+    "azure_openai_status": ...,
     "azure_openai_body": { ... }   // statusがcompleted/failedの場合。Azure OpenAI APIのレスポンスbodyをそのまま格納
   }
   ```
