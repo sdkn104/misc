@@ -42,13 +42,15 @@
 - **リクエストボディ**:
   ```json
   {
-    "request_id": "id-string",  // オプション
+    "request_id": "id-string",          // オプション
     "prompt": "生成するテキストのプロンプト",
-    "model": "gpt-3.5-turbo",  // オプション
-    "max_tokens": 100,         // オプション
-    "temperature": 0.7         // オプション
+    "model": "gpt-4.1",                 // オプション
+    "max_completion_tokens": 500,       // オプション。省略時はAPIリクエストに含めない
+    "reasoning_effort": "high",         // オプション ("low"|"medium"|"high")。省略時はAPIリクエストに含めない
+    "verbosity": "auto"                 // オプション。省略時はAPIリクエストに含めない
   }
   ```
+- **備考**: `max_completion_tokens`, `reasoning_effort`, `verbosity` は `null` または省略した場合、Azure OpenAI API へのリクエストボディに該当フィールドを含めない
 - **レスポンス**:
   ```json
   {
@@ -89,8 +91,9 @@
 - request_id (TEXT, PRIMARY KEY): UUID形式
 - prompt (TEXT): 生成プロンプト
 - model (TEXT): 使用モデル
-- max_tokens (INTEGER): 最大トークン数
-- temperature (REAL): 温度パラメータ
+- max_completion_tokens (INTEGER, nullable): 最大完了トークン数
+- reasoning_effort (TEXT, nullable): 推論努力度 ("low"|"medium"|"high")
+- verbosity (TEXT, nullable): 詳細度
 - status (TEXT): processing|completed|failed
 - created_at (TIMESTAMP): 作成日時
 - updated_at (TIMESTAMP): 更新日時
@@ -136,6 +139,7 @@
 
 ## 9. 変更履歴
 
+- v1.3: パラメータ変更 — `max_tokens`/`temperature` を廃止し `max_completion_tokens`/`reasoning_effort`/`verbosity` を追加。None 指定時は API リクエストに含めない (2026-05-04)
 - v1.2: FastAPIへの移行 (2026-05-03)
 - v1.1: 非同期処理の明確化 (async/await使用) (2026-05-02)
 - v1.0: 初回仕様書作成 (2026-05-02)

@@ -1,5 +1,5 @@
 # FastAPI Async GPT Server
-# 依存関係: fastapi==0.111.1, uvicorn==0.24.0, azure-openai==1.0.0, python-dotenv==1.0.0
+# 依存関係: fastapi==0.111.1, uvicorn==0.24.0, openai==1.0.0, python-dotenv==1.0.0
 # 実行: python app.py
 
 import asyncio
@@ -40,9 +40,10 @@ def init_db():
         CREATE TABLE IF NOT EXISTS requests (
             request_id TEXT PRIMARY KEY,
             prompt TEXT NOT NULL,
-            model TEXT DEFAULT 'gpt-3.5-turbo',
-            max_tokens INTEGER DEFAULT 100,
-            temperature REAL DEFAULT 0.7,
+            model TEXT DEFAULT 'gpt-4.1',
+            max_completion_tokens INTEGER,
+            reasoning_effort TEXT,
+            verbosity TEXT,
             status TEXT DEFAULT 'processing',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -62,14 +63,15 @@ def init_db():
     conn.close()
 
 
-def save_request(request_id: str, prompt: str, model: str, max_tokens: int, temperature: float):
+def save_request(request_id: str, prompt: str, model: str,
+                 max_completion_tokens: Optional[int], reasoning_effort: Optional[str], verbosity: Optional[str]):
     """リクエスト情報をデータベースに保存"""
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('''
-        INSERT INTO requests (request_id, prompt, model, max_tokens, temperature)
-        VALUES (?, ?, ?, ?, ?)
-    ''', (request_id, prompt, model, max_tokens, temperature))
+        INSERT INTO requests (request_id, prompt, model, max_completion_tokens, reasoning_effort, verbosity)
+        VALUES (?, ?, ?, ?, ?, ?)
+    ''', (request_id, prompt, model, max_completion_tokens, reasoning_effort, verbosity))
     conn.commit()
     conn.close()
 
@@ -131,8 +133,9 @@ class GenerateRequest(BaseModel):
     prompt: str
     request_id: Optional[str] = None
     model: Optional[str] = 'gpt-4.1'
-    max_tokens: Optional[int] = 100
-    temperature: Optional[float] = 0.7
+    max_completion_tokens: Optional[int] = None
+    reasoning_effort: Optional[str] = None
+    verbosity: Optional[str] = None
 
 # ----------------------------------------------------------------
 # FastAPI 初期化
@@ -148,19 +151,29 @@ init_db()
 # ----------------------------------------------------------------
 # 非同期テキスト生成関数
 # ----------------------------------------------------------------
-async def generate_text(request_id: str, prompt: str, model: str, max_tokens: int, temperature: float) -> str:
+async def generate_text(request_id: str, prompt: str, model: str,
+                        max_completion_tokens: Optional[int],
+                        reasoning_effort: Optional[str],
+                        verbosity: Optional[str]) -> str:
     """Azure OpenAI APIを呼び出してテキストを生成し、結果をDBに保存"""
     try:
         # ステータスを処理中に設定
         update_request_status(request_id, 'processing')
 
+        # Noneのパラメータはリクエストに含めない
+        kwargs: dict = {
+            'model': model,
+            'messages': [{'role': 'user', 'content': prompt}],
+        }
+        if max_completion_tokens is not None:
+            kwargs['max_completion_tokens'] = max_completion_tokens
+        if reasoning_effort is not None:
+            kwargs['reasoning_effort'] = reasoning_effort
+        if verbosity is not None:
+            kwargs['verbosity'] = verbosity
+
         # Azure OpenAI APIを呼び出し
-        response = await client.chat.completions.create(
-            model=model,
-            messages=[{'role': 'user', 'content': prompt}],
-            max_tokens=max_tokens,
-            temperature=temperature
-        )
+        response = await client.chat.completions.create(**kwargs)
 
         # 生成結果を取得
         result = response.choices[0].message.content
@@ -197,10 +210,12 @@ async def generate(request_data: GenerateRequest):
             raise HTTPException(status_code=409, detail='Request ID already exists')
 
     # リクエスト情報をDBに保存
-    save_request(request_id, request_data.prompt, request_data.model, request_data.max_tokens, request_data.temperature)
+    save_request(request_id, request_data.prompt, request_data.model,
+                 request_data.max_completion_tokens, request_data.reasoning_effort, request_data.verbosity)
 
     # 非同期処理をバックグラウンドで開始（即座に応答を返す）
-    asyncio.create_task(generate_text(request_id, request_data.prompt, request_data.model, request_data.max_tokens, request_data.temperature))
+    asyncio.create_task(generate_text(request_id, request_data.prompt, request_data.model,
+                                      request_data.max_completion_tokens, request_data.reasoning_effort, request_data.verbosity))
 
     # 処理中ステータスで即座に応答
     return {
