@@ -67,6 +67,12 @@ def save_request(request_id: str, azure_openai_body: Dict[str, Any]):
     conn = get_db_connection()
     cursor = conn.cursor()
     model = azure_openai_body.get('model')
+
+    if get_request_status(request_id) is not None:
+        cursor.execute('''
+            DELETE FROM requests WHERE request_id = ?
+        ''', (request_id,))
+
     cursor.execute('''
         INSERT INTO requests (request_id, prompt, model, created_at)
         VALUES (?, ?, ?, ?)
@@ -209,9 +215,6 @@ async def generate_text(request_id: str, azure_openai_body: Dict[str, Any]):
 async def generate(request_data: GenerateRequest):
     """テキスト生成リクエストを受け付け、バックグラウンドで処理を開始"""
     request_id = request_data.request_id or str(uuid.uuid4())
-    if request_data.request_id is not None:
-        if get_request_status(request_id) is not None:
-            raise HTTPException(status_code=409, detail='Request ID already exists')
 
     save_request(request_id, request_data.azure_openai_body)
 

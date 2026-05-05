@@ -59,7 +59,6 @@
     "status": "processing"
   }
   ```
-- **エラー**: 指定した `request_id` が既に存在する場合は `409 Conflict` を返す
 
 #### GET /history
 - **説明**: 全リクエストの処理履歴を取得

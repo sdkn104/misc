@@ -35,6 +35,8 @@ Option Explicit
 Private Const API_BASE_URL As String = "http://localhost:8000"
 
 
+Dim HttpObject As Object
+
 ' ================================================================
 ' Public API
 ' ================================================================
@@ -92,7 +94,7 @@ Public Function GetResult(requestId As String) As String
     status = ExtractEscapeJsoning(response, "status")
     Select Case status
         Case "completed", "failed":
-            azureStatus = CLng(ExtractEscapeJsoning(response, "azure_response_status"))
+            azureStatus = CLng(ExtractEscapeJsoning(response, "azure_openai_status"))
             GetResult = GetResponseText(azureStatus, response)
         Case "processing": GetResult = "PROCESSING"
         Case "":           GetResult = "ERROR: 指定のIDが見つかりません"
@@ -133,16 +135,16 @@ Private Function CreateRequestBody(prompt As String, _
     Dim parts(4) As String
     Dim n        As Integer
     n = 0
-    parts(n) = """model"":" & EscapeJson(model) : n = n + 1
-    parts(n) = """messages"":[{""role"":""user"",""content"":" & EscapeJson(prompt) & "}]" : n = n + 1
+    parts(n) = """model"":" & EscapeJson(model): n = n + 1
+    parts(n) = """messages"":[{""role"":""user"",""content"":" & EscapeJson(prompt) & "}]": n = n + 1
     If Not IsNull(maxCompletionTokens) Then
-        parts(n) = """max_completion_tokens"":" & CLng(maxCompletionTokens) : n = n + 1
+        parts(n) = """max_completion_tokens"":" & CLng(maxCompletionTokens): n = n + 1
     End If
     If Not IsNull(reasoningEffort) Then
-            parts(n) = """reasoning_effort"":" & EscapeJson(CStr(reasoningEffort)) : n = n + 1
+            parts(n) = """reasoning_effort"":" & EscapeJson(CStr(reasoningEffort)): n = n + 1
     End If
     If Not IsNull(verbosity) Then
-            parts(n) = """verbosity"":" & EscapeJson(CStr(verbosity)) : n = n + 1
+            parts(n) = """verbosity"":" & EscapeJson(CStr(verbosity)): n = n + 1
     End If
     CreateRequestBody = "{" & Join(parts, ",", n) & "}"
 End Function
@@ -181,15 +183,21 @@ End Function
 ' ================================================================
 ' Private: HTTP
 ' ================================================================
+
 Private Function HttpPost(url As String, body As String) As String
-    Dim http As Object
+
+    'Dim http As Object
     On Error GoTo Err_
 
-    Set http = CreateObject("WinHttp.WinHttpRequest.5.1")
-    http.Open "POST", url, False
-    http.setRequestHeader "Content-Type", "application/json"
-    http.Send body
-    HttpPost = http.responseText  ' エラー判定はSendAsync側でrequest_idの有無を確認
+    'HttpObjectの初期化に時間がかかるので永続する
+    If HttpObject Is Nothing Then
+        Set HttpObject = CreateObject("WinHttp.WinHttpRequest.5.1")
+    End If
+    
+    HttpObject.Open "POST", url, False
+    HttpObject.setRequestHeader "Content-Type", "application/json"
+    HttpObject.Send body
+    HttpPost = HttpObject.responseText  ' エラー判定はSendAsync側でrequest_idの有無を確認
     Exit Function
 Err_:
     HttpPost = "ERROR: サーバーに接続できません (" & Err.Description & ")"
@@ -197,12 +205,17 @@ End Function
 
 Private Function HttpGet(url As String) As String
     Dim http As Object
+    Dim bytes As Variant
     On Error GoTo Err_
 
-    Set http = CreateObject("WinHttp.WinHttpRequest.5.1")
-    http.Open "GET", url, False
-    http.Send
-    HttpGet = http.responseText  ' Azure転送時は4xx/5xxでもbodyにJSONが入る
+    'HttpObjectの初期化に時間がかかるので永続する
+    If HttpObject Is Nothing Then
+        Set HttpObject = CreateObject("WinHttp.WinHttpRequest.5.1")
+    End If
+    
+    HttpObject.Open "GET", url, False
+    HttpObject.Send
+    HttpGet = BytesToString(HttpObject.responseBody, "utf-8") 'http.responseText  ' Azure転送時は4xx/5xxでもbodyにJSONが入る
     Exit Function
 Err_:
     HttpGet = "ERROR: サーバーに接続できません (" & Err.Description & ")"
@@ -229,3 +242,21 @@ Private Function EscapeJson(s As String) As String
     s = Replace(s, vbTab, "\t")
     EscapeJson = """" & s & """"
 End Function
+
+
+' バイト配列 → 文字列（指定Charsetで復元, "utf-8"など）
+Private Function BytesToString(body As Variant, ByVal charset As String) As String
+    Dim stmIn As Object, stmOut As Object
+    Set stmIn = CreateObject("ADODB.Stream")
+    With stmIn
+        .Type = 1 'adTypeBinary
+        .Open
+        .Write body
+        .Position = 0
+        .Type = 2 'adTypeText
+        .charset = charset
+        BytesToString = .ReadText(-1) 'adReadAll
+    End With
+    stmIn.Close
+End Function
+

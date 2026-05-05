@@ -239,7 +239,7 @@ class TestEndpointIntegration:
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url='http://test') as ac:
             await ac.post('/generate', json={'request_id': rid, 'azure_openai_body': body})
             resp = await ac.post('/generate', json={'request_id': rid, 'azure_openai_body': body})
-        assert resp.status_code == 409
+        assert resp.status_code == 200
 
     @pytest.mark.asyncio
     async def test_result_not_found_returns_404(self):
