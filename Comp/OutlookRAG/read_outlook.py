@@ -138,8 +138,8 @@ def get_all_emails(start_date, end_date):
 
 if __name__ == '__main__':
     # 例: 2025年1月1日から2025年1月31日までのメールを取得
-    start_date = datetime.datetime(2025, 11, 1, 0, 0, 0)
-    end_date   = datetime.datetime(2026, 5, 1, 23, 59, 59)
+    start_date = datetime.datetime(2026, 4, 21, 0, 0, 0)
+    end_date   = datetime.datetime(2026, 12, 31, 23, 59, 59)
     print("メール取得範囲:", start_date, "から", end_date)
     print("開始:", datetime.datetime.now())
     emails = get_all_emails(start_date, end_date)    
