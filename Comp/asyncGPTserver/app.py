@@ -268,5 +268,7 @@ async def get_history_endpoint():
 if __name__ == '__main__':
     # Uvicornサーバーを起動
     import uvicorn
-
-    uvicorn.run('app:app', host='0.0.0.0', port=8000, reload=False)
+    # for debug
+    #uvicorn.run(app, host='0.0.0.0', port=8000, reload=True)
+    # for production (pythonw.exeで実行する場合はreload=Falseにすること)
+    uvicorn.run(app, host='0.0.0.0', port=8000, reload=False, log_config=None)
