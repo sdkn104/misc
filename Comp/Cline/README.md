@@ -30,12 +30,27 @@
 
 ## Setup using LiteLLM xxx -> FAILED...
 - For using Azure OpenAI gpt-5, that is not suported by Cline, use LiteLLM proxy, that convert from Azure OpenAI gpt-4 to gpt-5, etc.
+- litellm proxy can convert:  OpenAI chat/completion -> azure/OpenAI gpt-4.1 and gpt-5-mini
+    ```
+    Invoke-RestMethod -Method Post `
+    -Uri "http://localhost:4000/chat/completions" `
+    -Headers @{
+        "Content-Type" = "application/json"
+        "Authorization" = "Bearer <your-master-key>"
+    } `
+    -Body '{
+        "model": "azure/gpt-5-mini",
+        "messages": [
+        { "role": "user", "content": "Hello!" }
+        ]
+    }'
+    ```
 
 ### installation
 - https://docs.litellm.ai/docs/proxy/docker_quick_start#pre-requisites
 ```powershell
 pip install litellm[proxy]
-notepad LiteLLM/config.yaml
+notepad LiteLLM/config.yaml, or litellm --setup
 litellm --config LiteLLM/config.yaml --detailed_debug
 ```
 

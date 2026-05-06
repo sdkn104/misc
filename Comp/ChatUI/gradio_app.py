@@ -6,6 +6,8 @@ import PyPDF2
 from openai import AzureOpenAI
 from pprint import pprint
 import os
+import json
+from pprint import pprint
 import datetime
 import logging
 import math
@@ -13,16 +15,6 @@ import math
 from langchain_openai import AzureChatOpenAI
 from langchain_core.tools import tool
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage, SystemMessage
-
-# Azure OpenAI の接続情報を環境変数から取得
-endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "")
-deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
-subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "")
-
-print(endpoint)
-print(deployment)
-print(subscription_key)
-
 
 # ログ設定: INFO レベル以上をファイルに記録
 logging.basicConfig(
@@ -36,21 +28,26 @@ logging.info("Application started")
 
 stream = False
 
+
+# Azure OpenAI の接続情報を環境変数から取得
 # 利用可能なモデルの一覧と各モデルの接続パラメータ
-models = [
-    {"deployment": deployment, "endpoint": endpoint, "subscription_key": subscription_key, "api_version": "2024-10-21"},
-    {"deployment": "gpt-5-mini", "endpoint": endpoint, "subscription_key": subscription_key, "api_version": "2024-10-21"},
-    {"deployment": "gpt-5.4", "endpoint": endpoint, "subscription_key": subscription_key, "api_version": "2024-10-21"},
-]
+# $env:LLM_MODELS =  @"
+# [
+#     {"deployment": "gpt-4.1-azure", "endpoint": "$env:AZURE_OPENAI_ENDPOINT", "subscription_key": "$env:AZURE_OPENAI_API_KEY", "api_version": "$env:OPENAI_API_VERSION"},
+#     {"deployment": "gpt-5-mini",    "endpoint": "$env:AZURE_OPENAI_ENDPOINT", "subscription_key": "$env:AZURE_OPENAI_API_KEY", "api_version": "$env:OPENAI_API_VERSION"},
+#     {"deployment": "gpt-5.4",       "endpoint": "$env:AZURE_OPENAI_ENDPOINT", "subscription_key": "$env:AZURE_OPENAI_API_KEY", "api_version": "$env:OPENAI_API_VERSION"}
+# ]
+# "@
+models = json.loads(os.getenv("LLM_MODELS", "[]"))
+pprint(models)
 
 # 各モデルに対応する AzureOpenAI クライアントを初期化してモデル情報に格納
 for m in models:
-    client = AzureOpenAI(
+    m["client"] = AzureOpenAI(
         azure_endpoint=m["endpoint"],
         api_key=m["subscription_key"],
         api_version=m["api_version"],
     )
-    m["client"] = client
 
 
 # --------------------------------------------------------------------------------
