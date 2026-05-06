@@ -1,3 +1,4 @@
+import configparser
 from urllib import response
 
 import gradio as gr
@@ -128,6 +129,50 @@ def run_agent(model_name: str, prompt: str, history: list) -> str:
             result = tools_map[tc["name"]].invoke(tc["args"])
             messages.append(ToolMessage(content=str(result), tool_call_id=tc["id"]))
 
+
+# --------------------------------------------------------------------------------
+# --- DBエージェント
+# --------------------------------------------------------------------------------
+from langchain_db_agent import create_db_agent
+
+def run_db_agent(model_name: str, prompt: str, history: list) -> str:
+    """指定モデルで LangChain DB エージェントを実行して応答を返す"""
+    m = next((m for m in models if m["deployment"] == model_name), models[0])
+    llm = AzureChatOpenAI(
+        azure_endpoint=m["endpoint"],
+        api_key=m["subscription_key"],
+        api_version=m["api_version"],
+        azure_deployment=model_name,
+    )
+
+    # DB 設定の読み込み
+    cfg = configparser.ConfigParser()
+    cfg.read("config.ini")
+    db_cfg = cfg["mysql"]
+
+    # DB エージェントの構築と実行
+    # ※ DB 設定は config.ini から読み込まれる前提
+    agent = create_db_agent("mysql", db_cfg, llm)
+
+    def process_events(events):
+        answer = None
+        result = None
+        for event in events:
+            msg = event["messages"][-1]
+            msg.pretty_print()
+            print(f"msg.type: {msg.type}")
+            #print("msg: ", msg)
+            answer = msg.content
+            if msg.type == "tool" : #and msg.name == "sql_db_query":
+                result = msg.content
+        return (answer, result)
+
+    events = agent.stream({"messages": [{"role": "user", "content": prompt}]}, stream_mode="values")
+    (answer, result) = process_events(events)
+    #print("Answer:\n", answer, "\nResult:\n", result)
+
+    return answer
+
 # --------------------------------------------------------------------------------
 # --- 通常モードの応答生成
 # --------------------------------------------------------------------------------
@@ -170,6 +215,8 @@ def chat(message, history, request: gr.Request, mode, model, pdf=None):
 
     if mode == "エージェント":
         return run_agent(model, prompt, history)
+    elif mode == "DBエージェント":
+        return run_db_agent(model, prompt, history)
     else:
         return createCompletion(prompt, model, history)
 
@@ -178,7 +225,7 @@ def chat(message, history, request: gr.Request, mode, model, pdf=None):
 gr.ChatInterface(
     fn=chat,
     additional_inputs=[
-        gr.Radio(choices=["通常", "エージェント"], label="モード", value="通常"),
+        gr.Radio(choices=["通常", "エージェント", "DBエージェント"], label="モード", value="通常"),
         gr.Radio(choices=[m["deployment"] for m in models], label="Model", value=models[0]["deployment"]),
         gr.File(label="PDFを添付"),
     ],
