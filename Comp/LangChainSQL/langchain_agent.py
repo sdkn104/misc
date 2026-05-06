@@ -5,8 +5,6 @@ import os
 import re
 from pprint import pprint
 from sqlalchemy import create_engine
-from langchain_community.utilities import SQLDatabase
-from langchain_experimental.sql import SQLDatabaseChain
 
 from langchain_community.utilities import SQLDatabase
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
@@ -15,6 +13,8 @@ from langchain_community.agent_toolkits.sql.base import create_sql_agent
 import pandas as pd
 from langchain_core.prompts import ChatPromptTemplate
 from sqlalchemy import create_engine
+
+print("start")
 
 def load_ps1_env(ps1_path: str):
     """Parse simple $env:VAR = "value" lines in a PowerShell .ps1 and set os.environ entries.
@@ -80,8 +80,9 @@ def main():
     # Create a simple chain/agent that can answer SQL questions
     toolkit = SQLDatabaseToolkit(db=db, llm=llm)
     tools = toolkit.get_tools()
+    print("tools: ------------------------------")
     for tool in tools:
-        print(f"{tool.name}: {tool.description}\n")
+        print(f"tool: {tool.name}: {tool.description}\n")
 
     system_prompt = """
     You are an agent designed to interact with a SQL database.

@@ -67,9 +67,9 @@
    - PostgreSQL 16 w64 http (zip) 7z version
 
 2 copy from `pg16http_w64`  to `D:\Program Files\PostgreSQL\16`
-   - copy lib\http.dll to lib\http.dll
-   - copy share\extention\* to share\extention\
-   - copy bin\*.dll to bin\
+   - copy lib/http.dll to lib/http.dll
+   - copy share/extention/* to share/extention/
+   - copy bin/*.dll to bin/
 
 * for each the copied file, set セキュリティ許可 in property panel
    
