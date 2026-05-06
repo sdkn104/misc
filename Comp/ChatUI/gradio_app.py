@@ -157,18 +157,22 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
     def process_events(events):
         answer = None
         result = None
+        msgs = []
         for event in events:
             msg = event["messages"][-1]
             msg.pretty_print()
             print(f"msg.type: {msg.type}")
             #print("msg: ", msg)
             answer = msg.content
+            if msg.content:
+                msgs.append(f"....... {msg.type}: {msg.name if msg.name else ''}\n{answer}\n")
             if msg.type == "tool" : #and msg.name == "sql_db_query":
                 result = msg.content
-        return (answer, result)
+        return "\n".join(msgs)
 
     events = agent.stream({"messages": [{"role": "user", "content": prompt}]}, stream_mode="values")
-    (answer, result) = process_events(events)
+    answer = process_events(events)
+
     #print("Answer:\n", answer, "\nResult:\n", result)
 
     return answer
