@@ -8,4 +8,4 @@ Set-Location -Path $PSScriptRoot
 
 & ./secret.ps1
 
-Start-Process powershell -ArgumentList '-NoExit', '-Command', '.\myenv\Scripts\Activate.ps1'
+Start-Process pwsh -ArgumentList '-NoExit', '-Command', '.\myenv\Scripts\Activate.ps1'
