@@ -58,11 +58,13 @@ def main():
             
             # 日付からYYYYMMDDとYYYYMMを抽出
             if sent_date:
-                # "2024-01-15" 形式の場合
-                date_str = sent_date.replace('-', '').replace('/', '')[:8]
-                folder_name = date_str[:6]  # YYYYMM
+                # "2024-01-15 10:33:21" 形式の場合
+                parsed_date = datetime.strptime(sent_date, "%Y-%m-%d %H:%M:%S")
+                date_str = parsed_date.strftime("%Y%m%d_%H%M%S")
+                folder_name = parsed_date.strftime("%Y%m")
+
             else:
-                date_str = "00000000"
+                date_str = "00000000_000000"
                 folder_name = "000000"
             
             # ファイル名：YYYYMMDD_件名_ID.txt
@@ -70,7 +72,7 @@ def main():
             
             # フォルダを作成：emails/YYYYMM
             os.makedirs(f"emails/{folder_name}", exist_ok=True)
-            with open(f"emails/{folder_name}/{filename}", "w", encoding="utf-8") as f:
+            with open(f"emails/{folder_name}/{filename}", "w", encoding="cp932", errors="replace") as f:
                 f.write(dict_to_formatted_text(item))
             print("write file", datetime.now())
             
