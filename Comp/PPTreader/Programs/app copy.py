@@ -2,24 +2,20 @@ from flask import Flask, render_template, request, send_file, jsonify
 from pathlib import Path
 import io
 import zipfile
-import tempfile
-import os
 from datetime import datetime
 from read_docling import read_document_docling
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024  # 500MB max upload
-UPLOAD_FOLDER = Path(tempfile.gettempdir()) / 'pptreader_uploads'
-UPLOAD_FOLDER.mkdir(exist_ok=True)
 
 
-@app.route('/')
+@app.route('/read')
 def index():
     """HTML フロントエンドを返す"""
     return render_template('index.html')
 
 
-@app.route('/api/convert', methods=['POST'])
+@app.route('/read/api/convert', methods=['POST'])
 def convert_documents():
     """
     複数のドキュメントを受け取り、markdown に変換して返す
@@ -42,21 +38,16 @@ def convert_documents():
         try:
             print(f"Processing: {file.filename}", datetime.now())
 
-            # 一時ファイルに保存
-            temp_input = UPLOAD_FOLDER / file.filename
-            file.save(str(temp_input))
-
-            # markdown に変換
-            markdown_content = read_document_docling(str(temp_input))
+            # ストリームを直接渡す
+            file.stream.seek(0)
+            print(type(file))
+            markdown_content = read_document_docling(file.stream)
 
             # ファイル名の拡張子を .md に変更
             original_name = Path(file.filename).stem
             output_filename = f"{original_name}.docling.md"
 
             converted_docs[output_filename] = markdown_content
-
-            # 一時ファイルを削除
-            temp_input.unlink()
 
             print(f"Completed: {file.filename}", datetime.now())
 

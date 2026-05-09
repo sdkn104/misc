@@ -1,3 +1,5 @@
+# docling を使って PDF/PPTX をマークダウンに変換するモジュール。
+# ページ区切りに <!-- Page N --> コメントを挿入して出力する。
 from datetime import datetime
 import time
 start = time.time()
@@ -24,6 +26,8 @@ print_time("loaded libraries")
 #_log = logging.getLogger(__name__)
 
 def sequential_replace(text, target):
+    # target（ページ区切り文字列）の直後に <!-- Page N --> を挿入する。
+    # 先頭には必ず <!-- Page 1 --> を付ける。
     parts = text.split(target)
     if len(parts) == 1:
         return text
@@ -40,6 +44,8 @@ def sequential_replace(text, target):
 def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
     print_time("reading document... "+str(type(source)))
 
+    # NOTE: 上記の個別設定は docling 2.73 では xenable_layout=False で上書きされる。
+    # 2.73 以降はコンストラクタ引数で指定するのが正しい方法。
     pipeline_options = PdfPipelineOptions()
     pipeline_options.do_ocr = False
     pipeline_options.do_picture_classification = False
@@ -48,10 +54,10 @@ def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
     pipeline_options.do_chart_extraction = False
     pipeline_options.do_code_enrichment = False
     pipeline_options.do_formula_enrichment = False
-    
-    # パイプライン設定
+
+    # パイプライン設定（docling 2.73 の正しい指定方法。上の個別設定を上書きする）
     pipeline_options = PdfPipelineOptions(
-        xenable_layout=False  # ← ここが 2.73 の正解
+        xenable_layout=False  # レイアウト解析を無効化してシンプルな抽出に絞る
     )
 
     doc_converter = DocumentConverter(
@@ -96,8 +102,10 @@ def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
         DocItemLabel.FORM,
     ]
     #final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n", labels=labels).encode("utf-8", errors="replace").decode("utf-8")
+    # encode→decode で UTF-8 で表現できない文字を replacement character に変換する
     final_markdown = conv_result.document.export_to_markdown(page_break_placeholder="\n\n----------\n\n").encode("utf-8", errors="replace").decode("utf-8")
     print_time("converted.")
+    # ページ区切り文字列の直後に <!-- Page N --> を挿入してページ番号を明示する
     final_markdown = sequential_replace(final_markdown, "\n----------\n")
     
     #markdown_lines = []
