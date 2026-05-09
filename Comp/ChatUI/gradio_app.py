@@ -15,6 +15,7 @@ import math
 from langchain_openai import AzureChatOpenAI
 from langchain_core.tools import tool
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage, SystemMessage
+print("Imports completed")
 
 # ログ設定: INFO レベル以上をファイルに記録
 logging.basicConfig(
@@ -116,21 +117,26 @@ def run_agent(model_name: str, prompt: str, history: list) -> str:
         HumanMessage(content=prompt),
     ]
 
+    partial = ""
     while True:
         response = llm_with_tools.invoke(messages)
         messages.append(response)
         if not response.tool_calls:
-            return response.content
+            partial += "\n<br>\n\n" + response.content
+            yield partial
+            break
         for tc in response.tool_calls:
-            print(f"Invoking tool: {tc['name']} with args: {tc['args']}")
+            partial += f"<pre><code>ツールを実行します: {tc['name']} {tc['args']}</code></pre>..."
+            yield partial
             result = tools_map[tc["name"]].invoke(tc["args"])
+            partial += f"<pre><code>実行結果: {result}\n</code></pre>..."
+            yield partial
             messages.append(ToolMessage(content=str(result), tool_call_id=tc["id"]))
 
 
 # --------------------------------------------------------------------------------
 # --- DBエージェント
 # --------------------------------------------------------------------------------
-from langchain_db_agent import create_db_agent
 
 def run_db_agent(model_name: str, prompt: str, history: list) -> str:
     """指定モデルで LangChain DB エージェントを実行して応答を返す"""
@@ -143,36 +149,32 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
     )
 
     # DB 設定の読み込み
+    DB_TYPE = "mysql"  # 接続先データベースを "mysql" または "oracle" で指定
     cfg = configparser.ConfigParser()
     cfg.read("config.ini")
-    db_cfg = cfg["mysql"]
+    db_cfg = cfg[DB_TYPE]
 
     # DB エージェントの構築と実行
     # ※ DB 設定は config.ini から読み込まれる前提
-    agent = create_db_agent("mysql", db_cfg, llm)
-
-    def process_events(events):
-        answer = None
-        result = None
-        msgs = []
-        for event in events:
-            msg = event["messages"][-1]
-            msg.pretty_print()
-            print(f"msg.type: {msg.type}")
-            #print("msg: ", msg)
-            answer = msg.content
-            if msg.content:
-                msgs.append(f"....... {msg.type}: {msg.name if msg.name else ''}\n{answer}\n")
-            if msg.type == "tool" : #and msg.name == "sql_db_query":
-                result = msg.content
-        return "\n".join(msgs)
+    from langchain_db_agent import create_db_agent
+    agent = create_db_agent(DB_TYPE, db_cfg, llm)
 
     events = agent.stream({"messages": [{"role": "user", "content": prompt}]}, stream_mode="values")
-    answer = process_events(events)
-
-    #print("Answer:\n", answer, "\nResult:\n", result)
-
-    return answer
+    answer = None
+    msgs = []
+    partial = ""
+    for event in events:
+        msg = event["messages"][-1]
+        msg.pretty_print()
+        print(f"msg.type: {msg.type}")
+        #print("msg: ", msg)
+        answer = msg.content
+        if msg.content:
+            if msg.response_metadata and msg.response_metadata.get("finish_reason") == "stop":
+                partial += "\n<br>\n\n" + msg.content
+            else:
+                partial += f"<pre><code>{msg.type}: {msg.name if msg.name else ''}\n{answer if msg.name != 'sql_db_schema' else ''}\n</code></pre>..."
+            yield partial
 
 # --------------------------------------------------------------------------------
 # --- 通常モードの応答生成
@@ -191,12 +193,19 @@ def createCompletion(prompt, model, history):
             messages.append({"role": "user", "content": entry[0]})
             messages.append({"role": "assistant", "content": entry[1]})
     messages.append({"role": "user", "content": prompt})
+
     response = client.chat.completions.create(
         model=model,
         messages=messages,
-        stream=stream,
+        stream=True,
     )
-    return response.choices[0].message.content
+    partial = ""
+    for chunk in response:
+        if chunk.choices and chunk.choices[0].delta.content:
+            delta = chunk.choices[0].delta.content
+            if delta:
+                partial += delta
+                yield partial
 
 
 def chat(message, history, request: gr.Request, mode, model, pdf=None):
@@ -215,11 +224,14 @@ def chat(message, history, request: gr.Request, mode, model, pdf=None):
         prompt = message
 
     if mode == "エージェント":
-        return run_agent(model, prompt, history)
+        for msg in run_agent(model, prompt, history):
+            yield msg
     elif mode == "DBエージェント":
-        return run_db_agent(model, prompt, history)
+        for msg in run_db_agent(model, prompt, history):
+            yield msg
     else:
-        return createCompletion(prompt, model, history)
+        for msg in createCompletion(prompt, model, history):
+            yield msg
 
 
 # Gradio UI の構築と起動

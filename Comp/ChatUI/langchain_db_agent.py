@@ -14,11 +14,6 @@ LangChain SQL エージェントのサンプル（Azure OpenAI + MySQL または
  - LangChain SQL エージェントを作成してサンプルクエリを実行する
 """
 
-# ── DB タイプの切り替え ────────────────────────────────────────────────────────────
-# 接続先データベースを "mysql" または "oracle" で指定する
-DB_TYPE = "mysql"
-# ─────────────────────────────────────────────────────────────────────────────
-
 import argparse
 import configparser
 import os
@@ -152,6 +147,11 @@ def create_db_agent(db_type: str, db_cfg, llm):
 
 
 def main():
+    # ── DB タイプの切り替え ────────────────────────────────────────────────────────────
+    # 接続先データベースを "mysql" または "oracle" で指定する
+    DB_TYPE = "mysql"
+    # ─────────────────────────────────────────────────────────────────────────────
+
     # コマンドライン引数のパース
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="config.ini")
