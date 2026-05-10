@@ -126,10 +126,10 @@ def run_agent(model_name: str, prompt: str, history: list) -> str:
             yield partial
             break
         for tc in response.tool_calls:
-            partial += f"<pre><code>ツールを実行します: {tc['name']} {tc['args']}</code></pre>..."
+            partial += f"- ツールを実行します:  {tc['name']} {tc['args']} ...\n"
             yield partial
             result = tools_map[tc["name"]].invoke(tc["args"])
-            partial += f"<pre><code>実行結果: {result}\n</code></pre>..."
+            partial += f"- 結果:\n<pre><code>{result}</code></pre>\n"
             yield partial
             messages.append(ToolMessage(content=str(result), tool_call_id=tc["id"]))
 
@@ -169,12 +169,22 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
         print(f"msg.type: {msg.type}")
         #print("msg: ", msg)
         answer = msg.content
-        if msg.content:
+        if msg.type == "human":
+            pass
+        elif msg.type == "tool" :
+            if msg.name != "sql_db_schema" and msg.name != "sql_db_query_checker":
+                partial += f"- 結果：\n<pre><code>\n{answer}\n</code></pre>\n"
+            pass
+        elif msg.type == "ai":
             if msg.response_metadata and msg.response_metadata.get("finish_reason") == "stop":
                 partial += "\n<br>\n\n" + msg.content
+            elif msg.tool_calls:
+                partial += f"- ツールを実行します -  {msg.tool_calls[0]['name']} ...\n"
+                if msg.tool_calls[0]['name'] == "sql_db_query":
+                    partial += f"    <pre><code>\n{msg.tool_calls[0]['args'].get('query')}\n</code></pre>\n"
             else:
-                partial += f"<pre><code>{msg.type}: {msg.name if msg.name else ''}\n{answer if msg.name != 'sql_db_schema' else ''}\n</code></pre>..."
-            yield partial
+                partial += f"- {msg.type}: {msg.name if msg.name else ''}\n{answer if msg.name != 'sql_db_schema' else ''}...\n"
+        yield partial
 
 # --------------------------------------------------------------------------------
 # --- 通常モードの応答生成
