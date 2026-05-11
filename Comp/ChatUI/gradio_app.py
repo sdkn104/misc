@@ -117,20 +117,30 @@ def run_agent(model_name: str, prompt: str, history: list) -> str:
         HumanMessage(content=prompt),
     ]
 
-    partial = ""
+    out_messages = []
     while True:
         response = llm_with_tools.invoke(messages)
         messages.append(response)
         if not response.tool_calls:
-            partial += "\n<br>\n\n" + response.content
-            yield partial
+            out_messages.append({
+                "role": "assistant", 
+                "content": response.content,
+            })
+            yield out_messages
             break
         for tc in response.tool_calls:
-            partial += f"<pre><code>ツールを実行します: {tc['name']} {tc['args']}</code></pre>..."
-            yield partial
+            out_messages.append({
+                "role": "assistant", 
+                "content": f"  - ツールを実行します ({tc['name']}) ...",
+            })
+            yield out_messages
             result = tools_map[tc["name"]].invoke(tc["args"])
-            partial += f"<pre><code>実行結果: {result}\n</code></pre>..."
-            yield partial
+            out_messages.append({
+                "role": "assistant", 
+                "content": result,
+                "metadata": {"title": f"🛠️ 結果({tc['name']})", "status": "done"}
+            })
+            yield out_messages
             messages.append(ToolMessage(content=str(result), tool_call_id=tc["id"]))
 
 
@@ -163,18 +173,45 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
     answer = None
     msgs = []
     partial = ""
+    out_messages = []
     for event in events:
         msg = event["messages"][-1]
         msg.pretty_print()
         print(f"msg.type: {msg.type}")
         #print("msg: ", msg)
         answer = msg.content
-        if msg.content:
+        if msg.type == "human":
+            pass
+        elif msg.type == "tool" :
+            out_messages.append({
+                "role": "assistant", 
+                "content": msg.content,
+                "metadata": {"title": f"🛠️ 結果({msg.name})", "status": "done"},
+            })
+        elif msg.type == "ai":
             if msg.response_metadata and msg.response_metadata.get("finish_reason") == "stop":
-                partial += "\n<br>\n\n" + msg.content
+                out_messages.append({
+                    "role": "assistant", 
+                    "content": msg.content,
+                })
+            elif msg.tool_calls:
+                out_messages.append({
+                    "role": "assistant", 
+                    "content": f"  - ツールを実行します ({msg.tool_calls[0]['name']}) ...",
+                })
+                if msg.tool_calls[0]['name'] == "sql_db_query":
+                    out_messages.append({
+                        "role": "assistant", 
+                        "content": msg.tool_calls[0]['args'].get('query'),
+                        "metadata": {"title": f"SQLクエリ", "status": "done"}
+                    })
             else:
-                partial += f"<pre><code>{msg.type}: {msg.name if msg.name else ''}\n{answer if msg.name != 'sql_db_schema' else ''}\n</code></pre>..."
-            yield partial
+                out_messages.append({
+                    "role": "assistant", 
+                    "content": msg.content,
+                    "metadata": {"title": f"{msg.type} {msg.name if msg.name else ''}", "status": "done"}
+                })
+        yield out_messages
 
 # --------------------------------------------------------------------------------
 # --- 通常モードの応答生成
@@ -223,6 +260,9 @@ def chat(message, history, request: gr.Request, mode, model, pdf=None):
     else:
         prompt = message
 
+    #yield [{"role": "user", "content": "message1"}, {"role": "assistant", "content": "message2", "metadata":{"title": "using tool 'Weather'"}}]  # ユーザーメッセージと空のアシスタントメッセージを即座に返す
+    #return
+
     if mode == "エージェント":
         for msg in run_agent(model, prompt, history):
             yield msg
@@ -245,4 +285,5 @@ gr.ChatInterface(
     title="AI Chat",
     description="PDFをアップロードして、内容に基づいて質問してください。",
     analytics_enabled=False,
+    #additional_outputs=[gr.File(label="CSV ダウンロード")],
 ).launch()
