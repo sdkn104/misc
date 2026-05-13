@@ -7,17 +7,14 @@ def print_time(message):
     print(datetime.now(), f"{time.time() - start:.1f}", message)
 
 print_time("loading libraries...")
-#import os
 from io import BytesIO
 from typing import Union
 from typing import BinaryIO
 from pathlib import Path
-#import logging
 from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 from docling.datamodel.base_models import InputFormat, DocumentStream
 from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
-#from docling.pipeline.simple_pipeline import SimplePipeline
 from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
 from docling_core.types.doc.labels import DocItemLabel
 
@@ -34,8 +31,8 @@ def sequential_replace(text, target):
     result = ["<!-- Page 1 -->\n\n"]
     for i, part in enumerate(parts[:-1], 1):
         result.append(part)
-        result.append(target)
-        result.append(f"<!-- Page {i+1} -->\n")
+        #result.append(target)
+        result.append(f"\n<!-- Page {i+1} -->\n")
     result.append(parts[-1])
     return ''.join(result)
 
@@ -46,20 +43,22 @@ def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
 
     # NOTE: 上記の個別設定は docling 2.73 では xenable_layout=False で上書きされる。
     # 2.73 以降はコンストラクタ引数で指定するのが正しい方法。
-    pipeline_options = PdfPipelineOptions()
-    pipeline_options.do_ocr = False
-    pipeline_options.do_picture_classification = False
-    pipeline_options.do_picture_description = False
-    pipeline_options.do_table_structure = True
-    pipeline_options.do_chart_extraction = False
-    pipeline_options.do_code_enrichment = False
-    pipeline_options.do_formula_enrichment = False
+    # pipeline_options = PdfPipelineOptions()
+    # pipeline_options.do_ocr = False
+    # pipeline_options.do_picture_classification = False
+    # pipeline_options.do_picture_description = False
+    # pipeline_options.do_table_structure = True
+    # pipeline_options.do_chart_extraction = False
+    # pipeline_options.do_code_enrichment = False
+    # pipeline_options.do_formula_enrichment = False
 
     # パイプライン設定（docling 2.73 の正しい指定方法。上の個別設定を上書きする）
     pipeline_options = PdfPipelineOptions(
         xenable_layout=False  # レイアウト解析を無効化してシンプルな抽出に絞る
     )
 
+    # allowed_formats を省略すると docling がサポートする全フォーマット（PDF/DOCX/XLSX/PPTX 等）を受け付ける。
+    # format_options で PDF のみカスタムパイプラインを指定し、他フォーマットは docling デフォルトを使う。
     doc_converter = DocumentConverter(
         #allowed_formats=[
         #    InputFormat.PDF,
@@ -75,11 +74,16 @@ def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
             ),
         },
     )
-    #doc_converter = DocumentConverter()
     if isinstance(source, (str, Path)):
         conv_result = doc_converter.convert(source)
     else:
-        ds = DocumentStream(name="uploaded_file.pdf", stream=BytesIO(source.read()))
+        # docling はファイル名の拡張子でフォーマットを判別するため、正しい名前を渡す必要がある。
+        # .filename: Flask FileStorage / FastAPI UploadFile（フォームフィールド名ではなくファイル名を持つ）
+        # .name:     組み込み open() で開いたファイルオブジェクト
+        name = (Path(source.filename).name if hasattr(source, "filename") and source.filename
+                else Path(source.name).name if hasattr(source, "name")
+                else "uploaded_file.pdf")
+        ds = DocumentStream(name=name, stream=BytesIO(source.read()))
         conv_result = doc_converter.convert(ds)
     labels = [
         DocItemLabel.SECTION_HEADER,
@@ -135,17 +139,20 @@ def read_document_docling(source: Union[str, Path, BinaryIO]) -> str:
     return final_markdown
 
 if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 1:
-        input_file = Path(sys.argv[1])
-    else:
-        input_file = Path("input.pdf")
-    result = read_document_docling(input_file)
-    if len(sys.argv) > 2:
-        out_file = Path(sys.argv[2])
-    else:
-        out_file = input_file.parent / f"{input_file.name}.docling.md"
+    import argparse
+    parser = argparse.ArgumentParser(
+        description="PDF/PPTX をマークダウンに変換する (docling 使用)"
+    )
+    parser.add_argument("--input", "-i", required=True, metavar="FILE",
+                        help="入力ファイル (PDF または PPTX)")
+    parser.add_argument("--output", "-o", metavar="FILE",
+                        help="出力ファイル (省略時: <入力ファイル名>.docling.md)")
+    args = parser.parse_args()
 
+    input_file = Path(args.input)
+    result = read_document_docling(input_file)
+
+    out_file = Path(args.output) if args.output else input_file.parent / f"{input_file.name}.docling.md"
     print_time(f"writing to: {out_file}")
     with out_file.open("w", encoding="utf-8") as fp:
         fp.write(result)

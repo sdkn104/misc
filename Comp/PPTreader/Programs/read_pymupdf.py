@@ -20,8 +20,7 @@ def sequential_replace(text, target):
     result = ["<!-- Page 1 -->\n\n"]
     for i, part in enumerate(parts[:-1], 1):
         result.append(part)
-        result.append(target)
-        result.append(f"<!-- Page {i+1} -->\n")
+        result.append(f"\n<!-- Page {i+1} -->\n")
     result.append(parts[-1])
     return ''.join(result)
 
@@ -58,16 +57,16 @@ def read_document_pymupdf(source: Union[str, Path, BinaryIO]) -> str:
 
     # join pages with the same placeholder used by read_docling
     page_break = "\n\n----------\n\n"
-    final_markdown = page_break.join(pages)
+    final_text = page_break.join(pages)
 
     print_time("converted.")
 
     # Insert HTML comments indicating page boundaries
-    final_markdown = sequential_replace(final_markdown, page_break)
+    final_text = sequential_replace(final_text, page_break)
 
-    print_time(f"markdown created. length={len(final_markdown)}")
+    print_time(f"text created. length={len(final_text)}")
 
-    return final_markdown
+    return final_text
 
 
 if __name__ == "__main__":
