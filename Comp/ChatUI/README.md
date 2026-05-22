@@ -10,7 +10,7 @@
   open-webui serve --port 3000
   # --> http://localhost:3000
   ```
-* admin user: 会社メール、情シスパスワード(2026.3)
+* admin user: メール、パスワード(2026.3)
 
 * User manegement
 - to turn off user management (single user, no admin) :  `$env:WEBUI_AUTH="False"`
