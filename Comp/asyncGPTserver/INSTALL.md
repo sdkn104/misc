@@ -10,4 +10,5 @@ python app.py
 # modify app.py -> uvicorn.run(...., reload=False, log_config=None)
 pip install pyinstaller
 pyinstaller app.py --onefile --noconsole
+pyinstaller app_file.py --onefile --noconsole
 ```

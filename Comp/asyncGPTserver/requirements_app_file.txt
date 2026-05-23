@@ -1,5 +1,3 @@
-fastapi
-uvicorn
 openai
 python-dotenv
 pywin32

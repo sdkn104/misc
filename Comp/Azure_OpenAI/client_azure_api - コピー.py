@@ -26,8 +26,14 @@ data = {
         {"role": "system", "content": "あなたは親切なアシスタントです。"},
         {"role": "user", "content": "世界一高い山の名前を教えてください。単語１つで答えてください。"},
     ],
-    "stream": True,
+    "stream": False,
 }
+
+data = """
+
+"""
+
+
 print("Request:", url, data)
 response = requests.post(url, headers=headers, json=data)
 #client = SSEClient(response)

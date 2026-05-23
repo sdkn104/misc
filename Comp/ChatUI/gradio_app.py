@@ -274,16 +274,69 @@ def chat(message, history, request: gr.Request, mode, model, pdf=None):
             yield msg
 
 
-# Gradio UI の構築と起動
-gr.ChatInterface(
-    fn=chat,
-    additional_inputs=[
-        gr.Radio(choices=["通常", "エージェント", "DBエージェント"], label="モード", value="通常"),
-        gr.Radio(choices=[m["deployment"] for m in models], label="Model", value=models[0]["deployment"]),
-        gr.File(label="PDFを添付"),
-    ],
-    title="AI Chat",
-    description="PDFをアップロードして、内容に基づいて質問してください。",
-    analytics_enabled=False,
-    #additional_outputs=[gr.File(label="CSV ダウンロード")],
-).launch()
+import gradio as gr
+
+def load_params(request: gr.Request):
+    mode = request.query_params.get("mode")
+    model = request.query_params.get("model")
+    return [mode, model]
+
+with gr.Blocks() as app:
+    gr.Markdown("## AI Chat/Agent")
+    chatbot = gr.Chatbot(height=500)
+    with gr.Row():
+        msg = gr.Textbox(
+            container=False,
+            placeholder="質問を入力…",
+            scale=8
+        )
+        pdf = gr.File(label="📎PDF添付", scale=0, min_width=60, height=40)
+        send_btn = gr.Button("➤", min_width=40, scale=0)
+
+    with gr.Row():
+        mode = gr.Radio(
+            choices=["通常", "エージェント", "DBエージェント"],
+            label="モード",
+            value="通常",
+            scale=1
+        )
+
+    with gr.Accordion("オプション", open=False):
+        model = gr.Radio(
+            choices=[m["deployment"] for m in models],
+            label="Model",
+            value=models[0]["deployment"]
+        )
+
+    msg.submit(
+        chat,
+        inputs=[msg, chatbot, pdf, mode, model],
+        outputs=chatbot
+    )
+
+    send_btn.click(
+        chat,
+        inputs=[msg, chatbot, pdf, mode, model],
+        outputs=chatbot
+    )
+
+    app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
+
+app.launch()
+
+
+# with gr.Blocks() as app:
+#     gr.ChatInterface(      
+#         fn=chat, 
+#         title="AI Chat",
+#         description="PDFをアップロードして、内容に基づいて質問してください。",
+#         analytics_enabled=False,
+#         #additional_outputs=[gr.File(label="CSV ダウンロード")],
+#     )
+#     pdf = gr.File(label="PDFを添付", scale=0.1, height=40)
+#     mode = gr.Radio(choices=["通常", "エージェント", "DBエージェント"], label="モード", value="通常")
+#     with gr.Accordion("オプション", open=False):
+#         model = gr.Radio(choices=[m["deployment"] for m in models], label="Model", value=models[0]["deployment"])
+#     #app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
+
+# app.launch()
