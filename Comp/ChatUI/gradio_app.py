@@ -181,7 +181,10 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
         #print("msg: ", msg)
         answer = msg.content
         if msg.type == "human":
-            pass
+            out_messages.append({
+                "role": "user", 
+                "content": msg.content,
+            })
         elif msg.type == "tool" :
             out_messages.append({
                 "role": "assistant", 
@@ -245,7 +248,7 @@ def createCompletion(prompt, model, history):
                 yield partial
 
 
-def chat(message, history, request: gr.Request, mode, model, pdf=None):
+def chat(message, history, mode, model, pdf, request: gr.Request):
     """Gradio ChatInterface のコールバック。モードに応じて通常応答またはエージェント応答を返す"""
     ip = request.client.host
     msg = message[:70].replace('\n', ' ')
@@ -265,13 +268,13 @@ def chat(message, history, request: gr.Request, mode, model, pdf=None):
 
     if mode == "エージェント":
         for msg in run_agent(model, prompt, history):
-            yield msg
+            yield msg, ""
     elif mode == "DBエージェント":
         for msg in run_db_agent(model, prompt, history):
-            yield msg
+            yield msg, ""
     else:
         for msg in createCompletion(prompt, model, history):
-            yield msg
+            yield msg, ""
 
 
 import gradio as gr
@@ -281,9 +284,9 @@ def load_params(request: gr.Request):
     model = request.query_params.get("model")
     return [mode, model]
 
-with gr.Blocks() as app:
+with gr.Blocks(analytics_enabled=False, fill_height=True) as app:
     gr.Markdown("## AI Chat/Agent")
-    chatbot = gr.Chatbot(height=500)
+    chatbot = gr.Chatbot(scale=1)
     with gr.Row():
         msg = gr.Textbox(
             container=False,
@@ -310,14 +313,14 @@ with gr.Blocks() as app:
 
     msg.submit(
         chat,
-        inputs=[msg, chatbot, pdf, mode, model],
-        outputs=chatbot
+        inputs=[msg, chatbot, mode, model, pdf],
+        outputs=[chatbot, msg]
     )
 
     send_btn.click(
         chat,
-        inputs=[msg, chatbot, pdf, mode, model],
-        outputs=chatbot
+        inputs=[msg, chatbot, mode, model, pdf],
+        outputs=[chatbot, msg]
     )
 
     app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
