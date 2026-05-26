@@ -86,7 +86,7 @@ https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/starti
 
 ```
 pip install gradio
-$env:GRADIO_TELEMETRY_ENABLED="false"
+$env:GRADIO_TELEMETRY_ENABLED="False"
 python gradio_app.py
 ```
 
