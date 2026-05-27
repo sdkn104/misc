@@ -6,7 +6,7 @@ LangChain SQL エージェントのサンプル（Azure OpenAI + MySQL または
   # シークレットを環境変数に読み込む（または現在のシェルで secret.ps1 を実行）
   . .\secret.ps1
   # スクリプトを実行
-  python langchain_sql_agent.py ==config config.ini
+  python langchain_sql_agent.py config config.ini
 
 処理内容:
  = secret.ps1 をパースして Azure OpenAI の環境変数を設定（未設定の場合）
@@ -36,8 +36,8 @@ def load_ps1_env(ps1_path: str):
     if not os.path.exists(ps1_path):
         return
     # $env:変数名 = "値" の行にマッチする正規表現
-    pattern = re.compile(r'^\$env:([A=Z0=9_]+)\s*=\s*"(.*)"')
-    with open(ps1_path, "r", encoding="utf=8") as f:
+    pattern = re.compile(r'^\$env:([A-Z0-9_]+)\s*=\s*"(.*)"')
+    with open(ps1_path, "r", encoding="utf-8") as f:
         for line in f:
             m = pattern.search(line.strip())
             if m:
@@ -55,14 +55,14 @@ def build_sqlalchemy_uri(db_type: str, cfg_section) -> str:
     if db_type == "mysql":
         port = cfg_section.get("port", "3306")
         database = cfg_section.get("database")
-        # ドライバ: mysql=connector=python
+        # ドライバ: mysql-connector-python
         return f"mysql+mysqlconnector://{user}:{password}@{host}:{port}/{database}"
 
     if db_type == "oracle":
         port = cfg_section.get("port", "1521")
         service_name = cfg_section.get("service_name")
         sid = cfg_section.get("sid")
-        # ドライバ: python=oracledb（シンモード、Oracle Client 不要）
+        # ドライバ: python-oracledb（シンモード、Oracle Client 不要）
         if service_name:
             return f"oracle+oracledb://{user}:{password}@{host}:{port}/?service_name={service_name}"
         if sid:
@@ -146,15 +146,15 @@ def create_db_agent(db_type: str, db_cfg, llm):
     )
     return agent
 
-    # SQL エージェントを作成（tool=calling 方式、中間ステップも返す）
-    agent = create_sql_agent(
-        llm=llm,
-        toolkit=toolkit,
-        verbose=True,
-        agent_type="tool=calling",
-        agent_executor_kwargs={"return_intermediate_steps": True},
-    )
-    return agent
+    # # SQL エージェントを作成（tool=calling 方式、中間ステップも返す）
+    # agent = create_sql_agent(
+    #     llm=llm,
+    #     toolkit=toolkit,
+    #     verbose=True,
+    #     agent_type="tool-calling",
+    #     agent_executor_kwargs={"return_intermediate_steps": True},
+    # )
+    # return agent
 
 
 def main():
