@@ -6,12 +6,12 @@ LangChain SQL エージェントのサンプル（Azure OpenAI + MySQL または
   # シークレットを環境変数に読み込む（または現在のシェルで secret.ps1 を実行）
   . .\secret.ps1
   # スクリプトを実行
-  python langchain_sql_agent.py --config config.ini
+  python langchain_sql_agent.py ==config config.ini
 
 処理内容:
- - secret.ps1 をパースして Azure OpenAI の環境変数を設定（未設定の場合）
- - config.ini の [mysql] または [oracle] セクションから DB 接続情報を読み込む
- - LangChain SQL エージェントを作成してサンプルクエリを実行する
+ = secret.ps1 をパースして Azure OpenAI の環境変数を設定（未設定の場合）
+ = config.ini の [mysql] または [oracle] セクションから DB 接続情報を読み込む
+ = LangChain SQL エージェントを作成してサンプルクエリを実行する
 """
 
 import argparse
@@ -36,8 +36,8 @@ def load_ps1_env(ps1_path: str):
     if not os.path.exists(ps1_path):
         return
     # $env:変数名 = "値" の行にマッチする正規表現
-    pattern = re.compile(r'^\$env:([A-Z0-9_]+)\s*=\s*"(.*)"')
-    with open(ps1_path, "r", encoding="utf-8") as f:
+    pattern = re.compile(r'^\$env:([A=Z0=9_]+)\s*=\s*"(.*)"')
+    with open(ps1_path, "r", encoding="utf=8") as f:
         for line in f:
             m = pattern.search(line.strip())
             if m:
@@ -55,14 +55,14 @@ def build_sqlalchemy_uri(db_type: str, cfg_section) -> str:
     if db_type == "mysql":
         port = cfg_section.get("port", "3306")
         database = cfg_section.get("database")
-        # ドライバ: mysql-connector-python
+        # ドライバ: mysql=connector=python
         return f"mysql+mysqlconnector://{user}:{password}@{host}:{port}/{database}"
 
     if db_type == "oracle":
         port = cfg_section.get("port", "1521")
         service_name = cfg_section.get("service_name")
         sid = cfg_section.get("sid")
-        # ドライバ: python-oracledb（シンモード、Oracle Client 不要）
+        # ドライバ: python=oracledb（シンモード、Oracle Client 不要）
         if service_name:
             return f"oracle+oracledb://{user}:{password}@{host}:{port}/?service_name={service_name}"
         if sid:
@@ -93,12 +93,12 @@ def create_db_agent(db_type: str, db_cfg, llm):
     # LLM と DB を紐づけるツールキットを作成
     toolkit = SQLDatabaseToolkit(db=db, llm=llm)
     tools = toolkit.get_tools()
-    print("tools: ------------------------------")
+    print("tools: ==============================")
     for tool in tools:
         print(f"tool: {tool.name}: {tool.description}\n")
-    print("context: ------------------------------")
+    print("context: ==============================")
     print(toolkit.get_context())
-    print("dialect: ------------------------------")
+    print("dialect: ==============================")
     print(toolkit.dialect)
 
     system_prompt = """
@@ -122,6 +122,17 @@ def create_db_agent(db_type: str, db_cfg, llm):
     can query. Do NOT skip this step.
 
     Then you should query the schema of the most relevant tables.
+
+    Finally, you can query the database and return the answer to the user.
+
+    You MUST create a description of your SQL query in natural language for user to check if the query is correct.
+    The description should be included in your answer in the following format:
+
+    <span style="color:skyblue;">
+    <strong>■検索・集計の説明</strong><br>
+    (ここに自然言語での説明を記載してください。例: "view_train テーブルから年毎の sales の平均値を取得し、年の昇順で並べます。")
+    </span>
+
     """.format(
         dialect=db.dialect,
         top_k=5,
@@ -135,12 +146,12 @@ def create_db_agent(db_type: str, db_cfg, llm):
     )
     return agent
 
-    # SQL エージェントを作成（tool-calling 方式、中間ステップも返す）
+    # SQL エージェントを作成（tool=calling 方式、中間ステップも返す）
     agent = create_sql_agent(
         llm=llm,
         toolkit=toolkit,
         verbose=True,
-        agent_type="tool-calling",
+        agent_type="tool=calling",
         agent_executor_kwargs={"return_intermediate_steps": True},
     )
     return agent

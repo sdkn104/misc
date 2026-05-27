@@ -205,7 +205,7 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
                 if msg.tool_calls[0]['name'] == "sql_db_query":
                     out_messages.append({
                         "role": "assistant", 
-                        "content": msg.tool_calls[0]['args'].get('query'),
+                        "content": f"```sql\n{msg.tool_calls[0]['args'].get('query')}\n```",
                         "metadata": {"title": f"SQLクエリ", "status": "done"}
                     })
             else:
@@ -268,13 +268,13 @@ def chat(message, history, mode, model, pdf, request: gr.Request):
 
     if mode == "エージェント":
         for msg in run_agent(model, prompt, history):
-            yield msg, ""
+            yield msg
     elif mode == "DBエージェント":
         for msg in run_db_agent(model, prompt, history):
-            yield msg, ""
+            yield msg
     else:
         for msg in createCompletion(prompt, model, history):
-            yield msg, ""
+            yield msg
 
 
 import gradio as gr
@@ -286,7 +286,7 @@ def load_params(request: gr.Request):
 
 with gr.Blocks(analytics_enabled=False, fill_height=True) as app:
     gr.Markdown("## AI Chat/Agent")
-    chatbot = gr.Chatbot(scale=1)
+    chatbot = gr.Chatbot(scale=1, editable="all", reasoning_tags=[("query-description","/query-description")])
     with gr.Row():
         msg = gr.Textbox(
             container=False,
@@ -314,13 +314,17 @@ with gr.Blocks(analytics_enabled=False, fill_height=True) as app:
     msg.submit(
         chat,
         inputs=[msg, chatbot, mode, model, pdf],
-        outputs=[chatbot, msg]
+        outputs=[chatbot]
+    ).then(
+        lambda: "", inputs=None, outputs=msg  # 送信後に入力欄をクリア
     )
 
     send_btn.click(
         chat,
         inputs=[msg, chatbot, mode, model, pdf],
-        outputs=[chatbot, msg]
+        outputs=[chatbot]
+    ).then(
+        lambda: "", inputs=None, outputs=msg  # 送信後に入力欄をクリア
     )
 
     app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
