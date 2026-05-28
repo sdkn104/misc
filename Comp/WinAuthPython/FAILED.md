@@ -3,3 +3,8 @@
 IISのリバースプロキシ機能で、REMOTE_USERの設定ができない。
 URL rewriteの実行タイミングが、windows認証完了より先になるため。認証結果を渡せない。
 
+# 他の方法
+
+- YARP/ASP.NET Core
+    - asp.netでreverse proxyを書く
+- 
