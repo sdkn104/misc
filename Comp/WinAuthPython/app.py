@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    user = request.headers.get("X-Auth-User")
+    user = request.headers.get("X-Auth-User", "unknown")
 
     from pprint import pprint
     pprint(dict(request.headers))
