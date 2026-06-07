@@ -3,6 +3,10 @@
     "playwright": {
       "command": "npx",
       "args": ["@playwright/mcp@latest", "--browser", "msedge", "--user-data-dir", "C:\\Users\\toshiyuki\\AppData\\Local\\Microsoft\\Edge\\User Data"]
+    },
+    "markitdown": {
+      "command": "uvx",
+      "args": ["markitdown-mcp"]
     }
   }
 }

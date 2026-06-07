@@ -1,7 +1,9 @@
 import asyncio
+import contextlib
 import io
 import os
 import xml.etree.ElementTree as ET
+from pathlib import Path
 from typing import Annotated
 
 import pypdf
@@ -157,7 +159,9 @@ async def main() -> None:
             "論文タイトルが与えられた場合は search_paper_pdf でPDF URLを探し、"
             "見つかったURLを read_pdf_from_url で読み込んでください。"
             "URLが直接与えられた場合は read_pdf_from_url で直接読み込んでください。"
+            "Word(.docx)やその他のドキュメントURLが与えられた場合は markitdown ツール群を使用してください。"
             "ブラウザ操作が必要な場合は playwright ツール群を使用してください。"
+            "ローカルファイルの読み書きが必要な場合は filesystem ツール群を使用してください。"
         ),
         tools=[search_paper_pdf, read_pdf_from_url],
     )
@@ -167,11 +171,23 @@ async def main() -> None:
     print("例2: https://arxiv.org/abs/1706.03762 をブラウザで開いて要約して")
     print("終了するには 'quit' または 'exit' を入力してください。\n")
 
-    async with MCPStdioTool(
-        name="playwright",
-        command="npx",
-        args=["@playwright/mcp", "--browser=msedge"],
-    ) as playwright_mcp:
+    fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd()))
+    async with contextlib.AsyncExitStack() as stack:
+        playwright_mcp = await stack.enter_async_context(MCPStdioTool(
+            name="playwright",
+            command="npx",
+            args=["@playwright/mcp", "--browser=msedge"],
+        ))
+        filesystem_mcp = await stack.enter_async_context(MCPStdioTool(
+            name="filesystem",
+            command="npx",
+            args=["@modelcontextprotocol/server-filesystem", str(fs_root)],
+        ))
+        markitdown_mcp = await stack.enter_async_context(MCPStdioTool(
+            name="markitdown",
+            command="uvx",
+            args=["markitdown-mcp"],
+        ))
         session = agent.create_session()
 
         while True:
@@ -187,7 +203,7 @@ async def main() -> None:
 
             print("\nAgent:", flush=True)
             acc = None
-            async for update in agent.run(user_input, stream=True, tools=playwright_mcp, session=session):
+            async for update in agent.run(user_input, stream=True, tools=[playwright_mcp, filesystem_mcp, markitdown_mcp], session=session):
                 for content in update.contents:
                     if acc is None:
                         acc = content
