@@ -4,4 +4,3 @@ pypdf
 requests
 python-dotenv
 mcp
-uv

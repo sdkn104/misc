@@ -2,6 +2,7 @@ import asyncio
 import contextlib
 import io
 import os
+import pprint
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Annotated
@@ -17,6 +18,7 @@ from azure.identity import AzureCliCredential
 
 load_dotenv()
 
+# LLMのコンテキスト溢れを防ぐため抽出テキストの上限文字数を設定
 MAX_CHARS = 20_000
 
 
@@ -102,13 +104,15 @@ def read_pdf_from_url(
     return full_text
 
 
-def _trunc(s: str, n: int) -> str:
-    s = str(s)
-    return s[:n] + "..." if len(s) > n else s
-
 
 def _display_content(content) -> None:
     """蓄積済み content を type ごとにまとめて表示する。"""
+    import pprint
+    #pprint.pprint(content.to_dict())  # デバッグ用に content の全体構造を表示
+    def _trunc(s: str, n: int) -> str:
+        s = str(s)
+        return s[:n] + "..." if len(s) > n else s
+
     match content.type:
         case "text":
             if content.text:
@@ -124,6 +128,12 @@ def _display_content(content) -> None:
             print(f"\n[Browser] {content.name}({_trunc(content.arguments, 120)})", flush=True)
         case "mcp_server_tool_result":
             print(f"  → {_trunc(content.result, 80)}", flush=True)
+
+
+def _load_instructions(filename: str = "SYSTEM.md") -> str:
+    """スクリプトと同じディレクトリの指定ファイルを読み込んで返す。"""
+    path = Path(__file__).parent / filename
+    return path.read_text(encoding="utf-8")
 
 
 def build_client() -> OpenAIChatCompletionClient:
@@ -145,6 +155,7 @@ def build_client() -> OpenAIChatCompletionClient:
     if api_key:
         kwargs["api_key"] = api_key
     else:
+        # API keyが未設定の場合は az login 済みの CLI 認証にフォールバック
         kwargs["credential"] = AzureCliCredential()
 
     return OpenAIChatCompletionClient(**kwargs)
@@ -154,15 +165,7 @@ async def main() -> None:
     client = build_client()
     agent = client.as_agent(
         name="PDFAgent",
-        instructions=(
-            "あなたはPDF論文を読み込んで内容を解説・回答するアシスタントです。"
-            "論文タイトルが与えられた場合は search_paper_pdf でPDF URLを探し、"
-            "見つかったURLを read_pdf_from_url で読み込んでください。"
-            "URLが直接与えられた場合は read_pdf_from_url で直接読み込んでください。"
-            "Word(.docx)やその他のドキュメントURLが与えられた場合は markitdown ツール群を使用してください。"
-            "ブラウザ操作が必要な場合は playwright ツール群を使用してください。"
-            "ローカルファイルの読み書きが必要な場合は filesystem ツール群を使用してください。"
-        ),
+        instructions=_load_instructions(),
         tools=[search_paper_pdf, read_pdf_from_url],
     )
 
@@ -171,25 +174,27 @@ async def main() -> None:
     print("例2: https://arxiv.org/abs/1706.03762 をブラウザで開いて要約して")
     print("終了するには 'quit' または 'exit' を入力してください。\n")
 
-    fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd()))
-    async with contextlib.AsyncExitStack() as stack:
-        playwright_mcp = await stack.enter_async_context(MCPStdioTool(
-            name="playwright",
-            command="npx",
-            args=["@playwright/mcp", "--browser=msedge"],
-        ))
-        filesystem_mcp = await stack.enter_async_context(MCPStdioTool(
-            name="filesystem",
-            command="npx",
-            args=["@modelcontextprotocol/server-filesystem", str(fs_root)],
-        ))
-        markitdown_mcp = await stack.enter_async_context(MCPStdioTool(
-            name="markitdown",
-            command="uvx",
-            args=["markitdown-mcp"],
-        ))
+    fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd().resolve()))
+    filesystem_mcp = MCPStdioTool(
+        name="filesystem",
+        command="npx",
+        args=["-y", "@modelcontextprotocol/server-filesystem", str(fs_root)],
+    )
+    print(f"Filesystem MCP server started with root: {fs_root}")
+    playwright_mcp = MCPStdioTool(
+        name="playwright",
+        command="npx",
+        args=["-y", "@playwright/mcp", "--browser=msedge"],
+    )
+    print(f"Playwright MCP server started.")
+    markitdown_mcp = MCPStdioTool(
+        name="markitdown",
+        command="npx",
+        args=["-y", "markitdown-mcp-npx"],
+    )
+    print(f"Markitdown MCP server started")
+    async with (filesystem_mcp, playwright_mcp, markitdown_mcp):
         session = agent.create_session()
-
         while True:
             try:
                 user_input = input("You: ").strip()
@@ -202,6 +207,8 @@ async def main() -> None:
                 break
 
             print("\nAgent:", flush=True)
+            # ストリーミング受信: 同一 type のチャンクを + で連結し、type が変わったタイミングで表示する。
+            # これにより細切れテキストを一度にまとめて出力できる。
             acc = None
             async for update in agent.run(user_input, stream=True, tools=[playwright_mcp, filesystem_mcp, markitdown_mcp], session=session):
                 for content in update.contents:
@@ -209,8 +216,9 @@ async def main() -> None:
                         acc = content
                     elif acc.type == content.type:
                         try:
-                            acc = acc + content
+                            acc = acc + content  # フレームワーク提供の + 演算子でチャンクを結合
                         except Exception:
+                            # 結合不可な型は即時表示して次のチャンクを新たに蓄積
                             _display_content(acc)
                             acc = content
                     else:
