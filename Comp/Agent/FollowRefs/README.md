@@ -43,6 +43,16 @@ OPENAI_API_VERSION=2024-12-01-preview
 AZURE_OPENAI_API_KEY=<your-api-key>   # 省略時は az login の認証を使用
 ```
 
+アクセス先制限：
+
+```python
+    playwright_mcp = MCPStdioTool(
+        name="playwright",
+        command="npx",
+        args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*,http://*"],
+    )
+```
+
 ## 使用方法
 
 ```bash

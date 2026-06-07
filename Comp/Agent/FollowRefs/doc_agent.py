@@ -184,7 +184,9 @@ async def main() -> None:
     playwright_mcp = MCPStdioTool(
         name="playwright",
         command="npx",
-        args=["-y", "@playwright/mcp", "--browser=msedge"],
+        #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*,http://*"],
+        args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*"],
+        #args=["-y", "@playwright/mcp", "--browser=msedge"],
     )
     print(f"Playwright MCP server started.")
     markitdown_mcp = MCPStdioTool(
