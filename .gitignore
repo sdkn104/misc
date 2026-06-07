@@ -2,7 +2,9 @@ secret.txt
 secret.ps1
 secret_*.*
 myenv
+.venv
 node_modules/
 pycache/
 Comp/OutlookRAG/requirements.in
 __pycache__
+.playwright-mcp/

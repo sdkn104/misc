@@ -1,0 +1,6 @@
+agent-framework
+azure-identity
+pypdf
+requests
+python-dotenv
+mcp
