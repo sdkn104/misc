@@ -1,5 +1,4 @@
 import asyncio
-import contextlib
 import io
 import os
 import pprint
@@ -21,6 +20,7 @@ load_dotenv()
 # LLMのコンテキスト溢れを防ぐため抽出テキストの上限文字数を設定
 MAX_CHARS = 20_000
 
+# === ツール定義 ======================================================================
 
 @tool(approval_mode="never_require")
 def search_paper_pdf(
@@ -103,7 +103,7 @@ def read_pdf_from_url(
 
     return full_text
 
-
+# === エージェント ======================================================================
 
 def _display_content(content) -> None:
     """蓄積済み content を type ごとにまとめて表示する。"""
@@ -128,6 +128,26 @@ def _display_content(content) -> None:
             print(f"\n[Browser] {content.name}({_trunc(content.arguments, 120)})", flush=True)
         case "mcp_server_tool_result":
             print(f"  → {_trunc(content.result, 80)}", flush=True)
+
+
+async def stream_accumulated(agent, user_input, tools, session):
+    """agent.run をラップし、同一 type のチャンクを蓄積して yield する async generator。"""
+    acc = None
+    async for update in agent.run(user_input, stream=True, tools=tools, session=session):
+        for content in update.contents:
+            if acc is None:
+                acc = content
+            elif acc.type == content.type:
+                try:
+                    acc = acc + content
+                except Exception:
+                    yield acc
+                    acc = content
+            else:
+                yield acc
+                acc = content
+    if acc is not None:
+        yield acc
 
 
 def _load_instructions(filename: str = "SYSTEM.md") -> str:
@@ -162,6 +182,7 @@ def build_client() -> OpenAIChatCompletionClient:
 
 
 async def main() -> None:
+
     client = build_client()
     agent = client.as_agent(
         name="PDFAgent",
@@ -195,6 +216,7 @@ async def main() -> None:
         args=["-y", "markitdown-mcp-npx"],
     )
     print(f"Markitdown MCP server started")
+    
     async with (filesystem_mcp, playwright_mcp, markitdown_mcp):
         session = agent.create_session()
         while True:
@@ -209,25 +231,12 @@ async def main() -> None:
                 break
 
             print("\nAgent:", flush=True)
-            # ストリーミング受信: 同一 type のチャンクを + で連結し、type が変わったタイミングで表示する。
-            # これにより細切れテキストを一度にまとめて出力できる。
-            acc = None
-            async for update in agent.run(user_input, stream=True, tools=[playwright_mcp, filesystem_mcp, markitdown_mcp], session=session):
-                for content in update.contents:
-                    if acc is None:
-                        acc = content
-                    elif acc.type == content.type:
-                        try:
-                            acc = acc + content  # フレームワーク提供の + 演算子でチャンクを結合
-                        except Exception:
-                            # 結合不可な型は即時表示して次のチャンクを新たに蓄積
-                            _display_content(acc)
-                            acc = content
-                    else:
-                        _display_content(acc)
-                        acc = content
-            if acc is not None:
-                _display_content(acc)
+            async for content in stream_accumulated(
+                agent, user_input,
+                [playwright_mcp, filesystem_mcp, markitdown_mcp],
+                session,
+            ):
+                _display_content(content)
             print("\n")
 
 

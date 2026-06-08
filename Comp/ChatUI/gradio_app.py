@@ -263,9 +263,6 @@ def chat(message, history, mode, model, pdf, request: gr.Request):
     else:
         prompt = message
 
-    #yield [{"role": "user", "content": "message1"}, {"role": "assistant", "content": "message2", "metadata":{"title": "using tool 'Weather'"}}]  # ユーザーメッセージと空のアシスタントメッセージを即座に返す
-    #return
-
     if mode == "エージェント":
         for msg in run_agent(model, prompt, history):
             yield msg
