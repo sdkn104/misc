@@ -16,7 +16,7 @@ from agent_framework.openai import OpenAIChatCompletionClient
 from azure.identity import AzureCliCredential
 
 load_dotenv()
-
+cat
 # LLMのコンテキスト溢れを防ぐため抽出テキストの上限文字数を設定
 MAX_CHARS = 20_000
 
