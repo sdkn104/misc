@@ -1,6 +1,5 @@
 import asyncio
 import io
-from multiprocessing.dummy import shutdown
 import os
 import pprint
 import xml.etree.ElementTree as ET
@@ -104,27 +103,6 @@ def read_pdf_from_url(
 
     return full_text
 
-# === MCPサーバーを定義　=======================================================================
-
-fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd().resolve()))
-filesystem_mcp = MCPStdioTool(
-    name="filesystem",
-    command="npx",
-    args=["-y", "@modelcontextprotocol/server-filesystem", str(fs_root)],
-)
-playwright_mcp = MCPStdioTool(
-    name="playwright",
-    command="npx",
-    #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*,http://*"],
-    args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*"],
-    #args=["-y", "@playwright/mcp", "--browser=msedge"],
-)
-markitdown_mcp = MCPStdioTool(
-    name="markitdown",
-    command="npx",
-    args=["-y", "markitdown-mcp-npx"],
-)
-
 # === エージェント ======================================================================
 
 def _display_content(content) -> None:
@@ -152,10 +130,10 @@ def _display_content(content) -> None:
             print(f"  → {_trunc(content.result, 80)}", flush=True)
 
 
-async def agent_run(agent, user_input, session):
+async def stream_accumulated(agent, user_input, tools, session):
     """agent.run をラップし、同一 type のチャンクを蓄積して yield する async generator。"""
     acc = None
-    async for update in agent.run(user_input, stream=True, session=session):
+    async for update in agent.run(user_input, stream=True, tools=tools, session=session):
         for content in update.contents:
             if acc is None:
                 acc = content
@@ -193,64 +171,23 @@ def build_client() -> OpenAIChatCompletionClient:
         model=model,
         azure_endpoint=endpoint,
         api_version=api_version,
-        api_key=api_key
     )
+    if api_key:
+        kwargs["api_key"] = api_key
+    else:
+        # API keyが未設定の場合は az login 済みの CLI 認証にフォールバック
+        kwargs["credential"] = AzureCliCredential()
 
     return OpenAIChatCompletionClient(**kwargs)
-
-# mcp_servers.py
-
-class MCPServerTool:
-    """MCPサーバーを起動/シャットダウンするツールのベースクラス。"""
-    def __init__(self, mcp_tools):
-        self.mcp_tools = mcp_tools
-
-    def tools(self):
-        """MCPサーバーが提供するツールのリストを返す。"""
-        return self.mcp_tools
-
-    async def start(self):
-        """MCPサーバーを起動する。"""
-        for tool in self.mcp_tools:
-            await tool.connect()
-            print(f"{tool.name} MCP server started")
-
-    async def shutdown(self):
-        """MCPサーバーをシャットダウンする。"""
-        for tool in self.mcp_tools:
-            await tool.close()
-
-    def cleanup(self):
-        asyncio.run(self.shutdown())
-
-    def handle_signal(self, sig, frame):
-        asyncio.run(self.shutdown())
-        exit(0)
-
-
-# try:
-#     gr.ChatInterface(fn=chat_fn).launch(server_shutdown=shutdown)
-# finally:
-#     asyncio.run(shutdown())
 
 
 async def main() -> None:
 
-    # === MCP servers ========================================================================
-    mcp = MCPServerTool([filesystem_mcp, playwright_mcp, markitdown_mcp])
-    await mcp.start()
-    import atexit
-    import signal
-    atexit.register(mcp.cleanup)
-    signal.signal(signal.SIGINT, mcp.handle_signal)
-    signal.signal(signal.SIGTERM, mcp.handle_signal)
-
-    # === build agent and run =================================================================
     client = build_client()
     agent = client.as_agent(
-        name="DocAgent",
+        name="PDFAgent",
         instructions=_load_instructions(),
-        tools=[search_paper_pdf, read_pdf_from_url] + mcp.tools(),
+        tools=[search_paper_pdf, read_pdf_from_url],
     )
 
     print("PDF Agent 起動中。論文タイトルまたはURLを含む質問を入力してください。")
@@ -258,24 +195,50 @@ async def main() -> None:
     print("例2: https://arxiv.org/abs/1706.03762 をブラウザで開いて要約して")
     print("終了するには 'quit' または 'exit' を入力してください。\n")
 
-    session = agent.create_session()
-    while True:
-        try:
-            user_input = input("You: ").strip()
-        except (EOFError, KeyboardInterrupt):
-            break
+    fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd().resolve()))
+    filesystem_mcp = MCPStdioTool(
+        name="filesystem",
+        command="npx",
+        args=["-y", "@modelcontextprotocol/server-filesystem", str(fs_root)],
+    )
+    print(f"Filesystem MCP server started with root: {fs_root}")
+    playwright_mcp = MCPStdioTool(
+        name="playwright",
+        command="npx",
+        #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*,http://*"],
+        args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*"],
+        #args=["-y", "@playwright/mcp", "--browser=msedge"],
+    )
+    print(f"Playwright MCP server started.")
+    markitdown_mcp = MCPStdioTool(
+        name="markitdown",
+        command="npx",
+        args=["-y", "markitdown-mcp-npx"],
+    )
+    print(f"Markitdown MCP server started")
+    
+    async with (filesystem_mcp, playwright_mcp, markitdown_mcp):
+        session = agent.create_session()
+        while True:
+            try:
+                user_input = input("You: ").strip()
+            except (EOFError, KeyboardInterrupt):
+                break
 
-        if not user_input:
-            continue
-        if user_input.lower() in ("quit", "exit"):
-            break
+            if not user_input:
+                continue
+            if user_input.lower() in ("quit", "exit"):
+                break
 
-        print("\nAgent:", flush=True)
-        async for content in agent_run(agent, user_input, session):
-            _display_content(content)
-        print("\n")
+            print("\nAgent:", flush=True)
+            async for content in stream_accumulated(
+                agent, user_input,
+                [playwright_mcp, filesystem_mcp, markitdown_mcp],
+                session,
+            ):
+                _display_content(content)
+            print("\n")
 
-    await mcp.shutdown()
 
 if __name__ == "__main__":
     asyncio.run(main())
