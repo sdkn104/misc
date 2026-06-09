@@ -27,9 +27,6 @@ logging.basicConfig(
 
 logging.info("Application started")
 
-stream = False
-
-
 # Azure OpenAI の接続情報を環境変数から取得
 # 利用可能なモデルの一覧と各モデルの接続パラメータ
 # $env:LLM_MODELS =  @"
@@ -94,8 +91,7 @@ def run_agent(model_name: str, prompt: str, history: list) -> str:
         azure_endpoint=m["endpoint"],
         api_key=m["subscription_key"],
         api_version=m["api_version"],
-        azure_deployment=model_name,
-        temperature=0,
+        deployment_name=model_name,
     )
     llm_with_tools = llm.bind_tools(AGENT_TOOLS)
     tools_map = {t.name: t for t in AGENT_TOOLS}
@@ -111,11 +107,8 @@ def run_agent(model_name: str, prompt: str, history: list) -> str:
             chat_history.append(HumanMessage(content=entry[0]))
             chat_history.append(AIMessage(content=entry[1]))
 
-    messages = [
-        SystemMessage(content="あなたは役立つAIアシスタントです。必要に応じてツールを使って回答してください。"),
-        *chat_history,
-        HumanMessage(content=prompt),
-    ]
+    messages = create_agent_messages(prompt, "あなたは役立つAIアシスタントです。必要に応じてツールを使って回答してください。", history)
+    
 
     out_messages = []
     while True:
@@ -143,6 +136,21 @@ def run_agent(model_name: str, prompt: str, history: list) -> str:
             yield out_messages
             messages.append(ToolMessage(content=str(result), tool_call_id=tc["id"]))
 
+def create_agent_messages(user_prompt, system_prompt, history):
+    messages = []
+    if system_prompt:
+        messages.append(SystemMessage(content=system_prompt))
+    for entry in history:
+        if isinstance(entry, dict):
+            if entry["role"] == "user":
+                messages.append(HumanMessage(content=entry["content"]))
+            elif entry["role"] == "assistant":
+                messages.append(AIMessage(content=entry["content"]))
+        elif isinstance(entry, (list, tuple)) and len(entry) == 2:
+            messages.append(HumanMessage(content=entry[0]))
+            messages.append(AIMessage(content=entry[1]))
+    messages.append(HumanMessage(content=user_prompt))
+    return messages 
 
 # --------------------------------------------------------------------------------
 # --- DBエージェント
@@ -155,7 +163,7 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
         azure_endpoint=m["endpoint"],
         api_key=m["subscription_key"],
         api_version=m["api_version"],
-        azure_deployment=model_name,
+        deployment_name=model_name,
     )
 
     # DB 設定の読み込み
@@ -169,7 +177,9 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
     from langchain_db_agent import create_db_agent
     agent = create_db_agent(DB_TYPE, db_cfg, llm)
 
-    events = agent.stream({"messages": [{"role": "user", "content": prompt}]}, stream_mode="values")
+    messages = create_agent_messages(prompt, None, history)
+
+    events = agent.stream({"messages": messages}, stream_mode="values")
     answer = None
     msgs = []
     partial = ""
