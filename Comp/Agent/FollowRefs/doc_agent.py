@@ -17,7 +17,7 @@ from agent_framework.openai import OpenAIChatCompletionClient
 from azure.identity import AzureCliCredential
 
 load_dotenv()
-cat
+
 # LLMのコンテキスト溢れを防ぐため抽出テキストの上限文字数を設定
 MAX_CHARS = 20_000
 
@@ -241,9 +241,9 @@ async def main() -> None:
     await mcp.start()
     import atexit
     import signal
-    atexit.register(mcp.cleanup)
-    signal.signal(signal.SIGINT, mcp.handle_signal)
-    signal.signal(signal.SIGTERM, mcp.handle_signal)
+    #atexit.register(mcp.cleanup)
+    #signal.signal(signal.SIGINT, mcp.handle_signal)
+    #signal.signal(signal.SIGTERM, mcp.handle_signal)
 
     # === build agent and run =================================================================
     client = build_client()
