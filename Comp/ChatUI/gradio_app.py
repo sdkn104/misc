@@ -84,14 +84,14 @@ AGENT_TOOLS = [get_current_datetime, calculate, count_words]
 # --------------------------------------------------------------------------------
 # -- エージェントモードの応答生成
 # --------------------------------------------------------------------------------
-def run_agent(model_name: str, prompt: str, history: list) -> str:
+def run_agent_old(model_name: str, prompt: str, history: list) -> str:
     """指定モデルで LangChain エージェントを実行して応答を返す"""
     m = next((m for m in models if m["deployment"] == model_name), models[0])
     llm = AzureChatOpenAI(
         azure_endpoint=m["endpoint"],
         api_key=m["subscription_key"],
         api_version=m["api_version"],
-        deployment_name=model_name,
+        azure_deployment=model_name,
     )
     llm_with_tools = llm.bind_tools(AGENT_TOOLS)
     tools_map = {t.name: t for t in AGENT_TOOLS}
@@ -152,6 +152,111 @@ def create_agent_messages(user_prompt, system_prompt, history):
     messages.append(HumanMessage(content=user_prompt))
     return messages 
 
+
+# --------------------------------------------------------------------------------
+# -- エージェントモードの応答生成
+# --------------------------------------------------------------------------------
+import doc_agent
+
+agent = None  # グローバル変数としてエージェントを保持
+session = None  # グローバル変数としてセッションを保持
+
+async def init_agent():
+    """エージェントの初期化。MCPサーバーの起動など"""
+    # === MCP servers ========================================================================    
+    await doc_agent.mcp_servers.start()
+
+    # === build agent and run =================================================================
+    client = doc_agent.build_client()
+    global agent
+    agent = client.as_agent(
+        name="DocAgent",
+        instructions=doc_agent._load_instructions(),
+        tools=[doc_agent.search_paper_pdf, doc_agent.read_pdf_from_url] + doc_agent.mcp_servers.tools(),
+    )
+
+
+async def init_session():
+    """エージェントセッションの初期化"""
+    global agent
+    if not agent is None:
+        global session
+        session = agent.create_session()
+
+async def shutdown_agent():
+    """エージェントのシャットダウン。MCPサーバーの停止など"""
+    await doc_agent.mcp_servers.shutdown()
+
+
+
+async def run_agent(model_name: str, prompt: str, history: list) -> str:
+    """指定モデルで LangChain エージェントを実行して応答を返す"""
+    m = next((m for m in models if m["deployment"] == model_name), models[0])
+
+    # === update agent and run =================================================================
+    global agent
+    agent.client = doc_agent.build_client()  # クライアントを再構築してエージェントにセット
+
+    print("PDF Agent 起動中。論文タイトルまたはURLを含む質問を入力してください。")
+    print("例1: Attention Is All You Need を要約して")
+    print("例2: https://arxiv.org/abs/1706.03762 をブラウザで開いて要約して")
+    print("終了するには 'quit' または 'exit' を入力してください。\n")
+
+    print(history)
+    out_messages = history.copy()  # 既存のチャット履歴をコピーして開始
+    out_messages.append({"role": "user", "content": prompt})  # ユーザープロンプトを履歴に追加
+    async for content in doc_agent.agent_run(agent, prompt, session):
+        out_messages.append(_content_to_message(content))
+        yield out_messages
+
+
+def _content_to_message(content) -> dict:
+    """蓄積済み content を type ごとにまとめて表示する。"""
+    import pprint
+    #pprint.pprint(content.to_dict())  # デバッグ用に content の全体構造を表示
+    def _trunc(s: str, n: int) -> str:
+        s = str(s)
+        return s[:n] + "..." if len(s) > n else s
+
+    match content.type:
+        case "text":
+            if content.text:
+                return {
+                    "role": "assistant", 
+                    "content":content.text,
+                }
+        case "text_reasoning":
+            if content.text:
+                return {
+                    "role": "assistant", 
+                    "content": content.text,
+                    "metadata": {"title": f"thinking", "status": "done"}
+                }
+        case "function_call":
+            return {
+                "role": "assistant", 
+                "content": f"  - ツールを実行します ({content.name}({_trunc(content.arguments, 120)}) ...",
+            }
+        case "function_result":
+            return {
+                "role": "assistant", 
+                "content": content.result,
+                "metadata": {"title": f"{content.name}", "status": "done"}
+            }
+        case "mcp_server_tool_call":
+            return {
+                "role": "assistant", 
+                "content": f"  - ツールを実行します ({content.name}({_trunc(content.arguments, 120)}) ...",
+            }
+        case "mcp_server_tool_result":
+            return {
+                "role": "assistant", 
+                "content": content.result,
+                "metadata": {"title": f"{content.name}", "status": "done"}
+            }
+    return {"role": "assistant", "content": ""}
+
+
 # --------------------------------------------------------------------------------
 # --- DBエージェント
 # --------------------------------------------------------------------------------
@@ -163,7 +268,7 @@ def run_db_agent(model_name: str, prompt: str, history: list) -> str:
         azure_endpoint=m["endpoint"],
         api_key=m["subscription_key"],
         api_version=m["api_version"],
-        deployment_name=model_name,
+        azure_deployment=model_name,
     )
 
     # DB 設定の読み込み
@@ -258,7 +363,7 @@ def createCompletion(prompt, model, history):
                 yield partial
 
 
-def chat(message, history, mode, model, pdf, request: gr.Request):
+async def chat(message, history, mode, model, pdf, request: gr.Request):
     """Gradio ChatInterface のコールバック。モードに応じて通常応答またはエージェント応答を返す"""
     ip = request.client.host
     msg = message[:70].replace('\n', ' ')
@@ -274,7 +379,7 @@ def chat(message, history, mode, model, pdf, request: gr.Request):
         prompt = message
 
     if mode == "エージェント":
-        for msg in run_agent(model, prompt, history):
+        async for msg in run_agent(model, prompt, history):
             yield msg
     elif mode == "DBエージェント":
         for msg in run_db_agent(model, prompt, history):
@@ -285,11 +390,25 @@ def chat(message, history, mode, model, pdf, request: gr.Request):
 
 
 import gradio as gr
+from contextlib import asynccontextmanager
+from fastapi import FastAPI
+
+@asynccontextmanager
+async def lifespan(app):
+    # アプリ起動時の初期化処理
+    await init_agent()
+    await init_session()
+    yield
+    # アプリ終了時のクリーンアップ処理
+    await shutdown_agent()
+
 
 def load_params(request: gr.Request):
+    # ブラウザのロード時の処理
     mode = request.query_params.get("mode")
     model = request.query_params.get("model")
     return [mode, model]
+
 
 with gr.Blocks(analytics_enabled=False, fill_height=True) as app:
     gr.Markdown("## AI Chat/Agent")
@@ -336,21 +455,9 @@ with gr.Blocks(analytics_enabled=False, fill_height=True) as app:
 
     app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
 
-app.launch()
-
-
-# with gr.Blocks() as app:
-#     gr.ChatInterface(      
-#         fn=chat, 
-#         title="AI Chat",
-#         description="PDFをアップロードして、内容に基づいて質問してください。",
-#         analytics_enabled=False,
-#         #additional_outputs=[gr.File(label="CSV ダウンロード")],
-#     )
-#     pdf = gr.File(label="PDFを添付", scale=0.1, height=40)
-#     mode = gr.Radio(choices=["通常", "エージェント", "DBエージェント"], label="モード", value="通常")
-#     with gr.Accordion("オプション", open=False):
-#         model = gr.Radio(choices=[m["deployment"] for m in models], label="Model", value=models[0]["deployment"])
-#     #app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
-
-# app.launch()
+if __name__ == "__main__":
+    #app.launch()
+else:
+    fastapi_app = FastAPI(lifespan=lifespan)
+    gradio_app = gr.mount_gradio_app(fastapi_app, app, path="/")
+    # uvicorn gradio_app:app
