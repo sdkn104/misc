@@ -137,22 +137,34 @@ class MCPServerTool:
 fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd().resolve()))
 filesystem_mcp = MCPStdioTool(
     name="filesystem",
-    command="npx",
-    args=["-y", "@modelcontextprotocol/server-filesystem", str(fs_root)],
+    command="cmd",
+    args=["/c", os.getcwd()+"/node_modules/.bin/mcp-server-filesystem.cmd", str(fs_root)],
+    #command="D:\NoSync\misc\Comp\ChatUI/node_modules/.bin/mcp-server-filesystem.cmd",
+    #command="npx",
+    #args=["-y", "@modelcontextprotocol/server-filesystem", str(fs_root)],
 )
 playwright_mcp = MCPStdioTool(
     name="playwright",
-    command="npx",
+    command="cmd",
+    args=["/c", os.getcwd()+"/node_modules/.bin/playwright-mcp.cmd", "--browser=msedge", "--allowed-origins=https://*"],
+    #command="npx",
     #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*,http://*"],
-    args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*"],
+    #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*"],
     #args=["-y", "@playwright/mcp", "--browser=msedge"],
 )
 markitdown_mcp = MCPStdioTool(
     name="markitdown",
-    command="npx",
-    args=["-y", "markitdown-mcp-npx"],
+
+
+    #command=os.getcwd()+r"\myenv\Scripts\markitdown-mcp.exe",
+    #args=[],
+    command="node.exe",
+    args=[os.getcwd()+r"\node_modules\markitdown-mcp-npx\bin\markitdown-mcp-npx.js"],
+    #command="cmd",
+    #args=["/c", os.getcwd()+"\node_modules\.bin\markitdown-mcp-npx.cmd"],
 )
 
+#mcp_servers = MCPServerTool([filesystem_mcp, playwright_mcp])
 mcp_servers = MCPServerTool([filesystem_mcp, playwright_mcp, markitdown_mcp])
 
 

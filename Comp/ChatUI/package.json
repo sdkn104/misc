@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@modelcontextprotocol/server-filesystem": "^2026.1.14",
+    "@playwright/mcp": "^0.0.76",
+    "markitdown": "^0.0.4",
+    "markitdown-mcp-npx": "^1.0.3"
+  }
+}

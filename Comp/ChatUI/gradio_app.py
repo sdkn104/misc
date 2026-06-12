@@ -7,7 +7,6 @@ from openai import AzureOpenAI
 from pprint import pprint
 import os
 import json
-from pprint import pprint
 import datetime
 import logging
 import math
@@ -390,17 +389,7 @@ async def chat(message, history, mode, model, pdf, request: gr.Request):
 
 
 import gradio as gr
-from contextlib import asynccontextmanager
-from fastapi import FastAPI
 
-@asynccontextmanager
-async def lifespan(app):
-    # アプリ起動時の初期化処理
-    await init_agent()
-    await init_session()
-    yield
-    # アプリ終了時のクリーンアップ処理
-    await shutdown_agent()
 
 
 def load_params(request: gr.Request):
@@ -410,7 +399,7 @@ def load_params(request: gr.Request):
     return [mode, model]
 
 
-with gr.Blocks(analytics_enabled=False, fill_height=True) as app:
+with gr.Blocks(analytics_enabled=False, fill_height=True) as gradio_app:
     gr.Markdown("## AI Chat/Agent")
     chatbot = gr.Chatbot(scale=1, editable="all", reasoning_tags=[("query-description","/query-description")])
     with gr.Row():
@@ -453,11 +442,23 @@ with gr.Blocks(analytics_enabled=False, fill_height=True) as app:
         lambda: "", inputs=None, outputs=msg  # 送信後に入力欄をクリア
     )
 
-    app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
+    gradio_app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
+
+from contextlib import asynccontextmanager
+@asynccontextmanager
+async def lifespan(app):
+    # アプリ起動時の初期化処理
+    await init_agent()
+    await init_session()
+    yield
+    # アプリ終了時のクリーンアップ処理
+    await shutdown_agent()
+
+from fastapi import FastAPI
+fastapi_app = FastAPI(lifespan=lifespan)
+app = gr.mount_gradio_app(fastapi_app, gradio_app, path="/")
 
 if __name__ == "__main__":
-    #app.launch()
-else:
-    fastapi_app = FastAPI(lifespan=lifespan)
-    gradio_app = gr.mount_gradio_app(fastapi_app, app, path="/")
-    # uvicorn gradio_app:app
+    #gradio_app.launch()
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=7860)
