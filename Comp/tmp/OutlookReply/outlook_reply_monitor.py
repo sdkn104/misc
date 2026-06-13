@@ -1,28 +1,32 @@
 """
 Outlook返信監視ツール
-実行中の旧Outlookを監視し、返信/転送画面の重要度を監視してテキストを挿入する
+実行中の旧Outlookを監視し、返信/転送画面の重要度を監視してHTTPリクエストを投げる
 
-必要ライブラリ: pip install pywin32
+必要ライブラリ: pip install pywin32 requests
 
 【フロー】
 1. 返信/転送画面が開いたら検出し、重要度を最大 MONITOR_DURATION 秒間監視
-2. その間に重要度が「低」に設定されたら、本文に PLACEHOLDER_TEXT を挿入
-3. PLACEHOLDER_DURATION 秒後に PLACEHOLDER_TEXT を INSERT_TEXT に置換
+2. その間に重要度が「低」に設定されたら:
+   a. 本文に PLACEHOLDER_TEXT を挿入
+   b. メール情報（件名・本文）をHTTP POSTリクエストで送信（別スレッド）
+3. レスポンスが返ったら PLACEHOLDER_TEXT をレスポンステキストに置換
 4. MONITOR_DURATION 秒以内に「低」にならなければ何もしない
 """
 
 import sys
 import time
+import concurrent.futures
 import win32com.client
 import pythoncom
+import requests
 
 # =====================================================
 # 設定
 # =====================================================
-INSERT_TEXT        = "ここに挿入するテキストを入力してください。"
-PLACEHOLDER_TEXT   = "AIによる回答作成中..."
-MONITOR_DURATION   = 10   # 重要度を監視する秒数
-PLACEHOLDER_DURATION = 5  # プレースホルダー表示後、置換するまでの秒数
+PLACEHOLDER_TEXT     = "AIによる回答作成中..."
+MONITOR_DURATION     = 10   # 重要度を監視する秒数
+HTTP_URL             = "http://localhost:8000/generate"  # ← 変更してください
+HTTP_TIMEOUT         = 60   # HTTPリクエストのタイムアウト秒数
 # =====================================================
 
 POLL_INTERVAL = 0.5  # 秒
@@ -31,6 +35,34 @@ POLL_INTERVAL = 0.5  # 秒
 OL_MAIL_ITEM      = 43
 OL_FORMAT_HTML    = 2
 OL_IMPORTANCE_LOW = 0
+
+# HTTP リクエスト用スレッドプール
+_executor = concurrent.futures.ThreadPoolExecutor(max_workers=4)
+
+
+# ---------------------------------------------------------------------------
+# HTTP リクエスト（別スレッドで実行）
+# COMオブジェクトはスレッド間で使えないため、呼び出し前にデータを抽出しておく
+# ---------------------------------------------------------------------------
+
+def _http_request(subject: str, plain_body: str) -> str:
+    """
+    HTTPリクエストを送信し、挿入するテキストを返す。
+    レスポンスの取り出し方はここでカスタマイズしてください。
+
+    例) JSON レスポンスから特定フィールドを取り出す場合:
+        data = resp.json()
+        return data["answer"]
+    """
+    print(f"  [HTTP] POST {HTTP_URL}  (件名: {subject[:40]!r})")
+    resp = requests.post(
+        HTTP_URL,
+        json={"subject": subject, "body": plain_body},
+        timeout=HTTP_TIMEOUT,
+    )
+    resp.raise_for_status()
+    print(f"  [HTTP] レスポンス受信: status={resp.status_code}  {len(resp.text)}文字")
+    return resp.text
 
 
 # ---------------------------------------------------------------------------
@@ -62,43 +94,37 @@ def _insert_at_top(item, text_plain: str, text_html: str) -> bool:
 
 
 def insert_placeholder(item) -> bool:
-    """PLACEHOLDER_TEXT を本文先頭に挿入する"""
     print(f"  [プレースホルダー] 「{PLACEHOLDER_TEXT}」を挿入します")
     return _insert_at_top(
         item,
         text_plain=PLACEHOLDER_TEXT,
-        text_html=f"<p>{PLACEHOLDER_TEXT}</p>",
+        text_html=f"<p><em>{PLACEHOLDER_TEXT}</em></p>",
     )
 
 
-def replace_placeholder_with_final(item) -> bool:
-    """PLACEHOLDER_TEXT を INSERT_TEXT に置換する"""
-    print(f"  [置換] 「{PLACEHOLDER_TEXT}」→ INSERT_TEXT")
+def replace_placeholder(item, new_text: str) -> bool:
+    """PLACEHOLDER_TEXT を new_text に置換する"""
+    print(f"  [置換] プレースホルダー → {new_text[:60]!r}")
     try:
         if item.BodyFormat == OL_FORMAT_HTML:
             html = item.HTMLBody
             if PLACEHOLDER_TEXT in html:
-                item.HTMLBody = html.replace(
-                    PLACEHOLDER_TEXT,
-                    INSERT_TEXT,
-                    1,
-                )
+                item.HTMLBody = html.replace(PLACEHOLDER_TEXT, new_text, 1)
                 print("  [置換] HTML置換完了")
                 return True
-            # プレースホルダーが見つからない場合は先頭に挿入
             print("  [置換] プレースホルダー未検出 → 先頭に挿入")
         else:
             body = item.Body or ""
             if PLACEHOLDER_TEXT in body:
-                item.Body = body.replace(PLACEHOLDER_TEXT, INSERT_TEXT, 1)
+                item.Body = body.replace(PLACEHOLDER_TEXT, new_text, 1)
                 print("  [置換] プレーンテキスト置換完了")
                 return True
             print("  [置換] プレースホルダー未検出 → 先頭に挿入")
 
         return _insert_at_top(
             item,
-            text_plain=INSERT_TEXT,
-            text_html=f"<p style='color:#333;'>{INSERT_TEXT}</p>",
+            text_plain=new_text,
+            text_html=f"<p>{new_text}</p>",
         )
     except Exception as e:
         print(f"  [置換エラー] {e}")
@@ -112,12 +138,18 @@ def replace_placeholder_with_final(item) -> bool:
 class MonitoredReply:
     """1つの返信/転送画面の監視状態を保持する"""
 
+    # state 遷移:
+    #   "monitoring"  → 重要度「低」検出待ち
+    #   "awaiting"    → HTTPリクエスト中（プレースホルダー表示済み）
+    #   (done_keys へ追加して monitored から削除)
+
     def __init__(self, item, caption: str):
         self.item = item
         self.caption = caption
-        self.state = "monitoring"       # "monitoring" → "placeholder" → "done"
+        self.state = "monitoring"
         self.state_since = time.time()
-        self.last_log_time = 0.0        # ポーリングログの抑制用
+        self.last_log_time = 0.0
+        self.future: concurrent.futures.Future | None = None
 
     def elapsed(self) -> float:
         return time.time() - self.state_since
@@ -133,17 +165,14 @@ monitored: dict[str, MonitoredReply] = {}
 
 
 def _is_already_tracked(item) -> bool:
-    """INSERT_TEXT またはPLACEHOLDER_TEXT が本文に含まれるか確認"""
     try:
         body = (item.HTMLBody if item.BodyFormat == OL_FORMAT_HTML else item.Body) or ""
-        return INSERT_TEXT in body or PLACEHOLDER_TEXT in body
+        return PLACEHOLDER_TEXT in body
     except Exception:
         return True
 
 
 def poll_once(outlook):
-    global monitored
-
     count = outlook.Inspectors.Count
 
     # ── 新しい返信インスペクターを検出 ──────────────────────────────
@@ -161,14 +190,14 @@ def poll_once(outlook):
 
             key = inspector.Caption
             if key in monitored:
-                continue  # 既に監視中
+                continue
 
             if _is_already_tracked(item):
-                print(f"  [スキップ] 処理済みのためスキップ: {subject[:60]!r}")
+                print(f"  [スキップ] 処理済み: {subject[:60]!r}")
                 continue
 
             print(f"\n[検出] 返信/転送画面: {subject[:70]!r}")
-            print(f"  → {MONITOR_DURATION}秒以内に重要度「低」を検出したらテキストを挿入します")
+            print(f"  → {MONITOR_DURATION}秒以内に重要度「低」を検出したらHTTPリクエストを送信します")
             monitored[key] = MonitoredReply(item, key)
 
         except Exception as e:
@@ -186,33 +215,53 @@ def poll_once(outlook):
                 importance = item.Importance
                 elapsed = reply.elapsed()
 
-                # 2秒ごとにログ表示
                 if now - reply.last_log_time >= 2.0:
                     print(f"  [監視中] {key[:40]!r}  重要度={importance}  経過={elapsed:.1f}s/{MONITOR_DURATION}s")
                     reply.last_log_time = now
 
                 if importance == OL_IMPORTANCE_LOW:
-                    print(f"\n  → 重要度「低」検出！プレースホルダーを挿入します")
-                    if insert_placeholder(item):
-                        print(f"  → 「{PLACEHOLDER_TEXT}」を挿入しました")
-                        print(f"  → {PLACEHOLDER_DURATION}秒後に INSERT_TEXT へ置換します")
-                    reply.transition("placeholder")
+                    print(f"\n  → 重要度「低」検出！")
+
+                    # COMオブジェクトはスレッドを跨げないため、先にデータを抽出する
+                    subject = item.Subject or ""
+                    plain_body = item.Body or ""
+                    print(f"  [データ抽出] 件名={subject[:40]!r}  本文={len(plain_body)}文字")
+
+                    insert_placeholder(item)
+                    print(f"  → 「{PLACEHOLDER_TEXT}」を挿入しました")
+
+                    reply.future = _executor.submit(_http_request, subject, plain_body)
+                    print(f"  → HTTPリクエストを送信しました（レスポンス待機中）")
+                    reply.transition("awaiting")
 
                 elif elapsed >= MONITOR_DURATION:
                     print(f"\n  → {MONITOR_DURATION}秒経過。重要度「低」未検出 → 何もしません: {key[:40]!r}")
                     done_keys.append(key)
 
-            elif reply.state == "placeholder":
-                elapsed = reply.elapsed()
-
+            elif reply.state == "awaiting":
                 if now - reply.last_log_time >= 2.0:
-                    print(f"  [待機中] {key[:40]!r}  置換まで {PLACEHOLDER_DURATION - elapsed:.1f}秒")
+                    print(f"  [HTTP待機中] {key[:40]!r}  経過={reply.elapsed():.1f}s")
                     reply.last_log_time = now
 
-                if elapsed >= PLACEHOLDER_DURATION:
-                    print(f"\n  → {PLACEHOLDER_DURATION}秒経過。INSERT_TEXT へ置換します")
-                    if replace_placeholder_with_final(item):
-                        print(f"[OK] 挿入完了: {key[:60]!r}")
+                if reply.future.done():
+                    try:
+                        result_text = reply.future.result()
+                        print(f"\n  → HTTPレスポンス受信。プレースホルダーを置換します")
+                        if replace_placeholder(item, result_text):
+                            print(f"[OK] 挿入完了: {key[:60]!r}")
+                    except requests.exceptions.Timeout:
+                        err = f"[タイムアウト] HTTPリクエストが{HTTP_TIMEOUT}秒以内に完了しませんでした"
+                        print(f"  [HTTPエラー] {err}")
+                        replace_placeholder(item, err)
+                    except requests.exceptions.RequestException as e:
+                        err = f"[HTTPエラー] {e}"
+                        print(f"  [HTTPエラー] {e}")
+                        replace_placeholder(item, err)
+                    except Exception as e:
+                        err = f"[エラー] {e}"
+                        print(f"  [エラー] {e}")
+                        replace_placeholder(item, err)
+
                     done_keys.append(key)
 
         except Exception as e:
@@ -242,8 +291,8 @@ def main():
             print("  Outlookを起動してから再実行してください。")
             sys.exit(1)
 
-        print(f"\n[設定] 重要度監視: {MONITOR_DURATION}秒 / プレースホルダー待機: {PLACEHOLDER_DURATION}秒")
-        print(f"[設定] 挿入テキスト: {INSERT_TEXT[:70]}")
+        print(f"\n[設定] 重要度監視: {MONITOR_DURATION}秒")
+        print(f"[設定] HTTPエンドポイント: {HTTP_URL}  タイムアウト: {HTTP_TIMEOUT}秒")
         print(f"[監視中] {POLL_INTERVAL}秒ごとにポーリング開始")
         print("終了するには Ctrl+C を押してください。\n")
 
@@ -264,6 +313,8 @@ def main():
     except KeyboardInterrupt:
         print("\n[終了] 監視を停止しました。")
     finally:
+        print("[終了] スレッドプールをシャットダウン中...")
+        _executor.shutdown(wait=False)
         print("[終了] CoUninitialize() 実行中...")
         pythoncom.CoUninitialize()
 
