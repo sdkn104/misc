@@ -1,0 +1,12 @@
+{
+  "name": "outlook-reply-addin",
+  "version": "1.0.0",
+  "description": "Outlook返信生成アドイン",
+  "scripts": {
+    "start": "node server.js",
+    "gen-certs": "office-addin-dev-certs install --days 365"
+  },
+  "devDependencies": {
+    "office-addin-dev-certs": "^1.9.1"
+  }
+}
