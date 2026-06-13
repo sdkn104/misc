@@ -1,14 +1,14 @@
 """
 Outlook返信監視ツール
-実行中の旧Outlookを監視し、返信・転送画面が開いたときに指定テキストを挿入する
+実行中の旧Outlookを監視し、返信/転送画面の重要度を監視してテキストを挿入する
 
 必要ライブラリ: pip install pywin32
 
-【方式】
-イベント方式ではなくポーリング方式を採用。
-0.3秒ごとに Inspectors コレクションを走査し、未挿入の返信/転送を検出する。
-COM型ライブラリキャッシュ(makepy)に依存しないため確実に動作する。
-挿入済みかどうかは本文に INSERT_TEXT が含まれるかで判定するため冪等。
+【フロー】
+1. 返信/転送画面が開いたら検出し、重要度を最大 MONITOR_DURATION 秒間監視
+2. その間に重要度が「低」に設定されたら、本文に PLACEHOLDER_TEXT を挿入
+3. PLACEHOLDER_DURATION 秒後に PLACEHOLDER_TEXT を INSERT_TEXT に置換
+4. MONITOR_DURATION 秒以内に「低」にならなければ何もしない
 """
 
 import sys
@@ -17,100 +17,215 @@ import win32com.client
 import pythoncom
 
 # =====================================================
-# 設定: 挿入するテキストをここで変更してください
+# 設定
 # =====================================================
-INSERT_TEXT = "ここに挿入するテキストを入力してください。"
+INSERT_TEXT        = "ここに挿入するテキストを入力してください。"
+PLACEHOLDER_TEXT   = "AIによる回答作成中..."
+MONITOR_DURATION   = 10   # 重要度を監視する秒数
+PLACEHOLDER_DURATION = 5  # プレースホルダー表示後、置換するまでの秒数
 # =====================================================
 
-POLL_INTERVAL = 0.3  # 秒
+POLL_INTERVAL = 0.5  # 秒
 
-# Outlook定数
-OL_MAIL_ITEM = 43
-OL_FORMAT_HTML = 2
-
-
-def is_reply_or_forward(subject: str) -> bool:
-    s = subject.strip().upper()
-    return s.startswith(("RE:", "FW:", "FWD:", "転送:"))
+# Outlook 定数
+OL_MAIL_ITEM      = 43
+OL_FORMAT_HTML    = 2
+OL_IMPORTANCE_LOW = 0
 
 
-def already_inserted(item) -> bool:
-    """既に INSERT_TEXT が挿入済みかどうか確認する（冪等性のため）"""
+# ---------------------------------------------------------------------------
+# 本文操作
+# ---------------------------------------------------------------------------
+
+def _insert_at_top(item, text_plain: str, text_html: str) -> bool:
+    """本文の先頭（<body>直後 or 先頭）にテキストを挿入する"""
     try:
         if item.BodyFormat == OL_FORMAT_HTML:
-            return INSERT_TEXT in (item.HTMLBody or "")
-        else:
-            return INSERT_TEXT in (item.Body or "")
-    except Exception:
-        return True  # 取得失敗時は挿入しない
-
-
-def insert_text_into_mail(item) -> bool:
-    try:
-        fmt = item.BodyFormat
-        print(f"  [挿入] BodyFormat={fmt} ({'HTML' if fmt == OL_FORMAT_HTML else 'プレーンテキスト'})")
-
-        if fmt == OL_FORMAT_HTML:
             html = item.HTMLBody
-            print(f"  [挿入] HTMLBody 取得: {len(html)} 文字")
-            html_insert = f"<p style='color:#333;'>{INSERT_TEXT}</p>"
-
-            body_start = html.lower().find("<body")
-            if body_start != -1:
-                tag_end = html.find(">", body_start)
+            body_pos = html.lower().find("<body")
+            if body_pos != -1:
+                tag_end = html.find(">", body_pos)
                 if tag_end != -1:
                     pos = tag_end + 1
-                    item.HTMLBody = html[:pos] + html_insert + html[pos:]
-                    print(f"  [挿入] <body>タグ直後に挿入完了 (pos={pos})")
+                    item.HTMLBody = html[:pos] + text_html + html[pos:]
+                    print(f"  [本文操作] HTML挿入完了 (pos={pos})")
                     return True
-            item.HTMLBody = html_insert + html
-            print("  [挿入] <body>タグ未検出のため先頭に挿入完了")
+            item.HTMLBody = text_html + html
+            print("  [本文操作] HTML先頭に挿入完了（<body>未検出）")
         else:
-            item.Body = INSERT_TEXT + "\n\n" + item.Body
-            print("  [挿入] プレーンテキスト先頭に挿入完了")
-
+            item.Body = text_plain + "\n\n" + item.Body
+            print("  [本文操作] プレーンテキスト挿入完了")
         return True
     except Exception as e:
-        print(f"  [挿入エラー] {e}")
-        import traceback
-        traceback.print_exc()
+        print(f"  [本文操作エラー] {e}")
         return False
 
 
-def poll_once(outlook):
-    """Inspectorsを1回走査し、未挿入の返信/転送にテキストを挿入する"""
-    count = outlook.Inspectors.Count
-    if count > 0:
-        print(f"[ポーリング] Inspector数: {count}")
+def insert_placeholder(item) -> bool:
+    """PLACEHOLDER_TEXT を本文先頭に挿入する"""
+    print(f"  [プレースホルダー] 「{PLACEHOLDER_TEXT}」を挿入します")
+    return _insert_at_top(
+        item,
+        text_plain=PLACEHOLDER_TEXT,
+        text_html=f"<p>{PLACEHOLDER_TEXT}</p>",
+    )
 
+
+def replace_placeholder_with_final(item) -> bool:
+    """PLACEHOLDER_TEXT を INSERT_TEXT に置換する"""
+    print(f"  [置換] 「{PLACEHOLDER_TEXT}」→ INSERT_TEXT")
+    try:
+        if item.BodyFormat == OL_FORMAT_HTML:
+            html = item.HTMLBody
+            if PLACEHOLDER_TEXT in html:
+                item.HTMLBody = html.replace(
+                    PLACEHOLDER_TEXT,
+                    INSERT_TEXT,
+                    1,
+                )
+                print("  [置換] HTML置換完了")
+                return True
+            # プレースホルダーが見つからない場合は先頭に挿入
+            print("  [置換] プレースホルダー未検出 → 先頭に挿入")
+        else:
+            body = item.Body or ""
+            if PLACEHOLDER_TEXT in body:
+                item.Body = body.replace(PLACEHOLDER_TEXT, INSERT_TEXT, 1)
+                print("  [置換] プレーンテキスト置換完了")
+                return True
+            print("  [置換] プレースホルダー未検出 → 先頭に挿入")
+
+        return _insert_at_top(
+            item,
+            text_plain=INSERT_TEXT,
+            text_html=f"<p style='color:#333;'>{INSERT_TEXT}</p>",
+        )
+    except Exception as e:
+        print(f"  [置換エラー] {e}")
+        return False
+
+
+# ---------------------------------------------------------------------------
+# 監視状態管理
+# ---------------------------------------------------------------------------
+
+class MonitoredReply:
+    """1つの返信/転送画面の監視状態を保持する"""
+
+    def __init__(self, item, caption: str):
+        self.item = item
+        self.caption = caption
+        self.state = "monitoring"       # "monitoring" → "placeholder" → "done"
+        self.state_since = time.time()
+        self.last_log_time = 0.0        # ポーリングログの抑制用
+
+    def elapsed(self) -> float:
+        return time.time() - self.state_since
+
+    def transition(self, new_state: str):
+        self.state = new_state
+        self.state_since = time.time()
+        print(f"  [状態遷移] {self.caption[:40]!r} → {new_state}")
+
+
+# キー: inspector.Caption（返信ウィンドウタイトル）
+monitored: dict[str, MonitoredReply] = {}
+
+
+def _is_already_tracked(item) -> bool:
+    """INSERT_TEXT またはPLACEHOLDER_TEXT が本文に含まれるか確認"""
+    try:
+        body = (item.HTMLBody if item.BodyFormat == OL_FORMAT_HTML else item.Body) or ""
+        return INSERT_TEXT in body or PLACEHOLDER_TEXT in body
+    except Exception:
+        return True
+
+
+def poll_once(outlook):
+    global monitored
+
+    count = outlook.Inspectors.Count
+
+    # ── 新しい返信インスペクターを検出 ──────────────────────────────
     for i in range(1, count + 1):
         try:
             inspector = outlook.Inspectors.Item(i)
             item = inspector.CurrentItem
-            print(f"  [Inspector {i}] Caption={inspector.Caption!r}  Class={item.Class}")
 
             if item.Class != OL_MAIL_ITEM:
-                print(f"  [Inspector {i}] MailItemではないためスキップ (Class={item.Class})")
                 continue
 
             subject = item.Subject or ""
-            print(f"  [Inspector {i}] 件名: {subject[:70]!r}")
-
-            if not is_reply_or_forward(subject):
-                print(f"  [Inspector {i}] 返信/転送ではないためスキップ")
+            if not (subject.strip().upper()).startswith(("RE:", "FW:", "FWD:", "転送:")):
                 continue
 
-            if already_inserted(item):
-                print(f"  [Inspector {i}] 挿入済みのためスキップ")
+            key = inspector.Caption
+            if key in monitored:
+                continue  # 既に監視中
+
+            if _is_already_tracked(item):
+                print(f"  [スキップ] 処理済みのためスキップ: {subject[:60]!r}")
                 continue
 
-            print(f"[検出] 返信/転送画面: {subject[:70]}")
-            if insert_text_into_mail(item):
-                print("[OK] テキストを挿入しました")
+            print(f"\n[検出] 返信/転送画面: {subject[:70]!r}")
+            print(f"  → {MONITOR_DURATION}秒以内に重要度「低」を検出したらテキストを挿入します")
+            monitored[key] = MonitoredReply(item, key)
 
         except Exception as e:
-            print(f"  [Inspector {i}] エラー: {e}")
+            print(f"  [Inspector {i} 検出エラー] {e}")
 
+    # ── 監視中アイテムを処理 ─────────────────────────────────────────
+    done_keys = []
+    now = time.time()
+
+    for key, reply in monitored.items():
+        try:
+            item = reply.item
+
+            if reply.state == "monitoring":
+                importance = item.Importance
+                elapsed = reply.elapsed()
+
+                # 2秒ごとにログ表示
+                if now - reply.last_log_time >= 2.0:
+                    print(f"  [監視中] {key[:40]!r}  重要度={importance}  経過={elapsed:.1f}s/{MONITOR_DURATION}s")
+                    reply.last_log_time = now
+
+                if importance == OL_IMPORTANCE_LOW:
+                    print(f"\n  → 重要度「低」検出！プレースホルダーを挿入します")
+                    if insert_placeholder(item):
+                        print(f"  → 「{PLACEHOLDER_TEXT}」を挿入しました")
+                        print(f"  → {PLACEHOLDER_DURATION}秒後に INSERT_TEXT へ置換します")
+                    reply.transition("placeholder")
+
+                elif elapsed >= MONITOR_DURATION:
+                    print(f"\n  → {MONITOR_DURATION}秒経過。重要度「低」未検出 → 何もしません: {key[:40]!r}")
+                    done_keys.append(key)
+
+            elif reply.state == "placeholder":
+                elapsed = reply.elapsed()
+
+                if now - reply.last_log_time >= 2.0:
+                    print(f"  [待機中] {key[:40]!r}  置換まで {PLACEHOLDER_DURATION - elapsed:.1f}秒")
+                    reply.last_log_time = now
+
+                if elapsed >= PLACEHOLDER_DURATION:
+                    print(f"\n  → {PLACEHOLDER_DURATION}秒経過。INSERT_TEXT へ置換します")
+                    if replace_placeholder_with_final(item):
+                        print(f"[OK] 挿入完了: {key[:60]!r}")
+                    done_keys.append(key)
+
+        except Exception as e:
+            print(f"  [監視エラー] {key!r}: {e}")
+            done_keys.append(key)
+
+    for key in done_keys:
+        monitored.pop(key, None)
+
+
+# ---------------------------------------------------------------------------
+# メインループ
+# ---------------------------------------------------------------------------
 
 def main():
     print("[起動] pythoncom.CoInitialize() 実行中...")
@@ -121,14 +236,15 @@ def main():
         print("[起動] GetActiveObject('Outlook.Application') 実行中...")
         try:
             outlook = win32com.client.GetActiveObject("Outlook.Application")
-            print(f"[起動] Outlook接続成功")
+            print("[起動] Outlook接続成功")
         except Exception as e:
             print(f"[エラー] Outlookが起動していません: {e}")
             print("  Outlookを起動してから再実行してください。")
             sys.exit(1)
 
-        print(f"\n[監視中] {POLL_INTERVAL}秒ごとにポーリング開始")
+        print(f"\n[設定] 重要度監視: {MONITOR_DURATION}秒 / プレースホルダー待機: {PLACEHOLDER_DURATION}秒")
         print(f"[設定] 挿入テキスト: {INSERT_TEXT[:70]}")
+        print(f"[監視中] {POLL_INTERVAL}秒ごとにポーリング開始")
         print("終了するには Ctrl+C を押してください。\n")
 
         tick = 0
@@ -142,8 +258,8 @@ def main():
 
             time.sleep(POLL_INTERVAL)
             tick += 1
-            if tick % 100 == 0:
-                print(f"[監視中] {tick * POLL_INTERVAL:.0f}秒経過...")
+            if tick % 120 == 0:
+                print(f"[監視中] {tick * POLL_INTERVAL:.0f}秒経過  監視中ウィンドウ数: {len(monitored)}")
 
     except KeyboardInterrupt:
         print("\n[終了] 監視を停止しました。")
