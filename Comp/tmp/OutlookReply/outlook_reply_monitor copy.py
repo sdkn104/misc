@@ -4,14 +4,14 @@ Outlook返信監視ツール
 
 必要ライブラリ: pip install pywin32
 
-【方式】
-イベント方式ではなくポーリング方式を採用。
-0.3秒ごとに Inspectors コレクションを走査し、未挿入の返信/転送を検出する。
-COM型ライブラリキャッシュ(makepy)に依存しないため確実に動作する。
-挿入済みかどうかは本文に INSERT_TEXT が含まれるかで判定するため冪等。
+【仕組み】
+Outlook Application オブジェクトは単一インスタンスCOMサーバーとして登録されている。
+そのため DispatchWithEvents("Outlook.Application", ...) は起動済みの Outlook に
+接続しつつ、IConnectionPoint 経由でイベントシンクを正しく接続できる。
+Application オブジェクト自体に NewInspector イベントが存在するため、
+Inspectors コレクション経由よりも確実に動作する。
 """
 
-import sys
 import time
 import win32com.client
 import pythoncom
@@ -22,8 +22,6 @@ import pythoncom
 INSERT_TEXT = "ここに挿入するテキストを入力してください。"
 # =====================================================
 
-POLL_INTERVAL = 0.3  # 秒
-
 # Outlook定数
 OL_MAIL_ITEM = 43
 OL_FORMAT_HTML = 2
@@ -31,18 +29,12 @@ OL_FORMAT_HTML = 2
 
 def is_reply_or_forward(subject: str) -> bool:
     s = subject.strip().upper()
-    return s.startswith(("RE:", "FW:", "FWD:", "転送:"))
-
-
-def already_inserted(item) -> bool:
-    """既に INSERT_TEXT が挿入済みかどうか確認する（冪等性のため）"""
-    try:
-        if item.BodyFormat == OL_FORMAT_HTML:
-            return INSERT_TEXT in (item.HTMLBody or "")
-        else:
-            return INSERT_TEXT in (item.Body or "")
-    except Exception:
-        return True  # 取得失敗時は挿入しない
+    return (
+        s.startswith("RE:") or
+        s.startswith("FW:") or
+        s.startswith("FWD:") or
+        s.startswith("転送:")
+    )
 
 
 def insert_text_into_mail(item) -> bool:
@@ -72,44 +64,44 @@ def insert_text_into_mail(item) -> bool:
         return True
     except Exception as e:
         print(f"  [挿入エラー] {e}")
-        import traceback
-        traceback.print_exc()
         return False
 
 
-def poll_once(outlook):
-    """Inspectorsを1回走査し、未挿入の返信/転送にテキストを挿入する"""
-    count = outlook.Inspectors.Count
-    if count > 0:
-        print(f"[ポーリング] Inspector数: {count}")
+class OutlookHandler:
+    """Application オブジェクトのイベントハンドラー。
+    Application に直接 NewInspector イベントがあるためこちらの方が確実。"""
 
-    for i in range(1, count + 1):
+    def OnNewInspector(self, inspector):
+        print("[イベント] OnNewInspector が呼ばれました")
+
+        # アイテムが完全に初期化されるまで少し待機
+        print("[イベント] 0.5秒待機中...")
+        time.sleep(0.5)
+
         try:
-            inspector = outlook.Inspectors.Item(i)
             item = inspector.CurrentItem
-            print(f"  [Inspector {i}] Caption={inspector.Caption!r}  Class={item.Class}")
+            print(f"[イベント] CurrentItem 取得: Class={item.Class}")
 
             if item.Class != OL_MAIL_ITEM:
-                print(f"  [Inspector {i}] MailItemではないためスキップ (Class={item.Class})")
-                continue
+                print(f"[スキップ] MailItem ではありません (Class={item.Class})")
+                return
 
             subject = item.Subject or ""
-            print(f"  [Inspector {i}] 件名: {subject[:70]!r}")
+            print(f"[イベント] 件名: {subject[:70]!r}")
 
             if not is_reply_or_forward(subject):
-                print(f"  [Inspector {i}] 返信/転送ではないためスキップ")
-                continue
-
-            if already_inserted(item):
-                print(f"  [Inspector {i}] 挿入済みのためスキップ")
-                continue
+                print("[スキップ] 返信/転送ではありません")
+                return
 
             print(f"[検出] 返信/転送画面: {subject[:70]}")
+
             if insert_text_into_mail(item):
                 print("[OK] テキストを挿入しました")
 
         except Exception as e:
-            print(f"  [Inspector {i}] エラー: {e}")
+            print(f"[エラー] {e}")
+            import traceback
+            traceback.print_exc()
 
 
 def main():
@@ -118,32 +110,24 @@ def main():
     print("[起動] CoInitialize() 完了")
 
     try:
-        print("[起動] GetActiveObject('Outlook.Application') 実行中...")
-        try:
-            outlook = win32com.client.GetActiveObject("Outlook.Application")
-            print(f"[起動] Outlook接続成功")
-        except Exception as e:
-            print(f"[エラー] Outlookが起動していません: {e}")
-            print("  Outlookを起動してから再実行してください。")
-            sys.exit(1)
+        print("[起動] Outlook.Application に DispatchWithEvents で接続中...")
+        _outlook_app = win32com.client.DispatchWithEvents(
+            "Outlook.Application",
+            OutlookHandler,
+        )
+        print(f"[起動] 接続成功: {_outlook_app}")
 
-        print(f"\n[監視中] {POLL_INTERVAL}秒ごとにポーリング開始")
+        print("[監視中] 返信・転送画面の検出を開始しました")
         print(f"[設定] 挿入テキスト: {INSERT_TEXT[:70]}")
         print("終了するには Ctrl+C を押してください。\n")
 
         tick = 0
         while True:
             pythoncom.PumpWaitingMessages()
-
-            try:
-                poll_once(outlook)
-            except Exception as e:
-                print(f"[エラー] ポーリング中: {e}")
-
-            time.sleep(POLL_INTERVAL)
+            time.sleep(0.1)
             tick += 1
-            if tick % 100 == 0:
-                print(f"[監視中] {tick * POLL_INTERVAL:.0f}秒経過...")
+            if tick % 100 == 0:  # 10秒ごとに生存確認
+                print(f"[監視中] 待機中... ({tick // 10}秒経過)")
 
     except KeyboardInterrupt:
         print("\n[終了] 監視を停止しました。")
