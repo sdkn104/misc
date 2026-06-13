@@ -32,9 +32,10 @@ HTTP_TIMEOUT         = 60   # HTTPリクエストのタイムアウト秒数
 POLL_INTERVAL = 0.5  # 秒
 
 # Outlook 定数
-OL_MAIL_ITEM      = 43
-OL_FORMAT_HTML    = 2
-OL_IMPORTANCE_LOW = 0
+OL_MAIL_ITEM         = 43
+OL_FORMAT_HTML       = 2
+OL_IMPORTANCE_LOW    = 0
+OL_IMPORTANCE_NORMAL = 1
 
 # HTTP リクエスト用スレッドプール
 _executor = concurrent.futures.ThreadPoolExecutor(max_workers=4)
@@ -261,6 +262,14 @@ def poll_once(outlook):
                         err = f"[エラー] {e}"
                         print(f"  [エラー] {e}")
                         replace_placeholder(item, err)
+                    finally:
+                        # 成功・エラーに関わらず優先度を「普通」に戻す
+                        # → 戻さないと次のポーリングで再検出→再リクエストが発生する
+                        try:
+                            item.Importance = OL_IMPORTANCE_NORMAL
+                            print(f"  [優先度リセット] 重要度を「普通」に戻しました")
+                        except Exception as e:
+                            print(f"  [優先度リセットエラー] {e}")
 
                     done_keys.append(key)
 
