@@ -14,6 +14,7 @@ Outlook返信監視ツール
 """
 
 import sys
+import os
 import time
 import concurrent.futures
 import win32com.client
@@ -285,20 +286,34 @@ def poll_once(outlook):
 # メインループ
 # ---------------------------------------------------------------------------
 
+def _setup_logging():
+    """PyInstallerでexe化（--noconsole）された場合、出力をログファイルにリダイレクトする"""
+    if not getattr(sys, 'frozen', False):
+        return  # 開発時はそのまま標準出力へ
+    log_dir = os.path.join(os.environ.get('APPDATA', '.'), 'OutlookReplyMonitor')
+    os.makedirs(log_dir, exist_ok=True)
+    log_path = os.path.join(log_dir, 'monitor.log')
+    log_file = open(log_path, 'w', encoding='utf-8', buffering=1)
+    sys.stdout = log_file
+    sys.stderr = log_file
+    print(f"[ログ] 出力先: {log_path}")
+
+
 def main():
+    _setup_logging()
     print("[起動] pythoncom.CoInitialize() 実行中...")
     pythoncom.CoInitialize()
     print("[起動] CoInitialize() 完了")
 
     try:
-        print("[起動] GetActiveObject('Outlook.Application') 実行中...")
-        try:
-            outlook = win32com.client.GetActiveObject("Outlook.Application")
-            print("[起動] Outlook接続成功")
-        except Exception as e:
-            print(f"[エラー] Outlookが起動していません: {e}")
-            print("  Outlookを起動してから再実行してください。")
-            sys.exit(1)
+        outlook = None
+        while outlook is None:
+            try:
+                outlook = win32com.client.GetActiveObject("Outlook.Application")
+                print("[起動] Outlook接続成功")
+            except Exception:
+                print("[待機] Outlookが起動していません。10秒後にリトライします...")
+                time.sleep(10)
 
         print(f"\n[設定] 重要度監視: {MONITOR_DURATION}秒")
         print(f"[設定] HTTPエンドポイント: {HTTP_URL}  タイムアウト: {HTTP_TIMEOUT}秒")
