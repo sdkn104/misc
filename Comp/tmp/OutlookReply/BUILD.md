@@ -85,12 +85,11 @@ HTTP_TIMEOUT      = 60                        # HTTPタイムアウト秒数
 
 ## ログファイル
 
-exe として動作中の出力は以下に保存されます（起動ごとに上書き）。
+出力は常にコンソールとログファイルの両方に書き込まれます（各行に `[HH:MM:SS]` タイムスタンプ付き）。
 
-```
-%APPDATA%\OutlookReplyMonitor\monitor.log
-```
+| 実行方法 | ログファイルの場所 |
+|---|---|
+| `python outlook_reply_monitor.py`（開発時） | スクリプトと同フォルダの `monitor.log` |
+| インストール済み exe | `%APPDATA%\OutlookReplyMonitor\monitor.log` |
 
-動作確認やエラー調査の際はこのファイルを参照してください。
-
-開発時（`python outlook_reply_monitor.py` で実行）はコンソールに直接出力されます。
+ログファイルは起動ごとに上書きされます。動作確認やエラー調査の際はこのファイルを参照してください。

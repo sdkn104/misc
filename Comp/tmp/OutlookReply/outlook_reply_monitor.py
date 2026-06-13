@@ -17,6 +17,7 @@ import sys
 import os
 import time
 import concurrent.futures
+from datetime import datetime
 import win32com.client
 import pythoncom
 import requests
@@ -286,16 +287,53 @@ def poll_once(outlook):
 # メインループ
 # ---------------------------------------------------------------------------
 
+class _Tee:
+    """print() の出力をコンソールとログファイルの両方に書き込む。
+    各行の先頭に HH:MM:SS タイムスタンプを付与してログファイルに保存する。"""
+
+    def __init__(self, log_file, console=None):
+        self.log_file = log_file
+        self.console = console  # None の場合（--noconsole exe）はログのみ
+
+    def write(self, data):
+        if self.console:
+            try:
+                self.console.write(data)
+            except Exception:
+                pass
+        try:
+            ts = datetime.now().strftime('%H:%M:%S')
+            # 非空行の先頭にタイムスタンプを付与（空行はそのまま）
+            out = '\n'.join(
+                f"[{ts}] {line}" if line else ''
+                for line in data.split('\n')
+            )
+            self.log_file.write(out)
+        except Exception:
+            pass
+
+    def flush(self):
+        for s in (self.console, self.log_file):
+            if s:
+                try:
+                    s.flush()
+                except Exception:
+                    pass
+
+
 def _setup_logging():
-    """PyInstallerでexe化（--noconsole）された場合、出力をログファイルにリダイレクトする"""
-    if not getattr(sys, 'frozen', False):
-        return  # 開発時はそのまま標準出力へ
-    log_dir = os.path.join(os.environ.get('APPDATA', '.'), 'OutlookReplyMonitor')
-    os.makedirs(log_dir, exist_ok=True)
-    log_path = os.path.join(log_dir, 'monitor.log')
+    """コンソールとログファイル（プログラムと同フォルダ）の両方に出力する。
+    exe 時は sys.__stdout__ が None のためログファイルのみになる。"""
+    if getattr(sys, 'frozen', False):
+        base_dir = os.path.dirname(sys.executable)
+    else:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    log_path = os.path.join(base_dir, 'monitor.log')
     log_file = open(log_path, 'w', encoding='utf-8', buffering=1)
-    sys.stdout = log_file
-    sys.stderr = log_file
+
+    sys.stdout = _Tee(log_file, console=sys.__stdout__)
+    sys.stderr = _Tee(log_file, console=sys.__stderr__)
     print(f"[ログ] 出力先: {log_path}")
 
 
