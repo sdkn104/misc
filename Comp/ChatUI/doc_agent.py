@@ -103,17 +103,20 @@ def read_pdf_from_url(
 
 
 @tool(approval_mode="never_require")
-def convert_to_markdown(
+def contents_reader(
     path: Annotated[str, Field(description=(
-        "変換するファイルのパスまたはURL。"
+        "読み込むファイルのパスまたはURL。"
         "http/https URL、file URL (file:///C:/...)、"
         "Windowsパス (C:\\path\\to\\file)、UNCパス (\\\\server\\share\\file) に対応。"
-        "対応形式: PDF, Word (.docx/.doc), Excel (.xlsx/.xls), PowerPoint (.pptx/.ppt)"
+        "対応形式: PDF, Word (.docx/.doc), Excel (.xlsx/.xls), PowerPoint (.pptx/.ppt), テキスト (.txt/.md)"
     ))],
+    engine: Annotated[str, Field(description=(
+        "変換エンジン。'fast' (pdfminer/python-docx/openpyxl/python-pptx使用、デフォルト) または "
+        "'markitdown' (MarkItDown使用)。.doc/.xls/.ppt の旧形式は markitdown のみ対応。"
+    ))] = "fast",
 ) -> str:
-    """PDF・Word・Excel・PowerPointファイルをMarkdownテキストに変換する。"""
+    """PDF・Word・Excel・PowerPoint・テキスト・MarkdownファイルをMarkdownテキストに変換する。"""
     import urllib.parse
-    from markitdown import MarkItDown
 
     source = path.strip()
 
@@ -121,29 +124,156 @@ def convert_to_markdown(
     if source.lower().startswith("file:"):
         parsed = urllib.parse.urlparse(source)
         local = urllib.parse.unquote(parsed.path)
-        # Windows: /C:/path → C:/path
         if len(local) > 2 and local[0] == "/" and local[2] == ":":
             local = local[1:]
         source = local
 
+    if engine == "markitdown":
+        return _read_with_markitdown(source)
+    else:
+        return _read_with_fast(source)
+    
+
+def _read_with_markitdown(source: str) -> str:
+    from markitdown import MarkItDown
     try:
         md = MarkItDown(enable_plugins=False)
         if source.lower().startswith(("http://", "https://")):
             result = md.convert_uri(source)
         else:
             result = md.convert(source)
-        # バージョン差吸収: 旧API=.text_content, 新API=.markdown
         text = getattr(result, 'text_content', None) or getattr(result, 'markdown', None) or ""
+    except Exception as e:
+        return f"エラー: 変換に失敗しました — {e}"
+    if not text.strip():
+        return "テキストを抽出できませんでした。"
+    if len(text) > MAX_CHARS:
+        text = text[:MAX_CHARS] + f"\n\n[... 残り {len(text) - MAX_CHARS} 文字は省略されました]"
+    return text
+
+
+def _fast_pdf(source) -> str:
+    from pdfminer.high_level import extract_text
+    return extract_text(source)
+
+
+def _fast_docx(source) -> str:
+    import docx
+    doc = docx.Document(source)
+    parts = []
+    for para in doc.paragraphs:
+        text = para.text.strip()
+        if not text:
+            continue
+        style = para.style.name
+        if style.startswith("Heading"):
+            tokens = style.split()
+            level = tokens[-1] if tokens[-1].isdigit() else "1"
+            parts.append(f"{'#' * int(level)} {text}")
+        else:
+            parts.append(text)
+    for table in doc.tables:
+        rows = []
+        for i, row in enumerate(table.rows):
+            cells = [c.text.strip().replace("\n", " ") for c in row.cells]
+            rows.append("| " + " | ".join(cells) + " |")
+            if i == 0:
+                rows.append("|" + " --- |" * len(cells))
+        if rows:
+            parts.append("\n".join(rows))
+    return "\n\n".join(parts)
+
+
+def _fast_excel(source) -> str:
+    import openpyxl
+    wb = openpyxl.load_workbook(source, read_only=True, data_only=True)
+    parts = []
+    for name in wb.sheetnames:
+        ws = wb[name]
+        rows_data = [r for r in ws.iter_rows(values_only=True) if any(c is not None for c in r)]
+        if not rows_data:
+            continue
+        max_cols = max(len(r) for r in rows_data)
+        lines = []
+        for i, row in enumerate(rows_data):
+            cells = [str(c) if c is not None else "" for c in row]
+            cells += [""] * (max_cols - len(cells))
+            lines.append("| " + " | ".join(cells) + " |")
+            if i == 0:
+                lines.append("|" + " --- |" * max_cols)
+        parts.append(f"## {name}\n\n" + "\n".join(lines))
+    wb.close()
+    return "\n\n".join(parts)
+
+
+def _fast_pptx(source) -> str:
+    from pptx import Presentation
+    prs = Presentation(source)
+    slides = []
+    for i, slide in enumerate(prs.slides, start=1):
+        texts = [f"## スライド {i}"]
+        for shape in slide.shapes:
+            if hasattr(shape, "text") and shape.text.strip():
+                texts.append(shape.text.strip())
+        if len(texts) > 1:
+            slides.append("\n\n".join(texts))
+    return "\n\n---\n\n".join(slides)
+
+
+def _read_with_fast(source: str) -> str:
+    import io
+    import urllib.parse
+
+    is_url = source.lower().startswith(("http://", "https://"))
+
+    if is_url:
+        ext = Path(urllib.parse.urlparse(source).path).suffix.lower()
+        try:
+            response = requests.get(source, timeout=30)
+            response.raise_for_status()
+            content_bytes = response.content
+        except requests.Timeout:
+            return f"エラー: タイムアウト (30秒) — URL: {source}"
+        except requests.HTTPError as e:
+            return f"エラー: HTTPエラー {e.response.status_code} — URL: {source}"
+        except requests.RequestException as e:
+            return f"エラー: ダウンロード失敗 — {e}"
+        file_source = io.BytesIO(content_bytes)
+    else:
+        ext = Path(source).suffix.lower()
+        file_source = source
+        content_bytes = None
+
+    try:
+        if ext == ".pdf":
+            text = _fast_pdf(file_source)
+        elif ext == ".docx":
+            text = _fast_docx(file_source)
+        elif ext == ".xlsx":
+            text = _fast_excel(file_source)
+        elif ext == ".pptx":
+            text = _fast_pptx(file_source)
+        elif ext in (".txt", ".md", ".markdown", ""):
+            if is_url:
+                text = content_bytes.decode("utf-8", errors="replace")
+            else:
+                text = Path(source).read_text(encoding="utf-8", errors="replace")
+        elif ext in (".doc", ".xls", ".ppt"):
+            return f"エラー: {ext} 形式は fast エンジン非対応です。engine='markitdown' を使用してください。"
+        else:
+            if is_url:
+                text = content_bytes.decode("utf-8", errors="replace")
+            else:
+                text = Path(source).read_text(encoding="utf-8", errors="replace")
     except Exception as e:
         return f"エラー: 変換に失敗しました — {e}"
 
     if not text.strip():
         return "テキストを抽出できませんでした。"
-
     if len(text) > MAX_CHARS:
         text = text[:MAX_CHARS] + f"\n\n[... 残り {len(text) - MAX_CHARS} 文字は省略されました]"
-
     return text
+
 
 # === MCPサーバーを定義　=======================================================================
 
@@ -211,7 +341,7 @@ def _display_content(content) -> None:
     match content.type:
         case "text":
             if content.text:
-                print(content.text, flush=True)
+                print(f"\n{("-" * 60)}\n{content.text}", flush=True)
         case "text_reasoning":
             if content.text:
                 print(f"[Thinking] {content.text}", flush=True)
@@ -291,10 +421,10 @@ async def main() -> None:
     agent = client.as_agent(
         name="DocAgent",
         instructions=_load_instructions(),
-        tools=[search_paper_pdf, read_pdf_from_url, convert_to_markdown] + mcp_servers.tools(),
+        tools=[search_paper_pdf, read_pdf_from_url, contents_reader] + mcp_servers.tools(),
     )
 
-    print("PDF Agent 起動中。論文タイトルまたはURLを含む質問を入力してください。")
+    print("Doc Agent 起動中。ファイル名やURLを含む質問を入力してください。")
     print("例1: Attention Is All You Need を要約して")
     print("例2: https://arxiv.org/abs/1706.03762 をブラウザで開いて要約して")
     print("終了するには 'quit' または 'exit' を入力してください。\n")
@@ -311,7 +441,7 @@ async def main() -> None:
         if user_input.lower() in ("quit", "exit"):
             break
 
-        print("\nAgent:", flush=True)
+        #print("\nAgent:", flush=True)
         async for content in agent_run(agent, user_input, session):
             _display_content(content)
         print("\n")

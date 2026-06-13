@@ -86,7 +86,7 @@ def create_agent():
     return client.as_agent(
         name="DocAgent",
         instructions=doc_agent._load_instructions(),
-        tools=[doc_agent.search_paper_pdf, doc_agent.read_pdf_from_url, doc_agent.convert_to_markdown] + doc_agent.mcp_servers.tools(),
+        tools=[doc_agent.search_paper_pdf, doc_agent.read_pdf_from_url, doc_agent.contents_reader] + doc_agent.mcp_servers.tools(),
     )
 
 
