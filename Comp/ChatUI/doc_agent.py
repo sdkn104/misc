@@ -1,8 +1,6 @@
 import asyncio
 import io
-from multiprocessing.dummy import shutdown
 import os
-import pprint
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Annotated
@@ -14,12 +12,11 @@ from pydantic import Field
 
 from agent_framework import MCPStdioTool, tool
 from agent_framework.openai import OpenAIChatCompletionClient
-from azure.identity import AzureCliCredential
 
 load_dotenv()
 
 # LLMのコンテキスト溢れを防ぐため抽出テキストの上限文字数を設定
-MAX_CHARS = 20_000
+MAX_CHARS = 500_000
 
 # === ツール定義 ======================================================================
 
@@ -104,6 +101,50 @@ def read_pdf_from_url(
 
     return full_text
 
+
+@tool(approval_mode="never_require")
+def convert_to_markdown(
+    path: Annotated[str, Field(description=(
+        "変換するファイルのパスまたはURL。"
+        "http/https URL、file URL (file:///C:/...)、"
+        "Windowsパス (C:\\path\\to\\file)、UNCパス (\\\\server\\share\\file) に対応。"
+        "対応形式: PDF, Word (.docx/.doc), Excel (.xlsx/.xls), PowerPoint (.pptx/.ppt)"
+    ))],
+) -> str:
+    """PDF・Word・Excel・PowerPointファイルをMarkdownテキストに変換する。"""
+    import urllib.parse
+    from markitdown import MarkItDown
+
+    source = path.strip()
+
+    # file: URI → ローカルパスに変換
+    if source.lower().startswith("file:"):
+        parsed = urllib.parse.urlparse(source)
+        local = urllib.parse.unquote(parsed.path)
+        # Windows: /C:/path → C:/path
+        if len(local) > 2 and local[0] == "/" and local[2] == ":":
+            local = local[1:]
+        source = local
+
+    try:
+        md = MarkItDown(enable_plugins=False)
+        if source.lower().startswith(("http://", "https://")):
+            result = md.convert_uri(source)
+        else:
+            result = md.convert(source)
+        # バージョン差吸収: 旧API=.text_content, 新API=.markdown
+        text = getattr(result, 'text_content', None) or getattr(result, 'markdown', None) or ""
+    except Exception as e:
+        return f"エラー: 変換に失敗しました — {e}"
+
+    if not text.strip():
+        return "テキストを抽出できませんでした。"
+
+    if len(text) > MAX_CHARS:
+        text = text[:MAX_CHARS] + f"\n\n[... 残り {len(text) - MAX_CHARS} 文字は省略されました]"
+
+    return text
+
 # === MCPサーバーを定義　=======================================================================
 
 class MCPServerTool:
@@ -126,19 +167,12 @@ class MCPServerTool:
         for tool in self.mcp_tools:
             await tool.close()
 
-    def cleanup(self):
-        asyncio.run(self.shutdown())
-
-    def handle_signal(self, sig, frame):
-        asyncio.run(self.shutdown())
-        exit(0)
-
 
 fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd().resolve()))
 filesystem_mcp = MCPStdioTool(
     name="filesystem",
     command="cmd",
-    args=["/c", os.getcwd()+"/node_modules/.bin/mcp-server-filesystem.cmd", str(fs_root)],
+    args=["/c", os.getcwd()+"/node_modules/.bin/mcp-server-filesystem.cmd", str(fs_root), str(Path.home() / "Downloads")],
     #command="D:\NoSync\misc\Comp\ChatUI/node_modules/.bin/mcp-server-filesystem.cmd",
     #command="npx",
     #args=["-y", "@modelcontextprotocol/server-filesystem", str(fs_root)],
@@ -154,8 +188,10 @@ playwright_mcp = MCPStdioTool(
 )
 markitdown_mcp = MCPStdioTool(
     name="markitdown",
-    command=os.getcwd()+r"\myenv\Scripts\markitdown-mcp.exe",
-    args=[],
+    #command=os.getcwd()+r"\myenv\Scripts\markitdown-mcp.exe",
+    #args=[],
+    command="node.exe",
+    args=[os.getcwd()+r"\node_modules\markitdown-mcp-npx\bin\markitdown-mcp-npx.js"],
     #command="cmd",
     #args=["/c", os.getcwd()+"\node_modules\.bin\markitdown-mcp-npx.cmd"],
 )
@@ -168,8 +204,6 @@ mcp_servers = MCPServerTool([filesystem_mcp, playwright_mcp])
 
 def _display_content(content) -> None:
     """蓄積済み content を type ごとにまとめて表示する。"""
-    import pprint
-    #pprint.pprint(content.to_dict())  # デバッグ用に content の全体構造を表示
     def _trunc(s: str, n: int) -> str:
         s = str(s)
         return s[:n] + "..." if len(s) > n else s
@@ -191,10 +225,15 @@ def _display_content(content) -> None:
             print(f"  → {_trunc(content.result, 80)}", flush=True)
 
 
-async def agent_run(agent, user_input, session):
+async def agent_run(agent, user_input, session, model: str | None = None, effort: str | None = None):
     """agent.run をラップし、同一 type のチャンクを蓄積して yield する async generator。"""
+    options: dict = {}
+    if model:
+        options["model"] = model
+    if effort:
+        options["reasoning"] = {"effort": effort}
     acc = None
-    async for update in agent.run(user_input, stream=True, session=session):
+    async for update in agent.run(user_input, stream=True, session=session, options=options or None):
         for content in update.contents:
             if acc is None:
                 acc = content
@@ -217,32 +256,34 @@ def _load_instructions(filename: str = "SYSTEM.md") -> str:
     return path.read_text(encoding="utf-8")
 
 
-def build_client() -> OpenAIChatCompletionClient:
-    endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
-    model = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME")
-    api_version = os.environ.get("OPENAI_API_VERSION")
-    api_key = os.environ.get("AZURE_OPENAI_API_KEY")
+def build_client(
+    model: str | None = None,
+    endpoint: str | None = None,
+    api_key: str | None = None,
+    api_version: str | None = None,
+) -> OpenAIChatCompletionClient:
+    endpoint = endpoint or os.environ.get("AZURE_OPENAI_ENDPOINT")
+    model = model or os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME")
+    api_version = api_version or os.environ.get("OPENAI_API_VERSION")
+    api_key = api_key or os.environ.get("AZURE_OPENAI_API_KEY")
 
     if not endpoint or not model:
         raise RuntimeError(
             "AZURE_OPENAI_ENDPOINT と AZURE_OPENAI_DEPLOYMENT_NAME を .env または環境変数に設定してください。"
         )
 
-    kwargs: dict = dict(
+    return OpenAIChatCompletionClient(
         model=model,
         azure_endpoint=endpoint,
         api_version=api_version,
-        api_key=api_key
+        api_key=api_key,
     )
-
-    return OpenAIChatCompletionClient(**kwargs)
 
 
 
 async def main() -> None:
 
     # === MCP servers ========================================================================
-    
     await mcp_servers.start()
 
     # === build agent and run =================================================================
@@ -250,7 +291,7 @@ async def main() -> None:
     agent = client.as_agent(
         name="DocAgent",
         instructions=_load_instructions(),
-        tools=[search_paper_pdf, read_pdf_from_url] + mcp_servers.tools(),
+        tools=[search_paper_pdf, read_pdf_from_url, convert_to_markdown] + mcp_servers.tools(),
     )
 
     print("PDF Agent 起動中。論文タイトルまたはURLを含む質問を入力してください。")

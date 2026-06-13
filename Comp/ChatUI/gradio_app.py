@@ -1,5 +1,4 @@
 import configparser
-from urllib import response
 
 import gradio as gr
 import PyPDF2
@@ -7,13 +6,10 @@ from openai import AzureOpenAI
 from pprint import pprint
 import os
 import json
-import datetime
 import logging
-import math
 
 from langchain_openai import AzureChatOpenAI
-from langchain_core.tools import tool
-from langchain_core.messages import HumanMessage, AIMessage, ToolMessage, SystemMessage
+from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 print("Imports completed")
 
 # ログ設定: INFO レベル以上をファイルに記録
@@ -47,93 +43,6 @@ for m in models:
     )
 
 
-# --------------------------------------------------------------------------------
-# --- エージェント用ツール定義
-# --------------------------------------------------------------------------------
-
-@tool
-def get_current_datetime() -> str:
-    """現在の日付と時刻を返す"""
-    return datetime.datetime.now().strftime("%Y年%m月%d日 %H:%M:%S")
-
-
-@tool
-def calculate(expression: str) -> str:
-    """数式を計算して結果を返す。例: '2 + 3 * 4', 'sqrt(16)', 'sin(3.14)'"""
-    try:
-        # math モジュールの関数のみ許可し、組み込み関数は無効化してサンドボックス化
-        allowed = {k: getattr(math, k) for k in dir(math) if not k.startswith("_")}
-        result = eval(expression, {"__builtins__": {}}, allowed)
-        return str(result)
-    except Exception as e:
-        return f"計算エラー: {e}"
-
-
-@tool
-def count_words(text: str) -> str:
-    """テキストの文字数と単語数を返す"""
-    chars = len(text)
-    words = len(text.split())
-    return f"文字数: {chars}, 単語数(スペース区切り): {words}"
-
-
-# エージェントが使用するツール一覧
-AGENT_TOOLS = [get_current_datetime, calculate, count_words]
-
-# --------------------------------------------------------------------------------
-# -- エージェントモードの応答生成
-# --------------------------------------------------------------------------------
-def run_agent_old(model_name: str, prompt: str, history: list) -> str:
-    """指定モデルで LangChain エージェントを実行して応答を返す"""
-    m = next((m for m in models if m["deployment"] == model_name), models[0])
-    llm = AzureChatOpenAI(
-        azure_endpoint=m["endpoint"],
-        api_key=m["subscription_key"],
-        api_version=m["api_version"],
-        azure_deployment=model_name,
-    )
-    llm_with_tools = llm.bind_tools(AGENT_TOOLS)
-    tools_map = {t.name: t for t in AGENT_TOOLS}
-
-    chat_history = []
-    for entry in history:
-        if isinstance(entry, dict):
-            if entry["role"] == "user":
-                chat_history.append(HumanMessage(content=entry["content"]))
-            elif entry["role"] == "assistant":
-                chat_history.append(AIMessage(content=entry["content"]))
-        elif isinstance(entry, (list, tuple)) and len(entry) == 2:
-            chat_history.append(HumanMessage(content=entry[0]))
-            chat_history.append(AIMessage(content=entry[1]))
-
-    messages = create_agent_messages(prompt, "あなたは役立つAIアシスタントです。必要に応じてツールを使って回答してください。", history)
-    
-
-    out_messages = []
-    while True:
-        response = llm_with_tools.invoke(messages)
-        messages.append(response)
-        if not response.tool_calls:
-            out_messages.append({
-                "role": "assistant", 
-                "content": response.content,
-            })
-            yield out_messages
-            break
-        for tc in response.tool_calls:
-            out_messages.append({
-                "role": "assistant", 
-                "content": f"  - ツールを実行します ({tc['name']}) ...",
-            })
-            yield out_messages
-            result = tools_map[tc["name"]].invoke(tc["args"])
-            out_messages.append({
-                "role": "assistant", 
-                "content": result,
-                "metadata": {"title": f"🛠️ 結果({tc['name']})", "status": "done"}
-            })
-            yield out_messages
-            messages.append(ToolMessage(content=str(result), tool_call_id=tc["id"]))
 
 def create_agent_messages(user_prompt, system_prompt, history):
     messages = []
@@ -157,62 +66,42 @@ def create_agent_messages(user_prompt, system_prompt, history):
 # --------------------------------------------------------------------------------
 import doc_agent
 
-agent = None  # グローバル変数としてエージェントを保持
-session = None  # グローバル変数としてセッションを保持
-
-async def init_agent():
-    """エージェントの初期化。MCPサーバーの起動など"""
-    # === MCP servers ========================================================================    
+async def init_mcp():
+    """MCPサーバーの起動"""
     await doc_agent.mcp_servers.start()
 
-    # === build agent and run =================================================================
-    client = doc_agent.build_client()
-    global agent
-    agent = client.as_agent(
+async def shutdown_mcp():
+    """MCPサーバーの停止"""
+    await doc_agent.mcp_servers.shutdown()
+
+def create_agent():
+    """DocAgent を作成して返す（モデル切替は agent.run() の options で行う）"""
+    m = models[0]
+    client = doc_agent.build_client(
+        model=m["deployment"],
+        endpoint=m["endpoint"],
+        api_key=m["subscription_key"],
+        api_version=m["api_version"],
+    )
+    return client.as_agent(
         name="DocAgent",
         instructions=doc_agent._load_instructions(),
-        tools=[doc_agent.search_paper_pdf, doc_agent.read_pdf_from_url] + doc_agent.mcp_servers.tools(),
+        tools=[doc_agent.search_paper_pdf, doc_agent.read_pdf_from_url, doc_agent.convert_to_markdown] + doc_agent.mcp_servers.tools(),
     )
 
 
-async def init_session():
-    """エージェントセッションの初期化"""
-    global agent
-    if not agent is None:
-        global session
-        session = agent.create_session()
 
-async def shutdown_agent():
-    """エージェントのシャットダウン。MCPサーバーの停止など"""
-    await doc_agent.mcp_servers.shutdown()
-
-
-
-async def run_agent(model_name: str, prompt: str, history: list) -> str:
-    """指定モデルで LangChain エージェントを実行して応答を返す"""
-    m = next((m for m in models if m["deployment"] == model_name), models[0])
-
-    # === update agent and run =================================================================
-    global agent
-    agent.client = doc_agent.build_client()  # クライアントを再構築してエージェントにセット
-
-    print("PDF Agent 起動中。論文タイトルまたはURLを含む質問を入力してください。")
-    print("例1: Attention Is All You Need を要約して")
-    print("例2: https://arxiv.org/abs/1706.03762 をブラウザで開いて要約して")
-    print("終了するには 'quit' または 'exit' を入力してください。\n")
-
-    print(history)
-    out_messages = history.copy()  # 既存のチャット履歴をコピーして開始
-    out_messages.append({"role": "user", "content": prompt})  # ユーザープロンプトを履歴に追加
-    async for content in doc_agent.agent_run(agent, prompt, session):
+async def run_agent(agent, prompt: str, history: list, session, model_name: str | None = None, effort: str | None = None):
+    """DocAgent を実行して応答を返す"""
+    out_messages = history.copy()
+    out_messages.append({"role": "user", "content": prompt})
+    async for content in doc_agent.agent_run(agent, prompt, session, model=model_name, effort=effort):
         out_messages.append(_content_to_message(content))
         yield out_messages
 
 
 def _content_to_message(content) -> dict:
     """蓄積済み content を type ごとにまとめて表示する。"""
-    import pprint
-    #pprint.pprint(content.to_dict())  # デバッグ用に content の全体構造を表示
     def _trunc(s: str, n: int) -> str:
         s = str(s)
         return s[:n] + "..." if len(s) > n else s
@@ -240,7 +129,7 @@ def _content_to_message(content) -> dict:
             return {
                 "role": "assistant", 
                 "content": content.result,
-                "metadata": {"title": f"{content.name}", "status": "done"}
+                "metadata": {"title": f"結果", "status": "done"}
             }
         case "mcp_server_tool_call":
             return {
@@ -251,7 +140,7 @@ def _content_to_message(content) -> dict:
             return {
                 "role": "assistant", 
                 "content": content.result,
-                "metadata": {"title": f"{content.name}", "status": "done"}
+                "metadata": {"title": f"結果", "status": "done"}
             }
     return {"role": "assistant", "content": ""}
 
@@ -362,44 +251,50 @@ def createCompletion(prompt, model, history):
                 yield partial
 
 
-async def chat(message, history, mode, model, pdf, request: gr.Request):
+async def chat(message, history, mode, model, effort, pdf, agent, session, request: gr.Request):
     """Gradio ChatInterface のコールバック。モードに応じて通常応答またはエージェント応答を返す"""
     ip = request.client.host
-    msg = message[:70].replace('\n', ' ')
-    logging.info(f"CHAT_LOG | IP={ip} | mode={mode} | model={model} | msg={msg}")
+    log_msg = message[:70].replace('\n', ' ')
+    logging.info(f"CHAT_LOG | IP={ip} | mode={mode} | model={model} | msg={log_msg}")
 
     # PDF が添付されている場合はテキストを抽出してプロンプトに追記
-    text = ""
     if pdf:
         reader = PyPDF2.PdfReader(pdf.name)
-        text = "\n".join([p.extract_text() for p in reader.pages])
+        text = "\n".join([p.extract_text() or "" for p in reader.pages])
         prompt = f"{message}\n\n======= PDF内容 =======:\n{text}\n"
     else:
         prompt = message
 
+    # 初回メッセージまたはチャットクリア後は新規 session を作成
+    if session is None or len(history) == 0:
+        session = agent.create_session()
+
+    effort_value = effort if effort != "なし" else None
+
     if mode == "エージェント":
-        async for msg in run_agent(model, prompt, history):
-            yield msg
+        async for msg in run_agent(agent, prompt, history, session, model_name=model, effort=effort_value):
+            yield msg, session
     elif mode == "DBエージェント":
         for msg in run_db_agent(model, prompt, history):
-            yield msg
+            yield msg, session
     else:
         for msg in createCompletion(prompt, model, history):
-            yield msg
+            yield msg, session
 
 
-import gradio as gr
-
-
-
-def load_params(request: gr.Request):
-    # ブラウザのロード時の処理
-    mode = request.query_params.get("mode")
-    model = request.query_params.get("model")
-    return [mode, model]
+async def on_load(request: gr.Request):
+    """ページロード時にユーザーごとの agent と session を初期化する"""
+    mode_val = request.query_params.get("mode") or "通常"
+    model_val = request.query_params.get("model") or models[0]["deployment"]
+    agent = create_agent()
+    session = agent.create_session()
+    return mode_val, model_val, agent, session
 
 
 with gr.Blocks(analytics_enabled=False, fill_height=True) as gradio_app:
+    agent_state = gr.State(None)    # ユーザーごとの agent インスタンス
+    session_state = gr.State(None)  # ユーザーごとの会話 session
+
     gr.Markdown("## AI Chat/Agent")
     chatbot = gr.Chatbot(scale=1, editable="all", reasoning_tags=[("query-description","/query-description")])
     with gr.Row():
@@ -425,34 +320,36 @@ with gr.Blocks(analytics_enabled=False, fill_height=True) as gradio_app:
             label="Model",
             value=models[0]["deployment"]
         )
+        effort = gr.Radio(
+            choices=["なし", "low", "medium", "high"],
+            label="Effort",
+            value="なし",
+        )
 
     msg.submit(
         chat,
-        inputs=[msg, chatbot, mode, model, pdf],
-        outputs=[chatbot]
+        inputs=[msg, chatbot, mode, model, effort, pdf, agent_state, session_state],
+        outputs=[chatbot, session_state]
     ).then(
         lambda: "", inputs=None, outputs=msg  # 送信後に入力欄をクリア
     )
 
     send_btn.click(
         chat,
-        inputs=[msg, chatbot, mode, model, pdf],
-        outputs=[chatbot]
+        inputs=[msg, chatbot, mode, model, effort, pdf, agent_state, session_state],
+        outputs=[chatbot, session_state]
     ).then(
         lambda: "", inputs=None, outputs=msg  # 送信後に入力欄をクリア
     )
 
-    gradio_app.load(fn=load_params, inputs=None, outputs=[mode, model])  # クエリパラメータから初期モードとモデルを読み込む
+    gradio_app.load(fn=on_load, inputs=None, outputs=[mode, model, agent_state, session_state])
 
 from contextlib import asynccontextmanager
 @asynccontextmanager
 async def lifespan(app):
-    # アプリ起動時の初期化処理
-    await init_agent()
-    await init_session()
+    await init_mcp()
     yield
-    # アプリ終了時のクリーンアップ処理
-    await shutdown_agent()
+    await shutdown_mcp()
 
 from fastapi import FastAPI
 fastapi_app = FastAPI(lifespan=lifespan)
