@@ -2,6 +2,7 @@ agent-framework
 azure-identity
 requests
 python-dotenv
+pyyaml
 mcp
 markitdown[pdf,docx,pptx,xlsx]
 pypdf

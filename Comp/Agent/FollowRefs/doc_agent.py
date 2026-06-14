@@ -1,24 +1,38 @@
 import asyncio
+import fnmatch
 import io
 import os
+import smtplib
 import xml.etree.ElementTree as ET
+from email.header import Header
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Optional
 
 import pypdf
 import requests
+import yaml
 from dotenv import load_dotenv
 from pydantic import Field
 
 from agent_framework import MCPStdioTool, tool
 from agent_framework.openai import OpenAIChatCompletionClient
 
+# 環境設定
 load_dotenv()
+
+
+
 
 # LLMのコンテキスト溢れを防ぐため抽出テキストの上限文字数を設定
 MAX_CHARS = 500_000
 
+# ====================================================================================
 # === ツール定義 ======================================================================
+# ====================================================================================
+
+# --- search_paper_pdf
 
 @tool(approval_mode="never_require")
 def search_paper_pdf(
@@ -59,6 +73,7 @@ def search_paper_pdf(
 
     return f"PDF URLが見つかりませんでした: '{title}'"
 
+# --- read_pdf_from_url
 
 @tool(approval_mode="never_require")
 def read_pdf_from_url(
@@ -101,6 +116,7 @@ def read_pdf_from_url(
 
     return full_text
 
+# --- contents_reader
 
 @tool(approval_mode="never_require")
 def contents_reader(
@@ -221,7 +237,6 @@ def _fast_pptx(source) -> str:
 
 
 def _read_with_fast(source: str) -> str:
-    import io
     import urllib.parse
 
     is_url = source.lower().startswith(("http://", "https://"))
@@ -274,8 +289,114 @@ def _read_with_fast(source: str) -> str:
         text = text[:MAX_CHARS] + f"\n\n[... 残り {len(text) - MAX_CHARS} 文字は省略されました]"
     return text
 
+# --- send_email
 
-# === MCPサーバーを定義　=======================================================================
+_AGENT_CONFIG_PATH = Path(__file__).parent / os.environ.get("AGENT_CONFIG", "agent_config.yaml")
+
+def _load_allowed_patterns() -> list[str]:
+    if not _AGENT_CONFIG_PATH.exists():
+        return []
+    with open(_AGENT_CONFIG_PATH, encoding="utf-8") as f:
+        config = yaml.safe_load(f) or {}
+    return [p.lower().strip() for p in config.get("allowed_addresses", [])]
+
+
+def _is_address_allowed(addr: str, patterns: list[str]) -> bool:
+    addr_lower = addr.lower().strip()
+    return any(fnmatch.fnmatch(addr_lower, p) for p in patterns)
+
+
+@tool
+def send_email(
+    to: Annotated[list[str], Field(description="宛先メールアドレスのリスト")],
+    subject: Annotated[str, Field(description="メールの件名")],
+    body: Annotated[str, Field(description="メールの本文 (プレーンテキスト)")],
+    cc: Annotated[Optional[list[str]], Field(description="CCのメールアドレスのリスト")] = None,
+    bcc: Annotated[Optional[list[str]], Field(description="BCCのメールアドレスのリスト")] = None,
+) -> str:
+    """メールを送信する。To/Cc/Bcc は agent_config.yaml で許可されたアドレス/パターンのみ指定可能。"""
+    patterns = _load_allowed_patterns()
+    if not patterns:
+        return f"エラー: 設定ファイル ({_AGENT_CONFIG_PATH}) が見つからないか、allowed_addresses が空です。"
+
+    for field, addrs in [("To", to), ("Cc", cc or []), ("Bcc", bcc or [])]:
+        for addr in addrs:
+            if not _is_address_allowed(addr, patterns):
+                return f"エラー: {field} の '{addr}' は許可されていません。許可パターン: {patterns}"
+
+    smtp_host = os.environ.get("SMTP_HOST")
+    if not smtp_host:
+        return "エラー: SMTP_HOST が .env に設定されていません。"
+    smtp_port = int(os.environ.get("SMTP_PORT", "587"))
+    smtp_user = os.environ.get("SMTP_USERNAME", "agent@example.com")
+    smtp_pass = os.environ.get("SMTP_PASSWORD", "")
+    smtp_from = os.environ.get("SMTP_FROM", smtp_user)
+    use_starttls = os.environ.get("SMTP_USE_STARTTLS", "true").lower() in ("true", "1", "yes")
+
+    msg = MIMEMultipart()
+    msg["From"] = smtp_from
+    msg["To"] = ", ".join(to)
+    msg["Subject"] = Header(subject, "utf-8")
+    if cc:
+        msg["Cc"] = ", ".join(cc)
+    msg.attach(MIMEText(body, "plain", "utf-8"))
+
+    all_recipients = to + (cc or []) + (bcc or [])
+    try:
+        if use_starttls:
+            server = smtplib.SMTP(smtp_host, smtp_port, timeout=30)
+            server.starttls()
+        else:
+            server = smtplib.SMTP_SSL(smtp_host, smtp_port, timeout=30)
+        if smtp_user and smtp_pass:
+            server.login(smtp_user, smtp_pass)
+        server.sendmail(smtp_from, all_recipients, msg.as_string())
+        server.quit()
+    except smtplib.SMTPException as e:
+        return f"エラー: SMTP エラー — {e}"
+    except OSError as e:
+        return f"エラー: 接続失敗 — {e}"
+
+    summary = f"To: {', '.join(to)}"
+    if cc:
+        summary += f" / Cc: {', '.join(cc)}"
+    if bcc:
+        summary += f" / Bcc: {', '.join(bcc)}"
+    return f"送信完了。件名: 「{subject}」、{summary}"
+
+
+# ====================================================================================
+# === MCPサーバーを定義　===============================================================
+# ====================================================================================
+
+fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd().resolve()))
+filesystem_mcp = MCPStdioTool(
+    name="filesystem",
+    command="cmd",
+    args=["/c", os.getcwd()+"/node_modules/.bin/mcp-server-filesystem.cmd", str(fs_root), str(Path.home() / "Downloads")],
+    #command="D:\NoSync\misc\Comp\ChatUI/node_modules/.bin/mcp-server-filesystem.cmd",
+    #command="npx",
+    #args=["-y", "@modelcontextprotocol/server-filesystem", str(fs_root)],
+)
+playwright_mcp = MCPStdioTool(
+    name="playwright",
+    command="cmd",
+    args=["/c", os.getcwd()+"/node_modules/.bin/playwright-mcp.cmd", "--browser=msedge", "--allowed-origins=https://*"],
+    #command="npx",
+    #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*,http://*"],
+    #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*"],
+    #args=["-y", "@playwright/mcp", "--browser=msedge"],
+)
+# markitdown_mcp = MCPStdioTool(
+#     name="markitdown",
+#     #command=os.getcwd()+r"\myenv\Scripts\markitdown-mcp.exe",
+#     #args=[],
+#     command="node.exe",
+#     args=[os.getcwd()+r"\node_modules\markitdown-mcp-npx\bin\markitdown-mcp-npx.js"],
+#     #command="cmd",
+#     #args=["/c", os.getcwd()+"\node_modules\.bin\markitdown-mcp-npx.cmd"],
+# )
+
 
 class MCPServerTool:
     """MCPサーバーを起動/シャットダウンするツールのクラス。"""
@@ -297,40 +418,11 @@ class MCPServerTool:
         for tool in self.mcp_tools:
             await tool.close()
 
-
-fs_root = Path(os.environ.get("AGENT_FS_ROOT", Path.cwd().resolve()))
-filesystem_mcp = MCPStdioTool(
-    name="filesystem",
-    command="cmd",
-    args=["/c", os.getcwd()+"/node_modules/.bin/mcp-server-filesystem.cmd", str(fs_root), str(Path.home() / "Downloads")],
-    #command="D:\NoSync\misc\Comp\ChatUI/node_modules/.bin/mcp-server-filesystem.cmd",
-    #command="npx",
-    #args=["-y", "@modelcontextprotocol/server-filesystem", str(fs_root)],
-)
-playwright_mcp = MCPStdioTool(
-    name="playwright",
-    command="cmd",
-    args=["/c", os.getcwd()+"/node_modules/.bin/playwright-mcp.cmd", "--browser=msedge", "--allowed-origins=https://*"],
-    #command="npx",
-    #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*,http://*"],
-    #args=["-y", "@playwright/mcp", "--browser=msedge", "--allowed-origins=https://*"],
-    #args=["-y", "@playwright/mcp", "--browser=msedge"],
-)
-markitdown_mcp = MCPStdioTool(
-    name="markitdown",
-    #command=os.getcwd()+r"\myenv\Scripts\markitdown-mcp.exe",
-    #args=[],
-    command="node.exe",
-    args=[os.getcwd()+r"\node_modules\markitdown-mcp-npx\bin\markitdown-mcp-npx.js"],
-    #command="cmd",
-    #args=["/c", os.getcwd()+"\node_modules\.bin\markitdown-mcp-npx.cmd"],
-)
-
 mcp_servers = MCPServerTool([filesystem_mcp, playwright_mcp])
-#mcp_servers = MCPServerTool([filesystem_mcp, playwright_mcp, markitdown_mcp])
 
-
-# === エージェント ======================================================================
+# ====================================================================================
+# === エージェント ====================================================================
+# ====================================================================================
 
 def _display_content(content) -> None:
     """蓄積済み content を type ごとにまとめて表示する。"""
@@ -410,18 +502,21 @@ def build_client(
     )
 
 
+# ====================================================================================
+# メイン（単独実行時）
+# ====================================================================================
 
 async def main() -> None:
 
-    # === MCP servers ========================================================================
+    # === MCP servers ===============================================================
     await mcp_servers.start()
 
-    # === build agent and run =================================================================
+    # === build agent and run =======================================================
     client = build_client()
     agent = client.as_agent(
         name="DocAgent",
         instructions=_load_instructions(),
-        tools=[search_paper_pdf, read_pdf_from_url, contents_reader] + mcp_servers.tools(),
+        tools=[search_paper_pdf, read_pdf_from_url, contents_reader, send_email] + mcp_servers.tools(),
     )
 
     print("Doc Agent 起動中。ファイル名やURLを含む質問を入力してください。")

@@ -1,0 +1,11 @@
+# エージェント設定ファイル
+# このファイルを agent_config.yaml にコピーして使用してください。
+
+# メール送信ツール (send_email) の許可アドレス設定
+# ワイルドカード (*) が使用できます。
+#   *@example.com  → example.com ドメインのすべてのアドレスを許可
+#   user@*         → すべてのドメインの user を許可
+#   *              → すべてのアドレスを許可 (非推奨)
+allowed_addresses:
+  - colleague@example.com
+  - "*@mycompany.com"
