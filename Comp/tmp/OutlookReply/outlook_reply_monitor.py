@@ -178,21 +178,38 @@ def _is_already_tracked(item) -> bool:
 def poll_once(outlook):
     count = outlook.Inspectors.Count
 
-    # ── 新しい返信インスペクターを検出 ──────────────────────────────
+    # ── インスペクターを1回走査: クローズ検出 + 新規検出 ───────────
+    open_captions: set[str] = set()
+    current: list[tuple[str, object]] = []  # (caption, item)
     for i in range(1, count + 1):
         try:
             inspector = outlook.Inspectors.Item(i)
-            item = inspector.CurrentItem
+            cap = inspector.Caption
+            open_captions.add(cap)          # Caption は CurrentItem より先に収集
+            try:
+                current.append((cap, inspector.CurrentItem))
+            except Exception as e:
+                print(f"  [Inspector {i} CurrentItem エラー] {e}")
+        except Exception as e:
+            print(f"  [Inspector {i} 取得エラー] {e}")
 
+    for key in [k for k in monitored if k not in open_captions]:
+        print(f"  [クローズ検出] ウィンドウが閉じられました: {key[:60]!r}")
+        monitored.pop(key)
+
+    for caption, item in current:
+        try:
             if item.Class != OL_MAIL_ITEM:
+                continue
+
+            if item.Sent:
                 continue
 
             subject = item.Subject or ""
             if not (subject.strip().upper()).startswith(("RE:", "FW:", "FWD:", "転送:")):
                 continue
 
-            key = inspector.Caption
-            if key in monitored:
+            if caption in monitored:
                 continue
 
             if _is_already_tracked(item):
@@ -201,10 +218,10 @@ def poll_once(outlook):
 
             print(f"\n[検出] 返信/転送画面: {subject[:70]!r}")
             print(f"  → {MONITOR_DURATION}秒以内に重要度「低」を検出したらHTTPリクエストを送信します")
-            monitored[key] = MonitoredReply(item, key)
+            monitored[caption] = MonitoredReply(item, caption)
 
         except Exception as e:
-            print(f"  [Inspector {i} 検出エラー] {e}")
+            print(f"  [Inspector 検出エラー] {e}")
 
     # ── 監視中アイテムを処理 ─────────────────────────────────────────
     done_keys = []
@@ -219,7 +236,7 @@ def poll_once(outlook):
                 elapsed = reply.elapsed()
 
                 if now - reply.last_log_time >= 2.0:
-                    print(f"  [監視中] {key[:40]!r}  重要度={importance}  経過={elapsed:.1f}s/{MONITOR_DURATION}s")
+                    print(f"  [監視中] {reply.caption[:40]!r}  重要度={importance}  経過={elapsed:.1f}s/{MONITOR_DURATION}s")
                     reply.last_log_time = now
 
                 if importance == OL_IMPORTANCE_LOW:
@@ -233,17 +250,24 @@ def poll_once(outlook):
                     insert_placeholder(item)
                     print(f"  → 「{PLACEHOLDER_TEXT}」を挿入しました")
 
-                    reply.future = _executor.submit(_http_request, subject, plain_body)
-                    print(f"  → HTTPリクエストを送信しました（レスポンス待機中）")
-                    reply.transition("awaiting")
+                    try:
+                        reply.future = _executor.submit(_http_request, subject, plain_body)
+                        print(f"  → HTTPリクエストを送信しました（レスポンス待機中）")
+                        reply.transition("awaiting")
+                    finally:
+                        try:
+                            item.Importance = OL_IMPORTANCE_NORMAL
+                            print(f"  [優先度リセット] 重要度を「普通」に戻しました")
+                        except Exception as e:
+                            print(f"  [優先度リセットエラー] {e}")
 
                 elif elapsed >= MONITOR_DURATION:
-                    print(f"\n  → {MONITOR_DURATION}秒経過。重要度「低」未検出 → 何もしません: {key[:40]!r}")
+                    print(f"\n  → {MONITOR_DURATION}秒経過。重要度「低」未検出 → 何もしません: {reply.caption[:40]!r}")
                     done_keys.append(key)
 
             elif reply.state == "awaiting":
                 if now - reply.last_log_time >= 2.0:
-                    print(f"  [HTTP待機中] {key[:40]!r}  経過={reply.elapsed():.1f}s")
+                    print(f"  [HTTP待機中] {reply.caption[:40]!r}  経過={reply.elapsed():.1f}s")
                     reply.last_log_time = now
 
                 if reply.future.done():
@@ -251,7 +275,7 @@ def poll_once(outlook):
                         result_text = reply.future.result()
                         print(f"\n  → HTTPレスポンス受信。プレースホルダーを置換します")
                         if replace_placeholder(item, result_text):
-                            print(f"[OK] 挿入完了: {key[:60]!r}")
+                            print(f"[OK] 挿入完了: {reply.caption[:60]!r}")
                     except requests.exceptions.Timeout:
                         err = f"[タイムアウト] HTTPリクエストが{HTTP_TIMEOUT}秒以内に完了しませんでした"
                         print(f"  [HTTPエラー] {err}")
@@ -264,19 +288,11 @@ def poll_once(outlook):
                         err = f"[エラー] {e}"
                         print(f"  [エラー] {e}")
                         replace_placeholder(item, err)
-                    finally:
-                        # 成功・エラーに関わらず優先度を「普通」に戻す
-                        # → 戻さないと次のポーリングで再検出→再リクエストが発生する
-                        try:
-                            item.Importance = OL_IMPORTANCE_NORMAL
-                            print(f"  [優先度リセット] 重要度を「普通」に戻しました")
-                        except Exception as e:
-                            print(f"  [優先度リセットエラー] {e}")
 
                     done_keys.append(key)
 
         except Exception as e:
-            print(f"  [監視エラー] {key!r}: {e}")
+            print(f"  [監視エラー] {reply.caption!r}: {e}")
             done_keys.append(key)
 
     for key in done_keys:
