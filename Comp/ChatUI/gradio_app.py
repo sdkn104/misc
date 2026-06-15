@@ -74,7 +74,7 @@ async def shutdown_mcp():
     """MCPサーバーの停止"""
     await doc_agent.mcp_servers.shutdown()
 
-def create_agent():
+def create_agent(user="unknown"):
     """DocAgent を作成して返す（モデル切替は agent.run() の options で行う）"""
     m = models[0]
     client = doc_agent.build_client(
@@ -85,7 +85,7 @@ def create_agent():
     )
     return client.as_agent(
         name="DocAgent",
-        instructions=doc_agent._load_instructions(),
+        instructions=doc_agent._load_instructions(user=user),
         tools=[doc_agent.search_paper_pdf, doc_agent.read_pdf_from_url, doc_agent.contents_reader] + doc_agent.mcp_servers.tools(),
     )
 
@@ -254,6 +254,7 @@ def createCompletion(prompt, model, history):
 async def chat(message, history, mode, model, effort, pdf, agent, session, request: gr.Request):
     """Gradio ChatInterface のコールバック。モードに応じて通常応答またはエージェント応答を返す"""
     ip = request.client.host
+    user = request.headers.get("X-Auth-User", "unknown")
     log_msg = message[:70].replace('\n', ' ')
     logging.info(f"CHAT_LOG | IP={ip} | mode={mode} | model={model} | msg={log_msg}")
 
@@ -286,7 +287,8 @@ async def on_load(request: gr.Request):
     """ページロード時にユーザーごとの agent と session を初期化する"""
     mode_val = request.query_params.get("mode") or "通常"
     model_val = request.query_params.get("model") or models[0]["deployment"]
-    agent = create_agent()
+    user = request.headers.get("X-Auth-User", "unknown")
+    agent = create_agent(user=user)
     session = agent.create_session()
     return mode_val, model_val, agent, session
 

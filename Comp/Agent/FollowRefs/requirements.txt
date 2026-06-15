@@ -1,4 +1,5 @@
 agent-framework
+ldap3
 azure-identity
 requests
 python-dotenv

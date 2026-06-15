@@ -32,7 +32,7 @@ MAX_CHARS = 500_000
 # === ツール定義 ======================================================================
 # ====================================================================================
 
-# --- search_paper_pdf
+# --- search_paper_pdf -----------------------------------
 
 @tool(approval_mode="never_require")
 def search_paper_pdf(
@@ -73,7 +73,7 @@ def search_paper_pdf(
 
     return f"PDF URLが見つかりませんでした: '{title}'"
 
-# --- read_pdf_from_url
+# --- read_pdf_from_url -----------------------------------
 
 @tool(approval_mode="never_require")
 def read_pdf_from_url(
@@ -116,7 +116,7 @@ def read_pdf_from_url(
 
     return full_text
 
-# --- contents_reader
+# --- contents_reader -----------------------------------
 
 @tool(approval_mode="never_require")
 def contents_reader(
@@ -289,7 +289,7 @@ def _read_with_fast(source: str) -> str:
         text = text[:MAX_CHARS] + f"\n\n[... 残り {len(text) - MAX_CHARS} 文字は省略されました]"
     return text
 
-# --- send_email
+# --- send_email -----------------------------------
 
 _AGENT_CONFIG_PATH = Path(__file__).parent / os.environ.get("AGENT_CONFIG", "agent_config.yaml")
 
@@ -363,6 +363,94 @@ def send_email(
     if bcc:
         summary += f" / Bcc: {', '.join(bcc)}"
     return f"送信完了。件名: 「{subject}」、{summary}"
+
+
+# --- search_active_directory -----------------------------------
+
+@tool(approval_mode="never_require")
+def search_active_directory(
+    query: Annotated[str, Field(description=(
+        "検索クエリ。名前・メール・アカウント名などのキーワード、または LDAP フィルタ文字列 "
+        "(例: '(sAMAccountName=jdoe)') を指定する。"
+    ))],
+    search_base: Annotated[Optional[str], Field(description=(
+        "LDAP 検索ベース DN (例: 'ou=Users,dc=example,dc=com')。"
+        "省略時は環境変数 LDAP_SEARCH_BASE を使用。"
+    ))] = None,
+    limit: Annotated[int, Field(description="返す最大件数")] = 50,
+) -> str:
+    """Active Directory を LDAP で検索し、ユーザ・グループ情報を返す。"""
+    try:
+        import ldap3
+        import ldap3.utils.conv
+    except ImportError:
+        return "エラー: ldap3 パッケージがインストールされていません。pip install ldap3 を実行してください。"
+
+    server_url = os.environ.get("LDAP_SERVER")
+    if not server_url:
+        return "エラー: LDAP_SERVER が .env に設定されていません。"
+
+    port = int(os.environ.get("LDAP_PORT", "389"))
+    use_ssl = os.environ.get("LDAP_USE_SSL", "false").lower() in ("true", "1", "yes")
+    bind_dn = os.environ.get("LDAP_BIND_DN", "")
+    bind_pw = os.environ.get("LDAP_BIND_PASSWORD", "")
+    base = search_base or os.environ.get("LDAP_SEARCH_BASE", "")
+    if not base:
+        return "エラー: LDAP_SEARCH_BASE が .env に設定されていません。"
+
+    if query.startswith("("):
+        ldap_filter = query
+    else:
+        esc = ldap3.utils.conv.escape_filter_chars(query)
+        ldap_filter = (
+            f"(|(displayName=*{esc}*)"
+            f"(mail=*{esc}*)"
+            f"(sAMAccountName=*{esc}*)"
+            f"(cn=*{esc}*))"
+        )
+
+    attrs = [
+        "displayName", "sAMAccountName", "mail", "department",
+        "title", "telephoneNumber", "memberOf", "objectClass",
+        "cn", "description",
+    ]
+
+    try:
+        server = ldap3.Server(server_url, port=port, use_ssl=use_ssl, get_info=ldap3.NONE, connect_timeout=10)
+        conn = ldap3.Connection(server, user=bind_dn, password=bind_pw, auto_bind=True, receive_timeout=30)
+    except ldap3.core.exceptions.LDAPException as e:
+        return f"エラー: LDAP 接続失敗 — {e}"
+
+    try:
+        conn.search(
+            search_base=base,
+            search_filter=ldap_filter,
+            search_scope=ldap3.SUBTREE,
+            attributes=attrs,
+            size_limit=limit,
+        )
+    except ldap3.core.exceptions.LDAPException as e:
+        conn.unbind()
+        return f"エラー: LDAP 検索失敗 — {e}"
+
+    results = []
+    for entry in conn.entries:
+        obj: dict = {"dn": entry.entry_dn}
+        for attr in attrs:
+            try:
+                val = entry[attr].value
+                if val is not None:
+                    obj[attr] = val
+            except Exception:
+                pass
+        results.append(obj)
+    conn.unbind()
+
+    if not results:
+        return f"検索結果が見つかりませんでした。フィルタ: {ldap_filter}"
+
+    import json
+    return json.dumps(results, ensure_ascii=False, default=str, indent=2)
 
 
 # ====================================================================================
@@ -472,10 +560,10 @@ async def agent_run(agent, user_input, session, model: str | None = None, effort
         yield acc
 
 
-def _load_instructions(filename: str = "SYSTEM.md") -> str:
+def _load_instructions(filename: str = "SYSTEM.md", user: str = "unknown") -> str:
     """スクリプトと同じディレクトリの指定ファイルを読み込んで返す。"""
     path = Path(__file__).parent / filename
-    return path.read_text(encoding="utf-8")
+    return path.read_text(encoding="utf-8") + f"\n\n## ユーザ情報\n- 情報システムID： {user}\n"
 
 
 def build_client(
@@ -512,11 +600,13 @@ async def main() -> None:
     await mcp_servers.start()
 
     # === build agent and run =======================================================
+    import getpass
+    user = getpass.getuser()
     client = build_client()
     agent = client.as_agent(
         name="DocAgent",
-        instructions=_load_instructions(),
-        tools=[search_paper_pdf, read_pdf_from_url, contents_reader, send_email] + mcp_servers.tools(),
+        instructions=_load_instructions(user=user),
+        tools=[search_paper_pdf, read_pdf_from_url, contents_reader, send_email, search_active_directory] + mcp_servers.tools(),
     )
 
     print("Doc Agent 起動中。ファイル名やURLを含む質問を入力してください。")
