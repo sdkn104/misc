@@ -15,6 +15,7 @@ import requests
 import yaml
 from dotenv import load_dotenv
 from pydantic import Field
+import pythoncom
 
 from agent_framework import MCPStdioTool, tool
 from agent_framework.openai import OpenAIChatCompletionClient
@@ -32,7 +33,7 @@ MAX_CHARS = 500_000
 # === ツール定義 ======================================================================
 # ====================================================================================
 
-# --- search_paper_pdf
+# --- search_paper_pdf -----------------------------------
 
 @tool(approval_mode="never_require")
 def search_paper_pdf(
@@ -73,7 +74,7 @@ def search_paper_pdf(
 
     return f"PDF URLが見つかりませんでした: '{title}'"
 
-# --- read_pdf_from_url
+# --- read_pdf_from_url -----------------------------------
 
 @tool(approval_mode="never_require")
 def read_pdf_from_url(
@@ -116,7 +117,7 @@ def read_pdf_from_url(
 
     return full_text
 
-# --- contents_reader
+# --- contents_reader -----------------------------------
 
 @tool(approval_mode="never_require")
 def contents_reader(
@@ -289,7 +290,7 @@ def _read_with_fast(source: str) -> str:
         text = text[:MAX_CHARS] + f"\n\n[... 残り {len(text) - MAX_CHARS} 文字は省略されました]"
     return text
 
-# --- send_email
+# --- send_email -----------------------------------
 
 _AGENT_CONFIG_PATH = Path(__file__).parent / os.environ.get("AGENT_CONFIG", "agent_config.yaml")
 
@@ -331,7 +332,7 @@ def send_email(
     smtp_user = os.environ.get("SMTP_USERNAME", "agent@example.com")
     smtp_pass = os.environ.get("SMTP_PASSWORD", "")
     smtp_from = os.environ.get("SMTP_FROM", smtp_user)
-    use_starttls = os.environ.get("SMTP_USE_STARTTLS", "true").lower() in ("true", "1", "yes")
+    use_starttls = os.environ.get("SMTP_USE_STARTTLS", "true").lower()
 
     msg = MIMEMultipart()
     msg["From"] = smtp_from
@@ -343,9 +344,11 @@ def send_email(
 
     all_recipients = to + (cc or []) + (bcc or [])
     try:
-        if use_starttls:
+        if use_starttls == "true":
             server = smtplib.SMTP(smtp_host, smtp_port, timeout=30)
             server.starttls()
+        elif use_starttls == "no":
+            server = smtplib.SMTP(smtp_host, smtp_port, timeout=30)
         else:
             server = smtplib.SMTP_SSL(smtp_host, smtp_port, timeout=30)
         if smtp_user and smtp_pass:
@@ -365,7 +368,11 @@ def send_email(
     return f"送信完了。件名: 「{subject}」、{summary}"
 
 
-# --- search_active_directory
+# --- search_active_directory (win32com版) -----------------------------------
+import os
+import json
+import re
+import win32com.client
 
 @tool(approval_mode="never_require")
 def search_active_directory(
@@ -379,12 +386,7 @@ def search_active_directory(
     ))] = None,
     limit: Annotated[int, Field(description="返す最大件数")] = 50,
 ) -> str:
-    """Active Directory を LDAP で検索し、ユーザ・グループ情報を返す。"""
-    try:
-        import ldap3
-        import ldap3.utils.conv
-    except ImportError:
-        return "エラー: ldap3 パッケージがインストールされていません。pip install ldap3 を実行してください。"
+    """Active Directory を win32com / ADSI で検索し、ユーザ・グループ情報を返す。"""
 
     server_url = os.environ.get("LDAP_SERVER")
     if not server_url:
@@ -394,14 +396,51 @@ def search_active_directory(
     use_ssl = os.environ.get("LDAP_USE_SSL", "false").lower() in ("true", "1", "yes")
     bind_dn = os.environ.get("LDAP_BIND_DN", "")
     bind_pw = os.environ.get("LDAP_BIND_PASSWORD", "")
+
     base = search_base or os.environ.get("LDAP_SEARCH_BASE", "")
     if not base:
         return "エラー: LDAP_SEARCH_BASE が .env に設定されていません。"
 
+
+    def _escape_ldap_filter_chars(value: str) -> str:
+        """
+        LDAP フィルタ用のエスケープ。
+        RFC 4515 に基づき、特殊文字をエスケープする。
+        """
+        replacements = {
+            "\\": r"\5c",
+            "*": r"\2a",
+            "(": r"\28",
+            ")": r"\29",
+            "\x00": r"\00",
+        }
+
+        return "".join(replacements.get(ch, ch) for ch in value)
+
+    def _com_value_to_python(value):
+        """
+        COM / VARIANT の値を JSON 化しやすい Python オブジェクトへ変換する。
+        memberOf などの複数値属性は tuple / list になることがある。
+        """
+        if value is None:
+            return None
+
+        if isinstance(value, (list, tuple)):
+            return [_com_value_to_python(v) for v in value]
+
+        # COM の配列などで反復可能な場合
+        try:
+            if not isinstance(value, (str, bytes)):
+                return list(value)
+        except Exception:
+            pass
+
+        return value
+
     if query.startswith("("):
         ldap_filter = query
     else:
-        esc = ldap3.utils.conv.escape_filter_chars(query)
+        esc = _escape_ldap_filter_chars(query)
         ldap_filter = (
             f"(|(displayName=*{esc}*)"
             f"(mail=*{esc}*)"
@@ -410,46 +449,128 @@ def search_active_directory(
         )
 
     attrs = [
-        "displayName", "sAMAccountName", "mail", "department",
-        "title", "telephoneNumber", "memberOf", "objectClass",
-        "cn", "description",
+        "distinguishedName",
+        "displayName",
+        "sAMAccountName",
+        "mail",
+        "department",
+        "title",
+        "telephoneNumber",
+        "memberOf",
+        "objectClass",
+        "cn",
+        "description",
     ]
 
-    try:
-        server = ldap3.Server(server_url, port=port, use_ssl=use_ssl, get_info=ldap3.NONE, connect_timeout=10)
-        conn = ldap3.Connection(server, user=bind_dn, password=bind_pw, auto_bind=True, receive_timeout=30)
-    except ldap3.core.exceptions.LDAPException as e:
-        return f"エラー: LDAP 接続失敗 — {e}"
+    server = server_url
+    scheme = "LDAPS" if use_ssl else "LDAP"
+
+    # LDAP://server:port/baseDN の形式
+    ldap_path = f"{scheme}://{server}:{port}/{base}"
 
     try:
-        conn.search(
-            search_base=base,
-            search_filter=ldap_filter,
-            search_scope=ldap3.SUBTREE,
-            attributes=attrs,
-            size_limit=limit,
+        pythoncom.CoInitialize()
+        connection = win32com.client.Dispatch("ADODB.Connection")
+        connection.Provider = "ADsDSOObject"
+
+        # LDAP_BIND_DN / LDAP_BIND_PASSWORD がある場合は明示的に認証
+        # ない場合は現在の Windows ログオンユーザーの資格情報を使用
+        if bind_dn and bind_pw:
+            connection.Open("Active Directory Provider", bind_dn, bind_pw)
+        else:
+            connection.Open("Active Directory Provider")
+
+        command = win32com.client.Dispatch("ADODB.Command")
+        command.ActiveConnection = connection
+
+        # ADSI Search Dialect:
+        # <LDAP://server/base>;(filter);attr1,attr2;subtree
+        command.CommandText = (
+            f"<{ldap_path}>;"
+            f"{ldap_filter};"
+            f"{','.join(attrs)};"
+            f"subtree"
         )
-    except ldap3.core.exceptions.LDAPException as e:
-        conn.unbind()
-        return f"エラー: LDAP 検索失敗 — {e}"
+        print(command.CommandText)
+
+        # 検索設定
+        command.Properties("Page Size").Value = 1000
+        command.Properties("Timeout").Value = 60
+        command.Properties("Time Limit").Value = 60
+        command.Properties("Cache Results").Value = False
+
+        if limit and limit > 0:
+            command.Properties("Size Limit").Value = limit
+
+        recordset, _ = command.Execute()
+
+    except Exception as e:
+        print(f"error: {e}")        
+        try:
+            connection.Close()
+        except Exception:
+            pass
+
+        return f"エラー: Active Directory 接続または検索準備に失敗しました — {e}"
 
     results = []
-    for entry in conn.entries:
-        obj: dict = {"dn": entry.entry_dn}
-        for attr in attrs:
-            try:
-                val = entry[attr].value
-                if val is not None:
-                    obj[attr] = val
-            except Exception:
-                pass
-        results.append(obj)
-    conn.unbind()
+
+    try:
+        count = 0
+
+        while not recordset.EOF:
+            obj = {}
+
+            for attr in attrs:
+                try:
+                    value = recordset.Fields(attr).Value
+                    value = _com_value_to_python(value)
+
+                    if value is not None:
+                        obj[attr] = value
+                except Exception:
+                    pass
+
+            # 既存実装と同じく dn キーも付与
+            if "distinguishedName" in obj:
+                obj["dn"] = obj["distinguishedName"]
+
+            results.append(obj)
+            count += 1
+
+            if limit and count >= limit:
+                break
+
+            recordset.MoveNext()
+
+    except Exception as e:
+        try:
+            recordset.Close()
+            connection.Close()
+        except Exception:
+            pass
+
+        return f"エラー: Active Directory 検索結果の取得に失敗しました — {e}"
+
+    try:
+        recordset.Close()
+    except Exception:
+        pass
+
+    try:
+        connection.Close()
+    except Exception:
+        pass
+
+    try:
+        pythoncom.CoUninitialize()
+    except Exception:
+        pass        
+
 
     if not results:
         return f"検索結果が見つかりませんでした。フィルタ: {ldap_filter}"
 
-    import json
     return json.dumps(results, ensure_ascii=False, default=str, indent=2)
 
 

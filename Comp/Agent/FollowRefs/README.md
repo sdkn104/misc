@@ -29,7 +29,7 @@
 # 1. 依存パッケージをインストール
 pip install -r requirements.txt
 # MCP serversをインストール (node_modules/.bin/markitdown-mcp-npxなどで起動)
-npm install @modelcontextprotocol/server-filesystem @playwright/mcp markitdown-mcp-npx
+npm install @modelcontextprotocol/server-filesystem @playwright/mcp #markitdown-mcp-npx
 
 
 # 2. 環境変数を設定
