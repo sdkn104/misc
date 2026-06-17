@@ -10,9 +10,12 @@ import sys
 openai.log = "debug"
 
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "")  
-endpoint = "http://localhost:4000"
 deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
-deployment = "azure-gpt-5-mini"
+deployment = "gpt-4.1-azure"
+deployment = "gpt-5-mini"
+#deployment = "gpt-5.2"
+#deployment = "gpt-5.4-mini"
+#deployment = "gpt-5.4-nano"
 subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "")  
 
 print(endpoint)
@@ -36,9 +39,10 @@ client = AzureOpenAI(
     azure_endpoint=endpoint,  
     api_key=subscription_key,  
     api_version="2024-10-21",  # Use the latest API version
-)  
+)
 response = client.chat.completions.create(
     model=deployment, # model = "deployment_name".
+    reasoning_effort="xhigh",
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
