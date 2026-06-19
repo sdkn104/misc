@@ -388,11 +388,11 @@ def search_active_directory(
 ) -> str:
     """Active Directory を win32com / ADSI で検索し、ユーザ・グループ情報を返す。"""
 
-    server_url = os.environ.get("LDAP_SERVER")
-    if not server_url:
-        return "エラー: LDAP_SERVER が .env に設定されていません。"
+    #server_url = os.environ.get("LDAP_SERVER")
+    #if not server_url:
+    #    return "エラー: LDAP_SERVER が .env に設定されていません。"
 
-    port = int(os.environ.get("LDAP_PORT", "389"))
+    #port = int(os.environ.get("LDAP_PORT", "389"))
     use_ssl = os.environ.get("LDAP_USE_SSL", "false").lower() in ("true", "1", "yes")
     bind_dn = os.environ.get("LDAP_BIND_DN", "")
     bind_pw = os.environ.get("LDAP_BIND_PASSWORD", "")
@@ -462,11 +462,12 @@ def search_active_directory(
         "description",
     ]
 
-    server = server_url
+    #server = server_url
     scheme = "LDAPS" if use_ssl else "LDAP"
 
     # LDAP://server:port/baseDN の形式
-    ldap_path = f"{scheme}://{server}:{port}/{base}"
+    #ldap_path = f"{scheme}://{server}:{port}/{base}"
+    ldap_path = f"{scheme}://{base}"
 
     try:
         pythoncom.CoInitialize()
@@ -662,7 +663,7 @@ async def agent_run(agent, user_input, session, model: str | None = None, effort
     if model:
         options["model"] = model
     if effort:
-        options["reasoning"] = {"effort": effort}
+        options["reasoning_effort"] = effort
     acc = None
     async for update in agent.run(user_input, stream=True, session=session, options=options or None):
         for content in update.contents:
