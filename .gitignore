@@ -8,3 +8,5 @@ pycache/
 Comp/OutlookRAG/requirements.in
 __pycache__
 .playwright-mcp/
+.env
+
